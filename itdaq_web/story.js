@@ -1,0 +1,1 @@
+var storyContent = ﻿{"inkVersion":19,"root":[[{"#":"author: Peter D. Johnston"},{"#":"title: In The Dark and Quiet"},{"#":"description: Entry for"},{"#":"GitHubGameOff November 2020 with the theme \"moonshot\" by Peter D. Johnston."},"^Hello, world!","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"#f":1}],"listDefs":{}};
