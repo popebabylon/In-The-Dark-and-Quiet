@@ -152,6 +152,10 @@
 
         outerScrollContainer.scrollTo(0, 0);
     }
+    
+    function save() {
+        console.log(story.state.ToJson());
+    }
 
     // -----------------------------------
     // Various Helper functions
