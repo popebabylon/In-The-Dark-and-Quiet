@@ -1,7 +1,6 @@
 // this is the conversation with Benton
 
 === benton_1 ===
-
 Here is where the chat with Benton will happen.  Note that the "menu" is included at the top so it can be accessed at any time, but the chat options appear below that.  This will be handled in the UI by the menu being hidden unless invoked and chat options appearing in the chat window.
 
 /*
@@ -12,15 +11,15 @@ Might it be possible to save the html of the chat history for every conversation
 Or... I'm already planning on "hiding" any previous displayed text that's not relevant to the current "chat" so it's possible my history will already be there.
 */
 
-Hey chummer! (this is a message from Benton to the player). #to
+Hey chummer! (this is a message from Benton to the player). #from #benton #dm
 
 <- menu
 * [Hello.]
-    Hey there Benton, good to hear from you (this message is from the player to Benton) #from
+    Hey there Benton, good to hear from you (this message is from the player to Benton) #to #benton #dm
 * [Oh, it's you.]
-    Oh.  Hi.  Why am I here? (this message is from the player to Benton) #from
+    Oh.  Hi.  Why am I here? (this message is from the player to Benton) #to #benton #dm
 * [Leave me alone.]
-    B, I don't wanna be a part of this.  Leave me alone. (this message is from the player to Benton) #from
+    B, I don't wanna be a part of this.  Leave me alone. (this message is from the player to Benton) #to #benton #dm
 
 - (b_1_1) ...and so on. Need to include the menu at every choice.
 ~ benton_chat = -> b_1_1

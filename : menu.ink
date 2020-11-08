@@ -1,9 +1,10 @@
 // this describes the "always available" menu to flip between the various chats and other features of the app
 
 === menu ===
-+ [Home] -> home
++ [Mission] -> mission
 + [News] -> news
 + [Settings] -> settings
++ [About] -> about
 + [Team] -> team_chat
 + [Benton] -> benton_chat
 + [Junia] -> junia_chat
