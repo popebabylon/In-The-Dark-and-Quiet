@@ -134,6 +134,6 @@
 + [Junia] -> junia_chat
 + [Dr. Estévez] -> lucas_chat
 + [TARC] -> tarc_chat
-+ [KS] -> woodpecker_chat
++ [Woodpecker] -> woodpecker_chat
 * -> the_end
 

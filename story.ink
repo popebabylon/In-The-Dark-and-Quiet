@@ -25,12 +25,33 @@ VAR lucas_chat = -> error
 VAR tarc_chat = -> tarc_01
 VAR woodpecker_chat = -> error
 
+// setup skills
+VAR Astronomy = 0
+VAR Business = 0
+VAR Engineering = 0
+VAR Medicine = 0
+VAR Security = 0
+VAR Social = 0
+VAR Technology = 0
+
+// setup mission parameters
+VAR date_year = 2065
+VAR date_month = 07
+VAR date_day = 15
+VAR Nth_NAV = 50
+VAR Nth_ENG = 50
+VAR Nth_BIZ = 50
+VAR Nth_MED = 50
+VAR Nth_SEC = 50
+VAR Nth_PR = 50
+VAR Nth_IT = 50
+
 // initial introduction and setup
 -> about -> setup -> menu
 
 === error ===
 
-Sorry, you don't have access to that resource.
+Sorry, you don't have access to that resource.  All personnel must pass the security check with TARC to gain access to Nth Horizon resources and communicate with colleagues.
 
 + [Next] -> menu
 

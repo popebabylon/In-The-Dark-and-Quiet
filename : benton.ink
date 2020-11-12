@@ -10,6 +10,12 @@ He gives them the "30 second pitch" of the project "although I'm sure you've alr
 
 Benton will begrudgingly let the PC go to talk to TARC before divulging too much intel.  He encourages them to talk to the other team members as well.
 
+* I worked in security!
+
+    ~ Security += 30
+
+-
+
 + [Next] -> menu
 
 === benton_02 ===
