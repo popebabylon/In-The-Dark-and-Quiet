@@ -30,6 +30,7 @@ Select your identity for biometric validation.
 
     ~ picture = 1
 
+/*
 + Picture of a person
 
     ~ picture = 2
@@ -61,6 +62,7 @@ Select your identity for biometric validation.
 + Picture of a person
 
     ~ picture = 9
+*/
 
 -
 
@@ -108,15 +110,15 @@ Your identity has been verified.  Manual verification name.
 // pronoun
 Select your preferred pronouns.
 
-+ He/him/His
++ He/Him/His
     
     ~ pronoun = "He/Him/His"
     
-+ She/her/her
++ She/Her/Hers
 
     ~ pronoun = "She/Her/Hers"
 
-+ They/them/their
++ They/Them/Theirs
 
     ~ pronoun = "They/Them/Theirs"
 
@@ -127,7 +129,7 @@ Your position has been selected as Mission Consultant.  You report directly to B
 
 // if this is the first time they're editing their profile, ask them for their base skill; after that ignore skills to avoid having to unwind all skills gained during the game
 
-{ setup == 1:
+{ not tarc_01 && not benton_01:
     -> skills ->
 }
 
@@ -137,45 +139,61 @@ Thank you.  Your profile is complete.  Select 'Save' to continue.
 + [Start Over] -> profile
 
 = skills
+
+// setup skills
+~ Astronomy = 0
+~ Business = 0
+~ Engineering = 0
+~ Medicine = 0
+~ Security = 0
+~ Social = 0
+~ Technology = 0
+
 Your resumé and references indicate a wide array of applicable skills for the project, but to better represent your expertise to your colleagues please select your top three areas of expertise.
 
 You may select a subject more than once if it is an area of significant study.
 
-- (selection)
-+ Astronomy
+- (opts)
 
-    ~ Astronomy += 30
+    + Astronomy
     
-+ Business
+        ~ Astronomy += 30
+        
+    + Business
+    
+        ~ Business += 30
+    
+    + Engineering
+    
+        ~ Engineering += 30
+    
+    + Medicine
+    
+        ~ Medicine += 30
+    
+    + Security
+    
+        ~ Security += 30
+    
+    + Social
+    
+        ~ Social += 30
+    
+    + Technology
+    
+        ~ Technology += 30
 
-    ~ Business += 30
+- (loop)
 
-+ Engineering
+    { cycle:
+        - -> opts
+        - -> opts
+        - -> done
+    }
 
-    ~ Engineering += 30
+- (done)
 
-+ Medicine
-
-    ~ Medicine += 30
-
-+ Security
-
-    ~ Security += 30
-
-+ Social
-
-    ~ Social += 30
-
-+ Technology
-
-    ~ Technology += 30
-
--
-{ skills.selection < 3:
-    -> skills.selection
-}
-
-->->
+    ->->
 
 === settings ===
 

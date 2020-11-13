@@ -62,8 +62,10 @@
         ~ benton_chat = -> benton_04
     - benton_02:
         ~ benton_chat = -> benton_03
-    - benton_01:
+    - benton_01.pluto_pitch:
         ~ benton_chat = -> benton_02
+    - benton_01.censored:
+        ~ benton_chat = -> benton_01.pluto_pitch
 }
 
 // junia
@@ -123,7 +125,11 @@
 
 // presented menu
 === menu ===
+
 {chatsetter()}
+
+TODO: remove skilldebug
+// {skillDebug()}
 
 + [Mission] -> mission
 + [News] -> news

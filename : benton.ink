@@ -1,22 +1,346 @@
 // this is the conversation with Benton
 
+=== benton_profile ===
+
+Picture of Benton
+Name: Benton Saari
+Position: Founder, CEO, Pilot
+Pronouns: He/Him/His
+Skills: Business, Technology, Social
+
+->->
+
 === benton_01 ===
 
-Intro mission, establish B/P history
+-> benton_profile ->
 
-Benton immediately chimes in and welcomes them to the project.  He effuses quickly and (apparently) sincerely about how grateful he is they joined given their history.   PC choices drive the options that define what skills they have Benton thought would be relevant.  He apologizes about not being able to work with them in person, and wishes they could join him on the moon base.  "This place is wild!"
+Hollah { pronouner("choi", "chai", "chen") }!
 
-He gives them the "30 second pitch" of the project "although I'm sure you've already been reading all the press."  Nth Horizon is funding a stunt to send Benton (it's founder and CEO) on a solo trip out around Pluto and back.  This will prove the technology the startup has been developing as well as cement Benton's place in history.  No person has visited the deep solar system, and no craft has returned from Pluto.  Nth Horizon can do both.
+Can't believe you're here!
 
-Benton will begrudgingly let the PC go to talk to TARC before divulging too much intel.  He encourages them to talk to the other team members as well.
+* Hey, B!
 
-* I worked in security!
+* Hi?[]  I can't quite believe it myself.
 
-    ~ Security += 30
+* Benton.[]  Why am I here?
+
+- Oh, { pronouner("choi", "chai", "chen") }, there is so much to catch up on!  How long has it been?
+
+* [A couple months?]  You dropped out a couple months back, after drinks in Tortuga.
+
+* It's been a while.[] SolWare failed in... { date_year - 6 }?
+
+* A decade.[]  And then you drop this on me out of the blue.
+
+* You didn't answer my question.
+
+- Sorry, sorry, been cray cray for a while now.  Look, you're here coz there's few people I trust in the world, and for what it's worth you're one of them.
+
+You'll tell me what's what and keep me on the tightrope.  You're no sycho.
+
+You've probably read the newsDrops, but Nth Horizon is full throttle.
+
+* This is your company?
+
+    Yeah.  As much as a startCorp can be any one person's.
+
+* Congratulations[.], nice to be thought of when the going is good.
+
+    Yeah.
+    
+    Well.
+    
+* Can I expect a crash landing?
+
+    Kinda what I'm hoping you help me avoid.
+
+* { Business >= 30 } startCorps come and go.  Your angle might be bad and you burn up.
+
+    Yeah.
+    
+    You always shoot cold, hard reality.
+
+- The thing is, this is my baby.  I bootstrapped from inside the gravity well and we're charting just fine.
+
+Our tech is the bleeding edge, real nextGen stuff.  Revolutionary.
+
+But if I can't turn the next corner then the board and Junia are gonna listen to Goliath's offers.
+
+* Going big, huh?[]  Aren't they like _the_ megacorp?
+
+* Selling out[.] for a big megacorp payday, huh?
+
+* Sounds like you.[]  Cutting anyone out of the payday?
+
+- Hey, an exit would treat me nice, that's sure.  But I did't build this company just to be swallowed up by a black hole.
+
+We're on course to change the face of the system.
+
+Neptune in months.  Out to the Oort in only a year or two.  Look, I don't wanna brag but what we've got is the *goods*.
+
+I don't need to be a lackey to a megacorp.  We could level the playing field and get a cushy enough paycheck to enjoy it.
+
+* { Business >= 30} Not Goliath sized.[]  If what you have is so hot why aren't they already doing a knock-down-takeover?
+    
+    They're trying.  I can hold my own.
+    
+    For now.
+
+* { Astronomy + Engineering >= 30} You're nuts.[]  Saturn's been the limit for a reason.  You're talking order of magnitude faster than the Deep Space Jumpers.  
+    
+    I know.  And I mean it.
+    
+    You're like the perfect skeptic to bring on board here.  But trust me, we've done it.
+
+* { Social + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking?
+
+    That's why I need your help.
+    
+* { Security + Technology >= 30 } Being bleeding edge [is bad.]makes you a target.  Goliath might not be the only worm trying to riddle your brain.
+
+    I know.  That's why your brain is here.
+    
+    To help.  Not as a target!
 
 -
 
-+ [Next] -> menu
+{ not tarc_01:
+    
+        -> censored
+
+    - else:
+    
+        -> pluto_pitch
+
+}
+
+= censored
+    
+    Look, the << CONFIDENTIAL >> is ready to race. If we keep this on the rails then Goliath won't be able to touch << CONFIDENTIAL >>
+    
+    * Huh?[]  You're getting censored.
+    
+    - Oh? Sot!  TARC must have you locked down.  Treats everything as a threat.
+    
+    { Technology >= 30:
+    
+        TARC?  How do you still have that running?
+        
+        Wait, no, how have you not been arrested?
+        
+        ¡LafLaf!
+        
+        It's not _exactly_ the same code we first carved back in '{ (date_year - 11) mod 2000 }
+
+        But it still does good threat assessment.  That's what we made it for.
+    
+    }
+        
+    - Just humor it, k?  Click the thumbs-up so it trusts you?
+        
+    Come chat with me once you pass muster, { pronouner("choi", "chai", "chen") }!
+     
+    + [Close Chat] -> menu
+
+= pluto_pitch
+
+{ censored:
+
+    -> welcome_back ->
+
+}
+
+* So what's the big secret?
+
+- A'ight.
+
+So here's the potato.
+
+You know me.  Always playing with startCorps, but none that stuck.  Some sold, I'm not complaining.  But nothing felt like real work.  Nothing that felt like what I'm here to do.
+
+I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw that just hadn't been completed.
+
+* Rumination.
+
+    Yeah!
+
+* Vacation.
+
+    If you sick like me I guess!
+
+* { Social >= 30 } Eureka[?] effect in the wings?
+
+    Hey, I'm telling this tale!
+
+- SolWare, Long Night, and FireX had their ups and downs, but none were the whole picture.  Just some edges.  Thought experiment time.  Twist the pieces in your mind, bend 'em, break 'em.  Undo reality until they start to fit.
+
+And it did.
+
+* Eu re ka.
+
+- You could extrapolate nav on the hypereclyptic if your brainbox can juggle multiple Tsukasa Theorems.
+
+You could burn hard enough if life-support is full gel-quarium.
+
+Could drop m if we had to, if we weren't trying to haul.
+
+And you could control & comm with q-sats, even all the way to the edge.
+
+* Are you speaking crazy?
+
+    No, { pronouner("choi", "chai", "chen") }.
+
+* Are you crazy?
+
+    Always have been!
+
+* You're crazy.
+
+    Not as crazy as you think.
+
+* { Engineering + Astronomy >= 50 } The math to pull all that is crazy.
+
+    We're talking 6th level multi-dimensional sot, that's sure.
+
+* { Technology >= 50 } That's some crazy parallel processing[.], even in a controlled lab!
+
+    Don't think TARC could handle it?
+
+* { Business + Social >= 50 } Who's crazy enough to try that?
+
+    Me.
+    
+    And Junia.
+
+- I knew it could be done.  I knew we could weave these elements together.  Go startCorp, super-agile, small.  Stay independent.  Avoid getting trapped in the ice-haul, small thinking big money trap.
+
+* Nth Horizon is the result?[]  When does the idea become reality?
+
+    It already has.
+    
+* To what end?[]  Build the smallest space empire possible?
+
+    Heh.  Nah.
+
+* So you've got another wild idea[.] and investors wacky enough to give you the dosh?
+
+    It's much more than an idea now.
+
+- Small and nimble to prove the _tech_
+
+Small and nimble to go under the radar _until_ you're ready
+
+THEN go big.
+
+Moonshot is our big unveiling.  We show the system what we can do and we'll have everyone banging on our door for the specs.
+
+* I still don't know what Moonshot _is_
+
+- Prove the tech by taking it out for the ultimate spin.
+
+I'm flying to Pluto.
+
+And back.
+
+* What?  Wow!
+
+* You[?]'re flying to Pluto?
+
+* You.  Are.  Crazy.[]
+
+- Modelling has it down to 16 months.  Bit longer for the return trip.
+
+We've been building and testing Lowell's Horizon on Luna for the last 3 years.  And now it's ready to roar.
+
+* You're on the moon?
+
+- Yeah.  Astro, Eng, Medsci, and some other departments are all here.  I was splitting time with Terra, but now gotta quarantine before go-time.
+
+* When do we leave?
+
+    Oh.
+    
+* How big is the crew?
+
+* [I'm not going.]  You can't expect me to go?
+
+- 
+
+Uh, no.
+
+Lowell's Horizon is small, single-occupant.  Junia likes to call it my coffin.
+
+* You're going on your own?[]  For 3 years?
+
+    Not exactly.
+
+* They're probably not wrong.[]  You'll die of boredom on a trip that long.
+
+- That's why I wanted you.
+
+Sure, I got all the medtech and psitech and mastubatory infotainment a sot could want on a 3 year deep-space voyage.
+
+But I wanted someone I could talk to.  Someone I could be real with.
+
+And you're the only person I could think would keep me sane.  Who I could trust.
+
+* I'm honored.
+
+    Thank you.
+
+* Hey, we're cool, choi.
+
+    Cucumber.
+
+* Keep you sane?[]  I'm gonna kill you.
+
+    If gravity doesn't first.
+
+- I know this is a dumbo drop, so take a process cycle.  I don't need you to be my therapist today.
+
+newsDrops should be going live with our announcement soon.  And you could intro yourself to the exec team.  Junia and Lucas are the other arms of the trifecta.
+
+- Serious, we'll chat later { pronouner("choi", "chai", "chen") }.  Ciao.
+
+* Ciao.
+
+* Later.
+
+* { Technology + Security >= 40 } << Ghost >>
+
+    -> menu
+
+-
+
++ [Close Chat] -> menu
+
+= welcome_back
+
+Hollah!  No fuss?
+
+* Paperwork.[] No fuss.
+
+    Cool!
+    
+    Thanks for taking care of it.
+    
+* { tarc_01.nda } That NDA is a little intense
+
+    Legal sacrifice.  Made my offerings of body and soul to many.
+    
+    Thanks for taking care of it.
+    
+* { tarc_01.hackit0 or tarc_01.hackit } Tooled.
+
+    ¡LafLaf!
+    
+    Wait.  Seriously?
+    
+    Nowaitdontwannaknow.🙈🙊🙉
+    
+- 
+
+->->
 
 === benton_02 ===
 

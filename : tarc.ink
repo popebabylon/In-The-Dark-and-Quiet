@@ -40,8 +40,13 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
     -> tarc_history -> secreq
 
+* { nda && checks } OK, I've completed your assessment.
+
+    -> passed
+
 * { Security + Technology >= Nth_SEC } [<< Bypass Security Requirements >>]
 
+    - (hackit0)
     << inject sec_byp^...COMMIT >>
     << processing >>
     << processing >>
@@ -50,10 +55,6 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
     << inject end_byp^...COMMIT >>
     << bypassed >>
     ~ Nth_SEC -= 10
-    -> passed
-
-* { nda && checks } OK, I've completed your assessment.
-
     -> passed
 
 = nda
@@ -86,15 +87,7 @@ By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73
 
 * { Security >= Nth_SEC } [<< Forge Signature >>]
 
-    << inject acc_for^...COMMIT >>
-    << processing >>
-    << segfault at 0x6861636b6572, respooling >>
-    << inject acc_new^...COMMIT >>
-    << signed >>
-
-    ~ Nth_SEC -= 1
-
-    ->->
+    -> hackit
 
 * Accept
 
@@ -113,6 +106,18 @@ By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73
         << Declined >>
     
         -> the_end
+        
+= hackit
+
+    << inject acc_for^...COMMIT >>
+    << processing >>
+    << segfault at 0x6861636b6572, respooling >>
+    << inject acc_new^...COMMIT >>
+    << signed >>
+
+    ~ Nth_SEC -= 1
+    
+    ->->
 
 = checks
 

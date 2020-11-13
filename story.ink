@@ -51,7 +51,11 @@ VAR Nth_IT = 50
 
 === error ===
 
-Sorry, you don't have access to that resource.  All personnel must pass the security check with TARC to gain access to Nth Horizon resources and communicate with colleagues.
+Sorry, you don't have access to that resource.
+
+{ not tarc_01:
+    <> All personnel must pass the security check with TARC to gain access to Nth Horizon resources and communicate with colleagues.
+}
 
 + [Next] -> menu
 
@@ -60,6 +64,36 @@ Sorry, you don't have access to that resource.  All personnel must pass the secu
 Sorry, you've run out of things in this chat.
 
 + [Next] -> menu
+
+=== function pronouner(m, f, n) ===
+
+{
+    - pronoun == "He/Him/His":
+    
+        ~ return m
+        
+    - pronoun == "She/Her/Hers":
+    
+        ~ return f
+        
+    - pronoun == "They/Them/Theirs":
+    
+        ~ return n
+        
+}
+
+=== function skillDebug() ===
+
+// bump all skills to test choices
+~ Astronomy = 100
+~ Business = 100
+~ Engineering = 100
+~ Medicine = 100
+~ Security = 100
+~ Social = 100
+~ Technology = 100
+
+~return
 
 === the_end ===
 
