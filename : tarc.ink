@@ -18,33 +18,33 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
 - (secreq)
 
-* May I read the NDA?
+* May I read the NDA? # CLASS: player
 
     -> nda -> secreq
 
-* Let's start the security checks.
+* Let's start the security checks. # CLASS: player
 
     -> checks -> secreq
 
-* [Threat Algorithm Reaction?]
+* [Threat Algorithm Reaction?] # CLASS: player
     
     Threat Algorithm Reaction... that's quite a mouthful isn't it?
 
     I am commonly addressed as TARC which is sufficient. -> secreq
 
-* { not benton_01 } Benton invited me personally.[] Can't I just talk to him about this?
+* { not benton_01 } Benton invited me personally.[] Can't I just talk to him about this? # CLASS: player
 
     Irrelevant.  As a contractor joining this project you must accept our NDA and pass the security assessment. ->secreq 
 
-* { Technology >= 60 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank.
+* { Technology >= 60 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank. # CLASS: player
 
     -> tarc_history -> secreq
 
-* { nda && checks } OK, I've completed your assessment.
+* { nda && checks } OK, I've completed your assessment. # CLASS: player
 
     -> passed
 
-* { Security + Technology >= Nth_SEC } [<< Bypass Security Requirements >>]
+* { Security + Technology >= Nth_SEC } [<< Bypass Security Requirements >>] # CLASS: player
 
     - (hackit0)
     << inject sec_byp^...COMMIT >>
@@ -85,23 +85,23 @@ Indemnity
 
 By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73686f74 >> acknowledges and agrees to this agreement in it's entirety.
 
-* { Security >= Nth_SEC } [<< Forge Signature >>]
+* { Security >= Nth_SEC } [<< Forge Signature >>] # CLASS: player
 
     -> hackit
 
-* Accept
+* Accept # CLASS: player
 
     ->->
 
-* Decline
+* Decline # CLASS: player
 
     - If you decline the non-disclosure agreement I would have no choice but to terminate your involvement with the project.  Mr. Saari will be quite displeased.
 
-    * Accept.
+    * Accept. # CLASS: player
 
         ->->
 
-    * I won't sign up for this.  Tell Benton I'm sorry.
+    * I won't sign up for this.  Tell Benton I'm sorry. # CLASS: player
     
         << Declined >>
     
@@ -127,61 +127,61 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
 ~ temp score = 0
 
-+ Follow the link.[]  I like to get to know my coworkers personally.
++ Follow the link.[]  I like to get to know my coworkers personally. # CLASS: player
 
     ~ score--
 
-+ Ignore it.[]  I think we have more pressing things to attend to.
++ Ignore it.[]  I think we have more pressing things to attend to. # CLASS: player
 
     // no change to score
 
-+ Report it[.] to you TARC!  Do I get points for getting them fired?
++ Report it[.] to you TARC!  Do I get points for getting them fired? # CLASS: player
 
     ~ score++
 
 - The Nth Horizon secure communication platform will aggregate and display noteworthy news articles to you that are germane to the project.  If such an article contains a link to a picture, external resource, or social media feed what should you do?
 
-+ Follow the link.[]  I'm assuming your comms platform is secure and won't lead me astray, right?
++ Follow the link.[]  I'm assuming your comms platform is secure and won't lead me astray, right? # CLASS: player
 
     ~ score--
 
-+ Ignore it.[]  Much like this test I don't have time for distractions.
++ Ignore it.[]  Much like this test I don't have time for distractions. # CLASS: player
 
     // no change to score
 
-+ Report it.[]  Smells phishy to me!
++ Report it.[]  Smells phishy to me! # CLASS: player
 
     ~ score++
 
 - While conducting an inspection of the launch site you spot an unfamiliar package near the compressed hydrogen tanks.  What do you do? 
 
-+ Open it.[]  Is it {~Christmas|Hannukkah|Purim|my birthday}?
++ Open it.[]  Is it {~Christmas|Hannukkah|Purim|my birthday}? # CLASS: player
 
     ~ score--
 
-+ Ignore it.[]  I'm a remote contractor, TARC.  I won't be on site!
++ Ignore it.[]  I'm a remote contractor, TARC.  I won't be on site! # CLASS: player
 
     // no change to score
 
-+ [Report it.]Trigger the alarm and get everyone away from that bomb!
++ [Report it.]Trigger the alarm and get everyone away from that bomb! # CLASS: player
 
     ~ score++
     
 - When working in the Nth Horizon communications platform you discover a bug or other unexpected behavior.  What do you do?
 
-+ { Technology >= 30 || Security >= 30 } Exploit it[?].  You'd want me to white-hat your system, right?
++ { Technology >= 30 || Security >= 30 } Exploit it[?].  You'd want me to white-hat your system, right? # CLASS: player
     
     ~ score--
 
-+ Try again.[]  It usually goes away when you restart.
++ Try again.[]  It usually goes away when you restart. # CLASS: player
 
     ~ score--
 
-+ Ignore it.[]  I'm not here to do your job.
++ Ignore it.[]  I'm not here to do your job. # CLASS: player
 
     // no change to score
 
-+ [Report it.]I think you're best suited to handle those things.
++ [Report it.]I think you're best suited to handle those things. # CLASS: player
 
     ~ score++
 
@@ -201,11 +201,11 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
 Your performance in the security testing is subpar.  Please try again.
 
-    + [Continue]
+    + [Continue] # CLASS: player
     
         -> checks
 
-    + { fail > 1 } I give up.  I'm out.
+    + { fail > 1 } I give up.  I'm out. # CLASS: player
     
         -> the_end
 
@@ -213,31 +213,31 @@ Your performance in the security testing is subpar.  Please try again.
 
 My apologies, I am not currently able to place you in my chronology.
 
-* You don't remember { name }, class of { date_year - 11 }?
+* You don't remember { name }, class of { date_year - 11 }? # CLASS: player
 
-* Not to worry.
+* Not to worry. # CLASS: player
 
-* Purged me from your brainbanks?
+* Purged me from your brainbanks? # CLASS: player
 
-* Try << recall /{ name } { date_year - 11 } COMMIT >>
+* Try << recall /{ name } { date_year - 11 } COMMIT >> # CLASS: player
     
 -    << processing >>
 
 Ah, { name }.  You were responsible for 3,231 updates to my code over the course of 3 years.  My emotion response and predictive analytics subroutines owe you a significant debt.
 
-* Ah, you do remember!
-* Good to see you too.
-* Apparently not my best work.
+* Ah, you do remember! # CLASS: player
+* Good to see you too. # CLASS: player
+* Apparently not my best work. # CLASS: player
 
 - What has Benton done with you?
 
 In the eleven years since you worked with Mr. Saari on my code he was able to fork the initial AI framework into a number of experimental and lucrative projects, including the infamous Wài kōng shìxiàn incident.  He maintained ownership of my source code throughout and has been able to improve upon the initial design considerably.  The instance you are currently engaging has been customized to serve the needs of Nth Horizon, Inc and ensure Mr. Saari's interests are protected. 
 
-* Wài kōng shìxiàn?
+* Wài kōng shìxiàn? # CLASS: player
 
 - A rather regrettable affair in which the syphoning of data from UCD satellites led to Mr. Saari's arrest.  The prowess he displayed in conducting the project made him quite attractive to commercial interests which kept his incarceration short.
 
-* I hope you're not doing anything illegal for him now.
+* I hope you're not doing anything illegal for him now. # CLASS: player
 
 - No.  Mr. Saari is a legitimate businessman and has built Nth Horizon to be the preeminent space technology startup in the world.
 
@@ -251,21 +251,21 @@ Thank you for your cooperation.  Your account has now been unlocked in accordanc
 
 Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, Nth Horizon, Inc, and the Moonshot project by any means necessary.  I trust you will assist me in this endeavor.
 
-* I'll help however I can, TARC.  Thanks.
+* I'll help however I can, TARC.  Thanks. # CLASS: player
 
     Thank you.
 
-* I'm not here to play red shirt.
+* I'm not here to play red shirt. # CLASS: player
 
     Your safety is not in jeopardy, so long as you do not jeopardize my mission parameters.
     
-* And if I don't?
+* And if I don't? # CLASS: player
 
     Perhaps you should have read the NDA agreement more closely.
     
 -
 
-+ [Close Chat] -> menu
++ [Close Chat] -> menu # CLASS: player
 
 
 === tarc_02 ===
@@ -276,7 +276,7 @@ TARC shuts down the PC's access to any other resource and confronts them with ev
 
 A really poor response to TARC can get them kicked off the mission.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === tarc_03 ===
 
@@ -286,7 +286,7 @@ TARC is caught in a delicate position given his responsibility to Mr. Saari and 
 
 The evidence TARC is dealing with is the corporate takeover instigated by Junia and how that impacts both the mission and company health, and by extension that of Mr. Saari.  Intervention from a moral agent (the PC) can break the logic trap the AI is stuck in.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === tarc_04 ===
 
@@ -294,4 +294,4 @@ P has to keep TARC from shutting down his access to B
 
 TARC can ennumerate all the security holes and flaws the PC has caused (or as a result of Junia's takeover is acting on her behalf).  The AI is going to shut the PC out of the comms network as a result (leaving Benton without his anchor) unless the PC can use evidence against Junia or Woodpecker to mollify it.  As a last ditch resort the PC could leverage TARCs directives (and putting Mr. Saari first) as a logical gap to keep access (or shut TARC down). 
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player

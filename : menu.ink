@@ -134,17 +134,56 @@
 
 // debuggers
 TODO: remove debuggers when not needed
-{skillDebug()}
+// {skillDebug()}
 
-+ [Mission] -> mission # mission
-+ [News] -> news # news
-+ [Settings] -> settings # settings
-+ [About] -> about -> menu # about
-+ [Team] -> team_chat # team
-+ [Benton] -> benton_chat # benton
-+ [Junia] -> junia_chat # junia
-+ [Dr. Estévez] -> lucas_chat # lucas
-+ [TARC] -> tarc_chat # tarc
-+ [Woodpecker] -> woodpecker_chat # woodpecker
++ [Mission]
+
+        # CLEAR
+        -> mission
+        
++ [News]
+    
+    # CLEAR
+    -> news
+
++ [Settings]
+
+    # CLEAR
+    -> settings
+
++ [About]
+
+    # CLEAR
+    -> about -> menu
+
++ [Team]
+
+    # CLEAR
+    -> team_chat
+
++ [Benton]
+
+    # CLEAR
+    -> benton_chat
+
++ [Junia]
+
+    # CLEAR
+    -> junia_chat
+
++ [Dr. Estévez]
+
+    # CLEAR
+    -> lucas_chat
+
++ [TARC]
+
+    # CLEAR
+    -> tarc_chat
+
++ [Woodpecker]
+
+    # CLEAR
+    -> woodpecker_chat
+
 * -> the_end
-

@@ -99,4 +99,13 @@ Sorry, you've run out of things in this chat.
 
 The game has ended.
 
--> END
+Do you want to restart?
+
+* Yes
+    
+    #RESTART
+    -> END
+
+* No
+
+    -> END

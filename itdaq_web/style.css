@@ -174,3 +174,10 @@ p.choice a {
 .dark .end {
     color: white;
 }
+
+/* my custom styling 8? */
+
+p.player {
+	color: black;
+	background-color: #708090;
+}

@@ -14,23 +14,23 @@ Skills: Medicine, Social, Technology
 
 -> lucas_profile ->
 
-* Dr. Estévez, I'm { name }
+* Dr. Estévez, I'm { name } # CLASS: player
 
 - # wait
 
-* Benton suggested I talk with you?
+* Benton suggested I talk with you? # CLASS: player
 
 - # wait
 
-* Do you have time to chat?
+* Do you have time to chat? # CLASS: player
  
     -> lucas_intro
 
-* << wait patiently >>
+* << wait patiently >> # CLASS: player
 
     -> lucas_intro
 
-* [<< Exit >>]
+* [<< Exit >>] # CLASS: player
 
     -> ghost_lucas
 
@@ -42,35 +42,35 @@ Skills: Medicine, Social, Technology
 
 { name }.  Hello.
 
-* Hi.
+* Hi. # CLASS: player
 
 - Sorry for the delay.
 
-* A busy schedule I'm sure.
+* A busy schedule I'm sure. # CLASS: player
 
 - The gel-quarium needs constant attention.
 
 If I didn't know any better I'd say the engineers are trying to sabotage it.  Clean-room ethics right out the window.
 
-* I'm sure they're doing their best.
+* I'm sure they're doing their best. # CLASS: player
 
     Hmph.
 
-* Does someone need to get fired?
+* Does someone need to get fired? # CLASS: player
 
     ¡sigh!
     
     No.
 
-* { Medicine >= 30 && Engineering >= 30 } [A functional gel-bed in this project?]  Fitting a functional gel-bed with systems interlink on a craft that is explicitly trying to drop m must be an incredible challenge for all departments.
+* { Medicine >= 30 && Engineering >= 30 } [A functional gel-bed in this project?]  Fitting a functional gel-bed with systems interlink on a craft that is explicitly trying to drop m must be an incredible challenge for all departments. # CLASS: player
 
     You're probably right. <>
 
-* { Engineering >= 30 } That seems unfair.[]  Interlinking a complete gel-suite into a speed missile is hard.  And if one drop of your gunk gets into the fuel-injectors it's adiós muchachos.
+* { Engineering >= 30 } That seems unfair.[]  Interlinking a complete gel-suite into a speed missile is hard.  And if one drop of your gunk gets into the fuel-injectors it's adiós muchachos. # CLASS: player
 
     Our gunk isn't going anywhere.
 
-* { Medicine >= 30 } Gearheads don't usually do viscous hygieneology.[]  I'm not entirely sure _how_ you keep that viable in a supersonic coffin for 3 years.
+* { Medicine >= 30 } Gearheads don't usually do viscous hygieneology.[]  I'm not entirely sure _how_ you keep that viable in a supersonic coffin for 3 years. # CLASS: player
 
     Ah, well, this is were things get interesing.
     
@@ -78,15 +78,15 @@ If I didn't know any better I'd say the engineers are trying to sabotage it.  Cl
 
 It's almost the perfect environment.  So long as it's not breached.
 
-* How does this work exactly?
+* How does this work exactly? # CLASS: player
 
     Benton gets in the gel-quarium.  Immersed.  And lives there for 3 years.
 
-* Sound like a squishy cesspool.[]  Is there enough room to keep your head above water?
+* Sound like a squishy cesspool.[]  Is there enough room to keep your head above water? # CLASS: player
 
     He won't need to.
 
-* { Medicine >= 30 } Will he be tubed the whole time?
+* { Medicine >= 30 } Will he be tubed the whole time? # CLASS: player
 
     No, not at all.
 
@@ -94,15 +94,15 @@ It's almost the perfect environment.  So long as it's not breached.
 
 His whole body, in fact.  We're re-engineering him as much as the spacecraft.
 
-* Wow.[] That sounds incredible!
+* Wow.[] That sounds incredible! # CLASS: player
 
     It is. But the <>
 
-* Eww.[] Doesn't sounds like a way to live.
+* Eww.[] Doesn't sounds like a way to live. # CLASS: player
 
     It's not.  The <>
 
-* Heh.[] Can we keep him that way when he gets back? 
+* Heh.[] Can we keep him that way when he gets back?  # CLASS: player
 
     No. The <>
 
@@ -114,11 +114,11 @@ Which is why you're here.
 
 I would have preferred a board-certified psychologist, but Benton is...
 
-* Loyal.
+* Loyal. # CLASS: player
 
-* Pushy.
+* Pushy. # CLASS: player
 
-* An idiot.
+* An idiot. # CLASS: player
 
 - Quite
 
@@ -128,19 +128,19 @@ Report to me daily on your interactions.  If he exhibits any unusual behavior, d
 
 Clear?
 
-* Yes, doc.
+* Yes, doc. # CLASS: player
 
     Thank you.
 
-* I'm not here to spy for you.
+* I'm not here to spy for you. # CLASS: player
 
     You are here to keep Benton alive.
 
-* As gel.
+* As gel. # CLASS: player
 
 - Goodbye.
 
-+ [Close Chat] -> menu
++ [Close Chat] -> menu # CLASS: player
 
 === lucas_02 ===
 
@@ -152,7 +152,7 @@ If allowed to cool he will apologize and simply point out that all the signs rig
 
 He encourages the player to give Benton gentle pushes to re-establish routine and turn the isolation into an opportunity for self-improvement.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === lucas_03 ===
 
@@ -162,7 +162,7 @@ Lucas is at a loss of how to deal with Benton's wild ramblings.  He might even a
 
 If they want to save their patient they need him to cryosleep and turn around right now...
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === lucas_04 ===
 
@@ -170,4 +170,4 @@ P gets Lucas to take a risk even with his patient millions of miles away
 
 The PC and Lucas can collaborate on treatment options to keep Benton in one piece for the return journey.  The CMO has all the skills he needs, and the pieces are all there in that little capsule between the darkness of the stars, but just needs some perspective (and perhaps some humor) to see the solution and act upon it in a way that Benton can benefit from.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player

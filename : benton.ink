@@ -18,21 +18,21 @@ Hollah { pronouner("choi", "chai", "chen") }!
 
 Can't believe you're here!
 
-* Hey, B!
+* Hey, B! # CLASS: player
 
-* Hi?[]  I can't quite believe it myself.
+* Hi?[]  I can't quite believe it myself. # CLASS: player
 
-* Benton.[]  Why am I here?
+* Benton.[]  Why am I here? # CLASS: player
 
 - Oh, { pronouner("choi", "chai", "chen") }, there is so much to catch up on!  How long has it been?
 
-* [A couple months?]  You dropped out a couple months back, after drinks in Tortuga.
+* [A couple months?]  You dropped out a couple months back, after drinks in Tortuga. # CLASS: player
 
-* It's been a while.[] SolWare failed in... { date_year - 6 }?
+* It's been a while.[] SolWare failed in... { date_year - 6 }? # CLASS: player
 
-* A decade.[]  And then you drop this on me out of the blue.
+* A decade.[]  And then you drop this on me out of the blue. # CLASS: player
 
-* You didn't answer my question.
+* You didn't answer my question. # CLASS: player
 
 - Sorry, sorry, been cray cray for a while now.  Look, you're here coz there's few people I trust in the world, and for what it's worth you're one of them.
 
@@ -40,21 +40,21 @@ You'll tell me what's what and keep me on the tightrope.  You're no sycho.
 
 You've probably read the newsDrops, but Nth Horizon is full throttle.
 
-* This is your company?
+* This is your company? # CLASS: player
 
     Yeah.  As much as a startCorp can be any one person's.
 
-* Congratulations[.], nice to be thought of when the going is good.
+* Congratulations[.], nice to be thought of when the going is good. # CLASS: player
 
     Yeah.
     
     Well.
     
-* Can I expect a crash landing?
+* Can I expect a crash landing? # CLASS: player
 
     Kinda what I'm hoping you help me avoid.
 
-* { Business >= 30 } startCorps come and go.  Your angle might be bad and you burn up.
+* { Business >= 30 } startCorps come and go.  Your angle might be bad and you burn up. # CLASS: player
 
     Yeah.
     
@@ -66,11 +66,11 @@ Our tech is the bleeding edge, real nextGen stuff.  Revolutionary.
 
 But if I can't turn the next corner then the board and Junia are gonna listen to Goliath's offers.
 
-* Going big, huh?[]  Aren't they like _the_ megacorp?
+* Going big, huh?[]  Aren't they like _the_ megacorp? # CLASS: player
 
-* Selling out[.] for a big megacorp payday, huh?
+* Selling out[.] for a big megacorp payday, huh? # CLASS: player
 
-* Sounds like you.[]  Cutting anyone out of the payday?
+* Sounds like you.[]  Cutting anyone out of the payday? # CLASS: player
 
 - Hey, an exit would treat me nice, that's sure.  But I did't build this company just to be swallowed up by a black hole.
 
@@ -80,23 +80,23 @@ Neptune in months.  Out to the Oort in only a year or two.  Look, I don't wanna 
 
 I don't need to be a lackey to a megacorp.  We could level the playing field and get a cushy enough paycheck to enjoy it.
 
-* { Business >= 30} Not Goliath sized.[]  If what you have is so hot why aren't they already doing a knock-down-takeover?
+* { Business >= 30} Not Goliath sized.[]  If what you have is so hot why aren't they already doing a knock-down-takeover? # CLASS: player
     
     They're trying.  I can hold my own.
     
     For now.
 
-* { Astronomy + Engineering >= 30} You're nuts.[]  Saturn's been the limit for a reason.  You're talking order of magnitude faster than the Deep Space Jumpers.  
+* { Astronomy + Engineering >= 30} You're nuts.[]  Saturn's been the limit for a reason.  You're talking order of magnitude faster than the Deep Space Jumpers.   # CLASS: player
     
     I know.  And I mean it.
     
     You're like the perfect skeptic to bring on board here.  But trust me, we've done it.
 
-* { Social + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking?
+* { Social + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking? # CLASS: player
 
     That's why I need your help.
     
-* { Security + Technology >= 30 } Being bleeding edge [is bad.]makes you a target.  Goliath might not be the only worm trying to riddle your brain.
+* { Security + Technology >= 30 } Being bleeding edge [is bad.]makes you a target.  Goliath might not be the only worm trying to riddle your brain. # CLASS: player
 
     I know.  That's why your brain is here.
     
@@ -118,15 +118,15 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
     
     Look, the << CONFIDENTIAL >> is ready to race. If we keep this on the rails then Goliath won't be able to touch << CONFIDENTIAL >>
     
-    * Huh?[]  You're getting censored.
+    * Huh?[]  You're getting censored. # CLASS: player
     
     - Oh? Sot!  TARC must have you locked down.  Treats everything as a threat.
     
     { Technology >= 30:
     
-        TARC?  How do you still have that running? # player
+        TARC?  How do you still have that running? # CLASS: player
         
-        Wait, no, how have you not been arrested? # player
+        Wait, no, how have you not been arrested? # CLASS: player
         
         ¡LafLaf!
         
@@ -140,7 +140,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
         
     Come chat with me once you pass muster, { pronouner("choi", "chai", "chen") }!
      
-    + [Close Chat] -> menu
+    + [Close Chat] -> menu # CLASS: player
 
 = pluto_pitch
 
@@ -150,7 +150,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
 
 }
 
-* So what's the big secret?
+* So what's the big secret? # CLASS: player
 
 - A'ight.
 
@@ -160,15 +160,15 @@ You know me.  Always playing with startCorps, but none that stuck.  Some sold, I
 
 I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw that just hadn't been completed.
 
-* Rumination.
+* Rumination. # CLASS: player
 
     Yeah!
 
-* Vacation.
+* Vacation. # CLASS: player
 
     If you sick like me I guess!
 
-* { Social >= 30 } Eureka[?] effect in the wings?
+* { Social >= 30 } Eureka[?] effect in the wings? # CLASS: player
 
     Hey, I'm telling this tale!
 
@@ -176,37 +176,37 @@ I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw 
 
 And it did.
 
-* Eu re ka.
+* Eu re ka. # CLASS: player
 
 - You could extrapolate nav on the hypereclyptic if your brainbox can juggle multiple Tsukasa Theorems.
 
 You could burn hard enough if life-support is full gel-quarium.
 
-Could drop m if we had to, if we weren't trying to haul.
+Could drop _m_ if we had to, if we weren't trying to haul.
 
 And you could control & comm with q-sats, even all the way to the edge.
 
-* Are you speaking crazy?
+* Are you speaking crazy? # CLASS: player
 
     No, { pronouner("choi", "chai", "chen") }.
 
-* Are you crazy?
+* Are you crazy? # CLASS: player
 
     Always have been!
 
-* You're crazy.
+* You're crazy. # CLASS: player
 
     Not as crazy as you think.
 
-* { Engineering + Astronomy >= 50 } The math to pull all that is crazy.
+* { Engineering + Astronomy >= 50 } The math to pull all that is crazy. # CLASS: player
 
     We're talking 6th level multi-dimensional sot, that's sure.
 
-* { Technology >= 50 } That's some crazy parallel processing[.], even in a controlled lab!
+* { Technology >= 50 } That's some crazy parallel processing[.], even in a controlled lab! # CLASS: player
 
     Don't think TARC could handle it?
 
-* { Business + Social >= 50 } Who's crazy enough to try that?
+* { Business + Social >= 50 } Who's crazy enough to try that? # CLASS: player
 
     Me.
     
@@ -214,15 +214,15 @@ And you could control & comm with q-sats, even all the way to the edge.
 
 - I knew it could be done.  I knew we could weave these elements together.  Go startCorp, super-agile, small.  Stay independent.  Avoid getting trapped in the ice-haul, small thinking big money trap.
 
-* Nth Horizon is the result?[]  When does the idea become reality?
+* Nth Horizon is the result?[]  When does the idea become reality? # CLASS: player
 
     It already has.
     
-* To what end?[]  Build the smallest space empire possible?
+* To what end?[]  Build the smallest space empire possible? # CLASS: player
 
     Heh.  Nah.
 
-* So you've got another wild idea[.] and investors wacky enough to give you the dosh?
+* So you've got another wild idea[.] and investors wacky enough to give you the dosh? # CLASS: player
 
     It's much more than an idea now.
 
@@ -234,7 +234,7 @@ THEN go big.
 
 Moonshot is our big unveiling.  We show the system what we can do and we'll have everyone banging on our door for the specs.
 
-* I still don't know what Moonshot _is_
+* I still don't know what Moonshot _is_ # CLASS: player
 
 - Prove the tech by taking it out for the ultimate spin.
 
@@ -242,27 +242,27 @@ I'm flying to Pluto.
 
 And back.
 
-* What?  Wow!
+* What?  Wow! # CLASS: player
 
-* You[?]'re flying to Pluto?
+* You[?]'re flying to Pluto? # CLASS: player
 
-* You.  Are.  Crazy.[]
+* You.  Are.  Crazy.[] # CLASS: player
 
 - Modelling has it down to 16 months.  Bit longer for the return trip.
 
 We've been building and testing Lowell's Horizon on Luna for the last 3 years.  And now it's ready to roar.
 
-* You're on the moon?
+* You're on the moon? # CLASS: player
 
 - Yeah.  Astro, Eng, Medsci, and some other departments are all here.  I was splitting time with Terra, but now gotta quarantine before go-time.
 
-* When do we leave?
+* When do we leave? # CLASS: player
 
     Oh.
     
-* How big is the crew?
+* How big is the crew? # CLASS: player
 
-* [I'm not going.]  You can't expect me to go to space!
+* [I'm not going.]  You can't expect me to go to space! # CLASS: player
 
 - 
 
@@ -270,11 +270,11 @@ Uh, no.
 
 Lowell's Horizon is small, single-occupant.  Junia likes to call it my coffin.
 
-* You're going on your own?[]  For 3 years?
+* You're going on your own?[]  For 3 years? # CLASS: player
 
     Not exactly.
 
-* They're probably not wrong.[]  You'll die of boredom on a trip that long.
+* They're probably not wrong.[]  You'll die of boredom on a trip that long. # CLASS: player
 
 - That's why I wanted you.
 
@@ -284,15 +284,15 @@ But I wanted someone I could talk to.  Someone I could be real with.
 
 And you're the only person I could think would keep me sane.  Who I could trust.
 
-* I'm honored.
+* I'm honored. # CLASS: player
 
     Thank you.
 
-* Hey, we're cool, choi.
+* Hey, we're cool, choi. # CLASS: player
 
     Cucumber.
 
-* Keep you sane?[]  I'm gonna kill you.
+* Keep you sane?[]  I'm gonna kill you. # CLASS: player
 
     If gravity doesn't first.
 
@@ -302,33 +302,33 @@ newsDrops should be going live with our announcement soon.  And you could intro 
 
 - Serious, we'll chat later { pronouner("choi", "chai", "chen") }.  Ciao.
 
-* Ciao.
+* Ciao. # CLASS: player
 
-* Later.
+* Later. # CLASS: player
 
-* [Close Chat] -> menu
+* [Close Chat] -> menu # CLASS: player
 
 -
 
-+ [Close Chat] -> menu
++ [Close Chat] -> menu # CLASS: player
 
 = welcome_back
 
 Hollah!  No fuss?
 
-* Paperwork.[] No fuss.
+* Paperwork.[] No fuss. # CLASS: player
 
     Cool!
     
     Thanks for taking care of it.
     
-* { tarc_01.nda } That NDA is a little intense
+* { tarc_01.nda } That NDA is a little intense # CLASS: player
 
     Legal sacrifice.  Made my offerings of body and soul to many.
     
     Thanks for taking care of it.
     
-* { tarc_01.hackit0 or tarc_01.hackit } Tooled.
+* { tarc_01.hackit0 or tarc_01.hackit } Tooled. # CLASS: player
 
     ¡LafLaf!
     
@@ -354,7 +354,7 @@ He finds himself questioning if the stunt is him running away from things, or ru
 
 Can the PC try to fill him in with anything they learn?  Don't make enemies, but help an old friend allay some concerns.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_03 ===
 
@@ -366,7 +366,7 @@ Whatever their response he will tie it back to a previous adventure they had and
 
 In the end he makes it clear he intends to launch and not miss the window.  He appreciates their involvement and hopes they'll stay on to keep him company (even just through comms) in the dark and quiet out there.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_04 ===
 
@@ -380,7 +380,7 @@ The isolation does gives him perspective he never had and he'll go off on some m
 
 With careful prompting he can stay on topic and be encouraged.  Mantras are repeated about the rewards for taking the hard path, and he (enthusiastically or not) embraces the risk of being a pioneer.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_05 ===
 
@@ -392,7 +392,7 @@ Benton discusses the emptiness and how big it seems even when Jupiter is taking 
 
 He waxes poetic about the planet and the neverending dance of the spheres before ending the conversation abruptly.  Mission details will report a Goliath Deep Space Jumper burning on a similar trajectory.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_06 ===
 
@@ -402,7 +402,7 @@ The spacecraft reports some issues that Benton has to make an EVA to fix, separa
 
 Once complete he needs a little calming down as this could have potentially been a very serious issue.  They were lucky to catch it.  Projections are he can still complete the mission as planned (possibly behind schedule) but they can't afford more of these unexpected problems.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_07 ===
 
@@ -412,7 +412,7 @@ Benton's philosophical ramblings take on a decidedly more paranoid tone as he cl
 
 If challenged he laughs it off as a joke, but appears slightly unhinged by the isolation and his brush with death.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_08 ===
 
@@ -422,7 +422,7 @@ As things back on Earth get heated with the potential loss of Nth Horizon, the P
 
 The conversation touches on another moment from the PC and Benton's shared past, a [laugh] or a [cry] they shared together and why it was important in the context of that moment.  But before the PC can use that nostalgia to center him Benton is struck by another thought, that "it is merciful we are nothing, the enormity of anything else destroys us."  His rambles are interrupted by further developments back home...
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_09 ===
 
@@ -432,7 +432,7 @@ Benton gets back in touch, being very off-again / on-again as he contemplates th
 
 The PC can use the various knowledge gained, activities completed, history established, and personal insight to help draw Benton back to reality and take some meaningful actions that will change the outcome of the mission.
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
 
 === benton_10 ===
 
@@ -442,4 +442,4 @@ Whether or not Benton is still sane, the PC is a friendly ear in an otherwise em
 
 Ultimately Benton picks a path...
 
-+ [Next] -> menu
++ [Next] -> menu # CLASS: player
