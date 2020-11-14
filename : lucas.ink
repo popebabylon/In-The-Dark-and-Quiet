@@ -1,12 +1,146 @@
 // this is the conversation with Lucas
 
+=== lucas_profile ===
+
+Picture of Dr. Lucas Estévez
+Name: Dr. Lucas Estévez
+Position: Chief Medical Officer
+Pronouns: He/Him/His
+Skills: Medicine, Social, Technology
+
+->->
+
 === lucas_01 ===
 
-L asks P to report back to them on anything about B
+-> lucas_profile ->
 
-Chief Medical Officer Dr. Lucas Estévez introduces himself curtly to the PC and reminds them that the key reason they've been invited to the project is to act as a trusted confidant to Benton in order to keep him on the straight and narrow.  He has very terse replies and won't take kindly to being questioned too closely.  He requests that the PC keep him up to date with reports on Benton's mental state and mood.
+* Dr. Estévez, I'm { name }
 
-+ [Next] -> menu
+- # wait
+
+* Benton suggested I talk with you?
+
+- # wait
+
+* Do you have time to chat?
+ 
+    -> lucas_intro
+
+* << wait patiently >>
+
+    -> lucas_intro
+
+* [<< Exit >>]
+
+    -> ghost_lucas
+
+= ghost_lucas
+
+-> menu
+ 
+= lucas_intro
+
+{ name }.  Hello.
+
+* Hi.
+
+- Sorry for the delay.
+
+* A busy schedule I'm sure.
+
+- The gel-quarium needs constant attention.
+
+If I didn't know any better I'd say the engineers are trying to sabotage it.  Clean-room ethics right out the window.
+
+* I'm sure they're doing their best.
+
+    Hmph.
+
+* Does someone need to get fired?
+
+    ¡sigh!
+    
+    No.
+
+* { Medicine >= 30 && Engineering >= 30 } [A functional gel-bed in this project?]  Fitting a functional gel-bed with systems interlink on a craft that is explicitly trying to drop m must be an incredible challenge for all departments.
+
+    You're probably right. <>
+
+* { Engineering >= 30 } That seems unfair.[]  Interlinking a complete gel-suite into a speed missile is hard.  And if one drop of your gunk gets into the fuel-injectors it's adiós muchachos.
+
+    Our gunk isn't going anywhere.
+
+* { Medicine >= 30 } Gearheads don't usually do viscous hygieneology.[]  I'm not entirely sure _how_ you keep that viable in a supersonic coffin for 3 years.
+
+    Ah, well, this is were things get interesing.
+    
+- The gel-quarium is state-of-the art, fully interlinked, closed-circuit-recyc and primed with enough vita-juice to keep someone ticking for a decade or more.
+
+It's almost the perfect environment.  So long as it's not breached.
+
+* How does this work exactly?
+
+    Benton gets in the gel-quarium.  Immersed.  And lives there for 3 years.
+
+* Sound like a squishy cesspool.[]  Is there enough room to keep your head above water?
+
+    He won't need to.
+
+* { Medicine >= 30 } Will he be tubed the whole time?
+
+    No, not at all.
+
+- He's going full gills on this one, biohack replacement.
+
+His whole body, in fact.  We're re-engineering him as much as the spacecraft.
+
+* Wow.[] That sounds incredible!
+
+    It is. But the <>
+
+* Eww.[] Doesn't sounds like a way to live.
+
+    It's not.  The <>
+
+* Heh.[] Can we keep him that way when he gets back? 
+
+    No. The <>
+
+- <>strain on him, his physique, his psyche, will be severe.
+
+We need as many anchors as we can to keep him positive and engaged throughout the project.
+
+Which is why you're here.
+
+I would have preferred a board-certified psychologist, but Benton is...
+
+* Loyal.
+
+* Pushy.
+
+* An idiot.
+
+- Quite
+
+Look, I have to get back to my patient.  The surgery will be difficult and I need him to be ready.
+
+Report to me daily on your interactions.  If he exhibits any unusual behavior, dissention, or other symptoms you will notify me immediately.
+
+Clear?
+
+* Yes, doc.
+
+    Thank you.
+
+* I'm not here to spy for you.
+
+    You are here to keep Benton alive.
+
+* As gel.
+
+- Goodbye.
+
++ [Close Chat] -> menu
 
 === lucas_02 ===
 

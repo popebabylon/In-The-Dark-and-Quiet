@@ -124,9 +124,9 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
     
     { Technology >= 30:
     
-        TARC?  How do you still have that running?
+        TARC?  How do you still have that running? # player
         
-        Wait, no, how have you not been arrested?
+        Wait, no, how have you not been arrested? # player
         
         ¡LafLaf!
         
@@ -262,7 +262,7 @@ We've been building and testing Lowell's Horizon on Luna for the last 3 years.  
     
 * How big is the crew?
 
-* [I'm not going.]  You can't expect me to go?
+* [I'm not going.]  You can't expect me to go to space!
 
 - 
 
@@ -306,9 +306,7 @@ newsDrops should be going live with our announcement soon.  And you could intro 
 
 * Later.
 
-* { Technology + Security >= 40 } << Ghost >>
-
-    -> menu
+* [Close Chat] -> menu
 
 -
 

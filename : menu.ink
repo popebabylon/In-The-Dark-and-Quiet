@@ -76,8 +76,10 @@
         ~ junia_chat = -> junia_04
     - junia_02:
         ~ junia_chat = -> junia_03
-    - junia_01:
+    - junia_01.junia_intro:
         ~ junia_chat = -> junia_02
+    - junia_01.early_exit:
+        ~ junia_chat = -> junia_01.junia_intro
     - tarc_01:
         ~ junia_chat = -> junia_01
 }
@@ -90,8 +92,10 @@
         ~ lucas_chat = -> lucas_04
     - lucas_02:
         ~ lucas_chat = -> lucas_03
-    - lucas_01:
+    - lucas_01.lucas_intro:
         ~ lucas_chat = -> lucas_02
+    - lucas_01.ghost_lucas:
+        ~ lucas_chat = -> lucas_01.lucas_intro
     - tarc_01:
         ~ lucas_chat = -> lucas_01
 }
@@ -128,18 +132,19 @@
 
 {chatsetter()}
 
-TODO: remove skilldebug
-// {skillDebug()}
+// debuggers
+TODO: remove debuggers when not needed
+{skillDebug()}
 
-+ [Mission] -> mission
-+ [News] -> news
-+ [Settings] -> settings
-+ [About] -> about -> menu
-+ [Team] -> team_chat
-+ [Benton] -> benton_chat
-+ [Junia] -> junia_chat
-+ [Dr. Estévez] -> lucas_chat
-+ [TARC] -> tarc_chat
-+ [Woodpecker] -> woodpecker_chat
++ [Mission] -> mission # mission
++ [News] -> news # news
++ [Settings] -> settings # settings
++ [About] -> about -> menu # about
++ [Team] -> team_chat # team
++ [Benton] -> benton_chat # benton
++ [Junia] -> junia_chat # junia
++ [Dr. Estévez] -> lucas_chat # lucas
++ [TARC] -> tarc_chat # tarc
++ [Woodpecker] -> woodpecker_chat # woodpecker
 * -> the_end
 
