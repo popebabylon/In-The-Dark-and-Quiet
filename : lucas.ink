@@ -173,3 +173,16 @@ P gets Lucas to take a risk even with his patient millions of miles away
 The PC and Lucas can collaborate on treatment options to keep Benton in one piece for the return journey.  The CMO has all the skills he needs, and the pieces are all there in that little capsule between the darkness of the stars, but just needs some perspective (and perhaps some humor) to see the solution and act upon it in a way that Benton can benefit from.
 
 + [Next] -> menu # CLASS: player
+
+=== lucas_random ===
+
+- (waitloop)
++ \ [{~Hello?|Dr. Estévez?|Lucas?}]\ {~Hello?|Dr. Estévez?|Lucas?} # CLASS: player
+
+    ->waitloop
+
++ [<< wait >>] # CLASS: player
+
+    -> waitloop
+
++ [Close Chat] -> menu # CLASS: player

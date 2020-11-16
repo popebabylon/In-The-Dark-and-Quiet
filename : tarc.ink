@@ -298,3 +298,13 @@ P has to keep TARC from shutting down his access to B
 TARC can ennumerate all the security holes and flaws the PC has caused (or as a result of Junia's takeover is acting on her behalf).  The AI is going to shut the PC out of the comms network as a result (leaving Benton without his anchor) unless the PC can use evidence against Junia or Woodpecker to mollify it.  As a last ditch resort the PC could leverage TARCs directives (and putting Mr. Saari first) as a logical gap to keep access (or shut TARC down). 
 
 + [Next] -> menu # CLASS: player
+
+=== tarc_random ===
+
+Hello { name }.  All security checks are nominal.  Is there something else I can help you with?
+
++ Not right now. # CLASS: player
+
+- Very well.
+
++ [Close Chat] -> menu

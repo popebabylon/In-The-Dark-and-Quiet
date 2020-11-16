@@ -32,7 +32,7 @@ TODO: Wire up chatsetter and mission status function
         ~ news = -> news_05
     - news_03:
         ~ news = -> news_04
-    - news_02 && status == "Final Prep":
+    - news_02 && status == "Launch":
         ~ news = -> news_03
     - news_01 && status == "Final Prep":
         ~ news = -> news_02
@@ -49,7 +49,7 @@ TODO: Wire up chatsetter and mission status function
     - team_02:
         ~ team_chat = -> team_03
     - team_01.logout:
-        ~ team_chat = -> team_02
+        ~ team_chat = -> team_random
     - tarc_01:
         ~ team_chat = -> team_01
 }
@@ -73,7 +73,7 @@ TODO: Wire up chatsetter and mission status function
     - benton_03:
         ~ benton_chat = -> benton_04
     - benton_02:
-        ~ benton_chat = -> benton_03
+        ~ benton_chat = -> benton_random
     - status == "Final Prep":
         ~ benton_chat = -> benton_02
     - benton_01.pluto_pitch:
@@ -91,7 +91,7 @@ TODO: Wire up chatsetter and mission status function
     - junia_02:
         ~ junia_chat = -> junia_03
     - junia_01.junia_intro:
-        ~ junia_chat = -> junia_02
+        ~ junia_chat = -> junia_random
     - junia_01.early_exit:
         ~ junia_chat = -> junia_01.junia_intro
     - tarc_01:
@@ -107,7 +107,7 @@ TODO: Wire up chatsetter and mission status function
     - lucas_02:
         ~ lucas_chat = -> lucas_03
     - lucas_01.lucas_intro:
-        ~ lucas_chat = -> lucas_02
+        ~ lucas_chat = -> lucas_random
     - lucas_01.ghost_lucas:
         ~ lucas_chat = -> lucas_01.lucas_intro
     - tarc_01:
@@ -123,7 +123,7 @@ TODO: Wire up chatsetter and mission status function
     - tarc_02:
         ~ tarc_chat = -> tarc_03
     - tarc_01:
-        ~ tarc_chat = -> tarc_02
+        ~ tarc_chat = -> tarc_random
 
 }
 
@@ -136,8 +136,8 @@ TODO: Wire up chatsetter and mission status function
     - woodpecker_02:
         ~ woodpecker_chat = -> woodpecker_03
     - woodpecker_01:
-        ~ woodpecker_chat = -> woodpecker_02
-    - tarc_01:
+        ~ woodpecker_chat = -> woodpecker_random
+    - pecked:
         ~ woodpecker_chat = -> woodpecker_01
 }
 

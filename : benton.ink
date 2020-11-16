@@ -1161,15 +1161,9 @@ Ultimately Benton picks a path...
 
 === benton_random ===
 
-+ Hey. # CLASS: player
+Hey, I'm pretty {&busy|tired|stressed|over it} right now.  Can it wait?
 
-- Hey, how's it going?
-
-+ Whatcha wanna talk about? # CLASS: player
-
-- Nothing right now.  I'm pretty {&busy|tired|stressed|over it} right now.
-
-+ Ok, I'll let you be. # CLASS: player
++ Sure. # CLASS: player
 
 - Thanks
 

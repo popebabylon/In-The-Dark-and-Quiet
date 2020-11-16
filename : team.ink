@@ -338,3 +338,13 @@ The team wait with baited breath as B comes back from the edge
 In the team chat tensions are high as they await some sign from Benton that he's still with them.  Depending on who's still a part of the team their reactions to anything the PC may suggest will vary.  Ideally the PC has replaced Junia as one part of a stable triangle and Lucas / TARC are working with them to bring Benton back safely.
 
 + [Next] -> menu
+
+=== team_random ===
+
+<< { name } is joining the team chat >>
+
+<< team is not present >>
+
+<< { name } is leaving the team chat >>
+
++ [Close Chat] -> menu

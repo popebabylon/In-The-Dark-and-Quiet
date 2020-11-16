@@ -411,3 +411,13 @@ J taunts P with her success, P can turn the tables
 Junia starts shutting down comms across the Nth Horizon platform given her control of the company and the impending sale.  She takes a moment to taunt or brag to the PC.  In her position she's not aware of any leverage the PC may have from Woodpecker or TARC, either of which could be brought to bear to shut her up and keep the lights on while Benton is saved.
 
 + [Next] -> menu # CLASS: player
+
+=== junia_random ===
+
+Hello { name }.  I'm {&in another call|working on a board presentation|meditating|out of the office} right now.  Can I connect with you later?
+
++ Sure. # CLASS: player
+
+- Thank you.
+
++ [Close Chat] -> menu

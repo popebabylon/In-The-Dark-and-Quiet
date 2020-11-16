@@ -65,3 +65,13 @@ K wants her headline story
 Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if her evidene helped against Junia).  The more details the PC is willing to give the more likely the article benefits Benton's story and the outcome for his company.
 
 + [Next] -> menu
+
+=== woodpecker_random ===
+
+Hei {pronouner("choi","chai","chen")}.  I'm lyin' low, so chat later, k?
+
++ K. # CLASS: player
+
+- Cheers.
+
++ [Close Chat] -> menu
