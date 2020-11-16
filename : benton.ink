@@ -122,7 +122,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
     
     - Oh? Sot!  TARC must have you locked down.  Treats everything as a threat.
     
-    { Technology >= 30:
+    { Technology >= 60:
     
         TARC?  How do you still have that running? # CLASS: player
         
@@ -342,19 +342,734 @@ Hollah!  No fuss?
 
 === benton_02 ===
 
-B asks for some "normal" chat, reminices about player history, but confides concerns
+- (morning_loop)
 
-TIME MOVES FORWARD
+* Good morning, sunshine. # CLASS: player
 
-Preparation for the launch continues and Benton either reaches out or reacts to a PC message with "can we talk about something else?"  After a little vague small talk he will reminisce about something he and the PC shared in the past that either establishes them as [cutthroat] or [diplomatic].
+* Wakey, wakey. # CLASS: player
 
-As the conversation progresses he admits that things are not all hunky-dory with Nth Horizon.  Depending on the PCs insight he will admit to frustrations with Lucas' "mothering," project delays and overruns he feels are out of character, and the weight of the whole enterprise.  He'll generally be positive about Junia, but if the right buttons are pushed might admit he doesn't trust her as much as he'd like.
+* {morning_loop > 1}Benton? # CLASS: player
 
-He finds himself questioning if the stunt is him running away from things, or running towards that "nth horizon."
+* {morning_loop > 1}Hey, Benton, time to get up! # CLASS: player
 
-Can the PC try to fill him in with anything they learn?  Don't make enemies, but help an old friend allay some concerns.
++ [<< Trigger Alarm >>]
 
-+ [Next] -> menu # CLASS: player
+    << Cortical Alarm Activated >>
+    
+    Ach! Sot!  I'm awake...
+    
+    -> awake
+    
+- { -> morning_loop | -> morning_loop | -> awake }
+
+- (awake)
+
+I'm awake. Ugh
+
+* Sorry[.], you know I gotta. # CLASS: player
+
+* It's 04:30 Luna Central.[]  You gotta get prepped. # CLASS: player
+
+* No excuses, princess.[]  Tactical meeting in 20. # CLASS: player
+
+- Grokked.
+
+Waking up in this gunk is no fun.
+
+* I can't imagine it is. # CLASS: player
+
+* Neither is being your alarm clock. # CLASS: player
+
+- (bstate)
+
+* { Medicine + Social >= 30 }How are you feeling? # CLASS: player
+
+    Honestly?  Werked.
+    
+    I thought things were hard before.  Pulling Nth Horizon together, sidestepping doubt and Goliath.
+    
+    But this past month is... rough.
+    
+    Doing everything from inside a tank sucks.
+
+* { Medicine >= 60 }How are the gills? # CLASS: player
+
+    Heh, { pronouner("choi", "chai", "chen") }, so bizzaro.
+    
+    Can't stop touching them.
+    
+    The "breathing" is getting a bit easier, but still feels crayz.
+
+* { Engineering + Technology >= 30 }How is the tank? # CLASS: player
+
+    Small, yah.  Glad I can still get out and walk around Luna Station with a gel breather on.
+    
+    But I'm getting used to it.  Gonna be home for a while.
+
+* { Astronomy + Engineering >= 30 }How is the ship? # CLASS: player
+
+    Lowell's Horizon is a beauty.
+    
+    Astro, Eng, Comms.  All golden.  We've doubled our efficiencies in the last 30.  All on track to launch.
+
+* { Business + Social >= 30 }How are the teams? # CLASS: player
+
+    Great.
+    
+    Fine.
+    
+    - - (headbutt) TBH I keep ramming horns with Lucas.  But we'll sort it out.
+    
+    He and I have been in tight spots before.
+
+* { Security + Technology >= 30 }Any threats rear up? # CLASS: player
+
+    AFAIK TARC is holding down the fort.
+    
+    Definitely painted a target on us with the announcement last month.
+    
+    Think it's contained, but y'know \#alwaysneversafe.
+    
+    So we're staying frosty.
+    
+* What's on your mind? # CLASS: player
+
+    -> talkaboutsomethingelse
+
+- {&|But... can we talk about something else?|Seriously, can this wait?}
+
+    -> bstate
+
+- (talkaboutsomethingelse)
+
+Honest?  I just wanna talk about something _other_ than Moonshot.
+
+I'm psyched, but just for once wanna remember something outside this green gel and nuclear-powered-coffin, capisce?
+
+* Of course! # CLASS: player
+
+* Yeah, no problem. # CLASS: player
+
+* This is your project. # CLASS: player
+
+    I know.
+    
+    Please?
+    
+    * * Fine. # CLASS: player
+
+- Whatcha wanna talk about? # CLASS: player
+
+Almost anything.
+
+What's fun dirtside?
+
+* I've been busy. # CLASS: player
+
+    Workload for { career } doesn't just evaporate when your old choi seconds you to his therapist team. # CLASS: player
+    
+    Ai, I know.  Sorry { pronouner("choi", "chai", "chen") }
+    
+    Good busy at least?
+    
+    * * Yeah, energizing[.]  You know I like moving at light speed. # CLASS: player
+    
+        Well true.
+        
+    * * It pays the bills. # CLASS: player
+    
+        Moonshot takes off, those stockOpts will do you right.
+        
+        You won't have to worry about that.
+        
+        Trust me.
+    
+    * * No such thing.[] I'm not even burning candles at both ends... I'm burning flesh. # CLASS: player
+    
+        { pronouner("Choi", "Chai", "Chen") }.
+        
+        Forget it. # CLASS: player
+    
+    - - Look, I legit appreciate you being here for me.
+
+* I met someone. # CLASS: player
+
+    {
+        - relationship == "close":
+        
+            Oh.  Really?
+        
+        - else:
+        
+            That's awesome!  Who's this myserious someone?
+    
+    }
+    
+    * * They[...]'re <>
+    
+    * * She[...]'s <>
+    
+    * * He[...]'s <>
+    
+    - - <> {~an astro-biologist|a barkeep|a dubViola extraordinnaire|special to me, that's all you need to know}. # CLASS: player
+    
+        {
+        - relationship == "close":
+        
+            Cool.
+        
+        - else:
+        
+            Aww, { pronouner("choi", "chai", "chen") }, I'm stoked for ya.
+            
+            If I wasn't embedded in a gooey tank I'd say double-date to Whistler next Saturday.
+        }
+    
+    * * Sure. # CLASS: player
+    
+    # wait
+    
+    I can tell you don't wanna share.
+
+* I've been adventuring. # CLASS: player
+
+    * * Some first descents in the Antarctic. # CLASS: player
+        
+        Looking to smash the Krubera record. # CLASS: player
+        
+    * * Long haul in the Sahara. # CLASS: player
+    
+        Did it all without wheels or tracks. # CLASS: player
+        
+    * * Disappear into the mountains[.] whenever I can. # CLASS: player
+    
+    - - { pronouner("Choi", "Chai", "Chen") }!  That's so cool!
+    
+    I miss that.  Dirt and sweat and cheating death.
+    
+    * * It's good for the soul. # CLASS: player
+    
+    * * It's good for a thrill. # CLASS: player
+    
+    * * Not like you're avoiding death with this stunt! # CLASS: player
+
+    - - Well true.
+    
+    Ugh.
+
+* I've been keeping tabs on Goliath. # CLASS: player
+
+    That still sounds like Moonshot.
+    
+    Just ignore them.  Bullies feed on your attention.
+
+* Nothing.  This is all I do.[]  I don't have any time to be { career } AND keep you company. # CLASS: player
+
+    Oh, sot.  It's dragging you down too?
+    
+    { pronouner("Choi", "Chai", "Chen") }.  I know you're giving up a lot to be here for me.  I see that.
+    
+    * * Thx, choi. # CLASS: player
+    
+        Nah, thank you.  A billion.
+        
+        You are keeping me well on course.
+    
+    * * Uh huh. # CLASS: player
+    
+        You're keeping me grounded.
+        
+        I'd be deviating way off the ecliptic if your chill wasn't there to balance.
+        
+        So, thanks.
+    
+    * * Whatever. # CLASS: player
+    
+        Just sayin I won't forget this.
+    
+        Anyway.
+
+- Sidetrack, you remember Daeso? # wait
+
+* Daeso Kim, right? # CLASS: player
+
+    Yeah!
+
+* { relationship == "close" } Your k-pop sweetheart? # CLASS: player
+
+    He was... something special.
+
+* { relationship == "puzzle" } The scriptKiddie who almost flatlined the TARC project? # CLASS: player
+
+    I thought I was losing my mind!
+    
+    { Technology >= 60:
+    
+        I remember. # CLASS: player
+        
+        Processing was through the roof and rootLog was completely clean. # CLASS: player
+        
+        Right!
+    
+    - else:
+    
+        I spent days digging through rootLog before I tracked him down!
+
+    }
+
+* { relationship == "epic" } Didn't he attack you? # CLASS: player
+
+    I sometimes make enemies. 🤷
+    
+    * * Sometimes.[]  And when you do they're trouble. # CLASS: player
+    
+    * * Always. # CLASS: player
+    
+    - - Touché.
+
+* Doesn't sound familiar. # CLASS: player
+
+    - - (glass) The glass elevator incident?
+    
+    Ah. # CLASS: player
+    
+    Right. # CLASS: player
+
+- Being in this goop-tube just reminded me of when { not glass :the three of us ended up in that glass elevator }and you... interceded.
+
+VAR diplomacy = 0
+VAR violence = 0
+
+* { relationship == "close" } He needed to be let down softly. # CLASS: player
+
+    ¡sigh!
+    
+    Yeah.  You were always better with affairs of the heart.
+    
+    ~ diplomacy++
+    ~ violence--
+
+* { relationship == "close" } I was jealous.[]  So maybe things got heated. # CLASS: player
+
+    I still cared for you, { pronouner("choi", "chai", "chen") }.
+    
+    I'm sorry I hurt you.
+    
+    Anyway, it stuck.  I remembered.  Even through everything that's happened since.
+
+    ~ diplomacy--
+    ~ violence++
+
+* { relationship == "puzzle" } Sometimes a light touch is all it takes. # CLASS: player
+
+    You also figured him out, cut the knot.
+    
+    I was impressed.
+
+    ~ diplomacy++
+    ~ violence--
+
+* { relationship == "puzzle" } We needed that keyfile.[]  I just did what needed doing. # CLASS: player
+    
+    You made the hard call.  And it worked.
+    
+    Still don't know how you avoided the PolSec.  Coulda been ugly.
+
+    ~ diplomacy--
+    ~ violence++
+
+* { relationship == "epic" } I had my own agenda with Kim.[]  It's not always about you. # CLASS: player
+
+    But it saved my bacon.
+    
+    So I still owed you.
+    
+    Still do. # CLASS: player
+
+    ~ diplomacy++
+    ~ violence--
+
+* { relationship == "epic" } Never one to back down from a fight.[]  You at least know how to show { pronouner("a boy", "a girl", "me") } a good time. # CLASS: player
+
+    A good time is rungunning from PolSec?
+    
+    ¡LafLaf!
+    
+    But we had each other's backs.  And that counts.
+
+* I wasn't involved.[]  You dealt with it.  I was just... emotional support. # CLASS: player
+
+    You backed me up.
+    
+    Someone I can count on.
+
+* Don't really recall. # CLASS: player
+
+    Ok. Ok.  Just trying to remember the good times.
+    
+    Good times? # CLASS: player
+    
+    Yeah.
+
+- It's just strange.
+
+I guess when I'm not buried in project details I find myself deepthinking
+
+Going over those old episodes
+
+Those people we've passed by and close-to forgotten.
+
+# wait
+
+I can never quite tell for each incident if what I was doing was running towards something, or running away from it...
+
+Grok?
+
+* Sure.[] I getcha.  But life's messy, a pastiche of choices.  You do the best you can with the intel you have. # CLASS: player
+
+* I guess.[]  IMO knowing if a decision is towards or away is part of making that decision. # CLASS: player
+
+* You're second-guessing.[]  Always have worried too much about the impact *after* you've made a choice. # CLASS: player
+
+- Hmph.  I suppose you're right.
+
+* Is Moonshot towards or away? # CLASS: player
+
+# wait
+
+- Towards.
+
+# wait
+
+I think.
+
+* Towards what? # CLASS: player
+
+    A brighter future?
+    
+    I know that sounds corny, but I mean it.
+
+* Away from what? # CLASS: player
+
+    A scary future.
+    
+    The homogeonization of human industry under a Goliath banner.
+
+* Just keep running, huh? # CLASS: player
+
+- Everything I've ever done has had the same engine.
+
+The tech, the power, the money.  It's all full throttle.  But I wanna use it to change the status quo.
+
+We need to get out from under the megas and see independent innovation, independent pioneers, independent spirit.  See the wild ideas and the epic burnouts.
+
+That's the only way we evolve enough to survive.
+
+* Grand. # CLASS: player
+
+    Or naive.
+
+* Risky. # CLASS: player
+
+    I don't think any worthy vision can be otherwise.
+
+* ¡sarcasm! Epic. # CLASS: player
+
+    ¡shrug!
+
+- Do you think Moonshot is worthy?
+
+- (ask)
+
+* [Yes.] Yeah, absolutely. # CLASS: player
+
+    You do a lot of crayz things, make bold moves. # CLASS: player
+    
+    But like you said, we need to in order to evolve. # CLASS: player
+    
+    I hope you're right.
+
+* I don't know. # CLASS: player
+
+    Alright, fair.  Hope you'll see it is.
+
+* Not my place to say. # CLASS: player
+
+    But what's your opinion?
+    
+    -> ask
+
+* [No.] Sot, no! # CLASS: player
+
+    You're pulling another stunt. # CLASS: player
+    
+    This time I'm just making sure I'm at arm's length. # CLASS: player
+    
+    Well.  Orbit's length.
+    
+    And eventually a few AU's.
+
+- I have to keep believing it is.
+
+* Do you have doubts? # CLASS: player
+
+- Of the vision?  No.
+
+- (doubts)
+
+* Do you doubt the ship? # CLASS: player
+
+    So far testing is green across the board.
+    
+    Still a few dependencies to interlink, but I think we're on track.
+    
+    * * Good to hear. # CLASS: player
+    
+    * * { Business + Social + Medicine >= 30 } But do you doubt it? # CLASS: player
+    
+        \#alwaysneversafe, right?
+        
+        There's always room for doubt.  Always should be some doubt.
+        
+        Then, at some point, you trust the margins and take the risk.
+    
+    * * { Astronomy + Engineering + Technology + Security >= 30 } There are a lot of dependencies, though.[]  Do you have a sufficient depth of test suites given that you'll be on your own for three years? # CLASS: player
+    
+        The team is top notch and has been refining this thing for three years.
+        
+        * * * Doesn't sound like all that long. # CLASS: player
+        
+            They're all top of their field.
+            
+            Building on almost a century of prior knowledge.
+            
+            Our margins are good.
+
+* Is Dr. Estévez up to snuff? # CLASS: player
+
+    Yeah, why?
+    
+    * * Junia seemed concerned.[]  He hasn't done space missions before. # CLASS: player
+    
+        ¡sigh!
+        
+        Lucas is a top doc.  And a lot of experience with challenging environments.
+        
+        I know.
+        
+        I've been with him on some critfail expeditions.
+        
+        He's kept his head and adapted to things that would crumple a career scientist.
+    
+    * * { headbutt } You said you were butting heads? # CLASS: player
+    
+        Yah, true.
+        
+        Pressure's on both of us, so tempers can run high.
+        
+        But he'll come around.
+        
+        * * * Come around to what? # CLASS: player
+        
+            He thinks I'm too soft. ¡grin!
+            
+            * * * * You're not.[]  Perhaps he doesn't know you as well as you thought? # CLASS: player
+            
+                Perhaps.
+            
+            * * * * You are[.] a bag of meat throwing yourself into the depths of space. # CLASS: player
+            
+                Gee, thanks!
+            
+            - - - - Don't worry, we'll work it out.
+    
+    * * { Medicine >= 60 } His reports worry me.[]  Iso-regulation seems off, and I don't know that the team has thought through the repercusions of extended tank immersion enough. # CLASS: player
+    
+        - - - (player_med_report) Right over my head, { pronouner("choi", "chai", "chen") }.
+        
+        Look, I always want my team to speak their mind.
+        
+        So if you think that's a concern, take it to Lucas.
+        
+        But he calls the shots on Medsci, 'k?
+        
+        * * * Fair enough. # CLASS: player
+    
+    * * Just asking. # CLASS: player
+    
+    - - We've got a good team behind him.
+    
+    I trust him most with my health.
+
+* What about Junia? # CLASS: player
+
+    Junia is \#oneofakind and an absolute beast in the board room.
+    
+    She's the best business partner I've worked with.
+    
+    ~ temp trust_junia = 0
+    
+    - - (junia_history)
+    
+    * * { Business >= 30 } She a better business partner than I was? # CLASS: player
+    
+        Ah, { pronouner("choi", "chai", "chen") }.
+        
+        Better at business?  P'raps not.
+        
+        But her and I are better business *partners*.  More sympatico.
+    
+    * * { Business + Social >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
+    
+        I can trust that she'll do what's best for Nth Horizon.  Her rep is just as much on the line here as mine is.
+        
+        * * * { Social >= 30 } [As long as you're aligned.]Which is fine as long as your definition of "what's best for Nth Horizon" is aligned with hers. # CLASS: player
+        
+            It is.
+            
+            Hope you're right. # CLASS: player
+            
+            ~ trust_junia--
+    
+    * * Is she really bought in to this stunt? # CLASS: player
+    
+        Heh, we've... disagreed some.
+        
+        But she's backing the vision 100%.
+        
+        * * * Always good to have a cheersquad. # CLASS: player
+        
+            ¡LafLaf!
+            
+            Don't let her hear you say that!
+        
+        * * * Backing sticking her business partner on the business end of a rocket? # CLASS: player
+        
+            Took a little convincing.
+            
+            Obviously we could do drone, we could do a lot of other things.
+            
+            But this is historical!
+            
+            ~ trust_junia--
+        
+        * * * And willing to wait 3 years for the proof? # CLASS: player
+        
+            Yeah.  This isn't a short sell situation.
+            
+            We're changing the face of the system!
+            
+            * * * * { Business >= 30 } There are other tactics.[]  With her rep I'd be surprised if she hasn't thought of the short sell so she can pivot ahead of the transition wave. # CLASS: player
+            
+                Thought it, for sure.  I'd expect nothing less.
+                
+                Gonna do something about it on the sly?  I don't think so.
+                
+                ~ trust_junia--
+    
+    * * Has she also locked horns with Estévez?[]  Coz sounded like she didn't trust him. # CLASS: player
+    
+        Lucas is locking horns with all of us.
+        
+        So I wouldn't put that on Junia.
+        
+        * * * { Social >= 30 } She _was_ eager to throw shade[.] as soon as I joined about his credentials. # CLASS: player
+        
+            True?
+            
+            Well, I expect this team to talk truth.  Be direct.
+            
+            So it'll get sorted.
+            
+            ~ trust_junia--
+    
+    * * What do you think she wants from this? # CLASS: player
+    
+        -> byp_j
+    
+    - - ->junia_history
+
+    - - (byp_j)
+    
+    To succeed, just like the rest of us.
+    
+    This won't just put Nth Horizon on the map, we'll be a thousand spins ahead of the competition.
+    
+    And we're small enough to outrun or sidestep the behemoths.
+    
+    She helped craft the practical plan to achieve that vision.  <>
+    
+    { trust_junia >= 0:
+
+        She won't let me down.
+        
+        - else:
+            
+        I gotta trust she's not out to scuttle us now.
+    
+    }
+
+* Is TARC a risk? # CLASS: player
+
+    TARC is the *least* risky thing about this project!
+    
+    You've no idea how many Goliath sniffers he's shut down over the years.
+    
+    Not just shut down, actually, but sent on goose chases across the system.  It's been glorious!
+
+* Do you doubt me? # CLASS: player
+
+    No.
+    
+    We haven't always seen eye to eye.
+    
+    But I know you'll challenge me when you feel it's right.  That's what I need.
+
+* { doubts > 1 } So what's next? # CLASS: player
+    
+    -> learnings
+
+- ->doubts
+
+- (learnings)
+
+Still need to attend to my morning ablutions.
+
+Which are a little messier in the gel.
+
+* Yuck. # CLASS: player
+
+* { Medicine >= 30 } Isn't that the tank's job?[]  Hygiene cycle everything? # CLASS: player
+
+    We've not got it all sorted just yet.
+    
+    A little more time.
+
+- Look, one more thing, { pronouner("choi", "chai", "chen") }.
+
+We're tense right now.  All of us.
+
+Launch window is approaching and not _everything_ is in place.
+
+I hope you can help keep the team in the right headspace.  Cool?
+
+* Cucumber.
+
+    👍
+
+* Fine.
+
+    Thanks!
+
+* I'm your nanny, not the whole team's!
+
+    Just try not to make it worse.
+
+- Chat soon, yah?
+
++ [Close Chat] -> menu
+
+TODO: Continue Benton
 
 === benton_03 ===
 
@@ -443,3 +1158,19 @@ Whether or not Benton is still sane, the PC is a friendly ear in an otherwise em
 Ultimately Benton picks a path...
 
 + [Next] -> menu # CLASS: player
+
+=== benton_random ===
+
++ Hey. # CLASS: player
+
+- Hey, how's it going?
+
++ Whatcha wanna talk about? # CLASS: player
+
+- Nothing right now.  I'm pretty {&busy|tired|stressed|over it} right now.
+
++ Ok, I'll let you be. # CLASS: player
+
+- Thanks
+
++ [Close Chat] -> menu

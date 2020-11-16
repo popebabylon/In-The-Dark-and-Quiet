@@ -2,6 +2,18 @@
 
 // function to initialize where each chat begins
 === function chatsetter ===
+
+TODO: Wire up chatsetter and mission status function
+
+// update mission status if necessary
+{
+- benton_01.pluto_pitch && junia_01.junia_intro && lucas_01.lucas_intro && tarc_01:
+    ~ status = "Final Prep"
+    ~ date_month++
+- else:
+    ~ status = "Prep"
+}
+
 // news
 {
     - news_10:
@@ -20,9 +32,9 @@
         ~ news = -> news_05
     - news_03:
         ~ news = -> news_04
-    - news_02:
+    - news_02 && status == "Final Prep":
         ~ news = -> news_03
-    - news_01:
+    - news_01 && status == "Final Prep":
         ~ news = -> news_02
     - tarc_01:
         ~ news = -> news_01
@@ -36,7 +48,7 @@
         ~ team_chat = -> team_04
     - team_02:
         ~ team_chat = -> team_03
-    - team_01:
+    - team_01.logout:
         ~ team_chat = -> team_02
     - tarc_01:
         ~ team_chat = -> team_01
@@ -62,8 +74,10 @@
         ~ benton_chat = -> benton_04
     - benton_02:
         ~ benton_chat = -> benton_03
-    - benton_01.pluto_pitch:
+    - status == "Final Prep":
         ~ benton_chat = -> benton_02
+    - benton_01.pluto_pitch:
+        ~ benton_chat = -> benton_random
     - benton_01.censored:
         ~ benton_chat = -> benton_01.pluto_pitch
 }
@@ -134,7 +148,8 @@
 
 // debuggers
 TODO: remove debuggers when not needed
-// {skillDebug()}
+{skillDebug()}
+{stateDebug()}
 
 + [Mission]
 

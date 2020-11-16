@@ -210,5 +210,7 @@ Skills:
     Social: { Social }
     Technology: { Technology }
 
+TODO: Settings page - remove / rewire skills list
+
 + [Edit] -> setup.profile -> settings
 + [Close] -> menu

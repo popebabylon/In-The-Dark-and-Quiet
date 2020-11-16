@@ -171,7 +171,7 @@ So where were you before Moonshot?
     
     I'm afraid most of that is well over my head, but it does sound very stimulating.
     
-    ~ career = "astronomer"
+    ~ career = "an astronomer"
 
 * { Business >= 30 } My own startCorp.[]  Just closed series B and thought I'd take a small vacation.  Benton had other ideas. # CLASS: player
 
@@ -179,7 +179,7 @@ So where were you before Moonshot?
     
     Nice to have another sharp eye on the team.
     
-    ~ career = "entrepreneur"
+    ~ career = "an entrepreneur"
 
 * { Engineering >= 30 } I'm at JPXL, flight systems. # CLASS: player
 
@@ -189,7 +189,7 @@ So where were you before Moonshot?
     
     Well, glad to have you onboard now.
     
-    ~ career = "flight engineer"
+    ~ career = "a flight engineer"
 
 * { Medicine >= 30 }"Doctor" { name } didn't give it away?[]  I have a private practice in ST. # CLASS: player
 
@@ -197,7 +197,7 @@ So where were you before Moonshot?
     
     We get by.  But this is an interesting diversion.  # CLASS: player
     
-    ~ career = "doctor"
+    ~ career = "a doctor"
 
 * { Security >= 30 }I take apart security systems.[]  And put them back together. # CLASS: player
 
@@ -211,7 +211,7 @@ So where were you before Moonshot?
     
     Indeed.
     
-    ~ career = "hacker"
+    ~ career = "a hacker"
 
 * { Social >= 30 }I'm an ethnologist[.] at LRX University.  Tenured. # CLASS: player
 
@@ -225,7 +225,7 @@ So where were you before Moonshot?
     
     We're always looking for minds who can help us understand _humans_ in all their diversity.
     
-    ~ career = "ethnologist"
+    ~ career = "an ethnologist"
 
 * { Technology >= 30 } [Coding.]Same as the last time Benton and I worked together.  Puzzle solving with bits. # CLASS: player
 
@@ -237,15 +237,19 @@ So where were you before Moonshot?
     
     ¡LafLaf!  You're too modest.  I think having you on will lead to some really interesting... conversations.
     
-    ~ career = "coder"
+    ~ career = "a coder"
 
 * Didn't you hire me?[]  You should have my res file. # CLASS: player
 
     Of course.  Just trying to understand you as a person, not a binary file.
+    
+    ~ career = "an international spy"
 
 * No where in particular. # CLASS: player
 
     Sorry, don't mean to pry.  We can leave the small talk to another time.
+    
+    ~ career = "a janitor"
 
 - And, if I may, I'm interested in why you accepted Benton's invitation?
 
@@ -271,7 +275,7 @@ VAR relationship = ""
     
     ~ relationship = "puzzle"
 
-* It almost didn't.[]  He's an irresponsible sot. # CLASS: player
+* I almost didn't.[]  He's an irresponsible sot. # CLASS: player
 
     But I have a nose for epics. # CLASS: player
 
@@ -377,6 +381,8 @@ But I'm trusting the vision.
     Do connect with me again soon, won't you?
 
 + [Close Chat] -> menu # CLASS: player
+
+TODO: Continue Junia
 
 === junia_02 ===
 

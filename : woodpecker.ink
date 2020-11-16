@@ -1,5 +1,35 @@
 // this is the conversation with woodpecker (kim)
 
+TODO: Continue Woodpecker
+
+=== pecked ===
+
+{ pecked > 1:
+
+    You really like clicking things, huh?
+    
+    
+    
+    ->->
+
+}
+ << inject comms_hack^...COMMIT >>
+    << processing >>
+    << segfault at 0x7065636b656420796f7521, respooling >>
+    << inject comms_hack^...COMMIT >>
+
+Hei. <br> fraid you got duped. <br> But I'm REAL interested in chattin soon. <br> Before you get too slap-happy with that << report >> button, I got some intel you'll be interested in too.  About PB & J. <br> Ok, nah, no P, but that was too good to pass up! <br> Be seein' ya! <br> \- Woodpecker
+
+* [<< Report chat >>]
+
+    << reported >>
+    
+    << closing page >>
+
+* [<< Close chat >>]
+
+- ->->
+
 === woodpecker_01 ===
 
 K hacks her way in to talk to P, has something interesting...

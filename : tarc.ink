@@ -215,9 +215,9 @@ My apologies, I am not currently able to place you in my chronology.
 
 * You don't remember { name }, class of { date_year - 11 }? # CLASS: player
 
-* Not to worry. # CLASS: player
-
 * Purged me from your brainbanks? # CLASS: player
+
+    I slaved over your insightAlgo! # CLASS: player
 
 * Try << recall /{ name } { date_year - 11 } COMMIT >> # CLASS: player
     
@@ -226,10 +226,12 @@ My apologies, I am not currently able to place you in my chronology.
 Ah, { name }.  You were responsible for 3,231 updates to my code over the course of 3 years.  My emotion response and predictive analytics subroutines owe you a significant debt.
 
 * Ah, you do remember! # CLASS: player
+
 * Good to see you too. # CLASS: player
+
 * Apparently not my best work. # CLASS: player
 
-- What has Benton done with you?
+- What has Benton done with you? # CLASS: player
 
 In the eleven years since you worked with Mr. Saari on my code he was able to fork the initial AI framework into a number of experimental and lucrative projects, including the infamous Wài kōng shìxiàn incident.  He maintained ownership of my source code throughout and has been able to improve upon the initial design considerably.  The instance you are currently engaging has been customized to serve the needs of Nth Horizon, Inc and ensure Mr. Saari's interests are protected. 
 
@@ -267,6 +269,7 @@ Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, 
 
 + [Close Chat] -> menu # CLASS: player
 
+TODO: Continue TARC
 
 === tarc_02 ===
 

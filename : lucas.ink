@@ -142,6 +142,8 @@ Clear?
 
 + [Close Chat] -> menu # CLASS: player
 
+TODO: Continue Lucas
+
 === lucas_02 ===
 
 L shares growing concerns about B's mental state

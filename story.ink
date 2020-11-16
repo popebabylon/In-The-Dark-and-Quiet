@@ -15,6 +15,7 @@ INCLUDE: junia.ink
 INCLUDE: lucas.ink
 INCLUDE: tarc.ink
 INCLUDE: woodpecker.ink
+INCLUDE: debuggers.ink
 
 // set initial chat directs
 VAR news = -> error
@@ -35,6 +36,7 @@ VAR Social = 0
 VAR Technology = 0
 
 // setup mission parameters
+VAR status = "Prep"
 VAR date_year = 2065
 VAR date_month = 07
 VAR date_day = 15
@@ -57,7 +59,7 @@ Sorry, you don't have access to that resource.
     <> All personnel must pass the security check with TARC to gain access to Nth Horizon resources and communicate with colleagues.
 }
 
-+ [Next] -> menu
++ [Close] -> menu
 
 === end_chat ===
 
@@ -81,19 +83,6 @@ Sorry, you've run out of things in this chat.
         ~ return n
         
 }
-
-=== function skillDebug() ===
-
-// bump all skills to test choices
-~ Astronomy = 100
-~ Business = 100
-~ Engineering = 100
-~ Medicine = 100
-~ Security = 100
-~ Social = 100
-~ Technology = 100
-
-~return
 
 === the_end ===
 

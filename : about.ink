@@ -1,5 +1,7 @@
 // this describes the behavior on the "about" page of the app
 
+TODO: Complete About Page
+
 === about ===
 
 This page introduces the game, contains credits, and allows the user to start play.
