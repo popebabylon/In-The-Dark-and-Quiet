@@ -4,33 +4,34 @@ TODO: Continue Woodpecker
 
 === pecked ===
 
+# CLEAR
+
 { pecked > 1:
 
     You really like clicking things, huh?
-    
-    
-    
-    ->->
 
-}
+- else:
  << inject comms_hack^...COMMIT >>
     << processing >>
     << segfault at 0x7065636b656420796f7521, respooling >>
     << inject comms_hack^...COMMIT >>
 
 Hei. <br> fraid you got duped. <br> But I'm REAL interested in chattin soon. <br> Before you get too slap-happy with that << report >> button, I got some intel you'll be interested in too.  About PB & J. <br> Ok, nah, no P, but that was too good to pass up! <br> Be seein' ya! <br> \- Woodpecker
+}
 
-* [<< Report chat >>]
++ [<< Report chat >>]
 
     << reported >>
     
     << closing page >>
 
-* [<< Close chat >>]
++ [<< Close chat >>]
 
 - ->->
 
 === woodpecker_01 ===
+
+# CLEAR
 
 K hacks her way in to talk to P, has something interesting...
 
@@ -42,6 +43,8 @@ The PC may immediately block or report Woodpecker to TARC, but she should get a 
 
 === woodpecker_02 ===
 
+# CLEAR
+
 K has juicy deets on B and J, but wants the P to help her hack J
 
 Woodpecker reappears with some actual intel the PC may find useful.  She describes the history of both Benton and Junia, especially where Junia has wrested control from previous partners.  Yes, she's been very successful, but if you look closely she's also walked over more than a few graves to get there.  There's a disturbing hint that she might be talking to Goliath.
@@ -52,6 +55,8 @@ Woodpecker can't prove that yet, but she could if the PC could get Junia to chas
 
 === woodpecker_03 ===
 
+# CLEAR
+
 K finds dirt on J, is willing to trade
 
 Woodpecker declares she's got the goods and can prove Junia's double-dealing such that it would invalidate the sale to Goliath.  But she needs something in return.  She needs access to this scoop so her article captures the moment Benton Saari avoided death and the takeover of his company.
@@ -60,6 +65,8 @@ Woodpecker declares she's got the goods and can prove Junia's double-dealing suc
 
 === woodpecker_04 ===
 
+# CLEAR
+
 K wants her headline story
 
 Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if her evidene helped against Junia).  The more details the PC is willing to give the more likely the article benefits Benton's story and the outcome for his company.
@@ -67,6 +74,8 @@ Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if h
 + [Next] -> menu
 
 === woodpecker_random ===
+
+# CLEAR
 
 Hei {pronouner("choi","chai","chen")}.  I'm lyin' low, so chat later, k?
 

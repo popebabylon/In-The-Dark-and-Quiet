@@ -2,15 +2,13 @@
 
 === benton_profile ===
 
-Picture of Benton
-Name: Benton Saari
-Position: Founder, CEO, Pilot
-Pronouns: He/Him/His
-Skills: Business, Technology, Social
+<img src="img/benton.png" class="picture-lg"><br><br>Name: Benton Saari<br><br>Position: Founder, CEO, Pilot<br><br>Pronouns: He/Him/His<br><br>Skills: Business, Technology, Social
 
 ->->
 
 === benton_01 ===
+
+# CLEAR
 
 -> benton_profile ->
 
@@ -236,6 +234,8 @@ Moonshot is our big unveiling.  We show the system what we can do and we'll have
 
 * I still don't know what Moonshot _is_ # CLASS: player
 
+TODO: player might know what moonshot is if they read news first...
+
 - Prove the tech by taking it out for the ultimate spin.
 
 I'm flying to Pluto.
@@ -274,11 +274,11 @@ Lowell's Horizon is small, single-occupant.  Junia likes to call it my coffin.
 
     Not exactly.
 
-* They're probably not wrong.[]  You'll die of boredom on a trip that long. # CLASS: player
+* She's probably not wrong.[]  You'll die of boredom on a trip that long. # CLASS: player
 
 - That's why I wanted you.
 
-Sure, I got all the medtech and psitech and mastubatory infotainment a sot could want on a 3 year deep-space voyage.
+Sure, I got all the medtech and psitech and infotainment a sot could want on a 3 year deep-space voyage.
 
 But I wanted someone I could talk to.  Someone I could be real with.
 
@@ -314,6 +314,8 @@ newsDrops should be going live with our announcement soon.  And you could intro 
 
 = welcome_back
 
+# CLEAR
+
 Hollah!  No fuss?
 
 * Paperwork.[] No fuss. # CLASS: player
@@ -341,6 +343,8 @@ Hollah!  No fuss?
 ->->
 
 === benton_02 ===
+
+# CLEAR
 
 - (morning_loop)
 
@@ -464,7 +468,7 @@ Almost anything.
 
 What's fun dirtside?
 
-* I've been busy. # CLASS: player
+* (busy) I've been busy. # CLASS: player
 
     Workload for { career } doesn't just evaporate when your old choi seconds you to his therapist team. # CLASS: player
     
@@ -492,7 +496,7 @@ What's fun dirtside?
     
     - - Look, I legit appreciate you being here for me.
 
-* I met someone. # CLASS: player
+* (lover) I met someone. # CLASS: player
 
     {
         - relationship == "close":
@@ -531,7 +535,7 @@ What's fun dirtside?
     
     I can tell you don't wanna share.
 
-* I've been adventuring. # CLASS: player
+* (adventurer) I've been adventuring. # CLASS: player
 
     * * Some first descents in the Antarctic. # CLASS: player
         
@@ -557,13 +561,13 @@ What's fun dirtside?
     
     Ugh.
 
-* I've been keeping tabs on Goliath. # CLASS: player
+* (goliath) I've been keeping tabs on Goliath. # CLASS: player
 
     That still sounds like Moonshot.
     
     Just ignore them.  Bullies feed on your attention.
 
-* Nothing.  This is all I do.[]  I don't have any time to be { career } AND keep you company. # CLASS: player
+* (nada) Nothing.  This is all I do.[]  I don't have any time to be { career } AND keep you company. # CLASS: player
 
     Oh, sot.  It's dragging you down too?
     
@@ -899,6 +903,8 @@ That's the only way we evolve enough to survive.
     
     - - We've got a good team behind him.
     
+    TODO: rewrite -- Benton doesn't fully trust Lucas / argues with him in the next scene
+    
     I trust him most with my health.
 
 * What about Junia? # CLASS: player
@@ -1061,7 +1067,7 @@ I hope you can help keep the team in the right headspace.  Cool?
 
     Thanks!
 
-* I'm your nanny, not the whole team's!
+* I'm your nanny, not the whole team's! # CLASS: player
 
     Just try not to make it worse.
 
@@ -1069,21 +1075,548 @@ I hope you can help keep the team in the right headspace.  Cool?
 
 + [Close Chat] -> menu
 
-TODO: Continue Benton
-
 === benton_03 ===
 
-B discusses risk with P, makes the launch decision
+# CLEAR
+
+Hei { name }
+
+What's new in the real world?
+
+* [A man's gonna fly to Pluto!]I heard there's this crazy dude put in gills and is gonna fly 'round Pluto! # CLASS: player
+
+    And beat me to it?  Sot!
+    
+    * * Nah, nobody's as nutso as you. # CLASS: player
+    
+        Numero uno loco here.
+        
+    * * Yeah, may as well give up now! # CLASS: player
+    
+        Never!
+
+* Hei Benton.  Not much. # CLASS: player
+
+* Goliath just bought you. # CLASS: player
+
+    Very ¡LafLaf!
+    
+    * * I think there's plans to pickle you[.] in that gunk and hang you on the CEO's wall. # CLASS: player
+    
+        As long as I'm tastefully nude.
+    
+    * * Serious. # CLASS: player
+    
+        You're not?
+        
+        # wait
+        
+        Serious?
+        
+        I haven't seen...
+        
+        Sot it... merging Junia...
+        
+        * * * ¡LafLaf![]  Fell for it. # CLASS: player
+        
+            Sotting hades!  { name }, you're space trash!
+            
+            # wait
+            
+            ¡sigh! I need to remember how to laugh.
+            
+            # wait
+
+- Well, distract me or something.
+
+{ benton_02.busy:
+
+    Being { career } and my nanny keeping you busy?
+
+       * All cylinders.[]  Wouldn't want it any other way. # CLASS: player
+        
+            Don't burn up on reentry, tho, ya?
+            
+            Don't wanna be responsible for that.
+        
+            -> nomorefun
+        
+        * Enough.[]  What do you need? # CLASS: player
+        
+            Too much apparently.
+            
+            -> nomorefun
+            
+        * I'm not your doomscroll feed. # CLASS: player
+        
+            Fine.
+            
+            -> nomorefun
+
+}
+
+{ benton_02.lover && relationship != "close":
+    
+    How's your bae?
+
+       * ¡grin![]  It's special. # CLASS: player
+        
+            I know you like a rollercoaster.
+            
+            Keep up the momentum! 😁
+        
+            -> nomorefun
+        
+        * We're good. # CLASS: player
+        
+            Don't need to talk about it, huh?
+            
+            You always were quiet about such stuff.
+            
+            I think that's a good sign.
+            
+            -> nomorefun
+            
+        * Crash/Burn.[]  I'm apparently "not good emotional material" when I'm spending hours talking to a fish. # CLASS: player
+        
+            Ah, I'm sorry {pronouner("choi", "chai", "chen")}.
+            
+            -> nomorefun
+        
+}
+
+{ benton_02.lover && relationship == "close":
+    
+    Got single again?
+        
+       * Yeah.[]  It didn't work out. # CLASS: player
+        
+            Nothing's quite like us. # CLASS: player
+        
+            # wait
+            
+            I... uh...
+            
+            Nevermind. # CLASS: player
+        
+            -> nomorefun
+        
+        * None of your biz. # CLASS: player
+        
+            Fair 'nuff.
+            
+            -> nomorefun
+            
+        * Oh, no, it's going swell.[]  You wanna hear all the squishy deets? # CLASS: player
+        
+            No, thanks.  Got more important things we should focus on.
+            
+            Well, you see, there's this thing I like... # CLASS: player
+            
+            THANK YOU!  Moving on.
+            
+            -> nomorefun
+        
+}
+
+{ benton_02.adventurer:
+
+    Recover from your last dirtventure?
+    
+       * Recovered? Energized![]  You know I need the thrills. # CLASS: player
+            
+            Man, I miss the thrill of the drop.
+            
+            * * You'll be on the thrill ride of a lifetime in a few days here. # CLASS: player
+            
+            Yah, but drugged to the gills, _literally_, to avoid adreno spikes.
+            
+            Class 3 fun.  Good story to tell when I get home.
+        
+            -> nomorefun
+        
+        * Barely.[]  Worth it, but choi am I werked. # CLASS: player
+        
+            I feel yah.
+            
+            -> nomorefun
+            
+        * I'm in traction.[]  You're lucky all I have to do for your project is Message you. # CLASS: player
+        
+            # wait
+            
+            No way!  What happened?
+            
+            * * Anchor failure. # CLASS: player
+            
+                And no grav-belt backup?  I knew you were crayz, but really?
+                
+                Nah, just messin' # CLASS: player
+                
+                Sot!  Thanks {pronouner("choi","chai","chen")}!
+                
+                I was almost feelin' worse from talking to you.
+            
+                -> nomorefun
+            
+            * * Snowstorm and an icy road. # CLASS: player
+            
+                That's terrible {pronouner("choi","chai","chen")}!
+                
+                Not really. Just trying to get you to stop on the gory details about your biohack. # CLASS: player
+                
+                Oh, phew!
+                
+                -> nomorefun
+            
+            * * An angry camel. # CLASS: player
+            
+                What?  You're pulling my leg!
+                
+                True. # CLASS: player
+                
+                I was almost feelin' worse from talking to you.
+            
+                -> nomorefun
+        
+    
+}
+
+{ benton_02.goliath:
+
+    Except big G.  I don't wanna hear anything more about big G right now.
+    
+       * Nothing to report.[]  They're off chasing other prey. # CLASS: player
+            
+            Hopefully it stays that way.
+        
+            -> nomorefun
+        
+        * I dropped it.[]  Not worth my time. # CLASS: player
+        
+            Good.  Don't need them constantly preying on our minds.
+            
+            -> nomorefun
+            
+        * They made me an offer. # CLASS: player
+        
+            # wait
+            
+            Swell.  You gonna sell me out?
+            
+            I wish.  You think big G made me an offer I'd still be here? # CLASS: player
+            
+            You're filling me with confidence...
+            
+            -> nomorefun
+        
+}
+
+{ benton_02.nada:
+
+    Found anything fun to do outside of this?
+    
+        * Sure.[]  But you've got other things to worry about. # CLASS: player
+        
+            ¡sigh! True
+            
+            -> nomorefun
+        
+        * Not really. # CLASS: player
+        
+            Sorry, {pronouner("choi", "chai", "chen")}.  Take some time for you, yah?
+            
+            I'll try. # CLASS: player
+        
+            -> nomorefun
+    
+}
+
+- * -> nomorefun
+
+TODO: test default path
+
+= nomorefun
+
+Feels like a firing line here at the mo'
+
+* What's the problem?[]  Something I can do to help? # CLASS: player
+
+    Mebbe.
+
+* How so? # CLASS: player
+
+* Need me to pull a trigger? # CLASS: player
+
+    Sometimes I wonder why I hired you.
+    
+    Me too. # CLASS: player
+
+TODO: ideally have a matrix of status & people's moods here to illustrate how risky the launch date is
+
+- I just need a bit of rubberduck, y'know?
+
+Lucas is still { team_01.loss: holding medtests too close for me to get my head around| sore about me getting my hands in the medtests}, TARCs assessment is always "you will die", and we've got some last nanosec refits on the isosacular alignment which would usually be fine... but with everything else...
+
+* This is big. # CLASS: player
+
+* You knew this would be big. # CLASS: player
+
+* Too big for you? # CLASS: player
+
+- Yah, grokked.  Just need to feel a little more balanced on the solar wake.  I rarely feel this... unsure.
+
+You always were clear on your horizon.
+
+How?
+
+* It's not so hard.[]  Act like you've already succeeded. # CLASS: player
+
+    Tellingson?  Or Sorichi?
+    
+    * * I didn't have either of them as profs. # CLASS: player
+
+    * * I don't remember.  Doesn't matter. # CLASS: player
+    
+    - - It's one of those univeral maxims. # CLASS: player
+    
+    True.  You at least lived those while I...
+
+* I wasn't.[]  First rule, act like you know what you're doing. # CLASS: player
+
+    The eternal pragmatist!
+    
+    * * Had to be, working with fireworks like you!
+    
+    * * It got me by.
+    
+    - - You know how to steer with simple instructions.
+    
+    Always liked that.
+
+* Because I'm better than you. # CLASS: player
+
+    In some ways...
+    
+    * * In *all* ways, fish-face. # CLASS: player
+    
+    * * In the ones that count. # CLASS: player
+    
+    Especially the ways that bring me back to earth.
+
+- Recall the Moscow mess?
+
+VAR risky = 0
+VAR cautious = 0
+
+* Sure.  How's that relevant?
+
+    When my head was spinning you stepped in and made the choice.
+
+* { relationship == "close" } I usually... try to forget[.] when you hurt me. # CLASS: player
+
+    You know I never meant to.
+    
+    * * I know. # CLASS: player
+    
+    * * You never _mean_ it.[]  But it still hurts. # CLASS: player
+    
+    * * Don't wanna talk about it. # CLASS: player
+    
+    - - But you were... great.
+    
+    { career == "an astronomer" or career == "an entrepreneur": 
+    
+        Even with _everything_ you still walked into the conference with that... poise.
+        
+        And you made the call, when it came down to it...
+        
+    }
+    
+    { career == "a flight engineer" or career == "a hacker" or career == "a coder":
+        
+        The whole thing could have crash/burned, especially with... us going sideways.
+        
+        But you made a choice and kept the rails on.
+        
+    }
+        
+    
+    { career == "a doctor" or career == "an ethnologist": 
+    
+        You had no reason to help her, but you did.
+        
+        You made the call and saved us both.
+    
+    }    
+
+    { career == "an international spy" or career == "a janitor": 
+    
+        You coulda done some real damage, but you took a breath.
+        
+        And whatever you decided, it kept us standing until morning.
+    
+    }
+
+* { relationship == "puzzle" } Our escapades[...] aren't on my resumé. # CLASS: player
+
+    Wise.
+    
+    Not sure the statute of limitations is up on all of them.
+    
+    * * I usually pulled you _out_ of the PolSec predicaments! # CLASS: player
+    
+    * * We made decisions in the moment.[]  So far they haven't bit us in the behind. # CLASS: player
+    
+    * * PolSec can't get me.[] MegaCorp assassins, though... # CLASS: player
+    
+    - - True
+    
+    { career == "an astronomer" or career == "an entrepreneur": 
+    
+        And a little covert dealing behind the scenes at a conference usually avoids jailtime.
+        
+        You got us on the inside track without unnecessary fuss.
+        
+    }
+    
+    { career == "a flight engineer" or career == "a hacker" or career == "a coder":
+        
+        We could have gone sideways very easily, but a little electro-wizardry.
+        
+        You kept us out of trouble.  You made the right call.
+        
+    }
+        
+    
+    { career == "a doctor" or career == "an ethnologist": 
+    
+        I wasn't even sure if I could trust you.  The Moscow mess was probably the deepest sot I got you in to.
+        
+        But you kept your cool.  Saved us both.
+    
+    }    
+
+    { career == "an international spy" or career == "a janitor": 
+    
+        There were a few bodies left behind this time.
+        
+        When PolSec closed in, I thought we were done, but you pulled us through.
+    
+    }
+
+* { relationship == "epic" } Hey, I usually tell that story! # CLASS: player
+
+    There we were, a budding wunderking and { career }, taking on the world! # CLASS: player
+    
+    * * { career == "an astronomer" or Astronomy >= 30 } I had plotted [correctly...]the correct vector paths, but _someone_ was tripping and taking us on a wild chase across the Russian Directorate.  Wouldn't take "it's sorted" for an answer.  In the end we're in this massive argument with an ancient radioastronomer who kept trying to steer you wrong (and who didn't speak much Englo or Espro) and we were gonna commit this huge program to the decreped machinery that I was sure was gonna result in a segfault and blow the chance we had to track the sat. # CLASS: player
+    
+    * * { career == "an entrepreneur" or Business >= 30 } The deal was all but settled[...] with only some blood-on-paper and a night of vodka before we'd take the chips back to the safety of the WHD.  And *you* started getting cold feet, worried we'd overcommit or get swindled.  All the time I'm showing you the numbers and saying we're fine! # CLASS: player
+    
+    * * { career == "a flight engineer" or Engineering >= 30 } Flight systems had reported green[...] and we were ready to drop into the pipe.  I've got my whole reputation riding on this test and you just wanted to throw your weight around infront of the Nuorins, so you start calling countermands.  I was livid, and the RHD almost lost their minds. # CLASS: player
+    
+    * * { career == "a hacker" or Security >= 30 } The intel was some juicy paydata[...] sitting on an RHD server hadn't seen a security patch in three months. # CLASS: player
+    
+        Intel I got you.
+        
+        Yeah, but couldn't do anything with.  So I pull the best 0day we have for something that out-of-date and we waltz in like it's going to be an Ocean's patticake.  Didn't trip the countermeasures until _someone_ got a bit greedy, and we barely escaped with our liberty. # CLASS: player
+    
+    * * { career == "a coder" or Technology >= 30 } We had a deadline, code commit or bust[...].  There was a non-zero amount of money on the table and this little project had to keep the data sound, beat the Turin test, and come in under 3 petaflops a second.  The team was running dry on stims and low on ideas... except your really bad ones. # CLASS: player
+    
+        I had to turn the ship around or we were gonna flop. # CLASS: player
+    
+    * * { career == "a doctor" or Medicine >= 30 }  But you knew next to nothing about Medsci[...] despite trying to turn your hackathon project into the next penicilin.  The conference was the best sales-pitch but we got caught between buyers who _someone_ had overimpressed with features that weren't even scientifically possible.  I think one of them was a mobster.  I think you would have been shot. # CLASS: player
+    
+        But deciding between medtechers was something I was better at. # CLASS: player
+    
+    * * { career == "an ethnologist" or Social >= 30 }  Your understanding of Russia[ was lacking.]n history, politics, and manners left a lot to be desired, and the funding would dry up without a little smoothing of ruffled feathers.  It took some serious bowing and scraping to undo the faux-pas and get at least a couple of options back on the table. # CLASS: player
+    
+    * * { career == "an international spy" or violence > 0 } I think we ended up in the back of a bullet-riddled HoverMerc with the lights off careening down the Moskva and all the newsDrops were pasting your face around as a suspect.  If they found you with that case it would've been Siberia... or Europa for you! # CLASS: player
+    
+        A fate worse than death!  And to make matters worse our options for escape were thinning!  Ahead the lights of a blockade.  The dark trees around us no salvation.  If we tried to lie low the morning sun would rumble us for sure! # CLASS: player
+    
+    * * { career == "a janitor" }  And you ALWAYS left a mess for me to clean up.[]  Lucky for you I was around.  You'd not have known what to do with that kind of disaster. # CLASS: player
+    
+    * * And you weren't listening! # CLASS: player
+    
+    - - I remember!  I *was* there!
+    
+    Much good you were. # CLASS: player
+    
+    Yeah.  You made the call.
+
+* Not really. # CLASS: player
+
+    First time I ever felt out of my depth.  My head was spinning and you stepped in, all calm, and took control.
+
+-
+
+* I threw caution to the wind. # CLASS: player
+    
+    ~ risky++
+    ~ cautious--
+
+    {pronouner("Choi","Chai","Chen")}, you took the risk and it paid off.
+    
+    Same as I'm doing here.
+
+* Patience was the only option. # CLASS: player
+
+    ~ risky--
+    ~ cautious++
+    
+    Seems that way in retro.
+    
+    We have to take the right amount of time to see the repercussions.
+    
+    But I can't take *all* the time.
+    
+* My call didn't matter.[]  You always had your plan B. # CLASS: player
+
+    But don't you see?  Without your call I wouldn't have had the intel I needed to clean up afterwards.
+    
+    You level-set.
+    
+    Then I can decide with confidence.
+
+- 
+* You making a decision on launch? # CLASS: player
+
+- Yeah.
+
+Have to.
+
+It's go time, no matter what Lucas says.
+
+{ risky > 0:
+
+    Moscow just reminds me of the times we have to act because the bigger risk is to have never tried at all.
+    
+- else:
+
+    I've had enough time to think this through.  Yes, there are risks, but they have to be taken.
+    
+    Or we stall.
+    
+}
+
+I gotta tell the others.  Chat soon, ya?
+
++ [Close Chat] -> menu # CLASS: player
+
+/*B discusses risk with P, makes the launch decision
 
 Benton asks for the PCs final opinion on whether or not he should launch.  He'll admit to a lot of cut corners and things not working out exactly as planned.  But he thinks there's enough buffer built in to their plans to accommodate.
 
 Whatever their response he will tie it back to a previous adventure they had and whether or not taking that risk was worthwhile.  "You can't know if the bigger risk is to never have tried."  This establishes if the PC is [brave] or [cautious].
 
-In the end he makes it clear he intends to launch and not miss the window.  He appreciates their involvement and hopes they'll stay on to keep him company (even just through comms) in the dark and quiet out there.
+In the end he makes it clear he intends to launch and not miss the window.  He appreciates their involvement and hopes they'll stay on to keep him company (even just through comms) in the dark and quiet out there.*/
 
-+ [Next] -> menu # CLASS: player
+TODO: Continue Benton
 
 === benton_04 ===
+
+# CLEAR
 
 B embraces the risk
 
@@ -1098,6 +1631,8 @@ With careful prompting he can stay on topic and be encouraged.  Mantras are repe
 + [Next] -> menu # CLASS: player
 
 === benton_05 ===
+
+# CLEAR
 
 B getting bored, discusses personal history with P, flies by Jupiter
 
@@ -1131,6 +1666,8 @@ If challenged he laughs it off as a joke, but appears slightly unhinged by the i
 
 === benton_08 ===
 
+# CLEAR
+
 Benton is losing it, going off the rails, goes off on a past event with the player
 
 As things back on Earth get heated with the potential loss of Nth Horizon, the PC is tasked with trying to keep Benton on task.  However he seems to be losing it, going off onto tangents about mysterious, invisible stowaways and the nihilisitic unfairness of reality.  A savvy player may notice his train of thought seeking desperately for a way out, an excuse for the pointlessness of this stunt and his life against the backdrop of an uncaring universe.
@@ -1140,6 +1677,8 @@ The conversation touches on another moment from the PC and Benton's shared past,
 + [Next] -> menu # CLASS: player
 
 === benton_09 ===
+
+# CLEAR
 
 P has to reel Benton in, keep him on the rails
 
@@ -1151,6 +1690,8 @@ The PC can use the various knowledge gained, activities completed, history estab
 
 === benton_10 ===
 
+# CLEAR
+
 After the historic Pluto flyby, B needs to decide where he belongs
 
 Whether or not Benton is still sane, the PC is a friendly ear in an otherwise empty void and he will communicate with them.  If the PC is lucky or good they will have enough support and options available to convince Benton to turn around for the return journey.  But even if he's not completely insane the pull of the great darkness beyond Pluto does give Benton some pause.  The madness of his company and the Earth seem so far away and so alien that staying in the embracing dark forever almost seems like a good idea.  Is he running away or running towards something?
@@ -1160,6 +1701,8 @@ Ultimately Benton picks a path...
 + [Next] -> menu # CLASS: player
 
 === benton_random ===
+
+# CLEAR
 
 Hey, I'm pretty {&busy|tired|stressed|over it} right now.  Can it wait?
 

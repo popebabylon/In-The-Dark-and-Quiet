@@ -2,17 +2,9 @@
 
 === setup ===
 
-Welcome to the Nth Horizon.
+# CLEAR
 
-You have been invited to the secure communication network for Project Moonshot.  We're thrilled to have you on board!
-
-Please take the time to set up your profile so your colleagues know who you are and what to ask you about.
-
-All personnel will need to pass the security check with TARC to gain access to Nth Horizon resources and communicate with your colleagues.
-
-Thank you for joining us on this incredible project.
-
-\- Founder and CEO Benton Saari 
+Welcome to the Nth Horizon. <br><br>You have been invited to the secure communication network for Project Moonshot.  We're thrilled to have you on board!<br><br>Please take the time to set up your profile so your colleagues know who you are and what to ask you about.<br><br>All personnel will need to pass the security check with TARC to gain access to Nth Horizon resources and communicate with your colleagues.<br><br>Thank you for joining us on this incredible project.<br><br>- Founder and CEO Benton Saari 
 
 * [Set up your profile]
 
@@ -25,49 +17,57 @@ VAR name = "?"
 VAR pronoun = "?"
 
 // picture
-Select your identity for biometric validation.
-+ Picture of a person
+Select your identity for biometric validation. # CLEAR
 
-    ~ picture = 1
+TODO: COMPILE: switch to actual picture selection
 
-/*
-+ Picture of a person
+/*+ Select Picture
 
-    ~ picture = 2
+    ~ picture = "Your Picture"*/
 
-+ Picture of a person
++ <img src="img/p01.png" class="picture-lg">
 
-    ~ picture = 3
+    ~ picture = "img/p01.png"
 
-+ Picture of a person
 
-    ~ picture = 4
++ <img src="img/p02.png" class="picture-lg">
 
-+ Picture of a person
+    ~ picture = "img/p02.png"
 
-    ~ picture = 5
 
-+ Picture of a person
++ <img src="img/p03.png" class="picture-lg">
 
-    ~ picture = 6
+    ~ picture = "img/p03.png"
 
-+ Picture of a person
 
-    ~ picture = 7
++ <img src="img/p04.png" class="picture-lg">
 
-+ Picture of a person
+    ~ picture = "img/p04.png"
 
-    ~ picture = 8
 
-+ Picture of a person
++ <img src="img/p05.png" class="picture-lg">
 
-    ~ picture = 9
-*/
+    ~ picture = "img/p05.png"
+
+
++ <img src="img/p06.png" class="picture-lg">
+
+    ~ picture = "img/p06.png"
+
+
++ <img src="img/p07.png" class="picture-lg">
+
+    ~ picture = "img/p07.png"
+
+
++ <img src="img/p08.png" class="picture-lg">
+
+    ~ picture = "img/p08.png"
 
 -
 
 // name
-Your identity has been verified.  Manual verification name.
+Your identity has been verified.  Manual verification of your name is required. # CLEAR
 
 + Avi
 
@@ -108,7 +108,7 @@ Your identity has been verified.  Manual verification name.
 -
 
 // pronoun
-Select your preferred pronouns.
+Welcome, { name }.  Select your preferred pronouns. # CLEAR
 
 + He/Him/His
     
@@ -125,7 +125,7 @@ Select your preferred pronouns.
 -
 
 // position
-Your position has been selected as Mission Consultant.  You report directly to Benton Saari.
+Your position has been selected as Mission Consultant.  You report directly to Benton Saari. # CLEAR
 
 // if this is the first time they're editing their profile, ask them for their base skill; after that ignore skills to avoid having to unwind all skills gained during the game
 
@@ -133,7 +133,7 @@ Your position has been selected as Mission Consultant.  You report directly to B
     -> skills ->
 }
 
-Thank you.  Your profile is complete.  Select 'Save' to continue.
+Thank you.  Your profile is complete. <br> <br> To edit your profile in future visit the Settings page. <br> <br> Select 'Save' to continue. # CLEAR
 
 + [Save] ->->
 + [Start Over] -> profile
@@ -197,7 +197,7 @@ You may select a subject more than once if it is an area of significant study.
 
 === settings ===
 
-Picture \#{ picture }
+<img src="{ picture }" class="picture-lg">
 Name: { name }
 Position: Mission Consultant
 Pronouns: { pronoun }
@@ -212,5 +212,5 @@ Skills:
 
 TODO: Settings page - remove / rewire skills list
 
-+ [Edit] -> setup.profile -> settings
-+ [Close] -> menu
++ [<< Edit >>] -> setup.profile -> settings
++ [<< Close >>] -> menu

@@ -2,15 +2,13 @@
 
 === lucas_profile ===
 
-Picture of Dr. Lucas Estévez
-Name: Dr. Lucas Estévez
-Position: Chief Medical Officer
-Pronouns: He/Him/His
-Skills: Medicine, Social, Technology
+<img src="img/lucas.png" class="picture-lg"><br><br>Name: Dr. Lucas Estévez<br><br>Position: Chief Medical Officer<br><br>Pronouns: He/Him/His<br><br>Skills: Medicine, Social, Technology
 
 ->->
 
 === lucas_01 ===
+
+# CLEAR
 
 -> lucas_profile ->
 
@@ -39,6 +37,12 @@ Skills: Medicine, Social, Technology
 -> menu
  
 = lucas_intro
+
+{ ghost_lucas:
+
+    # CLEAR
+
+}
 
 { name }.  Hello.
 
@@ -146,6 +150,8 @@ TODO: Continue Lucas
 
 === lucas_02 ===
 
+# CLEAR
+
 L shares growing concerns about B's mental state
 
 Lucas demands updated reports given the mental strain Benton must be under.  He's (as usual) terse and demanding.  If the PC gives him any cause he will fly off into a lecture about who knows best when it comes to interplanetary remote medicine.
@@ -158,6 +164,8 @@ He encourages the player to give Benton gentle pushes to re-establish routine an
 
 === lucas_03 ===
 
+# CLEAR
+
 Lucas wants to turn the boat around, admits to being out of his league
 
 Lucas is at a loss of how to deal with Benton's wild ramblings.  He might even admit to being out of his league, that the top-notch team they assembled hasn't had to deal with someone this far removed from humanity.  This is entirely new ground.  And it's falling out from under them.
@@ -168,6 +176,8 @@ If they want to save their patient they need him to cryosleep and turn around ri
 
 === lucas_04 ===
 
+# CLEAR
+
 P gets Lucas to take a risk even with his patient millions of miles away
 
 The PC and Lucas can collaborate on treatment options to keep Benton in one piece for the return journey.  The CMO has all the skills he needs, and the pieces are all there in that little capsule between the darkness of the stars, but just needs some perspective (and perhaps some humor) to see the solution and act upon it in a way that Benton can benefit from.
@@ -176,8 +186,10 @@ The PC and Lucas can collaborate on treatment options to keep Benton in one piec
 
 === lucas_random ===
 
+# CLEAR
+
 - (waitloop)
-+ \ [{~Hello?|Dr. Estévez?|Lucas?}]\ {~Hello?|Dr. Estévez?|Lucas?} # CLASS: player
++ \ [{&Hello?|Dr. Estévez?|Lucas?}]\ {&Hello?|Dr. Estévez?|Lucas?} # CLASS: player
 
     ->waitloop
 

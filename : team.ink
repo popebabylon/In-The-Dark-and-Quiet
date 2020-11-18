@@ -2,6 +2,8 @@
 
 === team_01 ===
 
+# CLEAR
+
 << { name } is joining the team chat >>
 
 { pronouner("He's", "She's", "They've") } been your rubber duck for a month!  Not a contributing member of the team! # CLASS: lucas
@@ -79,9 +81,9 @@ I don't report every result to my patient because my patient is a conniving soth
 
 - Look, the primary problem is system stress. # CLASS: lucas
 
-My tests, methods I won't divulge Benton, show significant risk to his health without more time to adapt. # CLASS: lucas
+Benton, you don't get the results of every test.  I need to evaluate your health with an unambiguous and unbiased eye so there's a lot we're doing to eval you behind the scenes.  And we currently show a significant risk to your health without more time to adapt. # CLASS: lucas
 
-Benton, you and I have been in some tough spots.  Those were minor-league.  This will feel like the last inning of the World Series... for 3 years. # CLASS: lucas
+You and I have been in some tough spots.  Those were minor-league.  This will feel like the last inning of the World Series... for 3 years. # CLASS: lucas
 
 * So it takes a bit longer?[]  A little delay never hurt anyone. # CLASS: player
 
@@ -97,9 +99,9 @@ Benton, you and I have been in some tough spots.  Those were minor-league.  This
     
     - - (rnothelp)
     
-    You're {nothelp:REALLY|}not helping. # CLASS: junia
+    You're {nothelp:REALLY |}not helping. # CLASS: junia
     
-    And just to remind everyone... # CLASS: junia
+    Just to remind everyone... # CLASS: junia
 
 - Our launch window is fast approaching.  If we miss the mark the chance to meet Pluto will be outside our current capabilities. # CLASS: junia
 
@@ -307,9 +309,145 @@ TARC, bootOverride { name } # CLASS: junia
 
     -> menu
 
+=== team_launch ===
+
+# CLEAR
+
+<< { name } is joining the team chat >>
+
+# CLASS: tarc
+Mission Status: { status } <br> Engineering: Go for Launch <br> Navigation: Go for Launch <br> Communication: Go for Launch <br> Medical: Pending... <br> Security Assessment: Normal <br> Public Relations: Normal
+
+Thx, TARC. # CLASS: benton
+
+* [<< wait >>]
+
+- # wait
+
+Lucas?  You know my position.  <>
+
+{ team_01.loss:
+
+    # wait
+
+    You're making the call, but I'm taking the risk. # CLASS: benton
+
+- else:
+    
+    I appreciate your concerns, but it's my call. # CLASS: benton
+
+    # wait
+
+}
+
+- All my reservations have been logged.  We've done the best we can for you, Benton.  Good luck. # CLASS: lucas
+
+Update, Medical is Go for Launch. # CLASS: tarc
+
+* Good luck[!], old friend! # CLASS: player
+
+    ¡grin! # CLASS: benton    
+
+* Goodbye. # CLASS: player
+
+    Aureviour I think... # CLASS: benton
+
+* Good riddance... # CLASS: player
+
+    Not so lucky, {pronouner("choi","chai","chen")}. # CLASS: benton
+
+- Remember you have a daily appointment with me for the next 3 years until I get back! # CLASS: benton
+
+* I'll be there! # CLASS: player
+
+* Right. # CLASS: player
+
+* Or until you quit. # CLASS: player
+
+- Benton, on behalf of the board, our investors, all the crew at Nth Horizon, and the whole of humanity who is watching this historic occassion, I want to say thank you.  Thank you for the vision, the zeal, to push back the boundaries of the human experience and challenge the status quo.  We're with you on this voyage.  The whole way. # CLASS: junia
+
+Bon voyage! # CLASS: junia
+
+Thank you Junia, thank you everyone! # CLASS: benton
+
+No matter how many times I've stepped off the soils of Terra or out of the hatches of Luna, I'm always humbled by the great dark beyond.  But it is not a darkness to be afraid of.  It is a darkness to be embraced.  To be explored.  To be wondered at.  # CLASS: benton
+
+I would not be here if it weren't for the unparalleled efforts of the entire crew. # CLASS: benton
+
+Junia, you are the epitome of business excellence, and we're now reaching well beyond the stars.  Can't wait to bring this home and continue the journey.  # CLASS: benton
+
+Huo, Medina, Alexa, Lucas... you and your teams have given everything to make this dream, this passion a reality.  I thank you for your expertise, your commitment, and your friendships.  Would not have been possible without all three. # CLASS: benton
+
+{ name } you stepped in the middle of a cyclone and have been the unflappable compatriot throughout.  I'm so grateful to have you at my back throughout this incredible journey. # CLASS: benton
+
+* Thanks. # CLASS: player
+
+* [<< wait >>]
+
+- TARC, you're great too.  Kick me off, bud. # CLASS: benton
+
+Launch cycle commenced.  Counting down... # CLASS: tarc
+
+* 10! # CLASS: player
+-
+* 9! # CLASS: player
+-
+* 8! # CLASS: player
+-
+* 7! # CLASS: player
+-
+* 6! # CLASS: player
+-
+* 5! # CLASS: player
+-
+* 4! # CLASS: player
+-
+* 3! # CLASS: player
+-
+* 2! # CLASS: player
+-
+* 1! # CLASS: player
+-
+* Blastoff! # CLASS: player
+
+- We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
+
+(TBH it's a bit anticlimactic without gravity to fight against). # CLASS: benton
+
+* It's still incredible. # CLASS: player
+
+* Very funny. # CLASS: player
+
+* Oh, I can help with the drama[.] if you want.  Wanna take a dip into Mars' gravity well? # CLASS: player
+
+
+    Hah hah.  # CLASS: lucas
+    
+- Thanks everyone. # CLASS: benton
+
+No time to celebrate, we've all got things to do.  Lifting newsDrop embargo now. # CLASS: junia
+
+<< Huo is leaving the team chat >>
+
+<< Dr. Estévez is leaving the team chat >>
+
+<< Junia is leaving the team chat >>
+
+<< Medina is leaving the team chat >>
+
+<< Benton is leaving the team chat >>
+
++ [Close Chat]
+
+    << { name } is leaving the team chat >>
+
+    -> menu
+
 TODO: Continue Team Chat
 
 === team_02 ===
+
+# CLEAR
 
 The team cast doubt on whether B should continue, J eggs him on while wresting control of company power
 
@@ -323,6 +461,8 @@ However, she will also use the opportunity to ask TARC to hand certain security 
 
 === team_03 ===
 
+# CLEAR
+
 J has cemented a deal with Goliath, infighting ensues
 
 Ostensibly the team chat starts with a call to action to help Benton out of his predicament.  They need to ensure all systems are backed-up and the craft can continue it's mission.  Or they need to decide what it would mean if things go bad for Benton right now.  Could he turn back early and would it make a difference?
@@ -333,6 +473,8 @@ As the conversation progresses Junia asserts that changes in management are need
 
 === team_04 ===
 
+# CLEAR
+
 The team wait with baited breath as B comes back from the edge
 
 In the team chat tensions are high as they await some sign from Benton that he's still with them.  Depending on who's still a part of the team their reactions to anything the PC may suggest will vary.  Ideally the PC has replaced Junia as one part of a stable triangle and Lucas / TARC are working with them to bring Benton back safely.
@@ -340,6 +482,8 @@ In the team chat tensions are high as they await some sign from Benton that he's
 + [Next] -> menu
 
 === team_random ===
+
+# CLEAR
 
 << { name } is joining the team chat >>
 

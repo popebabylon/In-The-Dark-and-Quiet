@@ -2,15 +2,13 @@
 
 === tarc_profile ===
 
-Picture of TARC
-Name: Threat Algorithm Reaction Construct
-Position: Mission Security
-Pronouns: They/Them/Theirs
-Skills: Security, Technology
+<img src="img/tarc.jpg" class="picture-lg"><br><br>Name: Threat Algorithm Reaction Construct<br><br>Position: Mission Security<br><br>Pronouns: They/Them/Theirs<br><br>Skills: Security, Technology
 
 ->->
 
 === tarc_01 ===
+
+# CLEAR
 
 -> tarc_profile ->
 
@@ -59,31 +57,34 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
 = nda
 
-Non Disclosure Agreement
+# CLEAR
 
-This non disclosure agreement is entered into on { date_year }-{ date_month }-{date_day } between Nth Horizon, Inc and { name } << ssuuid: 0x6d6f6f6e73686f74 >> and is terminated on { date_year + 100 }-{ date_month }-{date_day } or upon { name }'s death.
+<h3>Non Disclosure Agreement</h3><>
+<>
+<>		<p class="info"> This non disclosure agreement is entered into on { date_year }-{ date_month }-{date_day } between Nth Horizon, Inc and { name } << ssuuid: 0x6d6f6f6e73686f74 >> and is terminated on { date_year + 100 }-{ date_month }-{date_day } or upon { name }'s death. </p><>
+<>
+<>		<p class="info"> In the course of the engagement between { name } and Nth Horizon, Inc, { name } may become privy to data regarding Nth Horizon, Inc’s business, practices, technologies, strategies, or secrets that are considered highly confidential. To embark on this engagement { name } agrees to the following terms and conditions. </p><>
+<>
+<>		<h4>Confidentiality</h4><>
+<>
+<>		<p class="info"> Any information { name } may come into contact with that is not public and is derived from Nth Horizon, Inc shall be deemed as highly confidential. </p><>
+<>
+<>		<p class="info"> { name } should assume all data is confidential and shall prior written approval from Nth Horizon, Inc officers and security before considering any release of any information.  Information deemed confidential is of value to Nth Horizon, Inc and shall be held in the strictest confidence until this agreement terminates. </p><>
+<>
+<>		<h4> Unauthorized disclosure</h4><>
+<>
+<>		<p class="info"> In the event { name } discloses information without prior written approval from Nth Horizon, Inc, damages will be sought against { name } including but not limited to criminal and civil penalties, corporate injunctions, and extrajudicial strikes. </p><>
+<>
+<>		<h4> Relationship </h4><>
+<>
+<>		<p class="info"> { name } is an individual contractor with Nth Horizon, Inc per compensation agreements attached to their personnel file.  Nth Horizon, Inc reserves the right to terminate the relationship at any time without cause.  { name } is responsible for all taxes, fees, fringes, benefits and legal fees associated as an independent contractor.  </p><>
+<>
+<>		<h4> Indemnity </h4><>
+<>
+<>		<p class="info"> { name } agrees to hold Nth Horizon, Inc harmless in the instance of any loss, damage, theft, injury, dismemberment, or death for any reason.  This is inclusive of any legal or medical costs and loss of income that occur from such negligence. </p><>
+<>
+<>		<p class="info"> By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73686f74 >> acknowledges and agrees to this agreement in it's entirety. </p>
 
-In the course of the engagement between { name } and Nth Horizon, Inc, { name } may become privy to data regarding Nth Horizon, Inc’s business, practices, technologies, strategies, or secrets that are considered highly confidential. To embark on this engagement { name } agrees to the following terms and conditions.
-
-Confidentiality
-
-Any information { name } may come into contact with that is not public and is derived from Nth Horizon, Inc shall be deemed as highly confidential.
-
-{ name } should assume all data is confidential and shall prior written approval from Nth Horizon, Inc officers and security before considering any release of any information.  Information deemed confidential is of value to Nth Horizon, Inc and shall be held in the strictest confidence until this agreement terminates.
-
-Unauthorized disclosure
-
-In the event { name } discloses information without prior written approval from Nth Horizon, Inc, damages will be sought against { name } including but not limited to criminal and civil penalties, corporate injunctions, and extrajudicial strikes.
-
-Relationship
-
-{ name } is an individual contractor with Nth Horizon, Inc per compensation agreements attached to their personnel file.  Nth Horizon, Inc reserves the right to terminate the relationship at any time without cause.  { name } is responsible for all taxes, fees, fringes, benefits and legal fees associated as an independent contractor. 
-
-Indemnity
-
-{ name } agrees to hold Nth Horizon, Inc harmless in the instance of any loss, damage, theft, injury, dismemberment, or death for any reason.  This is inclusive of any legal or medical costs and loss of income that occur from such negligence.
-
-By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73686f74 >> acknowledges and agrees to this agreement in it's entirety.
 
 * { Security >= Nth_SEC } [<< Forge Signature >>] # CLASS: player
 
@@ -121,7 +122,7 @@ By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73
 
 = checks
 
-You will be asked a series of questions to evaluate your security risk potential.  A passing score of at least 85.7% is required to join the project.
+You will be asked a series of questions to evaluate your security risk potential.  A passing score of at least 85.7% is required to join the project. # CLEAR
 
 A colleague shares a link with you regarding their hobby, family, or other extra-business interests.  What do you do?
 
@@ -199,9 +200,11 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
 = fail
 
+# CLEAR
+
 Your performance in the security testing is subpar.  Please try again.
 
-    + [Continue] # CLASS: player
+    + [<< Continue >>] # CLASS: player
     
         -> checks
 
@@ -249,6 +252,8 @@ But I must insist you continue your security evaluation.
 
 = passed
 
+# CLEAR
+
 Thank you for your cooperation.  Your account has now been unlocked in accordance with your authorization profile.
 
 Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, Nth Horizon, Inc, and the Moonshot project by any means necessary.  I trust you will assist me in this endeavor.
@@ -267,11 +272,13 @@ Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, 
     
 -
 
-+ [Close Chat] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu # CLASS: player
 
 TODO: Continue TARC
 
 === tarc_02 ===
+
+# CLEAR
 
 T discovers hacks by K, confronts P for details
 
@@ -283,6 +290,8 @@ A really poor response to TARC can get them kicked off the mission.
 
 === tarc_03 ===
 
+# CLEAR
+
 T finds out about J's betrayal, is helped or hindered by the P
 
 TARC is caught in a delicate position given his responsibility to Mr. Saari and Nth Horizon.  His algorithms can't really account for the risk his creator has placed himself under.  The PC, either by virtue of history, skill, or evidence, appears to be the best proxy TARC can use for what Benton would call "out of the box thinking."  What actions should be taken to ensure the correct thing is prioritized.
@@ -293,6 +302,8 @@ The evidence TARC is dealing with is the corporate takeover instigated by Junia 
 
 === tarc_04 ===
 
+# CLEAR
+
 P has to keep TARC from shutting down his access to B
 
 TARC can ennumerate all the security holes and flaws the PC has caused (or as a result of Junia's takeover is acting on her behalf).  The AI is going to shut the PC out of the comms network as a result (leaving Benton without his anchor) unless the PC can use evidence against Junia or Woodpecker to mollify it.  As a last ditch resort the PC could leverage TARCs directives (and putting Mr. Saari first) as a logical gap to keep access (or shut TARC down). 
@@ -300,6 +311,8 @@ TARC can ennumerate all the security holes and flaws the PC has caused (or as a 
 + [Next] -> menu # CLASS: player
 
 === tarc_random ===
+
+# CLEAR
 
 Hello { name }.  All security checks are nominal.  Is there something else I can help you with?
 

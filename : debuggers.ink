@@ -16,6 +16,6 @@
 ~ name = "Peter"
 ~ pronoun = "He/Him/His"
 ~ career = "an astronomer"
-~ relationship = "puzzle"
+~ relationship = "close"
 
 ~ return

@@ -2,15 +2,13 @@
 
 === junia_profile ===
 
-Picture of Junia
-Name: Junia Masangkay
-Position: COO
-Pronouns: She/Her/Hers
-Skills: Business, Social, Technology
+<img src="img/junia.png" class="picture-lg"><br><br>Name: Junia Masangkay<br><br>Position: COO<br><br>Pronouns: She/Her/Hers<br><br>Skills: Business, Social, Technology
 
 ->->
 
 === junia_01 ===
+
+# CLEAR
 
 -> junia_profile ->
 
@@ -159,7 +157,21 @@ I know they're old climbing chois or something.  But I just don't know why Bento
 
 VAR career = ""
 
-So where were you before Moonshot?
+{ early_exit:
+    
+    # CLEAR
+    
+    Hello again, appreciate you checking back in.
+    
+    Hello, Junia. # CLASS: player
+    
+    I was thinking it would be good to get to know you a little better.  May I ask, where you were before Moonshot came along?
+        
+- else:
+
+    So, where were you before Moonshot?
+        
+}
 
 * { Astronomy >= 30 }Buried in astonomical academia. # CLASS: player
 
@@ -386,6 +398,8 @@ TODO: Continue Junia
 
 === junia_02 ===
 
+# CLEAR
+
 J sews doubt about B's chances, tries to suss out if P is turnable
 
 Junia uses some pretense to talk to the PCs and "be honest" with them.  The mission has been a success so far, but the chances are still good that Benton becomes another statistic.  She feigns worry, but believes it was the right thing to "send him out there."
@@ -398,6 +412,8 @@ She'll also poke them for any details they may or may not know about the others,
 
 === junia_03 ===
 
+# CLEAR
+
 J is cementing a deal with Goliath and can make P very rich if they play along
 
 Junia, all smiles, tries to ingratiate herself with the PC one more time given their obvious accumen and impact on the project.  She wants a clean transfer of power and can share all the benefits that would come with a sale to Goliath.  Benton is a lost cause.
@@ -406,6 +422,8 @@ Junia, all smiles, tries to ingratiate herself with the PC one more time given t
 
 === junia_04 ===
 
+# CLEAR
+
 J taunts P with her success, P can turn the tables
 
 Junia starts shutting down comms across the Nth Horizon platform given her control of the company and the impending sale.  She takes a moment to taunt or brag to the PC.  In her position she's not aware of any leverage the PC may have from Woodpecker or TARC, either of which could be brought to bear to shut her up and keep the lights on while Benton is saved.
@@ -413,6 +431,8 @@ Junia starts shutting down comms across the Nth Horizon platform given her contr
 + [Next] -> menu # CLASS: player
 
 === junia_random ===
+
+# CLEAR
 
 Hello { name }.  I'm {&in another call|working on a board presentation|meditating|out of the office} right now.  Can I connect with you later?
 

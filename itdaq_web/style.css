@@ -1,64 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap');
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    background: white;
-}
-
-body.dark {
-    background: black;
-    color: white;
+    font-family: 'Nunito Sans', 'Open Sans', sans-serif;
 }
 
 h1, h2 {
     text-align: center;
-    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Nunito Sans', 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    font-size: 30pt;
-    margin-bottom: 10px;
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
 }
 
 h2 {
-    font-size: 14pt;
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: lighter;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', 'Open Sans', sans-serif;
     color: #BBB;
 }
 
-.dark h2 {
-    color: #666;
-}
-
 .header {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    display: none;
 }
 
 h3.written-in-ink {
-    font-size: 9pt;
-    font-family: sans-serif;
-    text-align: center;
-    font-weight: 700;
-    position: fixed;
-    display: block;
-    width: 100%;
-    background: white;
-    margin: 0;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    top: 0;
+    display: none;
 }
-
-.dark h3.written-in-ink {
-    background: black;
-}
-
 
 /* Seems necessary to make iframes work on itch.io on mobile iOS :-( */
 .outerContainer {
@@ -72,58 +43,61 @@ h3.written-in-ink {
     width: 100%;
     top: 0;
     left: 0;
+    background-color: #BD5CF24D;
 }
+
+.background {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+	background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+	opacity: 0.7;
+  	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 .container {
     display: block;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
     padding-top: 4em;
-    background: white;
-}
-
-.dark .container {
-    background: black;
 }
 
 p {
-    font-size: 13pt;
-    color: #888;
-    line-height: 1.7em;
-    font-weight: lighter;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.5);
+	border: 1px solid #FFFFFF;
+	border-radius: 8px;
+	padding: 1rem;
 }
 
 a {
     font-weight: 700;
-    color: #b97c2c;
-    font-family: sans-serif;
+    color: #91F25C;
+    font-family: 'Nunito Sans', 'Open Sans', sans-serif;
     transition: color 0.6s;
     text-decoration: none;
 }
 
-.dark a {
-    color: #cc8f1a;
-    transition: color 0.6s;
-}
-
-
 a:hover {
-    color: black;
+    color: white;
     transition: color 0.1s;
 }
 
-.dark a:hover {
-    color: white;
-}
-
 strong {
-    color: black;
     font-weight: bold;
-}
-
-.dark strong {
-    color: white;
 }
 
 img {
@@ -147,8 +121,32 @@ img {
 
 p.choice {
     text-align: center;
-    line-height: 1.7em;
+    background: #000000;
+	border: 2px solid #FFFFFF;
+	border-radius: 8px;
 }
+
+p.info {
+	background-color: transparent;
+	border: none;
+}
+
+p.player {
+    font-size: 1rem;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.5);
+	border: 1px solid #FFFFFF;
+	border-radius: 8px;
+}
+
+/* custom style for images */
+
+.picture-lg {
+	height: 10rem;
+	display: inline-block;
+	max-width: 50%;
+}
+
 
 /* first choice */
 :not(.choice) + .choice {
@@ -157,7 +155,7 @@ p.choice {
 
 
 p.choice a {
-    font-size: 15pt;
+    font-size: 1rem;
 }
 
 /* Built in class if you want to write:
@@ -169,15 +167,4 @@ p.choice a {
     color: black;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-
-.dark .end {
-    color: white;
-}
-
-/* my custom styling 8? */
-
-p.player {
-	color: black;
-	background-color: #708090;
 }

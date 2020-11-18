@@ -65,7 +65,7 @@
                     storyContainer.appendChild(imageElement);
 
                     showAfter(delay, imageElement);
-                    delay += 200.0;
+                    delay += 0; // was 200.0
                 }
 
                 // CLASS: className
@@ -100,7 +100,7 @@
 
             // Fade in paragraph after a short delay
             showAfter(delay, paragraphElement);
-            delay += 200.0;
+            delay += 0; // was 200.0
         }
 
         // Create HTML choices from ink choices
@@ -114,7 +114,7 @@
 
             // Fade choice in after a short delay
             showAfter(delay, choiceParagraphElement);
-            delay += 200.0;
+            delay += 0; // was 200.0
 
             // Click on choice
             var choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
@@ -139,8 +139,8 @@
         // cause the height (and therefore scroll) to jump backwards temporarily.
         storyContainer.style.height = contentBottomEdgeY()+"px";
 
-        if( !firstTime )
-            scrollDown(previousBottomEdge);
+        //if( !firstTime )
+        //    scrollDown(previousBottomEdge);
     }
 
     function restart() {

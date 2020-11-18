@@ -4,8 +4,10 @@ TODO: wire up mission status page
 
 === mission ===
 
-Here is where mission status will be displayed.
+Mission Status: { status } <br> Engineering: On track <br> Navigation: On track <br> Communication: On track <br> Medical: At Risk <br> Security Assessment: Normal <br> Public Relations: Normal  <br>  <br> Medical is at risk due to dependencies on pilot readiness and gel-quarium systems integration / testing.
 
-<- menu
++ [<< Close >>]
+
+    -> menu
 
 -> DONE

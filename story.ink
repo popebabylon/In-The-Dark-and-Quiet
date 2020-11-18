@@ -1,7 +1,6 @@
 # title: In The Dark and Quiet
 # author: Peter D. Johnston
 # description: Entry for GitHubGameOff November 2020 with the theme "moonshot" by Peter D. Johnston.
-# theme: dark
 
 // include the individual chat files
 INCLUDE: menu.ink
@@ -36,7 +35,8 @@ VAR Social = 0
 VAR Technology = 0
 
 // setup mission parameters
-VAR status = "Prep"
+LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Enroute_to_Pluto, Approaching_Pluto, Final_Approach_to_Pluto, Pluto_Flyby_Return, End
+
 VAR date_year = 2065
 VAR date_month = 07
 VAR date_day = 15
@@ -59,13 +59,13 @@ Sorry, you don't have access to that resource.
     <> All personnel must pass the security check with TARC to gain access to Nth Horizon resources and communicate with colleagues.
 }
 
-+ [Close] -> menu
++ [<< Close >>] -> menu
 
 === end_chat ===
 
 Sorry, you've run out of things in this chat.
 
-+ [Next] -> menu
++ [<< Close >>] -> menu
 
 === function pronouner(m, f, n) ===
 
@@ -90,11 +90,11 @@ The game has ended.
 
 Do you want to restart?
 
-* Yes
+* << Yes >>
     
     #RESTART
     -> END
 
-* No
+* << No >>
 
     -> END
