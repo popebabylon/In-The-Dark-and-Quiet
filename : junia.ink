@@ -2,7 +2,7 @@
 
 === junia_profile ===
 
-<img src="img/junia.png" class="picture-lg"><br><br>Name: Junia Masangkay<br><br>Position: COO<br><br>Pronouns: She/Her/Hers<br><br>Skills: Business, Social, Technology
+<img src="img/junia.png" class="picture-lg"><br><br>Name: Junia Masangkay<br><br>Position: COO<br><br>Pronouns: She/Her/Hers<br><br>Skills: Business, Sociology, Technology
 
 ->->
 
@@ -89,7 +89,7 @@ Welcome to Moonshot!
 
 = question_lucas
     
-* { Business + Social >= 30 }[Are the teams aligned?]Seems like there might be some challenges with cross-functional team alignment? # CLASS: player
+* { Business + Sociology >= 30 }[Are the teams aligned?]Seems like there might be some challenges with cross-functional team alignment? # CLASS: player
 
     You could say that.
 
@@ -225,7 +225,7 @@ VAR career = ""
     
     ~ career = "a hacker"
 
-* { Social >= 30 }I'm an ethnologist[.] at LRX University.  Tenured. # CLASS: player
+* { Sociology >= 30 }I'm an ethnologist[.] at LRX University.  Tenured. # CLASS: player
 
     Wow, that must be such a fascinating area of study with the inner-system diaspora.
     
@@ -336,7 +336,7 @@ But I'm trusting the vision.
 
     There will always be sharks circling when you have something good.  With TARC and our secrecy so far there's little they can do to upend this.
 
-* { Social >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
+* { Sociology >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
 
     # wait
 

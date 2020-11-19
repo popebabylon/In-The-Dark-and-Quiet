@@ -202,3 +202,14 @@ Headline about B's final decision and the future for Ninth Horizon
 News article if Benton disappears into deeper space.  Wrap up the stories related to the company takeover etc.
 
 + [Next] -> menu
+
+=== news_random ===
+
+# CLEAR
+
+<h4>No headlines in your feed at the moment</h4><>
+<><p class="info">Need more data?  Subscribe for the next newsDrop!</p>
+
++ [<< Close news >>]
+
+-    -> menu

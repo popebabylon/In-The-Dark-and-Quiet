@@ -2,7 +2,7 @@
 
 === benton_profile ===
 
-<img src="img/benton.png" class="picture-lg"><br><br>Name: Benton Saari<br><br>Position: Founder, CEO, Pilot<br><br>Pronouns: He/Him/His<br><br>Skills: Business, Technology, Social
+<img src="img/benton.png" class="picture-lg"><br><br>Name: Benton Saari<br><br>Position: Founder, CEO, Pilot<br><br>Pronouns: He/Him/His<br><br>Skills: Business, Technology, Sociology
 
 ->->
 
@@ -90,7 +90,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
     
     You're like the perfect skeptic to bring on board here.  But trust me, we've done it.
 
-* { Social + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking? # CLASS: player
+* { Sociology + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking? # CLASS: player
 
     That's why I need your help.
     
@@ -166,7 +166,7 @@ I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw 
 
     If you sick like me I guess!
 
-* { Social >= 30 } Eureka[?] effect in the wings? # CLASS: player
+* { Sociology >= 30 } Eureka[?] effect in the wings? # CLASS: player
 
     Hey, I'm telling this tale!
 
@@ -204,7 +204,7 @@ And you could control & comm with q-sats, even all the way to the edge.
 
     Don't think TARC could handle it?
 
-* { Business + Social >= 50 } Who's crazy enough to try that? # CLASS: player
+* { Business + Sociology >= 50 } Who's crazy enough to try that? # CLASS: player
 
     Me.
     
@@ -386,7 +386,7 @@ Waking up in this gunk is no fun.
 
 - (bstate)
 
-* { Medicine + Social >= 30 }How are you feeling? # CLASS: player
+* { Medicine + Sociology >= 30 }How are you feeling? # CLASS: player
 
     Honestly?  Werked.
     
@@ -416,7 +416,7 @@ Waking up in this gunk is no fun.
     
     Astro, Eng, Comms.  All golden.  We've doubled our efficiencies in the last 30.  All on track to launch.
 
-* { Business + Social >= 30 }How are the teams? # CLASS: player
+* { Business + Sociology >= 30 }How are the teams? # CLASS: player
 
     Great.
     
@@ -829,7 +829,7 @@ That's the only way we evolve enough to survive.
     
     * * Good to hear. # CLASS: player
     
-    * * { Business + Social + Medicine >= 30 } But do you doubt it? # CLASS: player
+    * * { Business + Sociology + Medicine >= 30 } But do you doubt it? # CLASS: player
     
         \#alwaysneversafe, right?
         
@@ -925,11 +925,11 @@ That's the only way we evolve enough to survive.
         
         But her and I are better business *partners*.  More sympatico.
     
-    * * { Business + Social >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
+    * * { Business + Sociology >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
     
         I can trust that she'll do what's best for Nth Horizon.  Her rep is just as much on the line here as mine is.
         
-        * * * { Social >= 30 } [As long as you're aligned.]Which is fine as long as your definition of "what's best for Nth Horizon" is aligned with hers. # CLASS: player
+        * * * { Sociology >= 30 } [As long as you're aligned.]Which is fine as long as your definition of "what's best for Nth Horizon" is aligned with hers. # CLASS: player
         
             It is.
             
@@ -979,7 +979,7 @@ That's the only way we evolve enough to survive.
         
         So I wouldn't put that on Junia.
         
-        * * * { Social >= 30 } She _was_ eager to throw shade[.] as soon as I joined about his credentials. # CLASS: player
+        * * * { Sociology >= 30 } She _was_ eager to throw shade[.] as soon as I joined about his credentials. # CLASS: player
         
             True?
             
@@ -1529,7 +1529,7 @@ VAR cautious = 0
     
         But deciding between medtechers was something I was better at. # CLASS: player
     
-    * * { career == "an ethnologist" or Social >= 30 }  Your understanding of Russia[ was lacking.]n history, politics, and manners left a lot to be desired, and the funding would dry up without a little smoothing of ruffled feathers.  It took some serious bowing and scraping to undo the faux-pas and get at least a couple of options back on the table. # CLASS: player
+    * * { career == "an ethnologist" or Sociology >= 30 }  Your understanding of Russia[ was lacking.]n history, politics, and manners left a lot to be desired, and the funding would dry up without a little smoothing of ruffled feathers.  It took some serious bowing and scraping to undo the faux-pas and get at least a couple of options back on the table. # CLASS: player
     
     * * { career == "an international spy" or violence > 0 } I think we ended up in the back of a bullet-riddled HoverMerc with the lights off careening down the Moskva and all the newsDrops were pasting your face around as a suspect.  If they found you with that case it would've been Siberia... or Europa for you! # CLASS: player
     

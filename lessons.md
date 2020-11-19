@@ -1,3 +1,0 @@
-- don't get distracted by pointless sidebars
-- use inks weave for most efficient path forward
-- establish and think through game mechanics BEFORE you start writing

@@ -18,25 +18,25 @@ INCLUDE: debuggers.ink
 
 // set initial menu states
 
-VAR news_button = "<span class='menu inactive'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+VAR news_button = ""
 VAR news_divert = -> error
 
-VAR team_button = "<span class='menu inactive'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+VAR team_button = ""
 VAR team_chat_divert = -> error
 
-VAR benton_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+VAR benton_button = ""
 VAR benton_chat_divert = -> error
 
-VAR junia_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+VAR junia_button = ""
 VAR junia_chat_divert = -> error
 
-VAR lucas_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+VAR lucas_button = ""
 VAR lucas_chat_divert = -> error
 
-VAR tarc_button = "<span class='menu inactive'><i class='material-icons md-18'>storage</i>&nbspTARC</span>"
-VAR tarc_chat_divert = -> tarc_01
+VAR tarc_button = ""
+VAR tarc_chat_divert = -> error
 
-VAR woodpecker_button = "<span class='menu inactive'><i class='material-icons md-18'>person_outline</i>&nbspUnknown</span>"
+VAR woodpecker_button = ""
 VAR woodpecker_chat_divert = -> error
 
 // setup skills
@@ -45,15 +45,18 @@ VAR Business = 0
 VAR Engineering = 0
 VAR Medicine = 0
 VAR Security = 0
-VAR Social = 0
+VAR Sociology = 0
 VAR Technology = 0
 
-// setup mission parameters
+// setup mission status
 LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Enroute_to_Pluto, Approaching_Pluto, Final_Approach_to_Pluto, Pluto_Flyby_Return, End
 
+// set current date
 VAR date_year = 2065
 VAR date_month = 07
 VAR date_day = 15
+
+// set company values
 VAR Nth_NAV = 50
 VAR Nth_ENG = 50
 VAR Nth_BIZ = 50
@@ -61,6 +64,9 @@ VAR Nth_MED = 50
 VAR Nth_SEC = 50
 VAR Nth_PR = 50
 VAR Nth_IT = 50
+
+// setup "hacked by woodpecker" state
+VAR woodhack = false
 
 // initial introduction and setup
 -> about -> setup -> menu

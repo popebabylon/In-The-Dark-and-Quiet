@@ -30,7 +30,7 @@ TODO: Complete About Page
     <>
     <><p class="info">Pluto, Charon, and Sun by Kevin M. Gill is licensed under CC BY 2.0 \| https:\/\/www.flickr.com/photos/53460575@N03/33706795325</p><>
     <>
-    <><p class="info">Character photos under license from Generated Photos \| https:\/\/generated.photos/</p?<>
+    <><p class="info">Character photos under license from Generated Photos \| https:\/\/generated.photos/</p><>
     <>
     <><p class="info">Arke0 portraits under Creative Commons Attribution-Share Alike 3.0 License from LoomingColumn \| https:\/\/www.deviantart.com/loomingcolumn/art/Ying-Yang-Mentality-328736932</p><>
 

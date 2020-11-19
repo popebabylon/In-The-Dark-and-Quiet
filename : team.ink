@@ -61,7 +61,7 @@ I don't report every result to my patient because my patient is a conniving soth
 
     - - (nothelp) You're not helping. # CLASS: junia
 
-* { Social + Medicine >= 60 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
+* { Sociology + Medicine >= 60 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
 
     # wait
 
@@ -242,7 +242,7 @@ The mission is yours.  You're still going to be looped in on everything.  I just
 
     Your opinion is appreciated, but not sure we need another seat at this table. # CLASS: junia
 
-* { Social >= 60 } You eager for the power, Junia? # CLASS: player
+* { Sociology >= 60 } You eager for the power, Junia? # CLASS: player
 
     { rnothelp:
         You are REALLY not helping. # CLASS: junia

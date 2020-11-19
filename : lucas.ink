@@ -2,7 +2,7 @@
 
 === lucas_profile ===
 
-<img src="img/lucas.png" class="picture-lg"><br><br>Name: Dr. Lucas Estévez<br><br>Position: Chief Medical Officer<br><br>Pronouns: He/Him/His<br><br>Skills: Medicine, Social, Technology
+<img src="img/lucas.png" class="picture-lg"><br><br>Name: Dr. Lucas Estévez<br><br>Position: Chief Medical Officer<br><br>Pronouns: He/Him/His<br><br>Skills: Medicine, Sociology, Technology
 
 ->->
 

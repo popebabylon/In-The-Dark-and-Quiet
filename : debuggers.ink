@@ -6,7 +6,7 @@
 ~ Engineering = 100
 ~ Medicine = 100
 ~ Security = 100
-~ Social = 100
+~ Sociology = 100
 ~ Technology = 100
 
 ~return

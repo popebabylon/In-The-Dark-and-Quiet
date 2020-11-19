@@ -139,6 +139,12 @@ p.player {
 	border-radius: 8px;
 }
 
+/* custom style for menu objects */
+
+span.inactive {
+	color: gray;
+}
+
 /* custom style for images */
 
 .picture-lg {
