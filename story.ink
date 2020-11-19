@@ -16,14 +16,28 @@ INCLUDE: tarc.ink
 INCLUDE: woodpecker.ink
 INCLUDE: debuggers.ink
 
-// set initial chat directs
-VAR news = -> error
-VAR team_chat = -> error
-VAR benton_chat = -> benton_01
-VAR junia_chat = -> error
-VAR lucas_chat = -> error
-VAR tarc_chat = -> tarc_01
-VAR woodpecker_chat = -> error
+// set initial menu states
+
+VAR news_button = "<span class='menu inactive'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+VAR news_divert = -> error
+
+VAR team_button = "<span class='menu inactive'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+VAR team_chat_divert = -> error
+
+VAR benton_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+VAR benton_chat_divert = -> error
+
+VAR junia_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+VAR junia_chat_divert = -> error
+
+VAR lucas_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+VAR lucas_chat_divert = -> error
+
+VAR tarc_button = "<span class='menu inactive'><i class='material-icons md-18'>storage</i>&nbspTARC</span>"
+VAR tarc_chat_divert = -> tarc_01
+
+VAR woodpecker_button = "<span class='menu inactive'><i class='material-icons md-18'>person_outline</i>&nbspUnknown</span>"
+VAR woodpecker_chat_divert = -> error
 
 // setup skills
 VAR Astronomy = 0

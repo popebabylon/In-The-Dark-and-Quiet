@@ -1,238 +1,307 @@
 // this describes the "always available" menu to flip between the various chats and other features of the app
 
-// function to initialize where each chat begins
-=== function chatsetter ===
+// knot to establish current story status and pass time as needed
+=== status_update ===
 
-TODO: Fix mission status function logic
+// check status for the current state
 
-// update mission status if necessary
+~ temp working_status = status
+
+// based on working status, update status and move time forward if all dependent threads are read
+
 {
-    - benton_03 && status != (Launch):
-        ~ status = (Launch)
-        ~ date_day += 4
-        { date_day > 30:
-            ~ date_month++
-            ~ date_day -= 30
+    - working_status == (Prep):
+        
+        {
+            - benton_01.pluto_pitch && tarc_01 && lucas_01.lucas_intro && junia_01.junia_intro && news_01:
+            
+                ~ status = (Final_Prep)
+                
+                {timeplus(0, 1, 0)}
+                
+                -> time_passes ->
+                
         }
-        << Time passes... >>
-        << Mission date is { date_year }-{ date_month }-{ date_day } >>
-        << Mission Status is { status } >>
-    - team_01 && benton_02 && news_03 && status != (Launch_Prep):
-        ~ status = (Launch_Prep)
-        ~ date_day += 7
-        { date_day > 30:
-            ~ date_month++
-            ~ date_day -= 30
+        
+    - working_status == (Final_Prep):
+        
+        {
+        
+            - benton_02 && team_01 && news_02:
+            
+                ~ status = (Launch_Prep)
+                
+                {timeplus(0, 0, 7)}
+                
+                -> time_passes ->
+                
         }
-        << Time passes... >>
-        << Mission date is { date_year }-{ date_month }-{ date_day } >>
-        << Mission Status is { status } >>
-    - benton_01.pluto_pitch && junia_01.junia_intro && lucas_01.lucas_intro && news_01 && status != (Final_Prep):
-        ~ status = (Final_Prep)
-        ~ date_month++
-        << Time passes... >>
-        << Mission date is { date_year }-{ date_month }-{ date_day } >>
-        << Mission Status is { status } >>
-}
+        
+    - working_status == (Launch_Prep):
 
-// news
-{
-    - news_10:
-        ~ news = -> the_end
-    - benton_10 && news_09:
-        ~ news = -> news_10
-    - benton_10 && news_08:
-        ~ news = -> news_09
-    - news_07:
-        ~ news = -> news_08
-    - news_06:
-        ~ news = -> news_07
-    - news_05:
-        ~ news = -> news_06
-    - news_04:
-        ~ news = -> news_05
-    - news_03 && status == (Launch):
-        ~ news = -> news_04
-    - news_02:
-        ~ news = -> news_03
-    - news_01 && status == (Final_Prep):
-        ~ news = -> news_02
-    - tarc_01:
-        ~ news = -> news_01
-}
+        {
+        
+            - news_03 && benton_03:
+            
+                ~ status = (Launch)
+                
+                {timeplus(0, 0, 18)}
+                
+                -> time_passes ->
+                
+        }
 
-// team
-{
-    - team_04:
-        ~ team_chat = -> end_chat
-    - team_03:
-        ~ team_chat = -> team_04
-    - team_02:
-        ~ team_chat = -> team_03
-    - status == (Launch):
-        ~ team_chat = -> team_launch
-    - team_01.logout:
-        ~ team_chat = -> team_random
-    - status == (Final_Prep) && benton_02:
-        ~ team_chat = -> team_01
-    - tarc_01:
-        ~ team_chat = -> team_random
-}
+    - working_status == (Launch):
 
-// benton
-{
-	- benton_10:
-        ~ benton_chat = -> end_chat
-	- benton_09:
-        ~ benton_chat = -> benton_10
-    - benton_08:
-        ~ benton_chat = -> benton_09
-    - benton_07:
-        ~ benton_chat = -> benton_08
-    - benton_06:
-        ~ benton_chat = -> benton_07
-    - benton_05:
-        ~ benton_chat = -> benton_06
-    - benton_04:
-        ~ benton_chat = -> benton_05
-    - status == (Approaching_Jupiter):
-        ~ benton_chat = -> benton_04
-    - benton_03:
-        ~ benton_chat = -> benton_random
-    - status == (Launch_Prep):
-        ~ benton_chat = -> benton_03
-    - benton_02:
-        ~ benton_chat = -> benton_random
-    - status == (Final_Prep):
-        ~ benton_chat = -> benton_02
-    - benton_01.pluto_pitch:
-        ~ benton_chat = -> benton_random
-    - benton_01.censored:
-        ~ benton_chat = -> benton_01.pluto_pitch
-}
+        {
+        
+            - team_launch && news_04:
+            
+                ~ status = (Approaching_Jupiter)
+                
+                {timeplus(0, 6, 4)}
+                
+                -> time_passes ->
+                
+        }
 
-// junia
-{
-    - junia_04:
-        ~ junia_chat = -> end_chat
-    - junia_03:
-        ~ junia_chat = -> junia_04
-    - junia_02:
-        ~ junia_chat = -> junia_03
-    - junia_01.junia_intro:
-        ~ junia_chat = -> junia_random
-    - junia_01.early_exit:
-        ~ junia_chat = -> junia_01.junia_intro
-    - tarc_01:
-        ~ junia_chat = -> junia_01
-}
+    - working_status == (Approaching_Jupiter):
 
-// lucas
-{
-    - lucas_04:
-        ~ lucas_chat = -> end_chat
-    - lucas_03:
-        ~ lucas_chat = -> lucas_04
-    - lucas_02:
-        ~ lucas_chat = -> lucas_03
-    - lucas_01.lucas_intro:
-        ~ lucas_chat = -> lucas_random
-    - lucas_01.ghost_lucas:
-        ~ lucas_chat = -> lucas_01.lucas_intro
-    - tarc_01:
-        ~ lucas_chat = -> lucas_01
-}
+        {
+        
+            - benton_04 && woodpecker_01 && news_05 && junia_02:
+            
+                ~ status = (Jupiter_Flyby)
+                
+                {timeplus(0, 0, 14)}
+                
+                -> time_passes ->
+                
+        }
 
-// tarc
-{
-    - tarc_04:
-        ~ tarc_chat = -> end_chat
-    - tarc_03:
-        ~ tarc_chat = -> tarc_04
-    - tarc_02:
-        ~ tarc_chat = -> tarc_03
-    - tarc_01:
-        ~ tarc_chat = -> tarc_random
+    - working_status == (Jupiter_Flyby):
+
+        {
+        
+            - lucas_02 && benton_05 && team_02 && woodpecker_02:
+            
+                ~ status = (Enroute_to_Pluto)
+                
+                {timeplus(0, 2, 3)}
+                
+                -> time_passes ->
+                
+        }
+
+    - working_status == (Enroute_to_Pluto):
+
+        {
+        
+            - tarc_02 && benton_06 && news_06 && benton_07 && team_03 && news_07 && woodpecker_03:
+            
+                ~ status = (Approaching_Pluto)
+                
+                {timeplus(0, 8, 16)}
+                
+                -> time_passes ->
+                
+        }
+
+    - working_status == (Approaching_Pluto):
+
+        {
+        
+            - benton_08 && lucas_03 && junia_03 && tarc_03 && news_08:
+            
+                ~ status = (Final_Approach_to_Pluto)
+                
+                {timeplus(0, 1, 0)}
+                
+                -> time_passes ->
+                
+        }
+
+    - working_status == (Final_Approach_to_Pluto):
+
+        {
+        
+            - benton_09 && lucas_04 && junia_04 && tarc_04:
+            
+                ~ status = (Pluto_Flyby_Return)
+                
+                {timeplus(0, 0, 3)}
+                
+                -> time_passes ->
+                
+        }
+
+    - working_status == (Pluto_Flyby_Return):
+
+        {
+        
+            - team_04 && woodpecker_04 && benton_10:
+            
+                ~ status = (End)
+                
+                {timeplus(0, 0, 2)}
+                
+                -> time_passes ->
+                
+        }
+
+
+    - working_status == (End):
+
+        {
+        
+            - news_09 or news_10:
+            
+                -> the_end
+                
+        }
 
 }
 
-// woodpecker
-{
-    - woodpecker_04:
-        ~ woodpecker_chat = -> end_chat
-    - woodpecker_03:
-        ~ woodpecker_chat = -> woodpecker_04
-    - woodpecker_02:
-        ~ woodpecker_chat = -> woodpecker_03
-    - woodpecker_01:
-        ~ woodpecker_chat = -> woodpecker_random
-    - pecked:
-        ~ woodpecker_chat = -> woodpecker_01
-}
+->->
 
-// presented menu
 === menu ===
 
-{chatsetter()}
-
-// debuggers
+// run debugger helpers when menu is built
 TODO: COMPILE: remove debuggers when not needed
 //{skillDebug()}
 //{stateDebug()}
 
+// go do status update (time might pass)
+-> status_update ->
+
+// setup menu state
+
+TODO: setup menu state for each chat for each mission status
+
+{
+    - status == (Prep) && not tarc_01:
+    
+        ~ news_button = "<span class='menu inactive'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+    
+        ~ news_divert = -> error
+
+    - status == (Prep) && tarc_01:
+    
+        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+    
+        ~ news_divert = -> news_01
+        
+    - else: 
+    
+        ~ news_button = "<span class='menu inactive'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+    
+        ~ news_divert = -> error
+    
+}
+
+/*
+VAR team_button = "<span class='menu inactive'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+VAR team_chat_divert = -> error
+
+VAR benton_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+VAR benton_chat_divert = -> error
+
+VAR junia_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+VAR junia_chat_divert = -> error
+
+VAR lucas_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+VAR lucas_chat_divert = -> error
+
+VAR tarc_button = "<span class='menu inactive'><i class='material-icons md-18'>storage</i>&nbspTARC</span>"
+VAR tarc_chat_divert = -> tarc_01
+
+VAR woodpecker_button = "<span class='menu inactive'><i class='material-icons md-18'>person_outline</i>&nbspUnknown</span>"
+VAR woodpecker_chat_divert = -> error
+*/
+
 // clear previous screen
+
 # CLEAR
 //
 <i class="material-icons md-24">menu</i>Menu # CLASS: menu
 
+// build chat menu items based on vars above
 + [Mission]
 
-        # CLEAR
-        -> mission
-        
-+ [News]
-    
-    # CLEAR
-    -> news
+    -> mission
+
++ \ { news_button }
+
+    -> news_divert
 
 + [Settings]
 
-    # CLEAR
     -> settings
 
 + [About]
 
-    # CLEAR
     -> about -> menu
 
-+ [Team]
++ \ { team_button }
 
-    # CLEAR
-    -> team_chat
+    -> team_chat_divert
+    
++ \ { tarc_button }
 
-+ [Benton]
+    -> tarc_chat_divert
+    
++ \ { benton_button }
 
-    # CLEAR
-    -> benton_chat
+    -> benton_chat_divert
+    
++ \ { junia_button }
 
-+ [Junia]
+    -> junia_chat_divert
+    
++ \ { lucas_button }
 
-    # CLEAR
-    -> junia_chat
+    -> lucas_chat_divert
+    
++ \ { woodpecker_button }
 
-+ [Dr. Estévez]
+    -> woodpecker_chat_divert
 
-    # CLEAR
-    -> lucas_chat
+=== function timeplus(y, m, d) ===
 
-+ [TARC]
+~ date_day += d
 
-    # CLEAR
-    -> tarc_chat
+{
 
-+ [Woodpecker]
+    - date_day > 30:
+    
+        ~ date_month += 1
+        ~ date_day -= 30
 
-    # CLEAR
-    -> woodpecker_chat
+}
 
-* -> the_end
+~ date_month += m
+
+{
+
+    - date_day > 12:
+    
+        ~ date_year += 1
+        ~ date_month -= 12
+
+}
+
+~ date_year += y
+
+~ return
+
+=== time_passes ===
+
+# CLEAR
+
+<h3><<< time passes >></h3><>
+<><h3><<< mission status is { status } >></h3><>
+<><h3><<< the date is {date_year}-{date_month}-{date_day} >></h3>
+
+* [<< Continue >>]
+
+->->
