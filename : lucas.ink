@@ -278,7 +278,7 @@ What's your most recent report?
 
 - My apologies.
 
-My patient is being a challenge.  He's more concerned with this mission than his own help, and I feel like I'm the only one raising alarm bells.
+My patient is being a challenge.  He's more concerned with this mission than his own health, and I feel like I'm the only one raising alarm bells.
 
 Junia seems more concerened with the future of Nth Horizon than whether or not Benton pops in deep space.
 
@@ -369,8 +369,6 @@ And if things turn for the worst we figure out how to turn him around.
 << Dr. Estévez is now offline >>
 
 + [<< Close Chat >>] -> menu
-
-TODO: Continue Lucas
 
 === lucas_03 ===
 

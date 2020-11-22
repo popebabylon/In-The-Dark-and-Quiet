@@ -429,29 +429,217 @@ No time to celebrate, we've all got things to do.  Lifting newsDrop embargo now.
 
 << { name } is leaving the team chat >> # CLASS: player
 
-+ [Close Chat]
++ [<< Close Chat >>]
 
     -> menu
-
-TODO: Continue Team Chat
 
 === team_02 ===
 
 # CLEAR
 
-TODO: COMPILE: remove debugger tunnel
-/*-> debuggers ->*/
+<< { name } is joining the team chat >> # CLASS: player
 
+<< Junia is joining the team chat >>
 
-The team cast doubt on whether B should continue, J eggs him on while wresting control of company power
+<< Lucas is joining the team chat >>
 
-Benton has gone dark in the midst of the Jupiter flyby, and they don't think there's any technical reason that should be so.  All other systems are green.  TARC admits the risk are exponentially against him making a successful trip, and Lucas questions whether or not they should direct Benton to alter course and return.  The stunt has surely made an impact.
+What just happened? # CLASS: junia
 
-Junia derides his knowledge of orbital mechanics and encourages the team to think positive.  We'll continue to ping Benton and try to reestablish contact.  He's been through a rough patch, but now he's really heading into the unknown and therefore making a bigger name for himself and the company.
+- (sitrep)
 
-However, she will also use the opportunity to ask TARC to hand certain security credentials over to her as a precaution.  She should be in a position of control should the company need to pivot based on Benton's health or fate.
+* { benton_05.popped } Benton just went dark. # CLASS: player
 
-+ [Next] -> menu
+    -> poppedrep
+    
+* { benton_05.popped } I think Benton went off the deep end. # CLASS: player
+
+    -> poppedrep
+
+* { benton_05.exited } Benton & Lowell's just whipped round Jupiter? # CLASS: player
+
+* { benton_05.exited } I think B's dozing off.  Boring day. # CLASS: player
+
+* { lucas_02.lucas_analysis }[Lucas started it...]I don't know what Lucas told you, but he started it. # CLASS: player
+
+- -> exitrep
+
+- (poppedrep)
+
+Nav's tracking LH still on course, systems nominal. # CLASS: junia
+
+Flyby was successful. # CLASS: junia
+
+Medscan shows stress is { stress }.  Not a good sign. # CLASS: lucas
+
+What the sot happened? # CLASS: junia
+
+* I... I tried to help? # CLASS: player
+
+* He couldn't keep his cool. # CLASS: player
+
+* { drugs > 3 } He might have OD'd # CLASS: player
+
+Junia, this is why I kept asking for a professional! # CLASS: lucas
+
+Not now, Lucas!  <>
+
+- (exitrep) 
+
+{ not benton_05.popped:
+
+    That's not what I meant.  # CLASS: junia
+
+}
+
+We have other problems... # CLASS: junia
+
+DJ vector is unresolved.  Predictive analysis shows a 43% chance they did intercept, a 7% chance they could intercept in future. # CLASS: tarc
+
+* What's a DJ? # CLASS: player
+
+* Intercept?  Is someone out there with him? # CLASS: player
+
+* (player_intercept) { Astronomy + Engineering >= 60 } [An intercept is very unlikely.]The chance of an interdicting vessel making contact during our maneuver is extremely unlikely, in the order of millions to one.  Not only are the mechanics incredibly difficult to pull off, but we saw no gravitational evidence of another body coming close.# CLASS: player
+
+    What ship would even try? # CLASS: junia
+
+* (player_dj) { Security + Business >= 60 } A Goliath Deep Jumper?[]  How would they even have known where to intercept? # CLASS: player
+
+- 
+
+{ not player_dj:
+
+    An unidentified vessel.  Deep Jumper class.  We don't have enough evidence to accurately plot the trajectory it took, but there is a non-zero chance it could have interferred or will interfere with the Lowell's Horizon. # CLASS: tarc
+
+}
+
+Are we sure it's Goliath? # CLASS: junia
+
+Configuration matches, and there aren't many other actors who could resource such a vessel in the Jupiter system. # CLASS: tarc
+
+* We shouldn't jump to assumptions.[]  Are we even sure they were trying to mess with Benton? # CLASS: player
+
+* Big G would be the prime sus.[]  What could they have done to B? # CLASS: player
+
+* { Business + Security >= 60 } Even Goliath wouldn't openly defy intersolar law[.], would they?  What could they hope to accomplish? # CLASS: player
+
+* { Astronomy + Engineering + Technology >= 60 } They could have dropped a nanoDrone on him.[]  That's the only option that wouldn't have appeared in the flight data.  What would they want? # CLASS: player
+
+- Threat analysis statistically favors sabotage resulting the destruction of the mission.  However, the mid-point of the Jupiter flyby would have been the most likely candidate for executing such a plan.  As Mr. Saari and Lowell's Horizon are still enroute we have to assume they failed or had another motive.  # CLASS: tarc
+
+* Well, we're on track, nullWorry, yah? # CLASS: player
+
+* Can we find out if something else is going on? # CLASS: player
+
+* { Engineering + Technology + Business + Security >= 60 } Industrial espionage seems like the only other likely option.[]  Could they be dataMining the ship?  Or trying to wrest control? # CLASS: player
+
+I don't have enough information to confirm or refute/ # CLASS: tarc
+
+I can't raise Benton.  His stress measurements are still { stress }. # CLASS: lucas
+
+{ benton_05.popped:
+
+    We'll need to hope he pulls through this then we can turn him for home. # CLASS: lucas
+    
+- else:
+
+    That being said I think we need to turn him for home. # CLASS: lucas
+
+}
+
+I'm not sure I support that. # CLASS: junia
+
+The risk metrics are within Mr. Saari's tolerance given the important nature of the project. # CLASS: tarc
+
+If we keep throwing him out there he won't survive! # CLASS: lucas
+
+Lucas, I understand your concern, but Benton is dedicated to this, risk and all. # CLASS: junia
+
+If the patient's mental state is in question, as CMO, I can overrule. # CLASS: lucas
+
+Unfortunately, I think you may find that's not true in this case.  TARC, 3.23.4A? # CLASS: junia
+
+Should the mental state of the pilot be called into question operational responsibility of the Moonshot mission falls to COO with the contributions of the executive team. # CLASS: tarc
+
+* Junia!  You sneaky devil. # CLASS: player
+
+* You're kidding?[]  Benton left his survival to you, not Dr. Estévez? # CLASS: player
+
+* { Business + Sociology >= 30 } This is an unusual bylaw.[]  I'm assuming Benton classified the success of Nth Horizon above his own? # CLASS: player
+
+    Correct. # CLASS: tarc
+    
+* { Medicine + Sociology >= 60 } I'm not sure that countermands medical law. # CLASS: player
+
+- Look, I'm not saying I'm choosing the company over Benton. # CLASS: junia
+
+We will continue to work as a team to decide what's best. # CLASS: junia
+
+But Benton just passed an incredible milestone and I think we need to evaluate his position further before pulling the cord.  Agreed? # CLASS: junia
+
+Disagree.  Strongly.  # CLASS: lucas
+
+Abstain. # CLASS: tarc
+
+* Agree. # CLASS: player
+
+* Disagree.  # CLASS: player
+
+     - - (junia_outvoted) You don't have majority, Junia. # CLASS: lucas
+    
+    But I am still the informed captain.  I appreciate all of your input.  We'll talk about this again later.  # CLASS: junia
+    
+    -> b_fate_decided
+
+* Abstain.  # CLASS: player
+
+- (junia_control)
+
+Your decision stands, Ms. Masangkay. # CLASS: tarc
+
+Thank you.  TARC, we should also execute secTech override now that we don't have reliable contact with Benton. # CLASS: junia
+
+* What is that? # CLASS: player
+
+    Benton and I agreed on parameters that would allow operational control of TARC and other Nth Horizon security assets to fall to me when the situation demanded. # CLASS: junia
+    
+    This is one of those inflexion point. # CLASS: junia
+
+    * * Sounds good. # CLASS: player
+    
+    * * Sounds sus. # CLASS: player
+        
+        -> secTech_concern
+
+* [<< wait >>] # CLASS: player
+
+* { Security + Technology + Business >= 60 } secTech wasn't mentioned.[]  Are you trying to coup Nth while Benton takes a nap? # CLASS: player
+
+    - - (secTech_concern)I appreciate your concern, but this contingency is spelled out in the bylaws as well. # CLASS: junia
+    
+    I'm simply being practical. # CLASS: junia
+
+-
+
+secTech override commited. # CLASS: tarc
+
+Very good.  Thank you everyone.  Let's keep on top of Benton's condition and any unexpected issues that may shed light on the Goliath interference. # CLASS: junia
+
+We'll talk later. # CLASS: junia
+
+- (b_fate_decided)
+
+<< Dr. Estévez is leaving the team chat >>
+
+<< Junia is leaving the team chat >>
+
+<< TARC is leaving the team chat >>
+
+<< { name } is leaving the team chat >> # CLASS: player
+
++ [<< Close Chat >>]
+
+    -> menu
 
 === team_03 ===
 

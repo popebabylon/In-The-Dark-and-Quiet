@@ -1,7 +1,5 @@
 // this is the conversation with woodpecker (kim)
 
-TODO: Continue Woodpecker
-
 === pecked ===
 
 # CLEAR
@@ -30,6 +28,43 @@ TODO: Continue Woodpecker
 + [<< Close chat >>]
 
 - ->->
+
+=== woodpecker_brute ===
+
++ Hi Medina. # CLASS: player
+
+<< inject comms_hack^...COMMIT >>
+<< processing >>
+<< segfault at 0x6e6f74206d6564696e61, respooling >>
+<< inject comms_hack^...COMMIT >>
+
+~ woodhack = true
+
+- (ohno)
+
+* What the sot?
+
+    Sorry luv, need to chat w/ u.
+    
+    BRB.
+    
+    \- Woodpecker
+    
+    -> ohno
+
++ { Technology + Security >= 60 } << rollback >>
+
+    << block_hack^...COMMIT >>
+    
+    U can prob code circles round me, but trust, u rly wanna hear me out.
+    
+    \- W.
+    
+    -> ohno
+
++ [<< Close Chat >>]
+
+    -> menu
 
 === woodpecker_01 ===
 
@@ -172,6 +207,10 @@ I'll be around.
     -> menu
 
 === woodpecker_02 ===
+TODO: COMPILE: remove debugger tunnel
+/*-> debuggers ->*/
+
+TODO: NEXT
 
 # CLEAR
 

@@ -14,6 +14,7 @@ INCLUDE: junia.ink
 INCLUDE: lucas.ink
 INCLUDE: tarc.ink
 INCLUDE: woodpecker.ink
+INCLUDE: utilities.ink
 INCLUDE: debuggers.ink
 
 // set initial menu states
@@ -87,23 +88,6 @@ Sorry, you don't have access to that resource.
 Sorry, you've run out of things in this chat.
 
 + [<< Close >>] -> menu
-
-=== function pronouner(m, f, n) ===
-
-{
-    - pronoun == "He/Him/His":
-    
-        ~ return m
-        
-    - pronoun == "She/Her/Hers":
-    
-        ~ return f
-        
-    - pronoun == "They/Them/Theirs":
-    
-        ~ return n
-        
-}
 
 === the_end ===
 

@@ -264,7 +264,7 @@
     
         ~ team_chat_divert = -> team_launch
 
-    - status == (Jupiter_Flyby) && not team_02:
+    - status == (Jupiter_Flyby) && not team_02 && (benton_05.exited || benton_05.popped):
     
         ~ team_button = "<span class='menu active'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
     
@@ -592,83 +592,7 @@
 + { woodhack }\ { woodpecker_button }
 
     -> woodpecker_chat_divert
-
-
-// function to display full date with leading 0'startup
-
-=== function display_date() ===
-
-~ temp y = date_year
-
-~ temp m = "0"
-{
-    - date_month < 10:
-        
-        ~ m = m + date_month
-
-    - else:
     
-        ~ m = date_month
++ { not woodhack && status == (Approaching_Jupiter) }<span class='menu active'><i class='material-icons md-18'>person</i>&nbspMedina</span>
 
-}
-
-~ temp d = "0"
-{
-    - date_day < 10:
-        
-        ~ d = d + date_day
-
-    - else:
-    
-        ~ d = date_day
-
-}
-
-~ temp print_date = y + "-" + m + "-" + d
-
-~ return print_date
-
-// function to add to the current date
-
-=== function timeplus(y, m, d) ===
-
-~ date_day += d
-
-{
-
-    - date_day > 30:
-    
-        ~ date_month += 1
-        ~ date_day -= 30
-
-}
-
-~ date_month += m
-
-{
-
-    - date_month > 12:
-    
-        ~ date_year += 1
-        ~ date_month -= 12
-
-}
-
-~ date_year += y
-
-~ return
-
-
-// knot to display time passing page
-
-=== time_passes ===
-
-# CLEAR
-
-<h3><< time passes >></h3><>
-<><h3><< mission status is { status } >></h3><>
-<><h3><< the date is { display_date() } >></h3>
-
-+ [<< Continue >>]
-
-->->
+    -> woodpecker_brute

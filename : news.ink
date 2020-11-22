@@ -135,8 +135,6 @@
 
 -    -> menu
 
-TODO: Continue  newsDrop
-
 === news_05 ===
 
 # CLEAR

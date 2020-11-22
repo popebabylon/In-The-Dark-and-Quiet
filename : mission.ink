@@ -1,6 +1,6 @@
 // this describes the behavior on the "mission" page of the app
 
-TODO: wire up mission status page
+TODO: wire up mission status page with department stuff / different states
 
 === mission ===
 

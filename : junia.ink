@@ -621,8 +621,6 @@ We'll chat again soon.  Thank you.
 
 + [<< Close Chat >>] -> menu # CLASS: player
 
-TODO: Continue Junia
-
 === junia_03 ===
 
 # CLEAR

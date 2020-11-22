@@ -1,7 +1,5 @@
 // this describes the behavior on the "about" page of the app
 
-TODO: Complete About Page
-
 === about ===
 
 -(top)
@@ -58,7 +56,7 @@ The language of { date_year }.
 
         -> top
 
-+ [SAVE] 
+/*+ [SAVE] 
     
     # CLEAR
     
@@ -67,6 +65,6 @@ The language of { date_year }.
     
     * * [<< Continue >>]
     
-    -> top
+    -> top*/
 
 -> DONE

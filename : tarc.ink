@@ -274,8 +274,6 @@ Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, 
 
 + [<< Close Chat >>] -> menu # CLASS: player
 
-TODO: Continue TARC
-
 === tarc_report_woodpecker ===
 
 # CLEAR
@@ -318,7 +316,7 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
 
     Very well.
 
-    + [<< Close Chat >>]
+    + + [<< Close Chat >>]
 
         ->->
         

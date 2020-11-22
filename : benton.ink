@@ -2017,7 +2017,7 @@ Yeah. # CLASS: player
 
 - Nah, this is gonna be a doddle.
 
-~ temp drugs = 0
+VAR drugs = 0
 
 { stressCheck("+", -> firstStress, stress) } -> next
 
@@ -3115,8 +3115,6 @@ TIME MOVES FORWARD
 Benton discusses the emptiness and how big it seems even when Jupiter is taking up 90% of his viewport as the gas giant gives him a gravity assist boost.  The omnipresent loneliness prompts him to remember when the PC previously abandoned [love] or [money] and what drove them to give something up that was important.  He rambles a little, but can be brought back to the majesty of the moment he's witnessing, something only the deep-space-jump-crews see with any regularity.  Soon he'll go even further than they do, and all on his own.
 
 He waxes poetic about the planet and the neverending dance of the spheres before ending the conversation abruptly.  Mission details will report a Goliath Deep Space Jumper burning on a similar trajectory. */
-
-TODO: Continue Benton
 
 === benton_06 ===
 
