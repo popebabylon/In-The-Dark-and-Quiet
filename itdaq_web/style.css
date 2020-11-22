@@ -145,6 +145,10 @@ span.inactive {
 	color: gray;
 }
 
+span.menuitem {
+	color: white;
+}
+
 /* custom style for images */
 
 .picture-lg {

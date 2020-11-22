@@ -6,7 +6,7 @@
 
 <h2>Pursuit of the Nth Horizon</h2><>
 <><h4>Benton Saari opens the curtains on his secret project</h4><>
-<><p class="info">Kimberley Speight \| Luna \| { date_year }-{date_month}-{date_day} 17:45 UTC</p><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 17:45 UTC</p><>
 <><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
 <><p class="info">Hailed as a precocious wunderkind back in { (date_year - 21) } the eccentric Benton Saari has had a storied career.  He pioneered the transformation of AI technology { Technology >= 60: with fellow brainchild { name } }  during his post-doctorate, before being incarcerated for his part in the infamous Wài kōng shìxiàn incident (the hacking of UCD satellites).  Turning adversity into an advantage he soon found his skills in hot demand across the technology sector.</p><>
 <><p class="info">It wasn't long before the charismatic genius was firing up his own line of startCorps, each with visionary targets.  FireX specialized in rocket control algorythms so advanced they purportedly dropped fuel weights by 37%.  It was purchased by Intermoon Inc.  Unwilling to rest on his laurels Saari quickly pivoted to Long Night, specializing in AI systems for long range solar haulers.  He exited the company before it went public in { date_year - 13 }, and Long Night was subsequently swallowed up by Goliath, Inc.  SolWare, his most recent venture minus one, sought to revolutionize long distance intersolar comms with the blending of q-sat and lightwave technology before cratering in { date_year - 6 }.</p><>
@@ -21,7 +21,7 @@
 <><p class="info">Analysts predict Nth Horizon has likely burned it's available cashflow and may need this stunt to lure the market and make investor's happy.  Assuming Saari is successful he will likely not only go down in history, but will have created a corp on it's way to really challenge the lumbering incumbents.</p><>
 <><p class="info">Need more data?  Subscribe for the next newsDrop!</p>
 
-+ [Close News] -> menu
++ [<< Close News >>] -> menu
 
 === news_02 ===
 
@@ -29,7 +29,7 @@
 
 <h2>Goliath's Event Horizon</h2><>
 <><h4>The megacorp gobbles up another startCorp this year</h4><>
-<><p class="info">Kimberley Speight  \| Luna \| { date_year }-{ date_month }-{ date_day - 2 } 20:45 UTC</p><>
+<><p class="info">Kimberley Speight  \| Luna \| { display_date() } 20:45 UTC</p><>
 <><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
 <><p class="info">The seemingly unstoppable megacorp Goliath, Inc has again flexed it's might and flaunted regulators with the hostile takeover of SsVP (Sonnesystem Verdeedegung Produkter).  The innovative startCorp was formed in { date_year - 7 } and had been making waves with it's stunning line-up of inverted anti-matter arms.  The unexpected move leaves competitors scrambling as it's assumed all Goliath Tier 1 Cruisers and Deep Space Jumpers will be outfitted with IAAs in the coming months.</p><>
 <><p class="info">SVP joins the ranks of Long Night, cruiserTech, Alliance Blue, and Песня солнца (Sun Song) who have swelled Goliath's ranks and coffers.  Antitrust lawsuits have been tangled in the intersolar courts for decades as Goliath continually evades punishment for what many see as nothing short of empire-building.  For reference their annual revenue vastly outstrips that of the UCD and WHD combined.</p><>
@@ -44,9 +44,7 @@
     
 + { Security >= 30 } [<< Report article >>]
 
-    << reported >>
-    
-    << closing page >>
+    -> news_reportarticle ->
 
 + [<< Close news >>]
 
@@ -58,7 +56,7 @@
 
 <h2>The Edge</h2><>
 <><h4>Is crewed exploration beyond the resource wall possible?</h4><>
-<><p class="info">Kimberley Speight \| Luna \| { date_year }-{ date_month }-{ date_day } 20:45 UTC</p><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 20:45 UTC</p><>
 <><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
 <><p class="info">With the recent announcement by Nth Horizon that their CEO plans a crewed mission to Pluto the question inevitably arises, can it be done?  Robotic travel beyond Saturn has occured with some frequency, but very few missions have the necessary margins to encourage return trips or the added weight of a meat-bag. </p><>
 <><h4>In other news, {name}, {career} joins Nth Horizon.  Learn more?</h4><>
@@ -88,9 +86,7 @@
     
 + { Security >= 30 } [<< Report articles >>]
 
-    << reported >>
-    
-    << closing page >>
+    -> news_reportarticle ->
 
 + [<< Close news >>]
 
@@ -102,7 +98,7 @@
 
 <h2>Lowell's Horizon Blasts Off On Historic Voyage</h2><>
 <><h4>Benton Saari aims to be the first human to the edge... and back!</h4><>
-<><p class="info">Kimberley Speight \| Luna \| { date_year }-{ date_month }-{ date_day } 12:00 UTC</p><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 12:00 UTC</p><>
 <><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
 <><p class="info">After much speculation the storied entrepreneur has departed the familiar territory of Terra and the halls of Luna Station on his quest to be the first person to visit Pluto and return.  His vessel is named Lowell's Horizon in honor of both the discoverer of Pluto and the New Horizons mission that visited the dwarf planet some 50 years ago.</p><>
 <><p class="info">The stunt has been made possible by investors backing Saari's secretive Nth Horizon startCorp, co-helmed by Junia Masangkay, and seen as an upstart competitor to the monopoly of Goliath, Inc.</p><>
@@ -133,9 +129,7 @@
     
 + { Security >= 30 } [<< Report articles >>]
 
-    << reported >>
-    
-    << closing page >>
+    -> news_reportarticle ->
 
 + [<< Close news >>]
 
@@ -147,11 +141,29 @@ TODO: Continue  newsDrop
 
 # CLEAR
 
-Headline about B and whether he's suicidal, describes the time he's been alone
+<h2>Saari Still On Course</h2><>
+<><h4>But can it last?</h4><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 08:00 UTC</p><>
+<><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
+<><p class="info">Benton Saari, CEO and founder of startCorp Nth Horizon, is reportedly still on course for his historic mission to the outer edge of the solar system.  After embarking from Luna Station some six months ago onboard Lowell's Horizon, Saari has been setting a blistering pace gaining the attention of further investors and the ire of megaCorp rival Goliath.</p><>
+<><p class="info">The entrepreneur & bio-hacked test-pilot is soon to pass Jupiter in an intense slingshot maneuver only made possible by the advanced gel-quarium keeping his body intact.  This critical stage in the mission demonstrates a number of the pieces of tech Nth Horizon claims will change the face of the solar system, including advanced onboard computers that can manage many parallel microgravity adjustments to ensure stability.</p><>
+<><p class="info">What's also surprising is the near realtime communication Saari has with his ground team despite being 43 light minutes away.  Nth Horizon claims quantum-entangled satellites have been pre-positioned throughout the system and allow the physics-defying feat.  Some skeptics have questioned whether or not Saari is not just hidden in a tank on Luna Station and the stunt is nothing more than an elaborate ploy. </p><>
+<><h4>Come say hi { name }, you know you wanna...  ¡grin!</h4><>
+<><p class="info">In either case, Nth Horizon COO Junia Masangkay has been keeping the company in the spotlight back home with an aggressive press circuit and repeated demonstrations of the technology to interested investors.  "We miss Benton's physical presence, but he is still very much involved" she said, before turning to further models of the Nth Horizon outlook.  "I understand there is still skepticism in the market, but Lowell's Horizon is proving our technology day-after-day.  I thoroughly expect to be reaping liquid gold with the patents and technologies Nth Horizon is bringing to market.  You don't want to be left behind in this rush."</p><>
+<><p class="info">Just how much of Ms. Masangkay's pitch is solid and how much is smoke remains to be seen.  While interest has been piqued, there are rumors that the whole enterprise could collapse if something goes awry.  In that case, Goliath, Inc will undoubtedly be waiting in the wings, with plenty of other hyenas on their tail.</p><>
+<><p class="info">Need more data?  Subscribe for the next newsDrop!</p>
 
-News Source describes the current state of the mission (or stunt) with some inside intel depending on what the PCs have told others.  Junia is again heavily featured talking up the value of Nth Horizon.  Where the article does touch on Benton it tends to question his sanity as he slips further and further from the cradle of humanity.  How can he cope on his own like that with no human contact?  How will he change?  Will he make it back in one piece?
++ [<< Open link for you >>]
 
-+ [Next] -> menu
+    -> pecked ->
+    
++ { Security >= 30 } [<< Report articles >>]
+
+    -> news_reportarticle ->
+
++ [<< Close news >>]
+
+-    -> menu
 
 === news_06 ===
 
@@ -213,3 +225,13 @@ News article if Benton disappears into deeper space.  Wrap up the stories relate
 + [<< Close news >>]
 
 -    -> menu
+
+=== news_reportarticle ===
+
+<< reported >>
+
+<< for your security, close this page >>
+
++ [<< Close >>]
+
+->->

@@ -4,7 +4,7 @@
 
 # CLEAR
 
-<< { name } is joining the team chat >>
+<< { name } is joining the team chat >> # CLASS: player
 
 { pronouner("He's", "She's", "They've") } been your rubber duck for a month!  Not a contributing member of the team! # CLASS: lucas
 
@@ -24,7 +24,7 @@ And I disagree. # CLASS: benton
 
 * So what's up? # CLASS: player
 
-* << wait >> # CLASS: player
+* [<< wait >>] # CLASS: player
 
 * I've got better things to do. # CLASS: player
 
@@ -295,17 +295,17 @@ TARC, bootOverride { name } # CLASS: junia
 
 * { Technology + Security >= 60 } [<< cancel override >>] # CLASS: player
 
-    << inject cancel_boot^...COMMIT >>
-    << processing >>
-    << segfault at 0x6a7375636b73, respooling >>
-    << inject rejoin_chat^...COMMIT >>
+    << inject cancel_boot^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x6a7375636b73, respooling >> # CLASS: player
+    << inject rejoin_chat^...COMMIT >> # CLASS: player
     -> unboot
 
 = logout
 
-+ [Close Chat]
+<< { name } is leaving the team chat >> # CLASS: player
 
-    << { name } is leaving the team chat >>
++ [<< Close Chat >>]
 
     -> menu
 
@@ -313,7 +313,7 @@ TARC, bootOverride { name } # CLASS: junia
 
 # CLEAR
 
-<< { name } is joining the team chat >>
+<< { name } is joining the team chat >> # CLASS: player
 
 # CLASS: tarc
 Mission Status: { status } <br> Engineering: Go for Launch <br> Navigation: Go for Launch <br> Communication: Go for Launch <br> Medical: Pending... <br> Security Assessment: Normal <br> Public Relations: Normal
@@ -388,29 +388,19 @@ Huo, Medina, Alexa, Lucas... you and your teams have given everything to make th
 
 Launch cycle commenced.  Counting down... # CLASS: tarc
 
-* 10! # CLASS: player
--
-* 9! # CLASS: player
--
-* 8! # CLASS: player
--
-* 7! # CLASS: player
--
-* 6! # CLASS: player
--
-* 5! # CLASS: player
--
-* 4! # CLASS: player
--
-* 3! # CLASS: player
--
-* 2! # CLASS: player
--
-* 1! # CLASS: player
--
-* Blastoff! # CLASS: player
+<< 10 >> # wait
+<< 9 >> # wait
+<< 8 >> # wait
+<< 7 >> # wait
+<< 6 >> # wait
+<< 5 >> # wait
+<< 4 >> # wait
+<< 3 >> # wait
+<< 2 >> # wait
+<< 1 >> # wait
+<< Ignition >> # wait
 
-- We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
+We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
 
 (TBH it's a bit anticlimactic without gravity to fight against). # CLASS: benton
 
@@ -437,9 +427,9 @@ No time to celebrate, we've all got things to do.  Lifting newsDrop embargo now.
 
 << Benton is leaving the team chat >>
 
-+ [Close Chat]
+<< { name } is leaving the team chat >> # CLASS: player
 
-    << { name } is leaving the team chat >>
++ [Close Chat]
 
     -> menu
 
@@ -448,6 +438,10 @@ TODO: Continue Team Chat
 === team_02 ===
 
 # CLEAR
+
+TODO: COMPILE: remove debugger tunnel
+/*-> debuggers ->*/
+
 
 The team cast doubt on whether B should continue, J eggs him on while wresting control of company power
 

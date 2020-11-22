@@ -24,7 +24,7 @@
  
     -> lucas_intro
 
-* << wait patiently >> # CLASS: player
+* [<< wait patiently >>] # CLASS: player
 
     -> lucas_intro
 
@@ -144,23 +144,233 @@ Clear?
 
 - Goodbye.
 
-+ [Close Chat] -> menu # CLASS: player
-
-TODO: Continue Lucas
++ [<< Close Chat >>] -> menu
 
 === lucas_02 ===
 
 # CLEAR
 
-L shares growing concerns about B's mental state
+{ name }
 
-Lucas demands updated reports given the mental strain Benton must be under.  He's (as usual) terse and demanding.  If the PC gives him any cause he will fly off into a lecture about who knows best when it comes to interplanetary remote medicine.
+* Hello Dr. Estévez. # CLASS: player
 
-If allowed to cool he will apologize and simply point out that all the signs right now are not great.  Benton's sleep cycle has become erratic, his conversations and journals are increasingly despondent.  And there's a lot more deep space to travel through before they reach the half-way point of this mission.
+* Lucas. # CLASS: player
 
-He encourages the player to give Benton gentle pushes to re-establish routine and turn the isolation into an opportunity for self-improvement.
+* Don't waste my time. # CLASS: player
 
-+ [Next] -> menu # CLASS: player
+- #wait
+
+* Hello? # CLASS: player
+
+* You rang? # CLASS: player
+
+* Sot this. # CLASS: player
+
+- Sorry, hello { name }
+
+Fighting another battle with Benton.
+
+What's your most recent report?
+
+* I think everything's ok, why? # CLASS: player
+
+* Doing my best[.] with the updates given this bizarre project.  Is something the matter? # CLASS: player
+
+* [Houston and Vũng Tàu game was epic].Houston Diamondbacks and Vũng Tàu Red Tops came out swinging in the EchoBall semi-finals.  Delish match-up.  Anh was something else, scoring 18 of the same bound! # CLASS: player
+
+    _un tonto_
+    
+    You seem a bit peeved, doc.  What's up? # CLASS: player
+
+* (medanalysis) { Medicine + Sociology >= 60 } My analysis is a little hedged.[]  Many bellweathers are trending in the wrong direction, especially cortisol and thyroid regulation. # CLASS: player
+
+    But not outside of expectations given the nature of this endeavor. # CLASS: player
+    
+    Why? # CLASS: player
+
+- I needed a board-certified psychoanalyst and engineer to work this angle.  Not <>
+
+{
+    - medanalysis:
+    
+        <>someone who thinks they're doing my job.
+        
+    - relationship == "close":
+    
+        <>an old flame.
+        
+    - relationship == "puzzle":
+    
+        <>a gaming buddy.
+        
+    - relationship == "epic":
+    
+        <>a reminder of his chequered past.
+        
+    - else:
+    
+        <>you.
+        
+}
+
+* Gee, thanks doc. <> # CLASS: player
+
+    { Sociology >= 30: 
+    
+        I do happen to have some experience in the field of keeping people sane. # CLASS: player
+    
+    }
+    
+    { Medicine >= 30:
+    
+        { Sociology >= 30:
+        
+            And <>
+        
+        }
+        
+        I know what an extreme bio-hack does to a biological construct intended for 1G. # CLASS: player
+    
+    }
+    
+    Thank you very much! # CLASS: player
+
+* I didn't ask to be here[.] either.  Doing what I can to help, so appreciate constructive feedback rather than your rants. # CLASS: player
+
+    You have a whole team of experts, apparently, so why don't you figure out what needs to happen next. # CLASS: player
+    
+* Awww, getting a bit stressed? # CLASS: player
+
+    Perhaps being a doc for tween H0L0 stars didn't set you up for the real deal. # CLASS: player
+
+-
+# wait
+# wait
+# wait
+
+* We can talk later. # CLASS: player
+
+* Did you need something else? # CLASS: player
+
+* Sot off. # CLASS: player
+
+- Hold on.
+
+* Why? # CLASS: player
+
+* (lucas_angryout)[<< Close Chat >>]
+
+    -> menu
+
+- (lucas_analysis)
+
+{ lucas_angryout:
+    # CLEAR
+}
+
+* { lucas_angryout } Sorry[, doc.].  Tell me what you need, doc. # CLASS: player
+
+* { lucas_angryout } What do you want. # CLASS: player
+
+* { lucas_angryout } Spit it out before I block you. # CLASS: player
+
+* ->
+
+- My apologies.
+
+My patient is being a challenge.  He's more concerned with this mission than his own help, and I feel like I'm the only one raising alarm bells.
+
+Junia seems more concerened with the future of Nth Horizon than whether or not Benton pops in deep space.
+
+And I will admit to having a trust problem with you.
+
+Which isn't really your fault.
+
+* Thanks[.] for saying so.  I know Benton.  I know he can be hard. # CLASS: player
+
+* [So what's going on?]
+
+* Don't really care[.] what you think.  I don't report to you. # CLASS: player
+
+    No, you don't.  I just would expect you to have the same concern for Benton's health as I do.
+
+- So what's going on? # CLASS: player
+
+This maneuver around Jupiter is placing him under increased physical strain, but more than that I'm seeing worrying trends in his demeanour.
+
+Sleep cycles are completely outside of parameters.
+
+And his conversations and journal entries are becoming... melodramatic.
+
+* { benton_05 } Yeah, he sounded a little erratic[.] when we spoke just now. # CLASS: player
+
+* { Sociology + Medicine >= 60 } He's developing coping mechanisms.[]  I think we're seeing a healthy (for the situation) pattern of eustress waves. # CLASS: player
+
+* Is there anything we can do? # CLASS: player
+
+* What's your reccomendation? # CLASS: player
+
+* So? # CLASS: player
+
+- The mission isn't even half way, yet.
+
+I think we need to prepare to turn him around.
+
+* Trust him, doc.[]  Benton has pulled off some crayz stuff before.  I wouldn't count him out. # CLASS: player
+
+    I'm playing with his life on margins that are nano thin!
+
+* It's Benton's call. # CLASS: player
+
+    I'm not sure he understands how thin the margin is.
+
+* { Sociology + Medicine >= 60 } We should already be _prepared_ for it.[]  But there's more options than just giving up. # CLASS: player
+
+    Regulation is the key right now.  Chemical interlinked with emotional. # CLASS: player
+    
+    I'm not sure you comprehend how thin the margins are.
+
+* { Astronomy + Engineering >= 60 } I don't think that's going to be [easy.]as easy as you might imagine.  With this burn around Jupiter he's set on a specific hypereclyptic trajectory with no further gravitational objects to use for course corrections.  We're counting on the angle and speed at Pluto to make the turn for home. # CLASS: player
+
+    Then we may be sending him to his death.  The margins are too thin.
+
+* What, and miss the show? # CLASS: player
+
+- If thyroid reg doesn't improve we'll see haemorragic decomposition of the L4\-compensator hack and explosive exocytosis!
+
+* So, keep him happy? # CLASS: player
+
+* That sounds bad, but it is what it is. # CLASS: player
+
+* Tasty! # CLASS: player
+
+    I don't know why I talk to you.
+    
+    << Dr. Estévez is now offline >>
+    
+    + + [<< Close Chat >>]
+    
+        -> menu
+
+* { Medicine >= 60 } Agreed.  But we can help.[]  We all keep up the positive support, and your team does the best it can with the gel balance. # CLASS: player
+    
+    That might not be enough.
+    
+    It might not.  But it's the best option for us right now. # CLASS: player
+
+- I don't know that it's that simple.
+
+We'll do our best to keep him stable.
+
+But you need to watch him closely.
+
+And if things turn for the worst we figure out how to turn him around.
+
+<< Dr. Estévez is now offline >>
+
++ [<< Close Chat >>] -> menu
+
+TODO: Continue Lucas
 
 === lucas_03 ===
 
@@ -197,4 +407,4 @@ The PC and Lucas can collaborate on treatment options to keep Benton in one piec
 
     -> waitloop
 
-+ [Close Chat] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu # CLASS: player

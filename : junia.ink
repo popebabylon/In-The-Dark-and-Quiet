@@ -151,7 +151,7 @@ I know they're old climbing chois or something.  But I just don't know why Bento
 
 = early_exit
 
-+ [Close Chat] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu # CLASS: player
 
 = junia_intro
 
@@ -392,23 +392,236 @@ But I'm trusting the vision.
     
     Do connect with me again soon, won't you?
 
-+ [Close Chat] -> menu # CLASS: player
-
-TODO: Continue Junia
++ [<< Close Chat >>] -> menu # CLASS: player
 
 === junia_02 ===
 
 # CLEAR
 
-J sews doubt about B's chances, tries to suss out if P is turnable
+Hei, { name }, do you have a moment?
 
-Junia uses some pretense to talk to the PCs and "be honest" with them.  The mission has been a success so far, but the chances are still good that Benton becomes another statistic.  She feigns worry, but believes it was the right thing to "send him out there."
+* Sure thing![]  What's up? # CLASS: player
 
-In the conversation she drops hints about new opportunities with Nth Horizon.  What does the PC want out of this?  Is playing a shoulder to cry on really where they want to be in this story?
+* Hello Junia.[]  I can spare a moment. # CLASS: player
 
-She'll also poke them for any details they may or may not know about the others, or some personal details about the PC's history with Benton.  Do they have an achilles heel?
+* Not really[.], but I guess you're gonna bore me anyway. # CLASS: player
 
-+ [Next] -> menu # CLASS: player
+    If you're busy with other tasks, it can wait.  But I'd appreciate your opinion.
+    
+    * * What is it? # CLASS: player
+    
+    * * (junias_hanging)[<< Close Chat >>]
+    
+        -> menu
+
+- (junia_return)
+
+{ - junias_hanging:
+
+    You have some time now?  Good.
+    
+}
+
+I've been reading Lucas' reports which are... pessimistic.  I wanted to get your opinion on Benton's state.
+
+Is he at risk given the stresses he's under?
+
+* { Medicine <= 0 } No idea, I'm not a doctor. # CLASS: player
+
+    Do you have any opinion on the matter?
+
+* { Sociology <= 0 } No idea, I'm not a psychiatrist. # CLASS: player
+
+    Surely you know him well enough to have some judgement?
+    
+* ->
+
+-
+
+* He's fine.[]  I think any of us would be a bit nerve-wrecked if we were in his shoes. # CLASS: player
+
+    That's fair.
+    
+    I still <>
+
+* I don't know.[]  Seriously.  I'm just talking to him to try to help, but I can't tell how he is from 365 million miles away! # CLASS: player
+
+    And you've been doing wonderfully, thank you.
+    
+    I still <>
+
+* He's mental.[]  Totally loco.  But he was that way _before_ he left, so not sure what you're expecting? # CLASS: player
+
+    Very droll.
+    
+    I do <>
+
+* { Medicine >= 60 } His body is very stressed.[]  The bio-engineering is keeping him going, but he's going to come back a complete wreck.  Probably need full reconstruction. # CLASS: player
+
+    Yes, that's a concern.
+    
+    Makes me <>
+
+* { Sociology >= 60 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player
+
+    I still <>
+
+- <>worry about the strain on him.  How will this change him?
+
+* [Don't worry.]  You can't worry too much about that.  Nothing we can do except to keep trying to help. # CLASS: player
+
+    I suppose you're right.
+    
+    We sent him out amidst the dark with a lot riding on him, so we should support him throughout.
+
+* [Change is a constant.]  Change is the only constant we have.  We're always going to change.  Benton's current change is more severe, but why worry? # CLASS: player
+
+    Worry is a product of witnessing severe change.  It's what human's do.
+    
+    We sent him out amidst the dark with a lot riding on him, and second-thoughts are a natural byproduct.
+    
+    * * Nice self-analysis. # CLASS: player
+    
+        I'm good at recognizing my own human foibiles.
+    
+    * * I think you're overthinking it. # CLASS: player
+    
+        Perhaps.  I like to understand my thoughts.
+        
+    - - Not always good at changing them.
+    
+    Anyway...
+
+* { Medicine + Sociology >= 60 } His humanity is being tested.[]  Dr. Estévez isn't wrong about how little prep he had. # CLASS: player
+
+    The time needed to adapt to the changes to his physiology. # CLASS: player
+    
+    Or to test the effects of isolation. # CLASS: player
+    
+    I don't doubt you're right.
+    
+    But he had to take the risk.  I _had_ to support him taking the risk.
+
+- Nth Horizon is riding that knife edge of success\\\\failure.
+
+What Benton is doing tips the balance in our favor.
+
+* Exciting, but scary. # CLASS: player
+
+    Indeed.
+
+* Hope you're right. # CLASS: player
+
+* Tipping it yeah, but to succeed? # CLASS: player
+
+    Has to.  Anything else means unhappy investors go extrajudicial on us both.
+
+* { Business >= 60 } I'm a little confused on the prospects.[]  With the tech displayed so far, how is Nth Horizon not already out from under threat? # CLASS: player
+    
+    One word.  Goliath.
+    
+    If we stumble now, big G swoops in and gobbles us up without the payday.
+    
+    Isn't there enough interest to maintain independence? # CLASS: player
+    
+    Not given how much we spent to get this far.
+    
+    The tech is great.  The cost to build it was astronomical.
+    
+    * * I see. # CLASS: player
+
+- What about you?  How does Moonshot change your future?
+
+* Just being a part of this is thrilling. # CLASS: player
+
+    Glad you think so.  Is that enough?
+    
+    * * Yes!  We're changing the future. # CLASS: player
+    
+    * * Maybe?  Benton will take care of me. # CLASS: player
+    
+        I'm sure he will.  If he can.
+        
+        * * * Gotta have faith. # CLASS: player
+        
+        * * * What's that supposed to mean? # CLASS: player
+        
+    - - Let's be real.  He might not come back.  Or Nth Horizon might fold.
+
+* Don't know that it does. # CLASS: player
+
+    Really?  There's opportunity here if you look for it.
+    
+    * * I have my own opportunities to focus on; once this is over. # CLASS: player
+    
+    * * What kind of opportunity do you mean? # CLASS: player
+    
+    * * { Security + Business + Sociology >= 60 } I've found some. # CLASS: player
+
+* Oh, I'll get something out of this. # CLASS: player
+
+- Are you getting something out of this even if it tanks?
+
+* { Astronomy >= 30 } [Astronomical data.]I'm able to edgeUp my research with the astro data TARC lets me see. # CLASS: player
+
+* { Business >= 30 } Learning a few things about startCorps.[]  A few things _not_ to do for sure. # CLASS: player
+
+* { Engineering >= 30 } Depends if I can publish my findings on the fuel mix. # CLASS: player
+
+* { Medicine >= 30 } [Experience with bio-hacking.]I wouldn't have had the practical experience with a full bio-hack if I hadn't joined. # CLASS: player
+
+* { Security >= 30 } You're like a massive pen-test.[]  I get to see what happens with TARC and the measures you have in place against actors like Goliath.  Pretty solid experience. # CLASS: player
+
+* { Sociology >= 30 } [I can always learn about people.]Every project is an opportunity to learn about how people operate.  This one is no different. # CLASS: player
+
+* { Technology >= 30 } TARC is a goldmine.[]  The adaptations Benton and TARC have woven into the core programming are outstanding, and that's just the pieces it's been willing to tell me about! # CLASS: player
+
+* Do you have something in mind? # CLASS: player
+
+    Possibly.
+
+* Probably not. # CLASS: player
+
+- I think you should consider the value you have to this project, and what that translates to in the long run.  Any knowledge gained is subject to NDA.  But value is not.
+
+    VAR avarice = 0
+    VAR generosity = 0
+
+* I'm not here to make money. # CLASS: player
+
+    ~ avarice--
+    ~ generosity++
+
+    No, of course.  I wasn't trying to suggest you were.  Just that you're a valuale member of the team and I hope it does you credit no matter how the project turns out.
+
+* You're not suggesting I sell out? # CLASS: player
+
+    I'm suggesting you keep your options open.  I appreciate what you're doing for the project, for Benton.  And I like to make sure my people are taken care of.
+    
+* (junia_avarice)So how do I cash in? # CLASS: player
+
+    ~ avarice++
+    ~ generosity--
+    
+    Hmmm, how very practical.
+    
+    I certainly can't suggest you make any moves outside the confines of the agreements you've made with Nth Horizon.
+    
+    But if opportunties present themselves to tip the balance of the project in your favor, I'm sure you can capitalize.
+    
+    * * What sort of opportunities? # CLASS: player
+    
+    - - Those of us left behind need to consider the future of the company carefully.  What happens to Benton out there will have a drastic impact.  It's best if plans are in place to handle any outcome.
+    
+    And if the outcome _is_ under our control, so much the better.
+    
+- Sot!  Sorry, have another call I need to take.
+
+We'll chat again soon.  Thank you.
+
++ [<< Close Chat >>] -> menu # CLASS: player
+
+TODO: Continue Junia
 
 === junia_03 ===
 

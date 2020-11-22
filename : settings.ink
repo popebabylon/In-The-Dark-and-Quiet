@@ -19,7 +19,7 @@ VAR pronoun = "?"
 // picture
 Select your identity for biometric validation. # CLEAR
 
-TODO: COMPILE: switch to actual picture selection
+TODO: COMPILE: hide fake picture selection
 
 /*+ Select Picture
 
@@ -135,8 +135,8 @@ Your position has been selected as Mission Consultant.  You report directly to B
 
 Thank you.  Your profile is complete. <br> <br> To edit your profile in future visit the Settings page. <br> <br> Select 'Save' to continue. # CLEAR
 
-+ [Save] ->->
-+ [Start Over] -> profile
++ [<< Save >>] ->->
++ [<< Edit >>] -> profile
 
 = skills
 

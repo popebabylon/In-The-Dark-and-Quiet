@@ -25,9 +25,7 @@ TODO: Continue Woodpecker
 
 + [<< Report chat >>]
 
-    << reported >>
-    
-    << closing page >>
+    -> news_reportarticle ->
 
 + [<< Close chat >>]
 
@@ -37,13 +35,141 @@ TODO: Continue Woodpecker
 
 # CLEAR
 
-K hacks her way in to talk to P, has something interesting...
+VAR knows_kim = false
 
-A strange new chat user appears and begins pinging the PC.  If they clicked on any of the phish attempts earlier it knows all about them.  Otherwise it's trying to get their attention.  If the PC bites the stranger introducer themself as Woodpecker and claims they've got something very interesting intel the PC and his friends would find really valuable.  But she's looking for some valuable intel on the PCs side to trade.  Her interests are (she claims) benign, just looking to know a bit more about this unprecedented project.  The intel she has is (she claims) critical to the long term survivial of Mr Saari's business.
+Peck. # wait
 
-The PC may immediately block or report Woodpecker to TARC, but she should get a few opportunities to have this conversation before she's shut out completely.  She already knows the core details, but any juicy tidbits about Junia or Lucas butting heads with Benton will likely earn a reward... later.
+Peck. # wait
 
-+ [Next] -> menu
+Peck. # wait
+
+* Hello? # CLASS: player
+
+    # wait
+
+    * * Who's this? # CLASS: player
+    
+        # wait
+
+        * * * Are you Goliath? # CLASS: player
+        
+            # wait
+
+        * * * { Sociology + Security >= 90 } Are you Speight? # CLASS: player
+        
+            Well well, aren't you sharp.
+            
+            ~ knows_kim = true
+
+* Leave me alone!
+
+    No reason to be rude.
+
+* { Technology + Security >= 30 } << Report >> # CLASS: player
+
+    -> tarc_report_woodpecker ->
+    
+    # CLEAR
+    
+    Hello? # CLASS: player
+
+* { Technology + Security >= 60 } << Trace >> # CLASS: player
+
+    << inject tracer360^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x6361746368656d616c6c, respooling >> # CLASS: player
+    << inject tracer360^...COMMIT >> # CLASS: player
+    
+    << injecting >> # wait # CLASS: player
+    << injecting >> # wait # CLASS: player
+    << injecting >> # wait # CLASS: player
+    
+    - - (tracing_woodpecker) << success; trace started >> # CLASS: player
+
+* [<< Close Chat >>] # CLASS: player
+
+    << inject chat_hack^...COMMIT >>
+    << processing >>
+    << segfault at 0x6c6f636b6564646f6f72, respooling >>
+    << inject chat_hack^...COMMIT >>
+
+    Sorry, {pronouner("choi","chai","chen")}, rlly wanna chat w/ u.
+    
+    Sit a while.
+    
+- Hi there.
+
+U can call me Woodpecker.
+
+* Hello. # CLASS: player
+
+* [<< wait >>] # CLASS: player
+
+    # wait
+
+* I'll call you what I sotting want. # CLASS: player
+
+    Oh, temper\\\\temper
+
+- Glad we connected.
+
+I think we can help each other out.
+
+* I doubt it. # CLASS: player
+
+* Perhaps. # CLASS: player
+
+* { Technology + Security + Sociology >= 60} You have me at a disadvantage.[]  And given the nature of your attack I'd say you're trying to keep it that way; keep me unbalanced. # CLASS: player
+
+    Guilty.
+    
+    * * So I should just disengage. # CLASS: player
+    
+        _Should_?  Perhaps.  But _want_ to?  I don't think so.
+        
+        Not until you hear my pitch.
+    
+    * * I'm intrigued.[]  What's your play? # CLASS: player
+
+- You're an outsider at Nth Horizon.  I know about your past with Benton, { name }, but you're not a cog in the startCorp machine.
+
+I've been looking in to where Nth Horizon's money is coming from, and where it and it's tech is going to go.
+
+Fairly sure it's not all "for the good of humanity."
+
+I want intel to affirm / refute.
+
+And you're my keyfile to do so.
+
+All I want is juice for my newsDrops.  Insider track on Benton's stunt.  Tie up some loose ends in the money train.  No harm.
+
+* And what do I get out of it? # CLASS: player
+
+* I'm not gonna sabotage this project! # CLASS: player
+
+    Not asking you to.
+
+* Sot off. # CLASS: player
+
+- I think you wanna work w/ me.
+
+Coz what I'm digging in smells like a threat to Saari.
+
+I get to the deeps on it, and you come out like a hero.
+
+* That's... disconcerting. # CLASS: player
+
+* I'm not buying it. # CLASS: player
+
+* [<< wait >>] # CLASS: player
+
+- Think it over.  No rush.
+
+I'll be around.
+
++ [<< Close chat >>] # CLASS: player
+
+    -> menu
 
 === woodpecker_02 ===
 

@@ -53,7 +53,7 @@ LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupi
 
 // set current date
 VAR date_year = 2065
-VAR date_month = 07
+VAR date_month = 7
 VAR date_day = 15
 
 // set company values
@@ -69,6 +69,7 @@ VAR Nth_IT = 50
 VAR woodhack = false
 
 // initial introduction and setup
+
 -> about -> setup -> menu
 
 === error ===

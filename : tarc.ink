@@ -45,13 +45,13 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 * { Security + Technology >= Nth_SEC } [<< Bypass Security Requirements >>] # CLASS: player
 
     - (hackit0)
-    << inject sec_byp^...COMMIT >>
-    << processing >>
-    << processing >>
-    << processing >>
-    << segfault at 0x6861636b6572, respooling >>
-    << inject end_byp^...COMMIT >>
-    << bypassed >>
+    << inject sec_byp^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x6861636b6572, respooling >> # CLASS: player
+    << inject end_byp^...COMMIT >> # CLASS: player
+    << bypassed >> # CLASS: player
     ~ Nth_SEC -= 10
     -> passed
 
@@ -61,7 +61,7 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
 <h3>Non Disclosure Agreement</h3><>
 <>
-<>		<p class="info"> This non disclosure agreement is entered into on { date_year }-{ date_month }-{date_day } between Nth Horizon, Inc and { name } << ssuuid: 0x6d6f6f6e73686f74 >> and is terminated on { date_year + 100 }-{ date_month }-{date_day } or upon { name }'s death. </p><>
+<>		<p class="info"> This non disclosure agreement is entered into on { display_date() } between Nth Horizon, Inc and { name } << ssuuid: 0x6d6f6f6e73686f74 >> and is terminated on { date_year + 100 }-01-01 or upon { name }'s death. </p><>
 <>
 <>		<p class="info"> In the course of the engagement between { name } and Nth Horizon, Inc, { name } may become privy to data regarding Nth Horizon, Inc’s business, practices, technologies, strategies, or secrets that are considered highly confidential. To embark on this engagement { name } agrees to the following terms and conditions. </p><>
 <>
@@ -110,11 +110,11 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
         
 = hackit
 
-    << inject acc_for^...COMMIT >>
-    << processing >>
-    << segfault at 0x6861636b6572, respooling >>
-    << inject acc_new^...COMMIT >>
-    << signed >>
+    << inject acc_for^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x6861636b6572, respooling >> # CLASS: player
+    << inject acc_new^...COMMIT >> # CLASS: player
+    << signed >> # CLASS: player
 
     ~ Nth_SEC -= 1
     
@@ -276,6 +276,84 @@ Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, 
 
 TODO: Continue TARC
 
+=== tarc_report_woodpecker ===
+
+# CLEAR
+
+Hello { name }.  All security checks are nominal.  Is there something else I can help you with?
+
++ I'm being harrassed.[]  Some unknown person has broken into your system. # CLASS: player
+
+    That is unexpected.
+    
+    - - (how)
+    
+    Do you have any known vector whereby they would have gained access to your details?
+    
+    * * Yeah.[]  I might have clicked a link they planeted in a newsDrop.
+    
+        I see.  That is helpful.  I will attempt to backtrace their access point.
+        
+        -> threat_true
+    
+    * * No.
+    
+        Strange.  I'm not detecting any unexpected network traffic.
+        
+        That is not to say your report isn't valid.  I simply need to gather more data.
+        
+        -> continue_honey
+
++ { Technology + Security >= 60 } I've been added to a hacked comm node.[]  Appears to be a class 3 inject worm. # CLASS: player
+
+    That is unexpected.  Can you provide a memory reference?
+    
+        * * 0x7065636b656420796f7521
+        
+        * * Not at the moment.
+        
+            -> how
+
++ Not right now. # CLASS: player
+
+    Very well.
+
+    + [<< Close Chat >>]
+
+        ->->
+        
+- (threat_true)
+
+<< Analyzing >> # wait
+<< Analyzing >> # wait
+<< Analyzing >> # wait
+
+This does appear to be a new threat.  Have they compromised you or any of the data you control?
+
+* I don't know. # CLASS: player
+
+* I don't think so? # CLASS: player
+
+* I'm too slick for that, TARC! # CLASS: player
+
+- Very well.
+
+- (continue_honey) I would suggest you continue interacting with this unknown actor.  I will monitor and sever the connection if anything of significant risk occurs.  Otherwise you will help provide valuable intel on the nature of the threat and any possible countermeasuers.
+
+* { Technology + Security >= 30 }I'm your honeypot. # CLASS: player
+
+    Thank you.
+
+* I don't like the sound of that. # CLASS: player
+
+    It will be quite safe.  I'm not at risk of compromise and you would be doing me a service.
+
+- Please continue.
+
++ [<< Close Chat >>]
+
+        ->->
+
 === tarc_02 ===
 
 # CLEAR
@@ -320,4 +398,4 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
 
 - Very well.
 
-+ [Close Chat] -> menu
++ [<< Close Chat >>] -> menu

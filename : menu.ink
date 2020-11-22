@@ -69,7 +69,7 @@
 
         {
         
-            - benton_04 && woodpecker_01 && news_05 && junia_02:
+            - benton_04 && woodpecker_01 && news_05 && junia_02.junia_return:
             
                 ~ status = (Jupiter_Flyby)
                 
@@ -83,7 +83,7 @@
 
         {
         
-            - lucas_02 && benton_05 && team_02 && woodpecker_02:
+            - lucas_02.lucas_analysis && benton_05 && team_02 && woodpecker_02:
             
                 ~ status = (Enroute_to_Pluto)
                 
@@ -165,11 +165,6 @@
 ->->
 
 === menu ===
-
-// run debugger helpers when menu is built
-TODO: COMPILE: remove debuggers when not needed
-//{skillDebug()}
-//{stateDebug()}
 
 // go do status update (time might pass)
 -> status_update ->
@@ -400,6 +395,12 @@ TODO: COMPILE: remove debuggers when not needed
     
         ~ junia_chat_divert = -> junia_02
         
+    - status == (Approaching_Jupiter) && not junia_02.junia_return && junia_02.junias_hanging: 
+    
+        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+    
+        ~ junia_chat_divert = -> junia_02.junia_return
+        
     - status == (Approaching_Pluto) && not junia_03: 
     
         ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
@@ -441,6 +442,12 @@ TODO: COMPILE: remove debuggers when not needed
         ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
     
         ~ lucas_chat_divert = -> lucas_01.lucas_intro
+
+- status == (Jupiter_Flyby) && not lucas_02.lucas_analysis && lucas_02.lucas_angryout: 
+    
+        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+    
+        ~ lucas_chat_divert = -> lucas_02.lucas_analysis
 
     - status == (Jupiter_Flyby) && not lucas_02: 
     
@@ -543,10 +550,10 @@ TODO: COMPILE: remove debuggers when not needed
 // clear previous screen before showing menu
 
 # CLEAR
-<i class="material-icons md-24">menu</i>Menu # CLASS: menu
+<span><i class="material-icons md-24">menu</i>&nbspMenu</span> # CLASS: menu
 
 // build chat menu items based on vars above
-+ [Mission]
++ <span class='menuitem'><i class='material-icons md-18'>dashboard</i>&nbspMission</span>
 
     -> mission
 
@@ -554,11 +561,11 @@ TODO: COMPILE: remove debuggers when not needed
 
     -> news_divert
 
-+ [Settings]
++ <span class='menuitem'><i class='material-icons md-18'>settings</i>&nbspSettings</span>
 
     -> settings
 
-+ [About]
++ <span class='menuitem'><i class='material-icons md-18'>info</i>&nbspAbout</span>
 
     -> about -> menu
 
@@ -587,6 +594,40 @@ TODO: COMPILE: remove debuggers when not needed
     -> woodpecker_chat_divert
 
 
+// function to display full date with leading 0'startup
+
+=== function display_date() ===
+
+~ temp y = date_year
+
+~ temp m = "0"
+{
+    - date_month < 10:
+        
+        ~ m = m + date_month
+
+    - else:
+    
+        ~ m = date_month
+
+}
+
+~ temp d = "0"
+{
+    - date_day < 10:
+        
+        ~ d = d + date_day
+
+    - else:
+    
+        ~ d = date_day
+
+}
+
+~ temp print_date = y + "-" + m + "-" + d
+
+~ return print_date
+
 // function to add to the current date
 
 === function timeplus(y, m, d) ===
@@ -606,7 +647,7 @@ TODO: COMPILE: remove debuggers when not needed
 
 {
 
-    - date_day > 12:
+    - date_month > 12:
     
         ~ date_year += 1
         ~ date_month -= 12
@@ -624,10 +665,10 @@ TODO: COMPILE: remove debuggers when not needed
 
 # CLEAR
 
-<h3><<< time passes >></h3><>
-<><h3><<< mission status is { status } >></h3><>
-<><h3><<< the date is {date_year}-{date_month}-{date_day} >></h3>
+<h3><< time passes >></h3><>
+<><h3><< mission status is { status } >></h3><>
+<><h3><< the date is { display_date() } >></h3>
 
-* [<< Continue >>]
++ [<< Continue >>]
 
 ->->

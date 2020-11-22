@@ -138,7 +138,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
         
     Come chat with me once you pass muster, { pronouner("choi", "chai", "chen") }!
      
-    + [Close Chat] -> menu # CLASS: player
+    + [<< Close Chat >>] -> menu # CLASS: player
 
 = pluto_pitch
 
@@ -306,11 +306,11 @@ newsDrops should be going live with our announcement soon.  And you could intro 
 
 * Later. # CLASS: player
 
-* [Close Chat] -> menu # CLASS: player
+* [<< Close Chat >>] -> menu # CLASS: player
 
 -
 
-+ [Close Chat] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu # CLASS: player
 
 = welcome_back
 
@@ -358,7 +358,7 @@ Hollah!  No fuss?
 
 + [<< Trigger Alarm >>]
 
-    << Cortical Alarm Activated >>
+    << Cortical Alarm Activated >> # CLASS: player
     
     Ach! Sot!  I'm awake...
     
@@ -988,6 +988,8 @@ That's the only way we evolve enough to survive.
             So it'll get sorted.
             
             ~ trust_junia--
+        
+        * * * ->
     
     * * What do you think she wants from this? # CLASS: player
     
@@ -1073,7 +1075,7 @@ I hope you can help keep the team in the right headspace.  Cool?
 
 - Chat soon, yah?
 
-+ [Close Chat] -> menu
++ [<< Close Chat >>] -> menu
 
 === benton_03 ===
 
@@ -1386,9 +1388,9 @@ How?
 
     The eternal pragmatist!
     
-    * * Had to be, working with fireworks like you!
+    * * Had to be, working with fireworks like you! # CLASS: player
     
-    * * It got me by.
+    * * It got me by. # CLASS: player
     
     - - You know how to steer with simple instructions.
     
@@ -1409,7 +1411,7 @@ How?
 VAR risky = 0
 VAR cautious = 0
 
-* Sure.  How's that relevant?
+* Sure.  How's that relevant? # CLASS: player
 
     When my head was spinning you stepped in and made the choice.
 
@@ -1602,47 +1604,1519 @@ It's go time, no matter what Lucas says.
 
 I gotta tell the others.  Chat soon, ya?
 
-+ [Close Chat] -> menu # CLASS: player
-
-/*B discusses risk with P, makes the launch decision
-
-Benton asks for the PCs final opinion on whether or not he should launch.  He'll admit to a lot of cut corners and things not working out exactly as planned.  But he thinks there's enough buffer built in to their plans to accommodate.
-
-Whatever their response he will tie it back to a previous adventure they had and whether or not taking that risk was worthwhile.  "You can't know if the bigger risk is to never have tried."  This establishes if the PC is [brave] or [cautious].
-
-In the end he makes it clear he intends to launch and not miss the window.  He appreciates their involvement and hopes they'll stay on to keep him company (even just through comms) in the dark and quiet out there.*/
-
-TODO: Continue Benton
++ [<< Close Chat >>] -> menu # CLASS: player
 
 === benton_04 ===
 
 # CLEAR
 
-B embraces the risk
+Hei.
 
-TIME MOVES FORWARD
+Hei { name }.
 
-Benton is initially enthusiastic despite the long voyage so far.  He claims excitement about the upcoming flyby of Jupiter.  But there's a lot of boredom and emptiness, he has to remind himself the endeavor is worth it.
+Guess what day it is?
 
-The isolation does gives him perspective he never had and he'll go off on some mild tangents about the vastness of deep space and whether or not man truly belongs out here, alone like this.
+* Your birthday? # CLASS: player
 
-With careful prompting he can stay on topic and be encouraged.  Mantras are repeated about the rewards for taking the hard path, and he (enthusiastically or not) embraces the risk of being a pioneer.
+    Nope!
 
-+ [Next] -> menu # CLASS: player
+* Day 185? # CLASS: player
+
+    Yeah!
+
+* Another day in hell... # CLASS: player
+
+    Absotlutingly.
+    
+    And you deserve it.
+    
+    But that's not what I meant.
+
+- It's one hundred and eighty five days I've been skating along the ecliptic.
+
+Six months and change.
+
+* { Astronomy >= 30 } It has been a nanospec[.] in the deep history of the universe. # CLASS: player
+
+    Like a 3.8461538e-11 "th." # CLASS: player
+    
+    If ya put it like that it seems so inconsequential.
+
+* { Business >= 30 } Time to play hell with your stocks.[]  They've bounced around like a ping-pong ball.  # CLASS: player
+
+    Always gotta play the long game.
+    
+    But that doesn't really matter.
+
+* { Engineering >= 30 } How imprecise.# CLASS: player
+
+    It's been 6 months, 4 days, 8 hours, 21 minutes, and... # CLASS: player
+    
+    18. # CLASS: player
+    
+    19. # CLASS: player
+    
+    20 seconds. # CLASS: player
+    
+    Nerd. 🤓
+    
+    But I like that precision.  Makes me feel well taken care of.
+
+*  { Medicine >= 30 } What you should time is your sleep cycle.[] Your numbers are all whack. # CLASS: player
+
+    I'm suspended in a viscous gloop being hurled out at Pluto.  Not sure 8.5 hours of sleep is that critical.
+    
+    On this I agree with your doc.  Get more sleep. # CLASS: player
+
+    Overrated.  I'm in deep space!  Racing towards a rendezvous with Jupiter who's gonna give me a kiss and a shove out to where no-one has been before.  I can afford to lose a little shuteye over this.
+
+* { Security >= 30 } Not long enough.[]  Your problems are all still gonna be here when you get back. # CLASS: player
+
+    Bah.  Nullmatter.
+    
+    When I get back the whole system is gonna change.
+    
+    And make all this seem like a drop in the bucket.
+    
+    # wait
+
+* { Sociology >= 30 } Enough time for some reflection? # CLASS: player
+
+    Yeah, plenty of it.
+    
+    I'm just a body in a coffin hurtling through space.  No need for me to be here.
+    
+    But the darkness give you room to think.
+
+* { Technology >= 30 } Be-zero's clock won't even have ticked. # CLASS: player
+
+    Hmmm, yeah.  Tension's building, though.
+    
+    Could you imagine this future?
+    
+    * * Sure. # CLASS: player
+    
+    * * Don't think so. # CLASS: player
+    
+    - - I always did.
+
+* Yep. # CLASS: player
+
+    Always so underwhelmed.  You're a peach.
+
+- There's an emptiness to this sojourn I didn't anticipate, but it is not unappreciated.  A (human) depth of empty time I can't fill, just as I can't fill the darkness outside this hull.
+
+Room.
+
+- (room)
+
+* Isn't it lonely? # CLASS: player
+
+    Not with you here!
+    
+    * * I'm there for you. # CLASS: player
+        
+        See!
+        
+        # wait
+        
+        But... yes <>
+    
+    * * But I'm not really there. # CLASS: player
+
+        ¡sigh! I know.
+        
+        Yes<>
+    
+    - - <>, it's lonely.  Don't think that's always a bad thing.
+    
+    Space to explore myself.
+    
+    Figuratively. # wait
+
+* What do you fill such emptiness with? # CLASS: player
+
+    Why fill it?
+    
+    * * We don't have to. # CLASS: player
+        - - - (introspection)
+        
+        + + + [<<< wait >>>]
+        
+            # wait
+    
+            -> introspection
+            
+        * * * So... # CLASS: player
+    
+    * * We don't have a choice.[]  We fill all emptiness with meaning or garbage instinctually. # CLASS: player
+    
+        Don't think of a pink elephant.
+        
+        Your mind always creates _something_ in the space... until you cease.
+        
+        Exactly. # CLASS: player
+    
+    * * No reason.[]  Just hate leaving a gap that could be filled. # CLASS: player
+    
+        You're like { career } version of groutBot.  Seal all edges.
+        
+        Keeps my brain from falling out. # CLASS: player
+
+* { Astronomy >= 30 } [It's not really empty.] I'd say it's not so empty.  Your scale is just small enough to slip through the cracks. # CLASS: player
+
+    Think at the scale of galaxies and this is a crowded neighborhood.
+    
+    And one that's colliding at collosal speed with another galaxy. # CLASS: player
+    
+    Ants scurrying under a car wreck.  Just don't get caught in the gasoline fire.
+
+* { Medicine + Sociology >= 60 }  Introspection is good[.], but I want to make sure you're checking in with yourself enough to avoid a deep end. # CLASS: player
+
+    What's that supposed to mean?
+    
+    * * Just take a moment[.] to size up the practical steps in front of you.  The universe is big, your part in it is concerned with the here and now. # CLASS: player
+    
+        Guess you're right.
+        
+        -> roomex
+    
+    * * Nothing.[]  You're next to impossible. # CLASS: player
+    
+        I think that sums me up, yeah.
+        
+        Anyway.
+        
+        -> roomex
+
+- { room < 3: -> room }
+
+- (roomex) Such musings are fun, but I suppose we have a day to begin.
+
+What's docked?
+
+* Got a big date coming up. # CLASS: player
+
+    { relationship == "close":
+        
+            Found another partner, huh? # wait
+            
+            Your big date.  With Jupiter. # CLASS: player
+        
+            Right.
+            
+        - else:
+        
+            I like big planets and I cannot lie...
+            
+    }
+    
+* Jupiter sims are still green. # CLASS: player
+
+    Do we still have good compensation for the Vig4312 grav wave?
+    
+        * * I have no idea.[]  Ask Nav. # CLASS: player
+        
+            Ok.  Sorry, I don't always remember that you're not sitting with them.
+        
+        * * { Astronomy >= 30 } I think so.[]  Math checks out. # CLASS: player
+        
+            { Engineering + Technology == 0:
+             
+                It's the tech that I don't understand. # CLASS: player
+                
+                Null sweat.  I'm sure that's golden.
+            
+            }
+        
+        * * { Astronomy + Engineering >= 90 } Yes, with tolerances[.] of at least 4.8%. # CLASS: player
+        
+            Great.  I knew this baby could handle it.
+
+* Might see you crushed[.] in the big red spot in a couple weeks. # CLASS: player
+
+    Thx.
+    
+    Wlcm. # CLASS: player
+
+- Pity I don't have more of a window.  Or less gloop in my eyes.
+
+Marduk up close and personal.  Not often you get to dance with a Babylonian god.
+
+* Hope it's a fast song. # CLASS: player
+
+    Fastest I've ever danced to.
+    
+    Hope everything holds together.
+
+* { Astronomy >= 30 } Your calcs better be right. # CLASS: player
+
+    Yeah.  They better.
+    
+    * * You're not sure? # CLASS: player
+    
+    * * Can't change your mind now. # CLASS: player
+    
+    - - They're within acceptable parameters.
+
+* { Engineering >= 30 } Hold onto your buttcheeks for that burn. # CLASS: player
+
+    Even in gel you're gonna feel it. # CLASS: player
+    
+    Yeah.  Biggest test of the Horizon so far.
+    
+    * * Will it hold? # CLASS: player
+    
+    * * It'll hold. # CLASS: player
+    
+    Hope so.
+
+* { Sociology >= 30 } [Outrunning Mušḫuššu?] Sounds like you're moving fast enough to outrun Mušḫuššu? # CLASS: player
+
+    ¡LafLaf!
+
+    Not even sure if that's something you could do.
+    
+    Gods and their servants don't often have to follow physiks.
+    
+    Unlike me and my supersonic coffin.  Bending around a gravity well like a misguided soccer ball.
+
+- The thing I hate the worst is feeling like a passenger.
+
+Like if this thing wrecks I have no control, I'm just collateral dmg.
+
+* I guess so. # CLASS: player
+
+* { Sociology + Medicine >= 60 } Can you do anything about it? # CLASS: player
+
+    No.
+    
+    No. # CLASS: player
+    
+    So you have to let it go. # CLASS: player
+
+* { Engineering + Astronomy >= 60 } That's what all the engineering is for.[]  All the dollars and effort that went into building this thing. # CLASS: player
+
+    That's what keeps you in one piece.  The maths. # CLASS: player
+    
+    Glad I stayed in school.
+    
+    * * Me too. # CLASS: player
+    
+    * * No you didn't! # CLASS: player
+    
+        Oh, right!
+
+- Right.
+
+Appreciate you keeping me level.
+
+* Just remember why you're doing this. # CLASS: player
+
+* Sure. # CLASS: player
+
+* You keep yourself level.[]  No way I'm coming out there to pick up the pieces if you pop. # CLASS: player
+
+- This frontier will be crossed.  It's worth the risk.
+
+Ok, gel's firming up for exercise.  Chat latrz?
+
+* You got it. # CLASS: player
+
+* Sure. # CLASS: player
+
+* Mebbe. # CLASS: player
+
+- Ciao.
+
++ [<< Close Chat >>] -> menu
 
 === benton_05 ===
 
 # CLEAR
 
-B getting bored, discusses personal history with P, flies by Jupiter
+LIST jupiter_flyby_status = (approach), pre_burn, entry_burn, perijove, exit_burn, apojove, escape, deep_space
+
+LIST jupiter_flyby_status_color = (green), orange, red
+
+LIST stress = (nominal), elevated, excessive, critical
+
+VAR next = -> firstStress
+
+<< adding stress_analysis to chat >>
+
+<< patient's stress level is { stress } >>
+
+<< { name }, monitor Benton's condition through the flyby.  Do what you can to keep him stable. - Dr. Estévez >>
+
+<< adding flyby_status_jupiter to chat >>
+
+<< Jupiter flyby status : { jupiter_flyby_status_color } : { jupiter_flyby_status } >>
+
+Ready for a sweaty dance?
+
+* Always.[]  Fandango or flossing? # CLASS: player
+
+    No class.
+
+* { relationship == "close" }Never could resist a tango with you. # CLASS: player
+
+    Ah, { pronouner("choi","chai","chen") }, we had some hot nights on the dancefloor, yah?
+    
+    Nothing quite like this. # CLASS: player
+
+* This isn't dancing. # CLASS: player
+
+    { Astronomy + Engineering >= 60:
+    
+        Eng is nominal, nav says path checks, so we're green. # CLASS: player
+    
+    }
+    
+    { Technology + Security >= 60:
+    
+        TARC reports clean bands so you're free to push without interference. # CLASS: player
+    
+    }
+    
+    { Sociology + Business >= 60:
+    
+        I know this is a big deal for Nth Horizon, but you need to keep your head in the game. # CLASS: player
+    
+    }
+    
+    { Medicine >= 30:
+    
+        Also, you don't have sweat glands anymore. # CLASS: player
+    
+    }
+    
+- Gotta say this big beauty is quite the partner.  Think it wants to give me a squeeze.
+
+* { Astronomy >= 30 } You're inside the orbit of Callisto[.] so gravitaional compression will increase inside the gel. # CLASS: player
+
+    Such a nerd.
+
+* Yeah, so lets make sure we avoid [that.]getting too close. # CLASS: player
+
+    Aww, you worried about me?
+
+* This is a love 'em and leave 'em kinda moment. # CLASS: player
+
+    Too cruel { pronouner("choi","chai","chen") }.  Too cruel.
+
+-
+
+Yeah. # CLASS: player
+
+* Just wanna see you on the other side of this. # CLASS: player
+
+* Well, your dance partner could kill you. # CLASS: player
+
+* You wanna turn into jelly, your call. # CLASS: player
+
+- Nah, this is gonna be a doddle.
+
+~ temp drugs = 0
+
+{ stressCheck("+", -> firstStress, stress) } -> next
+
+- (firstStress)
+
+* { Sociology >= 60 } Benton, the fear you feel now is a weapon. # CLASS: player
+
+    You are dancing with death. # CLASS: player
+    
+    But it is not a dance you're unfamiliar with. # CLASS: player
+    
+    We all dance it, every day. # CLASS: player
+    
+    So face it and own it. # CLASS: player
+    
+    Control yourself and you control how this moment changes you. # CLASS: player
+
+    Zen. # wait
+
+    { stressCheck("-", -> preb, stress) }
+        -> next
+    
+
+* { Medicine >= 60 } << Recommend benzodiazepine gel infusion >> # CLASS: player
+
+    << Please take more care with my patient - Dr. Estévez >>
+    
+    ~ drugs++
+
+    { stressCheck("-", -> preb, stress) }
+        -> next
+
+* Yeah, you got this. # CLASS: player
+
+* You scared? # CLASS: player
+    
+    Not as scared as you.
+    
+    { stressCheck("+", -> preb, stress) }
+        -> next
+
+- (preb)
+
+~ jupiter_flyby_status++
+
+<< Jupiter flyby status : { jupiter_flyby_status_color } : { jupiter_flyby_status } >>
+
+* { Engineering + Medicine >= 30 }We're ready for insertion, { jupiter_flyby_status } is starting. # CLASS: player
+
+    You don't have to act like ground control.  I've got all those eggheads feeding me direct.
+
+* Looks like we're ready? # CLASS: player
+
+    Yah.  Been ready for a while.  It's all gonna go smooth.
+    
+* You ready? # CLASS: player
+
+    Yah.  Been ready for a while.  It's all gonna go smooth.
+    
+- Just talk to me, k?
+
+OK. Well. # CLASS: player
+
+- (talk2B)
+
+* How's the view? # CLASS: player
+
+    { stress > elevated:
+    
+        Fine I guess.
+        
+        The gel doesn't help.
+    
+    - else:
+    
+        Magnificent.
+        
+    }
+    
+    Didn't you have a porthole put in specifically for this moment? # CLASS: player
+    
+    Yeah.  At great expense.  But wasn't gonna pass seeing this with my own eyes.
+    
+    You've seen the H0L0 mods I'm sure, swooped around it in VR.
+    
+    { stress > elevated:
+    
+        Guess I thought seeing it in person was going to have more impact.
+        
+    - else:
+    
+        Doesn't quite compare to the real thing.
+        
+    }
+    
+    * * Well, paint me a picture. # CLASS: player
+    
+    
+    * * [Something to remember.]  That's gonna be something to remember for a long time. # CLASS: player
+    
+        Until my dying day.
+        
+        Which might be today.
+    
+        * * * No, not today! # CLASS: player
+        
+        * * * Pessimist. # CLASS: player
+        
+            Not at all.  Just facing the possibility.
+        
+        * * * We can only hope. # CLASS: player
+            
+            Thanks, { pronouner("choi","chai","chen") }.
+            
+            { stressCheck("+", -> pic, stress) }
+                -> next
+            
+    - - (pic)
+    
+    My viz is scummed over with green, but I can still see Marduk hanging over me like<>
+    
+        {
+            - stress > elevated:
+        
+                <> an angry god.
+                
+            - relationship == "close":
+            
+                <> a tormented lover.
+            
+            - else:
+        
+                <>... I don't know.  It's stunning.  You can't metaphor this sot.
+        }
+        
+        There's an elegance to the layered clouds, the roiling dance of gases stretched across an immense surface.
+        
+        You ever wondered what they mean?
+        
+        The clouds of Jupiter? # CLASS: player
+        
+        * * * [They mean what you want.]I think they can mean a whole lot of things to a whole lot of people. # CLASS: player
+        
+        * * * They don't _mean_ anything.[]  It's physics begetting chemistry stirred by time. # CLASS: player
+        
+        - - - But see the patterns?
+        
+        Those layers, lined up, clouds swirls repeating like morse code across the exosphere.
+        
+        Marduk speaks.
+        
+        * * * It is very pretty. # CLASS: player
+        
+            Gods aren't pretty.  They're terrifying.
+        
+        * * * What does it say? # CLASS: player
+        
+            # wait
+            
+            # wait
+            
+            # wait
+            
+            Benton? # CLASS: player
+            𒀭𒀫𒌓
+            
+            What? # CLASS: player
+        
+            When addressing the bull calf of the sun god Utu you use his tongue.  You speak to gods as they would be spoken to.  You offer up to them and they take what they want.
+            
+            They always take!
+        
+            { stressCheck("+", -> calmdown, stress) }
+                -> next
+                
+            - - - - (calmdown)
+            
+            * * * * Benton, you okay? # CLASS: player
+            
+            * * * * Take a pill. # CLASS: player
+            
+            * * * * { Sociology >= 60 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
+                
+                Sorry. # wait
+                
+                { stressCheck("-", -> donemarduk, stress) }
+                    -> next
+    
+
+            * * * * { Medicine >= 60 } << Benzodiazepine gel infusion >> # CLASS: player
+
+                    << We should not overdo infusions - Dr. Estévez >>
+                    
+                    ~ drugs++
+
+                    { stressCheck("-", -> donemarduk, stress) }
+                        -> next
+        
+        * * * { Sociology + Medicine >= 30 } It's only natural to see patterns, B.[]  We see the faces of gods in random patterns because we're designed to. # CLASS: player
+        
+            Hear ya.  Kinda bizarro to see it, to feel it this close.
+            
+                { stressCheck("-", -> donemarduk, stress) }
+                    -> next
+                    
+        * * * { Astronomy >= 30 } Those patterns are gas[.], zonal atmospheric flows raising and lowering material from deeper in the planet. # CLASS: player
+        
+            Magnificent.
+            
+                { stressCheck("-", -> donemarduk, stress) }
+                    -> next
+            
+        - - - (donemarduk)    
+        
+        I guess I get carried away.    
+
+* { lucas_02.lucas_analysis } Lucas seems a bit stressed about your sitch. # CLASS: player
+
+    ¡sigh!
+    
+    That man's never not gonna be stressed.
+    
+    * * But you trust him? # CLASS: player
+    
+        Yah.  <> -> epix
+    
+    * * Still think he was the right choice? # CLASS: player
+    
+        - - - (epix)He and I have been through some epics.
+        
+        ~ temp subject = "I was"
+        
+        * * * Do tell. # CLASS: player
+        
+            -> met_him
+        
+        * * * Sure. # CLASS: player
+        
+            No really.
+            
+            - - - - (met_him)Met in the Himalaya in '{ (date_year - 7) mod 2000 }, ended up doing the 7SUMMITS circuit together that season.  Wicked hard climber and we had some hard days together.
+            
+            Went really sideways in Cape Town.
+            
+            ~ subject = "He was"
+            
+        * * * { relationship == "epic" } As crazy as Cape Town? # CLASS: player
+        
+            Hah.  Nah.
+        
+            ~ subject = "You were"
+        
+        - - - High summer.  Sweltering.  Taking a stroll through Goliath terr coz we really wanted to play on the Jonkershoek.  Shoulda known it would go sideways.
+        
+        { subject } pretty chill about it IIRC.  Coulda been locked up, but kept walkin' and whistlin'
+        
+        Still remember the look on those guards faces when they caught us on the ledge.  { subject } quick to <>
+        
+        {
+            - career == "an international spy" && subject == "You were":
+            
+                <>make friends.  You could always do that in the most unlikely places.
+                
+                I'm friendly.  # CLASS: player
+                
+                Or... convincing.
+                
+                A pity they caught me trying to jam their network.
+                
+                That jeep<>
+        
+            - career == "a hacker" && subject == "You were":
+            
+                <>spook their local comm net.  And quiet about it too.
+                
+                Didn't stop them turning their sidearms our way.
+                
+                The jeep you stole<> # CLASS: player
+                
+            - career == "a flight engineer" && subject == "You were":
+            
+                <>pull the cord on the glider and dive.  We<>
+                
+            - career == "a doctor" || subject == "He was":
+            
+                <>patch me up after we<>
+            
+            - else:
+            
+                try and explain why we were there, but they didn't seem pleased.
+                
+                Robot sentries don't feel "pleased." # CLASS: player
+                
+                Still, felt good to take off in the BMW, even if it<>
+        
+        }
+        
+         <> took a thrashing on the way down the mountain!
+         
+         And all I wanted was to free solo Reverence.
+         
+        - - -
+        
+        * * * Never doubted your sense of adventure. # CLASS: player
+        
+            🤷
+        
+        * * * Taking risks happens a lot when you're around. # CLASS: player
+        
+            Comes with the terr.
+        
+        * * * Good at putting others in harms way[.] aren't you? # CLASS: player
+        
+            I play with those who know the risk of playing with me. # wait
+        
+            { stressCheck("+", -> afterctown, stress) }
+                -> next
+                
+        - - - (afterctown)
+        
+        { jupiter_flyby_status } ends in 3. # wait
+        
+        2. # wait
+        
+        1. # wait
+    
+    * * { Medicine >= 60 } Not sure he was cut out for interplanetary medicine.[] I think the team is holding him up, not the other way around. # CLASS: player
+    
+        Sot, { name }, stop shading my CMO!
+        
+        * * * ¡pax![]  Just an opinion. # CLASS: player
+        
+        * * * You want me to give it to you straight?[]  Well, this is straight.  Your CMO is outta his league. # CLASS: player
+        
+            I don't think he can give you a straight answer coz he doesn't know what the straight answer is. # CLASS: player
+            
+            Leave it!
+        
+            { stressCheck("+", -> cmo_sucks, stress) }
+                    -> next
+            
+            - - - - (cmo_sucks)
+
+            * * * * { Medicine >= 60 } << Benzodiazepine >> # CLASS: player
+
+                    << Benton is already overmedicated, careful with infusion requests - Dr. Estévez >>
+                    
+                    ~ drugs++
+
+                    { stressCheck("-", -> lucas_med_opinion, stress) }
+                        -> next
+                        
+            * * * * << wait >>
+            
+        - - - (lucas_med_opinion)
+        
+        No time to fight over Lucas now.
+        
+        { jupiter_flyby_status } ends in 3. # wait
+        
+        2. # wait
+        
+        1. # wait
+    
+    * * Got a massive ramrod up his @. # CLASS: player
+    
+        For sot's sake.  Talk about something else.
+        
+        { stressCheck("+", -> donetalking, stress) }
+                        -> next
+
+* { junia_02 } Junia seems to think highly of me. # CLASS: player
+
+    Knew she would.  You always sell YOU short.
+    
+    * * Appreciate the confidence. # CLASS: player
+    
+        -> junia_free
+    
+    * * Are you sure she's looking out for you? # CLASS: player
+    
+        For me?  Nah.  But for Nth Horizon, absolutely.
+    
+    * * { junia_02.junia_avarice } Seemed like she thought I could make out on this gig[.] even if you don't come back. # CLASS: player
+    
+        # wait
+    
+    - - (blame_junia)
+    
+    * * I trust her[.] to run the business.  Just not sure that means keeping you safe. # CLASS: player
+    
+        TBH I wouldn't expect anything less.
+        
+        I took this risk because for me it can be about more than Nth Horizon.  It can be about the edge, about pushing myself.
+        
+        I partnered with her because she will do what it takes to take Nth Horizon all the way.
+        
+        -> junia_free
+    
+    * * I don't trust her.[]  Too much smile for a shark. # CLASS: player
+    
+    * * { Business + Sociology >= 60 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away.
+    
+    - - I can't sit around mistrusting my closest confidants.
+    
+    You, Lucas, Junia.  Get it together.  I'm not your sotting mamma!
+    
+    { stressCheck("+", -> junia_free, stress) }
+        -> next
+    
+    - - (junia_free)
+
+    Another {~kick|boost|shot} hitting in 5.
+    
+    Here it comes. # wait
+    
+    And... # wait
+    
+    any moment now # wait
+
+* { woodpecker_01 } So I met this woodpecker... # CLASS: player
+
+    And here I thought I was the one seeing things.
+    
+    * * You wanted a distraction[!], not reality! # CLASS: player
+    
+        I can watch cartoons all day.  Talk to me about you!
+        
+        * * * I'm peachy. # CLASS: player
+        
+        * * * Null to say. # CLASS: player
+        
+        * * * Well, I might have let Goliath in the door. # CLASS: player
+        
+            -> t_shut
+            
+        - - -  Feels like you're holding out on me.
+        
+        But I appreciate that you're here for me.
+        
+        Keeping me a bit distracted.
+        
+        While my entire life swings wildly around the orbit of a gas giant.
+        
+        Speaking of which...
+        
+    
+    * * Peck, peck, peck. Sound familiar?[]  Anyone you know use that handle? # CLASS: player
+        
+        Woodpecker?
+        
+        No, I don't think so.
+        
+        * * * Might be an obtuse reference. # CLASS: player
+        
+        * * * Anyone who'd want the inside scoop? # CLASS: player
+        
+            Plenty.
+        
+        * * * Could be a Goliath crony. # CLASS: player
+        
+            -> t_shut    
+        
+        - - -
+        {
+        
+            - Sociology + Business >= 60 && not knows_kim:
+            
+                Someone insistent, like a pecking woodpecker? # CLASS: player
+                
+                Hmmmm.
+                
+                There was that newsDropper.
+                
+                What was her name.  Chloé?  Kelsey?
+                
+                Nah, Kim.  Kim Speight.
+                
+                She would not stop trying to find a way in, even after multiple blocks.
+                
+                ~ knows_kim = true
+                
+                -> k_know
+            
+            - knows_kim:
+            
+                I think it's the journalist.  Kim Speight. # CLASS: player
+                
+                -> k_know
+            
+            - else: 
+            
+                Sorry.
+                
+                Hold up, { status } is about to switch off.
+                
+                -> donetalking
+        
+        }
+        
+        - - - (k_know)
+        
+        She's been dropping articles about Nth Horizon.
+        
+        * * * Sounds about right. # CLASS: player
+        
+            Keep her at an AU's length, yah?
+            
+            Seems like she'd make a mess.
+        
+            -> donetalking
+        
+        * * * Maybe. # CLASS: player
+        
+            Don't wanna invoke dark magic on ya, but remember your NDA when talking to newsDroppers, yah?
+        
+            -> donetalking
+        
+        * * * Cool.  Well she already hacked us. # CLASS: player
+        
+            -> t_shut
+    
+    * * they/she/he hacked your secure comms net. # CLASS: player
+    
+        ¿srs?
+        
+        - - - (t_shut) Sot!  Has TARC shut it down?
+        
+        * * * It's handled, null sweat. # CLASS: player
+        
+            I can't sweat w/o my glands so count yourself lucky.
+            
+            Coming up on trigger.  One nano.
+            
+            -> donetalking
+            
+        * * * Dunno. # CLASS: player
+        
+            Well.  Can you do something about it?  Take my company's security seriously!
+            
+            { stressCheck("+", -> b_woodpecked, stress) }
+                        -> next
+            
+        * * * { tarc_report_woodpecker.how }He's just watching.[]  Probably working with them. # CLASS: player
+        
+            What?  This is nutso.
+            
+            Why are you telling me this now?
+            
+            { stressCheck("+", -> b_woodpecked, stress) }
+                        -> next
+    
+        - - - (b_woodpecked)
+        
+        I'm throwing myself at giants here and you're dropping the ball on basic security?
+        
+        * * * I have my hands full with other things, thx.
+        
+        * * * { Technology + Security >= 60 } B, it's handled.[]  We'll honeypot this little troublemaker.  Just trying to keep you informed.
+        
+            Bad timing, { pronouner("choi","chai","chen") }.
+        
+        * * * { Sociology >= 60 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things.
+        
+            { stressCheck("-", -> dont_talk_hacks, stress) }
+                -> next
+            
+
+        * * *  { Medicine >= 60 } << Go for benzodiazepine infusion >> # CLASS: player
+
+            << Infusions should be used sparingly - Dr. Estévez >>
+                
+            ~ drugs++
+
+            { stressCheck("-", -> dont_talk_hacks, stress) }
+                -> next
+            
+        - - - (dont_talk_hacks)
+        
+        Nevermind.  Gotta prep for transition.  Down shift on { jupiter_flyby_status } in 3.
+        
+        2. # wait
+        
+        1. # wait
+
+* We need to talk about this slingshot.[]  You've gotta stay focused! # CLASS: player
+
+    Always so serious.
+    
+    * * { Astronomy >= 30 } Watch your trajectory.[]  If a gravitational wave destabilizes you in { jupiter_flyby_status } you'll be flung off course from Pluto. # CLASS: player
+    
+        Planet X would still take you years to reach before you could even _try_ a course correct. # CLASS: player
+    
+    * * { Business >= 30 }  [This could destroy your startCorp.]If this fails, I don't know if there will be an Nth Horizon startCorp to come back to. # CLASS: player
+    
+    * * { Engineering >= 30 } Infrastructure stress is [too high!]at 102% of acceptable limits.  Don't push it too hard! # CLASS: player
+    
+    * * { Medicine >= 30 }  Your thyroid reg is out of balance.[]  Use those exercises we talked about to keep it centered, or you'll suffer haemorragic decomposition in your bio-hacks! # CLASS: player
+    
+    * * { Security >= 30 } If anyone's trying to sabotage your trip, now's their best moment.[]  Keep an eye on those scanners coz you'll see it before we do. # CLASS: player
+    
+    * * { Sociology >= 30 }  Just want you to be mindful.[]  That's the only way to break through the _bad_ stress and find the eustress in these moments. # CLASS: player
+    
+        ~stress--
+    
+    * * { Technology >= 30 } I don't wanna overload your comm buffer[.] with meaningless chatter.  You're on the edge here, choi. # CLASS: player
+    
+    * * Too serious for you? # CLASS: player
+    
+        always\\\\never
+        
+        Just need to apply that seriousness... thoughtfully, { pronouner("choi","chai","chen") }.
+        
+        -> aftertrusted
+    
+    - - Trust me.  I know.
+    
+        { stressCheck("+", -> trusted, stress) }
+            -> next
+                        
+    - - (trusted)
+    
+    Look, this ain't your first rodeo with me.  Keep level, k?
+        
+        * * * Trying. # CLASS: player
+        
+        * * * { Sociology >= 60 } Of course.[]  And that's what I'm doing.  Keep you focused on the here and now.  Accept the risks and stare them in the eyes. # CLASS: player
+        
+            True.
+        
+            { stressCheck("-", -> aftertrusted, stress) }
+                -> next
+
+        * * *  { Medicine >= 60 } << Benzodiazepine++ >> # CLASS: player
+
+            << Remember there's a limited supply on that ship - Dr. Estévez >>
+                
+            ~ drugs++
+
+            { stressCheck("-", -> aftertrusted, stress) }
+                -> next
+            
+        - - - (aftertrusted)
+        
+        Hold up. # wait
+        
+        Here comes another kick...
+        
+* Whatcha thinking way out there? # CLASS: player
+
+    - - (whatcha_thinkin)
+    
+    Staring at the red eye of a god?
+    
+    Skating the edge of its wrath?
+    
+    Watching it's lovers dance around it?
+    
+    Sharing the dance for just a moment?
+    
+    I'm thinking I'm a fool.
+    
+    * * Who's the more fool?[]  The fool or the sci-fi nerd who quotes him? # CLASS: player
+    
+    * * Maybe a little foolish[.], but aren't we all? # CLASS: player
+    
+    * * I was thinking "sotting fool[."]" for good measure. # CLASS: player
+    
+    - - Heh.
+    
+    I can see Callisto.  Just a speck riding ahead of me, circling the patriarch who seduced her.  The besmirched virgin turned fierce mamma bear.
+    
+    VAR love = 0
+    VAR money = 0
+
+    Recall Jemimah?
+    
+    * * That girl in Stockholm? # CLASS: player
+    
+        Ja.
+        
+        I don't think she was a virgin, but she was a worshipper of the wild.
+        
+        - - - (topless)
+        
+        * * * She was a free spirit. # CLASS: player
+        
+            Did you... ?
+            
+            * * * * Yeah.[]  We dated for a while. # CLASS: player
+            
+                * * * * * I was inspired by her purpose.[]  By the future she still fought for.  Still fights for. # CLASS: player
+
+                    Not all about the corpRace.
+                    
+                    True. # CLASS: player
+                    
+                    ~ love++
+                    ~ money--
+            
+                * * * * * But I could only see the past in wild places[.], not the future. # CLASS: player
+                
+                    Being { career } was priority?
+                    
+                    Yeah. # CLASS: player
+                    
+                    ~ love--
+                    ~ money++
+            
+            * * * * No.[] She only had eyes for you. # CLASS: player
+                
+                -> disappeared
+        
+        * * * I had to pry you apart. # CLASS: player
+        
+            - - - - (disappeared)I never knew why she disappeared.
+            
+            Never heard another word.
+            
+            * * * * I have a confession. # CLASS: player
+            
+                Is now a good time?
+                
+                No.  But you brought her up. # CLASS: player
+                
+                Ok.
+                
+                - - - - - (confession)
+                
+                * * * * * She told me about the two of you.  Before Stockholm. # CLASS: player
+                
+                    { relationship == "close":
+                    
+                        Oh.
+                    
+                        -> confession
+                        
+                    - else:
+                        
+                        We dated.  It wasn't a secret.
+                        
+                    }
+                    
+                    About the cabin. # CLASS: player
+                    
+                    Oh.  Sot.
+                    
+                    -> tabloids
+                
+                * * * * * (charpreg)I was pregnant. # CLASS: player
+                
+                * * * * * (jempreg)Jem was pregnant. # CLASS: player
+                
+                * * * * * { career == "an international spy" } Jem was a target. # CLASS: player
+                
+                    What?
+                    
+                    You know my work was serious business.  This time it involved her. # CLASS: player
+                    
+                    Holy sot.  What did you do with her!?!
+                    
+                    { stressCheck("+", -> spystory, stress) }
+                        -> next
+                    
+                    - - - - - - (spystory)
+                    
+                    * * * * * * { violence > 0 } It was quick.[]  I can't say it was painless. # CLASS: player
+                    
+                        ~ love--
+                        ~ money++
+                        ~ violence++
+                    
+                        { stressCheck("+", -> spyend, stress) }
+                            -> next
+                    
+                    * * * * * * { generosity > 0 } I did my job, then I spirited her away[.]  Hid her at my place in Helsinki. # CLASS: player
+                    
+                        I'm no monster. # CLASS: player
+                        
+                        ~ love++
+                        ~ money--
+                    
+                    * * * * * * { Technology + Security >= 60 } She had intel on the EcoWitch movement.[]  I was well paid to relieve her of it.
+                    
+                        ~ love--
+                        ~ money++
+                        
+                    * * * * * * ¡LafLaf! # CLASS: player
+                    
+                        Nothing you fool! # CLASS: player
+                        
+                        I barely even remember her, you're the one who's daydreaming of the past! # CLASS: player
+                    
+                    * * * * * * I can't tell you. # CLASS: player
+                    
+                    - - - - - - (spyend)I can't...
+                    
+                    This topic is done.
+                    
+                    # wait
+                    
+                    # wait
+                    
+                    # wait
+                    
+                    # wait
+                    
+                    # wait
+                    
+                    Commencing engine shift.
+                    
+                    -> donetalking
+                    
+                - - - - - (pregnancies)
+                
+                * * * * * { jempreg } I was the father. # CLASS: player
+                
+                * * * * * You were the father. # CLASS: player
+                
+                * * * * * { charpreg } Jem spliced with me. # CLASS: player
+                
+                * * * * * { charpreg } I was her surrogate. # CLASS: player
+                
+                - - - - - This is nutso.  It's been, what, 8 years?
+                    
+            * * * * You had a lot of partners. # CLASS: player
+            
+                True.
+                
+                I'm pretty upfront about it.
+                
+                * * * * * This one was a problem. # CLASS: player
+                
+                    -> wallet
+                    
+                * * * * * This one had... a complication.
+                
+                    -> confession
+            
+            * * * * [<< wait >>] # CLASS: player
+        
+        * * * She was a worshipper of your wallet. # CLASS: player
+        
+            - - - - (wallet)
+            
+            Nah.
+            
+            Yah. # CLASS: player
+            
+            * * * * You're not that hot, choi. # CLASS: player
+            
+                ¡LafLaf!
+                
+                Laugh it up.  She almost went public. # CLASS: player
+            
+            * * * * She had H0L0s. # CLASS: player
+            
+            * * * * { Technology + Security >= 60 }She almost took down your SecNet. # CLASS: player
+        
+        - - - (tabloids)
+        
+        * * * I had to keep you out of the tabloids. # CLASS: player
+        
+            ~ love++
+            ~ money--
+        
+        * * * I made a tidy sum from Long Night keeping it quiet. # CLASS: player
+        
+            ~ love--
+            ~ money++
+        
+        * * * Sometimes you're cute[.] when you miss the obivous. # CLASS: player
+        
+        * * * Sometimes you're dense.[]  The whole episode just passed you by as you played with another startCorp. # CLASS: player
+        
+        - - - This doesn't make sense.
+        
+        I don't know what you're playing at, but I didn't bring up Jem for you to dragDown.
+        
+        Next burn is up. # wait
+        
+        We'll talk about this later...
+    
+    * * { relationship == "close" } Why bring her up? # CLASS: player
+    
+        One of the nymphs that got away.
+        
+        # wait
+        
+        # wait
+        
+        * * * So?
+        
+            -> disappeared
+        
+        * * * [<< wait >>]
+        
+            -> disappeared
+    
+    * * { relationship == "puzzle" } UzinCode champion?[]  We wanted to bodysnatch her from Goliath. # CLASS: player
+    
+        Yah.  You laid quite the honeypot.
+        
+            * * * Always like headhunting[.] talent from the megas. # CLASS: player
+            
+                ~ love++
+                ~ money--
+            
+            * * * I was smitten.[]  She was a Wiz and a redhead! # CLASS: player
+            
+                ~ love++
+                ~ money--
+                
+    
+    * * { relationship == "epic" } She had some serious issues. # CLASS: player
+    
+        Almost took you for everything you were worth. # CLASS: player
+        
+        -> wallet
+    
+    * * What does that have to do with Callisto? # CLASS: player
+    
+        Just thinking about the ones that got away.
+        
+        Or the ones I got away from.
+        
+        -> topless
+    
+    - - Retros are clearing.  Won't be long.
+    
+- (donetalking)
+
+~ jupiter_flyby_status++
+
+// approach, pre_burn, entry_burn, perijove, exit_burn, escape
+
+// jupiter_flyby_status_color =
+
+// green, orange, red
+
+<< Jupiter flyby status: { jupiter_flyby_status_color } : { jupiter_flyby_status } >>
+
+{ jupiter_flyby_status >= apojove && whatcha_thinkin:
+
+    -> exited
+
+- else:
+
+    << engines firing >>
+
+    {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.} # wait
+    
+    {~Distract me or something, will ya?|Talk to me { pronouner("choi","chai","chen") }.|What's on **your** mind?|Could do with a pep talk, huh?|Why so serious?} # wait
+
+    -> talk2B
+
+}
+
+- (exited)
+
+<< final burn >>
+
+<< velocity: green >>
+
+<< vector: green >>
+
+<< success! >>
+
+<< powering down Jupiter flyby program >>
+
+* Benton? # CLASS: player
+
+* [<< wait >>]
+
+- That was {~rough|epic|insane|tough}.
+
+I'm gonna sleep for a year now.
+
+* You do that. # CLASS: player
+
+    Thx.
+
+* You need anything else? # CLASS: player
+
+    No.
+    
+    Not right now.
+    
+* You do that. # CLASS: player
+
+- Talk later.
+
++ [<< Close Chat >>] -> menu
+
+- (popped)
+
+<< Benton has disconnected >>
+
+* Benton? # CLASS: player
+
+* What the sot? # CLASS: player
+
+* { Technology + Security + Engineering + Astronomy >= 60 } << nav report >> # CLASS: player
+
+    << nominal >>
+    
+    << trajectory is green >>
+    
+    << velocity is green >>
+    
+    -> popped
+
+* { Medicine + Sociology + Security + Technology >= 60 } << pilot report >> # CLASS: player
+
+    << critical >>
+    
+    << stress regulation overloaded >>
+    
+    << patient is unresponsive >>
+
+- (wait_for_b)
+
++ Benton!  Answer me! -> wait_for_b
+
++ [<< wait >>] -> wait_for_b
+
++ [<< Close Chat >>] -> menu
+
+=== function stressCheck(direction, nextstep, ref stressList) === 
+
+~ temp has = ""
+
+~ next = nextstep
+
+{
+    - direction == "+":
+        
+        { stressList == critical:
+        
+            ~ has = "popped"
+        
+        - else:
+        
+            ~ stressList++
+            
+            ~ has = "increased"   
+        
+        }
+    
+    - direction == "-":
+    
+        { stressList == nominal:
+        
+            ~ has = "nominal"
+        
+        - else:
+        
+            ~ stressList--
+            
+            ~ has = "decreased"   
+        
+        }
+    
+}
+
+{
+    - has == "nominal":
+        
+        << stress is nominal >>
+        
+        ~ return
+
+    - has == "popped":
+
+        ~ stressList = critical
+        
+        << stress level has exceeded safety parameters >>
+        
+        ~ next = -> benton_05.popped
+        
+        ~ return
+
+    - else:
+    
+        << stress level has { has } to { stress } >>
+        
+        ~ return
+    
+}
+
+/* B getting bored, discusses personal history with P, flies by Jupiter
 
 TIME MOVES FORWARD
 
 Benton discusses the emptiness and how big it seems even when Jupiter is taking up 90% of his viewport as the gas giant gives him a gravity assist boost.  The omnipresent loneliness prompts him to remember when the PC previously abandoned [love] or [money] and what drove them to give something up that was important.  He rambles a little, but can be brought back to the majesty of the moment he's witnessing, something only the deep-space-jump-crews see with any regularity.  Soon he'll go even further than they do, and all on his own.
 
-He waxes poetic about the planet and the neverending dance of the spheres before ending the conversation abruptly.  Mission details will report a Goliath Deep Space Jumper burning on a similar trajectory.
+He waxes poetic about the planet and the neverending dance of the spheres before ending the conversation abruptly.  Mission details will report a Goliath Deep Space Jumper burning on a similar trajectory. */
 
-+ [Next] -> menu # CLASS: player
+TODO: Continue Benton
 
 === benton_06 ===
 
@@ -1710,4 +3184,4 @@ Hey, I'm pretty {&busy|tired|stressed|over it} right now.  Can it wait?
 
 - Thanks
 
-+ [Close Chat] -> menu
++ [<< Close Chat >>] -> menu
