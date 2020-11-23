@@ -207,21 +207,279 @@ I'll be around.
     -> menu
 
 === woodpecker_02 ===
-TODO: COMPILE: remove debugger tunnel
-/*-> debuggers ->*/
 
-TODO: NEXT
+LIST kim_knows = flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild
+
+VAR woodpeck_install = false
+
+~ temp facts_shared = 0
 
 # CLEAR
 
+Yo, you live?
+
+* I’m here. # CLASS: player
+
+* [<< wait >>] # CLASS: player
+
+* Sot off. # CLASS: player
+
+- Hey, we’re rocky.  I get it.  But we got some synergies, grok?
+
+* I’m waiting for proof. # CLASS: player
+
+* [<< wait >>] # CLASS: player
+
+* No, we don’t. # CLASS: player
+
+- Look, I got something for ya.
+
+Youz gonna wanna hear this.
+
+* What? # CLASS: player
+
+- Nah, we don’t just spill.  We trade, yah?
+
+I need some juice to feed the newsDrops.  Especially given what day it is.
+
+Howz about we drop each other datapoints, one at a time.  Keep it fair.
+
+* Ok.  I'm game. # CLASS: player
+
+* I’m not going to be a part of this. # CLASS: player
+
+    -> no_deal
+
+* { Sociology >= 30 } How can I trust you? # CLASS: player
+
+	Trust gonna have to be mutual for us to help each other out.
+	
+	You drip me some juice and I repay.
+	
+* { Business >= 30 } I’m under NDA. # CLASS: player
+
+	Awwww, you never broken a promise before?
+	
+* { Technology + Security >= 60 } If we do this, we do it on my terms. # CLASS: player
+
+	- - (p_tech)Info density weighted tunnel. # CLASS: player
+	
+-
+
+{ p_tech:
+
+    # CLASS: player
+    
+- else: 
+
+	Gonna give you the end of an info density weighted tunnel.
+    
+}
+We each drop a fact in our end of the tunnel, the data’s weighted by an algo that judges complexity.  Assuming balance we get to read each other’s data.  If we're both happy then we can feed the next round.
+
+{ p_tech:
+
+    Deal.
+ 
+    -> dealing
+    
+}
+
+* Deal. # CLASS: player
+
+    -> dealing
+    
+* No deal. # CLASS: player
+
+    -> no_deal 
+
+- (dealing)
+
+<< opening weighted tunnel >>
+
+<< deposit your data point >>
+
+* [Flyby was a success.]  Lowell's Horizon has successfuly completed it's perijove burn maneuver with the craft and pilot surviving and now enroute to Pluto with the gravity assist of Jupiter.  # CLASS: player
+
+    ~ kim_knows += (flyby_success)
+
+* [Benton might be losing his mind.]  Saari has been isolated in the Lowell's Horizon for over 6 months, and there are indicators that he's losing his grip.  He will diverge onto rambling tangents or discuss obtuse mythiological subjects while he should be addressing his immediate mission objectives and requirements. # CLASS: player
+
+    ~ kim_knows += (benton_crazy)
+
+* [Goliath might be trying to sabotage or spy on the project.]  We have evidence that a Goliath Deep Space Jumped was on an intercept trajectory with the Lowell's Horizon.  Since they didn't drive it into the gravity well we have to assume they're attempting espionage on the project. # CLASS: player
+
+    ~ kim_knows += (goliath_dsj)
+
+* [CMO is recommending turnaround, but has been overruled.]  Dr. Lucas Estévez, Chief Medical Officer, has serious concerns about Saari's physiological and mental health given the strain he is under and the lack of training or acclimitization the timeline allowed for.  He's suggesting Saari turn back, but so far has been overruled. # CLASS: player
+
+    ~ kim_knows += (cmo_overrule)
+
++ \ (Lie) # CLASS: player
+
+    -> fake_deets
+
++ { Technology + Security >= 60 }[<< inject false data >>] # CLASS: player
+
+    -> fake_deets
+
++ That's all I got. # CLASS: player
+
+    -> finish_trade
+
+- (deposited)
+
+<< processing >>
+
+{ wait(3) }
+
+<< data balance algo passed >>
+
+<< sharing data >>
+
+// Kim’s facts
+{ once:
+
+    - Here's what I know.  There's a shadowy history to Junia Masangkay long before Nth Horizon, and she gotta have leverage on Saari.
+    
+    Don't get me wrong.  She's a wicked good bizhead, but Benton is no slouch, _shouldn't_ need her.  Too much of the reigns are in her hands.
+    
+        And that's not all.
+
+    - Junia’s last corp, Entropic Galactic, was surreptitiously taken by Goliath through shell companies.  The startCorp almost went public, then sold out privately, splitting holdings to a few miniCorps.
+    
+    There was some anti-Goliath sentiment at Entropic, so big G had a hard time swooping in.  But in the long run, looks like all the tech ended up in Goliath's hands anyway.
+    
+    Coincidence?
+
+    - A lot of the money in Nth Horizon is shadow, which isn't suprising given Saari's flair for drama.  But there are a few transactions I've traced that _look_ like they come from Big G holders.  Meaning Goliath _already_ has some claws in the Nth pie.
+    
+    Need some more data points to prove it, but itza strong hunch.
+
+    - The exit strategy for Nth Horizon is shakey.  Saari & Masangkay have made some serious obligations to serious people.  They gotta hit benchmarks, show fiscal responsibility, and if they blow those then Nth gets carved up for scraps.
+    
+    But even if they _don't_ blow them, the question remains what the exit is.  They very publically have said "No Goliath," but what else is there?  Can they really turn this startCorp into a mega overnight and challenge Big G?  Not likely.
+
+}
+
+~ facts_shared++
+
++ [<< Continue >>] # CLASS: player
+
++ [<< Exit >>] # CLASS: player
+
+    -> finish_trade
+
+-
+{ facts_shared > 3:
+
+    -> finish_trade
+
+- else: 
+
+    -> dealing
+    
+}
+
+- (finish_trade)
+
+Well then.  That wasn't so hard, was it?
+
+{ facts_shared < 4:
+
+That's not all I got to tell ya.  But we can keep a few teases for laterz.
+
+}
+
+* These details are... interesting. # CLASS: player
+
+* You can't expect me to just take your word[!] on these stories! # CLASS: player
+
+* You're full of sot. # CLASS: player
+
+- Hey, at this point we gotta have some mutual trust.
+
+And I don't have publishable data yet.  Leads.
+
+That's where you come in.
+
+* I've already helped you. # CLASS: player
+
+* You want more from me? # CLASS: player
+
+* I'm out. # CLASS: player
+
+- I want these leads to turn into facts.  So do you.  If they're RL then it's gonna make things sticky for your choi out there in space.
+
+To get hard data I need a favor.
+
+I need you to install a little friend of mine on your comms there, then get Junia to follow one of the prompts.  You do that, I get behind her curtain and we start to see the truth.
+
+You game?
+
+* << install woodpeck >> # CLASS: player
+
+    Nice.  You won't regret.  Promise.
+    
+    ~ woodpeck_install = true
+
+* I need to think about this.
+
+    Your call.  I appreciate all you've done for me so far. 😉
+    
+    You come let me know when you've changed your mind.
+
+* No way.
+
+    -> no_deal
+
+- Catch ya later!
+
++ [<< Close chat >>] # CLASS: player
+
+    -> menu
+
+= no_deal
+
+Your call, { pronouner("choi","chai","chen") }, but youz missing out!
+
++ [<< Close chat >>] # CLASS: player
+
+    -> menu
+
+= fake_deets
+
+{ stopping:
+    
+    - Nth Horizon has secured funding to last through the Moonshot mission and beyond.  Goliath can't touch us now! # CLASS: player
+    
+        ~ kim_knows += (fake_nth_funded)
+    
+    - Benton broke the speed record to Jupiter! # CLASS: player
+    
+        ~ kim_knows += (fake_speed_record)
+    
+    - I've been promoted to Chief Morale Officer and, as my first decree, have instituted limited PTO to ensure all Nth Horizon employees actually take time off.  # CLASS: player
+    
+        ~ kim_knows += (fake_cmo)
+        
+    - Junia and Benton have an illicit love child who's in Lowell's Horizon with its father! # CLASS: player
+    
+        ~ kim_knows += (fake_lovechild)
+    
+    - That's all I got. # CLASS: player
+    
+}
+
+-> deposited
+
+/*
 K has juicy deets on B and J, but wants the P to help her hack J
 
 Woodpecker reappears with some actual intel the PC may find useful.  She describes the history of both Benton and Junia, especially where Junia has wrested control from previous partners.  Yes, she's been very successful, but if you look closely she's also walked over more than a few graves to get there.  There's a disturbing hint that she might be talking to Goliath.
 
 Woodpecker can't prove that yet, but she could if the PC could get Junia to chase a lead and get phished.  Separate data points could be correlated with the COO's comm details to paint a bigger picture, and if she's just stupid enough there may be incriminating evidence in her chat history.
-
-+ [Next] -> menu
-
+*/
 === woodpecker_03 ===
 
 # CLEAR
@@ -246,10 +504,28 @@ Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if h
 
 # CLEAR
 
-Hei {pronouner("choi","chai","chen")}.  I'm lyin' low, so chat later, k?
+Hei {pronouner("choi","chai","chen")}.  <>
 
-+ K. # CLASS: player
+{ woodpecker_02 && woodpeck_install == false:
 
-- Cheers.
+    <> You wanna help me out with this install or not?
+    
+- else:
 
-+ [Close Chat] -> menu
+    I'm lyin' low, so chat later, k?
+
+}
+
+* << install woodpeck >> # CLASS: player
+
+    Nice.  You won't regret.  Promise.
+    
+    ~ woodpeck_install = true
+    
+    * * [<< Close Chat >>]
+
+    -> menu
+
++ [<< Close Chat >>]
+
+    -> menu

@@ -69,6 +69,36 @@ VAR Nth_IT = 50
 // setup "hacked by woodpecker" state
 VAR woodhack = false
 
+// having a TODO makes it easy to jump here to turn on/off
+TODO: COMPILE: check debugger state
+
+// set variable as true if you want to debug
+VAR debugging = false
+
+// if ^ is true then turn on all the debugging things...
+{ debugging:
+    
+    <<< Entering debugging mode >>>
+    
+    // set the random seed for consistency
+    ~ SEED_RANDOM(235)
+    
+    // a function that sets the value of player skills / attributes
+    { skillDebug() }
+    
+    // a function that sets the value of variables
+    { stateDebug() }
+    
+    // a function that prints skills to the play window
+    { printSkills() }
+    
+    // redirect to the scene you're currently working on, or leave out to start from the beginning
+    -> tarc_02
+  
+    // also use debugging: wrapper elsewhere you want to have inky only choices or text
+    
+}
+
 // initial introduction and setup
 
 -> about -> setup -> menu

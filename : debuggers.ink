@@ -1,21 +1,19 @@
-=== debuggers ===
-
-TODO: COMPILE: remove debuggers when not needed
-//{skillDebug()}
-//{stateDebug()}
-
-->->
+// these utility functions are only used for debugging
 
 === function skillDebug() ===
 
-// bump all skills to test choices
-~ Astronomy = 100
-~ Business = 100
-~ Engineering = 100
-~ Medicine = 100
-~ Security = 100
-~ Sociology = 100
-~ Technology = 100
+{ debugging == true:
+
+    // bump all skills to test choices
+    ~ Astronomy = 100
+    ~ Business = 100
+    ~ Engineering = 100
+    ~ Medicine = 100
+    ~ Security = 100
+    ~ Sociology = 100
+    ~ Technology = 100
+
+}
 
 ~return
 
@@ -25,23 +23,32 @@ TODO: COMPILE: remove debuggers when not needed
 // doesn't always work as expected because choices made earlier in the game get out of whack if you adjust the state...
 // not 100% sure why... if I set this with a tunnel in the current scene, why would earlier choices get borked?
 
-~ name = "Peter"
-~ pronoun = "He/Him/His"
-~ career = "an astronomer"
-~ relationship = "epic"
+{ debugging == true:
+
+    ~ name = "Peter"
+    ~ pronoun = "He/Him/His"
+    ~ career = "an astronomer"
+    ~ relationship = "epic"
+
+}
 
 ~ return
 
 === function printSkills() ===
+{ debugging == true:
 
-Skills:
-    Astronomy: { Astronomy }
-    Business: { Business }
-    Engineering: { Engineering }
-    Medicine: { Medicine }
-    Security: { Security }
-    Sociology: { Sociology }
-    Technology: { Technology }
+Skills: <>
+<ul> <>
+<li>Astronomy:{Astronomy}</li> <>
+<li>Business:{Business}</li> <>
+<li>Engineering:{Engineering}</li> <>
+<li>Medicine:{Medicine}</li> <>
+<li>Security:{Security}</li> <>
+<li>Sociology:{Sociology}</li> <>
+<li>Technology:{Technology}</li> <>
+</ul>
+
+}
 
 ~ return
 
@@ -71,6 +78,11 @@ generosity
 
 /*
 woodhack
+
+kim_knows = flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild
+
+woodpeck_install
+
 */
 
 // relationship list for reference

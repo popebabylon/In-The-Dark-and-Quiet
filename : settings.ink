@@ -19,11 +19,16 @@ VAR pronoun = "?"
 // picture
 Select your identity for biometric validation. # CLEAR
 
-TODO: COMPILE: hide fake picture selection
 
-/*+ Select Picture
+{ debugging == true:
 
-    ~ picture = "Your Picture"*/
+    + Select Picture
+    
+        ~ picture = "Your Picture"
+        
+        -> pick_name
+
+}
 
 + <img src="img/p01.png" class="picture-lg">
 
@@ -64,7 +69,7 @@ TODO: COMPILE: hide fake picture selection
 
     ~ picture = "img/p08.png"
 
--
+- (pick_name)
 
 // name
 Your identity has been verified.  Manual verification of your name is required. # CLEAR
