@@ -175,68 +175,68 @@
 {
     - status == (Prep) && not tarc_01:
     
-        ~ news_button = "<span class='menu inactive'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu inactive'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> error
 
     - status == (Prep) && tarc_01 && not news_01:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_01
         
     - status == (Final_Prep) && not news_02:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_02
         
     - status == (Launch_Prep) && not news_03:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_03
         
     - status == (Launch) && not news_04 && team_launch:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_04
         
     - status == (Approaching_Jupiter) && not news_05 && woodpecker_01:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_05
     
     - status == (Enroute_to_Pluto) && not news_04 && benton_06:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_06
     
     - status == (Enroute_to_Pluto) && not news_07 && news_06:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_07
         
     - status == (Approaching_Pluto) && not news_08 && benton_08 && tarc_03 && junia_03 && lucas_03:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_08
         
     - status == (End) && not news_09 && not news_10:
     
-        ~ news_button = "<span class='menu active'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         TODO: need logic here deciding between 09 & 10 if he succeeds or fails
         ~ news_divert = -> news_09
     
     - else: 
     
-        ~ news_button = "<span class='menu inactive'><i class='material-icons md-18'>rss_feed</i>&nbspNews</span>"
+        ~ news_button = "<div class='menu inactive'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
         ~ news_divert = -> news_random
     
@@ -248,43 +248,43 @@
 
     - status == (Prep) && not tarc_01:
     
-        ~ team_button = "<span class='menu inactive'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu inactive'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> error
     
     - status == (Final_Prep) && not team_01 && benton_02:
     
-        ~ team_button = "<span class='menu active'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> team_01
     
     - status == (Launch) && not team_launch:
     
-        ~ team_button = "<span class='menu active'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> team_launch
 
     - status == (Jupiter_Flyby) && not team_02 && (benton_05.exited || benton_05.popped):
     
-        ~ team_button = "<span class='menu active'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> team_02
 
     - status == (Enroute_to_Pluto) && not team_03:
     
-        ~ team_button = "<span class='menu active'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> team_03
 
     - status == (Pluto_Flyby_Return) && not team_04:
     
-        ~ team_button = "<span class='menu active'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> team_04
         
     - else: 
     
-        ~ team_button = "<span class='menu inactive'><i class='material-icons md-18'>group</i>&nbspTeam</span>"
+        ~ team_button = "<div class='menu inactive'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
         ~ team_chat_divert = -> team_random
 
@@ -295,73 +295,73 @@
 {
     - status == (Prep) && not benton_01:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_01
 
     - status == (Prep) && benton_01.censored && not benton_01.pluto_pitch:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_01.pluto_pitch
         
     - status == (Final_Prep) && not benton_02:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_02
 
     - status == (Launch_Prep) && not benton_03:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_03
 
     - status == (Approaching_Jupiter) && not benton_04:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_04
 
     - status == (Jupiter_Flyby) && not benton_05:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_05
         
     - status == (Enroute_to_Pluto) && not benton_06 && not benton_07:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_06
         
     - status == (Enroute_to_Pluto) && benton_06 && not benton_07:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_07
         
     - status == (Approaching_Pluto) && not benton_08:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_08
         
     - status == (Final_Approach_to_Pluto) && not benton_09:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_09
         
     - status == (Pluto_Flyby_Return) && not benton_10:
     
-        ~ benton_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_10
 
     - else: 
     
-        ~ benton_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspBenton</span>"
+        ~ benton_button = "<div class='menu inactive'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_random
 
@@ -373,49 +373,49 @@
 
     - status == (Prep) && not tarc_01: 
     
-        ~ junia_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu inactive'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> error
 
     - status == (Prep) && not junia_01 && tarc_01: 
     
-        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_01
         
     - status == (Prep) && not junia_01.junia_intro && junia_01.early_exit:
 
-        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_01.junia_intro
 
     - status == (Approaching_Jupiter) && not junia_02: 
     
-        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_02
         
     - status == (Approaching_Jupiter) && not junia_02.junia_return && junia_02.junias_hanging: 
     
-        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_02.junia_return
         
     - status == (Approaching_Pluto) && not junia_03: 
     
-        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_03
         
     - status == (Final_Approach_to_Pluto) && not junia_04: 
     
-        ~ junia_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_04
         
     - else: 
     
-        ~ junia_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspJunia</span>"
+        ~ junia_button = "<div class='menu inactive'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_random
 
@@ -427,49 +427,49 @@
 
     - status == (Prep) && not tarc_01:
     
-        ~ lucas_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu inactive'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> error
 
     - status == (Prep) && not lucas_01 && tarc_01: 
     
-        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_01
         
     - status == (Prep) && not lucas_01.lucas_intro && lucas_01.ghost_lucas:
 
-        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_01.lucas_intro
 
 - status == (Jupiter_Flyby) && not lucas_02.lucas_analysis && lucas_02.lucas_angryout: 
     
-        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_02.lucas_analysis
 
     - status == (Jupiter_Flyby) && not lucas_02: 
     
-        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_02
         
     - status == (Approaching_Pluto) && not lucas_03: 
     
-        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_03
         
     - status == (Final_Approach_to_Pluto) && not lucas_04: 
     
-        ~ lucas_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_04
         
     - else: 
     
-        ~ lucas_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbspDr. Estévez</span>"
+        ~ lucas_button = "<div class='menu inactive'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
         ~ lucas_chat_divert = -> lucas_random
 
@@ -481,31 +481,31 @@
 
     - status == (Prep) && not tarc_01: 
     
-        ~ tarc_button = "<span class='menu active'><i class='material-icons md-18'>device_hub</i>&nbspTARC</span>"
+        ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
         ~ tarc_chat_divert = -> tarc_01
         
     - status == (Enroute_to_Pluto) && not tarc_02: 
     
-        ~ tarc_button = "<span class='menu active'><i class='material-icons md-18'>device_hub</i>&nbspTARC</span>"
+        ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
         ~ tarc_chat_divert = -> tarc_02
         
     - status == (Approaching_Pluto) && not tarc_03: 
     
-        ~ tarc_button = "<span class='menu active'><i class='material-icons md-18'>device_hub</i>&nbspTARC</span>"
+        ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
         ~ tarc_chat_divert = -> tarc_03
         
     - status == (Final_Approach_to_Pluto) && not tarc_04: 
     
-        ~ tarc_button = "<span class='menu active'><i class='material-icons md-18'>device_hub</i>&nbspTARC</span>"
+        ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
         ~ tarc_chat_divert = -> tarc_04
         
     - else: 
     
-        ~ tarc_button = "<span class='menu inactive'><i class='material-icons md-18'>device_hub</i>&nbspTARC</span>"
+        ~ tarc_button = "<div class='menu inactive'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
         ~ tarc_chat_divert = -> tarc_random
 
@@ -517,31 +517,31 @@
 
     - status == (Approaching_Jupiter) && not woodpecker_01: 
     
-        ~ woodpecker_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbsp<< unknown >></span>"
+        ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
         ~ woodpecker_chat_divert = -> woodpecker_01
         
     - status == (Jupiter_Flyby) && not woodpecker_02: 
     
-        ~ woodpecker_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbsp<< unknown >></span>"
+        ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
         ~ woodpecker_chat_divert = -> woodpecker_02
         
     - status == (Enroute_to_Pluto) && not woodpecker_03: 
     
-        ~ woodpecker_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbsp<< unknown >></span>"
+        ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
         ~ woodpecker_chat_divert = -> woodpecker_03
         
     - status == (Pluto_Flyby_Return) && not woodpecker_04: 
     
-        ~ woodpecker_button = "<span class='menu active'><i class='material-icons md-18'>person</i>&nbsp<< unknown >></span>"
+        ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
         ~ woodpecker_chat_divert = -> woodpecker_04
     
     - else: 
     
-        ~ woodpecker_button = "<span class='menu inactive'><i class='material-icons md-18'>person</i>&nbsp<< unknown >></span>"
+        ~ woodpecker_button = "<div class='menu inactive'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
         ~ woodpecker_chat_divert = -> woodpecker_random
 
@@ -550,10 +550,10 @@
 // clear previous screen before showing menu
 
 # CLEAR
-<span><i class="material-icons md-24">menu</i>&nbspMenu</span> # CLASS: menu
+<div class="menu title"><i class="material-icons md-24">menu</i><span>Menu</div> # CLASS: menu
 
 // build chat menu items based on vars above
-+ <span class='menuitem'><i class='material-icons md-18'>dashboard</i>&nbspMission</span>
++ <div class='menu item'><i class='material-icons md-18'>dashboard</i><span>Mission</div>
 
     -> mission
 
@@ -561,11 +561,11 @@
 
     -> news_divert
 
-+ <span class='menuitem'><i class='material-icons md-18'>settings</i>&nbspSettings</span>
++ <div class='menu item'><i class='material-icons md-18'>settings</i><span>Settings</div>
 
     -> settings
 
-+ <span class='menuitem'><i class='material-icons md-18'>info</i>&nbspAbout</span>
++ <div class='menu item'><i class='material-icons md-18'>info</i><span>About</div>
 
     -> about -> menu
 
@@ -593,6 +593,6 @@
 
     -> woodpecker_chat_divert
     
-+ { not woodhack && status == (Approaching_Jupiter) }<span class='menu active'><i class='material-icons md-18'>person</i>&nbspMedina</span>
++ { not woodhack && status == (Approaching_Jupiter) }<div class='menu active'><i class='material-icons md-18'>person</i><span>Medina</div>
 
     -> woodpecker_brute

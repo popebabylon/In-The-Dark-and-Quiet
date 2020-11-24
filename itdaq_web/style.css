@@ -150,11 +150,20 @@ div.about {
 
 /* custom style for menu objects */
 
-span.inactive {
+.menu i {
+    vertical-align: bottom;
+    margin-right: 0.4rem;
+}
+
+.menu.title {
+	padding-left: 0.6rem;
+}
+
+div.inactive {
 	color: gray;
 }
 
-span.menuitem {
+div.menu.item {
 	color: white;
 }
 

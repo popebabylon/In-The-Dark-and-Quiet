@@ -105,6 +105,8 @@ VAR debugging = false
 
 === error ===
 
+# CLEAR
+
 Sorry, you don't have access to that resource.
 
 { not tarc_01:
@@ -115,11 +117,15 @@ Sorry, you don't have access to that resource.
 
 === end_chat ===
 
+# CLEAR
+
 Sorry, you've run out of things in this chat.
 
 + [<< Close >>] -> menu
 
 === the_end ===
+
+# CLEAR
 
 The game has ended.
 
@@ -133,3 +139,4 @@ Do you want to restart?
 * << No >>
 
     -> END
+
