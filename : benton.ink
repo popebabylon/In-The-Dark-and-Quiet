@@ -2,7 +2,7 @@
 
 === benton_profile ===
 
-<img src="img/benton.png" class="picture-lg"><br><br>Name: Benton Saari<br><br>Position: Founder, CEO, Pilot<br><br>Pronouns: He/Him/His<br><br>Skills: Business, Technology, Sociology
+<img src="img/benton.png" class="picture-lg"><br><br>Name: Benton Saari<br><br>Position: Founder, CEO, Pilot<br><br>Pronouns: He/Him/His<br><br>Skills: Business, Technology, Psychology
 
 ->->
 
@@ -90,7 +90,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
     
     You're like the perfect skeptic to bring on board here.  But trust me, we've done it.
 
-* { Sociology + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking? # CLASS: player
+* { Psychology + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking? # CLASS: player
 
     That's why I need your help.
     
@@ -166,7 +166,7 @@ I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw 
 
     If you sick like me I guess!
 
-* { Sociology >= 30 } Eureka[?] effect in the wings? # CLASS: player
+* { Psychology >= 30 } Eureka[?] effect in the wings? # CLASS: player
 
     Hey, I'm telling this tale!
 
@@ -204,7 +204,7 @@ And you could control & comm with q-sats, even all the way to the edge.
 
     Don't think TARC could handle it?
 
-* { Business + Sociology >= 50 } Who's crazy enough to try that? # CLASS: player
+* { Business + Psychology >= 50 } Who's crazy enough to try that? # CLASS: player
 
     Me.
     
@@ -386,7 +386,7 @@ Waking up in this gunk is no fun.
 
 - (bstate)
 
-* { Medicine + Sociology >= 30 }How are you feeling? # CLASS: player
+* { Medicine + Psychology >= 30 }How are you feeling? # CLASS: player
 
     Honestly?  Werked.
     
@@ -416,7 +416,7 @@ Waking up in this gunk is no fun.
     
     Astro, Eng, Comms.  All golden.  We've doubled our efficiencies in the last 30.  All on track to launch.
 
-* { Business + Sociology >= 30 }How are the teams? # CLASS: player
+* { Business + Psychology >= 30 }How are the teams? # CLASS: player
 
     Great.
     
@@ -829,7 +829,7 @@ That's the only way we evolve enough to survive.
     
     * * Good to hear. # CLASS: player
     
-    * * { Business + Sociology + Medicine >= 30 } But do you doubt it? # CLASS: player
+    * * { Business + Psychology + Medicine >= 30 } But do you doubt it? # CLASS: player
     
         \#alwaysneversafe, right?
         
@@ -925,11 +925,11 @@ That's the only way we evolve enough to survive.
         
         But her and I are better business *partners*.  More sympatico.
     
-    * * { Business + Sociology >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
+    * * { Business + Psychology >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
     
         I can trust that she'll do what's best for Nth Horizon.  Her rep is just as much on the line here as mine is.
         
-        * * * { Sociology >= 30 } [As long as you're aligned.]Which is fine as long as your definition of "what's best for Nth Horizon" is aligned with hers. # CLASS: player
+        * * * { Psychology >= 30 } [As long as you're aligned.]Which is fine as long as your definition of "what's best for Nth Horizon" is aligned with hers. # CLASS: player
         
             It is.
             
@@ -979,7 +979,7 @@ That's the only way we evolve enough to survive.
         
         So I wouldn't put that on Junia.
         
-        * * * { Sociology >= 30 } She _was_ eager to throw shade[.] as soon as I joined about his credentials. # CLASS: player
+        * * * { Psychology >= 30 } She _was_ eager to throw shade[.] as soon as I joined about his credentials. # CLASS: player
         
             True?
             
@@ -1531,7 +1531,7 @@ VAR cautious = 0
     
         But deciding between medtechers was something I was better at. # CLASS: player
     
-    * * { career == "an ethnologist" or Sociology >= 30 }  Your understanding of Russia[ was lacking.]n history, politics, and manners left a lot to be desired, and the funding would dry up without a little smoothing of ruffled feathers.  It took some serious bowing and scraping to undo the faux-pas and get at least a couple of options back on the table. # CLASS: player
+    * * { career == "an ethnologist" or Psychology >= 30 }  Your understanding of Russia[ was lacking.]n history, politics, and manners left a lot to be desired, and the funding would dry up without a little smoothing of ruffled feathers.  It took some serious bowing and scraping to undo the faux-pas and get at least a couple of options back on the table. # CLASS: player
     
     * * { career == "an international spy" or violence > 0 } I think we ended up in the back of a bullet-riddled HoverMerc with the lights off careening down the Moskva and all the newsDrops were pasting your face around as a suspect.  If they found you with that case it would've been Siberia... or Europa for you! # CLASS: player
     
@@ -1680,7 +1680,7 @@ Six months and change.
     
     # wait
 
-* { Sociology >= 30 } Enough time for some reflection? # CLASS: player
+* { Psychology >= 30 } Enough time for some reflection? # CLASS: player
 
     Yeah, plenty of it.
     
@@ -1771,7 +1771,7 @@ Room.
     
     Ants scurrying under a car wreck.  Just don't get caught in the gasoline fire.
 
-* { Medicine + Sociology >= 60 }  Introspection is good[.], but I want to make sure you're checking in with yourself enough to avoid a deep end. # CLASS: player
+* { Medicine + Psychology >= 60 }  Introspection is good[.], but I want to make sure you're checking in with yourself enough to avoid a deep end. # CLASS: player
 
     What's that supposed to mean?
     
@@ -1871,7 +1871,7 @@ Marduk up close and personal.  Not often you get to dance with a Babylonian god.
     
     Hope so.
 
-* { Sociology >= 30 } [Outrunning Mušḫuššu?] Sounds like you're moving fast enough to outrun Mušḫuššu? # CLASS: player
+* { Psychology >= 30 } [Outrunning Mušḫuššu?] Sounds like you're moving fast enough to outrun Mušḫuššu? # CLASS: player
 
     ¡LafLaf!
 
@@ -1887,7 +1887,7 @@ Like if this thing wrecks I have no control, I'm just collateral dmg.
 
 * I guess so. # CLASS: player
 
-* { Sociology + Medicine >= 60 } Can you do anything about it? # CLASS: player
+* { Psychology + Medicine >= 60 } Can you do anything about it? # CLASS: player
 
     No.
     
@@ -1979,7 +1979,7 @@ Ready for a sweaty dance?
     
     }
     
-    { Sociology + Business >= 60:
+    { Psychology + Business >= 60:
     
         I know this is a big deal for Nth Horizon, but you need to keep your head in the game. # CLASS: player
     
@@ -2023,7 +2023,7 @@ VAR drugs = 0
 
 - (firstStress)
 
-* { Sociology >= 60 } Benton, the fear you feel now is a weapon. # CLASS: player
+* { Psychology >= 60 } Benton, the fear you feel now is a weapon. # CLASS: player
 
     You are dancing with death. # CLASS: player
     
@@ -2199,7 +2199,7 @@ OK. Well. # CLASS: player
             
             * * * * Take a pill. # CLASS: player
             
-            * * * * { Sociology >= 60 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
+            * * * * { Psychology >= 60 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
                 
                 Sorry. # wait
                 
@@ -2216,7 +2216,7 @@ OK. Well. # CLASS: player
                     { stressCheck("-", -> donemarduk, stress) }
                         -> next
         
-        * * * { Sociology + Medicine >= 30 } It's only natural to see patterns, B.[]  We see the faces of gods in random patterns because we're designed to. # CLASS: player
+        * * * { Psychology + Medicine >= 30 } It's only natural to see patterns, B.[]  We see the faces of gods in random patterns because we're designed to. # CLASS: player
         
             Hear ya.  Kinda bizarro to see it, to feel it this close.
             
@@ -2419,7 +2419,7 @@ OK. Well. # CLASS: player
     
     * * I don't trust her.[]  Too much smile for a shark. # CLASS: player
     
-    * * { Business + Sociology >= 60 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away.
+    * * { Business + Psychology >= 60 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away.
     
     - - I can't sit around mistrusting my closest confidants.
     
@@ -2484,7 +2484,7 @@ OK. Well. # CLASS: player
         - - -
         {
         
-            - Sociology + Business >= 60 && not knows_kim:
+            - Psychology + Business >= 60 && not knows_kim:
             
                 Someone insistent, like a pecking woodpecker? # CLASS: player
                 
@@ -2580,7 +2580,7 @@ OK. Well. # CLASS: player
         
             Bad timing, { pronouner("choi","chai","chen") }.
         
-        * * * { Sociology >= 60 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things.
+        * * * { Psychology >= 60 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things.
         
             { stressCheck("-", -> dont_talk_hacks, stress) }
                 -> next
@@ -2619,7 +2619,7 @@ OK. Well. # CLASS: player
     
     * * { Security >= 30 } If anyone's trying to sabotage your trip, now's their best moment.[]  Keep an eye on those scanners coz you'll see it before we do. # CLASS: player
     
-    * * { Sociology >= 30 }  Just want you to be mindful.[]  That's the only way to break through the _bad_ stress and find the eustress in these moments. # CLASS: player
+    * * { Psychology >= 30 }  Just want you to be mindful.[]  That's the only way to break through the _bad_ stress and find the eustress in these moments. # CLASS: player
     
         ~stress--
     
@@ -2644,7 +2644,7 @@ OK. Well. # CLASS: player
         
         * * * Trying. # CLASS: player
         
-        * * * { Sociology >= 60 } Of course.[]  And that's what I'm doing.  Keep you focused on the here and now.  Accept the risks and stare them in the eyes. # CLASS: player
+        * * * { Psychology >= 60 } Of course.[]  And that's what I'm doing.  Keep you focused on the here and now.  Accept the risks and stare them in the eyes. # CLASS: player
         
             True.
         
@@ -3030,7 +3030,7 @@ I'm gonna sleep for a year now.
     
     -> popped
 
-* { Medicine + Sociology + Security + Technology >= 60 } << pilot report >> # CLASS: player
+* { Medicine + Psychology + Security + Technology >= 60 } << pilot report >> # CLASS: player
 
     << critical >>
     

@@ -61,7 +61,7 @@ I don't report every result to my patient because my patient is a conniving soth
 
     - - (nothelp) You're not helping. # CLASS: junia
 
-* { Sociology + Medicine >= 60 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
+* { Psychology + Medicine >= 60 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
 
     # wait
 
@@ -242,7 +242,7 @@ The mission is yours.  You're still going to be looped in on everything.  I just
 
     Your opinion is appreciated, but not sure we need another seat at this table. # CLASS: junia
 
-* { Sociology >= 60 } You eager for the power, Junia? # CLASS: player
+* { Psychology >= 60 } You eager for the power, Junia? # CLASS: player
 
     { rnothelp:
         You are REALLY not helping. # CLASS: junia
@@ -565,11 +565,11 @@ Should the mental state of the pilot be called into question operational respons
 
 * You're kidding?[]  Benton left his survival to you, not Dr. Estévez? # CLASS: player
 
-* { Business + Sociology >= 30 } This is an unusual bylaw.[]  I'm assuming Benton classified the success of Nth Horizon above his own? # CLASS: player
+* { Business + Psychology >= 30 } This is an unusual bylaw.[]  I'm assuming Benton classified the success of Nth Horizon above his own? # CLASS: player
 
     Correct. # CLASS: tarc
     
-* { Medicine + Sociology >= 60 } I'm not sure that countermands medical law. # CLASS: player
+* { Medicine + Psychology >= 60 } I'm not sure that countermands medical law. # CLASS: player
 
 - Look, I'm not saying I'm choosing the company over Benton. # CLASS: junia
 

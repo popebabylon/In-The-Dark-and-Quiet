@@ -10,7 +10,7 @@
     ~ Engineering = 100
     ~ Medicine = 100
     ~ Security = 100
-    ~ Sociology = 100
+    ~ Psychology = 100
     ~ Technology = 100
 
 }
@@ -44,7 +44,7 @@ Skills: <>
 <li>Engineering:{Engineering}</li> <>
 <li>Medicine:{Medicine}</li> <>
 <li>Security:{Security}</li> <>
-<li>Sociology:{Sociology}</li> <>
+<li>Psychology:{Psychology}</li> <>
 <li>Technology:{Technology}</li> <>
 </ul>
 
@@ -60,7 +60,7 @@ Business
 Engineering
 Medicine
 Security
-Sociology
+Psychology
 Technology
 */
 

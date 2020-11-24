@@ -2,7 +2,7 @@
 
 === junia_profile ===
 
-<img src="img/junia.png" class="picture-lg"><br><br>Name: Junia Masangkay<br><br>Position: COO<br><br>Pronouns: She/Her/Hers<br><br>Skills: Business, Sociology, Technology
+<img src="img/junia.png" class="picture-lg"><br><br>Name: Junia Masangkay<br><br>Position: COO<br><br>Pronouns: She/Her/Hers<br><br>Skills: Business, Psychology, Technology
 
 ->->
 
@@ -89,7 +89,7 @@ Welcome to Moonshot!
 
 = question_lucas
     
-* { Business + Sociology >= 30 }[Are the teams aligned?]Seems like there might be some challenges with cross-functional team alignment? # CLASS: player
+* { Business + Psychology >= 30 }[Are the teams aligned?]Seems like there might be some challenges with cross-functional team alignment? # CLASS: player
 
     You could say that.
 
@@ -225,7 +225,7 @@ VAR career = ""
     
     ~ career = "a hacker"
 
-* { Sociology >= 30 }I'm an ethnologist[.] at LRX University.  Tenured. # CLASS: player
+* { Psychology >= 30 }I'm an ethnologist[.] at LRX University.  Tenured. # CLASS: player
 
     Wow, that must be such a fascinating area of study with the inner-system diaspora.
     
@@ -336,7 +336,7 @@ But I'm trusting the vision.
 
     There will always be sharks circling when you have something good.  With TARC and our secrecy so far there's little they can do to upend this.
 
-* { Sociology >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
+* { Psychology >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
 
     # wait
 
@@ -430,7 +430,7 @@ Is he at risk given the stresses he's under?
 
     Do you have any opinion on the matter?
 
-* { Sociology <= 0 } No idea, I'm not a psychiatrist. # CLASS: player
+* { Psychology <= 0 } No idea, I'm not a psychiatrist. # CLASS: player
 
     Surely you know him well enough to have some judgement?
     
@@ -462,7 +462,7 @@ Is he at risk given the stresses he's under?
     
     Makes me <>
 
-* { Sociology >= 60 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player
+* { Psychology >= 60 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player
 
     I still <>
 
@@ -492,7 +492,7 @@ Is he at risk given the stresses he's under?
     
     Anyway...
 
-* { Medicine + Sociology >= 60 } His humanity is being tested.[]  Dr. Estévez isn't wrong about how little prep he had. # CLASS: player
+* { Medicine + Psychology >= 60 } His humanity is being tested.[]  Dr. Estévez isn't wrong about how little prep he had. # CLASS: player
 
     The time needed to adapt to the changes to his physiology. # CLASS: player
     
@@ -556,7 +556,7 @@ What Benton is doing tips the balance in our favor.
     
     * * What kind of opportunity do you mean? # CLASS: player
     
-    * * { Security + Business + Sociology >= 60 } I've found some. # CLASS: player
+    * * { Security + Business + Psychology >= 60 } I've found some. # CLASS: player
 
 * Oh, I'll get something out of this. # CLASS: player
 
@@ -572,7 +572,7 @@ What Benton is doing tips the balance in our favor.
 
 * { Security >= 30 } You're like a massive pen-test.[]  I get to see what happens with TARC and the measures you have in place against actors like Goliath.  Pretty solid experience. # CLASS: player
 
-* { Sociology >= 30 } [I can always learn about people.]Every project is an opportunity to learn about how people operate.  This one is no different. # CLASS: player
+* { Psychology >= 30 } [I can always learn about people.]Every project is an opportunity to learn about how people operate.  This one is no different. # CLASS: player
 
 * { Technology >= 30 } TARC is a goldmine.[]  The adaptations Benton and TARC have woven into the core programming are outstanding, and that's just the pieces it's been willing to tell me about! # CLASS: player
 

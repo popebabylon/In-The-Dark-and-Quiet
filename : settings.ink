@@ -148,7 +148,7 @@ Thank you.  Your profile is complete. <br> <br> To edit your profile in future v
 ~ Engineering = 0
 ~ Medicine = 0
 ~ Security = 0
-~ Sociology = 0
+~ Psychology = 0
 ~ Technology = 0
 
 Your resumé and references indicate a wide array of applicable skills for the project, but to better represent your expertise to your colleagues please select your top three areas of expertise.
@@ -177,9 +177,9 @@ You may select a subject more than once if it is an area of significant study.
     
         ~ Security += 30
     
-    + Sociology
+    + Psychology
     
-        ~ Sociology += 30
+        ~ Psychology += 30
     
     + Technology
     
@@ -209,7 +209,7 @@ Skills:
     Engineering: { Engineering }
     Medicine: { Medicine }
     Security: { Security }
-    Sociology: { Sociology }
+    Psychology: { Psychology }
     Technology: { Technology }
 
 TODO: Settings page - remove / rewire skills list

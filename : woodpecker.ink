@@ -90,7 +90,7 @@ Peck. # wait
         
             # wait
 
-        * * * { Sociology + Security >= 90 } Are you Speight? # CLASS: player
+        * * * { Psychology + Security >= 90 } Are you Speight? # CLASS: player
         
             Well well, aren't you sharp.
             
@@ -154,7 +154,7 @@ I think we can help each other out.
 
 * Perhaps. # CLASS: player
 
-* { Technology + Security + Sociology >= 60} You have me at a disadvantage.[]  And given the nature of your attack I'd say you're trying to keep it that way; keep me unbalanced. # CLASS: player
+* { Technology + Security + Psychology >= 60} You have me at a disadvantage.[]  And given the nature of your attack I'd say you're trying to keep it that way; keep me unbalanced. # CLASS: player
 
     Guilty.
     
@@ -250,7 +250,7 @@ Howz about we drop each other datapoints, one at a time.  Keep it fair.
 
     -> no_deal
 
-* { Sociology >= 30 } How can I trust you? # CLASS: player
+* { Psychology >= 30 } How can I trust you? # CLASS: player
 
 	Trust gonna have to be mutual for us to help each other out.
 	

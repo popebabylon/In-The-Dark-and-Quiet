@@ -46,7 +46,7 @@ VAR Business = 0
 VAR Engineering = 0
 VAR Medicine = 0
 VAR Security = 0
-VAR Sociology = 0
+VAR Psychology = 0
 VAR Technology = 0
 
 // setup mission status

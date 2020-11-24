@@ -2,7 +2,7 @@
 
 === lucas_profile ===
 
-<img src="img/lucas.png" class="picture-lg"><br><br>Name: Dr. Lucas Estévez<br><br>Position: Chief Medical Officer<br><br>Pronouns: He/Him/His<br><br>Skills: Medicine, Sociology, Technology
+<img src="img/lucas.png" class="picture-lg"><br><br>Name: Dr. Lucas Estévez<br><br>Position: Chief Medical Officer<br><br>Pronouns: He/Him/His<br><br>Skills: Medicine, Psychology, Technology
 
 ->->
 
@@ -182,7 +182,7 @@ What's your most recent report?
     
     You seem a bit peeved, doc.  What's up? # CLASS: player
 
-* (medanalysis) { Medicine + Sociology >= 60 } My analysis is a little hedged.[]  Many bellweathers are trending in the wrong direction, especially cortisol and thyroid regulation. # CLASS: player
+* (medanalysis) { Medicine + Psychology >= 60 } My analysis is a little hedged.[]  Many bellweathers are trending in the wrong direction, especially cortisol and thyroid regulation. # CLASS: player
 
     But not outside of expectations given the nature of this endeavor. # CLASS: player
     
@@ -215,7 +215,7 @@ What's your most recent report?
 
 * Gee, thanks doc. <> # CLASS: player
 
-    { Sociology >= 30: 
+    { Psychology >= 30: 
     
         I do happen to have some experience in the field of keeping people sane. # CLASS: player
     
@@ -223,7 +223,7 @@ What's your most recent report?
     
     { Medicine >= 30:
     
-        { Sociology >= 30:
+        { Psychology >= 30:
         
             And <>
         
@@ -304,7 +304,7 @@ And his conversations and journal entries are becoming... melodramatic.
 
 * { benton_05 } Yeah, he sounded a little erratic[.] when we spoke just now. # CLASS: player
 
-* { Sociology + Medicine >= 60 } He's developing coping mechanisms.[]  I think we're seeing a healthy (for the situation) pattern of eustress waves. # CLASS: player
+* { Psychology + Medicine >= 60 } He's developing coping mechanisms.[]  I think we're seeing a healthy (for the situation) pattern of eustress waves. # CLASS: player
 
 * Is there anything we can do? # CLASS: player
 
@@ -324,7 +324,7 @@ I think we need to prepare to turn him around.
 
     I'm not sure he understands how thin the margin is.
 
-* { Sociology + Medicine >= 60 } We should already be _prepared_ for it.[]  But there's more options than just giving up. # CLASS: player
+* { Psychology + Medicine >= 60 } We should already be _prepared_ for it.[]  But there's more options than just giving up. # CLASS: player
 
     Regulation is the key right now.  Chemical interlinked with emotional. # CLASS: player
     
