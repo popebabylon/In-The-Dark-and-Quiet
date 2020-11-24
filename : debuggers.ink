@@ -6,7 +6,7 @@
 
     // bump all skills to test choices
     ~ Astronomy = 100
-    ~ Business = 100
+    ~ Business = 0
     ~ Engineering = 100
     ~ Medicine = 100
     ~ Security = 100

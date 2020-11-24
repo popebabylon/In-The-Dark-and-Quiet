@@ -567,7 +567,7 @@ What's fun dirtside?
     
     Just ignore them.  Bullies feed on your attention.
 
-* (nada) Nothing.  This is all I do.[]  I don't have any time to be { career } AND keep you company. # CLASS: player
+* (dont_do_anything) Nothing.  This is all I do.[]  I don't have any time to be { career } AND keep you company. # CLASS: player
 
     Oh, sot.  It's dragging you down too?
     
@@ -972,6 +972,8 @@ That's the only way we evolve enough to survive.
                 Gonna do something about it on the sly?  I don't think so.
                 
                 ~ trust_junia--
+                
+            * * * * ->
     
     * * Has she also locked horns with Estévez?[]  Coz sounded like she didn't trust him. # CLASS: player
     
@@ -993,13 +995,13 @@ That's the only way we evolve enough to survive.
     
     * * What do you think she wants from this? # CLASS: player
     
+        To succeed, just like the rest of us.
+
         -> byp_j
     
-    - - ->junia_history
+    - - -> junia_history
 
     - - (byp_j)
-    
-    To succeed, just like the rest of us.
     
     This won't just put Nth Horizon on the map, we'll be a thousand spins ahead of the competition.
     
@@ -1314,7 +1316,7 @@ What's new in the real world?
         
 }
 
-{ benton_02.nada:
+{ benton_02.dont_do_anything:
 
     Found anything fun to do outside of this?
     
@@ -2726,6 +2728,14 @@ OK. Well. # CLASS: player
                     
                     ~ love--
                     ~ money++
+                    
+                - - - - - { wait(3) }
+                
+                Why bring her up? # CLASS: player
+                
+                A nymph of Artemis.  Like Callisto.
+                
+                NullMind.  Gonna burn again.
             
             * * * * No.[] She only had eyes for you. # CLASS: player
                 
@@ -2877,29 +2887,29 @@ OK. Well. # CLASS: player
             
             * * * * { Technology + Security >= 60 }She almost took down your SecNet. # CLASS: player
         
-        - - - (tabloids)
+            - - - - (tabloids)
         
-        * * * I had to keep you out of the tabloids. # CLASS: player
+            * * * * I had to keep you out of the tabloids. # CLASS: player
         
             ~ love++
             ~ money--
         
-        * * * I made a tidy sum from Long Night keeping it quiet. # CLASS: player
-        
-            ~ love--
-            ~ money++
-        
-        * * * Sometimes you're cute[.] when you miss the obivous. # CLASS: player
-        
-        * * * Sometimes you're dense.[]  The whole episode just passed you by as you played with another startCorp. # CLASS: player
-        
-        - - - This doesn't make sense.
-        
-        I don't know what you're playing at, but I didn't bring up Jem for you to dragDown.
-        
-        Next burn is up. # wait
-        
-        We'll talk about this later...
+            * * * * I made a tidy sum from Long Night keeping it quiet. # CLASS: player
+            
+                ~ love--
+                ~ money++
+            
+            * * * * Sometimes you're cute[.] when you miss the obivous. # CLASS: player
+            
+            * * * * Sometimes you're dense.[]  The whole episode just passed you by as you played with another startCorp. # CLASS: player
+            
+            - - - - This doesn't make sense.
+            
+            I don't know what you're playing at, but I didn't bring up Jem for you to dragDown.
+            
+            Next burn is up. # wait
+            
+            We'll talk about this later...
     
     * * { relationship == "close" } Why bring her up? # CLASS: player
     

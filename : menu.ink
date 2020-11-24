@@ -485,13 +485,13 @@
     
         ~ tarc_chat_divert = -> tarc_01
         
-    - status == (Enroute_to_Pluto) && not tarc_02: 
+    - status == (Enroute_to_Pluto) && not tarc_02 && woodpecker_02: 
     
         ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
         ~ tarc_chat_divert = -> tarc_02
         
-    - status == (Approaching_Pluto) && not tarc_03: 
+    - status == (Approaching_Pluto) && not tarc_03 && woodpecker_02: 
     
         ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
@@ -521,7 +521,7 @@
     
         ~ woodpecker_chat_divert = -> woodpecker_01
         
-    - status == (Jupiter_Flyby) && not woodpecker_02: 
+    - status == (Jupiter_Flyby) && not woodpecker_02 && benton_02: 
     
         ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     

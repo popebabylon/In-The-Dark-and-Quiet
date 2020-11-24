@@ -533,7 +533,7 @@ Configuration matches, and there aren't many other actors who could resource suc
 
 * { Engineering + Technology + Business + Security >= 60 } Industrial espionage seems like the only other likely option.[]  Could they be dataMining the ship?  Or trying to wrest control? # CLASS: player
 
-I don't have enough information to confirm or refute/ # CLASS: tarc
+- I don't have enough information to confirm or refute/ # CLASS: tarc
 
 I can't raise Benton.  His stress measurements are still { stress }. # CLASS: lucas
 

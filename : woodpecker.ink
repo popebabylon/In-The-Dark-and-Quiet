@@ -208,7 +208,7 @@ I'll be around.
 
 === woodpecker_02 ===
 
-LIST kim_knows = flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild
+LIST kim_knows = (nothing), flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild
 
 VAR woodpeck_install = false
 
@@ -302,18 +302,22 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 * [Flyby was a success.]  Lowell's Horizon has successfuly completed it's perijove burn maneuver with the craft and pilot surviving and now enroute to Pluto with the gravity assist of Jupiter.  # CLASS: player
 
     ~ kim_knows += (flyby_success)
+    ~ kim_knows -= (nothing)
 
 * [Benton might be losing his mind.]  Saari has been isolated in the Lowell's Horizon for over 6 months, and there are indicators that he's losing his grip.  He will diverge onto rambling tangents or discuss obtuse mythiological subjects while he should be addressing his immediate mission objectives and requirements. # CLASS: player
 
     ~ kim_knows += (benton_crazy)
+    ~ kim_knows -= (nothing)
 
 * [Goliath might be trying to sabotage or spy on the project.]  We have evidence that a Goliath Deep Space Jumped was on an intercept trajectory with the Lowell's Horizon.  Since they didn't drive it into the gravity well we have to assume they're attempting espionage on the project. # CLASS: player
 
     ~ kim_knows += (goliath_dsj)
+    ~ kim_knows -= (nothing)
 
 * [CMO is recommending turnaround, but has been overruled.]  Dr. Lucas Estévez, Chief Medical Officer, has serious concerns about Saari's physiological and mental health given the strain he is under and the lack of training or acclimitization the timeline allowed for.  He's suggesting Saari turn back, but so far has been overruled. # CLASS: player
 
     ~ kim_knows += (cmo_overrule)
+    ~ kim_knows -= (nothing)
 
 + \ (Lie) # CLASS: player
 
@@ -344,21 +348,33 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
     
     Don't get me wrong.  She's a wicked good bizhead, but Benton is no slouch, _shouldn't_ need her.  Too much of the reigns are in her hands.
     
-        And that's not all.
+    And that's not all.
+        
+    ~ player_knows += junia_shadowy
+    ~ player_knows -= nada
 
     - Junia’s last corp, Entropic Galactic, was surreptitiously taken by Goliath through shell companies.  The startCorp almost went public, then sold out privately, splitting holdings to a few miniCorps.
     
     There was some anti-Goliath sentiment at Entropic, so big G had a hard time swooping in.  But in the long run, looks like all the tech ended up in Goliath's hands anyway.
     
     Coincidence?
+    
+    ~ player_knows += entropic_goliath
+    ~ player_knows -= nada
 
     - A lot of the money in Nth Horizon is shadow, which isn't suprising given Saari's flair for drama.  But there are a few transactions I've traced that _look_ like they come from Big G holders.  Meaning Goliath _already_ has some claws in the Nth pie.
     
     Need some more data points to prove it, but itza strong hunch.
+    
+    ~ player_knows += goliath_hands_in_pie
+    ~ player_knows -= nada
 
     - The exit strategy for Nth Horizon is shakey.  Saari & Masangkay have made some serious obligations to serious people.  They gotta hit benchmarks, show fiscal responsibility, and if they blow those then Nth gets carved up for scraps.
     
     But even if they _don't_ blow them, the question remains what the exit is.  They very publically have said "No Goliath," but what else is there?  Can they really turn this startCorp into a mega overnight and challenge Big G?  Not likely.
+    
+    ~ player_knows += no_nth_exit
+    ~ player_knows -= nada
 
 }
 
@@ -454,18 +470,22 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out!
     - Nth Horizon has secured funding to last through the Moonshot mission and beyond.  Goliath can't touch us now! # CLASS: player
     
         ~ kim_knows += (fake_nth_funded)
+        ~ kim_knows -= (nothing)
     
     - Benton broke the speed record to Jupiter! # CLASS: player
     
         ~ kim_knows += (fake_speed_record)
+        ~ kim_knows -= (nothing)
     
     - I've been promoted to Chief Morale Officer and, as my first decree, have instituted limited PTO to ensure all Nth Horizon employees actually take time off.  # CLASS: player
     
         ~ kim_knows += (fake_cmo)
+        ~ kim_knows -= (nothing)
         
     - Junia and Benton have an illicit love child who's in Lowell's Horizon with its father! # CLASS: player
     
         ~ kim_knows += (fake_lovechild)
+        ~ kim_knows -= (nothing)
     
     - That's all I got. # CLASS: player
     

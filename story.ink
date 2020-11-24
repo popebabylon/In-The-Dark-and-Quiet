@@ -52,6 +52,9 @@ VAR Technology = 0
 // setup mission status
 LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Enroute_to_Pluto, Approaching_Pluto, Final_Approach_to_Pluto, Pluto_Flyby_Return, End
 
+// setup player knowledge
+LIST player_knows = (nada), junia_shadowy, entropic_goliath, goliath_hands_in_pie, no_nth_exit
+
 // set current date
 VAR date_year = 2065
 VAR date_month = 7
@@ -73,7 +76,7 @@ VAR woodhack = false
 TODO: COMPILE: check debugger state
 
 // set variable as true if you want to debug
-VAR debugging = false
+VAR debugging = true
 
 // if ^ is true then turn on all the debugging things...
 { debugging:
@@ -93,7 +96,7 @@ VAR debugging = false
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> tarc_02
+    -> benton_02
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     

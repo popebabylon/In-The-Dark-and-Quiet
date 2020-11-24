@@ -350,7 +350,7 @@ But I'm trusting the vision.
 
     Benton's stunt is a big risk.  But if it pays off, it will pay off megabig.
 
-* -> out # CLASS: player
+* -> out
 
 - -> loop2
 

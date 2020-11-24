@@ -184,6 +184,12 @@ p.no_bg {
 	border: none;
 }
 
+/* TODO: custom style for "wait" paragraphs to delay the game */
+
+p.wait {
+	display: none;
+}
+
 
 /* first choice */
 :not(.choice) + .choice {
