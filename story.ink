@@ -76,7 +76,7 @@ VAR woodhack = false
 TODO: COMPILE: check debugger state
 
 // set variable as true if you want to debug
-VAR debugging = true
+VAR debugging = false
 
 // if ^ is true then turn on all the debugging things...
 { debugging:
