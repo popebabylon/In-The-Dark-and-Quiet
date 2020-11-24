@@ -34,40 +34,37 @@ Select your identity for biometric validation. # CLEAR
 
     ~ picture = "img/p01.png"
 
-
 + <img src="img/p02.png" class="picture-lg">
 
     ~ picture = "img/p02.png"
-
 
 + <img src="img/p03.png" class="picture-lg">
 
     ~ picture = "img/p03.png"
 
-
 + <img src="img/p04.png" class="picture-lg">
 
     ~ picture = "img/p04.png"
-
 
 + <img src="img/p05.png" class="picture-lg">
 
     ~ picture = "img/p05.png"
 
-
 + <img src="img/p06.png" class="picture-lg">
 
     ~ picture = "img/p06.png"
-
 
 + <img src="img/p07.png" class="picture-lg">
 
     ~ picture = "img/p07.png"
 
-
 + <img src="img/p08.png" class="picture-lg">
 
     ~ picture = "img/p08.png"
+    
++ <img src="img/p09.png" class="picture-lg">
+
+    ~ picture = "img/p09.png"
 
 - (pick_name)
 
