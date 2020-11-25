@@ -72,23 +72,24 @@
 
 VAR knows_kim = false
 
-Peck. # wait
-
-Peck. # wait
-
-Peck. # wait
+Peck.
+{ wait(1) }
+Peck.
+{ wait(1) }
+Peck.
+{ wait(1) }
 
 * Hello? # CLASS: player
 
-    # wait
+    { wait(3) }
 
     * * Who's this? # CLASS: player
     
-        # wait
+        { wait(3) }
 
         * * * Are you Goliath? # CLASS: player
         
-            # wait
+            { wait(3) }
 
         * * * { Psychology + Security >= 90 } Are you Speight? # CLASS: player
         
@@ -115,9 +116,12 @@ Peck. # wait
     << segfault at 0x6361746368656d616c6c, respooling >> # CLASS: player
     << inject tracer360^...COMMIT >> # CLASS: player
     
-    << injecting >> # wait # CLASS: player
-    << injecting >> # wait # CLASS: player
-    << injecting >> # wait # CLASS: player
+    << injecting >> # CLASS: player
+    { wait(1) }
+    << injecting >> # CLASS: player
+    { wait(1) }
+    << injecting >> # CLASS: player
+    { wait(1) }
     
     - - (tracing_woodpecker) << success; trace started >> # CLASS: player
 
@@ -140,7 +144,7 @@ U can call me Woodpecker.
 
 * [<< wait >>] # CLASS: player
 
-    # wait
+    { wait(3) }
 
 * I'll call you what I sotting want. # CLASS: player
 

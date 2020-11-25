@@ -88,19 +88,38 @@
                     }
                 }
             }
-
+            
+			// custom variables for delays etc
+			var pdelay = 0;
+			
+			// need something like this to build my "is typing" indicator			
+			/*
+			var typing = document.createElement('p');
+			typing.innerHTML = "<i class='material-icons md-24'>more_horiz</i>";
+			typing.classList.add("typing");
+			storyContainer.appendChild(paragraphElement);
+			*/
+			
             // Create paragraph element (initially hidden)
             var paragraphElement = document.createElement('p');
             paragraphElement.innerHTML = paragraphText;
-            storyContainer.appendChild(paragraphElement);
+            storyContainer.appendChild(paragraphElement);            
             
             // Add any custom classes derived from ink tags
-            for(var i=0; i<customClasses.length; i++)
+            for(var i=0; i<customClasses.length; i++) {
                 paragraphElement.classList.add(customClasses[i]);
+ 				// My custom behaviors by class
+                // check the class for "wait"; if so set the delay
+                if ( customClasses[i] == "wait" ) {
+                	pdelay = 1000.0
+                }
+            }
 
             // Fade in paragraph after a short delay
             showAfter(delay, paragraphElement);
-            delay += 0; // was 200.0
+            delay += pdelay; // was 200.0
+            
+
         }
 
         // Create HTML choices from ink choices

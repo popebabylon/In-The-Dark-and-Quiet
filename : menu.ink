@@ -83,25 +83,39 @@
 
         {
         
-            - lucas_02.lucas_analysis && benton_05 && team_02 && woodpecker_02:
+            - lucas_02.lucas_analysis && benton_05 && team_02 && woodpecker_02 && tarc_02:
             
-                ~ status = (Enroute_to_Pluto)
+                ~ status = (Crossing_Saturn_Orbit)
                 
-                {timeplus(0, 2, 3)}
+                {timeplus(0, 1, 3)}
                 
                 -> time_passes ->
                 
         }
 
+    - working_status == (Crossing_Saturn_Orbit):
+
+        {
+        
+            - benton_06 && news_06:
+            
+                ~ status = (Enroute_to_Pluto)
+                
+                {timeplus(0, 3, 8)}
+                
+                -> time_passes ->
+                
+        }
+        
     - working_status == (Enroute_to_Pluto):
 
         {
         
-            - tarc_02 && benton_06 && news_06 && benton_07 && team_03 && news_07 && woodpecker_03:
+            - benton_07 && team_03 && news_07 && woodpecker_03:
             
                 ~ status = (Approaching_Pluto)
                 
-                {timeplus(0, 8, 16)}
+                {timeplus(0, 5, 8)}
                 
                 -> time_passes ->
                 
@@ -209,7 +223,7 @@
     
         ~ news_divert = -> news_05
     
-    - status == (Enroute_to_Pluto) && not news_04 && benton_06:
+    - status == (Crossing_Saturn_Orbit) && not news_06 && benton_06:
     
         ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
@@ -264,7 +278,7 @@
     
         ~ team_chat_divert = -> team_launch
 
-    - status == (Jupiter_Flyby) && not team_02 && (benton_05.exited || benton_05.popped):
+    - status == (Jupiter_Flyby) && not team_02 && benton_05:
     
         ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
@@ -329,13 +343,13 @@
     
         ~ benton_chat_divert = -> benton_05
         
-    - status == (Enroute_to_Pluto) && not benton_06 && not benton_07:
+    - status == (Crossing_Saturn_Orbit) && not benton_06:
     
         ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
         ~ benton_chat_divert = -> benton_06
         
-    - status == (Enroute_to_Pluto) && benton_06 && not benton_07:
+    - status == (Enroute_to_Pluto) && not benton_07:
     
         ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
@@ -485,7 +499,7 @@
     
         ~ tarc_chat_divert = -> tarc_01
         
-    - status == (Enroute_to_Pluto) && not tarc_02 && woodpecker_02: 
+    - status == (Jupiter_Flyby) && not tarc_02 && woodpecker_02 && benton_05:
     
         ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
@@ -521,7 +535,7 @@
     
         ~ woodpecker_chat_divert = -> woodpecker_01
         
-    - status == (Jupiter_Flyby) && not woodpecker_02 && benton_02: 
+    - status == (Jupiter_Flyby) && not woodpecker_02 && benton_05: 
     
         ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     

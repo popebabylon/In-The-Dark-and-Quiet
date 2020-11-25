@@ -14,21 +14,21 @@
 
 * Dr. Estévez, I'm { name } # CLASS: player
 
-- # wait
+- { wait(4) }
 
 * Benton suggested I talk with you? # CLASS: player
 
-- # wait
+- { wait(4) }
 
 * Do you have time to chat? # CLASS: player
  
     -> lucas_intro
 
-* [<< wait patiently >>] # CLASS: player
+* [<< wait patiently >>]
 
     -> lucas_intro
 
-* [<< Exit >>] # CLASS: player
+* [<< Exit >>]
 
     -> ghost_lucas
 
@@ -41,6 +41,10 @@
 { ghost_lucas:
 
     # CLEAR
+
+- else:
+
+    { wait(6) }
 
 }
 
@@ -244,9 +248,7 @@ What's your most recent report?
     Perhaps being a doc for tween H0L0 stars didn't set you up for the real deal. # CLASS: player
 
 -
-# wait
-# wait
-# wait
+{ wait(4) }
 
 * We can talk later. # CLASS: player
 

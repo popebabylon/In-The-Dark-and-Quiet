@@ -50,7 +50,7 @@ VAR Psychology = 0
 VAR Technology = 0
 
 // setup mission status
-LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Enroute_to_Pluto, Approaching_Pluto, Final_Approach_to_Pluto, Pluto_Flyby_Return, End
+LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Crossing_Saturn_Orbit, Enroute_to_Pluto, Approaching_Pluto, Final_Approach_to_Pluto, Pluto_Flyby_Return, End
 
 // setup player knowledge
 LIST player_knows = (nada), junia_shadowy, entropic_goliath, goliath_hands_in_pie, no_nth_exit

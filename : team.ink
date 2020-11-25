@@ -63,11 +63,11 @@ I don't report every result to my patient because my patient is a conniving soth
 
 * { Psychology + Medicine >= 60 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
 
-    # wait
+    { wait(2) }
 
     * * Heart rates down? # CLASS: player
 
-    # wait
+    { wait(2) }
     
     Good. # CLASS: player
     
@@ -194,7 +194,7 @@ Well, that's awkward. # CLASS: junia
 
 - Ok.  # CLASS: benton
 
-# wait
+{ wait(2) }
 
 No decision here then.  We'll go to the board.  # CLASS: benton
 
@@ -238,7 +238,7 @@ The mission is yours.  You're still going to be looped in on everything.  I just
 
 * { Business >= 60 } Might I suggest a [proxy?] third party act as a proxy while Benton is stretched for time? # CLASS: player
 
-    # wait
+    { wait(2) }
 
     Your opinion is appreciated, but not sure we need another seat at this table. # CLASS: junia
 
@@ -322,13 +322,13 @@ Thx, TARC. # CLASS: benton
 
 * [<< wait >>]
 
-- # wait
+- { wait(1) }
 
 Lucas?  You know my position.  <>
 
 { team_01.loss:
 
-    # wait
+    { wait(2) }
 
     You're making the call, but I'm taking the risk. # CLASS: benton
 
@@ -336,7 +336,7 @@ Lucas?  You know my position.  <>
     
     I appreciate your concerns, but it's my call. # CLASS: benton
 
-    # wait
+    { wait(2) }
 
 }
 
@@ -388,17 +388,28 @@ Huo, Medina, Alexa, Lucas... you and your teams have given everything to make th
 
 Launch cycle commenced.  Counting down... # CLASS: tarc
 
-<< 10 >> # wait
-<< 9 >> # wait
-<< 8 >> # wait
-<< 7 >> # wait
-<< 6 >> # wait
-<< 5 >> # wait
-<< 4 >> # wait
-<< 3 >> # wait
-<< 2 >> # wait
-<< 1 >> # wait
-<< Ignition >> # wait
+<< 10 >>
+{ wait(1) }
+<< 9 >>
+{ wait(1) }
+<< 8 >>
+{ wait(1) }
+<< 7 >>
+{ wait(1) }
+<< 6 >>
+{ wait(1) }
+<< 5 >>
+{ wait(1) }
+<< 4 >>
+{ wait(1) }
+<< 3 >>
+{ wait(1) }
+<< 2 >>
+{ wait(1) }
+<< 1 >>
+{ wait(1) }
+<< Ignition >>
+{ wait(3) }
 
 We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
 

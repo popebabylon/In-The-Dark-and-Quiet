@@ -167,6 +167,25 @@ div.menu.item {
 	color: white;
 }
 
+/* custom styles for animating "writing" indicator */
+
+.typing {
+	text-align: center;
+	margin: auto;
+	background: none;
+	border: none;
+	animation-name: fade;
+  	animation-duration: 3s;
+  	animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes fade {
+  0% {color: #FFFFFFDD;}
+  50% {color: #AAAAAADD;}
+  100% {color: #FFFFFFDD;}
+}
+
 /* custom style for images */
 
 .picture-lg {

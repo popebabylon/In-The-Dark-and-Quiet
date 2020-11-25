@@ -338,7 +338,7 @@ But I'm trusting the vision.
 
 * { Psychology >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
 
-    # wait
+    { wait(2) }
 
     Quite well, I think.
     

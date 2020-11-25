@@ -531,7 +531,7 @@ What's fun dirtside?
     
     * * Sure. # CLASS: player
     
-    # wait
+    { wait(2) }
     
     I can tell you don't wanna share.
 
@@ -593,7 +593,9 @@ What's fun dirtside?
     
         Anyway.
 
-- Sidetrack, you remember Daeso? # wait
+- { wait(3) }
+
+Sidetrack, you remember Daeso?
 
 * Daeso Kim, right? # CLASS: player
 
@@ -723,7 +725,7 @@ Going over those old episodes
 
 Those people we've passed by and close-to forgotten.
 
-# wait
+{ wait(3) }
 
 I can never quite tell for each incident if what I was doing was running towards something, or running away from it...
 
@@ -739,11 +741,11 @@ Grok?
 
 * Is Moonshot towards or away? # CLASS: player
 
-# wait
+{ wait(2) }
 
 - Towards.
 
-# wait
+{ wait(1) }
 
 I think.
 
@@ -1113,7 +1115,7 @@ What's new in the real world?
     
         You're not?
         
-        # wait
+        { wait(2) }
         
         Serious?
         
@@ -1125,11 +1127,11 @@ What's new in the real world?
         
             Sotting hades!  { name }, you're space trash!
             
-            # wait
+            { wait(1) }
             
             ¡sigh! I need to remember how to laugh.
             
-            # wait
+            { wait(1) }
 
 - Well, distract me or something.
 
@@ -1197,7 +1199,7 @@ What's new in the real world?
         
             Nothing's quite like us. # CLASS: player
         
-            # wait
+            { wait(2) }
             
             I... uh...
             
@@ -1247,7 +1249,7 @@ What's new in the real world?
             
         * I'm in traction.[]  You're lucky all I have to do for your project is Message you. # CLASS: player
         
-            # wait
+            { wait(1) }
             
             No way!  What happened?
             
@@ -1304,7 +1306,7 @@ What's new in the real world?
             
         * They made me an offer. # CLASS: player
         
-            # wait
+            { wait(1) }
             
             Swell.  You gonna sell me out?
             
@@ -1680,7 +1682,7 @@ Six months and change.
     
     And make all this seem like a drop in the bucket.
     
-    # wait
+    { wait(3) }
 
 * { Psychology >= 30 } Enough time for some reflection? # CLASS: player
 
@@ -1720,7 +1722,7 @@ Room.
         
         See!
         
-        # wait
+        { wait(3) }
         
         But... yes <>
     
@@ -1734,7 +1736,9 @@ Room.
     
     Space to explore myself.
     
-    Figuratively. # wait
+    { wait(1) }
+    
+    Figuratively.
 
 * What do you fill such emptiness with? # CLASS: player
 
@@ -1745,7 +1749,7 @@ Room.
         
         + + + [<<< wait >>>]
         
-            # wait
+            { wait(3) }
     
             -> introspection
             
@@ -1801,7 +1805,9 @@ What's docked?
 
     { relationship == "close":
         
-            Found another partner, huh? # wait
+        	{ wait(2) }
+        
+            Found another partner, huh?
             
             Your big date.  With Jupiter. # CLASS: player
         
@@ -2037,7 +2043,9 @@ VAR drugs = 0
     
     Control yourself and you control how this moment changes you. # CLASS: player
 
-    Zen. # wait
+	{ wait(3) }
+
+    Zen.
 
     { stressCheck("-", -> preb, stress) }
         -> next
@@ -2177,11 +2185,7 @@ OK. Well. # CLASS: player
         
         * * * What does it say? # CLASS: player
         
-            # wait
-            
-            # wait
-            
-            # wait
+            { wait(6) }
             
             Benton? # CLASS: player
             𒀭𒀫𒌓
@@ -2203,7 +2207,9 @@ OK. Well. # CLASS: player
             
             * * * * { Psychology >= 60 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
                 
-                Sorry. # wait
+                { wait(3) }
+                
+                Sorry.
                 
                 { stressCheck("-", -> donemarduk, stress) }
                     -> next
@@ -2333,18 +2339,21 @@ OK. Well. # CLASS: player
         
         * * * Good at putting others in harms way[.] aren't you? # CLASS: player
         
-            I play with those who know the risk of playing with me. # wait
+        	{ wait(1) }
+        
+            I play with those who know the risk of playing with me.
         
             { stressCheck("+", -> afterctown, stress) }
                 -> next
                 
         - - - (afterctown)
         
-        { jupiter_flyby_status } ends in 3. # wait
-        
-        2. # wait
-        
-        1. # wait
+        { jupiter_flyby_status } ends in 3.
+        { wait(1) }
+        2.
+        { wait(1) }
+        1.
+        { wait(1) }
     
     * * { Medicine >= 60 } Not sure he was cut out for interplanetary medicine.[] I think the team is holding him up, not the other way around. # CLASS: player
     
@@ -2378,11 +2387,12 @@ OK. Well. # CLASS: player
         
         No time to fight over Lucas now.
         
-        { jupiter_flyby_status } ends in 3. # wait
-        
-        2. # wait
-        
-        1. # wait
+        { jupiter_flyby_status } ends in 3.
+        { wait(1) }
+        2.
+        { wait(1) }
+        1.
+        { wait(1) }
     
     * * Got a massive ramrod up his @. # CLASS: player
     
@@ -2405,7 +2415,7 @@ OK. Well. # CLASS: player
     
     * * { junia_02.junia_avarice } Seemed like she thought I could make out on this gig[.] even if you don't come back. # CLASS: player
     
-        # wait
+        { wait(2) }
     
     - - (blame_junia)
     
@@ -2434,11 +2444,17 @@ OK. Well. # CLASS: player
 
     Another {~kick|boost|shot} hitting in 5.
     
-    Here it comes. # wait
+    Here it comes.
     
-    And... # wait
+    { wait(2) }
     
-    any moment now # wait
+    And...
+    
+    { wait(1) }
+    
+    any moment now
+    
+    { wait(1) }
 
 * { woodpecker_01 } So I met this woodpecker... # CLASS: player
 
@@ -2600,10 +2616,11 @@ OK. Well. # CLASS: player
         - - - (dont_talk_hacks)
         
         Nevermind.  Gotta prep for transition.  Down shift on { jupiter_flyby_status } in 3.
-        
-        2. # wait
-        
-        1. # wait
+        { wait(1) }
+        2.
+        { wait(1) }
+        1.
+        { wait(1) }
 
 * We need to talk about this slingshot.[]  You've gotta stay focused! # CLASS: player
 
@@ -2664,7 +2681,9 @@ OK. Well. # CLASS: player
             
         - - - (aftertrusted)
         
-        Hold up. # wait
+        { wait(2) }
+        
+        Hold up.
         
         Here comes another kick...
         
@@ -2827,15 +2846,7 @@ OK. Well. # CLASS: player
                     
                     This topic is done.
                     
-                    # wait
-                    
-                    # wait
-                    
-                    # wait
-                    
-                    # wait
-                    
-                    # wait
+                    { wait(5) }
                     
                     Commencing engine shift.
                     
@@ -2907,7 +2918,9 @@ OK. Well. # CLASS: player
             
             I don't know what you're playing at, but I didn't bring up Jem for you to dragDown.
             
-            Next burn is up. # wait
+            { wait(2) }
+            
+            Next burn is up.
             
             We'll talk about this later...
     
@@ -2915,9 +2928,7 @@ OK. Well. # CLASS: player
     
         One of the nymphs that got away.
         
-        # wait
-        
-        # wait
+        { wait(4) }
         
         * * * So?
         
@@ -2978,9 +2989,13 @@ OK. Well. # CLASS: player
 
     << engines firing >>
 
-    {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.} # wait
+    {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.}
     
-    {~Distract me or something, will ya?|Talk to me { pronouner("choi","chai","chen") }.|What's on **your** mind?|Could do with a pep talk, huh?|Why so serious?} # wait
+    { wait(3) }
+    
+    {~Distract me or something, will ya?|Talk to me { pronouner("choi","chai","chen") }.|What's on **your** mind?|Could do with a pep talk, huh?|Why so serious?}
+    
+    { wait(1) }
 
     -> talk2B
 
@@ -3118,23 +3133,19 @@ I'm gonna sleep for a year now.
     
 }
 
-/* B getting bored, discusses personal history with P, flies by Jupiter
-
-TIME MOVES FORWARD
-
-Benton discusses the emptiness and how big it seems even when Jupiter is taking up 90% of his viewport as the gas giant gives him a gravity assist boost.  The omnipresent loneliness prompts him to remember when the PC previously abandoned [love] or [money] and what drove them to give something up that was important.  He rambles a little, but can be brought back to the majesty of the moment he's witnessing, something only the deep-space-jump-crews see with any regularity.  Soon he'll go even further than they do, and all on his own.
-
-He waxes poetic about the planet and the neverending dance of the spheres before ending the conversation abruptly.  Mission details will report a Goliath Deep Space Jumper burning on a similar trajectory. */
-
 === benton_06 ===
 
+
+
++ [<< Close Chat >>] -> menu
+
+/*
 B reports unexpected issues with the craft
 
 The spacecraft reports some issues that Benton has to make an EVA to fix, separated from the depths of space by only a few layers of (advanced nano-tech) fiber.  He is in awe of his situation and has to be reminded to carry out the work.
 
 Once complete he needs a little calming down as this could have potentially been a very serious issue.  They were lucky to catch it.  Projections are he can still complete the mission as planned (possibly behind schedule) but they can't afford more of these unexpected problems.
-
-+ [Next] -> menu # CLASS: player
+*/
 
 === benton_07 ===
 
