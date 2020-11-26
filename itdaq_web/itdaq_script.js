@@ -45,3 +45,10 @@ pics = document.querySelectorAll(".picture-lg");
 	};
 
 };
+
+/*
+var typetest = document.createElement('p');
+typetest.innerHTML = "<i class='material-icons md-48'>more_horiz</i>";
+typetest.classList.add("typing");
+document.querySelector('#story').appendChild(typetest);
+*/

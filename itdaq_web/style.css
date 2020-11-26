@@ -175,15 +175,19 @@ div.menu.item {
 	background: none;
 	border: none;
 	animation-name: fade;
-  	animation-duration: 3s;
+  	animation-duration: 2s;
   	animation-iteration-count: infinite;
+}
+
+.md-48 {
+	font-size: 48px;
 }
 
 /* The animation code */
 @keyframes fade {
-  0% {color: #FFFFFFDD;}
-  50% {color: #AAAAAADD;}
-  100% {color: #FFFFFFDD;}
+  0% {color: #AAAAAADD;}
+  50% {color: #333333DD;}
+  100% {color: #AAAAAADD;}
 }
 
 /* custom style for images */

@@ -96,7 +96,7 @@ VAR debugging = false
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> benton_02
+    -> news_06
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     

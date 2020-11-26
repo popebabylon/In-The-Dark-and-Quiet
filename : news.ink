@@ -167,19 +167,83 @@
 
 # CLEAR
 
-Headline about the problems B has, can he make it?
+<h2>Skirting the Gravity Well</h2><>
+<><h4>Tellnok falls victim.  Will Masangkay & Saari Avoid Goliath's Event Horizon?</h4><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 13:30 UTC</p><>
+<><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
 
-News source describing the growing risk for Benton if his technology fails.  It won't just be the end of his mission and his life, but could spell the end for his company.  There are plenty of big sharks out there willing to scoop up a struggling start-up.
+<><p class="info">Goliath megaCorp was handed a victory in Mumbai's Corporate Court today, striking down the protest action by Ania Tellnok, formerly of डार्कस्पेस उद्योग (DarkSpace Industries).  Tellnok had accused Goliath of illegal practices in the takeover of their startCorp in { date_year - 3 }, providing evidence of corporate espionage, sabotage, and malfeasance.  The Impartial.AI jury did not provide comment on the decision, but pundits expect this will cause other startCorp investors to flee risky ventures as Goliath seems poised to dominate the spacetech industry for the foreseeable future.</p><>
 
-+ [Next] -> menu
+<><p class="info">One dark horse still looking to challenge Goliath is Nth Horizon, the brainchild of wunderkind Benton Saari.  Our exclusive exposé last month revealed that the startCorp had<>
+{
+- kim_knows ? fake_nth_funded:
+	<> secured significant shadow funding <>
+	{
+	- kim_knows ? flyby_success:
+		<>following the historic flyby of Jupiter by Saari & Lowell's Horizon.<>
+	- else:
+		<>despite the extreme secrecy surrounding the fate of founder Benton Saari's stunt to fly to Pluto.<>
+	}
+- kim_knows ? flyby_success:
+	<> outperformed expectations during it's founder's historic flyby of Jupiter.<>
+- kim_knows ? fake_speed_record:
+	<> outperformed expectations as Lowell's Horizon crushed speed records in it's crewed sprint to Juptier.<>
+- else:
+	<> been making waves as COO Junia Masangkay continued her whirlwind tour of the system.<>
+}
+<>  There is still trepidation in the industry that Saari and Masangkay may only be temporarily free of Goliath's grasp, but the plucky entrepreneurs seem to have outsmarted Jienson Mai for the time being.</p>
+
+<><p class="info">Of course, any modern tale of David can't help but cast aspersions on the underdog.  It seems we're destined to mistrust any proposed knight in shining armor, especially as so many have fallen to the giant.  We seek their flaws out before we are surprised by them later.  Case in point, <>
+{
+- kim_knows ? benton_crazy:
+	<>Masangkay and other Nth Horizon officials still refuse to comment on Mr. Saari's mental health after months alone in a gel-filled capsule, hurtling through the darkest reaches of space.  Sources from within the organization have described the founder as "unhinged" and his statements to the media (passed through proxies) have been heavily redacted.  An exclusive source has inferred that Saari is "seeing the face of Marduk" in Jupiter, a reference to the ancient Babylonian god once associated with the planet.<>
+- kim_knows ? cmo_overrule:
+	<>rumors still abound that Chief Medical Officer, Dr. Lucas Estévez, has consistently been overruled by Masangkay in his efforts to turn the Lowell's Horizon around and save the life of his patient and longtime friend.  Estévez is well known as the personal physician of politicians, athletes, and H0L0 star BinkEyes0x31, and has built a top-notch team of space-medicine experts into the Nth Horizon organization.  Why his recommendations are being ignored has not been revealed, but it's well know that Saari and Estévez had adventured together in some trying circumstances before.  If the doctor is worried, it's likely to be bad.<>
+- kim_knows ? fake_lovechild:
+	<>the tabloids are still running the incredible story that Benton and Junia have conceived a child and brought the poor creature up in the pressure-cooker gel tank that its father is hurtling through the outer reaches of the solar system in.  Described by anonymous sources as a terrifying experiment in the next phase of extra-solar evolution, the rumored child would contravene all known laws and common decency.  Saari has not commented.  Masangkay responded simply with "That's ludicrous."<>
+- else:
+	<>investors in Nth Horizon are very circumspect of the limelight and it's feasible that shadow funds are making up the majority of the startCorps operating capital.  While evidence to this has yet to surface, there are strong indications that the funding involved could tie back to <>
+	{
+	- player_knows ? goliath_hands_in_pie:
+		<>Goliath itself.<>
+	- else:
+		<>Rednail Revolutionaries on Europa.<>
+	}
+}
+<>  Whatever the story is, it seems clear that not everything at Nth Horizon is as noble as their PR makes it appear.</p><>
+
+<><p class="info">For now the system waits for further news from Lowell's Horizon.  The fate of Saari's insane stunt could very well spell out the future for the startCorp itself and many others like it throughout the system.  <>
+{
+- kim_knows ? fake_cmo:
+	<>Nth Horizon Chief Morale Officer, {name},<>
+- else:
+	<>Ms. Masangkay<>
+}
+<> has said they have every faith in Saari and his successful return in 2 years time.</p><>
+
+<><p class="info">We'll have more exclusive details on the historic Nth Horizon mission and Goliath's life-changing moves in the industry.</p>
+
+<><p class="info">Don't miss a drop! Subscribe now!</p>
+
++ [<< Close news >>]
+
+-    -> menu
+
+/*
+Headline about Goliath gobbling up more competition
+
+work in any juice player gave woodpecker
+
+News source article that describes Goliath pushing into more territory.  The author shows surprise that Nth Horizon has not become a victim yet.
+*/
 
 === news_07 ===
 
 # CLEAR
 
-Headline about Goliath gobbling up more competition
+Headline about the problems B has, can he make it?
 
-News source article that describes Goliath pushing into more territory.  The author shows surprise that Nth Horizon has not become a victim yet.
+News source describing the growing risk for Benton if his technology fails.  It won't just be the end of his mission and his life, but could spell the end for his company.  There are plenty of big sharks out there willing to scoop up a struggling start-up.
 
 + [Next] -> menu
 

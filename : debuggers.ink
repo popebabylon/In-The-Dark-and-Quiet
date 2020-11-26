@@ -29,6 +29,10 @@
     ~ pronoun = "He/Him/His"
     ~ career = "an astronomer"
     ~ relationship = "epic"
+    ~ status = (Crossing_Saturn_Orbit)
+    
+    ~ kim_knows += fake_cmo
+    
 
 }
 

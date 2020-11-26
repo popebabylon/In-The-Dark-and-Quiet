@@ -3121,7 +3121,16 @@ I'm gonna sleep for a year now.
         
         << stress level has exceeded safety parameters >>
         
-        ~ next = -> benton_05.popped
+        {
+            - status == (Jupiter_Flyby):
+        
+                ~ next = -> benton_05.popped
+                
+            - status == (Crossing_Saturn_Orbit):
+            
+                ~ next = -> benton_06.crayz
+            
+        }
         
         ~ return
 
@@ -3135,17 +3144,1026 @@ I'm gonna sleep for a year now.
 
 === benton_06 ===
 
+# CLEAR
 
+~ stress = (nominal)
+
+- (rise)
+
+* {wake_up_b < 1}Benton?  Hey, choi, how are you? # CLASS: player
+
+* Wake up Benton. # CLASS: player
+
+* {wake_up_b > 0}Benton? # CLASS: player
+
+* {wake_up_b > 1}Hey, Benton, time to get up! # CLASS: player
+
++ [<< Trigger Alarm >>]
+
+    << Cortical Alarm Activated >> # CLASS: player
+    
+- (wake_up_b) { wait(6) }
+
+{ wake_up_b < 3:
+
+    -> rise
+
+}
+
+* [<< Trigger Alarm >>]
+
+* [<< Request adreno shot from Dr. Estévez >>]
+
+* { Medicine >= 30 && (Technology + Security >= 30 ) }[<< Administer Adreno Shot >>]
+
+* [<< Request electro shock from TARC >>]
+
+* { Technology + Security >= 60 } [<< Administer Electro Shock >>]
+
+- Ugh.
+
+{ wait(4) }
+
+I'm. Up.
+
+* Hey.  How do you feel? # CLASS: player
+
+* What's the hold-up? # CLASS: player
+
+* Things to do, chuik. # CLASS: player
+
+- { wait(2) }
+
+Yeah.  I getcha.
+
+{ wait(2) }
+
+* C'mon.  I know this is hard[.], B.  You're almost further from home than anyone, ever, has ever been.  You're more along than I can understand.  But you gotta activate. Let's get your day started, yah? # CLASS: player
+
+*  Attention, soldier![]  You'd best get a grip son, otherwise you're gonna be polishing boots from now until judgement day!  You slip up now it's adios muchachos. # CLASS: player
+
+* I don't wanna be here either.[]  Another month playing your alarm clock and I'm ready to hit the self destruct myself.  So do us a favor and get on with it or flush yourself out the airlock already.  # CLASS: player
+
+    You're a real inspiration, y'know.
+    
+    Alright...
+
+- (checklist_top)
+
+What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
+
+* Q-sat sync up. # CLASS: player
+
+    Ok.
+    
+    { wait(3) }
+    
+    I've got lock-on with 54, 55, and...
+    
+    { wait(1) }
+    
+    - - (no56)I'm not getting 56.
+    
+    * * What's your readout? # CLASS: player
+    
+    * * { Astronomy + Technology >= 60 } That's not unexpected.[] Saturn is likely causing some disruption at that range. # CLASS: player
+    
+        What's your readout? # CLASS: player
+        
+    - - { wait(2) }
+    0x6269672065617273
+    
+    * * Got it. # CLASS: player
+    
+    - - Is that it?
+    
+    * * Yeah. # CLASS: player
+    
+    - - Doesn't... didn't Medina need entanglement parameters?  I'm not sure why she's not running the comms check in anymore.
+    
+    * * We're just trying to make this easier on you. # CLASS: player
+    
+    * * She doesn't need to.[]  I'm perfectly capable of running you through a checklist. # CLASS: player
+    
+    * * Medina's gone, choi.[]  Money talked. # CLASS: player
+    
+        What?  Sot!
+        
+        Big G?
+        
+        Yeah.  # CLASS: player
+        
+        Damnit.
+        
+        { wait(2) }
+        
+        Damn. It.
+        
+        ~ stressCheck("+", -> checklist_end, stress)
+            -> next
+        
+    - - Let's stay focused. # CLASS: player
+
+* Refresh gel regulator. # CLASS: player
+
+    { Medicine >= 30:Y<>|Dr. Estévez says y<>}
+    
+    <>ou're not running the refreshes often enough.  The osmotic infusions will lose potency if you don't keep the <>
+    
+    { Medicine >= 30:<>alkalinity<>|<>gunk<>}
+    
+    <> balanced. # CLASS: player
+    
+    I gotcha.
+    
+    Cycling the refresher.
+    
+    { wait(3) }
+    
+    This used to be fun.
+    
+    * * It still is! # CLASS: player
+    
+        Maybe.
+    
+    * * Since when? # CLASS: player
+    
+        Back when it was an adventure.
+        
+    - - Flushing my external stomach acid with the sleekest bio-tech this system has ever seen.  Novel.
+    
+    Lucas still not talking to me?
+    
+    * * He's keeping a professional distance[.] since you've countermanded almost all his recommendations on this voyage. # CLASS: player
+    
+        He knows what this mission means.
+    
+    * * He's been ready to quit for a long time. # CLASS: player
+    
+        Still don't grok him backing down.
+    
+    * * { Psychology >= 30 } Why do you think that is? # CLASS: player
+    
+        Why my trusted CMO would sulk while I'm still getting flung?
+        
+        Why do you think he's not talking to you? # CLASS: player
+        
+        ¡sigh! I dunno.
+        
+        Sore.
+        
+        * * * Because? # CLASS: player
+        
+        * * * Sometimes you're hopeless. # CLASS: player
+        
+            Yeah, well... <>
+    
+    - - He knows I can take a beating!
+        
+    * * He cares about you.[]  Mission or not, he knows what this is doing to your physiology.  Don't think he can stomach talking to you directly about it. # CLASS: player
+    
+    * * He's just doing his job.[]  You keep overruling, so he's gonna step back to drop the tension. # CLASS: player
+    
+    * * Suit yourself. # CLASS: player
+    
+    - - { wait(3) }
+    
+    Cycle's done.
+
+* How's your sleep. # CLASS: player
+
+    Catatonic.
+    
+    * * { Medicine >= 30 } Your q.EEG is still elevated.[]  Are you still having bad dreams? # CLASS: player
+    
+    * * Have you been dreaming? # CLASS: player
+    
+    * * Any more nightmares? # CLASS: player
+    
+    - - You're not my shrink.
+    
+    I am while you're a billion miles away and I'm the only person you'll have a civil conversation with.  # CLASS: player
+    
+    { wait(4) }
+    
+    * * { Psychology >= 30 } Just take a moment.[]  Close your eyes and start recounting what you remember.  # CLASS: player
+    
+        Fine.
+        
+        Swimming again.  Deep, thick darkness.
+        
+        That horrible feeling you can't breathe.  Wasn't suffocating, but just that rigid chest that can't move in or out.  _Wanting_ air.
+        
+        The red eye was always watching.
+        
+        * * * Jupiter? # CLASS: player
+        
+        * * * Marduk? # CLASS: player
+        
+            ~ stressCheck("+", -> old_god, stress)
+                -> next
+        
+        * * * [<< wait >>]
+        
+        - - - (old_god)
+        
+        An old god.  A discarded deity still swinging round and round in the celestial sphere, engraged by his obsolesence.
+        
+        Swimming for eternity.  Not breathing.
+        
+        Enough to drive anyone mad, god or not.
+        
+        * * * What is it hiding? # CLASS: player
+        
+            { wait(2) }
+            
+            Power.
+            
+            It still has the power to change _everything_, but it hoards it, too afraid to unleash creation.
+            
+            Too afraid it will end the same way again.
+            
+            In obsolesence.
+        
+        * * * What do such gods create[?] in the vacuum? # CLASS: player
+        
+            The seeds for another creation.
+            
+            This one is dying, so dream up the next.
+            
+            Universes within the dreams of gods in other universes.
+            
+            Turtles all the way down.
+        
+        * * * What do you ask it? # CLASS: player
+        
+            For forgiveness.
+            
+            It is folly to swim in this dark ocean with antedilluvian lords.  I must seek its forgiveness to be allowed to continue my journey.
+            
+        - - - { wait(3) }
+        
+        It always feels like a long nightmare.
+        
+        But with the thought that on the other side, through the eye of the god, I will find space to breathe again.
+        
+        { wait(3) }
+    
+    * * At least update your log[.] a bit more regular, yah? # CLASS: player
+    
+        Ok.
+    
+    * * You're still in a nightmare. # CLASS: player.
+    
+        How droll.
+        
+    - - Well, this psychoanalysis has been fun.  We done yet?
+
+* Tech checkpoints.[]  First, check nano-alignment on the isosacular system. # CLASS: player
+
+    Ugh.  I knew that was rushed.
+    
+    { wait(2) }
+    
+    What am I looking for again?
+    
+    * * { Engineering + Technology >= 60 } Anti-polar shift [& resistance.]needs to be within 100 picometers and passthrough has less than 3 mΩ. # CLASS: player
+    
+    * * Just read out the numbers.[]  I'll get Huo to check them out. # CLASS: player
+    
+    - - Uh, ok.
+    
+    apShift; 98 picometers.
+    
+    * * Ok. # CLASS: player
+    
+    * * { Engineering + Technology >= 60 } Not [good.]moving in the right direction. # CLASS: player
+    
+        Fantastic.
+    
+         ~ stressCheck("+", -> ohms, stress)
+                -> next
+    
+    - - (ohms)
+    
+    mΩ 1.066
+    
+    Got it. # CLASS: player
+    
+    Wasn't this supposed to be a superconductor?
+    
+    * * I'm not sure.[]  Let's just get the number for Huo and move on. # CLASS: player
+    
+    * * { Engineering + Technology >= 60 } It was.[]  But then it was installed alongside an osmoting bio-gel system and things start to get out of whack. # CLASS: player
+    
+         ~ stressCheck("+", -> hold_together, stress)
+                -> next
+    
+    - - (hold_together)Hear me, baby?  Hold together.
+    
+    Next checkpoint?
+    
+    * * Re-align hyperecliptic tracking.
+    
+    * * { Psychology >= 60 }Take a moment.  You're doing great.[]  You've got all the time you need to breathe and do this right. # CLASS: player
+    
+        { wait(3) }
+        
+        ~ stressCheck("-", -> realign, stress)
+            -> next
+    
+    - - (realign)
+        
+    Ok.
+    
+    HyperTrack.  Dialing in now.
+    
+    { wait(6) }
+    
+    * * Everything ok? # CLASS: player
+    
+    * * [<< wait >>]
+    
+    - - { wait(6) }
+    
+    * * Benton? # CLASS: player
+        
+        ~ stressCheck("-", -> wrong, stress)
+            -> next
+        
+    - - (wrong)Something's wrong.
+    
+    HT is -18.24º
+    
+    * * That's why we check, right?  <> # CLASS: player
+    
+        So we need to fix it. # CLASS: player
+    
+    * * Ok.  <>  # CLASS: player
+    
+    * * (pc_astro){ Astronomy + Engineering >= 60 } That's... not possible.[]  We haven't seen any variance over 3º before now.# CLASS: player
+    
+        { no56:
+        
+            Are we offsetting based on the missing q-sat link? # CLASS: player
+            
+            Yeah.  Dialed.
+            
+        }
+    
+    - -
+    
+    What the sot happened?
+    
+    { not pc_astro:
+    
+        We haven't seen variance over 3º before!
+        
+    }
+    
+    - - (var_questions)
+    
+    * * { Astronomy + Engineering < 60 }How did this happen? # CLASS: player
+    
+        I have no idea.
+        
+        - - - (not_possible)It shouldn't even be possible.
+        
+        The HyperTrack array is one of the most finely engineered components ever made.  It was built to handle anything that could be thrown at it.  Radiation, sub-kelvin-temps, bricks.
+        
+        How could it deviate so bad?
+        
+        * * * Things happen. # CLASS: player
+        
+            Not like this.
+            
+            Not on something we trusted to change the whole solar system.
+        
+        * * * Could an error be built-in? # CLASS: player
+        
+            A bug?  Not this bad.
+            
+            * * * * What if it was intentional? # CLASS: player
+            
+            - - - - Sabotage?
+            
+            I can't believe that.
+            
+            If someone wanted to scuttle the project they could've done it a billion ways before we even left Luna.
+            
+            And TARC would've sniffed it.
+            
+            * * * * You're probably right. # CLASS: player
+            
+            * * * * Hope you're right. # CLASS: player
+            
+            * * * * What's more likely?[]  That this array automagically gets out of whack or you have a mole that borked it? # CLASS: player
+            
+                { wait(3) }
+            
+                ~ stressCheck("+", -> no_matter, stress)
+                    -> next
+        
+        * * * Could it be sabotage?[]  We were concerned that Goliath DSJ might have dropped a nano-drone on you. # CLASS: player
+        
+            Oh, gods.
+            
+            If they've been spending the last month diving the array, they could have everything.
+            
+            * * * * That seems unlikely. # CLASS: player
+            
+            * * * * [Now they can sabotage the flight]And now they're finished they can sabotage the whole thing. # CLASS: player
+                
+                ¡SOT!
+                
+                ¡SOT!
+                
+                EVEN OUT HERE I CAN'T GET AWAY FROM GOLIATH SCUM!
+                
+                ~ stressCheck("+", -> no_matter, stress)
+                    -> next
+            
+            * * * * { Medicine + Psychology >= 60 }It's no use dwelling on it.[]  What you've got to do is take action.  Deal with the current problem. # CLASS: player
+            
+                Right.
+                
+                ~ stressCheck("-", -> no_matter, stress)
+                    -> next
+            
+        - - - (no_matter)
+        
+        { wait(3) }
+        
+        It doesn't matter now.  Just have to fix it.
+    
+    * * { Astronomy + Engineering >= 60 }Checking deepLog on the array.[]  There should be a clue on how we got so off. # CLASS: player
+    
+        Already digging.
+        
+        -> not_possible
+    
+    * * { Astronomy + Engineering < 60 }What does this mean? # CLASS: player
+    
+        - - - (off_course)
+        
+        It means I'm way off-course.
+        
+        And I don't have good data on the grav-wave pattern to feed the Tsukasa Theorems.
+        
+        * * * { Astronomy + Engineering >= 60 }We need to figure out a correction[.] burn, otherwise you'll be slinging KBOs for the next 50 years. # CLASS: player
+        
+            -> no_more_var_qs
+        
+        * * * ->
+        
+        - - - No good data, no good calcs, no good burns.  I spin off into the dark and everything goes pear.
+    
+    * * { Astronomy + Engineering >= 60 }Plotting adjusted trajectory.[]  Need to see where this takes us. # CLASS: player
+    
+        -> off_course
+    
+    * * { Astronomy + Engineering < 60 }What should we do? # CLASS: player
+    
+        Already chatting with Huo and eng.
+        
+        { wait(3) }
+        
+        -> needs_eva
+    
+    * * { Astronomy + Engineering >= 90 }We need to reboot the array.[]  Can you cycle the hadron splitter? # CLASS: player
+    
+        I... I don't think so.  Not from here.
+    
+        - - - (needs_eva)
+        
+        I don't have access to the processing ports.  We never thought they needed to be field-maintained.
+        
+        Engineers are working on a solve.
+        
+        { checklist_end > 3:
+
+           Not done with the checklist tho, right?
+
+        }
+        
+    - - (no_more_var_qs)
+    
+    { no_more_var_qs < 3:
+    
+        -> var_questions
+    
+    }
+
+- (checklist_end)
+
+{ checklist_end < 4:
+
+    -> checklist_top
+
+}
+
+{ wait(3) }
+
+Oh, sot.
+
+* What? # CLASS: player
+
+- Huo says I have to go outside.
+
+* Difficult problems have difficult solutions. # CLASS: player
+
+    - - (understated)That's an understatement.
+    
+    What do you have to do? # CLASS: player
+
+* That seems unwise. # CLASS: player
+
+    I don't think we have a choice.
+    
+    Never thought I'd actually need to go out there!
+    
+    What do you have to do? # CLASS: player
+
+* { Medicine + Psychology >= 60 }That's probably scary.[]  It's ok to be frightened.  The question is how you face this moment.  # CLASS: player
+
+    So, take a breath then tell me what's next. # CLASS: player
+    
+    { wait(3) }
+    
+    ~ stressCheck("-", -> next_steps, stress)
+        -> next    
+
+* { Astronomy + Engineering + Medicine >= 60 } You do have the tech to do this.[]  You and your team anticipated what it would take for you to conduct and EVA should it be absolutely necessary. # CLASS: player
+
+    Theoretically?  Yeah.
+    
+    Never thought it'd happen.
+    
+    So, what's next? # CLASS: player
+
+- (next_steps)
+
+Alright.
+
+Gotta cycle the gel, make sure I've got enough oxygen in the mix for how long I might be out there.
+
+Then deploy the sheath, trapping enough gel.
+
+Transfer to the airlock.  Clip into the rail.
+
+Cycle and open the exterior hatch.
+
+Ride the rail to the array and fix it.  Then rewind.
+
+Easy.
+
+* Sounds like a plan.[]  Time to execute it.  # CLASS: player
+
+* You wanted an adventure.[]  Here goes nothing. # CLASS: player
+
+    { understated:
+    
+        You are the master of understatement.
+    
+    - else: 
+    
+        That's an understatement.
+    
+    }
+    
+* { Engineering + Astronomy + Medicine >= 30 } If you leave the gel won't the gForce crush you? # CLASS: player
+
+    Already slowing down to make this safe.
+
+* Don't mess up.[]  You don't wanna know what happens to a gel-infused humanoid if you get exposed to vacuum. # CLASS: player
+
+    ~ stressCheck("+", -> eva, stress)
+        -> next    
+    
+- (eva)
+
+VAR clipped = false
+
+{ wait(2) }
+
+Ok.  Here goes.
+
+Cycling gel to get max O^2
+
+* Hold on. # CLASS: player
+
+    -> hold_on ->
+
+* [<< wait >>] # CLASS: player
+
+* { Engineering + Medicine >= 60 } Make sure your isotope levels balance.[]  We only just sorted the infusion regulator. # CLASS: player
+
+    Got it.
+
+- { wait(2) }
+
+Looking good.
+
+Deploying nano-sheath.
+
+* Wait a sec... # CLASS: player
+
+    -> hold_on ->
+
+* [<< wait >>] # CLASS: player
+
+* { Engineering + Technology >= 60 } [Cycle the power.]  Try cycling the power once before you commit.  The sheath hasn't been used in months so needs to reset it's spatial sensors. # CLASS: player
+
+    Ok.
+- { wait(2) }
+
+Deployed; cycling power.
+
+{ wait(1) }
+
+Looks good.
+
+Crossing the membrane into the airlock.
+
+{ wait(2) }
+
+Whoah.
+
+gForce is stronger than I thought.  Haven't felt this in ages.
+
+* { Medicine + Astronomy + Engineering >= 60 } The gel has protected you[.] from the strongest g's so far, but it should also have given you resistance to keep up your fitness. # CLASS: player
+
+    Yeah, just unexpected, that's all.
+
+* ->
+
+- (clipping) Opening the airlock.
+
+* Hold up. # CLASS: player
+
+    -> hold_on ->
+    
+* [<< wait >>] # CLASS: player
+
+* { Psychology >= 30 } You're [taking a big step.]stepping out into the stars where few have been before. # CLASS: player
+
+    Yeah, on the back of a speeding, prototype spacecraft trying to save myself from getting lost in the Oort Cloud.
+
+- (outside)
+
+Airlock opened.  Stepping out.
+
+* { clipped == false }One last thing. # CLASS: player
+
+    -> hold_on ->
+    
+* ->
+
+- Wow.
+
+* What I'd give to see what you're seeing. # CLASS: player
+
+    ¡awe!
+    
+    {pronouner("Choi","Chai","Chen")}!
+    
+    * * Tell me what it's like. # CLASS: player
+    
+        I mean, not much diff than the sims.
+        
+        ¡LafLaf! # CLASS: player
+        
+        The sheath compensates for the gunk some, and the stars, the galaxies, the whole emptiness is just _full_.
+        
+        You might have _seen_ this before.
+        
+        But you've never been this close to it.
+        
+        This real.
+        
+        * * * Sounds magnificent. # CLASS: player
+        
+            It's epic.
+            
+            I could stand here for the rest of my journey and just get lost.
+            
+            * * * * Not enough gel for that.[] Suffocating in that slime sounds unappealing. # CLASS: player
+            
+                Time to focus on your task. # CLASS: player
+                
+                -> goto_array
+            
+            * * * * You're not standing.[]  You're pushed into the back of a speeding spacecraft, so just stay sharp. # CLASS: player
+            
+                You don't wanna end up floating away. # CLASS: player
+                
+                -> freakout(-> goto_array)
+        
+        * * * Makes you wanna dance[?] on the back of your spacecraft? # CLASS: player
+        
+            Grand jeté my way all the way to the array.
+            
+            Grand jeté your way to being a KBO. # CLASS: player
+            
+            -> freakout(-> goto_array)
+        
+        * * * { Astronomy >= 30 } [Look ahead.]You should be looking straight at the center of the Milky Way.  The mass of stars closer to the center obscured by patches of dense dust in the arms between us. # CLASS: player
+    
+            { wait(4) }
+            
+            * * * * Benton? # CLASS: player
+            
+            * * * * [<< wait >>]
+            
+            - - - - { wait(4) }
+            
+            It's immense.
+            
+            Too immense.
+            
+            I...
+            
+            * * * * Whatcha thinking? # CLASS: player
+            
+                I'm a fool.
+                
+                I thought the smudge on the edge of a gas giant was the eye of a god, but here I am staring into the abyss of space and it is staring right back at me.  Right _IN_ to me.
+                
+                { wait(2) }
+                
+                𒀭𒀫𒌓
+            
+                ~ stressCheck("+", -> marduk_again, stress)
+                    -> next
+                    
+                - - - - - (marduk_again)
+                
+                * * * * * Benton, snap out of it! # CLASS: player
+                
+                * * * * * { Psychology >= 30 } [It's ok to marvel.]The staggering immensity of the cosmos is worth marvelling at.  But you have to keep perspective on what's at *your* scale.  Where do you fit in, Benton? # CLASS: player
+                
+                    Right here.
+                    
+                    I'm right here.
+                    
+                    ~ stressCheck("-", -> sorry, stress)
+                        -> next 
+                    
+                * * * * * Oh, this is fun. # CLASS: player
+                
+                - - - - - (sorry)Sorry.
+                
+                * * * * * Try to keep your feet on solid ground, yah?[]  Don't wanna get lost in space, figuratively or literally. # CLASS: player
+                
+                    -> freakout(-> goto_array)
+                
+                * * * * * Let's get on with your task. # CLASS: player
+                
+                    -> goto_array
+                
+            
+            * * * * Don't forget you have work to do. # CLASS: player
+            
+                ¡sigh!
+                
+                Yah.
+                
+                -> goto_array
+    
+    * * Stay focused, B.[]  You've gotta job to do out there. # CLASS: player
+    
+        -> goto_array
+
+* Stay on task. # CLASS: player
+
+    -> goto_array
+
+* Yeah, you could just float away now. # CLASS: player
+
+    -> freakout(-> goto_array)
+
+= freakout(-> afterfreak)
+
+{
+    - clipped == true && freakout == 1:
+    
+        Rail is clipped.  Not going anywhere.
+        
+            -> afterfreak
+            
+    - clipped == true:
+    
+        -> afterfreak
+    
+    - else:
+        
+        Oh.  Sot.
+}
+
+What? # CLASS: player
+
+Rail isn't clipped.
+
+~ stressCheck("+", -> time_to_clip, stress)
+    -> next
+    
+- (time_to_clip)
+
+* Ok.  Easy does it. # CLASS: player
+
+    {
+    - Psychology + Medicine >= 30:
+    
+        Keep breathing.  Clench that fear and focus on your next step. # CLASS: player
+        
+        ~ stressCheck("-", -> clipnow, stress)
+            -> next 
+    
+    - Astronomy + Engineering >= 30:
+    
+        You do not want to impart any momentum between you and the vessel. # CLASS: player
+
+    - else:
+    
+        You got this. # CLASS: player
+      
+    }
+        
+    - - (clipnow)Find something to hold on to, then clip. # CLASS: player
+
+* Well, clip it! # CLASS: player
+
+    Yah.  Thanks for the timely advice.
+
+* ¡LafLaf! # CLASS: player
+
+    No. Sotting. Help.
+
+- { wait(2) }
+
+Clipped.
+
+~ clipped = true
+
+Phew. # CLASS: player
+
+-> afterfreak
+
+= goto_array
+
+Making my way up the dorsal spine.
+
+Glad the nano-sheath has some chameleopads.  There's nothing to hold on to on this <>
+
+{ stress > elevated:
+
+    <> coffin.
+    
+- else: 
+
+    <> sleek, beautiful machine.
+    
+}
+
+* Keep calm[.] and carry on. # CLASS: player
+
+* Save the commentary. # CLASS: player
+
+* Move faster.[]  Maybe you'll get to escape velocity. # CLASS: player
+
+    -> freakout(-> moving)
+
+- (moving)
+
+Remember, you have a job to do. # CLASS: player
+
+Moving.
+
+{ wait(6) }
+
+* How's it going? # CLASS: player
+
+* Progress? # CLASS: player
+
+* Fall off yet? # CLASS: player
+
+    -> freakout(-> at_array)
+
+- (at_array)
+
+{ wait(2) }
+
+Made it to the HyperTrack array.
+
+Opening service panel.
+
+* Good luck. # CLASS: player
+
+* { Engineering + Astronomy >= 90 } Can you see the hadron splitter cycle control? # CLASS: player
+
+* { Security + Technology >= 60 } [Check for traces of nano-drone.]  Use your spectrometer to check the control circuits.  Any residual p-wave could indicate we had a visitor messing with us. # CLASS: player
+
+    Ok.
+    
+    { wait(2) }
+    
+    Not seeing anything.  Seems clean.
+    
+    Cycling the hadron splitter.
+    
+    You good? # CLASS: player
+
+* I hope you know what you're doing. # CLASS: player
+
+- Yah.
+
+I've got Huo on the other channel.  I'll let you know when I'm done.
+
+{ wait(10) }
+
+There.
+
+That wasn't so hard.
+
+* Great job![]  Head on back, choi! # CLASS: player
+
+    ~ stressCheck("-", -> donesky, stress)
+        -> next
+
+* Good.[]  Now head back to your gel-quarium. # CLASS: player
+
+* Don't get a big head.[]  You'll float off. # CLASS: player
+
+    -> freakout(-> donesky)
+        
+- (donesky)
+
+Returning to the airlock.
+
+Thanks for the encouragement, { pronouner("choi", "chai", "chen") }.
+
+I'm going to take an 10 hour nap after this excitement.
+
+You do that. # CLASS: player
 
 + [<< Close Chat >>] -> menu
 
-/*
-B reports unexpected issues with the craft
+= crayz
 
-The spacecraft reports some issues that Benton has to make an EVA to fix, separated from the depths of space by only a few layers of (advanced nano-tech) fiber.  He is in awe of his situation and has to be reminded to carry out the work.
+<< stress overload alarm >>
+{ wait(1) }
+<< stress overload alarm >>
+{ wait(1) }
+<< stress overload alarm >>
+{ wait(1) }
 
-Once complete he needs a little calming down as this could have potentially been a very serious issue.  They were lucky to catch it.  Projections are he can still complete the mission as planned (possibly behind schedule) but they can't afford more of these unexpected problems.
-*/
+<< Benzodiazepine gel infusion administered >>
+
+<< Dr. Lucas Estévez has taken operational control >>
+
+<< { name } has been blocked from this chat >>
+
+VAR blocked = true
+
+{ clipped == false && outside:
+
+    * [<< Exit >>]
+
+    # CLEAR
+    
+    << Benton floats off into space and dies. >>
+    
+    -> the_end
+
+- else: 
+
+    + [<< Close Chat >>] -> menu
+
+}
+
+= hold_on
+
+{shuffle: What's wrong?|Huh?|Trying to concentrate here.}
+
++ { clipping } Clip the rail! # CLASS: player.
+
+    Oh.
+    
+    Yeah.
+    
+    ~ clipped = true
+    
+    ->->
+
++ Just making sure you've taken every step. # CLASS: player.
+
++ You sure you know what you're doing? # CLASS: player.
+
++ Following your checklist? # CLASS: player.
+
+- {shuffle: Yes!|I'm not an imbecile!|Stop stressing!}
+
+->->
 
 === benton_07 ===
 
