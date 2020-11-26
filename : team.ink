@@ -656,13 +656,43 @@ We'll talk later. # CLASS: junia
 
 # CLEAR
 
+<< { name } is joining the team chat >> # CLASS: player
+
+<< Junia is joining the team chat >>
+
+<< Lucas is joining the team chat >>
+
+
+
+Junia has made a deal with Goliath.
+
+Estévez says Benton has to turn back or die.
+
+Destruction of the hero's plan...
+
+
+
+<< Dr. Estévez is leaving the team chat >>
+
+<< Junia is leaving the team chat >>
+
+<< TARC is leaving the team chat >>
+
+<< { name } is leaving the team chat >> # CLASS: player
+
++ [<< Close Chat >>]
+
+    -> menu
+
+/*
+
 J has cemented a deal with Goliath, infighting ensues
 
 Ostensibly the team chat starts with a call to action to help Benton out of his predicament.  They need to ensure all systems are backed-up and the craft can continue it's mission.  Or they need to decide what it would mean if things go bad for Benton right now.  Could he turn back early and would it make a difference?
 
 As the conversation progresses Junia asserts that changes in management are needed for the company.  Trying to keep things afloat with the founder out of touch with reality is a recipe for disaster.  She reveals she's been talking to Goliath and can secure a future for the organization and it's technology as a part of that empire.  She just needs the PC to convince Benton to give up the last vesitge of control in Nth Horizon (assuming they would not tell him about the sale because he'd flip).
 
-+ [Next] -> menu
+*/
 
 === team_04 ===
 

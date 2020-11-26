@@ -96,7 +96,7 @@ VAR debugging = false
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> news_06
+    -> junia_hack
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     

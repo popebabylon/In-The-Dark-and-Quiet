@@ -619,7 +619,566 @@ What Benton is doing tips the balance in our favor.
 
 We'll chat again soon.  Thank you.
 
-+ [<< Close Chat >>] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
+
+=== junia_hack ===
+
+~ temp junia_temper = 0
+
+VAR tarc_sees_junia = false
+VAR woodpecker_sees_junia = false
+
+# CLEAR
+
+Hey, Junia.  Are you around? # CLASS: player
+
+{ wait(3) }
+
+* I know you're busy.[]  But we haven't connected for a long time. # CLASS: player
+
+* Can you spare _any_ time for me? # CLASS: player
+
+* Not sure what you're playing at.[]  But this hard-to-get routine has gone on far too long. # CLASS: player
+
+    ~ junia_temper++
+
+- { wait(3) }
+
+* You keep making headlines[.] for good or ill.  # CLASS: player
+
+* Hope you're helping Benton[.] with all this jet-setting & junkets & interviews.  And not just making a name for yourself. # CLASS: player
+
+* Not proving to be much of a leader[.] IMO.  Absent without cause.  Get your head back in the game here! # CLASS: player
+
+    ~ junia_temper++
+
+- { wait(3) }
+
+* We need to talk.
+
+* { benton_06 && not benton_06.crayz}  Benton is holding together.[]  But only just. # CLASS: player 
+
+* { benton_06.crayz}  Benton is losing it. # CLASS: player 
+
+* { Business >= 30 }  I'm surprised that Nth isn't more stable.[]  Have you tried actually selling any tech as Benton had hoped? # CLASS: player
+
+* { Psychology >= 30 }  [I understand this is isolating.]For what it's worth, I can understand how isolated you feel. # CLASS: player
+
+    ~ junia_temper--
+
+* [<< wait >>]
+
+    { wait(3) }
+
+- { wait(3) }
+
+{ name }.
+
+Hello.
+
+* Hi Junia. # CLASS: player
+
+* [<< wait >>]
+
+* About time. # CLASS: player
+
+    ~ junia_temper++
+
+- Apologies.  Things have been so wretchedly busy I have neglected to connect with you in some time.
+
+How are you?
+
+* I'm fine. # CLASS: player
+
+    That's good to hear.
+
+* Struggling. # CLASS: player
+
+    I'm sorry.
+
+* Just peachy[.] no thanks to you. # CLASS: player
+
+    -> piss_off_junia(junia_temper) ->
+
+- Is there something I can help with?
+
+* [How are you?]Not specifically.  We just haven't talked in a long time.  How are you? # CLASS: player
+
+* Maybe.[]  You just dropped out after Jupiter.  I'd like to understand what's going on.  # CLASS: player
+
+* Start acting like a COO[.] and not a cheerleader dropout. # CLASS: player
+
+    -> piss_off_junia(junia_temper) ->
+
+- It's been a struggle to handle Nth business with Benton gone.
+
+I don't think I understood how hard it would be, and how important he was.
+
+* How important he *is*. # CLASS: player
+
+    Yes, of course.
+    
+    But he's not here right now, so all of the energy he brought, all the people he engaged with, that's all on my shoulders.
+
+* But Moonshot still needs help. # CLASS: player
+
+    I know.  I'm sorry.
+    
+    I know we've lost some people, and Benton is a difficult place.
+    
+    I will keep trying to get this project the support it needs.
+
+* So you're failing? # CLASS: player
+
+    No.
+
+    -> piss_off_junia(junia_temper) ->
+    
+- Is there something _specific_ I should turn my attention to right now?
+
+- (interview_j)
+
++ \ [{We need to do something about Benton.|About Benton.}] {We need to do something about Benton.|About Benton.} # CLASS: player
+
+    - - (whattodoaboutbenton)
+
+    * * { whattodoaboutbenton < 2 }I'm trying to keep him going.[]  But he's struggling. # CLASS: player
+    
+        I'm just not sure what else I can give? # CLASS: player
+        
+        You've been doing a difficult job for the past few months.  I appreciate that.
+        
+        But think of what Benton is doing.  As challenging as this is for us, we still have the opportunity to look friends and family in the eye, to connect both physically and emotionally.
+        
+        He's put himself in something not unlike solitary confinement.  And you're his anchor.
+        
+        I do hope you can keep trying to engage him, even if it's challenging.
+        
+        Is there anything else I should know about his condition?
+        
+        -> whattodoaboutbenton
+    
+    * * Dr. Estévez is keeping him at arms length. # CLASS: player
+    
+        I know the doc doesn't agree with the decision to push on, but <>
+        
+        { Medicine >= 60 || career == "a doctor":
+        
+            as a medical professional I feel it's my duty to point out the serious risk that brings to his patient. # CLASS: player
+            
+        - else: 
+        
+            cutting off B entirely seems dangerous.  I can't make any of those decisions. # CLASS: player
+        
+        }
+        
+        I understand.  We all know Benton can be difficult to work with.
+        
+        I'll talk to Lucas, try to get him to see reason.
+        
+        * * * Thank you.
+        
+        * * * { Psychology + Medicine >= 60 && tarceye_install == true && tarc_sees_junia == false } [<< tarceye link >> You should know the truth]
+
+            ~ tarc_sees_junia = true
+            
+            -> medical_truth
+
+        * * * { Psychology + Medicine >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< woodpeck link >> You should know the truth]
+    
+            ~ woodpecker_sees_junia = true
+            
+            - - - - (medical_truth)
+        
+            I think the situation is worse than you realize.  I've taken the liberty of analyzing some of Benton's medical results (the one's I can get my hands on at least) and the <span class="data"><< prognosis >></span> is not good.  I think you should take a look. # CLASS: player
+            
+            { wait(2) }
+        
+            That's not the kind of bedside manner to make someone feel at ease.
+            
+            I'm afraid this report is beyond my knowledge though.  What's the high-level takeaway?
+            
+            * * * * We need to pay more attention to his stress levels[.] and react to them more aggressively than Dr. Estévez has recommended. # CLASS: player
+            
+                I see.  I'm afraid I have to leave the details of that up to you and Dr. Estévez.  Please discuss your findings with him as soon as possible.
+            
+            * * * * He won't make it back to Earth alive. # CLASS: player
+            
+                { wait(3) }
+                
+                That's not good news.
+                
+                We always knew there was a high risk, especially with the biohack.
+                
+                But I held hope that he would beat those odds.
+                
+                { wait(3) }
+                
+                If you don't mind, let us keep this to ourselves for now.  I'd hate to give anyone the impression that this invaliates the mission.  And I think Lucas may need some time to come to the same conclusion.  Fair?
+                
+                Sure. # CLASS: player
+            
+            * * * * He has GHV. # CLASS: player
+            
+                { wait(3) }
+                
+                Not funny.
+                
+                -> piss_off_junia(junia_temper) ->
+            
+    
+    * * { benton_06 && not benton_06.crayz} [There was a serious problem.]We had a serious problem with Lowell's Horizon.  # CLASS: player
+
+        { Engineering + Technology + Astronomy >= 30:
+        
+            The HyperTrack array was out of alignment, by a significant degree. # CLASS: player
+        
+        - else:
+        
+            Something was way out of alignment. # CLASS: player
+        
+        }
+        
+        Benton had to { Engineering + Technology + Astronomy >= 30:execute an unplanned EVA|leave the ship} to fix it.  # CLASS: player
+        
+        I had reports from Huo and Lucas.  It sounds like Benton did extremely well under the circumstances.
+        
+        * * * Yes, he did. # CLASS: player
+        
+        * * * Sure, but the circumstances are suspect # CLASS: player
+        
+            How so?
+            
+            * * * * Looks like Goliath interference. # CLASS: player
+            
+                I can't quite see how that would be the case.
+                
+                We have no evidence that the encounter at Jupiter was anything but an observational flyby.
+                
+                And they wouldn't be able to keep up with him now.
+            
+            * * * * Any idea who could or would sabotage the project? # CLASS: player
+            
+                You mean at Nth Horizon?
+                
+                I don't believe anyone could have without TARC seeing it.
+                
+                It certainly wouldn't have been something they waited this long to execute even if there _were_ a conspiracy.
+            
+            * * * * Was the tech really up to par? # CLASS: player
+            
+                Yes, I believe so.
+                
+                For Benton's sake I hope it is.
+
+        - - - 
+            
+        In any case, the team is diagnosing the data and will have a full report for me later in the week.
+        
+        Thank you for your assistance in the matter.
+
+    * *   { benton_06.crayz }Benton lost it.[]  Estévez blocked me from talking to him. # CLASS: player
+    
+        Yes.  I heard as much from Lucas.
+        
+        The idea of bringing you onboard this project was to _prevent_ a breakdown.
+        
+        Should we be reconsidering your involvement?
+        
+        * * * No, I'm here to help.[]  It's just really hard sometimes to decide what's going to set him off.  Not the same as when you're looking each other in the eye and can get a sense of when you're prodding them too hard. # CLASS: player
+        
+        * * * Maybe you should.[]  I don't need to be treated like a second class citizen here! # CLASS: player
+        
+            -> piss_off_junia(junia_temper) ->
+            
+        - - - Right now you're the closest thing Benton has to a friend, for whatever that's worth.
+        
+        Try to keep him from going off the deep end, ya?
+    
+    * * { Psychology + Business >= 60 && tarceye_install == true && tarc_sees_junia == false && not achilles_hack } [<< tarceye link >> You should take control]
+        
+        ~ tarc_sees_junia = true
+        
+        -> achilles_hack
+    
+    * * { Psychology + Business >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false && not achilles_hack } [<< woodpeck link >> You should take control]
+    
+        ~ woodpecker_sees_junia = true
+    
+        - - - (achilles_hack)
+        
+        Benton's not fit to have any C&C power over Nth Horizon anymore.  I know you don't have the board fully in pocket yet, but I think I can help. # CLASS: player
+    
+        Here's a <span class="data"><< dataDump >></span> of some of my private chats with B.  I think you'll find them useful in taking control. # CLASS: player
+        
+        { wait(2) }
+        
+        This is surprising.
+        
+        * * * Just being practical. # CLASS: player
+        
+        * * * [<< wait >>]
+        
+        * * * Never said I was predictable. # CLASS: player
+        
+        - - - Hmmmm, this link doesn't appear to work though.
+        
+        Oh? # CLASS: player
+        
+        I'm just getting an empty screen.
+        
+        * * * Oh.  Sorry.  Not sure why that's not working. # CLASS: player
+        
+        * * * { Security + Technology >= 30 } Sot!  Looks like it got deleted.[]  Tarc must have thought it was a threat. # CLASS: player
+        
+        - - - I see.
+        
+    * * Nevermind.
+
+* Nth Horizon's business prospects are looking shakey. # CLASS: player
+
+    ~junia_temper++
+
+    That's one interpretation.
+    
+    As acting CEO and long-time COO I'm well aware of the challenges Nth Horizon faces.
+    
+    But I'm also working _very_ hard to mitigate those challenges.
+    
+    Unless you have some information I'm not otherwise privvy to, I think I'm in the best position to judge how my startCorp is faring.
+    
+    - - (businez)
+    
+    * * { businez < 2 }No offence.[]  It just worries those of us on the ground when the newsDrops all seem to think we're Goliath bait. # CLASS: player
+        
+        ~junia_temper--
+        
+        I understand.
+        
+        I can try to do better to share the truth of our situation.
+        
+        It's not all roses, but we do not need to fear becoming chum.
+        
+        -> whatelse
+    
+    * * { Business >= 30 && not achilles_hack } [*Acting* CEO of a company Benton still co-owns.]  You're the *acting* CEO of a company who's control still lies with Benton. # CLASS: player
+    
+        * * * { Psychology >= 30 } If you want to change that you're going to need friends. # CLASS: player
+        
+            I haven't said anything about changing that.
+            
+            { junia_02.junia_avarice: Yet. }
+        
+        * * * ->
+        
+        - - - Nth Horizon will succeed or fail on the efforts of Benton, myself, and everybody else involved.
+        
+        Yourself included.
+        
+        If you want those stock options to be worthwhile I suggest you pull your weight.
+        
+        -> businez
+
+    * * { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 }Your rep relies on some ruthless deal-making.[]  I'm starting to wonder if you have Benton's best interests at heart. # CLASS: player
+    
+        Having a reputation as an effective business leader is exactly _why_ Benton and I are working together.
+        
+        I make things happen.  He saw and encouraged that.
+        
+        What we've built as a result contains both of our DNA.
+        
+        * * * { kim_knows ? fake_lovechild } [Careful, the tabliods may be listening!]You might want to be careful with that analogy.  The tabloids have some funny ideas about you and Benton. # CLASS: player
+        
+            -> piss_off_junia(junia_temper) ->
+            
+        * * * Not sure the stakeholders at { player_knows ? entropic_goliath:Entropic Galactic|your previous startCorps} feel the same. # CLASS: player
+            
+            I work with business partners.  Not friends or family.
+            
+            We all play by the same rules.  I play to win.
+                
+                * * * * I see. # CLASS: player
+                
+                    -> whatelse
+                
+                * * * * Are you trying to sell out to Goliath behind B's back? # CLASS: player
+                
+                    -> selling_to_g
+        
+        * * * Are you trying to sell out to Goliath behind B's back? # CLASS: player
+        
+            - - - - (selling_to_g)
+            
+            { not junia_02.junia_avarice:
+            
+                No.
+                
+                And you are in no position to question the decisions I'm making for the good of this startCorp!
+                
+                -> whatelse
+            
+            }
+            
+            Why do you ask?
+            
+            * * * * If you betray Benton, you'll pay! # CLASS: player
+            
+                Betrayal is an impractical solution.  I suggest you look for conspiracy theories elsewhere.
+                
+                -> whatelse
+            
+            * * * * You suggested preparation for the future.[]  I'd like to be prepared.  # CLASS: player
+            
+                I see.
+                
+                I am businessperson, so I do business with a lot of people.
+                
+                Some of those people have ideas about the future that may require action on my part.
+                
+                When the time comes to act, I'll need people on my side.
+                
+                I think you understand.
+                
+                { wait(3) }
+    
+    * * ->
+    
+    - - 
+
+* { tarceye_install == true && tarc_sees_junia == false }I think TARC's watching you. # CLASS: player
+
+    Yes, as it should be.  That's how it does it's job.
+    
+    * * Good.  So you have nothing to hide? # CLASS: player
+    
+        Nothing I need to hide from TARC.
+    
+    * * What if it suspects something? # CLASS: player
+        
+        It would be making up stories, and I don't think that is within it's programming.
+        
+    * * { tarc_02.the_deal }It has asked me to spy on you. # CLASS: player
+    
+        { wait(2) }
+        
+        How interesting.
+        
+        I can only hope it is eliminating it's suspicions by doing so.
+        
+        I have nothing to hide from TARC.
+
+* { woodpeck_install == true && woodpecker_sees_junia == false }A Woodpecker is asking awkward questions. # CLASS: player
+
+    A... woodpecker?
+    
+    * * { knows_kim == true } A journalist.  Writing all those newsDrops about the company. # CLASS: player
+    
+        Let's see...
+        
+        { wait(3) }
+        
+        Kim Speight, yes?  She's always a thorn.
+        
+        Thank you for reporting her.
+    
+    * * { player_knows > nada } They seem to have some ideas about you. # CLASS: player
+    
+        A lot of people have ideas about me.
+        
+        That's what comes with success.  Suspicion.
+        
+        I assure you I'm probably far worse than they suspect...
+        
+        { wait(4) }
+        
+        ¡LafLaf!
+        
+        joke
+        
+        -> whatelse
+    
+    * * They hacked this system and are trying to dig up dirt on Benton. # CLASS: player
+    
+    * * Just a game, I think. # CLASS: player
+    
+    - - Please let TARC deal with them.
+    
+    As a reminder, you shouldn't be answering awkward questions otherwise you are in breach of your NDA.
+
+* { Security + Technology >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< brute force install woodpeck link >>]
+
+    ~ woodpecker_sees_junia = true
+    
+    << inject iam_mim^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x676f7463686121, respooling >> # CLASS: player
+    << inject woodpeck_install^...COMMIT >> # CLASS: player
+
+    { wait(2) }
+    
+    Sorry, something went haywire with my connection.
+
+* { Security + Technology >= 60 && tarceye_install == true &&  tarc_sees_junia == false } [<< brute force install tarceye link >>]
+
+    ~ tarc_sees_junia = true
+    
+    << inject iam_mim^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x657965737079, respooling >> # CLASS: player
+    << inject tarceye_install^...COMMIT >> # CLASS: player
+    
+    { wait(2) }
+    
+    My terminal is acting up.
+
+* \ {No, nothing|Nothing else}. # CLASS: player
+
+    -> interview_j_done
+
+- (whatelse)
+{~What else can I help with?|What should I focus on?|Is there another problem I should address|Need anything else?}
+
+-> interview_j
+
+- (interview_j_done)
+
+Very well.
+
+I'm glad we were able to catch up.  I'm sure we'll talk again soon.
+
+Goodbye, { name }
+
++ [<< Close Chat >>] -> menu
+
+= piss_off_junia(ref junia_temper)
+
+~ junia_temper++
+
+{ junia_temper > 2:
+
+    {stopping:
+    
+        - I'm not interested in playing games with you.
+        - Speaking your mind does not mean disrespecting me.
+        - Stop acting like a child.
+        - We're done here.
+            -> junias_done
+        
+    }
+    
+}
+
+->->
+
+= junias_done
+
+<< { name } has been blocked from this chat >>
+
++ [<< Close Chat >>] -> menu
 
 === junia_03 ===
 

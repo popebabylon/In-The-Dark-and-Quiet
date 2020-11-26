@@ -97,7 +97,7 @@
 
         {
         
-            - benton_06 && news_06:
+            - benton_06 && news_06 && junia_hack:
             
                 ~ status = (Enroute_to_Pluto)
                 
@@ -414,6 +414,12 @@
         ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
         ~ junia_chat_divert = -> junia_02.junia_return
+        
+    - status == (Crossing_Saturn_Orbit) && not junia_hack:
+    
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
+    
+        ~ junia_chat_divert = -> junia_hack
         
     - status == (Approaching_Pluto) && not junia_03: 
     

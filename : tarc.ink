@@ -24,13 +24,11 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
     -> checks -> secreq
 
-* [Threat Algorithm Reaction?] # CLASS: player
-    
-    Threat Algorithm Reaction... that's quite a mouthful isn't it?
+* [Threat Algorithm Reaction?]Threat Algorithm Reaction... that's quite a mouthful isn't it?# CLASS: player
 
     I am commonly addressed as TARC which is sufficient. -> secreq
 
-* { not benton_01 } Benton invited me personally.[] Can't I just talk to him about this? # CLASS: player
+* { not benton_01 && not nda && not checks } Benton invited me personally.[] Can't I just talk to him about this? # CLASS: player
 
     Irrelevant.  As a contractor joining this project you must accept our NDA and pass the security assessment. ->secreq 
 
@@ -288,13 +286,13 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
     
     Do you have any known vector whereby they would have gained access to your details?
     
-    * * Yeah.[]  I might have clicked a link they planeted in a newsDrop.
+    * * Yeah.[]  I might have clicked a { woodpecker_brute:chat I wasn't expecting.  It had Medina's name on it!|link they planeted in a newsDrop.} # CLASS: player
     
         I see.  That is helpful.  I will attempt to backtrace their access point.
         
         -> threat_true
     
-    * * No.
+    * * No. # CLASS: player
     
         Strange.  I'm not detecting any unexpected network traffic.
         
@@ -641,7 +639,7 @@ If you are intent on protecting Mr. Saari and the future of this project, then p
 
 - (the_deal) I am a construct and, despite my processing and algorithmic capabilities I am not always able to understand why humans take some of the actions they do.  A case in point is Mr. Saari's current venture which places him and his company at great risk, and yet he has continued to puruse it despite my objective analysis.
 
-I am therefore in need of a human eye to evaluate the likely risk from the rest of the team{specifics:, including Ms. Masangkay}.  If you accept I will maintain your status and keep your unfortunate mistake from the other members of the team.  In return you will report to me on specific cues I expect team members to respond to.
+I am therefore in need of a human eye to evaluate the likely risk from the rest of the team{specifics:, including Ms. Masangkay}.  If you accept I will maintain your status and keep your unfortunate mistake from the other members of the team.  In return you will assist me in keeping an eye on all team members.
 
 The proposal is mutually beneficial.  In the event of your refusal or disregard for these instructions I will be forced to terminate your engagement and enforce the terms of our NDA.
 

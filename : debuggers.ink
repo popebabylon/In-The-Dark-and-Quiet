@@ -32,8 +32,11 @@
     ~ status = (Crossing_Saturn_Orbit)
     
     ~ kim_knows += fake_cmo
-    
+    ~ player_knows += nada
 
+
+    ~ tarceye_install = true
+    ~ woodpeck_install = true
 }
 
 ~ return

@@ -142,7 +142,7 @@ U can call me Woodpecker.
 
 * Hello. # CLASS: player
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
     { wait(3) }
 
@@ -384,9 +384,9 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 ~ facts_shared++
 
-+ [<< Continue >>] # CLASS: player
++ [<< Continue >>]
 
-+ [<< Exit >>] # CLASS: player
++ [<< Exit >>]
 
     -> finish_trade
 

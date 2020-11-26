@@ -2862,7 +2862,25 @@ OK. Well. # CLASS: player
                 
                 * * * * * { charpreg } I was her surrogate. # CLASS: player
                 
-                - - - - - This is nutso.  It's been, what, 8 years?
+                - - - - - I...
+                
+                This is crazy.
+                
+                It's been, what, 8 years?
+                
+                Why would you bring it up now?
+                
+                * * * * * Need to come clean. # CLASS: player
+                
+                * * * * * You wanted to take your mind off of Jupiter, right? # CLASS: player
+                
+                - - - - -
+                
+                Well, hope you're happy.
+                
+                No, scratch that, I hope *she's* happy.
+                
+                We'll talk when I get back to Terra.
                     
             * * * * You had a lot of partners. # CLASS: player
             
@@ -3144,13 +3162,11 @@ I'm gonna sleep for a year now.
 
 === benton_06 ===
 
-# CLEAR
-
 ~ stress = (nominal)
 
 - (rise)
 
-* {wake_up_b < 1}Benton?  Hey, choi, how are you? # CLASS: player
+* {wake_up_b < 1}Benton?  Hey, choi, how are you? # CLASS: player # CLEAR
 
 * Wake up Benton. # CLASS: player
 
@@ -3174,11 +3190,19 @@ I'm gonna sleep for a year now.
 
 * [<< Request adreno shot from Dr. Estévez >>]
 
+    << Administered >>
+
 * { Medicine >= 30 && (Technology + Security >= 30 ) }[<< Administer Adreno Shot >>]
+
+    << Administered >>
 
 * [<< Request electro shock from TARC >>]
 
+    << Administered >>
+
 * { Technology + Security >= 60 } [<< Administer Electro Shock >>]
+
+    << Administered >>
 
 - Ugh.
 
@@ -3188,15 +3212,17 @@ I'm. Up.
 
 * Hey.  How do you feel? # CLASS: player
 
+    Like a warmed up corpse.
+
 * What's the hold-up? # CLASS: player
+
+    Moving slow.
 
 * Things to do, chuik. # CLASS: player
 
+    Yeah.  I getcha.
+
 - { wait(2) }
-
-Yeah.  I getcha.
-
-{ wait(2) }
 
 * C'mon.  I know this is hard[.], B.  You're almost further from home than anyone, ever, has ever been.  You're more along than I can understand.  But you gotta activate. Let's get your day started, yah? # CLASS: player
 
@@ -3488,7 +3514,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * Benton? # CLASS: player
         
-        ~ stressCheck("-", -> wrong, stress)
+        ~ stressCheck("+", -> wrong, stress)
             -> next
         
     - - (wrong)Something's wrong.
@@ -3754,7 +3780,7 @@ Cycling gel to get max O^2
 
     -> hold_on ->
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 * { Engineering + Medicine >= 60 } Make sure your isotope levels balance.[]  We only just sorted the infusion regulator. # CLASS: player
 
@@ -3770,7 +3796,7 @@ Deploying nano-sheath.
 
     -> hold_on ->
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 * { Engineering + Technology >= 60 } [Cycle the power.]  Try cycling the power once before you commit.  The sheath hasn't been used in months so needs to reset it's spatial sensors. # CLASS: player
 
@@ -3803,7 +3829,7 @@ gForce is stronger than I thought.  Haven't felt this in ages.
 
     -> hold_on ->
     
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 * { Psychology >= 30 } You're [taking a big step.]stepping out into the stars where few have been before. # CLASS: player
 

@@ -162,7 +162,7 @@ Clear?
 
 * Don't waste my time. # CLASS: player
 
-- #wait
+- { wait(3) }
 
 * Hello? # CLASS: player
 
