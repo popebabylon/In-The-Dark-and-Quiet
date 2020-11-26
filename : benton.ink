@@ -4089,7 +4089,7 @@ Opening service panel.
 
 * { Security + Technology >= 60 } [Check for traces of nano-drone.]  Use your spectrometer to check the control circuits.  Any residual p-wave could indicate we had a visitor messing with us. # CLASS: player
 
-    Ok.
+    - - (nodrone) Ok.
     
     { wait(2) }
     
@@ -4193,13 +4193,290 @@ VAR blocked = true
 
 === benton_07 ===
 
+# CLEAR
+
+It is found!
+
+* That's good! # CLASS: player
+
+* Uh, what is? # CLASS: player
+
+* Your sanity?  Not likely. # CLASS: player
+
+- I've been thinking, y'know, a lot.  Coz there's lots of time.  To think.
+
+{
+    - benton_06.outside:
+    
+        To tread the limitless gap between myself and the eye at the center of everything.
+        
+    - benton_06.crayz:
+    
+        The places my mind now wanders...  the paths it had previously feared to tread.
+        
+    - else:
+    
+        About what this means.  This crazy... stunt on the way to nowhere.
+
+}
+
+And in the middle of this rumination I found it.
+
+* Found what exactly? # CLASS: player
+
+* This is going well... # CLASS: player
+
+* { Psychology + Medicine >= 60 }Your self-reflection is admirable[.], but are you examining the process enough?  Have you taken the time to step back and watch your thoughts, decide if they are taking you in a positive direction? # CLASS: player
+
+    Watch them?
+    
+    Who watches them?  How does one who watch another who?
+    
+    Benton, I'd like you to take a moment and ask yourself why you would have these thoughts? # CLASS: player
+    
+    Take a breath.  And examine without judgement. # CLASS: player
+    
+    Then tell me if these thoughts benefit you. # CLASS: player
+    
+    { wait(3) }
+    
+    I think you're taking this too seriously.
+    
+    Any intelligent being should be allowed to examine each philosophical conundrum without being accused of insanity.
+    
+    Of course. # CLASS: player
+
+- The Question is what forces work against us.
+
+And it only stands to reason that the Answer to the Question is Gordian.  The most obvious Answer.
+
+TODO: replace foo with junia's betrayal
+* { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 or foo == true } Junia? # CLASS: player
+
+    She is close, she has her hand on the chain.
+    
+    * * Paranoia won't help, B. # CLASS: player
+    
+        It's not paranoia if it's true!
+    
+    * * Junia is bad news.
+    
+        Bad news is good news... first maxim of PR.
+        
+        ATTENTION is what's important.  PAY ATTENTION.
+    
+    * * On the chain?[]  Does Junia have something on you? # CLASS: player
+    
+        The tugging on strings, on heartstrings, on puppetstrings...
+    
+    * * { foo == true }  Benton, she's in bed with Goliath. # CLASS: player
+    
+        { wait(2) }
+        
+        We just found out she's been dealing with them all along. # CLASS: player
+        
+        { wait(2) }
+        
+        Et tu?
+        
+    - - But this is the microscopic, the unimportant detail against the backdrop of the macro.
+
+* Goliath? # CLASS: player
+
+    THEY HAVE NO POWER OVER ME!
+    
+    THEY HAVE NO POWER.
+    
+    THEY ARE THE FLAILING PIHRANA IN A BOILING POT.  THEIR TEETH CAN ONLY GNASH UNTIL THEY ARE FLAYED!
+    
+    * * Calm down, B![] You're right!  They can't touch you! # CLASS: player
+    
+        Never could.
+    
+    * * They're the biggest player in the system.[]  You don't get to just sidestep them. # CLASS: player
+    
+    * * { Psychology + Business >= 30 } Does their lack of power mean you also lack power?[]  Have you been comparing yourself to them all along? # CLASS: player
+    
+        Not anymore.
+        
+    * * { not benton_06.nodrone } They might have a nano-drone stowing away[.] and sabotaging your mission. # CLASS: player
+    
+        Their EYES and EARS and NOSES are irrelevant.
+        
+        And their HANDS are tied by the constant truth.
+        
+    - - They will find their David.  Someday.
+        
+    Until then they don't matter to me.
+
+* Marduk? # CLASS: player
+    𒀭𒀫𒌓
+    
+    𒀭𒀫𒌓
+    
+    𒀭𒀫𒌓
+    
+    
+    * * B, you're scaring me. # CLASS: player
+    
+    * * Yeah, I get it.[] Ancient Sumerian to talk about an ancient Sumerian god. # CLASS: player
+    
+        This high-school metaphysical paranoia is getting old. # CLASS: player
+        
+    * * { Psychology >= 60 } Benton, you're fixated[.] on this ancient Sumerian god.  You need to apply your critical thinking here.  No matter how stressful the situation is, what is the likelyhood that this fictional power definition device dreamt up by early human civilization has _any_ bearing on your predicament?
+    
+        -> benton_cooldown
+
+    - - The bull calf of the sun god Utu takes.  it TAKES!
+
+* { Psychology >= 30 } Yourself? # CLASS: player
+
+    - - (ofthegods) I am not of the gods.
+    
+    * * { Astronomy >= 30 } You are of stardust.[]  You're an incredible construction of billions of years of simple process built on simple process, resulting in the incredible complexity of the universe becoming aware of itself.  That's very special. # CLASS: player
+    
+    * * { Business >= 30 } But you've made your own kingdom.[]  You've built up companies and technologies that others could only dream of.  You make things happen.  That makes you special. # CLASS: player
+    
+	* * { Engineering >= 30 } You're shaping the world around you[.] with some of the most incredible engineering and the bold decisions to back them 100%.  That's a special insight.  # CLASS: player
+	
+	* * { Medicine >= 30 } No.  None of us are.[]  We're bags of meat and water held together by the unlikliest of circumstances.  We break very easily.  But you're here now and that is a special gift. # CLASS: player
+	
+	* * { Security >= 30 } You're a person[.] with hopes and dreams and things you hold dear.  And those things can be threatened, can be taken away, so you're looking for meaning.  Looking to make your place in the world special. # CLASS: player
+	
+	* * { Psychology >= 30 } An important observation.[]  I'm proud of you.  For thinking about your place in the cosmos.  But recognizing that tenuous, infintesimal position does not mean _you_ are not special. # CLASS: player
+	
+	* * { Technology >= 30 } We're just cogs in the machine[.] I suppose.  But that's ok.  Every line of code has meaning, has purpose.  Every line of code is special. # CLASS: player
+	
+	* * Yes.  You.  Are. # CLASS: player
+	
+	    -> benton_breakdown
+	
+	- - -> benton_cooldown
+
+* It's been me all along. # CLASS: player
+    
+    -> benton_breakdown
+
+* [<< wait >>]
+
+- The Answer is staring back at me.
+
+Only those of infinite power can hold back the will of a species, can throw down the gauntlets that shackle humanity!
+
+* Benton, this isn't helping! # CLASS: player
+
+* That's nutso. # CLASS: player
+
+* Totally. # CLASS: player
+
+- It's watching me.  Following every step on the path to the edge.
+
+When I close my eyes in the drug induced slumber of a child, I feel it's eye ever present.
+
+And the closer my goal becomes, the more the game is changed.  You see?
+
+Systems fail, friends betray, the project tries to fall apart.
+
+* No.[]  I don't see that.  I see a good friend losing his grip. # CLASS: player 
+
+    Come back to reality, B.  You're so far away and I don't know how to reel you in! # CLASS: player
+    
+* { Astronomy + Technology + Security + Engineering >= 30 } Systems are bound to fail.[]  You are pushing the bleeding edge of this tech and doing something noone else has tried.  So some stuff will break.  Some stuff will need maintenance.  It doesn't mean there's a cosmic conspiracy out to get you! # CLASS: player
+
+* { Psychology + Business >= 30 } You have a lot on your shoulders[.], B.  I get it. # CLASS: player
+
+    This is your moonshot in more ways than one.  And it's really hard to see some of it fail. # CLASS: player
+    
+    But you're no stranger to failure.  Stop trying to pass the buck and own those failures.  Learn from them.  # CLASS: player
+    
+    They can only make you stronger. # CLASS: player
+    
+* { Medicine >= 30 } [<< Recommend benzodiazepine gel infusion >>] Take a chill pill, B. # CLASS: player
+
+    << Administered >>
+    
+    You need to relax and think on this with a clear head. # CLASS: player
+
+* Definitely the work of an angry god. # CLASS: player
+
+-
+The horizon keeps shifting...
+
+...it's always so far away.
+
+The Answer is they don't play by the rules.  They don't.  So why should I?
+
+* You don't have a choice. # CLASS: player
+
+* This isn't a game. # CLASS: player
+
+* Don't.
+
+    -> benton_breakdown
+
+- You're in an impossible spot, Benton.  You're trapped by so many things. # CLASS: player
+
+But you can choose to take it in stride and deal with what's infront of you. # CLASS: player
+
+I don't think you're the target of a vengeful Sumerian god. # CLASS: player
+
+But I do think you're doing something incredible under difficult circumstances. # CLASS: player
+
+Please just give yourself some credit, give yourself a break. # CLASS: player
+
+And we'll deal with the practical steps one at a time. # CLASS: player
+
+Together. # CLASS: player
+
+{ not ofthegods:
+
+    -> ofthegods
+
+}
+
+-> benton_cooldown
+
+= benton_cooldown
+
+I...
+
+I suppose you're right.
+
+The... emptiness lets me get carried away.
+
+* I know.  Just take some time.[]  Try not to overthink things.  You've still got a long way to go. # CLASS: player
+
+* No kidding.[]  Try to avoid the deep end, yah? # CLASS: player
+
+- Ok.
+
+I need to take a moment.
+
+Talk later, k?
+
++ [<< Close Chat >>] -> menu # CLASS: player
+
+= benton_breakdown
+
+{ wait(6) }
+
+<< Benton has left the chat >>
+
+- (loopy)
+
++ \ { Benton\? | Hello\? | You still there\?}[]{ Benton\? | Hello\? | You still there\?} # CLASS: player
+
+    -> loopy
+
++ [<< Close Chat >>] -> menu # CLASS: player
+
+/*
 B says there's someone there sabotaging him
 
 Benton's philosophical ramblings take on a decidedly more paranoid tone as he claims the errors and breakdowns he's run in to could only be explained by a rouge agent onboard, someone intentionally sabotaging him.  Sabotaging the mission.  He can feel them watching him when he sleeps.  This enemy flits between being an actual stoaway, a Goliath agent on a parallel course, or an extradimensional being keeping humanity from the truth.
 
 If challenged he laughs it off as a joke, but appears slightly unhinged by the isolation and his brush with death.
-
-+ [Next] -> menu # CLASS: player
+*/
 
 === benton_08 ===
 

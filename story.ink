@@ -73,10 +73,11 @@ VAR Nth_IT = 50
 VAR woodhack = false
 
 // having a TODO makes it easy to jump here to turn on/off
-TODO: COMPILE: check debugger state
+TODO: COMPILE: check debugger state and clear foo VARS
 
-// set variable as true if you want to debug
+// set variable as true if you want to debug; use foo for testable variables you haven't set yet
 VAR debugging = false
+VAR foo = true
 
 // if ^ is true then turn on all the debugging things...
 { debugging:
@@ -96,7 +97,7 @@ VAR debugging = false
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> junia_hack
+    -> benton_07
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     
