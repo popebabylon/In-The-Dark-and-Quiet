@@ -40,6 +40,7 @@ pics = document.querySelectorAll(".picture-lg");
 			cont.style.border = "none";
 			cont.style.display = "inline-block";
 			cont.style.margin = "0.6rem";
+			cont.style.padding = "0";
 		};
 	
 	};
