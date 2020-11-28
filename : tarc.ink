@@ -2,7 +2,7 @@
 
 === tarc_profile ===
 
-<img src="img/tarc.jpg" class="picture-lg"><br><br>Name: Threat Algorithm Reaction Construct<br><br>Position: Mission Security<br><br>Pronouns: They/Them/Theirs<br><br>Skills: Security, Technology
+<img src="img/tarc.png" class="picture-lg"><br><br>Name: Threat Algorithm Reaction Construct<br><br>Position: Mission Security<br><br>Pronouns: They/Them/Theirs<br><br>Skills: Security, Technology
 
 ->->
 
@@ -12,7 +12,7 @@
 
 -> tarc_profile ->
 
-Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In order to unlock access to project resources and begin working with your colleagues I need you to review and accept our non-disclosure agreement and pass our initial security check.
+Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In order to unlock access to project resources and begin working with your colleagues I need you to review and accept our non-disclosure agreement and pass our initial security check. # CLASS: tarc
 
 - (secreq)
 
@@ -26,11 +26,15 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
 * [Threat Algorithm Reaction?]Threat Algorithm Reaction... that's quite a mouthful isn't it?# CLASS: player
 
-    I am commonly addressed as TARC which is sufficient. -> secreq
+    I am commonly addressed as TARC which is sufficient. # CLASS: tarc
+    
+        -> secreq
 
 * { not benton_01 && not nda && not checks } Benton invited me personally.[] Can't I just talk to him about this? # CLASS: player
 
-    Irrelevant.  As a contractor joining this project you must accept our NDA and pass the security assessment. ->secreq 
+    Irrelevant.  As a contractor joining this project you must accept our NDA and pass the security assessment. # CLASS: tarc
+    
+        ->secreq 
 
 * { Security + Technology >= 60 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank. # CLASS: player
 
@@ -120,9 +124,9 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
 = checks
 
-You will be asked a series of questions to evaluate your security risk potential.  A passing score of at least 85.7% is required to join the project. # CLEAR
+You will be asked a series of questions to evaluate your security risk potential.  A passing score of at least 85.7% is required to join the project. # CLEAR  # CLASS: tarc
 
-A colleague shares a link with you regarding their hobby, family, or other extra-business interests.  What do you do?
+A colleague shares a link with you regarding their hobby, family, or other extra-business interests.  What do you do? # CLASS: tarc
 
 ~ temp score = 0
 
@@ -138,7 +142,7 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
     ~ score++
 
-- The Nth Horizon secure communication platform will aggregate and display noteworthy news articles to you that are germane to the project.  If such an article contains a link to a picture, external resource, or social media feed what should you do?
+- The Nth Horizon secure communication platform will aggregate and display noteworthy news articles to you that are germane to the project.  If such an article contains a link to a picture, external resource, or social media feed what should you do? # CLASS: tarc
 
 + Follow the link.[]  I'm assuming your comms platform is secure and won't lead me astray, right? # CLASS: player
 
@@ -152,7 +156,7 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
     ~ score++
 
-- While conducting an inspection of the launch site you spot an unfamiliar package near the compressed hydrogen tanks.  What do you do? 
+- While conducting an inspection of the launch site you spot an unfamiliar package near the compressed hydrogen tanks.  What do you do? # CLASS: tarc
 
 + Open it.[]  Is it {~Christmas|Hannukkah|Purim|my birthday}? # CLASS: player
 
@@ -166,7 +170,7 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
     ~ score++
     
-- When working in the Nth Horizon communications platform you discover a bug or other unexpected behavior.  What do you do?
+- When working in the Nth Horizon communications platform you discover a bug or other unexpected behavior.  What do you do? # CLASS: tarc
 
 + { Technology >= 30 || Security >= 30 } Exploit it[?].  You'd want me to white-hat your system, right? # CLASS: player
     
@@ -184,6 +188,10 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
     ~ score++
 
+- The assessment is complete. # CLASS: tarc
+
++ [<< Continue >>]
+
 -
 << calculating >>
 << calculating >>
@@ -200,7 +208,7 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
 # CLEAR
 
-Your performance in the security testing is subpar.  Please try again.
+Your performance in the security testing is subpar.  Please try again. # CLASS: tarc
 
     + [<< Continue >>] # CLASS: player
     
@@ -212,7 +220,7 @@ Your performance in the security testing is subpar.  Please try again.
 
 = tarc_history
 
-My apologies, I am not currently able to place you in my chronology.
+My apologies, I am not currently able to place you in my chronology. # CLASS: tarc
 
 * You don't remember { name }, class of { date_year - 11 }? # CLASS: player
 
@@ -224,7 +232,7 @@ My apologies, I am not currently able to place you in my chronology.
     
 -    << processing >>
 
-Ah, { name }.  You were responsible for 3,231 updates to my code over the course of 3 years.  My emotion response and predictive analytics subroutines owe you a significant debt.
+Ah, { name }.  You were responsible for 3,231 updates to my code over the course of 3 years.  My emotion response and predictive analytics subroutines owe you a significant debt. # CLASS: tarc
 
 * Ah, you do remember! # CLASS: player
 
@@ -234,17 +242,17 @@ Ah, { name }.  You were responsible for 3,231 updates to my code over the course
 
 - What has Benton done with you? # CLASS: player
 
-In the eleven years since you worked with Mr. Saari on my code he was able to fork the initial AI framework into a number of experimental and lucrative projects, including the infamous Wài kōng shìxiàn incident.  He maintained ownership of my source code throughout and has been able to improve upon the initial design considerably.  The instance you are currently engaging has been customized to serve the needs of Nth Horizon, Inc and ensure Mr. Saari's interests are protected. 
+In the eleven years since you worked with Mr. Saari on my code he was able to fork the initial AI framework into a number of experimental and lucrative projects, including the infamous Wài kōng shìxiàn incident.  He maintained ownership of my source code throughout and has been able to improve upon the initial design considerably.  The instance you are currently engaging has been customized to serve the needs of Nth Horizon, Inc and ensure Mr. Saari's interests are protected.  # CLASS: tarc
 
 * Wài kōng shìxiàn? # CLASS: player
 
-- A rather regrettable affair in which the syphoning of data from UCD satellites led to Mr. Saari's arrest.  The prowess he displayed in conducting the project made him quite attractive to commercial interests which kept his incarceration short.
+- A rather regrettable affair in which the syphoning of data from UCD satellites led to Mr. Saari's arrest.  The prowess he displayed in conducting the project made him quite attractive to commercial interests which kept his incarceration short. # CLASS: tarc
 
 * I hope you're not doing anything illegal for him now. # CLASS: player
 
-- No.  Mr. Saari is a legitimate businessman and has built Nth Horizon to be the preeminent space technology startup in the world.
+- No.  Mr. Saari is a legitimate businessman and has built Nth Horizon to be the preeminent space technology startup in the world. # CLASS: tarc
 
-But I must insist you continue your security evaluation.
+But I must insist you continue your security evaluation. # CLASS: tarc
 
 ->->
 
@@ -252,21 +260,21 @@ But I must insist you continue your security evaluation.
 
 # CLEAR
 
-Thank you for your cooperation.  Your account has now been unlocked in accordance with your authorization profile.
+Thank you for your cooperation.  Your account has now been unlocked in accordance with your authorization profile. # CLASS: tarc
 
-Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, Nth Horizon, Inc, and the Moonshot project by any means necessary.  I trust you will assist me in this endeavor.
+Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, Nth Horizon, Inc, and the Moonshot project by any means necessary.  I trust you will assist me in this endeavor. # CLASS: tarc
 
 * I'll help however I can, TARC.  Thanks. # CLASS: player
 
-    Thank you.
+    Thank you. # CLASS: tarc
 
 * I'm not here to play red shirt. # CLASS: player
 
-    Your safety is not in jeopardy, so long as you do not jeopardize my mission parameters.
+    Your safety is not in jeopardy, so long as you do not jeopardize my mission parameters. # CLASS: tarc
     
 * And if I don't? # CLASS: player
 
-    Perhaps you should have read the NDA agreement more closely.
+    Perhaps you should have read the NDA agreement more closely. # CLASS: tarc
     
 -
 
@@ -304,9 +312,9 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
 
     That is unexpected.  Can you provide a memory reference?
     
-        * * 0x7065636b656420796f7521
+        * * 0x7065636b656420796f7521 # CLASS: player
         
-        * * Not at the moment.
+        * * Not at the moment. # CLASS: player
         
             -> how
 

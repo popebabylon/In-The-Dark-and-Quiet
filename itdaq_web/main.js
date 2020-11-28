@@ -72,6 +72,14 @@
                 else if( splitTag && splitTag.property == "CLASS" ) {
                     customClasses.push(splitTag.val);
                 }
+                
+                // custom PICSELECT sets the users picture for later use
+                else if( tag == "PICSELECT" ) {
+                	var picture = story.variablesState["picture"];
+                	var style = document.createElement('style');
+					document.head.appendChild(style);
+					style.sheet.insertRule('p.player::after {background-image: url("' + picture + '");}');
+				}
 
                 // CLEAR - removes all existing content.
                 // RESTART - clears everything and restarts the story from the beginning
@@ -112,6 +120,17 @@
                 // check the class for "wait"; if so set the delay
                 if ( customClasses[i] == "wait" ) {
                 	pdelay = 1000.0
+                }
+                // check the class for npc name; if so, set chat class
+                switch ( customClasses[i] ) {
+                	case "tarc":
+                	case "benton":
+                	case "junia":
+                	case "lucas":
+                	case "kim":
+                		paragraphElement.classList.add("chat");
+                	default:
+                		// no action
                 }
             }
 

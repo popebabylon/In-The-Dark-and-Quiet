@@ -66,7 +66,7 @@ Select your identity for biometric validation. # CLEAR
 
     ~ picture = "img/p09.png"
 
-- (pick_name)
+- (pick_name) # PICSELECT
 
 // name
 Your identity has been verified.  Manual verification of your name is required. # CLEAR

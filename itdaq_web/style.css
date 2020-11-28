@@ -132,12 +132,70 @@ p.info {
 	border: none;
 }
 
+/* custom style for player paragraphs */
+
 p.player {
     font-size: 1rem;
     color: #000000;
     background: rgba(255, 255, 255, 0.5);
 	border: 1px solid #FFFFFF;
 	border-radius: 8px;
+	padding-right: 2rem;
+    text-align: right;
+}
+
+p.player::after {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    background-image: none;
+    background-size: cover;
+    background-color: #888888;
+    border-radius: 100%;
+    border: 0.14rem solid white;
+    position: absolute;
+    margin-top: -1.4rem;
+    margin-left: 0.8rem;
+}
+
+/* custom style for chat partner paragraphs */
+
+p.chat {
+    padding-left: 2rem;
+}
+
+p.chat::before {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 100%;
+    border: 0.14rem solid white;
+    position: absolute;
+    margin-left: -3rem;
+    margin-top: -1.4rem;
+}
+
+p.tarc::before {
+    background-image: url("img/tarc.png");
+}
+
+p.benton::before {
+    background-image: url("img/benton.png");
+}
+
+p.junia::before {
+    background-image: url("img/junia.png");
+}
+
+p.lucas::before {
+    background-image: url("img/lucas.png");
+}
+
+p.kim::before {
+    background-image: url("img/kim.png");
 }
 
 /* custom style for about page */
