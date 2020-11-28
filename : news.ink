@@ -221,7 +221,7 @@
 }
 <> has said they have every faith in Saari and his successful return in 2 years time.</p><>
 
-<><p class="info">We'll have more exclusive details on the historic Nth Horizon mission and Goliath's life-changing moves in the industry.</p>
+<><p class="info">We'll have more exclusive details on the historic Nth Horizon mission and Goliath's life-changing moves in the industry.</p><>
 
 <><p class="info">Don't miss a drop! Subscribe now!</p>
 
@@ -229,23 +229,62 @@
 
 -    -> menu
 
-/*
-Headline about Goliath gobbling up more competition
-
-work in any juice player gave woodpecker
-
-News source article that describes Goliath pushing into more territory.  The author shows surprise that Nth Horizon has not become a victim yet.
-*/
-
 === news_07 ===
 
 # CLEAR
 
-Headline about the problems B has, can he make it?
+<h2>To B Or Not To B</h2><>
+<><h4>Benton Saari's historic flight to the edge of the system hangs on a knife-edge</h4><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 22:15 UTC</p><>
+<><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
 
-News source describing the growing risk for Benton if his technology fails.  It won't just be the end of his mission and his life, but could spell the end for his company.  There are plenty of big sharks out there willing to scoop up a struggling start-up.
+<><p class="info">Now almost 2 billion miles from home, the founder and CEO of Nth Horizon has made history by being the furthest a human has ever travelled from the cradle of our species.  Only un-crewed and robotic vessels have ever travelled to these depths of space.  The question almost certainly remains, will he make it home?</p><>
 
-+ [Next] -> menu
+<><p class="info">Our exclusive source at Nth Horizon has recently dropped incredible new details about the endeavor.  Read on for more details!</p><>
+{
+	- kim_knows ? fake_lovechild_battle:
+		<><p class="info">In a startling turn of events it has been <>
+		{
+			- kim_knows ? fake_lovechild:
+				<>confirmed that a child is accompanying Saari as we reported some months ago.<>
+			- else:
+				<>revealed that Benton is sharing the Lowell's Horizon with the illegitimate child he conceived with Junia Masangkay!<>
+		}
+		<>  The scion of CEO & CEO has apparently been bio-engineered to grow at an alarming pace and is now challenging it's father for control of the vessels limited resources.  What the creature will do if it defeats Saari has yet to be seen, but allusions the entrepreneur has made to alien pacts and ancient evils point to a terrifying fate for both father and son.</p><>
+	- kim_knows ? benton_eva:
+		<><p class="info">We received a chilling report of desperate repairs made during an incredible EVA (extravehicular activity).  Analysts confirm that, if true, this would mark the furthest and fastest object ever to be manually repaired by a human, and marks another incredible milestone for the tech entrepreneur.  The risks of such a task cannot be understated.</p><>
+		<><p class="info">However, this daring repair does raise questions about how shipshape the experimental vessel is and whether or not Saari can be expected to keep it in one piece for the return journey.</p><>
+	- else:
+		<><p class="info">The answer is one obfuscated and tied up in red tape and riddles.  Internal sources at Nth Horizon have been tight-lipped and direct all requests for comment to acting CEO Junia Masangkay who has been in non-stop meetings throughout the Paris Exposition { date_year }.  At a recent press event she stated "Nth Horizon is incredibly proud of the cutting edge technology that has supported the milestone achievements of Lowell's Horizon."</p><>
+		<><p class="info">"Robots have flown there, gods have flown there, and now Nth Horizon has flown there," she added, "and we look forward to flying there with our partners in future."  Saari's current condition was not discussed.</p><>
+}
+<><p class="info">Whatever the fate of the Lowell's Horizon, one thing remains clear.  Nth Horizon is still struggling to bring about the future it has so aggressively touted.  <>
+{
+	- kim_knows ? fake_tarc_singularity:
+		<>According to our source, this may be a good thing!  Nth Horizon's Threat Algorithm Response Construct (TARC) has reportedly shown signs of having reached the von Neumann Singularity!  The troublesome AI project that Benton Saari first conceived in is post-doc days and later made headlines with the Wài kōng shìxiàn incident would be dangerously equipped to wreck havoc on the systemNet and at present (as far as we can ascertain) has not escaped the confines of Nth's internal networks.  Masangkay refused to comment on the accusations, but international bodies are surely taking note of the dangerous post-human aspirations of this startCorp.  <>
+	- else:
+		<>Investors have been slow to commit additional funding as the threat of Goliath, Inc looms over the sector.  While many are slowly showing signs of being impressed by the accomplishments of Lowell's Horizon, there still remains trepidation that the spoils of success will be sucked up by the black hole of another hostile takeover.  Rumors have even begun circulating that Junia Masangkay herself has begun secretive talks with smaller sharks like SaturnExpress in order to protect her interests from a complete internal collapse.  <>
+		~ player_knows += junia_dealing_w_goliath
+}
+<>What that means for the future of Nth's CEO some 2 billion miles away remains to be seen.</p><>
+
+<><p class="info">Saari, at the very least, has remained elusive and quiet, a far distant shadow of the once enigmatic entrepreneur.  While his executive team at Nth Horizon still has regular live communication with the man through their revolutionary q-sat system, he has refused all connection with press, friends, or family on his lonely sojourn.</p><>
+
+{
+	- kim_knows ? fake_rednail_resupply:
+		<><p class="info">Or has he?  We have direct intelligence that indicates Saari's ship has been  intercepted by the Rednail DSJ "Aliana's Revenge", purportedly to deliver supplies and fuel.  This revelation will send a shockwave through the system as all the touted technology of Nth Horizon suddenly becomes suspect.  Have the rumors that this was all a carefully planned hoax been true?</p><>
+		<><p class="info">More importantly, was the beautiful young leader of the Martian revolution onboard her namesake vessel, and what does this power-couple-tryst mean for Saari and Masangkay's purported passion?</p><>
+	- kim_knows ? benton_crazy2:
+	<><p class="info">Our intel seems to indicate this removal from worldly affairs could be the result of severe mental strain, possibly even collapse.  Saari has been reported to show an increasing obsession with the ancient Sumerian god, Marduk, and have paranoid delusions about sabotage attempts on his vessel.  Whether or not there is any truth to these claims it is clear that the forceful personality we knew on Terra will have been reshaped by the forces of loneliness and vastness the cosmos bring to the human psyche.</p><>
+}
+
+<><p class="info">Our coverage of the incredible journey Nth Horizon and it's leaders have taken will continue.</p><>
+
+<><p class="info">Don't miss a drop! Subscribe now!</p>
+
++ [<< Close news >>]
+
+-    -> menu
 
 === news_08 ===
 
