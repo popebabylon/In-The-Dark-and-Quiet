@@ -1338,9 +1338,7 @@ What's new in the real world?
     
 }
 
-- * -> nomorefun
-
-TODO: test default path
+- -> nomorefun
 
 = nomorefun
 
@@ -3083,11 +3081,17 @@ I'm gonna sleep for a year now.
 
 - (wait_for_b)
 
-+ Benton!  Answer me! -> wait_for_b
++ Benton!  Answer me! # CLASS: player
 
-+ [<< wait >>] -> wait_for_b
+    -> wait_for_b
 
-+ [<< Close Chat >>] -> menu
++ [<< wait >>]
+
+    -> wait_for_b
+
++ [<< Close Chat >>]
+
+    -> menu
 
 === function stressCheck(direction, nextstep, ref stressList) === 
 
@@ -3164,9 +3168,12 @@ I'm gonna sleep for a year now.
 
 ~ stress = (nominal)
 
+# CLEAR
+<< patient's stress level is { stress } >>
+
 - (rise)
 
-* {wake_up_b < 1}Benton?  Hey, choi, how are you? # CLASS: player # CLEAR
+* {wake_up_b < 1}Benton?  Hey, choi, how are you? # CLASS: player
 
 * Wake up Benton. # CLASS: player
 
@@ -3188,13 +3195,19 @@ I'm gonna sleep for a year now.
 
 * [<< Trigger Alarm >>]
 
+    << Cortical Alarm Activated >> # CLASS: player
+
 * [<< Request adreno shot from Dr. Estévez >>]
 
     << Administered >>
+    
+    ~ drugs++
 
 * { Medicine >= 30 && (Technology + Security >= 30 ) }[<< Administer Adreno Shot >>]
 
     << Administered >>
+    
+    ~ drugs++
 
 * [<< Request electro shock from TARC >>]
 
@@ -3439,7 +3452,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
         Ok.
     
-    * * You're still in a nightmare. # CLASS: player.
+    * * You're still in a nightmare. # CLASS: player
     
         How droll.
         
@@ -3485,11 +3498,11 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
          ~ stressCheck("+", -> hold_together, stress)
                 -> next
     
-    - - (hold_together)Hear me, baby?  Hold together.
+    - - (hold_together)"Hear me, baby?  Hold together."
     
     Next checkpoint?
     
-    * * Re-align hyperecliptic tracking.
+    * * Re-align hyperecliptic tracking. # CLASS: player
     
     * * { Psychology >= 60 }Take a moment.  You're doing great.[]  You've got all the time you need to breathe and do this right. # CLASS: player
     
@@ -4145,6 +4158,8 @@ You do that. # CLASS: player
 
 << Benzodiazepine gel infusion administered >>
 
+~ drugs++
+
 << Dr. Lucas Estévez has taken operational control >>
 
 << { name } has been blocked from this chat >>
@@ -4250,8 +4265,7 @@ And in the middle of this rumination I found it.
 
 And it only stands to reason that the Answer to the Question is Gordian.  The most obvious Answer.
 
-TODO: replace foo with junia's betrayal
-* { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 or foo == true } Junia? # CLASS: player
+* { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 or player_knows ? junia_dealing_w_goliath } Junia? # CLASS: player
 
     She is close, she has her hand on the chain.
     
@@ -4259,7 +4273,7 @@ TODO: replace foo with junia's betrayal
     
         It's not paranoia if it's true!
     
-    * * Junia is bad news.
+    * * Junia is bad news. # CLASS: player
     
         Bad news is good news... first maxim of PR.
         
@@ -4269,7 +4283,7 @@ TODO: replace foo with junia's betrayal
     
         The tugging on strings, on heartstrings, on puppetstrings...
     
-    * * { foo == true }  Benton, she's in bed with Goliath. # CLASS: player
+    * * { player_knows ? junia_dealing_w_goliath }  Benton, she's in bed with Goliath. # CLASS: player
     
         { wait(2) }
         
@@ -4309,7 +4323,7 @@ TODO: replace foo with junia's betrayal
         
     Until then they don't matter to me.
 
-* Marduk? # CLASS: player
+* (sumerian)Marduk? # CLASS: player
     𒀭𒀫𒌓
     
     𒀭𒀫𒌓
@@ -4381,7 +4395,7 @@ Systems fail, friends betray, the project tries to fall apart.
 
     Come back to reality, B.  You're so far away and I don't know how to reel you in! # CLASS: player
     
-* { Astronomy + Technology + Security + Engineering >= 30 } Systems are bound to fail.[]  You are pushing the bleeding edge of this tech and doing something noone else has tried.  So some stuff will break.  Some stuff will need maintenance.  It doesn't mean there's a cosmic conspiracy out to get you! # CLASS: player
+* { Astronomy + Technology + Security + Engineering >= 30 } Systems are bound to fail.[]  You are pushing the bleeding edge of this tech and doing something no one else has tried.  So some stuff will break.  Some stuff will need maintenance.  It doesn't mean there's a cosmic conspiracy out to get you! # CLASS: player
 
 * { Psychology + Business >= 30 } You have a lot on your shoulders[.], B.  I get it. # CLASS: player
 
@@ -4392,6 +4406,8 @@ Systems fail, friends betray, the project tries to fall apart.
     They can only make you stronger. # CLASS: player
     
 * { Medicine >= 30 } [<< Recommend benzodiazepine gel infusion >>] Take a chill pill, B. # CLASS: player
+
+    ~ drugs++
 
     << Administered >>
     
@@ -4469,14 +4485,6 @@ Talk later, k?
     -> loopy
 
 + [<< Close Chat >>] -> menu # CLASS: player
-
-/*
-B says there's someone there sabotaging him
-
-Benton's philosophical ramblings take on a decidedly more paranoid tone as he claims the errors and breakdowns he's run in to could only be explained by a rouge agent onboard, someone intentionally sabotaging him.  Sabotaging the mission.  He can feel them watching him when he sleeps.  This enemy flits between being an actual stoaway, a Goliath agent on a parallel course, or an extradimensional being keeping humanity from the truth.
-
-If challenged he laughs it off as a joke, but appears slightly unhinged by the isolation and his brush with death.
-*/
 
 === benton_08 ===
 

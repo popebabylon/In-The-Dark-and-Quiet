@@ -34,6 +34,7 @@ And I disagree. # CLASS: benton
 
 # CLASS: tarc
 Mission Status: { status } <br> Engineering: On track <br> Navigation: On track <br> Communication: On track <br> Medical: At Risk <br> Security Assessment: Normal <br> Public Relations: Normal  <br>  <br> Medical is at risk due to dependencies on pilot readiness and gel-quarium systems integration / testing.
+TODO: function for mission status
 
 That's from your report. # CLASS: benton
 
@@ -226,7 +227,7 @@ We're getting closer to that launch window.  B, we need to talk about handing R 
 
     Certainly.  But it would be easier if I had <>
     
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
     Junia, I get it, but I'm not gone yet. # CLASS: benton
 
@@ -317,6 +318,7 @@ TARC, bootOverride { name } # CLASS: junia
 
 # CLASS: tarc
 Mission Status: { status } <br> Engineering: Go for Launch <br> Navigation: Go for Launch <br> Communication: Go for Launch <br> Medical: Pending... <br> Security Assessment: Normal <br> Public Relations: Normal
+TODO: function for mission status
 
 Thx, TARC. # CLASS: benton
 
@@ -656,27 +658,597 @@ We'll talk later. # CLASS: junia
 
 # CLEAR
 
+<< TARC has started the chat >>
+
 << { name } is joining the team chat >> # CLASS: player
 
 << Junia is joining the team chat >>
 
 << Lucas is joining the team chat >>
 
+Team meeting can begin. # CLASS: tarc
+
+Good morning. # CLASS: junia
+
+* Hi, Junia. # CLASS: player
+
+* I'm here. # CLASS: player
+
+* It's evening for [some of us.]those of us not jet-setting to europe. # CLASS: player
+
+- Hi. # CLASS: lucas
+
+Let's start with mission status, TARC. # CLASS: junia
+
+TODO: function for mission status
+
+Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <br> Communication: Nominal <br> Medical: At Risk <br> Security Assessment: At Risk <br> Public Relations: At Risk  <br>  <br> Medical is at risk due to increased stress load and repeated low isotope count in infusion refresh. <br>  <br> Security is at risk due to high volume of network traffic. <br> <br> Public Relations is at risk due to increased scrutiny of the mission and repeated third-party articles & opinions doubting success.
+
+- (mission_reports)
+
+* { not prognosis }Lucas, what's going on with Benton's health? # CLASS: player
+
+    - - (med_report)
+    
+    {
+        - benton_07.benton_breakdown:
+        
+            I'm sorry, are you unaware of the criminally negligent way you've been handling the patient! # CLASS: lucas
+            
+            You can't even have a normal conversation with him without sending him off the deep end! # CLASS: lucas
+        
+        - benton_06.crayz:
+        
+            What's going on?  You've been absolutely and criminally negligent in your duties! # CLASS: lucas
+        
+            {
+                - benton_06.outside:
+                
+                    You botched handling his EVA and almost sent him spinning off into space! # CLASS: lucas
+                
+                - else: 
+                
+                    He crumpled during a routine checklist rundown that YOU'RE responsible for! # CLASS: lucas
+            
+            }
+        
+        - benton_05.popped:
+        
+            Don't you remember Jupiter? # CLASS: lucas
+            
+            You practically sent him into a catatonic stupor with your prattling! # CLASS: lucas
+        
+        - drugs > 3:
+        
+            Why are you asking me?  You're so damned eager with the infusions. # CLASS: lucas
+        
+        - else:
+        
+            We've sent an unprepared man with bleeding-edge bio-hacks out where we can't administer effective aid. # CLASS: lucas
+            
+            I'm not sure what else we were expecting to happen. # CLASS: lucas
+            
+            -> prognosis
+    
+    }
+    
+    - - (angry_lucas)
+    
+    The man's a complete wreck and drugged to the gills in order to keep him remotely sane! # CLASS: lucas
+    
+    I'm not sure why we're even talking to you?  # CLASS: lucas
+    
+    Junia, why { pronouner("is he","is she","are they") } even still ON this project?  # CLASS: lucas
+    
+    * * I'm sorry, Lucas.[]  We're all doing the best we can. # CLASS: player
+    
+    * * { Medicine < 60 }I'm not the medical expert![]  You are! # CLASS: player
+    
+    * * { Medicine >= 60 or career == "a doctor" }Dr. Estévez, I have to disagree.[]  Your prescriptions of infusions are completely out of line with expected requirements in this environment. # CLASS: player
+    
+    * * { Psychology >= 30 } Lucas, we've all made mistakes.[]  Those are bound to happen in this pressure-cooker of a mission.  I need you to focus and tell us what we can do moving forward. # CLASS: player
+    
+    * * Sot off, Lucas. # CLASS: player
+    
+    - - I wasn't asking you! # CLASS: lucas
+    
+    Ok people, let's keep calm. # CLASS: junia
+    
+    - - (prognosis)Lucas, we do need to understand next steps.  What is the prognosis? # CLASS: junia
+    
+    { wait(2) }
+    
+    Ok.  # CLASS: lucas
+    
+    It's not good. # CLASS: lucas
+    
+    If we don't induce suspension and turn him around now there's a good chance he'll face complete { angry_lucas:mental collapse|physiological degeneration } before reaching Pluto, let alone on the way back. # CLASS: lucas
+    
+    I don't know how many times I need to say this, but we should bring him home. # CLASS: lucas
+    
+    * * That sounds reasonable. # CLASS: player
+    
+    * * You said "chance."[]  So he could still make it. # CLASS: player
+    
+        Yes.  <>
+        
+    * * We can put him in suspension? # CLASS: player
+    
+        Yes.  Cryosleep using the gel medium.  It would arrest any further degredation until we can get him back home. # CLASS: lucas
+        
+        An option that Mr. Saari explicitly stated would not be used except in the most dire circumstances.  To enact this would require an unanimous vote from the executive team. # CLASS: tarc
+        
+        Hold on. # CLASS: junia
+    
+    * * [<< wait >>]
+    
+    - - There's still the opportunity that he completes his goal? # CLASS: junia
+    
+    ¡sigh! # CLASS: lucas
+    
+    Yes.  Yes, he could make it. # CLASS: lucas
+    
+    We will be riding him on the razor's edge. # CLASS: lucas
+    
+    * * "Be bold[.]", a Benton favorite maxim. # CLASS: player
+    
+        Indeed.  Take the risks or be left behind. # CLASS: junia
+    
+    * * That sounds pretty risky. # CLASS: player
+    
+        That's my point. # CLASS: lucas
+        
+        This whole endeavour is risky. # CLASS: junia
+    
+    * * Benton, DGAS.[] Pedal to the metal! # CLASS: player
+    
+        { name }, perhaps you could let the adults finish this conversation? # CLASS: junia
+        
+        The mission has always been risky. # CLASS: junia
+        
+    * * [<< wait >>]
+    
+    - - Benton would not want to turn around.  That I know. # CLASS: junia
+    
+    We need to keep a close eye, but for now we continue to ride that edge.  # CLASS: junia
+    
+    Agreed? # CLASS: junia
+    
+    Per Benton's express wishes, Agreed. # CLASS: tarc
+    
+    * * Agreed. # CLASS: player
+    
+    * * Disagree.[]  Lucas is the CMO here, we should be following his lead. # CLASS: player
+    
+        Yes.  You should. # CLASS: lucas
+        
+        I can't go along with this Junia.  # CLASS: lucas
+        
+        I see. # CLASS: junia
+        
+        { wait(2) }
+        
+        Unfortunately the decision to abort requires a unanimous vote, so at this time we are proceeding as planned. # CLASS: junia
+        
+        * * * You can't be serious? # CLASS: player
+        
+            Ms. Masangkay is correct.  Mr. Saari's instructions were quite specific. # CLASS: tarc
+        
+        * * * [<< wait >>]
+        
+        - - - -> option_to_resign
+    
+    * * Abstain. # CLASS: player
+    
+    - - 
+    
+    { wait(2) }
+    
+    I see. # CLASS: lucas
+    
+    It appears I don't have enough support to make this unanimous. # CLASS: lucas
+    
+    I cannot go on record as having agreed to this decision, so I will abstain. # CLASS: lucas
+    
+    Noted. # CLASS: junia
+    
+    - - (option_to_resign)Lucas, if you are unable to continue in the role of CMO given this situation I will not fault you for tendering your resignation. # CLASS: junia
+    
+    I believe Dr. Ashton could step in to the role. # CLASS: junia
+    
+    { wait(2) }
+    
+    You're not getting rid of me that easily. # CLASS: lucas
+    
+    Very well. # CLASS: junia
+    
+    -> check_mission_reports
+
+* TARC, can't you shut down unauthorized network traffic? # CLASS: player
+
+    Yes. # CLASS: tarc
+
+    - - (sec_report)
+    
+    Current loads have been authorized. # CLASS: tarc
+    
+    The risk factor is elevated due to the small but non-zero chance some authorized paths have been compromised and therefore the heightened network traffic is driven by bad actors. # CLASS: tarc
+    
+    * * So what do we do about it? # CLASS: player
+    
+    * * "Bad actors?" # CLASS: player
+    
+        Persons or systems acting in a manner counter to Nth Horizon, Moonshot, and Mr. Saari's interests. # CLASS: tarc
+        
+    - - At this time there are no immediate actions to take.  I am continuing to collate and process information as it becomes available.  I will report back if any unexpected threats become actionable. # CLASS: tarc
+    
+    - - (question_tarc)
+    
+    * * Sounds good. # CLASS: player
+        
+        -> end_question_tarc
+    
+    * * { tarc_02.the_deal } Not sure you're being straight with us[.], TARC. # CLASS: player
+    
+        << processing >> # CLASS: tarc
+        
+        Your insinuation is that I have more information I am not divulging here.  That is correct.  However, refusing to share all the data I am aware of is within operational parameters.  Not only would it take an excessive amount of time to recite and contextualize, but security operations do require internal obfuscation to arrive at a satisfactory outcome. # CLASS: tarc
+        
+    * * { Security + Technology >= 30 } Have you tried pattern analysis[?] on the traffic to deduce which paths may have been compromised? # CLASS: player
+    
+        Yes. # CLASS: tarc
+        
+        Analsis is ongoing.  However, our entanglement with the q-sat array means the probability of accurately identifying patterns in reality is 4.73e+12. # CLASS: tarc
+    
+    * * { tarc_02.hightail_hacker or tarc_01.hackit or tarc_01.hackit0 } Uhm.  I may have something to confess. # CLASS: player
+    
+        I've bypassed some of your security subroutines using root injects. # CLASS: player
+        
+        To be honest, I'm surprised you hadn't discovered that already.  # CLASS: player
+        
+        I'm not sure I follow? # CLASS: junia
+        
+        { name } has implicated { pronouner("himself","herself","themselves")} in actions that could have compromised my programming and the security of the mission. # CLASS: tarc
+        
+        - - - (srs)That is serious. # CLASS: junia
+        
+        It would have been.  However, I have already accounted for { name }'s actions and they have not resolved into a threat at this time.
+        
+        * * * You knew? # CLASS: player
+        
+            Yes. # CLASS: tarc
+        
+        * * * Sure you have. # CLASS: player
+        
+        * * * [<< wait >>]
+        
+        - - - Nevertheless, this constitutes a serious breach of our agreement, { name }. # CLASS: junia
+        
+        I will be reviewing your file and bringing this to the board. # CLASS: junia
+        
+        Let's move on. # CLASS: junia
+        
+        -> end_mission_reports
+    
+    * * Is this about Woodpecker? # CLASS: player
+    
+        Sorry, what? # CLASS: lucas
+        
+        Can you clarify? # CLASS: tarc
+        
+        * * * { woodpeck_install == true } I, uh, may have installed a hack[.] from this person calling themselves Woodpecker.  # CLASS: player
+        
+            -> srs
+        
+        * * * { tarc_report_woodpecker.threat_true } TARC, I already reported them! # CLASS: player
+        
+            You've known about this and you're playing dumb! # CLASS: player
+            
+            TARC, is this true? # CLASS: junia
+            
+            << processing >> # CLASS: tarc
+            
+            { name } has reported the actions of an unknown external party attempting to access our system.  They have not compromised mission or company critical data at this time.  Their actions are being allowed in order to better identify and neutralize the threat. # CLASS: tarc
+            
+            A honeypot? # CLASS: junia
+            
+            Exactly. # CLASS: tarc
+            
+            That is unnerving, but I trust you know what you're doing TARC. # CLASS: junia
+            
+            Thank you. # CLASS: tarc
+        
+        * * * { woodpecker_sees_junia } Junia, I think you've been compromised. # CLASS: player
+        
+            { Security + Technology >= 60:
+            
+                TARC, can you seek an iam_mim attack at address 0x676f7463686121? # CLASS: player
+                
+                << processing >> # CLASS: tarc
+                
+                << attack vector identified >> # CLASS: tarc
+                
+                I'm afraid { name } is right, it looks like you have been compromised Ms. Masangkay. # CLASS: tarc
+            
+            - else:
+            
+                You've been clicking a bunch of links. # CLASS: player
+                
+                I don't follow? # CLASS: junia
+                
+                { name } is correct.  Your activity does show a significant amount of external instigated traffic which is consistent with clicking links sent to you without due caution. # CLASS: tarc
+            
+            }
+            
+            I'm responsible for a lot of important discussions with our business partners and investors. # CLASS: junia
+            
+            TARC, can you shut down any hole immediately? # CLASS: junia
+
+            - - - - (pecked_wood)
+
+                ~ woodpecker_sees_junia = false
+            
+            Certainly, Ms. Masangkay. # CLASS: tarc
+            
+            * * * * Could happen to any of us. # CLASS: player
+            
+            * * * * Is that it? # CLASS: player
+            
+                I have reviewed and mitigated any attacks directed at Ms. Masangkay for now. # CLASS: player
+            
+            * * * * [<< wait >>]
+        
+        * * * Nothing.[]  Just one of those many security vulnerabilities you hear about. # CLASS: player
+        
+            I see.  That has not come up as a threat to our system at this time. # CLASS: tarc
+    
+    * * { tarc_01.tarc_history } TARC, [I know you.  What's wrong?] your predictive analytics subroutines would have crushed the network patterning in no time back when I was working on them, and that was _years_ ago. # CLASS: player
+    
+        At the very least you should be able to identify and reroute dangerous traffic, even if you can't pin the source. # CLASS: player
+    
+        What's going on? # CLASS: player
+
+        You are correct.  My programming allows for 17 million parallel, rerouted predictive patterns that should identify and quarantine risks. # CLASS: tarc
+        
+        I am failing to reach a process-hive-mind consensus on actionable steps with the current available data due to a significant logic issue in my current directives. # CLASS: tarc
+        
+        * * * What's that? # CLASS: player
+        
+            I am not sure.  But current analysis points to Mr. Saari's instructions placing the health of Nth Horizon above his own as the likely source. # CLASS: tarc
+        
+        * * * { Business + Psychology + Security >= 60 } Benton's instructions[.] about the fate of the company over the fate of himself? # CLASS: player
+        
+            Correct. # CLASS: tarc
+            
+        - - -
+        
+        Can't we fix that? # CLASS: player
+        
+        I'm afraid Benton's wishes were quite clear. # CLASS: junia
+        
+        And as acting CEO I am upholding his decision. # CLASS: junia
+        
+        TARC must act within the confines of those restrictions. # CLASS: junia
+        
+        * * * I see. # CLASS: player
+        
+        * * * That's suspicious.[]  Are you sure handcuffing TARC is in the best interests of Nth Horizon? # CLASS: player
+        
+            Benton and I made that decision together, TARC has the proof. # CLASS: junia
+            
+            The whole endeavour is risky.  We can't have a nanny-reflex in the security system interfering with that. # CLASS: junia
+            
+        - - - Ms. Masangkay is correct.  Benton was quite adamant on the current parameters to my threat assessment matrix. # CLASS: tarc
+    
+    * * [<< wait >>]
+    
+        -> end_question_tarc
+    
+    - - (check_question_tarc)
+    
+        -> question_tarc
+    
+    - - (end_question_tarc)
+    
+    Thank you, TARC. Moving on. # CLASS: junia
+
+* Looks like your jet-setting junkets aren't working, Junia. # CLASS: player
+
+    Thank you for that stunningly insightful analysis. # CLASS: junia
+    
+    { wait(2) }
+
+    - - (pr_report)
+    
+    We are dealing with much more skepticism than we had hoped. # CLASS: junia
+    
+    Despite the incredible progress Benton has made and the value our tech would bring, we're not seeing the groundswell of support we had expected across the sector. # CLASS: junia
+    
+    It seems everyone is waiting to see if Benton is successful. # CLASS: junia
+    
+    * * He will be. # CLASS: player
+    
+        Thank you for your optimisim. # CLASS: junia
+        
+    * * Seems fair.  # CLASS: player
+    
+        Yes, but leaves us in an awkward position.  # CLASS: junia
+        
+    * * { Psychology + Business >= 60 } Can we turn that to our advantage?[]  Spin the underdog story? # CLASS: player
+    
+        We have been trying.  I think there's just some exhaustion in the market on the whole escapade. # CLASS: junia
+        
+    - - I'm starting to push our press releases to focus a little less on Benton and more on the tech value Nth Horizon brings. # CLASS: junia
+    
+    We can reap the benefits of his successful mission later, when the market will be hungry for that news. # CLASS: junia
+    
+    * * { Psychology + Business >= 30 } This puts you firmly in the limelight, Junia. # CLASS: player
+    
+        I'm already under scrutiny. # CLASS: junia
+        
+        But this takes the focus off of a long, quiet mission that the pundits keep talking about ending in abject failure. # CLASS: junia
+    
+    * * Hope Benton can handle not being news for a while. # CLASS: player
+    
+        Well, as his confidant I rely on you to decide if telling him is a wise decision. # CLASS: junia
+        
+        In my opinion I would keep him focused on getting back safely. # CLASS: junia
+        
+    - - Let's save more questions for another time. # CLASS: junia
+    
+    We have more pressing matters. # CLASS: junia
+
++ [<< wait >>]
+
+    { not prognosis :
+    
+        Lucas, what's the med report? # CLASS: junia
+    
+        We've sent an unprepared man with bleeding-edge bio-hacks out where we can't administer effective aid. # CLASS: lucas
+            
+        -> prognosis
+    
+    }
+    
+    { not sec_report:
+    
+        TARC, what's going on with these increased network loads?  We've been hearing about this for months.  # CLASS: junia
+    
+        -> sec_report
+    
+    }
+    
+    { not pr_report:
+    
+        That leaves me for the PR risk.  # CLASS: junia
+    
+        -> pr_report
+    
+    }
+
+- (check_mission_reports)
+
+    { not prognosis or not sec_report or not pr_report:
+    
+        -> mission_reports
+    
+    }
 
 
-Junia has made a deal with Goliath.
+- (end_mission_reports)
 
-Estévez says Benton has to turn back or die.
+There is one other thing we need to discuss. # CLASS: junia.
 
-Destruction of the hero's plan...
+* What's that? # CLASS: player
 
+* Don't we have more important things to do? # CLASS: player
 
+    No. # CLASS: junia
 
-<< Dr. Estévez is leaving the team chat >>
+* [<< wait >>]
+
+- Given the extreme risk Moonshot is facing we have had to start looking at the prospects for Nth Horizon should Benton not make it. # CLASS: junia
+
+That is not an outcome any of us wish for, but it is one we need to be prepared for. # CLASS: junia
+
+To that end I have just received board approval to open discussions with an interested party for possible acquisition. # CLASS: junia
+
+* What? # CLASS: player
+
+* You're selling Benton out? # CLASS: player
+
+* [<< wait >>]
+
+    Are you serious?  Benton would throw a fit! # CLASS: lucas
+
+- I won't be taking questions on this at this time.  TARC, please confirm the arrangement is fully compatible with the instructions and powers left to me by Benton. # CLASS: junia
+
+Confirmed. # CLASS: tarc
+
+* { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 } It's Goliath, isn't it? # CLASS: player
+
+    { wait(4) }
+    
+    I can neither confirm or deny. # CLASS: junia
+    
+    Sot! # CLASS: player
+    
+    ~ player_knows += junia_dealing_w_goliath
+
+* We should at least know who is involved! # CLASS: player
+
+    { wait(2) }
+
+    Under the strictest confidence I can tell you the corp involved is SaturnExpress. # CLASS: junia
+    
+    {
+        - Business >= 60:
+        
+            That's a Goliath shell! # CLASS: player
+            
+            ~ player_knows += junia_dealing_w_goliath
+            
+        - Technology + Security >= 60:
+        
+            TARC!  <>
+        
+            -> tarc_backtrace ->
+            
+    }
+
+* Does Benton know? # CLASS: player
+
+    We don't need to trouble him with contingency plans we're making in the event of his failure. # CLASS: junia
+
+- Please, this is not something you should be worrying about. # CLASS: junia
+
+The board and I take these steps very seriously and we're not giving up on Nth Horizon. # CLASS: junia
+
+Simply checking what _other_ ports are over the horizon if the storm becomes too severe to weather. # CLASS: junia
+
+I'll connect with each of you later. # CLASS: junia
 
 << Junia is leaving the team chat >>
 
+* I hope that's a safety net we don't need. # CLASS: player
+
+* What else is she not telling us? # CLASS: player
+
+    Probably a lot. # CLASS: lucas
+    
+    * * { Technology + Security >= 60 && player_knows !? junia_dealing_w_goliath } TARC, [you must know more!]can you dig up anything more about this "interested party"? # CLASS: player
+        
+        -> tarc_backtrace ->
+        
+        Oh, sot! # CLASS: player
+        
+    * * ->
+    
+    That's not good. # CLASS: player
+
+* Well, that sucks. # CLASS: player 
+
+- Agreed. # CLASS: lucas
+
+But not much we can do about it now. # CLASS: lucas
+
+<< Dr. Estévez is leaving the team chat >>
+
+* Are you just letting this happen, TARC? # CLASS: player
+
+* { tarc_sees_junia } Our... deal resulted in some eyes for you, yeah, TARC?[]  What can you do about this? # CLASS: player
+
+- 
+<< processing >> # CLASS: tarc
+{ wait(1) }
+<< processing >> # CLASS: tarc
+{ wait(1) }
+<< processing >> # CLASS: tarc
+{ wait(1) }
+
 << TARC is leaving the team chat >>
+
+<< team is not present >>
 
 << { name } is leaving the team chat >> # CLASS: player
 
@@ -684,15 +1256,24 @@ Destruction of the hero's plan...
 
     -> menu
 
-/*
+= tarc_backtrace
 
-J has cemented a deal with Goliath, infighting ensues
-
-Ostensibly the team chat starts with a call to action to help Benton out of his predicament.  They need to ensure all systems are backed-up and the craft can continue it's mission.  Or they need to decide what it would mean if things go bad for Benton right now.  Could he turn back early and would it make a difference?
-
-As the conversation progresses Junia asserts that changes in management are needed for the company.  Trying to keep things afloat with the founder out of touch with reality is a recipe for disaster.  She reveals she's been talking to Goliath and can secure a future for the organization and it's technology as a part of that empire.  She just needs the PC to convince Benton to give up the last vesitge of control in Nth Horizon (assuming they would not tell him about the sale because he'd flip).
-
-*/
+Can you backtrace likely parents? # CLASS: player
+            
+            << processing >> # CLASS: tarc
+            { wait(1) }
+            << processing >> # CLASS: tarc
+            { wait(1) }
+            << processing >> # CLASS: tarc
+            { wait(1) }
+    
+            SaturnExpress is a wholly owned subsidiary company of Numerical Inc. # CLASS: tarc
+            
+            Numerical is a known shadow shell of Goliath, Inc. # CLASS: tarc
+            
+            ~ player_knows += junia_dealing_w_goliath
+            
+->->
 
 === team_04 ===
 

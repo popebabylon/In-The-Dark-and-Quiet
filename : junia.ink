@@ -654,7 +654,7 @@ Hey, Junia.  Are you around? # CLASS: player
 
 - { wait(3) }
 
-* We need to talk.
+* We need to talk. # CLASS: player
 
 * { benton_06 && not benton_06.crayz}  Benton is holding together.[]  But only just. # CLASS: player 
 
@@ -791,10 +791,10 @@ I don't think I understood how hard it would be, and how important he was.
             - - - - (medical_truth)
         
             I think the situation is worse than you realize.  I've taken the liberty of analyzing some of Benton's medical results (the one's I can get my hands on at least) and the <span class="data"><< prognosis >></span> is not good.  I think you should take a look. # CLASS: player
-            
-            { wait(2) }
         
             That's not the kind of bedside manner to make someone feel at ease.
+            
+            { wait(2) }
             
             I'm afraid this report is beyond my knowledge though.  What's the high-level takeaway?
             

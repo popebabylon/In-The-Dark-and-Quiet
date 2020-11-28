@@ -8,9 +8,9 @@
 
 <h1>In The Dark and Quiet</h1><>
 <><h2>By Peter D. Johnston</h2><>
-<><div class="about">Entry for \#GitHubGameOff, November 2020, with the theme "moonshot"<br><>
-<>Written in Ink \| https:\/\/www.inklestudios.com/ink<br><>
-<>Learn more at https:\/\/popebabylon.itch.io/itdaq </div>
+<><div class="about">Entry for <a href="https:\/\/itch.io/jam/game-off-2020">\#GitHubGameOff</a>, November 2020, with the theme "moonshot"<br><>
+<><a href="https:\/\/www.inklestudios.com/ink">Written in Ink</a><br><>
+<>Learn more at <a href="https:\/\/popebabylon.itch.io/itdaq">our itch page</a></div>
         
 + [PLAY] ->->
 

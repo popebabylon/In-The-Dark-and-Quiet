@@ -32,7 +32,7 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
     Irrelevant.  As a contractor joining this project you must accept our NDA and pass the security assessment. ->secreq 
 
-* { Technology >= 60 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank. # CLASS: player
+* { Security + Technology >= 60 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank. # CLASS: player
 
     -> tarc_history -> secreq
 
@@ -663,7 +663,7 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
     
         -> the_end
 
-* { Technology + Security >= 60 } [<< Forge Agreement >>] # CLASS: player
+* { Technology + Security >= 60 } [<< Forge Agreement >>]
     
     << inject acc_for^...COMMIT >> # CLASS: player
     << processing >> # CLASS: player
@@ -673,7 +673,7 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
     
     Thank you.
 
-    + [<< Close Chat >>] -> menu # CLASS: player
+    + + [<< Close Chat >>] -> menu # CLASS: player
 
 * { Psychology + Business >= 60 } You're trying to play us against each other.[]  How very HAL. # CLASS: player
 

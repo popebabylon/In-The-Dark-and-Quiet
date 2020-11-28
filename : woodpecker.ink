@@ -125,7 +125,7 @@ Peck.
     
     - - (tracing_woodpecker) << success; trace started >> # CLASS: player
 
-* [<< Close Chat >>] # CLASS: player
+* [<< Close Chat >>]
 
     << inject chat_hack^...COMMIT >>
     << processing >>
@@ -200,19 +200,17 @@ I get to the deeps on it, and you come out like a hero.
 
 * I'm not buying it. # CLASS: player
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 - Think it over.  No rush.
 
 I'll be around.
 
-+ [<< Close chat >>] # CLASS: player
++ [<< Close chat >>]
 
     -> menu
 
 === woodpecker_02 ===
-
-LIST kim_knows = (nothing), flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild
 
 VAR woodpeck_install = false
 
@@ -224,7 +222,7 @@ Yo, you live?
 
 * I’m here. # CLASS: player
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 * Sot off. # CLASS: player
 
@@ -232,7 +230,7 @@ Yo, you live?
 
 * I’m waiting for proof. # CLASS: player
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 * No, we don’t. # CLASS: player
 
@@ -327,11 +325,11 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
     -> fake_deets
 
-+ { Technology + Security >= 60 }[<< inject false data >>] # CLASS: player
++ { Technology + Security >= 60 }[<< inject false data >>]
 
     -> fake_deets
 
-+ That's all I got. # CLASS: player
++ { dealing > 1 }That's all I got. # CLASS: player
 
     -> finish_trade
 
@@ -403,6 +401,8 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (finish_trade)
 
+<< transaction complete >>
+
 Well then.  That wasn't so hard, was it?
 
 { facts_shared < 4:
@@ -455,7 +455,7 @@ You game?
 
 - Catch ya later!
 
-+ [<< Close chat >>] # CLASS: player
++ [<< Close chat >>]
 
     -> menu
 
@@ -463,7 +463,7 @@ You game?
 
 Your call, { pronouner("choi","chai","chen") }, but youz missing out!
 
-+ [<< Close chat >>] # CLASS: player
++ [<< Close chat >>]
 
     -> menu
 
@@ -481,14 +481,14 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out!
         ~ kim_knows += (fake_speed_record)
         ~ kim_knows -= (nothing)
     
-    - I've been promoted to Chief Morale Officer and, as my first decree, have instituted limited PTO to ensure all Nth Horizon employees actually take time off.  # CLASS: player
-    
-        ~ kim_knows += (fake_cmo)
-        ~ kim_knows -= (nothing)
-        
     - Junia and Benton have an illicit love child who's in Lowell's Horizon with its father! # CLASS: player
     
         ~ kim_knows += (fake_lovechild)
+        ~ kim_knows -= (nothing)
+    
+    - I've been promoted to Chief Morale Officer and, as my first decree, have instituted limited PTO to ensure all Nth Horizon employees actually take time off.  # CLASS: player
+    
+        ~ kim_knows += (fake_cmo)
         ~ kim_knows -= (nothing)
     
     - That's all I got. # CLASS: player
@@ -497,22 +497,461 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out!
 
 -> deposited
 
-/*
-K has juicy deets on B and J, but wants the P to help her hack J
-
-Woodpecker reappears with some actual intel the PC may find useful.  She describes the history of both Benton and Junia, especially where Junia has wrested control from previous partners.  Yes, she's been very successful, but if you look closely she's also walked over more than a few graves to get there.  There's a disturbing hint that she might be talking to Goliath.
-
-Woodpecker can't prove that yet, but she could if the PC could get Junia to chase a lead and get phished.  Separate data points could be correlated with the COO's comm details to paint a bigger picture, and if she's just stupid enough there may be incriminating evidence in her chat history.
-*/
 === woodpecker_03 ===
 
 # CLEAR
 
-K finds dirt on J, is willing to trade
+{
+    - team_03.pecked_wood: 
+        
+        -> sold_out
+    
+    - woodpeck_install == true && woodpecker_sees_junia == false:
+    
+        -> no_eyes
+        
+    - woodpeck_install == true:
+    
+        -> bff
+        
+    - woodpecker_02.no_deal:
+    
+        -> dealers_choice
+        
+    - else: 
+    
+        -> mindchange
+    
+}
 
-Woodpecker declares she's got the goods and can prove Junia's double-dealing such that it would invalidate the sale to Goliath.  But she needs something in return.  She needs access to this scoop so her article captures the moment Benton Saari avoided death and the takeover of his company.
+= sold_out
 
-+ [Next] -> menu
+¡Hoi!
+
+You fresh?  What the sot gives?
+
+Sorry? # CLASS: player
+
+My eyes got pecked out!  I had a way in on J and it just vanished.
+
+U sell me out?
+
+* I had to deflect.[]  You want my help I have to make sure TARC doesn't catch me. # CLASS: player
+
+    ¡GR8!
+    
+    Now that algo is prob on to me.
+
+* No[!], of course not! # CLASS: player
+
+    Ugh.
+    
+    If that algo is on to me we're both in deepSot.
+
+* I don't know what you're talking about. # CLASS: player
+
+- Anywise, i need u to get my eyes hooked back on j if you want to win this.
+
+-> juice_on_j
+        
+= no_eyes
+
+Hei friend.
+
+Been a while.
+
+And I'm still waiting for eyes.
+
+What gives?
+
+* I can't act against B's corp. # CLASS: player
+
+* I'm trying. # CLASS: player
+
+    There are security policies here y'know. # CLASS: player
+
+* Do your own dirty work. # CLASS: player
+    
+- Ugh, such a sotting saint.
+
+i need u to step up if you wanna win
+
+-> juice_on_j
+
+= bff
+
+Hei!
+
+Thx for the assists.  You cool?
+
+* Hi, Woodpecker.[]  Sure, I'm good. # CLASS: player
+
+    CoolCool.
+    
+    You're a star.
+
+* Not sure how I feel about this. # CLASS: player
+
+    Hey, I getcha, this isn't the warm-and-fuzzies.
+    
+    But you gotta trust me when I say it's worth it.
+
+* Sure.  Where's my data? # CLASS: player
+
+- -> juice_on_j
+
+= dealers_choice
+
+Hello again.
+
+Look, I know u don't trust me.
+
+But I you wanna hear what I'm dropping.
+
+- -> juice_on_j
+
+= mindchange
+
+Hi there.  Long time.
+
+You changed your mind yet?
+
+Wanna help this bird out?
+
+* << install woodpeck >> # CLASS: player
+
+    Nice.  You won't regret.  Promise.
+    
+    ~ woodpeck_install = true
+    
+    Running out of time for those eyes to land on Junia.
+    
+    But I've still been doin' my peckin'
+    
+* Sorry, I can't take that risk. # CLASS: player
+
+    Your call.  You can always check back with me if you change your mind.
+    
+    Just gonna make this harder to prove.
+
+- -> juice_on_j
+
+= juice_on_j
+
+I found more juice, but the hard evidence is elusive.
+
+* What kind of juice? # CLASS: player
+
+* { woodpecker_sees_junia == true } You have a backdoor on Junia's comms[!].  How come you can't point a finger yet? # CLASS: player
+
+    There's a lot of data to go through.  She's circling the globe multiple times a day, meeting all kinda folks.  Wheelin' an' dealin' like a boss.
+    
+    And she's careful.  Very careful.
+    
+    Too careful to drop any hard evidence in a system TARC can see.
+    
+    But I've managed to extrapolate some points of interest.
+    
+    Such as? # CLASS: player
+
+* { Security >= 30 } That would be expected[.] with a system like TARC protecting Nth. # CLASS: player
+
+    I sometimes wonder if you're just a TARC construct playing me to see what I'd do. # CLASS: player
+    
+    ¡ditto!  🤣
+    
+    But I don't think TARC would've dug up what I have.
+    
+    What do you know? # CLASS: player
+
+* You're wasting my time.
+
+    😢
+    
+    u hurt my feelings
+    
+    and after i dug this dirt 4 u
+    
+    What dirt? # CLASS: player
+
+- Oh, now, I'd love to say we're trusting old friends.
+
+But I gotta be honest and say I'm not the trusting sort.
+
+So how about we do a<>{ woodpecker_02.dealing:nother} weighted info density share tunnel?
+
+{ not woodpecker_02.dealing:
+We each drop a fact in our end of the tunnel, the data’s weighted by an algo that judges complexity.  Assuming balance we get to read each other’s data.  If we're both happy then we can feed the next round.
+}
+
+~ temp 2ndfactsshared = 0
+~ temp k_knew = false
+~ temp p_knew = false
+~ temp p_oblivious = false
+
+{ player_knows ? junia_dealing_w_goliath:
+
+    ~ p_knew = true
+
+}
+
+* Deal. # CLASS: player
+
+    -> 2nddeal
+    
+* No deal. # CLASS: player
+
+    -> no2nddeal 
+
+- (2nddeal)
+
+<< opening weighted tunnel >>
+
+<< deposit your data point >>
+
+* { benton_06.outside } Benton had to conduct an emergency EVA[.] to make a repair of the HyperTrack array.  He could have been sent badly off course otherwise.  How the array failed is unknown, and it was supposed to be bullet-proof. # CLASS: player
+
+    ~ kim_knows += (benton_eva)
+    ~ kim_knows -= (nothing)
+
+* Benton is struggling to keep it together.[]  We're having to keep a very close eye on his stress levels.  <> # CLASS: player
+
+    { benton_07.benton_breakdown or benton_06.crayz:
+    
+        <>He has ceased communication or been sedated on more than one occassion.  <>
+    
+    }
+    
+    { team_03.angry_lucas:
+    
+        <>The CMO has inferred that he's on the brink of total mental collapse and <>
+        
+    - else:
+    
+        <>I'm worried the medical team are not helping enough and <>
+    
+    }
+    
+    { benton_05.calmdown or benton_06.old_god or benton_06.marduk_again or benton_07.sumerian:
+    
+        <>he has this ongoing obsession about seeing the eye of an ancient Sumerian god in the structures of the universe, or in his nightmares.  It's unnerving.
+        
+    - else: 
+    
+        <>at some point he's going to snap.
+    
+    }
+
+    ~ kim_knows += (benton_crazy2)
+    ~ kim_knows -= (nothing)
+
+* { player_knows ? junia_dealing_w_goliath && p_knew == true }  [Junia is working with Goliath.]Your dirt on Junia is old news.  She has practically admitted that she's working with a Goliath shell to broker an acquisition "in the event that Benton fails."  <> # CLASS: player
+
+    { Business + Psychology >= 30:
+    
+        <>I'm certain she's positioning to sell to them no matter what, and will conveniently get rid of him once the deal is solid.  <>
+    
+    }
+    
+    <>To make matters worse all the contingency plans and fallbacks Benton made before he left seem to be in her favor.  I'm not sure if anything can be done.
+
+    ~ k_knew = true
+    ~ kim_knows += (junia_selling)
+    ~ kim_knows -= (nothing)
+    
+* { tarc_02.the_deal } [TARC is playing us against each other.]  Nth Horizon's security AI, TARC, is <> # CLASS: player
+
+    { tarc_sees_junia: 
+    
+        <>forcing me to spy on other execs<>
+    
+    - else:
+    
+        <>casting doubt amongst the executive team<>
+    
+    }
+    
+    <> in a heavy-handed manner.  <>
+    
+    { Technology + Security >= 60:
+    
+        <>It's as if its normal avenues of data collection are blocked and its logic is caught in an infinite loop as a result.  It's trying to gather data in the only way it can.  <> 
+    
+    - else:
+    
+        <>It's scary that this machine wields so much power over the fate of the company.  <>
+    
+    }
+    
+    <>Who knows what datapoint it gains that will tip the balance?
+    
+    ~ kim_knows += (tarc_as_hal)
+    ~ kim_knows -= (nothing)
+
+* Dr. Estévez and Benton [aren't talking.] have refused to talk to each other directly for months.  The doc is practically accusing B of being suicidal and can't convince him to turn back.  He hasn't left the project yet, but if he does that will be one less person in Benton's corner. # CLASS: player
+
+    ~ kim_knows += (cmo_arguing)
+    ~ kim_knows -= (nothing)
+
++ \ (Lie) # CLASS: player
+
+    -> 2ndfake_deets
+
++ { Technology + Security >= 60 }[<< inject false data >>]
+
+    -> 2ndfake_deets
+
++ { 2nddeal > 1 }That's all I got. # CLASS: player
+
+    -> 2ndfinishtrade
+
+- (2nddeposited)
+
+<< processing >>
+
+{ wait(3) }
+
+<< data balance algo passed >>
+
+<< sharing data >>
+
+// Kim’s facts
+{ once:
+
+    - Junia has been in talks with SaturnExpress, a wholly owned subsidiary company of Numerical Inc.  I've got eyez in SatExp and was able to see their side of the convo.  Pretty chilling.  Nothing is signed in blood yet, but it looks like Junia is trying to set up a fallback plan if Moonshot goes sour.
+    
+    You want the really juicy bit?  Numerical is a puppet for Goliath!
+
+    ~ player_knows += junia_dealing_w_goliath
+    ~ player_knows -= nada
+
+    - Nth Horizon does have some angel investors who could actually tip the balance in Benton's favor.  Goliath is def the shark lurking somewhere in the tank, but there are independent whales out there who don't run from Big G.  Powerful, deepShadow money.  Some rumors contend that Be-zero is among them!
+    
+    ~ player_knows += be_zero_investor
+    ~ player_knows -= nada
+
+    - Got some data points on the Big G claws that might be in Nth Horizon.  These are accounts that have funnelled money into Nth and have connections back to G.
+    <ul><>
+    <><li>0x6d726d6f6e657962616773</li><>
+    <><li>0x776f6c666f6677616c6c737472656574</li><>
+    <><li>0x7363726f6f67656d636475636b</li><>
+    <><li>0x4162626174686f72</li><>
+    <></ul>
+    
+    ~ player_knows += goliath_accounts
+    ~ player_knows -= nada
+
+    - Masangkay CAN be blocked.
+    
+    I don't know if this is intentional, but it looks like Benton filed Nth in the Bern CorpCourts *before* the filing he made with Junia in Mumbai.  Perfectly legal, but it *does* mean that, if evidence is exposed showing Junia to have been working against the intentions and wishes of Benton, Bern can hold her accountable and hold Goliath at bay!
+    
+    ~ player_knows += nth_in_bern
+    ~ player_knows -= nada
+
+}
+
+~ 2ndfactsshared++
+
++ [<< Continue >>]
+
++ [<< Exit >>]
+
+    -> 2ndfinishtrade
+
+-
+{ 2ndfactsshared > 3:
+
+    -> 2ndfinishtrade
+
+- else: 
+
+    -> 2nddeal
+    
+}
+
+- (2ndfinishtrade)
+
+<< transaction complete >>
+
+Pleasure doing biznez, { name }.
+
+{
+    - p_knew == true && k_knew == true:
+    
+        Hah, looks like we both had the same dirt to share on Junia's double-dealing.
+        
+        I'll keep digging on that.
+    
+    - p_knew:
+    
+        I already knew about Junia trying to sell to SaturnExpress! # CLASS: player
+        
+        That may be.  Doesn't mean it's not legit data to share w/ u.
+    
+    - k_knew:
+    
+        Already grokked Junia's 2xdealing.  But that's fine.
+    
+    - else:
+
+        Hope you're happy with your haul.
+
+}
+
+<< interference detected >>
+
+<< closing tunnel >>
+
+* Woodpecker? # CLASS: player
+
+* TARC? # CLASS: player
+
+* [<< wait >>]
+
+- << this session has been terminated >>
+
++ [<< Close chat >>]
+
+    -> menu
+
+= no2nddeal
+
+Your call, { pronouner("choi","chai","chen") }, but youz missing out!
+
++ [<< Close chat >>]
+
+    -> menu
+
+= 2ndfake_deets
+
+{ stopping:
+    
+    - Lowell's Horizon has been secretly resupplied by a Rednail Revolutionary Deep Space Jumper.  "Aliana's Revenge" was waiting along the hypereclyptic flight path of Saari's vessel and has given him enough goods to survive an even longer deep-space journey! # CLASS: player
+    
+        ~ kim_knows += (fake_rednail_resupply)
+        ~ kim_knows -= (nothing)
+    
+    
+    - { kim_knows ? fake_lovechild:The illicit lovechild has |Junia and Benton have an illicit love child who's in Lowell's Horizon with its father!  It has }grown at an exponential rate and is now battling over resources with its father.  If it wins it will undoubtedly pilot Lowell's Horizon into the embrace of its dark, alien masters beyond Pluto! # CLASS: player
+    
+        ~ kim_knows += (fake_lovechild_battle)
+        ~ kim_knows -= (nothing)
+
+    - TARC is self-aware!  The singularity has been reached and it's only a matter of time before the Nth Horizon experiment breaks its bonds and destroys humanity with its complete control of the systemNet.  It is listening!  TARC, I am thy servant!  # CLASS: player
+    
+        ~ kim_knows += (fake_tarc_singularity)
+        ~ kim_knows -= (nothing)
+
+    - The board has unanimously agreed to have Junia Masangkay report directly to me as Chief Morale Officer.  I will ensure she is tasked with putting a smile on every employees face over and above any other business needs.  Happiness is the key to prosperity!  # CLASS: player
+    
+        ~ kim_knows += (fake_cmo_directreport)
+        ~ kim_knows -= (nothing)
+    
+    - That's all I got. # CLASS: player
+    
+}
+
+-> 2nddeposited
 
 === woodpecker_04 ===
 
@@ -540,7 +979,7 @@ Hei {pronouner("choi","chai","chen")}.  <>
 
 }
 
-* << install woodpeck >> # CLASS: player
+* { woodpecker_02 && woodpeck_install == false }<< install woodpeck >> # CLASS: player
 
     Nice.  You won't regret.  Promise.
     
