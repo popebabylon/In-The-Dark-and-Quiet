@@ -229,12 +229,12 @@ div.menu.item {
 
 .typing {
 	text-align: center;
-	margin: auto;
 	background: none;
 	border: none;
 	animation-name: fade;
   	animation-duration: 2s;
   	animation-iteration-count: infinite;
+  	height: 2rem;
 }
 
 .md-48 {
@@ -265,7 +265,13 @@ p.no_bg {
 	border: none;
 }
 
-/* TODO: custom style for "wait" paragraphs to delay the game */
+/* custom class for picture select page */
+
+.center_up {
+	text-align: center;
+}
+
+/* custom style for "wait" paragraphs to delay the game */
 
 p.wait {
 	display: none;

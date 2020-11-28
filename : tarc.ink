@@ -193,7 +193,7 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 + [<< Continue >>]
 
 -
-<< calculating >>
+<< calculating >> # CLEAR
 << calculating >>
 << calculating >>
 {score > 0:
@@ -205,8 +205,6 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 }
 
 = fail
-
-# CLEAR
 
 Your performance in the security testing is subpar.  Please try again. # CLASS: tarc
 

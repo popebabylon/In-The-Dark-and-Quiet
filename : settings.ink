@@ -17,7 +17,7 @@ VAR name = "?"
 VAR pronoun = "?"
 
 // picture
-Select your identity for biometric validation. # CLEAR
+Select your identity for biometric validation. # CLEAR # PICTUREPAGE
 
 
 { debugging == true:

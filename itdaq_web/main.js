@@ -28,6 +28,12 @@
 
     var storyContainer = document.querySelector('#story');
     var outerScrollContainer = document.querySelector('.outerContainer');
+    
+	// custom, capture if we're clearing for cleaner scroll behavior
+	var cleared = false;
+	
+	// custom, capture if last element created was a story P
+	var parElem = true;
 
     // Kick off the start of the story!
     continueStory(true);
@@ -65,7 +71,7 @@
                     storyContainer.appendChild(imageElement);
 
                     showAfter(delay, imageElement);
-                    delay += 0; // was 200.0
+                    delay += 200.0;
                 }
 
                 // CLASS: className
@@ -73,12 +79,18 @@
                     customClasses.push(splitTag.val);
                 }
                 
-                // custom PICSELECT sets the users picture for later use
+                // custom, PICTUREPAGE sets the story container to center 
+                else if( tag == "PICTUREPAGE" ) {
+                	storyContainer.classList.add("center_up");
+				}
+               
+                // custom, PICSELECT sets the users picture for later use (and removes story container centering)
                 else if( tag == "PICSELECT" ) {
                 	var picture = story.variablesState["picture"];
                 	var style = document.createElement('style');
 					document.head.appendChild(style);
 					style.sheet.insertRule('p.player::after {background-image: url("' + picture + '");}');
+					storyContainer.classList.remove("center_up");
 				}
 
                 // CLEAR - removes all existing content.
@@ -86,7 +98,7 @@
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
                     removeAll("p");
                     removeAll("img");
-                    
+
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
@@ -94,34 +106,29 @@
                         restart();
                         return;
                     }
+                    
+                    // custom, set cleared for better scroll behavior
+					cleared = true;
                 }
             }
-            
-			// custom variables for delays etc
-			var pdelay = 0;
-			
-			// need something like this to build my "is typing" indicator			
-			/*
-			var typing = document.createElement('p');
-			typing.innerHTML = "<i class='material-icons md-24'>more_horiz</i>";
-			typing.classList.add("typing");
-			storyContainer.appendChild(paragraphElement);
-			*/
 			
             // Create paragraph element (initially hidden)
             var paragraphElement = document.createElement('p');
             paragraphElement.innerHTML = paragraphText;
-            storyContainer.appendChild(paragraphElement);            
+            storyContainer.appendChild(paragraphElement);
+            
+			// custom, capture if last element created was a story P
+			parElem = true;
             
             // Add any custom classes derived from ink tags
             for(var i=0; i<customClasses.length; i++) {
                 paragraphElement.classList.add(customClasses[i]);
- 				// My custom behaviors by class
-                // check the class for "wait"; if so set the delay
+ 				// custom behaviors by class
+                // custom, check the class for "wait"; if so set the delay
                 if ( customClasses[i] == "wait" ) {
-                	pdelay = 1000.0
+                	delay += 1000.0
                 }
-                // check the class for npc name; if so, set chat class
+                // custom, check the class for npc name; if so, set chat class
                 switch ( customClasses[i] ) {
                 	case "tarc":
                 	case "benton":
@@ -129,15 +136,23 @@
                 	case "lucas":
                 	case "kim":
                 		paragraphElement.classList.add("chat");
+                	case "player":
+                		// custom, calculate delay of chat texts based on length of paragraph
+						delay += paragraphText.length * 10;
+						// custom, show "user is typing" animation until delay means P will show
+						var typing = document.createElement('p');
+						typing.innerHTML = "<i class='material-icons md-24'>more_horiz</i>";
+						typing.classList.add("typing");
+						storyContainer.appendChild(typing);
+						removeAfter(delay, typing);
                 	default:
                 		// no action
                 }
             }
 
             // Fade in paragraph after a short delay
+            // custom, removed delay += 200 because chats are already delayed above and other Ps can load immediately
             showAfter(delay, paragraphElement);
-            delay += pdelay; // was 200.0
-            
 
         }
 
@@ -150,9 +165,20 @@
             choiceParagraphElement.innerHTML = `<a href='#'>${choice.text}</a>`
             storyContainer.appendChild(choiceParagraphElement);
 
+			// custom, adjust delay based on whether or not previous element was a story P (instead of a choice)
+			if ( parElem == true ) {
+				delay += 400;
+			} else {
+				delay += 0;
+			}
+
+			// custom, capture if last element created was a story P (and not a choice)
+			parElem = false;
+
             // Fade choice in after a short delay
             showAfter(delay, choiceParagraphElement);
-            delay += 0; // was 200.0
+            // custom, removed delay because I want all choices to appear at once
+            // however, would like it to pause briefly after all text p's have loaded, not sure how to accomplish
 
             // Click on choice
             var choiceAnchorEl = choiceParagraphElement.querySelectorAll("a")[0];
@@ -176,9 +202,16 @@
         // We do this manually so that removing elements and creating new ones doesn't
         // cause the height (and therefore scroll) to jump backwards temporarily.
         storyContainer.style.height = contentBottomEdgeY()+"px";
-
-        //if( !firstTime )
-        //    scrollDown(previousBottomEdge);
+		
+		// custom, only scroll down if cleared state is false, if it's true scroll to top
+        if( !firstTime && cleared == false ) { 
+        	scrollDown(previousBottomEdge);
+        } else if ( cleared == true ) {
+			outerScrollContainer.scrollTo(0, 0);
+        };
+            
+        // custom, set cleared to false
+		cleared = false;
     }
 
     function restart() {
@@ -203,6 +236,11 @@
     function showAfter(delay, el) {
         el.classList.add("hide");
         setTimeout(function() { el.classList.remove("hide") }, delay);
+    }
+
+    // custom, Removes an element after a specified delay
+    function removeAfter(delay, el) {
+        setTimeout(function() { el.remove() }, delay);
     }
 
     // Scrolls the page down, but no further than the bottom edge of what you could
