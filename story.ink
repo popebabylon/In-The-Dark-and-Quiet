@@ -71,8 +71,9 @@ VAR Nth_SEC = 50
 VAR Nth_PR = 50
 VAR Nth_IT = 50
 
-// setup "hacked by woodpecker" state
+// setup states
 VAR woodhack = false
+VAR tarc_sees_woodpecker = false
 
 // having a TODO makes it easy to jump here to turn on/off
 TODO: COMPILE: check debugger state and clear foo VARS

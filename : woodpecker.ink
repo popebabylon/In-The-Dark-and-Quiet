@@ -898,17 +898,77 @@ Pleasure doing biznez, { name }.
 
 }
 
-<< interference detected >>
+* So, we good?[]  I don't have to do any more tricks for you? # CLASS: player
 
-<< closing tunnel >>
+    Not quite, {pronouner("choi","chai","chen")}.
 
-* Woodpecker? # CLASS: player
+* Are you done? # CLASS: player
 
-* TARC? # CLASS: player
+    Hmmmm, another thing...
 
-* [<< wait >>]
+* { Technology + Security >= 90 && tarceye_install == true}[<< brute force install tarceye link >>]
 
-- << this session has been terminated >>
+    ~ tarc_sees_woodpecker = true
+    
+    << inject iam_mim^...COMMIT >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << processing >> # CLASS: player
+    << segfault at 0x657965737079, respooling >> # CLASS: player
+    << inject tarceye_install^...COMMIT >> # CLASS: player
+    
+    { wait(2) }
+    
+    Hey, you still there?  Terminal fritzed.
+    
+    Got more stuff to discuss.
+
+-
+{ team_03.pecked_wood or (woodpeck_install == true && woodpecker_sees_junia == false):
+    
+    I'd still sure like my eyes on Junia.
+    
+    So we can both get our evidence.
+
+    And... <>
+    
+}
+
+It'd be real sweet if my peckin' found it's way into Saari's ear.
+
+Get what I'm saying?
+
+* You want me to hack Lowell's Horizon? # CLASS: player
+
+- Yah.
+
+{ woodpeck_install != true:
+
+Just need you to carry this package from me to him...
+
+* << install woodpeck >> # CLASS: player
+
+    Nice.  You won't regret.  Promise.
+    
+    ~ woodpeck_install = true
+    
+    -> wedonehere
+    
+* Sorry, I won't install your code. # CLASS: player
+
+    'K.
+    
+    -> wedonehere
+    
+- else:
+
+    Just bring him my package.  I'll do the rest.
+    
+}
+
+- (wedonehere)
+
+Gotta fly.  Thankyoubuhbye.
 
 + [<< Close chat >>]
 
