@@ -12,9 +12,9 @@
 
 -> benton_profile ->
 
-Hollah { pronouner("choi", "chai", "chen") }!
+Hollah { pronouner("choi", "chai", "chen") }! # CLASS: benton
 
-Can't believe you're here!
+Can't believe you're here! # CLASS: benton
 
 * Hey, B! # CLASS: player
 
@@ -22,7 +22,7 @@ Can't believe you're here!
 
 * Benton.[]  Why am I here? # CLASS: player
 
-- Oh, { pronouner("choi", "chai", "chen") }, there is so much to catch up on!  How long has it been?
+- Oh, { pronouner("choi", "chai", "chen") }, there is so much to catch up on!  How long has it been? # CLASS: benton
 
 * [A couple months?]  You dropped out a couple months back, after drinks in Tortuga. # CLASS: player
 
@@ -32,37 +32,37 @@ Can't believe you're here!
 
 * You didn't answer my question. # CLASS: player
 
-- Sorry, sorry, been cray cray for a while now.  Look, you're here coz there's few people I trust in the world, and for what it's worth you're one of them.
+- Sorry, sorry, been cray cray for a while now.  Look, you're here coz there's few people I trust in the world, and for what it's worth you're one of them. # CLASS: benton
 
-You'll tell me what's what and keep me on the tightrope.  You're no sycho.
+You'll tell me what's what and keep me on the tightrope.  You're no sycho. # CLASS: benton
 
-You've probably read the newsDrops, but Nth Horizon is full throttle.
+You've probably read the newsDrops, but Nth Horizon is full throttle. # CLASS: benton
 
 * This is your company? # CLASS: player
 
-    Yeah.  As much as a startCorp can be any one person's.
+    Yeah.  As much as a startCorp can be any one person's. # CLASS: benton
 
 * Congratulations[.], nice to be thought of when the going is good. # CLASS: player
 
-    Yeah.
+    Yeah. # CLASS: benton
     
-    Well.
+    Well. # CLASS: benton
     
 * Can I expect a crash landing? # CLASS: player
 
-    Kinda what I'm hoping you help me avoid.
+    Kinda what I'm hoping you help me avoid. # CLASS: benton
 
 * { Business >= 30 } startCorps come and go.  Your angle might be bad and you burn up. # CLASS: player
 
-    Yeah.
+    Yeah. # CLASS: benton
     
-    You always shoot cold, hard reality.
+    You always shoot cold, hard reality. # CLASS: benton
 
-- The thing is, this is my baby.  I bootstrapped from inside the gravity well and we're charting just fine.
+- The thing is, this is my baby.  I bootstrapped from inside the gravity well and we're charting just fine. # CLASS: benton
 
-Our tech is the bleeding edge, real nextGen stuff.  Revolutionary.
+Our tech is the bleeding edge, real nextGen stuff.  Revolutionary. # CLASS: benton
 
-But if I can't turn the next corner then the board and Junia are gonna listen to Goliath's offers.
+But if I can't turn the next corner then the board and Junia are gonna listen to Goliath's offers. # CLASS: benton
 
 * Going big, huh?[]  Aren't they like _the_ megacorp? # CLASS: player
 
@@ -70,35 +70,35 @@ But if I can't turn the next corner then the board and Junia are gonna listen to
 
 * Sounds like you.[]  Cutting anyone out of the payday? # CLASS: player
 
-- Hey, an exit would treat me nice, that's sure.  But I did't build this company just to be swallowed up by a black hole.
+- Hey, an exit would treat me nice, that's sure.  But I did't build this company just to be swallowed up by a black hole. # CLASS: benton
 
-We're on course to change the face of the system.
+We're on course to change the face of the system. # CLASS: benton
 
-Neptune in months.  Out to the Oort in only a year or two.  Look, I don't wanna brag but what we've got is the *goods*.
+Neptune in months.  Out to the Oort in only a year or two.  Look, I don't wanna brag but what we've got is the *goods*. # CLASS: benton
 
-I don't need to be a lackey to a megacorp.  We could level the playing field and get a cushy enough paycheck to enjoy it.
+I don't need to be a lackey to a megacorp.  We could level the playing field and get a cushy enough paycheck to enjoy it. # CLASS: benton
 
 * { Business >= 30} Not Goliath sized.[]  If what you have is so hot why aren't they already doing a knock-down-takeover? # CLASS: player
     
-    They're trying.  I can hold my own.
+    They're trying.  I can hold my own. # CLASS: benton
     
-    For now.
+    For now. # CLASS: benton
 
 * { Astronomy + Engineering >= 30} You're nuts.[]  Saturn's been the limit for a reason.  You're talking order of magnitude faster than the Deep Space Jumpers.   # CLASS: player
     
-    I know.  And I mean it.
+    I know.  And I mean it. # CLASS: benton
     
-    You're like the perfect skeptic to bring on board here.  But trust me, we've done it.
+    You're like the perfect skeptic to bring on board here.  But trust me, we've done it. # CLASS: benton
 
 * { Psychology + Medicine >= 30 } That's noble of you.[]  I'm no fan of the megacorps but how do you keep your team from breaking? # CLASS: player
 
-    That's why I need your help.
+    That's why I need your help. # CLASS: benton
     
 * { Security + Technology >= 30 } Being bleeding edge [is bad.]makes you a target.  Goliath might not be the only worm trying to riddle your brain. # CLASS: player
 
-    I know.  That's why your brain is here.
+    I know.  That's why your brain is here. # CLASS: benton
     
-    To help.  Not as a target!
+    To help.  Not as a target! # CLASS: benton
 
 -
 
@@ -114,29 +114,29 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
 
 = censored
     
-    Look, the << CONFIDENTIAL >> is ready to race. If we keep this on the rails then Goliath won't be able to touch << CONFIDENTIAL >>
+    Look, the << CONFIDENTIAL >> is ready to race. If we keep this on the rails then Goliath won't be able to touch << CONFIDENTIAL >> # CLASS: benton
     
     * Huh?[]  You're getting censored. # CLASS: player
     
-    - Oh? Sot!  TARC must have you locked down.  Treats everything as a threat.
+    - Oh? Sot!  TARC must have you locked down.  Treats everything as a threat. # CLASS: benton
     
-    { Technology >= 60:
+    { Security + Technology >= 60:
     
         TARC?  How do you still have that running? # CLASS: player
         
         Wait, no, how have you not been arrested? # CLASS: player
         
-        ¡LafLaf!
+        ¡LafLaf! # CLASS: benton
         
-        It's not _exactly_ the same code we first carved back in '{ (date_year - 11) mod 2000 }
+        It's not _exactly_ the same code we first carved back in '{ (date_year - 11) mod 2000 } # CLASS: benton
 
-        But it still does good threat assessment.  That's what we made it for.
+        But it still does good threat assessment.  That's what we made it for. # CLASS: benton
     
     }
         
-    - Just humor it, k?  Click the thumbs-up so it trusts you?
+    - Just humor it, k?  Click the thumbs-up so it trusts you? # CLASS: benton
         
-    Come chat with me once you pass muster, { pronouner("choi", "chai", "chen") }!
+    Come chat with me once you pass muster, { pronouner("choi", "chai", "chen") }! # CLASS: benton
      
     + [<< Close Chat >>] -> menu # CLASS: player
 
@@ -150,97 +150,95 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
 
 * So what's the big secret? # CLASS: player
 
-- A'ight.
+- A'ight. # CLASS: benton
 
-So here's the potato.
+You know me.  Always playing with startCorps, but none that stuck.  Some sold, I'm not complaining.  But nothing felt like real work.  Nothing that felt like what I'm here to do. # CLASS: benton
 
-You know me.  Always playing with startCorps, but none that stuck.  Some sold, I'm not complaining.  But nothing felt like real work.  Nothing that felt like what I'm here to do.
+I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw that just hadn't been completed. # CLASS: benton
 
-I sojourned for a while, thought through the pieces.  Seemed there was a jigsaw that just hadn't been completed.
+* Took some time to ruminate on the problem. # CLASS: player
 
-* Rumination. # CLASS: player
+    Yeah! # CLASS: benton
 
-    Yeah!
+* Taking a vacation? # CLASS: player
 
-* Vacation. # CLASS: player
+    If you sick like me I guess! # CLASS: benton
 
-    If you sick like me I guess!
+* { Psychology >= 30 } Sounds like a Eureka moment[?] is coming? # CLASS: player
 
-* { Psychology >= 30 } Eureka[?] effect in the wings? # CLASS: player
+    Hey, I'm telling this tale! # CLASS: benton
 
-    Hey, I'm telling this tale!
+- SolWare, Long Night, and FireX had their ups and downs, but none were the whole picture.  Just some edges.  Thought experiment time.  Twist the pieces in your mind, bend 'em, break 'em.  Undo reality until they start to fit. # CLASS: benton
 
-- SolWare, Long Night, and FireX had their ups and downs, but none were the whole picture.  Just some edges.  Thought experiment time.  Twist the pieces in your mind, bend 'em, break 'em.  Undo reality until they start to fit.
+And it did. # CLASS: benton
 
-And it did.
+* Eureka moment. # CLASS: player
 
-* Eu re ka. # CLASS: player
+- You could extrapolate nav on the hypereclyptic if your brainbox can juggle multiple Tsukasa Theorems. # CLASS: benton
 
-- You could extrapolate nav on the hypereclyptic if your brainbox can juggle multiple Tsukasa Theorems.
+You could burn hard enough if life-support is full gel-quarium. # CLASS: benton
 
-You could burn hard enough if life-support is full gel-quarium.
+Could drop _m_ if we had to, if we weren't trying to haul. # CLASS: benton
 
-Could drop _m_ if we had to, if we weren't trying to haul.
-
-And you could control & comm with q-sats, even all the way to the edge.
+And you could control & comm with q-sats, even all the way to the edge. # CLASS: benton
 
 * Are you speaking crazy? # CLASS: player
 
-    No, { pronouner("choi", "chai", "chen") }.
+    No, { pronouner("choi", "chai", "chen") }. # CLASS: benton
 
 * Are you crazy? # CLASS: player
 
-    Always have been!
+    Always have been! # CLASS: benton
 
 * You're crazy. # CLASS: player
 
-    Not as crazy as you think.
+    Not as crazy as you think. # CLASS: benton
 
 * { Engineering + Astronomy >= 50 } The math to pull all that is crazy. # CLASS: player
 
-    We're talking 6th level multi-dimensional sot, that's sure.
+    We're talking 6th level multi-dimensional sot, that's sure. # CLASS: benton
 
 * { Technology >= 50 } That's some crazy parallel processing[.], even in a controlled lab! # CLASS: player
 
-    Don't think TARC could handle it?
+    Don't think TARC could handle it? # CLASS: benton
 
 * { Business + Psychology >= 50 } Who's crazy enough to try that? # CLASS: player
 
-    Me.
+    Me. # CLASS: benton
     
-    And Junia.
+    And Junia. # CLASS: benton
 
-- I knew it could be done.  I knew we could weave these elements together.  Go startCorp, super-agile, small.  Stay independent.  Avoid getting trapped in the ice-haul, small thinking big money trap.
+- I knew it could be done.  I knew we could weave these elements together.  Go startCorp, super-agile, small.  Stay independent.  Avoid getting trapped in the ice-haul, small thinking big money trap. # CLASS: benton
 
 * Nth Horizon is the result?[]  When does the idea become reality? # CLASS: player
 
-    It already has.
+    It already has. # CLASS: benton
     
 * To what end?[]  Build the smallest space empire possible? # CLASS: player
 
-    Heh.  Nah.
+    Heh.  Nah. # CLASS: benton
 
 * So you've got another wild idea[.] and investors wacky enough to give you the dosh? # CLASS: player
 
-    It's much more than an idea now.
+    It's much more than an idea now. # CLASS: benton
 
-- Small and nimble to prove the _tech_
+- Small and nimble to prove the _tech_ # CLASS: benton
 
-Small and nimble to go under the radar _until_ you're ready
+Small and nimble to go under the radar _until_ you're ready # CLASS: benton
 
-THEN go big.
+THEN go big. # CLASS: benton
 
-Moonshot is our big unveiling.  We show the system what we can do and we'll have everyone banging on our door for the specs.
+Moonshot is our big unveiling.  We show the system what we can do and we'll have everyone banging on our door for the specs. # CLASS: benton
 
 * I still don't know what Moonshot _is_ # CLASS: player
 
 TODO: player might know what moonshot is if they read news first...
 
-- Prove the tech by taking it out for the ultimate spin.
+- Prove the tech by taking it out for the ultimate spin. # CLASS: benton
 
-I'm flying to Pluto.
+I'm flying to Pluto. # CLASS: benton
 
-And back.
+And back. # CLASS: benton
 
 * What?  Wow! # CLASS: player
 
@@ -248,17 +246,17 @@ And back.
 
 * You.  Are.  Crazy.[] # CLASS: player
 
-- Modelling has it down to 16 months.  Bit longer for the return trip.
+- Modelling has it down to 16 months.  Bit longer for the return trip. # CLASS: benton
 
-We've been building and testing Lowell's Horizon on Luna for the last 3 years.  And now it's ready to roar.
+We've been building and testing Lowell's Horizon on Luna for the last 3 years.  And now it's ready to roar. # CLASS: benton
 
 * You're on the moon? # CLASS: player
 
-- Yeah.  Astro, Eng, Medsci, and some other departments are all here.  I was splitting time with Terra, but now gotta quarantine before go-time.
+- Yeah.  Astro, Eng, Medsci, and some other departments are all here.  I was splitting time with Terra, but now gotta quarantine before go-time. # CLASS: benton
 
 * When do we leave? # CLASS: player
 
-    Oh.
+    Oh. # CLASS: benton
     
 * How big is the crew? # CLASS: player
 
@@ -266,41 +264,41 @@ We've been building and testing Lowell's Horizon on Luna for the last 3 years.  
 
 - 
 
-Uh, no.
+Uh, no. # CLASS: benton
 
-Lowell's Horizon is small, single-occupant.  Junia likes to call it my coffin.
+Lowell's Horizon is small, single-occupant.  Junia likes to call it my coffin. # CLASS: benton
 
 * You're going on your own?[]  For 3 years? # CLASS: player
 
-    Not exactly.
+    Not exactly. # CLASS: benton
 
 * She's probably not wrong.[]  You'll die of boredom on a trip that long. # CLASS: player
 
-- That's why I wanted you.
+- That's why I wanted you. # CLASS: benton
 
-Sure, I got all the medtech and psitech and infotainment a sot could want on a 3 year deep-space voyage.
+Sure, I got all the medtech and psitech and infotainment a sot could want on a 3 year deep-space voyage. # CLASS: benton
 
-But I wanted someone I could talk to.  Someone I could be real with.
+But I wanted someone I could talk to.  Someone I could be real with. # CLASS: benton
 
-And you're the only person I could think would keep me sane.  Who I could trust.
+And you're the only person I could think would keep me sane.  Who I could trust. # CLASS: benton
 
 * I'm honored. # CLASS: player
 
-    Thank you.
+    Thank you. # CLASS: benton
 
 * Hey, we're cool, choi. # CLASS: player
 
-    Cucumber.
+    Cucumber. # CLASS: benton
 
 * Keep you sane?[]  I'm gonna kill you. # CLASS: player
 
-    If gravity doesn't first.
+    If gravity doesn't first. # CLASS: benton
 
-- I know this is a dumbo drop, so take a process cycle.  I don't need you to be my therapist today.
+- I know this is a dumbo drop, so take a process cycle.  I don't need you to be my therapist today. # CLASS: benton
 
-newsDrops should be going live with our announcement soon.  And you could intro yourself to the exec team.  Junia and Lucas are the other arms of the trifecta.
+newsDrops should be going live with our announcement soon.  And you could intro yourself to the exec team.  Junia and Lucas are the other arms of the trifecta. # CLASS: benton
 
-- Serious, we'll chat later { pronouner("choi", "chai", "chen") }.  Ciao.
+- Serious, we'll chat later { pronouner("choi", "chai", "chen") }.  Ciao. # CLASS: benton
 
 * Ciao. # CLASS: player
 
@@ -316,27 +314,27 @@ newsDrops should be going live with our announcement soon.  And you could intro 
 
 # CLEAR
 
-Hollah!  No fuss?
+Hollah!  No fuss? # CLASS: benton
 
 * Paperwork.[] No fuss. # CLASS: player
 
-    Cool!
+    Cool! # CLASS: benton
     
-    Thanks for taking care of it.
+    Thanks for taking care of it. # CLASS: benton
     
 * { tarc_01.nda } That NDA is a little intense # CLASS: player
 
-    Legal sacrifice.  Made my offerings of body and soul to many.
+    Legal sacrifice.  Made my offerings of body and soul to many. # CLASS: benton
     
-    Thanks for taking care of it.
+    Thanks for taking care of it. # CLASS: benton
     
 * { tarc_01.hackit0 or tarc_01.hackit } Tooled. # CLASS: player
 
-    ¡LafLaf!
+    ¡LafLaf! # CLASS: benton
     
-    Wait.  Seriously?
+    Wait.  Seriously? # CLASS: benton
     
-    Nowaitdontwannaknow.🙈🙊🙉
+    Nowaitdontwannaknow.🙈🙊🙉 # CLASS: benton
     
 - 
 
@@ -360,7 +358,7 @@ Hollah!  No fuss?
 
     << Cortical Alarm Activated >> # CLASS: player
     
-    Ach! Sot!  I'm awake...
+    Ach! Sot!  I'm awake... # CLASS: benton
     
     -> awake
     
@@ -368,7 +366,7 @@ Hollah!  No fuss?
 
 - (awake)
 
-I'm awake. Ugh
+I'm awake. Ugh # CLASS: benton
 
 * Sorry[.], you know I gotta. # CLASS: player
 
@@ -376,9 +374,9 @@ I'm awake. Ugh
 
 * No excuses, princess.[]  Tactical meeting in 20. # CLASS: player
 
-- Grokked.
+- Grokked. # CLASS: benton
 
-Waking up in this gunk is no fun.
+Waking up in this gunk is no fun. # CLASS: benton
 
 * I can't imagine it is. # CLASS: player
 
@@ -388,67 +386,67 @@ Waking up in this gunk is no fun.
 
 * { Medicine + Psychology >= 30 }How are you feeling? # CLASS: player
 
-    Honestly?  Werked.
+    Honestly?  Werked. # CLASS: benton
     
-    I thought things were hard before.  Pulling Nth Horizon together, sidestepping doubt and Goliath.
+    I thought things were hard before.  Pulling Nth Horizon together, sidestepping doubt and Goliath. # CLASS: benton
     
-    But this past month is... rough.
+    But this past month is... rough. # CLASS: benton
     
-    Doing everything from inside a tank sucks.
+    Doing everything from inside a tank sucks. # CLASS: benton
 
 * { Medicine >= 60 }How are the gills? # CLASS: player
 
-    Heh, { pronouner("choi", "chai", "chen") }, so bizzaro.
+    Heh, { pronouner("choi", "chai", "chen") }, so bizzaro. # CLASS: benton
     
-    Can't stop touching them.
+    Can't stop touching them. # CLASS: benton
     
-    The "breathing" is getting a bit easier, but still feels crayz.
+    The "breathing" is getting a bit easier, but still feels crayz. # CLASS: benton
 
 * { Engineering + Technology >= 30 }How is the tank? # CLASS: player
 
-    Small, yah.  Glad I can still get out and walk around Luna Station with a gel breather on.
+    Small, yah.  Glad I can still get out and walk around Luna Station with a gel breather on. # CLASS: benton
     
-    But I'm getting used to it.  Gonna be home for a while.
+    But I'm getting used to it.  Gonna be home for a while. # CLASS: benton
 
 * { Astronomy + Engineering >= 30 }How is the ship? # CLASS: player
 
-    Lowell's Horizon is a beauty.
+    Lowell's Horizon is a beauty. # CLASS: benton
     
-    Astro, Eng, Comms.  All golden.  We've doubled our efficiencies in the last 30.  All on track to launch.
+    Astro, Eng, Comms.  All golden.  We've doubled our efficiencies in the last 30.  All on track to launch. # CLASS: benton
 
 * { Business + Psychology >= 30 }How are the teams? # CLASS: player
 
-    Great.
+    Great. # CLASS: benton
     
-    Fine.
+    Fine. # CLASS: benton
     
-    - - (headbutt) TBH I keep ramming horns with Lucas.  But we'll sort it out.
+    - - (headbutt) TBH I keep ramming horns with Lucas.  But we'll sort it out. # CLASS: benton
     
-    He and I have been in tight spots before.
+    He and I have been in tight spots before. # CLASS: benton
 
 * { Security + Technology >= 30 }Any threats rear up? # CLASS: player
 
-    AFAIK TARC is holding down the fort.
+    AFAIK TARC is holding down the fort. # CLASS: benton
     
-    Definitely painted a target on us with the announcement last month.
+    Definitely painted a target on us with the announcement last month. # CLASS: benton
     
-    Think it's contained, but y'know \#alwaysneversafe.
+    Think it's contained, but y'know \#alwaysneversafe. # CLASS: benton
     
-    So we're staying frosty.
+    So we're staying frosty. # CLASS: benton
     
 * What's on your mind? # CLASS: player
 
     -> talkaboutsomethingelse
 
-- {&|But... can we talk about something else?|Seriously, can this wait?}
+- {&|But... can we talk about something else?|Seriously, can this wait?} # CLASS: benton
 
     -> bstate
 
 - (talkaboutsomethingelse)
 
-Honest?  I just wanna talk about something _other_ than Moonshot.
+Honest?  I just wanna talk about something _other_ than Moonshot. # CLASS: benton
 
-I'm psyched, but just for once wanna remember something outside this green gel and nuclear-powered-coffin, capisce?
+I'm psyched, but just for once wanna remember something outside this green gel and nuclear-powered-coffin, capisce? # CLASS: benton
 
 * Of course! # CLASS: player
 
@@ -456,56 +454,56 @@ I'm psyched, but just for once wanna remember something outside this green gel a
 
 * This is your project. # CLASS: player
 
-    I know.
+    I know. # CLASS: benton
     
-    Please?
+    Please? # CLASS: benton
     
     * * Fine. # CLASS: player
 
 - Whatcha wanna talk about? # CLASS: player
 
-Almost anything.
+Almost anything. # CLASS: benton
 
-What's fun dirtside?
+What's fun dirtside? # CLASS: benton
 
 * (busy) I've been busy. # CLASS: player
 
     Workload for { career } doesn't just evaporate when your old choi seconds you to his therapist team. # CLASS: player
     
-    Ai, I know.  Sorry { pronouner("choi", "chai", "chen") }
+    Ai, I know.  Sorry { pronouner("choi", "chai", "chen") } # CLASS: benton
     
-    Good busy at least?
+    Good busy at least? # CLASS: benton
     
     * * Yeah, energizing[.]  You know I like moving at light speed. # CLASS: player
     
-        Well true.
+        Well true. # CLASS: benton
         
     * * It pays the bills. # CLASS: player
     
-        Moonshot takes off, those stockOpts will do you right.
+        Moonshot takes off, those stockOpts will do you right. # CLASS: benton
         
-        You won't have to worry about that.
+        You won't have to worry about that. # CLASS: benton
         
-        Trust me.
+        Trust me. # CLASS: benton
     
     * * No such thing.[] I'm not even burning candles at both ends... I'm burning flesh. # CLASS: player
     
-        { pronouner("Choi", "Chai", "Chen") }.
+        { pronouner("Choi", "Chai", "Chen") }. # CLASS: benton
         
         Forget it. # CLASS: player
     
-    - - Look, I legit appreciate you being here for me.
+    - - Look, I legit appreciate you being here for me. # CLASS: benton
 
 * (lover) I met someone. # CLASS: player
 
     {
         - relationship == "close":
         
-            Oh.  Really?
+            Oh.  Really? # CLASS: benton
         
         - else:
         
-            That's awesome!  Who's this myserious someone?
+            That's awesome!  Who's this myserious someone? # CLASS: benton
     
     }
     
@@ -520,20 +518,20 @@ What's fun dirtside?
         {
         - relationship == "close":
         
-            Cool.
+            Cool. # CLASS: benton
         
         - else:
         
-            Aww, { pronouner("choi", "chai", "chen") }, I'm stoked for ya.
+            Aww, { pronouner("choi", "chai", "chen") }, I'm stoked for ya. # CLASS: benton
             
-            If I wasn't embedded in a gooey tank I'd say double-date to Whistler next Saturday.
+            If I wasn't embedded in a gooey tank I'd say double-date to Whistler next Saturday. # CLASS: benton
         }
     
     * * Sure. # CLASS: player
     
     { wait(2) }
     
-    I can tell you don't wanna share.
+    I can tell you don't wanna share. # CLASS: benton
 
 * (adventurer) I've been adventuring. # CLASS: player
 
@@ -547,9 +545,9 @@ What's fun dirtside?
         
     * * Disappear into the mountains[.] whenever I can. # CLASS: player
     
-    - - { pronouner("Choi", "Chai", "Chen") }!  That's so cool!
+    - - { pronouner("Choi", "Chai", "Chen") }!  That's so cool! # CLASS: benton
     
-    I miss that.  Dirt and sweat and cheating death.
+    I miss that.  Dirt and sweat and cheating death. # CLASS: benton
     
     * * It's good for the soul. # CLASS: player
     
@@ -557,57 +555,57 @@ What's fun dirtside?
     
     * * Not like you're avoiding death with this stunt! # CLASS: player
 
-    - - Well true.
+    - - Well true. # CLASS: benton
     
-    Ugh.
+    Ugh. # CLASS: benton
 
 * (goliath) I've been keeping tabs on Goliath. # CLASS: player
 
-    That still sounds like Moonshot.
+    That still sounds like Moonshot. # CLASS: benton
     
-    Just ignore them.  Bullies feed on your attention.
+    Just ignore them.  Bullies feed on your attention. # CLASS: benton
 
 * (dont_do_anything) Nothing.  This is all I do.[]  I don't have any time to be { career } AND keep you company. # CLASS: player
 
-    Oh, sot.  It's dragging you down too?
+    Oh, sot.  It's dragging you down too? # CLASS: benton
     
-    { pronouner("Choi", "Chai", "Chen") }.  I know you're giving up a lot to be here for me.  I see that.
+    { pronouner("Choi", "Chai", "Chen") }.  I know you're giving up a lot to be here for me.  I see that. # CLASS: benton
     
     * * Thx, choi. # CLASS: player
     
-        Nah, thank you.  A billion.
+        Nah, thank you.  A billion. # CLASS: benton
         
-        You are keeping me well on course.
+        You are keeping me well on course. # CLASS: benton
     
     * * Uh huh. # CLASS: player
     
-        You're keeping me grounded.
+        You're keeping me grounded. # CLASS: benton
         
-        I'd be deviating way off the ecliptic if your chill wasn't there to balance.
+        I'd be deviating way off the ecliptic if your chill wasn't there to balance. # CLASS: benton
         
-        So, thanks.
+        So, thanks. # CLASS: benton
     
     * * Whatever. # CLASS: player
     
-        Just sayin I won't forget this.
+        Just sayin I won't forget this. # CLASS: benton
     
-        Anyway.
+        Anyway. # CLASS: benton
 
 - { wait(3) }
 
-Sidetrack, you remember Daeso?
+Sidetrack, you remember Daeso? # CLASS: benton
 
 * Daeso Kim, right? # CLASS: player
 
-    Yeah!
+    Yeah! # CLASS: benton
 
 * { relationship == "close" } Your k-pop sweetheart? # CLASS: player
 
-    He was... something special.
+    He was... something special. # CLASS: benton
 
 * { relationship == "puzzle" } The scriptKiddie who almost flatlined the TARC project? # CLASS: player
 
-    I thought I was losing my mind!
+    I thought I was losing my mind! # CLASS: benton
     
     { Technology >= 60:
     
@@ -615,80 +613,80 @@ Sidetrack, you remember Daeso?
         
         Processing was through the roof and rootLog was completely clean. # CLASS: player
         
-        Right!
+        Right! # CLASS: benton
     
     - else:
     
-        I spent days digging through rootLog before I tracked him down!
+        I spent days digging through rootLog before I tracked him down! # CLASS: benton
 
     }
 
 * { relationship == "epic" } Didn't he attack you? # CLASS: player
 
-    I sometimes make enemies. 🤷
+    I sometimes make enemies. 🤷 # CLASS: benton
     
     * * Sometimes.[]  And when you do they're trouble. # CLASS: player
     
     * * Always. # CLASS: player
     
-    - - Touché.
+    - - Touché. # CLASS: benton
 
 * Doesn't sound familiar. # CLASS: player
 
-    - - (glass) The glass elevator incident?
+    - - (glass) The glass elevator incident? # CLASS: benton
     
     Ah. # CLASS: player
     
     Right. # CLASS: player
 
-- Being in this goop-tube just reminded me of when { not glass :the three of us ended up in that glass elevator }and you... interceded.
+- Being in this goop-tube just reminded me of when { not glass :the three of us ended up in that glass elevator }and you... interceded. # CLASS: benton
 
 VAR diplomacy = 0
 VAR violence = 0
 
 * { relationship == "close" } He needed to be let down softly. # CLASS: player
 
-    ¡sigh!
+    ¡sigh! # CLASS: benton
     
-    Yeah.  You were always better with affairs of the heart.
+    Yeah.  You were always better with affairs of the heart. # CLASS: benton
     
     ~ diplomacy++
     ~ violence--
 
 * { relationship == "close" } I was jealous.[]  So maybe things got heated. # CLASS: player
 
-    I still cared for you, { pronouner("choi", "chai", "chen") }.
+    I still cared for you, { pronouner("choi", "chai", "chen") }. # CLASS: benton
     
-    I'm sorry I hurt you.
+    I'm sorry I hurt you. # CLASS: benton
     
-    Anyway, it stuck.  I remembered.  Even through everything that's happened since.
+    Anyway, it stuck.  I remembered.  Even through everything that's happened since. # CLASS: benton
 
     ~ diplomacy--
     ~ violence++
 
 * { relationship == "puzzle" } Sometimes a light touch is all it takes. # CLASS: player
 
-    You also figured him out, cut the knot.
+    You also figured him out, cut the knot. # CLASS: benton
     
-    I was impressed.
+    I was impressed. # CLASS: benton
 
     ~ diplomacy++
     ~ violence--
 
 * { relationship == "puzzle" } We needed that keyfile.[]  I just did what needed doing. # CLASS: player
     
-    You made the hard call.  And it worked.
+    You made the hard call.  And it worked. # CLASS: benton
     
-    Still don't know how you avoided the PolSec.  Coulda been ugly.
+    Still don't know how you avoided the PolSec.  Coulda been ugly. # CLASS: benton
 
     ~ diplomacy--
     ~ violence++
 
 * { relationship == "epic" } I had my own agenda with Kim.[]  It's not always about you. # CLASS: player
 
-    But it saved my bacon.
+    But it saved my bacon. # CLASS: benton
     
-    So I still owed you.
+    So I still owed you. # CLASS: benton
     
     Still do. # CLASS: player
 
@@ -697,39 +695,39 @@ VAR violence = 0
 
 * { relationship == "epic" } Never one to back down from a fight.[]  You at least know how to show { pronouner("a boy", "a girl", "me") } a good time. # CLASS: player
 
-    A good time is rungunning from PolSec?
+    A good time is rungunning from PolSec? # CLASS: benton
     
-    ¡LafLaf!
+    ¡LafLaf! # CLASS: benton
     
-    But we had each other's backs.  And that counts.
+    But we had each other's backs.  And that counts. # CLASS: benton
 
 * I wasn't involved.[]  You dealt with it.  I was just... emotional support. # CLASS: player
 
-    You backed me up.
+    You backed me up. # CLASS: benton
     
-    Someone I can count on.
+    Someone I can count on. # CLASS: benton
 
 * Don't really recall. # CLASS: player
 
-    Ok. Ok.  Just trying to remember the good times.
+    Ok. Ok.  Just trying to remember the good times. # CLASS: benton
     
     Good times? # CLASS: player
     
-    Yeah.
+    Yeah. # CLASS: benton
 
-- It's just strange.
+- It's just strange. # CLASS: benton
 
-I guess when I'm not buried in project details I find myself deepthinking
+I guess when I'm not buried in project details I find myself deepthinking # CLASS: benton
 
-Going over those old episodes
+Going over those old episodes # CLASS: benton
 
-Those people we've passed by and close-to forgotten.
+Those people we've passed by and close-to forgotten. # CLASS: benton
 
 { wait(3) }
 
-I can never quite tell for each incident if what I was doing was running towards something, or running away from it...
+I can never quite tell for each incident if what I was doing was running towards something, or running away from it... # CLASS: benton
 
-Grok?
+Grok? # CLASS: benton
 
 * Sure.[] I getcha.  But life's messy, a pastiche of choices.  You do the best you can with the intel you have. # CLASS: player
 
@@ -737,53 +735,53 @@ Grok?
 
 * You're second-guessing.[]  Always have worried too much about the impact *after* you've made a choice. # CLASS: player
 
-- Hmph.  I suppose you're right.
+- Hmph.  I suppose you're right. # CLASS: benton
 
 * Is Moonshot towards or away? # CLASS: player
 
 { wait(2) }
 
-- Towards.
+- Towards. # CLASS: benton
 
 { wait(1) }
 
-I think.
+I think. # CLASS: benton
 
 * Towards what? # CLASS: player
 
-    A brighter future?
+    A brighter future? # CLASS: benton
     
-    I know that sounds corny, but I mean it.
+    I know that sounds corny, but I mean it. # CLASS: benton
 
 * Away from what? # CLASS: player
 
-    A scary future.
+    A scary future. # CLASS: benton
     
-    The homogeonization of human industry under a Goliath banner.
+    The homogeonization of human industry under a Goliath banner. # CLASS: benton
 
 * Just keep running, huh? # CLASS: player
 
-- Everything I've ever done has had the same engine.
+- Everything I've ever done has had the same engine. # CLASS: benton
 
-The tech, the power, the money.  It's all full throttle.  But I wanna use it to change the status quo.
+The tech, the power, the money.  It's all full throttle.  But I wanna use it to change the status quo. # CLASS: benton
 
-We need to get out from under the megas and see independent innovation, independent pioneers, independent spirit.  See the wild ideas and the epic burnouts.
+We need to get out from under the megas and see independent innovation, independent pioneers, independent spirit.  See the wild ideas and the epic burnouts. # CLASS: benton
 
-That's the only way we evolve enough to survive.
+That's the only way we evolve enough to survive. # CLASS: benton
 
 * Grand. # CLASS: player
 
-    Or naive.
+    Or naive. # CLASS: benton
 
 * Risky. # CLASS: player
 
-    I don't think any worthy vision can be otherwise.
+    I don't think any worthy vision can be otherwise. # CLASS: benton
 
 * ¡sarcasm! Epic. # CLASS: player
 
-    ¡shrug!
+    ¡shrug! # CLASS: benton
 
-- Do you think Moonshot is worthy?
+- Do you think Moonshot is worthy? # CLASS: benton
 
 - (ask)
 
@@ -793,15 +791,15 @@ That's the only way we evolve enough to survive.
     
     But like you said, we need to in order to evolve. # CLASS: player
     
-    I hope you're right.
+    I hope you're right. # CLASS: benton
 
 * I don't know. # CLASS: player
 
-    Alright, fair.  Hope you'll see it is.
+    Alright, fair.  Hope you'll see it is. # CLASS: benton
 
 * Not my place to say. # CLASS: player
 
-    But what's your opinion?
+    But what's your opinion? # CLASS: benton
     
     -> ask
 
@@ -811,109 +809,109 @@ That's the only way we evolve enough to survive.
     
     This time I'm just making sure I'm at arm's length. # CLASS: player
     
-    Well.  Orbit's length.
+    Well.  Orbit's length. # CLASS: benton
     
-    And eventually a few AU's.
+    And eventually a few AU's. # CLASS: benton
 
-- I have to keep believing it is.
+- I have to keep believing it is. # CLASS: benton
 
 * Do you have doubts? # CLASS: player
 
-- Of the vision?  No.
+- Of the vision?  No. # CLASS: benton
 
 - (doubts)
 
 * Do you doubt the ship? # CLASS: player
 
-    So far testing is green across the board.
+    So far testing is green across the board. # CLASS: benton
     
-    Still a few dependencies to interlink, but I think we're on track.
+    Still a few dependencies to interlink, but I think we're on track. # CLASS: benton
     
     * * Good to hear. # CLASS: player
     
     * * { Business + Psychology + Medicine >= 30 } But do you doubt it? # CLASS: player
     
-        \#alwaysneversafe, right?
+        \#alwaysneversafe, right? # CLASS: benton
         
-        There's always room for doubt.  Always should be some doubt.
+        There's always room for doubt.  Always should be some doubt. # CLASS: benton
         
-        Then, at some point, you trust the margins and take the risk.
+        Then, at some point, you trust the margins and take the risk. # CLASS: benton
     
     * * { Astronomy + Engineering + Technology + Security >= 30 } There are a lot of dependencies, though.[]  Do you have a sufficient depth of test suites given that you'll be on your own for three years? # CLASS: player
     
-        The team is top notch and has been refining this thing for three years.
+        The team is top notch and has been refining this thing for three years. # CLASS: benton
         
         * * * Doesn't sound like all that long. # CLASS: player
         
-            They're all top of their field.
+            They're all top of their field. # CLASS: benton
             
-            Building on almost a century of prior knowledge.
+            Building on almost a century of prior knowledge. # CLASS: benton
             
-            Our margins are good.
+            Our margins are good. # CLASS: benton
 
 * Is Dr. Estévez up to snuff? # CLASS: player
 
-    Yeah, why?
+    Yeah, why? # CLASS: benton
     
     * * Junia seemed concerned.[]  He hasn't done space missions before. # CLASS: player
     
-        ¡sigh!
+        ¡sigh! # CLASS: benton
         
-        Lucas is a top doc.  And a lot of experience with challenging environments.
+        Lucas is a top doc.  And a lot of experience with challenging environments. # CLASS: benton
         
-        I know.
+        I know. # CLASS: benton
         
-        I've been with him on some critfail expeditions.
+        I've been with him on some critfail expeditions. # CLASS: benton
         
-        He's kept his head and adapted to things that would crumple a career scientist.
+        He's kept his head and adapted to things that would crumple a career scientist. # CLASS: benton
     
     * * { headbutt } You said you were butting heads? # CLASS: player
     
-        Yah, true.
+        Yah, true. # CLASS: benton
         
-        Pressure's on both of us, so tempers can run high.
+        Pressure's on both of us, so tempers can run high. # CLASS: benton
         
-        But he'll come around.
+        But he'll come around. # CLASS: benton
         
         * * * Come around to what? # CLASS: player
         
-            He thinks I'm too soft. ¡grin!
+            He thinks I'm too soft. ¡grin! # CLASS: benton
             
             * * * * You're not.[]  Perhaps he doesn't know you as well as you thought? # CLASS: player
             
-                Perhaps.
+                Perhaps. # CLASS: benton
             
             * * * * You are[.] a bag of meat throwing yourself into the depths of space. # CLASS: player
             
-                Gee, thanks!
+                Gee, thanks! # CLASS: benton
             
-            - - - - Don't worry, we'll work it out.
+            - - - - Don't worry, we'll work it out. # CLASS: benton
     
     * * { Medicine >= 60 } His reports worry me.[]  Iso-regulation seems off, and I don't know that the team has thought through the repercusions of extended tank immersion enough. # CLASS: player
     
-        - - - (player_med_report) Right over my head, { pronouner("choi", "chai", "chen") }.
+        - - - (player_med_report) Right over my head, { pronouner("choi", "chai", "chen") }. # CLASS: benton
         
-        Look, I always want my team to speak their mind.
+        Look, I always want my team to speak their mind. # CLASS: benton
         
-        So if you think that's a concern, take it to Lucas.
+        So if you think that's a concern, take it to Lucas. # CLASS: benton
         
-        But he calls the shots on Medsci, 'k?
+        But he calls the shots on Medsci, 'k? # CLASS: benton
         
         * * * Fair enough. # CLASS: player
     
     * * Just asking. # CLASS: player
     
-    - - We've got a good team behind him.
+    - - We've got a good team behind him. # CLASS: benton
     
     TODO: rewrite -- Benton doesn't fully trust Lucas / argues with him in the next scene
     
-    I trust him most with my health.
+    I trust him most with my health. # CLASS: benton
 
 * What about Junia? # CLASS: player
 
-    Junia is \#oneofakind and an absolute beast in the board room.
+    Junia is \#oneofakind and an absolute beast in the board room. # CLASS: benton
     
-    She's the best business partner I've worked with.
+    She's the best business partner I've worked with. # CLASS: benton
     
     ~ temp trust_junia = 0
     
@@ -921,19 +919,19 @@ That's the only way we evolve enough to survive.
     
     * * { Business >= 30 } She a better business partner than I was? # CLASS: player
     
-        Ah, { pronouner("choi", "chai", "chen") }.
+        Ah, { pronouner("choi", "chai", "chen") }. # CLASS: benton
         
-        Better at business?  P'raps not.
+        Better at business?  P'raps not. # CLASS: benton
         
-        But her and I are better business *partners*.  More sympatico.
+        But her and I are better business *partners*.  More sympatico. # CLASS: benton
     
     * * { Business + Psychology >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
     
-        I can trust that she'll do what's best for Nth Horizon.  Her rep is just as much on the line here as mine is.
+        I can trust that she'll do what's best for Nth Horizon.  Her rep is just as much on the line here as mine is. # CLASS: benton
         
         * * * { Psychology >= 30 } [As long as you're aligned.]Which is fine as long as your definition of "what's best for Nth Horizon" is aligned with hers. # CLASS: player
         
-            It is.
+            It is. # CLASS: benton
             
             Hope you're right. # CLASS: player
             
@@ -941,37 +939,37 @@ That's the only way we evolve enough to survive.
     
     * * Is she really bought in to this stunt? # CLASS: player
     
-        Heh, we've... disagreed some.
+        Heh, we've... disagreed some. # CLASS: benton
         
-        But she's backing the vision 100%.
+        But she's backing the vision 100%. # CLASS: benton
         
         * * * Always good to have a cheersquad. # CLASS: player
         
-            ¡LafLaf!
+            ¡LafLaf! # CLASS: benton
             
-            Don't let her hear you say that!
+            Don't let her hear you say that! # CLASS: benton
         
         * * * Backing sticking her business partner on the business end of a rocket? # CLASS: player
         
-            Took a little convincing.
+            Took a little convincing. # CLASS: benton
             
-            Obviously we could do drone, we could do a lot of other things.
+            Obviously we could do drone, we could do a lot of other things. # CLASS: benton
             
-            But this is historical!
+            But this is historical! # CLASS: benton
             
             ~ trust_junia--
         
         * * * And willing to wait 3 years for the proof? # CLASS: player
         
-            Yeah.  This isn't a short sell situation.
+            Yeah.  This isn't a short sell situation. # CLASS: benton
             
-            We're changing the face of the system!
+            We're changing the face of the system! # CLASS: benton
             
             * * * * { Business >= 30 } There are other tactics.[]  With her rep I'd be surprised if she hasn't thought of the short sell so she can pivot ahead of the transition wave. # CLASS: player
             
-                Thought it, for sure.  I'd expect nothing less.
+                Thought it, for sure.  I'd expect nothing less. # CLASS: benton
                 
-                Gonna do something about it on the sly?  I don't think so.
+                Gonna do something about it on the sly?  I don't think so. # CLASS: benton
                 
                 ~ trust_junia--
                 
@@ -979,17 +977,17 @@ That's the only way we evolve enough to survive.
     
     * * Has she also locked horns with Estévez?[]  Coz sounded like she didn't trust him. # CLASS: player
     
-        Lucas is locking horns with all of us.
+        Lucas is locking horns with all of us. # CLASS: benton
         
-        So I wouldn't put that on Junia.
+        So I wouldn't put that on Junia. # CLASS: benton
         
         * * * { Psychology >= 30 } She _was_ eager to throw shade[.] as soon as I joined about his credentials. # CLASS: player
         
-            True?
+            True? # CLASS: benton
             
-            Well, I expect this team to talk truth.  Be direct.
+            Well, I expect this team to talk truth.  Be direct. # CLASS: benton
             
-            So it'll get sorted.
+            So it'll get sorted. # CLASS: benton
             
             ~ trust_junia--
         
@@ -997,7 +995,7 @@ That's the only way we evolve enough to survive.
     
     * * What do you think she wants from this? # CLASS: player
     
-        To succeed, just like the rest of us.
+        To succeed, just like the rest of us. # CLASS: benton
 
         -> byp_j
     
@@ -1005,37 +1003,37 @@ That's the only way we evolve enough to survive.
 
     - - (byp_j)
     
-    This won't just put Nth Horizon on the map, we'll be a thousand spins ahead of the competition.
+    This won't just put Nth Horizon on the map, we'll be a thousand spins ahead of the competition. # CLASS: benton
     
-    And we're small enough to outrun or sidestep the behemoths.
+    And we're small enough to outrun or sidestep the behemoths. # CLASS: benton
     
     She helped craft the practical plan to achieve that vision.  <>
     
     { trust_junia >= 0:
 
-        She won't let me down.
+        She won't let me down. # CLASS: benton
         
         - else:
             
-        I gotta trust she's not out to scuttle us now.
+        I gotta trust she's not out to scuttle us now. # CLASS: benton
     
     }
 
 * Is TARC a risk? # CLASS: player
 
-    TARC is the *least* risky thing about this project!
+    TARC is the *least* risky thing about this project! # CLASS: benton
     
-    You've no idea how many Goliath sniffers he's shut down over the years.
+    You've no idea how many Goliath sniffers he's shut down over the years. # CLASS: benton
     
-    Not just shut down, actually, but sent on goose chases across the system.  It's been glorious!
+    Not just shut down, actually, but sent on goose chases across the system.  It's been glorious! # CLASS: benton
 
 * Do you doubt me? # CLASS: player
 
-    No.
+    No. # CLASS: benton
     
-    We haven't always seen eye to eye.
+    We haven't always seen eye to eye. # CLASS: benton
     
-    But I know you'll challenge me when you feel it's right.  That's what I need.
+    But I know you'll challenge me when you feel it's right.  That's what I need. # CLASS: benton
 
 * { doubts > 1 } So what's next? # CLASS: player
     
@@ -1045,39 +1043,39 @@ That's the only way we evolve enough to survive.
 
 - (learnings)
 
-Still need to attend to my morning ablutions.
+Still need to attend to my morning ablutions. # CLASS: benton
 
-Which are a little messier in the gel.
+Which are a little messier in the gel. # CLASS: benton
 
 * Yuck. # CLASS: player
 
 * { Medicine >= 30 } Isn't that the tank's job?[]  Hygiene cycle everything? # CLASS: player
 
-    We've not got it all sorted just yet.
+    We've not got it all sorted just yet. # CLASS: benton
     
-    A little more time.
+    A little more time. # CLASS: benton
 
-- Look, one more thing, { pronouner("choi", "chai", "chen") }.
+- Look, one more thing, { pronouner("choi", "chai", "chen") }. # CLASS: benton
 
-We're tense right now.  All of us.
+We're tense right now.  All of us. # CLASS: benton
 
-Launch window is approaching and not _everything_ is in place.
+Launch window is approaching and not _everything_ is in place. # CLASS: benton
 
-I hope you can help keep the team in the right headspace.  Cool?
+I hope you can help keep the team in the right headspace.  Cool? # CLASS: benton
 
-* Cucumber.
+* Cucumber. # CLASS: player
 
-    👍
+    👍 # CLASS: benton
 
-* Fine.
+* Fine. # CLASS: player
 
-    Thanks!
+    Thanks! # CLASS: benton
 
 * I'm your nanny, not the whole team's! # CLASS: player
 
-    Just try not to make it worse.
+    Just try not to make it worse. # CLASS: benton
 
-- Chat soon, yah?
+- Chat soon, yah? # CLASS: benton
 
 + [<< Close Chat >>] -> menu
 
@@ -1085,77 +1083,77 @@ I hope you can help keep the team in the right headspace.  Cool?
 
 # CLEAR
 
-Hei { name }
+Hei { name } # CLASS: benton
 
-What's new in the real world?
+What's new in the real world? # CLASS: benton
 
 * [A man's gonna fly to Pluto!]I heard there's this crazy dude put in gills and is gonna fly 'round Pluto! # CLASS: player
 
-    And beat me to it?  Sot!
+    And beat me to it?  Sot! # CLASS: benton
     
     * * Nah, nobody's as nutso as you. # CLASS: player
     
-        Numero uno loco here.
+        Numero uno loco here. # CLASS: benton
         
     * * Yeah, may as well give up now! # CLASS: player
     
-        Never!
+        Never! # CLASS: benton
 
 * Hei Benton.  Not much. # CLASS: player
 
 * Goliath just bought you. # CLASS: player
 
-    Very ¡LafLaf!
+    Very ¡LafLaf! # CLASS: benton
     
     * * I think there's plans to pickle you[.] in that gunk and hang you on the CEO's wall. # CLASS: player
     
-        As long as I'm tastefully nude.
+        As long as I'm tastefully nude. # CLASS: benton
     
     * * Serious. # CLASS: player
     
-        You're not?
+        You're not? # CLASS: benton
         
         { wait(2) }
         
-        Serious?
+        Serious? # CLASS: benton
         
-        I haven't seen...
+        I haven't seen... # CLASS: benton
         
-        Sot it... merging Junia...
+        Sot it... merging Junia... # CLASS: benton
         
         * * * ¡LafLaf![]  Fell for it. # CLASS: player
         
-            Sotting hades!  { name }, you're space trash!
+            Sotting hades!  { name }, you're space trash! # CLASS: benton
             
             { wait(1) }
             
-            ¡sigh! I need to remember how to laugh.
+            ¡sigh! I need to remember how to laugh. # CLASS: benton
             
             { wait(1) }
 
-- Well, distract me or something.
+- Well, distract me or something. # CLASS: benton
 
 { benton_02.busy:
 
-    Being { career } and my nanny keeping you busy?
+    Being { career } and my nanny keeping you busy? # CLASS: benton
 
        * All cylinders.[]  Wouldn't want it any other way. # CLASS: player
         
-            Don't burn up on reentry, tho, ya?
+            Don't burn up on reentry, tho, ya? # CLASS: benton
             
-            Don't wanna be responsible for that.
+            Don't wanna be responsible for that. # CLASS: benton
         
             -> nomorefun
         
         * Enough.[]  What do you need? # CLASS: player
         
-            Too much apparently.
+            Too much apparently. # CLASS: benton
             
             -> nomorefun
             
         * I'm not your doomscroll feed. # CLASS: player
         
-            Fine.
+            Fine. # CLASS: benton
             
             -> nomorefun
 
@@ -1163,29 +1161,29 @@ What's new in the real world?
 
 { benton_02.lover && relationship != "close":
     
-    How's your bae?
+    How's your bae? # CLASS: benton
 
        * ¡grin![]  It's special. # CLASS: player
         
-            I know you like a rollercoaster.
+            I know you like a rollercoaster. # CLASS: benton
             
-            Keep up the momentum! 😁
+            Keep up the momentum! 😁 # CLASS: benton
         
             -> nomorefun
         
         * We're good. # CLASS: player
         
-            Don't need to talk about it, huh?
+            Don't need to talk about it, huh? # CLASS: benton
             
-            You always were quiet about such stuff.
+            You always were quiet about such stuff. # CLASS: benton
             
-            I think that's a good sign.
+            I think that's a good sign. # CLASS: benton
             
             -> nomorefun
             
         * Crash/Burn.[]  I'm apparently "not good emotional material" when I'm spending hours talking to a fish. # CLASS: player
         
-            Ah, I'm sorry {pronouner("choi", "chai", "chen")}.
+            Ah, I'm sorry {pronouner("choi", "chai", "chen")}. # CLASS: benton
             
             -> nomorefun
         
@@ -1193,7 +1191,7 @@ What's new in the real world?
 
 { benton_02.lover && relationship == "close":
     
-    Got single again?
+    Got single again? # CLASS: benton
         
        * Yeah.[]  It didn't work out. # CLASS: player
         
@@ -1201,7 +1199,7 @@ What's new in the real world?
         
             { wait(2) }
             
-            I... uh...
+            I... uh... # CLASS: benton
             
             Nevermind. # CLASS: player
         
@@ -1209,17 +1207,17 @@ What's new in the real world?
         
         * None of your biz. # CLASS: player
         
-            Fair 'nuff.
+            Fair 'nuff. # CLASS: benton
             
             -> nomorefun
             
         * Oh, no, it's going swell.[]  You wanna hear all the squishy deets? # CLASS: player
         
-            No, thanks.  Got more important things we should focus on.
+            No, thanks.  Got more important things we should focus on. # CLASS: benton
             
             Well, you see, there's this thing I like... # CLASS: player
             
-            THANK YOU!  Moving on.
+            THANK YOU!  Moving on. # CLASS: benton
             
             -> nomorefun
         
@@ -1227,23 +1225,23 @@ What's new in the real world?
 
 { benton_02.adventurer:
 
-    Recover from your last dirtventure?
+    Recover from your last dirtventure? # CLASS: benton
     
        * Recovered? Energized![]  You know I need the thrills. # CLASS: player
             
-            Man, I miss the thrill of the drop.
+            Man, I miss the thrill of the drop. # CLASS: benton
             
             * * You'll be on the thrill ride of a lifetime in a few days here. # CLASS: player
             
-            Yah, but drugged to the gills, _literally_, to avoid adreno spikes.
+            Yah, but drugged to the gills, _literally_, to avoid adreno spikes. # CLASS: benton
             
-            Class 3 fun.  Good story to tell when I get home.
+            Class 3 fun.  Good story to tell when I get home. # CLASS: benton
         
             -> nomorefun
         
         * Barely.[]  Worth it, but choi am I werked. # CLASS: player
         
-            I feel yah.
+            I feel yah. # CLASS: benton
             
             -> nomorefun
             
@@ -1251,37 +1249,37 @@ What's new in the real world?
         
             { wait(1) }
             
-            No way!  What happened?
+            No way!  What happened? # CLASS: benton
             
             * * Anchor failure. # CLASS: player
             
-                And no grav-belt backup?  I knew you were crayz, but really?
+                And no grav-belt backup?  I knew you were crayz, but really? # CLASS: benton
                 
                 Nah, just messin' # CLASS: player
                 
-                Sot!  Thanks {pronouner("choi","chai","chen")}!
+                Sot!  Thanks {pronouner("choi","chai","chen")}! # CLASS: benton
                 
-                I was almost feelin' worse from talking to you.
+                I was almost feelin' worse from talking to you. # CLASS: benton
             
                 -> nomorefun
             
             * * Snowstorm and an icy road. # CLASS: player
             
-                That's terrible {pronouner("choi","chai","chen")}!
+                That's terrible {pronouner("choi","chai","chen")}! # CLASS: benton
                 
                 Not really. Just trying to get you to stop on the gory details about your biohack. # CLASS: player
                 
-                Oh, phew!
+                Oh, phew! # CLASS: benton
                 
                 -> nomorefun
             
             * * An angry camel. # CLASS: player
             
-                What?  You're pulling my leg!
+                What?  You're pulling my leg! # CLASS: benton
                 
                 True. # CLASS: player
                 
-                I was almost feelin' worse from talking to you.
+                I was almost feelin' worse from talking to you. # CLASS: benton
             
                 -> nomorefun
         
@@ -1290,17 +1288,17 @@ What's new in the real world?
 
 { benton_02.goliath:
 
-    Except big G.  I don't wanna hear anything more about big G right now.
+    Except big G.  I don't wanna hear anything more about big G right now. # CLASS: benton
     
        * Nothing to report.[]  They're off chasing other prey. # CLASS: player
             
-            Hopefully it stays that way.
+            Hopefully it stays that way. # CLASS: benton
         
             -> nomorefun
         
         * I dropped it.[]  Not worth my time. # CLASS: player
         
-            Good.  Don't need them constantly preying on our minds.
+            Good.  Don't need them constantly preying on our minds. # CLASS: benton
             
             -> nomorefun
             
@@ -1308,11 +1306,11 @@ What's new in the real world?
         
             { wait(1) }
             
-            Swell.  You gonna sell me out?
+            Swell.  You gonna sell me out? # CLASS: benton
             
             I wish.  You think big G made me an offer I'd still be here? # CLASS: player
             
-            You're filling me with confidence...
+            You're filling me with confidence... # CLASS: benton
             
             -> nomorefun
         
@@ -1320,19 +1318,19 @@ What's new in the real world?
 
 { benton_02.dont_do_anything:
 
-    Found anything fun to do outside of this?
+    Found anything fun to do outside of this? # CLASS: benton
     
         * Sure.[]  But you've got other things to worry about. # CLASS: player
         
-            ¡sigh! True
+            ¡sigh! True # CLASS: benton
             
             -> nomorefun
         
         * Not really. # CLASS: player
         
-            Sorry, {pronouner("choi", "chai", "chen")}.  Take some time for you, yah?
+            Sorry, {pronouner("choi", "chai", "chen")}.  Take some time for you, yah? # CLASS: benton
             
-            I'll try. # CLASS: player
+            I'll try. # CLASS: player # CLASS: benton
         
             -> nomorefun
     
@@ -1342,25 +1340,25 @@ What's new in the real world?
 
 = nomorefun
 
-Feels like a firing line here at the mo'
+Feels like a firing line here at the mo' # CLASS: benton
 
 * What's the problem?[]  Something I can do to help? # CLASS: player
 
-    Mebbe.
+    Mebbe. # CLASS: benton
 
 * How so? # CLASS: player
 
 * Need me to pull a trigger? # CLASS: player
 
-    Sometimes I wonder why I hired you.
+    Sometimes I wonder why I hired you. # CLASS: benton
     
     Me too. # CLASS: player
 
 TODO: ideally have a matrix of status & people's moods here to illustrate how risky the launch date is
 
-- I just need a bit of rubberduck, y'know?
+- I just need a bit of rubberduck, y'know? # CLASS: benton
 
-Lucas is still { team_01.loss: holding medtests too close for me to get my head around| sore about me getting my hands in the medtests}, TARCs assessment is always "you will die", and we've got some last nanosec refits on the isosacular alignment which would usually be fine... but with everything else...
+Lucas is still { team_01.loss: holding medtests too close for me to get my head around| sore about me getting my hands in the medtests}, TARCs assessment is always "you will die", and we've got some last nanosec refits on the isosacular alignment which would usually be fine... but with everything else... # CLASS: benton
 
 * This is big. # CLASS: player
 
@@ -1368,15 +1366,15 @@ Lucas is still { team_01.loss: holding medtests too close for me to get my head 
 
 * Too big for you? # CLASS: player
 
-- Yah, grokked.  Just need to feel a little more balanced on the solar wake.  I rarely feel this... unsure.
+- Yah, grokked.  Just need to feel a little more balanced on the solar wake.  I rarely feel this... unsure. # CLASS: benton
 
-You always were clear on your horizon.
+You always were clear on your horizon. # CLASS: benton
 
-How?
+How? # CLASS: benton
 
 * It's not so hard.[]  Act like you've already succeeded. # CLASS: player
 
-    Tellingson?  Or Sorichi?
+    Tellingson?  Or Sorichi? # CLASS: benton
     
     * * I didn't have either of them as profs. # CLASS: player
 
@@ -1384,42 +1382,42 @@ How?
     
     - - It's one of those univeral maxims. # CLASS: player
     
-    True.  You at least lived those while I...
+    True.  You at least lived those while I... # CLASS: benton
 
 * I wasn't.[]  First rule, act like you know what you're doing. # CLASS: player
 
-    The eternal pragmatist!
+    The eternal pragmatist! # CLASS: benton
     
     * * Had to be, working with fireworks like you! # CLASS: player
     
     * * It got me by. # CLASS: player
     
-    - - You know how to steer with simple instructions.
+    - - You know how to steer with simple instructions. # CLASS: benton
     
-    Always liked that.
+    Always liked that. # CLASS: benton
 
 * Because I'm better than you. # CLASS: player
 
-    In some ways...
+    In some ways... # CLASS: benton
     
     * * In *all* ways, fish-face. # CLASS: player
     
     * * In the ones that count. # CLASS: player
     
-    Especially the ways that bring me back to earth.
+    Especially the ways that bring me back to earth. # CLASS: benton
 
-- Recall the Moscow mess?
+- Recall the Moscow mess? # CLASS: benton
 
 VAR risky = 0
 VAR cautious = 0
 
 * Sure.  How's that relevant? # CLASS: player
 
-    When my head was spinning you stepped in and made the choice.
+    When my head was spinning you stepped in and made the choice. # CLASS: benton
 
 * { relationship == "close" } I usually... try to forget[.] when you hurt me. # CLASS: player
 
-    You know I never meant to.
+    You know I never meant to. # CLASS: benton
     
     * * I know. # CLASS: player
     
@@ -1427,46 +1425,46 @@ VAR cautious = 0
     
     * * Don't wanna talk about it. # CLASS: player
     
-    - - But you were... great.
+    - - But you were... great. # CLASS: benton
     
     { career == "an astronomer" or career == "an entrepreneur": 
     
-        Even with _everything_ you still walked into the conference with that... poise.
+        Even with _everything_ you still walked into the conference with that... poise. # CLASS: benton
         
-        And you made the call, when it came down to it...
+        And you made the call, when it came down to it... # CLASS: benton
         
     }
     
     { career == "a flight engineer" or career == "a hacker" or career == "a coder":
         
-        The whole thing could have crash/burned, especially with... us going sideways.
+        The whole thing could have crash/burned, especially with... us going sideways. # CLASS: benton
         
-        But you made a choice and kept the rails on.
+        But you made a choice and kept the rails on. # CLASS: benton
         
     }
         
     
     { career == "a doctor" or career == "an ethnologist": 
     
-        You had no reason to help her, but you did.
+        You had no reason to help her, but you did. # CLASS: benton
         
-        You made the call and saved us both.
+        You made the call and saved us both. # CLASS: benton
     
     }    
 
     { career == "an international spy" or career == "a janitor": 
     
-        You coulda done some real damage, but you took a breath.
+        You coulda done some real damage, but you took a breath. # CLASS: benton
         
-        And whatever you decided, it kept us standing until morning.
+        And whatever you decided, it kept us standing until morning. # CLASS: benton
     
     }
 
 * { relationship == "puzzle" } Our escapades[...] aren't on my resumé. # CLASS: player
 
-    Wise.
+    Wise. # CLASS: benton
     
-    Not sure the statute of limitations is up on all of them.
+    Not sure the statute of limitations is up on all of them. # CLASS: benton
     
     * * I usually pulled you _out_ of the PolSec predicaments! # CLASS: player
     
@@ -1474,38 +1472,38 @@ VAR cautious = 0
     
     * * PolSec can't get me.[] MegaCorp assassins, though... # CLASS: player
     
-    - - True
+    - - True # CLASS: benton
     
     { career == "an astronomer" or career == "an entrepreneur": 
     
-        And a little covert dealing behind the scenes at a conference usually avoids jailtime.
+        And a little covert dealing behind the scenes at a conference usually avoids jailtime. # CLASS: benton
         
-        You got us on the inside track without unnecessary fuss.
+        You got us on the inside track without unnecessary fuss. # CLASS: benton
         
     }
     
     { career == "a flight engineer" or career == "a hacker" or career == "a coder":
         
-        We could have gone sideways very easily, but a little electro-wizardry.
+        We could have gone sideways very easily, but a little electro-wizardry. # CLASS: benton
         
-        You kept us out of trouble.  You made the right call.
+        You kept us out of trouble.  You made the right call. # CLASS: benton
         
     }
         
     
     { career == "a doctor" or career == "an ethnologist": 
     
-        I wasn't even sure if I could trust you.  The Moscow mess was probably the deepest sot I got you in to.
+        I wasn't even sure if I could trust you.  The Moscow mess was probably the deepest sot I got you in to. # CLASS: benton
         
-        But you kept your cool.  Saved us both.
+        But you kept your cool.  Saved us both. # CLASS: benton
     
     }    
 
     { career == "an international spy" or career == "a janitor": 
     
-        There were a few bodies left behind this time.
+        There were a few bodies left behind this time. # CLASS: benton
         
-        When PolSec closed in, I thought we were done, but you pulled us through.
+        When PolSec closed in, I thought we were done, but you pulled us through. # CLASS: benton
     
     }
 
@@ -1521,7 +1519,7 @@ VAR cautious = 0
     
     * * { career == "a hacker" or Security >= 30 } The intel was some juicy paydata[...] sitting on an RHD server hadn't seen a security patch in three months. # CLASS: player
     
-        Intel I got you.
+        Intel I got you. # CLASS: benton
         
         Yeah, but couldn't do anything with.  So I pull the best 0day we have for something that out-of-date and we waltz in like it's going to be an Ocean's patticake.  Didn't trip the countermeasures until _someone_ got a bit greedy, and we barely escaped with our liberty. # CLASS: player
     
@@ -1543,15 +1541,15 @@ VAR cautious = 0
     
     * * And you weren't listening! # CLASS: player
     
-    - - I remember!  I *was* there!
+    - - I remember!  I *was* there! # CLASS: benton
     
     Much good you were. # CLASS: player
     
-    Yeah.  You made the call.
+    Yeah.  You made the call. # CLASS: benton
 
 * Not really. # CLASS: player
 
-    First time I ever felt out of my depth.  My head was spinning and you stepped in, all calm, and took control.
+    First time I ever felt out of my depth.  My head was spinning and you stepped in, all calm, and took control. # CLASS: benton
 
 -
 
@@ -1560,51 +1558,51 @@ VAR cautious = 0
     ~ risky++
     ~ cautious--
 
-    {pronouner("Choi","Chai","Chen")}, you took the risk and it paid off.
+    {pronouner("Choi","Chai","Chen")}, you took the risk and it paid off. # CLASS: benton
     
-    Same as I'm doing here.
+    Same as I'm doing here. # CLASS: benton
 
 * Patience was the only option. # CLASS: player
 
     ~ risky--
     ~ cautious++
     
-    Seems that way in retro.
+    Seems that way in retro. # CLASS: benton
     
-    We have to take the right amount of time to see the repercussions.
+    We have to take the right amount of time to see the repercussions. # CLASS: benton
     
-    But I can't take *all* the time.
+    But I can't take *all* the time. # CLASS: benton
     
 * My call didn't matter.[]  You always had your plan B. # CLASS: player
 
-    But don't you see?  Without your call I wouldn't have had the intel I needed to clean up afterwards.
+    But don't you see?  Without your call I wouldn't have had the intel I needed to clean up afterwards. # CLASS: benton
     
-    You level-set.
+    You level-set. # CLASS: benton
     
-    Then I can decide with confidence.
+    Then I can decide with confidence. # CLASS: benton
 
 - 
 * You making a decision on launch? # CLASS: player
 
-- Yeah.
+- Yeah. # CLASS: benton
 
-Have to.
+Have to. # CLASS: benton
 
-It's go time, no matter what Lucas says.
+It's go time, no matter what Lucas says. # CLASS: benton
 
 { risky > 0:
 
-    Moscow just reminds me of the times we have to act because the bigger risk is to have never tried at all.
+    Moscow just reminds me of the times we have to act because the bigger risk is to have never tried at all. # CLASS: benton
     
 - else:
 
-    I've had enough time to think this through.  Yes, there are risks, but they have to be taken.
+    I've had enough time to think this through.  Yes, there are risks, but they have to be taken. # CLASS: benton
     
-    Or we stall.
+    Or we stall. # CLASS: benton
     
 }
 
-I gotta tell the others.  Chat soon, ya?
+I gotta tell the others.  Chat soon, ya? # CLASS: benton
 
 + [<< Close Chat >>] -> menu # CLASS: player
 
@@ -1612,43 +1610,43 @@ I gotta tell the others.  Chat soon, ya?
 
 # CLEAR
 
-Hei.
+Hei. # CLASS: benton
 
-Hei { name }.
+Hei { name }. # CLASS: benton
 
-Guess what day it is?
+Guess what day it is? # CLASS: benton
 
 * Your birthday? # CLASS: player
 
-    Nope!
+    Nope! # CLASS: benton
 
 * Day 185? # CLASS: player
 
-    Yeah!
+    Yeah! # CLASS: benton
 
 * Another day in hell... # CLASS: player
 
-    Absotlutingly.
+    Absotlutingly. # CLASS: benton
     
-    And you deserve it.
+    And you deserve it. # CLASS: benton
     
-    But that's not what I meant.
+    But that's not what I meant. # CLASS: benton
 
-- It's one hundred and eighty five days I've been skating along the ecliptic.
+- It's one hundred and eighty five days I've been skating along the ecliptic. # CLASS: benton
 
-Six months and change.
+Six months and change. # CLASS: benton
 
 * { Astronomy >= 30 } It has been a nanospec[.] in the deep history of the universe. # CLASS: player
 
     Like a 3.8461538e-11 "th." # CLASS: player
     
-    If ya put it like that it seems so inconsequential.
+    If ya put it like that it seems so inconsequential. # CLASS: benton
 
 * { Business >= 30 } Time to play hell with your stocks.[]  They've bounced around like a ping-pong ball.  # CLASS: player
 
-    Always gotta play the long game.
+    Always gotta play the long game. # CLASS: benton
     
-    But that doesn't really matter.
+    But that doesn't really matter. # CLASS: benton
 
 * { Engineering >= 30 } How imprecise.# CLASS: player
 
@@ -1660,65 +1658,65 @@ Six months and change.
     
     20 seconds. # CLASS: player
     
-    Nerd. 🤓
+    Nerd. 🤓 # CLASS: benton
     
-    But I like that precision.  Makes me feel well taken care of.
+    But I like that precision.  Makes me feel well taken care of. # CLASS: benton
 
 *  { Medicine >= 30 } What you should time is your sleep cycle.[] Your numbers are all whack. # CLASS: player
 
-    I'm suspended in a viscous gloop being hurled out at Pluto.  Not sure 8.5 hours of sleep is that critical.
+    I'm suspended in a viscous gloop being hurled out at Pluto.  Not sure 8.5 hours of sleep is that critical. # CLASS: benton
     
     On this I agree with your doc.  Get more sleep. # CLASS: player
 
-    Overrated.  I'm in deep space!  Racing towards a rendezvous with Jupiter who's gonna give me a kiss and a shove out to where no-one has been before.  I can afford to lose a little shuteye over this.
+    Overrated.  I'm in deep space!  Racing towards a rendezvous with Jupiter who's gonna give me a kiss and a shove out to where no-one has been before.  I can afford to lose a little shuteye over this. # CLASS: benton
 
 * { Security >= 30 } Not long enough.[]  Your problems are all still gonna be here when you get back. # CLASS: player
 
-    Bah.  Nullmatter.
+    Bah.  Nullmatter. # CLASS: benton
     
-    When I get back the whole system is gonna change.
+    When I get back the whole system is gonna change. # CLASS: benton
     
-    And make all this seem like a drop in the bucket.
+    And make all this seem like a drop in the bucket. # CLASS: benton
     
     { wait(3) }
 
 * { Psychology >= 30 } Enough time for some reflection? # CLASS: player
 
-    Yeah, plenty of it.
+    Yeah, plenty of it. # CLASS: benton
     
-    I'm just a body in a coffin hurtling through space.  No need for me to be here.
+    I'm just a body in a coffin hurtling through space.  No need for me to be here. # CLASS: benton
     
-    But the darkness give you room to think.
+    But the darkness give you room to think. # CLASS: benton
 
 * { Technology >= 30 } Be-zero's clock won't even have ticked. # CLASS: player
 
-    Hmmm, yeah.  Tension's building, though.
+    Hmmm, yeah.  Tension's building, though. # CLASS: benton
     
-    Could you imagine this future?
+    Could you imagine this future? # CLASS: benton
     
     * * Sure. # CLASS: player
     
     * * Don't think so. # CLASS: player
     
-    - - I always did.
+    - - I always did. # CLASS: benton
 
 * Yep. # CLASS: player
 
-    Always so underwhelmed.  You're a peach.
+    Always so underwhelmed.  You're a peach. # CLASS: benton
 
-- There's an emptiness to this sojourn I didn't anticipate, but it is not unappreciated.  A (human) depth of empty time I can't fill, just as I can't fill the darkness outside this hull.
+- There's an emptiness to this sojourn I didn't anticipate, but it is not unappreciated.  A (human) depth of empty time I can't fill, just as I can't fill the darkness outside this hull. # CLASS: benton
 
-Room.
+Room. # CLASS: benton
 
 - (room)
 
 * Isn't it lonely? # CLASS: player
 
-    Not with you here!
+    Not with you here! # CLASS: benton
     
     * * I'm there for you. # CLASS: player
         
-        See!
+        See! # CLASS: benton
         
         { wait(3) }
         
@@ -1726,21 +1724,21 @@ Room.
     
     * * But I'm not really there. # CLASS: player
 
-        ¡sigh! I know.
+        ¡sigh! I know. # CLASS: benton
         
         Yes<>
     
-    - - <>, it's lonely.  Don't think that's always a bad thing.
+    - - <>, it's lonely.  Don't think that's always a bad thing. # CLASS: benton
     
-    Space to explore myself.
+    Space to explore myself. # CLASS: benton
     
     { wait(1) }
     
-    Figuratively.
+    Figuratively. # CLASS: benton
 
 * What do you fill such emptiness with? # CLASS: player
 
-    Why fill it?
+    Why fill it? # CLASS: benton
     
     * * We don't have to. # CLASS: player
         - - - (introspection)
@@ -1755,49 +1753,49 @@ Room.
     
     * * We don't have a choice.[]  We fill all emptiness with meaning or garbage instinctually. # CLASS: player
     
-        Don't think of a pink elephant.
+        Don't think of a pink elephant. # CLASS: benton
         
-        Your mind always creates _something_ in the space... until you cease.
+        Your mind always creates _something_ in the space... until you cease. # CLASS: benton
         
         Exactly. # CLASS: player
     
     * * No reason.[]  Just hate leaving a gap that could be filled. # CLASS: player
     
-        You're like { career } version of groutBot.  Seal all edges.
+        You're like { career } version of groutBot.  Seal all edges. # CLASS: benton
         
         Keeps my brain from falling out. # CLASS: player
 
 * { Astronomy >= 30 } [It's not really empty.] I'd say it's not so empty.  Your scale is just small enough to slip through the cracks. # CLASS: player
 
-    Think at the scale of galaxies and this is a crowded neighborhood.
+    Think at the scale of galaxies and this is a crowded neighborhood. # CLASS: benton
     
     And one that's colliding at collosal speed with another galaxy. # CLASS: player
     
-    Ants scurrying under a car wreck.  Just don't get caught in the gasoline fire.
+    Ants scurrying under a car wreck.  Just don't get caught in the gasoline fire. # CLASS: benton
 
 * { Medicine + Psychology >= 60 }  Introspection is good[.], but I want to make sure you're checking in with yourself enough to avoid a deep end. # CLASS: player
 
-    What's that supposed to mean?
+    What's that supposed to mean? # CLASS: benton
     
     * * Just take a moment[.] to size up the practical steps in front of you.  The universe is big, your part in it is concerned with the here and now. # CLASS: player
     
-        Guess you're right.
+        Guess you're right. # CLASS: benton
         
         -> roomex
     
     * * Nothing.[]  You're next to impossible. # CLASS: player
     
-        I think that sums me up, yeah.
+        I think that sums me up, yeah. # CLASS: benton
         
-        Anyway.
+        Anyway. # CLASS: benton
         
         -> roomex
 
 - { room < 3: -> room }
 
-- (roomex) Such musings are fun, but I suppose we have a day to begin.
+- (roomex) Such musings are fun, but I suppose we have a day to begin. # CLASS: benton
 
-What's docked?
+What's docked? # CLASS: benton
 
 * Got a big date coming up. # CLASS: player
 
@@ -1805,25 +1803,25 @@ What's docked?
         
         	{ wait(2) }
         
-            Found another partner, huh?
+            Found another partner, huh? # CLASS: benton
             
             Your big date.  With Jupiter. # CLASS: player
         
-            Right.
+            Right. # CLASS: benton
             
         - else:
         
-            I like big planets and I cannot lie...
+            I like big planets and I cannot lie... # CLASS: benton
             
     }
     
 * Jupiter sims are still green. # CLASS: player
 
-    Do we still have good compensation for the Vig4312 grav wave?
+    Do we still have good compensation for the Vig4312 grav wave? # CLASS: benton
     
         * * I have no idea.[]  Ask Nav. # CLASS: player
         
-            Ok.  Sorry, I don't always remember that you're not sitting with them.
+            Ok.  Sorry, I don't always remember that you're not sitting with them. # CLASS: benton
         
         * * { Astronomy >= 30 } I think so.[]  Math checks out. # CLASS: player
         
@@ -1831,71 +1829,71 @@ What's docked?
              
                 It's the tech that I don't understand. # CLASS: player
                 
-                Null sweat.  I'm sure that's golden.
+                Null sweat.  I'm sure that's golden. # CLASS: benton
             
             }
         
         * * { Astronomy + Engineering >= 90 } Yes, with tolerances[.] of at least 4.8%. # CLASS: player
         
-            Great.  I knew this baby could handle it.
+            Great.  I knew this baby could handle it. # CLASS: benton
 
 * Might see you crushed[.] in the big red spot in a couple weeks. # CLASS: player
 
-    Thx.
+    Thx. # CLASS: benton
     
     Wlcm. # CLASS: player
 
-- Pity I don't have more of a window.  Or less gloop in my eyes.
+- Pity I don't have more of a window.  Or less gloop in my eyes. # CLASS: benton
 
-Marduk up close and personal.  Not often you get to dance with a Babylonian god.
+Marduk up close and personal.  Not often you get to dance with a Babylonian god. # CLASS: benton
 
 * Hope it's a fast song. # CLASS: player
 
-    Fastest I've ever danced to.
+    Fastest I've ever danced to. # CLASS: benton
     
-    Hope everything holds together.
+    Hope everything holds together. # CLASS: benton
 
 * { Astronomy >= 30 } Your calcs better be right. # CLASS: player
 
-    Yeah.  They better.
+    Yeah.  They better. # CLASS: benton
     
     * * You're not sure? # CLASS: player
     
     * * Can't change your mind now. # CLASS: player
     
-    - - They're within acceptable parameters.
+    - - They're within acceptable parameters. # CLASS: benton
 
 * { Engineering >= 30 } Hold onto your buttcheeks for that burn. # CLASS: player
 
     Even in gel you're gonna feel it. # CLASS: player
     
-    Yeah.  Biggest test of the Horizon so far.
+    Yeah.  Biggest test of the Horizon so far. # CLASS: benton
     
     * * Will it hold? # CLASS: player
     
     * * It'll hold. # CLASS: player
     
-    Hope so.
+    Hope so. # CLASS: benton
 
 * { Psychology >= 30 } [Outrunning Mušḫuššu?] Sounds like you're moving fast enough to outrun Mušḫuššu? # CLASS: player
 
-    ¡LafLaf!
+    ¡LafLaf! # CLASS: benton
 
-    Not even sure if that's something you could do.
+    Not even sure if that's something you could do. # CLASS: benton
     
-    Gods and their servants don't often have to follow physiks.
+    Gods and their servants don't often have to follow physiks. # CLASS: benton
     
-    Unlike me and my supersonic coffin.  Bending around a gravity well like a misguided soccer ball.
+    Unlike me and my supersonic coffin.  Bending around a gravity well like a misguided soccer ball. # CLASS: benton
 
-- The thing I hate the worst is feeling like a passenger.
+- The thing I hate the worst is feeling like a passenger. # CLASS: benton
 
-Like if this thing wrecks I have no control, I'm just collateral dmg.
+Like if this thing wrecks I have no control, I'm just collateral dmg. # CLASS: benton
 
 * I guess so. # CLASS: player
 
 * { Psychology + Medicine >= 60 } Can you do anything about it? # CLASS: player
 
-    No.
+    No. # CLASS: benton
     
     No. # CLASS: player
     
@@ -1905,17 +1903,17 @@ Like if this thing wrecks I have no control, I'm just collateral dmg.
 
     That's what keeps you in one piece.  The maths. # CLASS: player
     
-    Glad I stayed in school.
+    Glad I stayed in school. # CLASS: benton
     
     * * Me too. # CLASS: player
     
     * * No you didn't! # CLASS: player
     
-        Oh, right!
+        Oh, right! # CLASS: benton
 
-- Right.
+- Right. # CLASS: benton
 
-Appreciate you keeping me level.
+Appreciate you keeping me level. # CLASS: benton
 
 * Just remember why you're doing this. # CLASS: player
 
@@ -1923,9 +1921,9 @@ Appreciate you keeping me level.
 
 * You keep yourself level.[]  No way I'm coming out there to pick up the pieces if you pop. # CLASS: player
 
-- This frontier will be crossed.  It's worth the risk.
+- This frontier will be crossed.  It's worth the risk. # CLASS: benton
 
-Ok, gel's firming up for exercise.  Chat latrz?
+Ok, gel's firming up for exercise.  Chat latrz? # CLASS: benton
 
 * You got it. # CLASS: player
 
@@ -1933,7 +1931,7 @@ Ok, gel's firming up for exercise.  Chat latrz?
 
 * Mebbe. # CLASS: player
 
-- Ciao.
+- Ciao. # CLASS: benton
 
 + [<< Close Chat >>] -> menu
 
@@ -1959,15 +1957,15 @@ VAR next = -> firstStress
 
 << Jupiter flyby status : { jupiter_flyby_status_color } : { jupiter_flyby_status } >>
 
-Ready for a sweaty dance?
+Ready for a sweaty dance? # CLASS: benton
 
 * Always.[]  Fandango or flossing? # CLASS: player
 
-    No class.
+    No class. # CLASS: benton
 
 * { relationship == "close" }Never could resist a tango with you. # CLASS: player
 
-    Ah, { pronouner("choi","chai","chen") }, we had some hot nights on the dancefloor, yah?
+    Ah, { pronouner("choi","chai","chen") }, we had some hot nights on the dancefloor, yah? # CLASS: benton
     
     Nothing quite like this. # CLASS: player
 
@@ -1997,19 +1995,19 @@ Ready for a sweaty dance?
     
     }
     
-- Gotta say this big beauty is quite the partner.  Think it wants to give me a squeeze.
+- Gotta say this big beauty is quite the partner.  Think it wants to give me a squeeze. # CLASS: benton
 
 * { Astronomy >= 30 } You're inside the orbit of Callisto[.] so gravitaional compression will increase inside the gel. # CLASS: player
 
-    Such a nerd.
+    Such a nerd. # CLASS: benton
 
 * Yeah, so lets make sure we avoid [that.]getting too close. # CLASS: player
 
-    Aww, you worried about me?
+    Aww, you worried about me? # CLASS: benton
 
 * This is a love 'em and leave 'em kinda moment. # CLASS: player
 
-    Too cruel { pronouner("choi","chai","chen") }.  Too cruel.
+    Too cruel { pronouner("choi","chai","chen") }.  Too cruel. # CLASS: benton
 
 -
 
@@ -2021,7 +2019,7 @@ Yeah. # CLASS: player
 
 * You wanna turn into jelly, your call. # CLASS: player
 
-- Nah, this is gonna be a doddle.
+- Nah, this is gonna be a doddle. # CLASS: benton
 
 VAR drugs = 0
 
@@ -2043,7 +2041,7 @@ VAR drugs = 0
 
 	{ wait(3) }
 
-    Zen.
+    Zen. # CLASS: benton
 
     { stressCheck("-", -> preb, stress) }
         -> next
@@ -2062,7 +2060,7 @@ VAR drugs = 0
 
 * You scared? # CLASS: player
     
-    Not as scared as you.
+    Not as scared as you. # CLASS: benton
     
     { stressCheck("+", -> preb, stress) }
         -> next
@@ -2075,17 +2073,17 @@ VAR drugs = 0
 
 * { Engineering + Medicine >= 30 }We're ready for insertion, { jupiter_flyby_status } is starting. # CLASS: player
 
-    You don't have to act like ground control.  I've got all those eggheads feeding me direct.
+    You don't have to act like ground control.  I've got all those eggheads feeding me direct. # CLASS: benton
 
 * Looks like we're ready? # CLASS: player
 
-    Yah.  Been ready for a while.  It's all gonna go smooth.
+    Yah.  Been ready for a while.  It's all gonna go smooth. # CLASS: benton
     
 * You ready? # CLASS: player
 
-    Yah.  Been ready for a while.  It's all gonna go smooth.
+    Yah.  Been ready for a while.  It's all gonna go smooth. # CLASS: benton
     
-- Just talk to me, k?
+- Just talk to me, k? # CLASS: benton
 
 OK. Well. # CLASS: player
 
@@ -2095,29 +2093,29 @@ OK. Well. # CLASS: player
 
     { stress > elevated:
     
-        Fine I guess.
+        Fine I guess. # CLASS: benton
         
-        The gel doesn't help.
+        The gel doesn't help. # CLASS: benton
     
     - else:
     
-        Magnificent.
+        Magnificent. # CLASS: benton
         
     }
     
     Didn't you have a porthole put in specifically for this moment? # CLASS: player
     
-    Yeah.  At great expense.  But wasn't gonna pass seeing this with my own eyes.
+    Yeah.  At great expense.  Wasn't gonna pass up seeing this with my own eyes. # CLASS: benton
     
-    You've seen the H0L0 mods I'm sure, swooped around it in VR.
+    You've seen the H0L0 mods I'm sure, swooped around it in VR. # CLASS: benton
     
     { stress > elevated:
     
-        Guess I thought seeing it in person was going to have more impact.
+        Guess I thought seeing it in person was going to have more impact. # CLASS: benton
         
     - else:
     
-        Doesn't quite compare to the real thing.
+        Doesn't quite compare to the real thing. # CLASS: benton
         
     }
     
@@ -2126,19 +2124,19 @@ OK. Well. # CLASS: player
     
     * * [Something to remember.]  That's gonna be something to remember for a long time. # CLASS: player
     
-        Until my dying day.
+        Until my dying day. # CLASS: benton
         
-        Which might be today.
+        Which might be today. # CLASS: benton
     
         * * * No, not today! # CLASS: player
         
         * * * Pessimist. # CLASS: player
         
-            Not at all.  Just facing the possibility.
+            Not at all.  Just facing the possibility. # CLASS: benton
         
         * * * We can only hope. # CLASS: player
             
-            Thanks, { pronouner("choi","chai","chen") }.
+            Thanks, { pronouner("choi","chai","chen") }. # CLASS: benton
             
             { stressCheck("+", -> pic, stress) }
                 -> next
@@ -2150,20 +2148,20 @@ OK. Well. # CLASS: player
         {
             - stress > elevated:
         
-                <> an angry god.
+                <> an angry god. # CLASS: benton
                 
             - relationship == "close":
             
-                <> a tormented lover.
+                <> a tormented lover. # CLASS: benton
             
             - else:
         
-                <>... I don't know.  It's stunning.  You can't metaphor this sot.
+                <>... I don't know.  It's stunning.  You can't metaphor this sot. # CLASS: benton
         }
         
-        There's an elegance to the layered clouds, the roiling dance of gases stretched across an immense surface.
+        There's an elegance to the layered clouds, the roiling dance of gases stretched across an immense surface. # CLASS: benton
         
-        You ever wondered what they mean?
+        You ever wondered what they mean? # CLASS: benton
         
         The clouds of Jupiter? # CLASS: player
         
@@ -2171,28 +2169,29 @@ OK. Well. # CLASS: player
         
         * * * They don't _mean_ anything.[]  It's physics begetting chemistry stirred by time. # CLASS: player
         
-        - - - But see the patterns?
+        - - - But see the patterns? # CLASS: benton
         
-        Those layers, lined up, clouds swirls repeating like morse code across the exosphere.
+        Those layers, lined up, clouds swirls repeating like morse code across the exosphere. # CLASS: benton
         
-        Marduk speaks.
+        Marduk speaks. # CLASS: benton
         
         * * * It is very pretty. # CLASS: player
         
-            Gods aren't pretty.  They're terrifying.
+            Gods aren't pretty.  They're terrifying. # CLASS: benton
         
         * * * What does it say? # CLASS: player
         
             { wait(6) }
             
             Benton? # CLASS: player
-            𒀭𒀫𒌓
+            
+            𒀭𒀫𒌓 # CLASS: benton
             
             What? # CLASS: player
         
-            When addressing the bull calf of the sun god Utu you use his tongue.  You speak to gods as they would be spoken to.  You offer up to them and they take what they want.
+            When addressing the bull calf of the sun god Utu you use his tongue.  You speak to gods as they would be spoken to.  You offer up to them and they take what they want. # CLASS: benton
             
-            They always take!
+            They always take! # CLASS: benton
         
             { stressCheck("+", -> calmdown, stress) }
                 -> next
@@ -2207,7 +2206,7 @@ OK. Well. # CLASS: player
                 
                 { wait(3) }
                 
-                Sorry.
+                Sorry. # CLASS: benton
                 
                 { stressCheck("-", -> donemarduk, stress) }
                     -> next
@@ -2224,27 +2223,27 @@ OK. Well. # CLASS: player
         
         * * * { Psychology + Medicine >= 30 } It's only natural to see patterns, B.[]  We see the faces of gods in random patterns because we're designed to. # CLASS: player
         
-            Hear ya.  Kinda bizarro to see it, to feel it this close.
+            Hear ya.  Kinda bizarro to see it, to feel it this close. # CLASS: benton
             
                 { stressCheck("-", -> donemarduk, stress) }
                     -> next
                     
         * * * { Astronomy >= 30 } Those patterns are gas[.], zonal atmospheric flows raising and lowering material from deeper in the planet. # CLASS: player
         
-            Magnificent.
+            Magnificent. # CLASS: benton
             
                 { stressCheck("-", -> donemarduk, stress) }
                     -> next
             
         - - - (donemarduk)    
         
-        I guess I get carried away.    
+        I guess I get carried away. # CLASS: benton
 
 * { lucas_02.lucas_analysis } Lucas seems a bit stressed about your sitch. # CLASS: player
 
-    ¡sigh!
+    ¡sigh! # CLASS: benton
     
-    That man's never not gonna be stressed.
+    That man's never not gonna be stressed. # CLASS: benton
     
     * * But you trust him? # CLASS: player
     
@@ -2252,7 +2251,7 @@ OK. Well. # CLASS: player
     
     * * Still think he was the right choice? # CLASS: player
     
-        - - - (epix)He and I have been through some epics.
+        - - - (epix)He and I have been through some epics. # CLASS: benton
         
         ~ temp subject = "I was"
         
@@ -2262,44 +2261,44 @@ OK. Well. # CLASS: player
         
         * * * Sure. # CLASS: player
         
-            No really.
+            No really. # CLASS: benton
             
-            - - - - (met_him)Met in the Himalaya in '{ (date_year - 7) mod 2000 }, ended up doing the 7SUMMITS circuit together that season.  Wicked hard climber and we had some hard days together.
+            - - - - (met_him)Met in the Himalaya in '{ (date_year - 7) mod 2000 }, ended up doing the 7SUMMITS circuit together that season.  Wicked hard climber and we had some hard days together. # CLASS: benton
             
-            Went really sideways in Cape Town.
+            Went really sideways in Cape Town. # CLASS: benton
             
             ~ subject = "He was"
             
         * * * { relationship == "epic" } As crazy as Cape Town? # CLASS: player
         
-            Hah.  Nah.
+            Hah.  Nah. # CLASS: benton
         
             ~ subject = "You were"
         
-        - - - High summer.  Sweltering.  Taking a stroll through Goliath terr coz we really wanted to play on the Jonkershoek.  Shoulda known it would go sideways.
+        - - - High summer.  Sweltering.  Taking a stroll through Goliath terr coz we really wanted to play on the Jonkershoek.  Shoulda known it would go sideways. # CLASS: benton
         
-        { subject } pretty chill about it IIRC.  Coulda been locked up, but kept walkin' and whistlin'
+        { subject } pretty chill about it IIRC.  Coulda been locked up, but kept walkin' and whistlin' # CLASS: benton
         
         Still remember the look on those guards faces when they caught us on the ledge.  { subject } quick to <>
         
         {
             - career == "an international spy" && subject == "You were":
             
-                <>make friends.  You could always do that in the most unlikely places.
+                <>make friends.  You could always do that in the most unlikely places. # CLASS: benton
                 
                 I'm friendly.  # CLASS: player
                 
-                Or... convincing.
+                Or... convincing. # CLASS: benton
                 
-                A pity they caught me trying to jam their network.
+                A pity they caught me trying to jam their network. # CLASS: benton
                 
                 That jeep<>
         
             - career == "a hacker" && subject == "You were":
             
-                <>spook their local comm net.  And quiet about it too.
+                <>spook their local comm net.  And quiet about it too. # CLASS: benton
                 
-                Didn't stop them turning their sidearms our way.
+                Didn't stop them turning their sidearms our way. # CLASS: benton
                 
                 The jeep you stole<> # CLASS: player
                 
@@ -2313,7 +2312,7 @@ OK. Well. # CLASS: player
             
             - else:
             
-                try and explain why we were there, but they didn't seem pleased.
+                try and explain why we were there, but they didn't seem pleased. # CLASS: benton
                 
                 Robot sentries don't feel "pleased." # CLASS: player
                 
@@ -2321,9 +2320,9 @@ OK. Well. # CLASS: player
         
         }
         
-         <> took a thrashing on the way down the mountain!
+         <> took a thrashing on the way down the mountain! # CLASS: benton
          
-         And all I wanted was to free solo Reverence.
+         And all I wanted was to free solo Reverence. # CLASS: benton
          
         - - -
         
@@ -2333,13 +2332,13 @@ OK. Well. # CLASS: player
         
         * * * Taking risks happens a lot when you're around. # CLASS: player
         
-            Comes with the terr.
+            Comes with the terr. # CLASS: benton
         
         * * * Good at putting others in harms way[.] aren't you? # CLASS: player
         
         	{ wait(1) }
         
-            I play with those who know the risk of playing with me.
+            I play with those who know the risk of playing with me. # CLASS: benton
         
             { stressCheck("+", -> afterctown, stress) }
                 -> next
@@ -2355,7 +2354,7 @@ OK. Well. # CLASS: player
     
     * * { Medicine >= 60 } Not sure he was cut out for interplanetary medicine.[] I think the team is holding him up, not the other way around. # CLASS: player
     
-        Sot, { name }, stop shading my CMO!
+        Sot, { name }, stop shading my CMO! # CLASS: benton
         
         * * * ¡pax![]  Just an opinion. # CLASS: player
         
@@ -2363,7 +2362,7 @@ OK. Well. # CLASS: player
         
             I don't think he can give you a straight answer coz he doesn't know what the straight answer is. # CLASS: player
             
-            Leave it!
+            Leave it! # CLASS: benton
         
             { stressCheck("+", -> cmo_sucks, stress) }
                     -> next
@@ -2383,7 +2382,7 @@ OK. Well. # CLASS: player
             
         - - - (lucas_med_opinion)
         
-        No time to fight over Lucas now.
+        No time to fight over Lucas now. # CLASS: benton
         
         { jupiter_flyby_status } ends in 3.
         { wait(1) }
@@ -2394,14 +2393,14 @@ OK. Well. # CLASS: player
     
     * * Got a massive ramrod up his @. # CLASS: player
     
-        For sot's sake.  Talk about something else.
+        For sot's sake.  Talk about something else. # CLASS: benton
         
         { stressCheck("+", -> donetalking, stress) }
                         -> next
 
 * { junia_02 } Junia seems to think highly of me. # CLASS: player
 
-    Knew she would.  You always sell YOU short.
+    Knew she would.  You always sell YOU short. # CLASS: benton
     
     * * Appreciate the confidence. # CLASS: player
     
@@ -2409,7 +2408,7 @@ OK. Well. # CLASS: player
     
     * * Are you sure she's looking out for you? # CLASS: player
     
-        For me?  Nah.  But for Nth Horizon, absolutely.
+        For me?  Nah.  But for Nth Horizon, absolutely. # CLASS: benton
     
     * * { junia_02.junia_avarice } Seemed like she thought I could make out on this gig[.] even if you don't come back. # CLASS: player
     
@@ -2419,48 +2418,48 @@ OK. Well. # CLASS: player
     
     * * I trust her[.] to run the business.  Just not sure that means keeping you safe. # CLASS: player
     
-        TBH I wouldn't expect anything less.
+        TBH I wouldn't expect anything less. # CLASS: benton
         
-        I took this risk because for me it can be about more than Nth Horizon.  It can be about the edge, about pushing myself.
+        I took this risk because for me it can be about more than Nth Horizon.  It can be about the edge, about pushing myself. # CLASS: benton
         
-        I partnered with her because she will do what it takes to take Nth Horizon all the way.
+        I partnered with her because she will do what it takes to take Nth Horizon all the way. # CLASS: benton
         
         -> junia_free
     
     * * I don't trust her.[]  Too much smile for a shark. # CLASS: player
     
-    * * { Business + Psychology >= 60 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away.
+    * * { Business + Psychology >= 60 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away. # CLASS: player
     
-    - - I can't sit around mistrusting my closest confidants.
+    - - I can't sit around mistrusting my closest confidants. # CLASS: benton
     
-    You, Lucas, Junia.  Get it together.  I'm not your sotting mamma!
+    You, Lucas, Junia.  Get it together.  I'm not your sotting mamma! # CLASS: benton
     
     { stressCheck("+", -> junia_free, stress) }
         -> next
     
     - - (junia_free)
 
-    Another {~kick|boost|shot} hitting in 5.
+    Another {~kick|boost|shot} hitting in 5. # CLASS: benton
     
-    Here it comes.
+    Here it comes. # CLASS: benton
     
     { wait(2) }
     
-    And...
+    And... # CLASS: benton
     
     { wait(1) }
     
-    any moment now
+    any moment now # CLASS: benton
     
     { wait(1) }
 
 * { woodpecker_01 } So I met this woodpecker... # CLASS: player
 
-    And here I thought I was the one seeing things.
+    And here I thought I was the one seeing things. # CLASS: benton
     
     * * You wanted a distraction[!], not reality! # CLASS: player
     
-        I can watch cartoons all day.  Talk to me about you!
+        I can watch cartoons all day.  Talk to me about you! # CLASS: benton
         
         * * * I'm peachy. # CLASS: player
         
@@ -2470,28 +2469,28 @@ OK. Well. # CLASS: player
         
             -> t_shut
             
-        - - -  Feels like you're holding out on me.
+        - - -  Feels like you're holding out on me. # CLASS: benton
         
-        But I appreciate that you're here for me.
+        But I appreciate that you're here for me. # CLASS: benton
         
-        Keeping me a bit distracted.
+        Keeping me a bit distracted. # CLASS: benton
         
-        While my entire life swings wildly around the orbit of a gas giant.
+        While my entire life swings wildly around the orbit of a gas giant. # CLASS: benton
         
-        Speaking of which...
+        Speaking of which... # CLASS: benton
         
     
     * * Peck, peck, peck. Sound familiar?[]  Anyone you know use that handle? # CLASS: player
         
-        Woodpecker?
+        Woodpecker? # CLASS: benton
         
-        No, I don't think so.
+        No, I don't think so. # CLASS: benton
         
         * * * Might be an obtuse reference. # CLASS: player
         
         * * * Anyone who'd want the inside scoop? # CLASS: player
         
-            Plenty.
+            Plenty. # CLASS: benton
         
         * * * Could be a Goliath crony. # CLASS: player
         
@@ -2504,15 +2503,15 @@ OK. Well. # CLASS: player
             
                 Someone insistent, like a pecking woodpecker? # CLASS: player
                 
-                Hmmmm.
+                Hmmmm. # CLASS: benton
                 
-                There was that newsDropper.
+                There was that newsDropper. # CLASS: benton
                 
-                What was her name.  Chloé?  Kelsey?
+                What was her name.  Chloé?  Kelsey? # CLASS: benton
                 
-                Nah, Kim.  Kim Speight.
+                Nah, Kim.  Kim Speight. # CLASS: benton
                 
-                She would not stop trying to find a way in, even after multiple blocks.
+                She would not stop trying to find a way in, even after multiple blocks. # CLASS: benton
                 
                 ~ knows_kim = true
                 
@@ -2526,9 +2525,9 @@ OK. Well. # CLASS: player
             
             - else: 
             
-                Sorry.
+                Sorry. # CLASS: benton
                 
-                Hold up, { status } is about to switch off.
+                Hold up, { status } is about to switch off. # CLASS: benton
                 
                 -> donetalking
         
@@ -2536,19 +2535,19 @@ OK. Well. # CLASS: player
         
         - - - (k_know)
         
-        She's been dropping articles about Nth Horizon.
+        She's been dropping articles about Nth Horizon. # CLASS: benton
         
         * * * Sounds about right. # CLASS: player
         
-            Keep her at an AU's length, yah?
+            Keep her at an AU's length, yah? # CLASS: benton
             
-            Seems like she'd make a mess.
+            Seems like she'd make a mess. # CLASS: benton
         
             -> donetalking
         
         * * * Maybe. # CLASS: player
         
-            Don't wanna invoke dark magic on ya, but remember your NDA when talking to newsDroppers, yah?
+            Don't wanna invoke dark magic on ya, but remember your NDA when talking to newsDroppers, yah? # CLASS: benton
         
             -> donetalking
         
@@ -2558,45 +2557,45 @@ OK. Well. # CLASS: player
     
     * * they/she/he hacked your secure comms net. # CLASS: player
     
-        ¿srs?
+        ¿srs? # CLASS: benton
         
-        - - - (t_shut) Sot!  Has TARC shut it down?
+        - - - (t_shut) Sot!  Has TARC shut it down? # CLASS: benton
         
         * * * It's handled, null sweat. # CLASS: player
         
-            I can't sweat w/o my glands so count yourself lucky.
+            I can't sweat w/o my glands so count yourself lucky. # CLASS: benton
             
-            Coming up on trigger.  One nano.
+            Coming up on trigger.  One nano. # CLASS: benton
             
             -> donetalking
             
         * * * Dunno. # CLASS: player
         
-            Well.  Can you do something about it?  Take my company's security seriously!
+            Well.  Can you do something about it?  Take my company's security seriously! # CLASS: benton
             
             { stressCheck("+", -> b_woodpecked, stress) }
                         -> next
             
         * * * { tarc_report_woodpecker.how }He's just watching.[]  Probably working with them. # CLASS: player
         
-            What?  This is nutso.
+            What?  This is nutso. # CLASS: benton
             
-            Why are you telling me this now?
+            Why are you telling me this now? # CLASS: benton
             
             { stressCheck("+", -> b_woodpecked, stress) }
                         -> next
     
         - - - (b_woodpecked)
         
-        I'm throwing myself at giants here and you're dropping the ball on basic security?
+        I'm throwing myself at giants here and you're dropping the ball on basic security? # CLASS: benton
         
-        * * * I have my hands full with other things, thx.
+        * * * I have my hands full with other things, thx. # CLASS: player
         
-        * * * { Technology + Security >= 60 } B, it's handled.[]  We'll honeypot this little troublemaker.  Just trying to keep you informed.
+        * * * { Technology + Security >= 60 } B, it's handled.[]  We'll honeypot this little troublemaker.  Just trying to keep you informed. # CLASS: player
         
-            Bad timing, { pronouner("choi","chai","chen") }.
+            Bad timing, { pronouner("choi","chai","chen") }. # CLASS: benton
         
-        * * * { Psychology >= 60 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things.
+        * * * { Psychology >= 60 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things. # CLASS: player
         
             { stressCheck("-", -> dont_talk_hacks, stress) }
                 -> next
@@ -2613,16 +2612,16 @@ OK. Well. # CLASS: player
             
         - - - (dont_talk_hacks)
         
-        Nevermind.  Gotta prep for transition.  Down shift on { jupiter_flyby_status } in 3.
+        Nevermind.  Gotta prep for transition.  Down shift on { jupiter_flyby_status } in 3. # CLASS: benton
         { wait(1) }
-        2.
+        2. # CLASS: benton
         { wait(1) }
-        1.
+        1. # CLASS: benton
         { wait(1) }
 
 * We need to talk about this slingshot.[]  You've gotta stay focused! # CLASS: player
 
-    Always so serious.
+    Always so serious. # CLASS: benton
     
     * * { Astronomy >= 30 } Watch your trajectory.[]  If a gravitational wave destabilizes you in { jupiter_flyby_status } you'll be flung off course from Pluto. # CLASS: player
     
@@ -2644,26 +2643,26 @@ OK. Well. # CLASS: player
     
     * * Too serious for you? # CLASS: player
     
-        always\\\\never
+        always\\\\never # CLASS: benton
         
-        Just need to apply that seriousness... thoughtfully, { pronouner("choi","chai","chen") }.
+        Just need to apply that seriousness... thoughtfully, { pronouner("choi","chai","chen") }. # CLASS: benton
         
         -> aftertrusted
     
-    - - Trust me.  I know.
+    - - Trust me.  I know. # CLASS: benton
     
         { stressCheck("+", -> trusted, stress) }
             -> next
                         
     - - (trusted)
     
-    Look, this ain't your first rodeo with me.  Keep level, k?
+    Look, this ain't your first rodeo with me.  Keep level, k? # CLASS: benton
         
         * * * Trying. # CLASS: player
         
         * * * { Psychology >= 60 } Of course.[]  And that's what I'm doing.  Keep you focused on the here and now.  Accept the risks and stare them in the eyes. # CLASS: player
         
-            True.
+            True. # CLASS: benton
         
             { stressCheck("-", -> aftertrusted, stress) }
                 -> next
@@ -2681,23 +2680,23 @@ OK. Well. # CLASS: player
         
         { wait(2) }
         
-        Hold up.
+        Hold up. # CLASS: benton
         
-        Here comes another kick...
+        Here comes another kick... # CLASS: benton
         
 * Whatcha thinking way out there? # CLASS: player
 
     - - (whatcha_thinkin)
     
-    Staring at the red eye of a god?
+    Staring at the red eye of a god? # CLASS: benton
     
-    Skating the edge of its wrath?
+    Skating the edge of its wrath? # CLASS: benton
     
-    Watching it's lovers dance around it?
+    Watching it's lovers dance around it? # CLASS: benton
     
-    Sharing the dance for just a moment?
+    Sharing the dance for just a moment? # CLASS: benton
     
-    I'm thinking I'm a fool.
+    I'm thinking I'm a fool. # CLASS: benton
     
     * * Who's the more fool?[]  The fool or the sci-fi nerd who quotes him? # CLASS: player
     
@@ -2705,32 +2704,32 @@ OK. Well. # CLASS: player
     
     * * I was thinking "sotting fool[."]" for good measure. # CLASS: player
     
-    - - Heh.
+    - - Heh. # CLASS: benton
     
-    I can see Callisto.  Just a speck riding ahead of me, circling the patriarch who seduced her.  The besmirched virgin turned fierce mamma bear.
+    I can see Callisto.  Just a speck riding ahead of me, circling the patriarch who seduced her.  The besmirched virgin turned fierce mamma bear. # CLASS: benton
     
     VAR love = 0
     VAR money = 0
 
-    Recall Jemimah?
+    Recall Jemimah? # CLASS: benton
     
     * * That girl in Stockholm? # CLASS: player
     
-        Ja.
+        Ja. # CLASS: benton
         
-        I don't think she was a virgin, but she was a worshipper of the wild.
+        I don't think she was a virgin, but she was a worshipper of the wild. # CLASS: benton
         
         - - - (topless)
         
         * * * She was a free spirit. # CLASS: player
         
-            Did you... ?
+            Did you... ? # CLASS: benton
             
             * * * * Yeah.[]  We dated for a while. # CLASS: player
             
                 * * * * * I was inspired by her purpose.[]  By the future she still fought for.  Still fights for. # CLASS: player
 
-                    Not all about the corpRace.
+                    Not all about the corpRace. # CLASS: benton
                     
                     True. # CLASS: player
                     
@@ -2739,7 +2738,7 @@ OK. Well. # CLASS: player
             
                 * * * * * But I could only see the past in wild places[.], not the future. # CLASS: player
                 
-                    Being { career } was priority?
+                    Being { career } was priority? # CLASS: benton
                     
                     Yeah. # CLASS: player
                     
@@ -2750,9 +2749,9 @@ OK. Well. # CLASS: player
                 
                 Why bring her up? # CLASS: player
                 
-                A nymph of Artemis.  Like Callisto.
+                A nymph of Artemis.  Like Callisto. # CLASS: benton
                 
-                NullMind.  Gonna burn again.
+                NullMind.  Gonna burn again. # CLASS: benton
             
             * * * * No.[] She only had eyes for you. # CLASS: player
                 
@@ -2760,17 +2759,17 @@ OK. Well. # CLASS: player
         
         * * * I had to pry you apart. # CLASS: player
         
-            - - - - (disappeared)I never knew why she disappeared.
+            - - - - (disappeared)I never knew why she disappeared. # CLASS: benton
             
-            Never heard another word.
+            Never heard another word. # CLASS: benton
             
             * * * * I have a confession. # CLASS: player
             
-                Is now a good time?
+                Is now a good time? # CLASS: benton
                 
                 No.  But you brought her up. # CLASS: player
                 
-                Ok.
+                Ok. # CLASS: benton
                 
                 - - - - - (confession)
                 
@@ -2778,19 +2777,19 @@ OK. Well. # CLASS: player
                 
                     { relationship == "close":
                     
-                        Oh.
+                        Oh. # CLASS: benton
                     
                         -> confession
                         
                     - else:
                         
-                        We dated.  It wasn't a secret.
+                        We dated.  It wasn't a secret. # CLASS: benton
                         
                     }
                     
                     About the cabin. # CLASS: player
                     
-                    Oh.  Sot.
+                    Oh.  Sot. # CLASS: benton
                     
                     -> tabloids
                 
@@ -2800,11 +2799,11 @@ OK. Well. # CLASS: player
                 
                 * * * * * { career == "an international spy" } Jem was a target. # CLASS: player
                 
-                    What?
+                    What? # CLASS: benton
                     
                     You know my work was serious business.  This time it involved her. # CLASS: player
                     
-                    Holy sot.  What did you do with her!?!
+                    Holy sot.  What did you do with her!?! # CLASS: benton
                     
                     { stressCheck("+", -> spystory, stress) }
                         -> next
@@ -2827,7 +2826,7 @@ OK. Well. # CLASS: player
                         ~ love++
                         ~ money--
                     
-                    * * * * * * { Technology + Security >= 60 } She had intel on the EcoWitch movement.[]  I was well paid to relieve her of it.
+                    * * * * * * { Technology + Security >= 60 } She had intel on the EcoWitch movement.[]  I was well paid to relieve her of it. # CLASS: player
                     
                         ~ love--
                         ~ money++
@@ -2840,13 +2839,13 @@ OK. Well. # CLASS: player
                     
                     * * * * * * I can't tell you. # CLASS: player
                     
-                    - - - - - - (spyend)I can't...
+                    - - - - - - (spyend)I can't... # CLASS: benton
                     
-                    This topic is done.
+                    This topic is done. # CLASS: benton
                     
                     { wait(5) }
                     
-                    Commencing engine shift.
+                    Commencing engine shift. # CLASS: benton
                     
                     -> donetalking
                     
@@ -2860,13 +2859,13 @@ OK. Well. # CLASS: player
                 
                 * * * * * { charpreg } I was her surrogate. # CLASS: player
                 
-                - - - - - I...
+                - - - - - I... # CLASS: benton
                 
-                This is crazy.
+                This is crazy. # CLASS: benton
                 
-                It's been, what, 8 years?
+                It's been, what, 8 years? # CLASS: benton
                 
-                Why would you bring it up now?
+                Why would you bring it up now? # CLASS: benton
                 
                 * * * * * Need to come clean. # CLASS: player
                 
@@ -2874,17 +2873,17 @@ OK. Well. # CLASS: player
                 
                 - - - - -
                 
-                Well, hope you're happy.
+                Well, hope you're happy. # CLASS: benton
                 
-                No, scratch that, I hope *she's* happy.
+                No, scratch that, I hope *she's* happy. # CLASS: benton
                 
-                We'll talk when I get back to Terra.
+                We'll talk when I get back to Terra. # CLASS: benton
                     
             * * * * You had a lot of partners. # CLASS: player
             
-                True.
+                True. # CLASS: benton
                 
-                I'm pretty upfront about it.
+                I'm pretty upfront about it. # CLASS: benton
                 
                 * * * * * This one was a problem. # CLASS: player
                 
@@ -2900,13 +2899,13 @@ OK. Well. # CLASS: player
         
             - - - - (wallet)
             
-            Nah.
+            Nah. # CLASS: benton
             
             Yah. # CLASS: player
             
             * * * * You're not that hot, choi. # CLASS: player
             
-                ¡LafLaf!
+                ¡LafLaf! # CLASS: benton
                 
                 Laugh it up.  She almost went public. # CLASS: player
             
@@ -2930,19 +2929,19 @@ OK. Well. # CLASS: player
             
             * * * * Sometimes you're dense.[]  The whole episode just passed you by as you played with another startCorp. # CLASS: player
             
-            - - - - This doesn't make sense.
+            - - - - This doesn't make sense. # CLASS: benton
             
-            I don't know what you're playing at, but I didn't bring up Jem for you to dragDown.
+            I don't know what you're playing at, but I didn't bring up Jem for you to dragDown. # CLASS: benton
             
             { wait(2) }
             
-            Next burn is up.
+            Next burn is up. # CLASS: benton
             
-            We'll talk about this later...
+            We'll talk about this later... # CLASS: benton
     
     * * { relationship == "close" } Why bring her up? # CLASS: player
     
-        One of the nymphs that got away.
+        One of the nymphs that got away. # CLASS: benton
         
         { wait(4) }
         
@@ -2956,7 +2955,7 @@ OK. Well. # CLASS: player
     
     * * { relationship == "puzzle" } UzinCode champion?[]  We wanted to bodysnatch her from Goliath. # CLASS: player
     
-        Yah.  You laid quite the honeypot.
+        Yah.  You laid quite the honeypot. # CLASS: benton
         
             * * * Always like headhunting[.] talent from the megas. # CLASS: player
             
@@ -2977,23 +2976,17 @@ OK. Well. # CLASS: player
     
     * * What does that have to do with Callisto? # CLASS: player
     
-        Just thinking about the ones that got away.
+        Just thinking about the ones that got away. # CLASS: benton
         
-        Or the ones I got away from.
+        Or the ones I got away from. # CLASS: benton
         
         -> topless
     
-    - - Retros are clearing.  Won't be long.
+    - - Retros are clearing.  Won't be long. # CLASS: benton
     
 - (donetalking)
 
 ~ jupiter_flyby_status++
-
-// approach, pre_burn, entry_burn, perijove, exit_burn, escape
-
-// jupiter_flyby_status_color =
-
-// green, orange, red
 
 << Jupiter flyby status: { jupiter_flyby_status_color } : { jupiter_flyby_status } >>
 
@@ -3005,11 +2998,11 @@ OK. Well. # CLASS: player
 
     << engines firing >>
 
-    {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.}
+    {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.} # CLASS: benton
     
     { wait(3) }
     
-    {~Distract me or something, will ya?|Talk to me { pronouner("choi","chai","chen") }.|What's on **your** mind?|Could do with a pep talk, huh?|Why so serious?}
+    {~Distract me or something, will ya?|Talk to me { pronouner("choi","chai","chen") }.|What's on **your** mind?|Could do with a pep talk, huh?|Why so serious?} # CLASS: benton
     
     { wait(1) }
 
@@ -3033,23 +3026,23 @@ OK. Well. # CLASS: player
 
 * [<< wait >>]
 
-- That was {~rough|epic|insane|tough}.
+- That was {~rough|epic|insane|tough}. # CLASS: benton
 
-I'm gonna sleep for a year now.
+I'm gonna sleep for a year now. # CLASS: benton
 
 * You do that. # CLASS: player
 
-    Thx.
+    Thx. # CLASS: benton
 
 * You need anything else? # CLASS: player
 
-    No.
+    No. # CLASS: benton
     
-    Not right now.
+    Not right now. # CLASS: benton
     
 * You do that. # CLASS: player
 
-- Talk later.
+- Talk later. # CLASS: benton
 
 + [<< Close Chat >>] -> menu
 
@@ -3217,23 +3210,23 @@ I'm gonna sleep for a year now.
 
     << Administered >>
 
-- Ugh.
+- Ugh. # CLASS: benton
 
 { wait(4) }
 
-I'm. Up.
+I'm. Up. # CLASS: benton
 
 * Hey.  How do you feel? # CLASS: player
 
-    Like a warmed up corpse.
+    Like a warmed up corpse. # CLASS: benton
 
 * What's the hold-up? # CLASS: player
 
-    Moving slow.
+    Moving slow. # CLASS: benton
 
 * Things to do, chuik. # CLASS: player
 
-    Yeah.  I getcha.
+    Yeah.  I getcha. # CLASS: benton
 
 - { wait(2) }
 
@@ -3243,9 +3236,9 @@ I'm. Up.
 
 * I don't wanna be here either.[]  Another month playing your alarm clock and I'm ready to hit the self destruct myself.  So do us a favor and get on with it or flush yourself out the airlock already.  # CLASS: player
 
-    You're a real inspiration, y'know.
+    You're a real inspiration, y'know. # CLASS: benton
     
-    Alright...
+    Alright... # CLASS: benton
 
 - (checklist_top)
 
@@ -3253,15 +3246,15 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
 
 * Q-sat sync up. # CLASS: player
 
-    Ok.
+    Ok. # CLASS: benton
     
     { wait(3) }
     
-    I've got lock-on with 54, 55, and...
+    I've got lock-on with 54, 55, and... # CLASS: benton
     
     { wait(1) }
     
-    - - (no56)I'm not getting 56.
+    - - (no56)I'm not getting 56. # CLASS: benton
     
     * * What's your readout? # CLASS: player
     
@@ -3270,15 +3263,16 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         What's your readout? # CLASS: player
         
     - - { wait(2) }
-    0x6269672065617273
+    
+    0x6269672065617273 # CLASS: benton
     
     * * Got it. # CLASS: player
     
-    - - Is that it?
+    - - Is that it? # CLASS: benton
     
     * * Yeah. # CLASS: player
     
-    - - Doesn't... didn't Medina need entanglement parameters?  I'm not sure why she's not running the comms check in anymore.
+    - - Doesn't... didn't Medina need entanglement parameters?  I'm not sure why she's not running the comms check in anymore. # CLASS: benton
     
     * * We're just trying to make this easier on you. # CLASS: player
     
@@ -3286,17 +3280,17 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * Medina's gone, choi.[]  Money talked. # CLASS: player
     
-        What?  Sot!
+        What?  Sot! # CLASS: benton
         
-        Big G?
+        Big G? # CLASS: benton
         
         Yeah.  # CLASS: player
         
-        Damnit.
+        Sotit. # CLASS: benton
         
         { wait(2) }
         
-        Damn. It.
+        Sot. It. # CLASS: benton
         
         ~ stressCheck("+", -> checklist_end, stress)
             -> next
@@ -3313,43 +3307,43 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     <> balanced. # CLASS: player
     
-    I gotcha.
+    I gotcha. # CLASS: benton
     
-    Cycling the refresher.
+    Cycling the refresher. # CLASS: benton
     
     { wait(3) }
     
-    This used to be fun.
+    This used to be fun. # CLASS: benton
     
     * * It still is! # CLASS: player
     
-        Maybe.
+        Maybe. # CLASS: benton
     
     * * Since when? # CLASS: player
     
-        Back when it was an adventure.
+        Back when it was an adventure. # CLASS: benton
         
-    - - Flushing my external stomach acid with the sleekest bio-tech this system has ever seen.  Novel.
+    - - Flushing my external stomach acid with the sleekest bio-tech this system has ever seen.  Novel. # CLASS: benton
     
-    Lucas still not talking to me?
+    Lucas still not talking to me? # CLASS: benton
     
     * * He's keeping a professional distance[.] since you've countermanded almost all his recommendations on this voyage. # CLASS: player
     
-        He knows what this mission means.
+        He knows what this mission means. # CLASS: benton
     
     * * He's been ready to quit for a long time. # CLASS: player
     
-        Still don't grok him backing down.
+        Still don't grok him backing down. # CLASS: benton
     
     * * { Psychology >= 30 } Why do you think that is? # CLASS: player
     
-        Why my trusted CMO would sulk while I'm still getting flung?
+        Why my trusted CMO would sulk while I'm still getting flung? # CLASS: benton
         
         Why do you think he's not talking to you? # CLASS: player
         
-        ¡sigh! I dunno.
+        ¡sigh! I dunno. # CLASS: benton
         
-        Sore.
+        Sore. # CLASS: benton
         
         * * * Because? # CLASS: player
         
@@ -3357,7 +3351,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
             Yeah, well... <>
     
-    - - He knows I can take a beating!
+    - - He knows I can take a beating! # CLASS: benton
         
     * * He cares about you.[]  Mission or not, he knows what this is doing to your physiology.  Don't think he can stomach talking to you directly about it. # CLASS: player
     
@@ -3367,11 +3361,11 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     - - { wait(3) }
     
-    Cycle's done.
+    Cycle's done. # CLASS: benton
 
 * How's your sleep. # CLASS: player
 
-    Catatonic.
+    Catatonic. # CLASS: benton
     
     * * { Medicine >= 30 } Your q.EEG is still elevated.[]  Are you still having bad dreams? # CLASS: player
     
@@ -3379,7 +3373,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * Any more nightmares? # CLASS: player
     
-    - - You're not my shrink.
+    - - You're not my shrink. # CLASS: benton
     
     I am while you're a billion miles away and I'm the only person you'll have a civil conversation with.  # CLASS: player
     
@@ -3387,13 +3381,13 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * { Psychology >= 30 } Just take a moment.[]  Close your eyes and start recounting what you remember.  # CLASS: player
     
-        Fine.
+        Fine. # CLASS: benton
         
-        Swimming again.  Deep, thick darkness.
+        Swimming again.  Deep, thick darkness. # CLASS: benton
         
-        That horrible feeling you can't breathe.  Wasn't suffocating, but just that rigid chest that can't move in or out.  _Wanting_ air.
+        That horrible feeling you can't breathe.  Wasn't suffocating, but just that rigid chest that can't move in or out.  _Wanting_ air. # CLASS: benton
         
-        The red eye was always watching.
+        The red eye was always watching. # CLASS: benton
         
         * * * Jupiter? # CLASS: player
         
@@ -3406,90 +3400,90 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         - - - (old_god)
         
-        An old god.  A discarded deity still swinging round and round in the celestial sphere, engraged by his obsolesence.
+        An old god.  A discarded deity still swinging round and round in the celestial sphere, engraged by his obsolesence. # CLASS: benton
         
-        Swimming for eternity.  Not breathing.
+        Swimming for eternity.  Not breathing. # CLASS: benton
         
-        Enough to drive anyone mad, god or not.
+        Enough to drive anyone mad, god or not. # CLASS: benton
         
         * * * What is it hiding? # CLASS: player
         
             { wait(2) }
             
-            Power.
+            Power. # CLASS: benton
             
-            It still has the power to change _everything_, but it hoards it, too afraid to unleash creation.
+            It still has the power to change _everything_, but it hoards it, too afraid to unleash creation. # CLASS: benton
             
-            Too afraid it will end the same way again.
+            Too afraid it will end the same way again. # CLASS: benton
             
-            In obsolesence.
+            In obsolesence. # CLASS: benton
         
         * * * What do such gods create[?] in the vacuum? # CLASS: player
         
-            The seeds for another creation.
+            The seeds for another creation. # CLASS: benton
             
-            This one is dying, so dream up the next.
+            This one is dying, so dream up the next. # CLASS: benton
             
-            Universes within the dreams of gods in other universes.
+            Universes within the dreams of gods in other universes. # CLASS: benton
             
-            Turtles all the way down.
+            Turtles all the way down. # CLASS: benton
         
         * * * What do you ask it? # CLASS: player
         
-            For forgiveness.
+            For forgiveness. # CLASS: benton
             
-            It is folly to swim in this dark ocean with antedilluvian lords.  I must seek its forgiveness to be allowed to continue my journey.
+            It is folly to swim in this dark ocean with antedilluvian lords.  I must seek its forgiveness to be allowed to continue my journey. # CLASS: benton
             
         - - - { wait(3) }
         
-        It always feels like a long nightmare.
+        It always feels like a long nightmare. # CLASS: benton
         
-        But with the thought that on the other side, through the eye of the god, I will find space to breathe again.
+        But with the thought that on the other side, through the eye of the god, I will find space to breathe again. # CLASS: benton
         
         { wait(3) }
     
     * * At least update your log[.] a bit more regular, yah? # CLASS: player
     
-        Ok.
+        Ok. # CLASS: benton
     
     * * You're still in a nightmare. # CLASS: player
     
-        How droll.
+        How droll. # CLASS: benton
         
-    - - Well, this psychoanalysis has been fun.  We done yet?
+    - - Well, this psychoanalysis has been fun.  We done yet? # CLASS: benton
 
 * Tech checkpoints.[]  First, check nano-alignment on the isosacular system. # CLASS: player
 
-    Ugh.  I knew that was rushed.
+    Ugh.  I knew that was rushed. # CLASS: benton
     
     { wait(2) }
     
-    What am I looking for again?
+    What am I looking for again? # CLASS: benton
     
     * * { Engineering + Technology >= 60 } Anti-polar shift [& resistance.]needs to be within 100 picometers and passthrough has less than 3 mΩ. # CLASS: player
     
     * * Just read out the numbers.[]  I'll get Huo to check them out. # CLASS: player
     
-    - - Uh, ok.
+    - - Uh, ok. # CLASS: benton
     
-    apShift; 98 picometers.
+    apShift; 98 picometers. # CLASS: benton
     
     * * Ok. # CLASS: player
     
     * * { Engineering + Technology >= 60 } Not [good.]moving in the right direction. # CLASS: player
     
-        Fantastic.
+        Fantastic. # CLASS: benton
     
          ~ stressCheck("+", -> ohms, stress)
                 -> next
     
     - - (ohms)
     
-    mΩ 1.066
+    mΩ 1.066 # CLASS: benton
     
     Got it. # CLASS: player
     
-    Wasn't this supposed to be a superconductor?
+    Wasn't this supposed to be a superconductor? # CLASS: benton
     
     * * I'm not sure.[]  Let's just get the number for Huo and move on. # CLASS: player
     
@@ -3498,9 +3492,9 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
          ~ stressCheck("+", -> hold_together, stress)
                 -> next
     
-    - - (hold_together)"Hear me, baby?  Hold together."
+    - - (hold_together)"Hear me, baby?  Hold together." # CLASS: benton
     
-    Next checkpoint?
+    Next checkpoint? # CLASS: benton
     
     * * Re-align hyperecliptic tracking. # CLASS: player
     
@@ -3513,9 +3507,9 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     - - (realign)
         
-    Ok.
+    Ok. # CLASS: benton
     
-    HyperTrack.  Dialing in now.
+    HyperTrack.  Dialing in now. # CLASS: benton
     
     { wait(6) }
     
@@ -3530,9 +3524,9 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         ~ stressCheck("+", -> wrong, stress)
             -> next
         
-    - - (wrong)Something's wrong.
+    - - (wrong)Something's wrong. # CLASS: benton
     
-    HT is -18.24º
+    HT is -18.24º # CLASS: benton
     
     * * That's why we check, right?  <> # CLASS: player
     
@@ -3546,17 +3540,17 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
             Are we offsetting based on the missing q-sat link? # CLASS: player
             
-            Yeah.  Dialed.
+            Yeah.  Dialed. # CLASS: benton
             
         }
     
     - -
     
-    What the sot happened?
+    What the sot happened? # CLASS: benton
     
     { not pc_astro:
     
-        We haven't seen variance over 3º before!
+        We haven't seen variance over 3º before! # CLASS: benton
         
     }
     
@@ -3564,33 +3558,33 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * { Astronomy + Engineering < 60 }How did this happen? # CLASS: player
     
-        I have no idea.
+        I have no idea. # CLASS: benton
         
-        - - - (not_possible)It shouldn't even be possible.
+        - - - (not_possible)It shouldn't even be possible. # CLASS: benton
         
-        The HyperTrack array is one of the most finely engineered components ever made.  It was built to handle anything that could be thrown at it.  Radiation, sub-kelvin-temps, bricks.
+        The HyperTrack array is one of the most finely engineered components ever made.  It was built to handle anything that could be thrown at it.  Radiation, sub-kelvin-temps, bricks. # CLASS: benton
         
-        How could it deviate so bad?
+        How could it deviate so bad? # CLASS: benton
         
         * * * Things happen. # CLASS: player
         
-            Not like this.
+            Not like this. # CLASS: benton
             
-            Not on something we trusted to change the whole solar system.
+            Not on something we trusted to change the whole solar system. # CLASS: benton
         
         * * * Could an error be built-in? # CLASS: player
         
-            A bug?  Not this bad.
+            A bug?  Not this bad. # CLASS: benton
             
             * * * * What if it was intentional? # CLASS: player
             
-            - - - - Sabotage?
+            - - - - Sabotage? # CLASS: benton
             
-            I can't believe that.
+            I can't believe that. # CLASS: benton
             
-            If someone wanted to scuttle the project they could've done it a billion ways before we even left Luna.
+            If someone wanted to scuttle the project they could've done it a billion ways before we even left Luna. # CLASS: benton
             
-            And TARC would've sniffed it.
+            And TARC would've sniffed it. # CLASS: benton
             
             * * * * You're probably right. # CLASS: player
             
@@ -3605,26 +3599,26 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         * * * Could it be sabotage?[]  We were concerned that Goliath DSJ might have dropped a nano-drone on you. # CLASS: player
         
-            Oh, gods.
+            Oh, gods. # CLASS: benton
             
-            If they've been spending the last month diving the array, they could have everything.
+            If they've been spending the last month diving the array, they could have everything. # CLASS: benton
             
             * * * * That seems unlikely. # CLASS: player
             
             * * * * [Now they can sabotage the flight]And now they're finished they can sabotage the whole thing. # CLASS: player
                 
-                ¡SOT!
+                ¡SOT! # CLASS: benton
                 
-                ¡SOT!
+                ¡SOT! # CLASS: benton
                 
-                EVEN OUT HERE I CAN'T GET AWAY FROM GOLIATH SCUM!
+                EVEN OUT HERE I CAN'T GET AWAY FROM GOLIATH SCUM! # CLASS: benton
                 
                 ~ stressCheck("+", -> no_matter, stress)
                     -> next
             
             * * * * { Medicine + Psychology >= 60 }It's no use dwelling on it.[]  What you've got to do is take action.  Deal with the current problem. # CLASS: player
             
-                Right.
+                Right. # CLASS: benton
                 
                 ~ stressCheck("-", -> no_matter, stress)
                     -> next
@@ -3633,11 +3627,11 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         { wait(3) }
         
-        It doesn't matter now.  Just have to fix it.
+        It doesn't matter now.  Just have to fix it. # CLASS: benton
     
     * * { Astronomy + Engineering >= 60 }Checking deepLog on the array.[]  There should be a clue on how we got so off. # CLASS: player
     
-        Already digging.
+        Already digging. # CLASS: benton
         
         -> not_possible
     
@@ -3645,9 +3639,9 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
         - - - (off_course)
         
-        It means I'm way off-course.
+        It means I'm way off-course. # CLASS: benton
         
-        And I don't have good data on the grav-wave pattern to feed the Tsukasa Theorems.
+        And I don't have good data on the grav-wave pattern to feed the Tsukasa Theorems. # CLASS: benton
         
         * * * { Astronomy + Engineering >= 60 }We need to figure out a correction[.] burn, otherwise you'll be slinging KBOs for the next 50 years. # CLASS: player
         
@@ -3655,7 +3649,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         * * * ->
         
-        - - - No good data, no good calcs, no good burns.  I spin off into the dark and everything goes pear.
+        - - - No good data, no good calcs, no good burns.  I spin off into the dark and everything goes pear. # CLASS: benton
     
     * * { Astronomy + Engineering >= 60 }Plotting adjusted trajectory.[]  Need to see where this takes us. # CLASS: player
     
@@ -3663,7 +3657,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * { Astronomy + Engineering < 60 }What should we do? # CLASS: player
     
-        Already chatting with Huo and eng.
+        Already chatting with Huo and eng. # CLASS: benton
         
         { wait(3) }
         
@@ -3671,17 +3665,17 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * { Astronomy + Engineering >= 90 }We need to reboot the array.[]  Can you cycle the hadron splitter? # CLASS: player
     
-        I... I don't think so.  Not from here.
+        I... I don't think so.  Not from here. # CLASS: benton
     
         - - - (needs_eva)
         
-        I don't have access to the processing ports.  We never thought they needed to be field-maintained.
+        I don't have access to the processing ports.  We never thought they needed to be field-maintained. # CLASS: benton
         
-        Engineers are working on a solve.
+        Engineers are working on a solve. # CLASS: benton
         
         { checklist_end > 3:
 
-           Not done with the checklist tho, right?
+           Not done with the checklist tho, right? # CLASS: benton
 
         }
         
@@ -3703,23 +3697,23 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
 
 { wait(3) }
 
-Oh, sot.
+Oh, sot. # CLASS: benton
 
 * What? # CLASS: player
 
-- Huo says I have to go outside.
+- Huo says I have to go outside. # CLASS: benton
 
 * Difficult problems have difficult solutions. # CLASS: player
 
-    - - (understated)That's an understatement.
+    - - (understated)That's an understatement. # CLASS: benton
     
     What do you have to do? # CLASS: player
 
 * That seems unwise. # CLASS: player
 
-    I don't think we have a choice.
+    I don't think we have a choice. # CLASS: benton
     
-    Never thought I'd actually need to go out there!
+    Never thought I'd actually need to go out there! # CLASS: benton
     
     What do you have to do? # CLASS: player
 
@@ -3734,27 +3728,27 @@ Oh, sot.
 
 * { Astronomy + Engineering + Medicine >= 60 } You do have the tech to do this.[]  You and your team anticipated what it would take for you to conduct and EVA should it be absolutely necessary. # CLASS: player
 
-    Theoretically?  Yeah.
+    Theoretically?  Yeah. # CLASS: benton
     
-    Never thought it'd happen.
+    Never thought it'd happen. # CLASS: benton
     
     So, what's next? # CLASS: player
 
 - (next_steps)
 
-Alright.
+Alright. # CLASS: benton
 
-Gotta cycle the gel, make sure I've got enough oxygen in the mix for how long I might be out there.
+Gotta cycle the gel, make sure I've got enough oxygen in the mix for how long I might be out there. # CLASS: benton
 
-Then deploy the sheath, trapping enough gel.
+Then deploy the sheath, trapping enough gel. # CLASS: benton
 
-Transfer to the airlock.  Clip into the rail.
+Transfer to the airlock.  Clip into the rail. # CLASS: benton
 
-Cycle and open the exterior hatch.
+Cycle and open the exterior hatch. # CLASS: benton
 
-Ride the rail to the array and fix it.  Then rewind.
+Ride the rail to the array and fix it.  Then rewind. # CLASS: benton
 
-Easy.
+Easy. # CLASS: benton
 
 * Sounds like a plan.[]  Time to execute it.  # CLASS: player
 
@@ -3762,17 +3756,17 @@ Easy.
 
     { understated:
     
-        You are the master of understatement.
+        You are the master of understatement. # CLASS: benton
     
     - else: 
     
-        That's an understatement.
+        That's an understatement. # CLASS: benton
     
     }
     
 * { Engineering + Astronomy + Medicine >= 30 } If you leave the gel won't the gForce crush you? # CLASS: player
 
-    Already slowing down to make this safe.
+    Already slowing down to make this safe. # CLASS: benton
 
 * Don't mess up.[]  You don't wanna know what happens to a gel-infused humanoid if you get exposed to vacuum. # CLASS: player
 
@@ -3785,9 +3779,9 @@ VAR clipped = false
 
 { wait(2) }
 
-Ok.  Here goes.
+Ok.  Here goes. # CLASS: benton
 
-Cycling gel to get max O^2
+Cycling gel to get max O^2 # CLASS: benton
 
 * Hold on. # CLASS: player
 
@@ -3797,13 +3791,13 @@ Cycling gel to get max O^2
 
 * { Engineering + Medicine >= 60 } Make sure your isotope levels balance.[]  We only just sorted the infusion regulator. # CLASS: player
 
-    Got it.
+    Got it. # CLASS: benton
 
 - { wait(2) }
 
-Looking good.
+Looking good. # CLASS: benton
 
-Deploying nano-sheath.
+Deploying nano-sheath. # CLASS: benton
 
 * Wait a sec... # CLASS: player
 
@@ -3813,30 +3807,31 @@ Deploying nano-sheath.
 
 * { Engineering + Technology >= 60 } [Cycle the power.]  Try cycling the power once before you commit.  The sheath hasn't been used in months so needs to reset it's spatial sensors. # CLASS: player
 
-    Ok.
+    Ok. # CLASS: benton
+
 - { wait(2) }
 
-Deployed; cycling power.
+Deployed; cycling power. # CLASS: benton
 
 { wait(1) }
 
-Looks good.
+Looks good. # CLASS: benton
 
-Crossing the membrane into the airlock.
+Crossing the membrane into the airlock. # CLASS: benton
 
 { wait(2) }
 
-Whoah.
+Whoah. # CLASS: benton
 
-gForce is stronger than I thought.  Haven't felt this in ages.
+gForce is stronger than I thought.  Haven't felt this in ages. # CLASS: benton
 
 * { Medicine + Astronomy + Engineering >= 60 } The gel has protected you[.] from the strongest g's so far, but it should also have given you resistance to keep up your fitness. # CLASS: player
 
-    Yeah, just unexpected, that's all.
+    Yeah, just unexpected, that's all. # CLASS: benton
 
 * ->
 
-- (clipping) Opening the airlock.
+- (clipping) Opening the airlock. # CLASS: benton
 
 * Hold up. # CLASS: player
 
@@ -3846,11 +3841,11 @@ gForce is stronger than I thought.  Haven't felt this in ages.
 
 * { Psychology >= 30 } You're [taking a big step.]stepping out into the stars where few have been before. # CLASS: player
 
-    Yeah, on the back of a speeding, prototype spacecraft trying to save myself from getting lost in the Oort Cloud.
+    Yeah, on the back of a speeding, prototype spacecraft trying to save myself from getting lost in the Oort Cloud. # CLASS: benton
 
 - (outside)
 
-Airlock opened.  Stepping out.
+Airlock opened.  Stepping out. # CLASS: benton
 
 * { clipped == false }One last thing. # CLASS: player
 
@@ -3858,33 +3853,33 @@ Airlock opened.  Stepping out.
     
 * ->
 
-- Wow.
+- Wow. # CLASS: benton
 
 * What I'd give to see what you're seeing. # CLASS: player
 
-    ¡awe!
+    ¡awe! # CLASS: benton
     
-    {pronouner("Choi","Chai","Chen")}!
+    {pronouner("Choi","Chai","Chen")}! # CLASS: benton
     
     * * Tell me what it's like. # CLASS: player
     
-        I mean, not much diff than the sims.
+        I mean, not much diff than the sims. # CLASS: benton
         
         ¡LafLaf! # CLASS: player
         
-        The sheath compensates for the gunk some, and the stars, the galaxies, the whole emptiness is just _full_.
+        The sheath compensates for the gunk some, and the stars, the galaxies, the whole emptiness is just _full_. # CLASS: benton
         
-        You might have _seen_ this before.
+        You might have _seen_ this before. # CLASS: benton
         
-        But you've never been this close to it.
+        But you've never been this close to it. # CLASS: benton
         
-        This real.
+        This real. # CLASS: benton
         
         * * * Sounds magnificent. # CLASS: player
         
-            It's epic.
+            It's epic. # CLASS: benton
             
-            I could stand here for the rest of my journey and just get lost.
+            I could stand here for the rest of my journey and just get lost. # CLASS: benton
             
             * * * * Not enough gel for that.[] Suffocating in that slime sounds unappealing. # CLASS: player
             
@@ -3900,7 +3895,7 @@ Airlock opened.  Stepping out.
         
         * * * Makes you wanna dance[?] on the back of your spacecraft? # CLASS: player
         
-            Grand jeté my way all the way to the array.
+            Grand jeté my way all the way to the array. # CLASS: benton
             
             Grand jeté your way to being a KBO. # CLASS: player
             
@@ -3916,21 +3911,21 @@ Airlock opened.  Stepping out.
             
             - - - - { wait(4) }
             
-            It's immense.
+            It's immense. # CLASS: benton
             
-            Too immense.
+            Too immense. # CLASS: benton
             
-            I...
+            I... # CLASS: benton
             
             * * * * Whatcha thinking? # CLASS: player
             
-                I'm a fool.
+                I'm a fool. # CLASS: benton
                 
-                I thought the smudge on the edge of a gas giant was the eye of a god, but here I am staring into the abyss of space and it is staring right back at me.  Right _IN_ to me.
+                I thought the smudge on the edge of a gas giant was the eye of a god, but here I am staring into the abyss of space and it is staring right back at me.  Right _IN_ to me. # CLASS: benton
                 
                 { wait(2) }
                 
-                𒀭𒀫𒌓
+                𒀭𒀫𒌓 # CLASS: benton
             
                 ~ stressCheck("+", -> marduk_again, stress)
                     -> next
@@ -3941,16 +3936,16 @@ Airlock opened.  Stepping out.
                 
                 * * * * * { Psychology >= 30 } [It's ok to marvel.]The staggering immensity of the cosmos is worth marvelling at.  But you have to keep perspective on what's at *your* scale.  Where do you fit in, Benton? # CLASS: player
                 
-                    Right here.
+                    Right here. # CLASS: benton
                     
-                    I'm right here.
+                    I'm right here. # CLASS: benton
                     
                     ~ stressCheck("-", -> sorry, stress)
                         -> next 
                     
                 * * * * * Oh, this is fun. # CLASS: player
                 
-                - - - - - (sorry)Sorry.
+                - - - - - (sorry)Sorry. # CLASS: benton
                 
                 * * * * * Try to keep your feet on solid ground, yah?[]  Don't wanna get lost in space, figuratively or literally. # CLASS: player
                 
@@ -3963,9 +3958,9 @@ Airlock opened.  Stepping out.
             
             * * * * Don't forget you have work to do. # CLASS: player
             
-                ¡sigh!
+                ¡sigh! # CLASS: benton
                 
-                Yah.
+                Yah. # CLASS: benton
                 
                 -> goto_array
     
@@ -3986,7 +3981,7 @@ Airlock opened.  Stepping out.
 {
     - clipped == true && freakout == 1:
     
-        Rail is clipped.  Not going anywhere.
+        Rail is clipped.  Not going anywhere. # CLASS: benton
         
             -> afterfreak
             
@@ -3996,12 +3991,12 @@ Airlock opened.  Stepping out.
     
     - else:
         
-        Oh.  Sot.
+        Oh.  Sot. # CLASS: benton
 }
 
 What? # CLASS: player
 
-Rail isn't clipped.
+Rail isn't clipped. # CLASS: benton
 
 ~ stressCheck("+", -> time_to_clip, stress)
     -> next
@@ -4032,15 +4027,15 @@ Rail isn't clipped.
 
 * Well, clip it! # CLASS: player
 
-    Yah.  Thanks for the timely advice.
+    Yah.  Thanks for the timely advice. # CLASS: benton
 
 * ¡LafLaf! # CLASS: player
 
-    No. Sotting. Help.
+    No. Sotting. Help. # CLASS: benton
 
 - { wait(2) }
 
-Clipped.
+Clipped. # CLASS: benton
 
 ~ clipped = true
 
@@ -4050,17 +4045,17 @@ Phew. # CLASS: player
 
 = goto_array
 
-Making my way up the dorsal spine.
+Making my way up the dorsal spine. # CLASS: benton
 
 Glad the nano-sheath has some chameleopads.  There's nothing to hold on to on this <>
 
 { stress > elevated:
 
-    <> coffin.
+    <> coffin. # CLASS: benton
     
 - else: 
 
-    <> sleek, beautiful machine.
+    <> sleek, beautiful machine. # CLASS: benton
     
 }
 
@@ -4076,7 +4071,7 @@ Glad the nano-sheath has some chameleopads.  There's nothing to hold on to on th
 
 Remember, you have a job to do. # CLASS: player
 
-Moving.
+Moving. # CLASS: benton
 
 { wait(6) }
 
@@ -4092,9 +4087,9 @@ Moving.
 
 { wait(2) }
 
-Made it to the HyperTrack array.
+Made it to the HyperTrack array. # CLASS: benton
 
-Opening service panel.
+Opening service panel. # CLASS: benton
 
 * Good luck. # CLASS: player
 
@@ -4102,27 +4097,27 @@ Opening service panel.
 
 * { Security + Technology >= 60 } [Check for traces of nano-drone.]  Use your spectrometer to check the control circuits.  Any residual p-wave could indicate we had a visitor messing with us. # CLASS: player
 
-    - - (nodrone) Ok.
+    - - (nodrone) Ok. # CLASS: benton
     
     { wait(2) }
     
-    Not seeing anything.  Seems clean.
+    Not seeing anything.  Seems clean. # CLASS: benton
     
-    Cycling the hadron splitter.
+    Cycling the hadron splitter. # CLASS: benton
     
     You good? # CLASS: player
 
 * I hope you know what you're doing. # CLASS: player
 
-- Yah.
+- Yah. # CLASS: benton
 
-I've got Huo on the other channel.  I'll let you know when I'm done.
+I've got Huo on the other channel.  I'll let you know when I'm done. # CLASS: benton
 
 { wait(10) }
 
-There.
+There. # CLASS: benton
 
-That wasn't so hard.
+That wasn't so hard. # CLASS: benton
 
 * Great job![]  Head on back, choi! # CLASS: player
 
@@ -4137,11 +4132,11 @@ That wasn't so hard.
         
 - (donesky)
 
-Returning to the airlock.
+Returning to the airlock. # CLASS: benton
 
-Thanks for the encouragement, { pronouner("choi", "chai", "chen") }.
+Thanks for the encouragement, { pronouner("choi", "chai", "chen") }. # CLASS: benton
 
-I'm going to take an 10 hour nap after this excitement.
+I'm going to take an 10 hour nap after this excitement. # CLASS: benton
 
 You do that. # CLASS: player
 
@@ -4188,9 +4183,9 @@ VAR blocked = true
 
 + { clipping } Clip the rail! # CLASS: player.
 
-    Oh.
+    Oh. # CLASS: benton
     
-    Yeah.
+    Yeah. # CLASS: benton
     
     ~ clipped = true
     
@@ -4210,7 +4205,7 @@ VAR blocked = true
 
 # CLEAR
 
-It is found!
+It is found! # CLASS: benton
 
 * That's good! # CLASS: player
 
@@ -4218,24 +4213,24 @@ It is found!
 
 * Your sanity?  Not likely. # CLASS: player
 
-- I've been thinking, y'know, a lot.  Coz there's lots of time.  To think.
+- I've been thinking, y'know, a lot.  Coz there's lots of time.  To think. # CLASS: benton
 
 {
     - benton_06.outside:
     
-        To tread the limitless gap between myself and the eye at the center of everything.
+        To tread the limitless gap between myself and the eye at the center of everything. # CLASS: benton
         
     - benton_06.crayz:
     
-        The places my mind now wanders...  the paths it had previously feared to tread.
+        The places my mind now wanders...  the paths it had previously feared to tread. # CLASS: benton
         
     - else:
     
-        About what this means.  This crazy... stunt on the way to nowhere.
+        About what this means.  This crazy... stunt on the way to nowhere. # CLASS: benton
 
 }
 
-And in the middle of this rumination I found it.
+And in the middle of this rumination I found it. # CLASS: benton
 
 * Found what exactly? # CLASS: player
 
@@ -4243,9 +4238,9 @@ And in the middle of this rumination I found it.
 
 * { Psychology + Medicine >= 60 }Your self-reflection is admirable[.], but are you examining the process enough?  Have you taken the time to step back and watch your thoughts, decide if they are taking you in a positive direction? # CLASS: player
 
-    Watch them?
+    Watch them? # CLASS: benton
     
-    Who watches them?  How does one who watch another who?
+    Who watches them?  How does one who watch another who? # CLASS: benton
     
     Benton, I'd like you to take a moment and ask yourself why you would have these thoughts? # CLASS: player
     
@@ -4255,33 +4250,33 @@ And in the middle of this rumination I found it.
     
     { wait(3) }
     
-    I think you're taking this too seriously.
+    I think you're taking this too seriously. # CLASS: benton
     
-    Any intelligent being should be allowed to examine each philosophical conundrum without being accused of insanity.
+    Any intelligent being should be allowed to examine each philosophical conundrum without being accused of insanity. # CLASS: benton
     
     Of course. # CLASS: player
 
-- The Question is what forces work against us.
+- The Question is what forces work against us. # CLASS: benton
 
-And it only stands to reason that the Answer to the Question is Gordian.  The most obvious Answer.
+And it only stands to reason that the Answer to the Question is Gordian.  The most obvious Answer. # CLASS: benton
 
 * { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 or player_knows ? junia_dealing_w_goliath } Junia? # CLASS: player
 
-    She is close, she has her hand on the chain.
+    She is close, she has her hand on the chain. # CLASS: benton
     
     * * Paranoia won't help, B. # CLASS: player
     
-        It's not paranoia if it's true!
+        It's not paranoia if it's true! # CLASS: benton
     
     * * Junia is bad news. # CLASS: player
     
-        Bad news is good news... first maxim of PR.
+        Bad news is good news... first maxim of PR. # CLASS: benton
         
-        ATTENTION is what's important.  PAY ATTENTION.
+        ATTENTION is what's important.  PAY ATTENTION. # CLASS: benton
     
     * * On the chain?[]  Does Junia have something on you? # CLASS: player
     
-        The tugging on strings, on heartstrings, on puppetstrings...
+        The tugging on strings, on heartstrings, on puppetstrings... # CLASS: benton
     
     * * { player_knows ? junia_dealing_w_goliath }  Benton, she's in bed with Goliath. # CLASS: player
     
@@ -4291,45 +4286,44 @@ And it only stands to reason that the Answer to the Question is Gordian.  The mo
         
         { wait(2) }
         
-        Et tu?
+        Et tu? # CLASS: benton
         
-    - - But this is the microscopic, the unimportant detail against the backdrop of the macro.
+    - - But this is the microscopic, the unimportant detail against the backdrop of the macro. # CLASS: benton
 
 * Goliath? # CLASS: player
 
-    THEY HAVE NO POWER OVER ME!
+    THEY HAVE NO POWER OVER ME! # CLASS: benton
     
-    THEY HAVE NO POWER.
+    THEY HAVE NO POWER. # CLASS: benton
     
-    THEY ARE THE FLAILING PIHRANA IN A BOILING POT.  THEIR TEETH CAN ONLY GNASH UNTIL THEY ARE FLAYED!
+    THEY ARE THE FLAILING PIHRANA IN A BOILING POT.  THEIR TEETH CAN ONLY GNASH UNTIL THEY ARE FLAYED! # CLASS: benton
     
     * * Calm down, B![] You're right!  They can't touch you! # CLASS: player
     
-        Never could.
+        Never could. # CLASS: benton
     
     * * They're the biggest player in the system.[]  You don't get to just sidestep them. # CLASS: player
     
     * * { Psychology + Business >= 30 } Does their lack of power mean you also lack power?[]  Have you been comparing yourself to them all along? # CLASS: player
     
-        Not anymore.
+        Not anymore. # CLASS: benton
         
     * * { not benton_06.nodrone } They might have a nano-drone stowing away[.] and sabotaging your mission. # CLASS: player
     
-        Their EYES and EARS and NOSES are irrelevant.
+        Their EYES and EARS and NOSES are irrelevant. # CLASS: benton
         
-        And their HANDS are tied by the constant truth.
+        And their HANDS are tied by the constant truth. # CLASS: benton
         
-    - - They will find their David.  Someday.
+    - - They will find their David.  Someday. # CLASS: benton
         
-    Until then they don't matter to me.
+    Until then they don't matter to me. # CLASS: benton
 
 * (sumerian)Marduk? # CLASS: player
-    𒀭𒀫𒌓
+    𒀭𒀫𒌓 # CLASS: benton
     
-    𒀭𒀫𒌓
+    𒀭𒀫𒌓 # CLASS: benton
     
-    𒀭𒀫𒌓
-    
+    𒀭𒀫𒌓 # CLASS: benton
     
     * * B, you're scaring me. # CLASS: player
     
@@ -4337,15 +4331,15 @@ And it only stands to reason that the Answer to the Question is Gordian.  The mo
     
         This high-school metaphysical paranoia is getting old. # CLASS: player
         
-    * * { Psychology >= 60 } Benton, you're fixated[.] on this ancient Sumerian god.  You need to apply your critical thinking here.  No matter how stressful the situation is, what is the likelyhood that this fictional power definition device dreamt up by early human civilization has _any_ bearing on your predicament?
+    * * { Psychology >= 60 } Benton, you're fixated[.] on this ancient Sumerian god.  You need to apply your critical thinking here.  No matter how stressful the situation is, what is the likelyhood that this fictional power definition device dreamt up by early human civilization has _any_ bearing on your predicament? # CLASS: player
     
         -> benton_cooldown
 
-    - - The bull calf of the sun god Utu takes.  it TAKES!
+    - - The bull calf of the sun god Utu takes.  it TAKES! # CLASS: benton
 
 * { Psychology >= 30 } Yourself? # CLASS: player
 
-    - - (ofthegods) I am not of the gods.
+    - - (ofthegods) I am not of the gods. # CLASS: benton
     
     * * { Astronomy >= 30 } You are of stardust.[]  You're an incredible construction of billions of years of simple process built on simple process, resulting in the incredible complexity of the universe becoming aware of itself.  That's very special. # CLASS: player
     
@@ -4373,9 +4367,9 @@ And it only stands to reason that the Answer to the Question is Gordian.  The mo
 
 * [<< wait >>]
 
-- The Answer is staring back at me.
+- The Answer is staring back at me. # CLASS: benton
 
-Only those of infinite power can hold back the will of a species, can throw down the gauntlets that shackle humanity!
+Only those of infinite power can hold back the will of a species, can throw down the gauntlets that shackle humanity! # CLASS: benton
 
 * Benton, this isn't helping! # CLASS: player
 
@@ -4383,13 +4377,13 @@ Only those of infinite power can hold back the will of a species, can throw down
 
 * Totally. # CLASS: player
 
-- It's watching me.  Following every step on the path to the edge.
+- It's watching me.  Following every step on the path to the edge. # CLASS: benton
 
-When I close my eyes in the drug induced slumber of a child, I feel it's eye ever present.
+When I close my eyes in the drug induced slumber of a child, I feel it's eye ever present. # CLASS: benton
 
-And the closer my goal becomes, the more the game is changed.  You see?
+And the closer my goal becomes, the more the game is changed.  You see? # CLASS: benton
 
-Systems fail, friends betray, the project tries to fall apart.
+Systems fail, friends betray, the project tries to fall apart. # CLASS: benton
 
 * No.[]  I don't see that.  I see a good friend losing his grip. # CLASS: player 
 
@@ -4416,17 +4410,17 @@ Systems fail, friends betray, the project tries to fall apart.
 * Definitely the work of an angry god. # CLASS: player
 
 -
-The horizon keeps shifting...
+The horizon keeps shifting... # CLASS: benton
 
-...it's always so far away.
+...it's always so far away. # CLASS: benton
 
-The Answer is they don't play by the rules.  They don't.  So why should I?
+The Answer is they don't play by the rules.  They don't.  So why should I? # CLASS: benton
 
 * You don't have a choice. # CLASS: player
 
 * This isn't a game. # CLASS: player
 
-* Don't.
+* Don't. # CLASS: player
 
     -> benton_breakdown
 
@@ -4454,21 +4448,21 @@ Together. # CLASS: player
 
 = benton_cooldown
 
-I...
+I... # CLASS: benton
 
-I suppose you're right.
+I suppose you're right. # CLASS: benton
 
-The... emptiness lets me get carried away.
+The... emptiness lets me get carried away. # CLASS: benton
 
 * I know.  Just take some time.[]  Try not to overthink things.  You've still got a long way to go. # CLASS: player
 
 * No kidding.[]  Try to avoid the deep end, yah? # CLASS: player
 
-- Ok.
+- Ok. # CLASS: benton
 
-I need to take a moment.
+I need to take a moment. # CLASS: benton
 
-Talk later, k?
+Talk later, k? # CLASS: benton
 
 + [<< Close Chat >>] -> menu # CLASS: player
 
@@ -4484,52 +4478,52 @@ Talk later, k?
 
     -> loopy
 
-+ [<< Close Chat >>] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
 
 === benton_08 ===
 
 # CLEAR
 
-Benton is losing it, going off the rails, goes off on a past event with the player
+Benton is losing it, going off the rails, goes off on a past event with the player # CLASS: benton
 
-As things back on Earth get heated with the potential loss of Nth Horizon, the PC is tasked with trying to keep Benton on task.  However he seems to be losing it, going off onto tangents about mysterious, invisible stowaways and the nihilisitic unfairness of reality.  A savvy player may notice his train of thought seeking desperately for a way out, an excuse for the pointlessness of this stunt and his life against the backdrop of an uncaring universe.
+As things back on Earth get heated with the potential loss of Nth Horizon, the PC is tasked with trying to keep Benton on task.  However he seems to be losing it, going off onto tangents about mysterious, invisible stowaways and the nihilisitic unfairness of reality.  A savvy player may notice his train of thought seeking desperately for a way out, an excuse for the pointlessness of this stunt and his life against the backdrop of an uncaring universe. # CLASS: benton
 
-The conversation touches on another moment from the PC and Benton's shared past, a [laugh] or a [cry] they shared together and why it was important in the context of that moment.  But before the PC can use that nostalgia to center him Benton is struck by another thought, that "it is merciful we are nothing, the enormity of anything else destroys us."  His rambles are interrupted by further developments back home...
+The conversation touches on another moment from the PC and Benton's shared past, a [laugh] or a [cry] they shared together and why it was important in the context of that moment.  But before the PC can use that nostalgia to center him Benton is struck by another thought, that "it is merciful we are nothing, the enormity of anything else destroys us."  His rambles are interrupted by further developments back home... # CLASS: benton
 
-+ [Next] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
 
 === benton_09 ===
 
 # CLEAR
 
-P has to reel Benton in, keep him on the rails
+P has to reel Benton in, keep him on the rails # CLASS: benton
 
-Benton gets back in touch, being very off-again / on-again as he contemplates the upcoming success (or at least half-way point) of his mission.  He's apparently aware that he has made it to Pluto and has manic, ecstatic tirades about the fact that he's done it, but these are counterbalanced with further nihilistic, despondent ravings.  Any bad news from home doesn't help his mental state.
+Benton gets back in touch, being very off-again / on-again as he contemplates the upcoming success (or at least half-way point) of his mission.  He's apparently aware that he has made it to Pluto and has manic, ecstatic tirades about the fact that he's done it, but these are counterbalanced with further nihilistic, despondent ravings.  Any bad news from home doesn't help his mental state. # CLASS: benton
 
-The PC can use the various knowledge gained, activities completed, history established, and personal insight to help draw Benton back to reality and take some meaningful actions that will change the outcome of the mission.
+The PC can use the various knowledge gained, activities completed, history established, and personal insight to help draw Benton back to reality and take some meaningful actions that will change the outcome of the mission. # CLASS: benton
 
-+ [Next] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
 
 === benton_10 ===
 
 # CLEAR
 
-After the historic Pluto flyby, B needs to decide where he belongs
+After the historic Pluto flyby, B needs to decide where he belongs # CLASS: benton
 
-Whether or not Benton is still sane, the PC is a friendly ear in an otherwise empty void and he will communicate with them.  If the PC is lucky or good they will have enough support and options available to convince Benton to turn around for the return journey.  But even if he's not completely insane the pull of the great darkness beyond Pluto does give Benton some pause.  The madness of his company and the Earth seem so far away and so alien that staying in the embracing dark forever almost seems like a good idea.  Is he running away or running towards something?
+Whether or not Benton is still sane, the PC is a friendly ear in an otherwise empty void and he will communicate with them.  If the PC is lucky or good they will have enough support and options available to convince Benton to turn around for the return journey.  But even if he's not completely insane the pull of the great darkness beyond Pluto does give Benton some pause.  The madness of his company and the Earth seem so far away and so alien that staying in the embracing dark forever almost seems like a good idea.  Is he running away or running towards something? # CLASS: benton
 
-Ultimately Benton picks a path...
+Ultimately Benton picks a path... # CLASS: benton
 
-+ [Next] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
 
 === benton_random ===
 
 # CLEAR
 
-Hey, I'm pretty {&busy|tired|stressed|over it} right now.  Can it wait?
+Hey, I'm pretty {&busy|tired|stressed|over it} right now.  Can it wait? # CLASS: benton
 
 + Sure. # CLASS: player
 
-- Thanks
+- Thanks # CLASS: benton
 
 + [<< Close Chat >>] -> menu

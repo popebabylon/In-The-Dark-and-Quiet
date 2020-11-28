@@ -14,9 +14,9 @@
 
 * Hi, Junia, I'm { name } # CLASS: player
 
-- Hi, { name } nice to meet you.
+- Hi, { name } nice to meet you. # CLASS: junia
 
-Welcome to Moonshot!
+Welcome to Moonshot! # CLASS: junia
 
 * Thank you! # CLASS: player
 
@@ -24,11 +24,11 @@ Welcome to Moonshot!
 
 * 👏 # CLASS: player
 
-- Benton spoke very highly of you.  Glad to have you on the team.
+- Benton spoke very highly of you.  Glad to have you on the team. # CLASS: junia
 
 - (loop)
 
-{Have you had a chance to orient yourself?|You feel up to speed then?|Sounds like you're making yourself at home.}
+{Have you had a chance to orient yourself?|You feel up to speed then?|Sounds like you're making yourself at home.} # CLASS: junia
 
 * Yeah, I'm level. # CLASS: player
 
@@ -36,47 +36,47 @@ Welcome to Moonshot!
     
 * Not really. # CLASS: player
 
-    Ah, well don't let me distract you.  It's good to get some processing cycles in when joining a new team.
+    Ah, well don't let me distract you.  It's good to get some processing cycles in when joining a new team. # CLASS: junia
     
-    Why don't you check in with { not lucas_01.lucas_intro: { not benton_01.pluto_pitch:Dr. Estévez or Benton|Dr. Estévez}|{ not benton_01.pluto_pitch:Benton|yourself for a while}}?
+    Why don't you check in with { not lucas_01.lucas_intro: { not benton_01.pluto_pitch:Dr. Estévez or Benton|Dr. Estévez}|{ not benton_01.pluto_pitch:Benton|yourself for a while}}? # CLASS: junia
     
-    Happy to chat later.
+    Happy to chat later. # CLASS: junia
     
     -> early_exit
 
 * { tarc_01.passed } I've passed muster with security. # CLASS: player
 
-    A tedious but important step, thank you.
+    A tedious but important step, thank you. # CLASS: junia
 
 * { tarc_01.tarc_history } Got to see what Benton's done with TARC. # CLASS: player
 
-    He mentioned you'd worked together on an earlier iteration.
+    He mentioned you'd worked together on an earlier iteration. # CLASS: junia
     
-    Quite fascinating.  We'll have to talk details (or horror stories) another time.
+    Quite fascinating.  We'll have to talk details (or horror stories) another time. # CLASS: junia
 
 * { tarc_01.hackit } Already cracked your security. # CLASS: player
 
-    I'm sorry?
+    I'm sorry? # CLASS: junia
     
     Pwnd TARC. # CLASS: player
     
-    Very funny.  We're not keen on pranks here.  Too much on the line.
+    Very funny.  We're not keen on pranks here.  Too much on the line. # CLASS: junia
 
 * { benton_01.pluto_pitch } Got an earfull from Benton about Pluto. # CLASS: player
 
-    He's a visionary.  Painting that picture is in his DNA.
+    He's a visionary.  Painting that picture is in his DNA. # CLASS: junia
     
     { lucas_01.lucas_intro:
     
         Along with fish lungs apparently. # CLASS: player
         
-        Indeed
+        Indeed # CLASS: junia
     
     }
 
 * { lucas_01.lucas_intro} Dr. Estévez is very... dedicated. # CLASS: player
     
-    He certainly seems to be.
+    He certainly seems to be. # CLASS: junia
     
     -> question_lucas ->
 
@@ -91,23 +91,23 @@ Welcome to Moonshot!
     
 * { Business + Psychology >= 30 }[Are the teams aligned?]Seems like there might be some challenges with cross-functional team alignment? # CLASS: player
 
-    You could say that.
+    You could say that. # CLASS: junia
 
 * { Medicine + Technology >= 30 }Full gel immersion for many months?[]  That's pretty intimidating. # CLASS: player
 
-    Not to Benton.
+    Not to Benton. # CLASS: junia
 
 * { Security + Technology >= 30 }Can Benton be kept safe in this coffin? # CLASS: player
 
-    So I am told.
+    So I am told. # CLASS: junia
 
 * { Astronomy + Engineering >= 30 }This is *deep* space[.] we're talking about.  No person has been out that far. # CLASS: player
 
 * The whole project seems complicated. # CLASS: player
 
-    It is.
+    It is. # CLASS: junia
 
-- I will admit I'm... concerned.
+- I will admit I'm... concerned. # CLASS: junia
 
 * About Benton? # CLASS: player
 
@@ -119,33 +119,33 @@ Welcome to Moonshot!
 
 * About Moonshot? # CLASS: player
 
-    In a sense.
+    In a sense. # CLASS: junia
 
-- <>  I trust Benton.
+- <>  I trust Benton. # CLASS: junia
 
-I trust his vision.
+I trust his vision. # CLASS: junia
 
-And I know how to take a risk.
+And I know how to take a risk. # CLASS: junia
 
-But Lucas is a _celebrity_ doc.  He has no experience with space travel, with long term hazardous environments.
+But Lucas is a _celebrity_ doc.  He has no experience with space travel, with long term hazardous environments. # CLASS: junia
 
-Sure, he's hired a team around him.  But he's the one making the decisions.
+Sure, he's hired a team around him.  But he's the one making the decisions. # CLASS: junia
 
-I know they're old climbing chois or something.  But I just don't know why Benton hired him for this.
+I know they're old climbing chois or something.  But I just don't know why Benton hired him for this. # CLASS: junia
 
 * A celebrity? # CLASS: player
 
-    Yes, he takes care of athletes and trending H0L0 stars.
+    Yes, he takes care of athletes and trending H0L0 stars. # CLASS: junia
     
 * Benton makes his own path. # CLASS: player
 
-    You do know him well.
+    You do know him well. # CLASS: junia
     
 * { Medicine >= 60 }I can consult.[]  I have a lot of experience with risky medical projects. # CLASS: player
     
-    Thank you.  Not sure Benton or Lucas will listen though.
+    Thank you.  Not sure Benton or Lucas will listen though. # CLASS: junia
     
-- In any case...
+- In any case... # CLASS: junia
 
 ->->
 
@@ -161,15 +161,15 @@ VAR career = ""
     
     # CLEAR
     
-    Hello again, appreciate you checking back in.
+    Hello again, appreciate you checking back in. # CLASS: junia
     
     Hello, Junia. # CLASS: player
     
-    I was thinking it would be good to get to know you a little better.  May I ask, where you were before Moonshot came along?
+    I was thinking it would be good to get to know you a little better.  May I ask, where you were before Moonshot came along? # CLASS: junia
         
 - else:
 
-    So, where were you before Moonshot?
+    So, where were you before Moonshot? # CLASS: junia
         
 }
 
@@ -177,35 +177,35 @@ VAR career = ""
 
     I've been studying gravitational effects on interphasar plasmas at the Guangqi lab at LRX University. # CLASS: player
     
-    It sounds fascinating.
+    It sounds fascinating. # CLASS: junia
     
     Absolutely.  The quantum fluctuations have a really wild effect on the plasma and could unlock a whole field of study in gravitational-quantum theory. # CLASS: player
     
-    I'm afraid most of that is well over my head, but it does sound very stimulating.
+    I'm afraid most of that is well over my head, but it does sound very stimulating. # CLASS: junia
     
     ~ career = "an astronomer"
 
 * { Business >= 30 } My own startCorp.[]  Just closed series B and thought I'd take a small vacation.  Benton had other ideas. # CLASS: player
 
-    He often does.
+    He often does. # CLASS: junia
     
-    Nice to have another sharp eye on the team.
+    Nice to have another sharp eye on the team. # CLASS: junia
     
     ~ career = "an entrepreneur"
 
 * { Engineering >= 30 } I'm at JPXL, flight systems. # CLASS: player
 
-    I'm shocked Benton didn't bring you on sooner.
+    I'm shocked Benton didn't bring you on sooner. # CLASS: junia
     
     He dropped hints.  I didn't bite.  # CLASS: player
     
-    Well, glad to have you onboard now.
+    Well, glad to have you onboard now. # CLASS: junia
     
     ~ career = "a flight engineer"
 
 * { Medicine >= 30 }"Doctor" { name } didn't give it away?[]  I have a private practice in ST. # CLASS: player
 
-    That's impressive.  Didn't think the big box medcenters left much room for private service anymore?
+    That's impressive.  Didn't think the big box medcenters left much room for private service anymore? # CLASS: junia
     
     We get by.  But this is an interesting diversion.  # CLASS: player
     
@@ -215,75 +215,75 @@ VAR career = ""
 
     Usually.  # CLASS: player
     
-    ¡LafLaf!
+    ¡LafLaf! # CLASS: junia
     
-    Please be sure to reassmble TARC if you break it.  I don't know how we'd keep Goliath at bay otherwise.
+    Please be sure to reassmble TARC if you break it.  I don't know how we'd keep Goliath at bay otherwise. # CLASS: junia
     
     Single point of failure.  Risky.  # CLASS: player
     
-    Indeed.
+    Indeed. # CLASS: junia
     
     ~ career = "a hacker"
 
 * { Psychology >= 30 }I'm an ethnologist[.] at LRX University.  Tenured. # CLASS: player
 
-    Wow, that must be such a fascinating area of study with the inner-system diaspora.
+    Wow, that must be such a fascinating area of study with the inner-system diaspora. # CLASS: junia
     
     Of course.  Cultures and people are evolving at an exponential rate. # CLASS: player
     
     The resulting mess will keep me employed for a while longer. # CLASS: player
     
-    Well, if you tire of academia you be sure to let me know.
+    Well, if you tire of academia you be sure to let me know. # CLASS: junia
     
-    We're always looking for minds who can help us understand _humans_ in all their diversity.
+    We're always looking for minds who can help us understand _humans_ in all their diversity. # CLASS: junia
     
     ~ career = "an ethnologist"
 
 * { Technology >= 30 } [Coding.]Same as the last time Benton and I worked together.  Puzzle solving with bits. # CLASS: player
 
-    Yes, he told me you had a hand in TARC's early design.
+    Yes, he told me you had a hand in TARC's early design. # CLASS: junia
     
     A bit. # CLASS: player
     
     Or 8e+15 of them. # CLASS: player
     
-    ¡LafLaf!  You're too modest.  I think having you on will lead to some really interesting... conversations.
+    ¡LafLaf!  You're too modest.  I think having you on will lead to some really interesting... conversations. # CLASS: junia
     
     ~ career = "a coder"
 
 * Didn't you hire me?[]  You should have my res file. # CLASS: player
 
-    Of course.  Just trying to understand you as a person, not a binary file.
+    Of course.  Just trying to understand you as a person, not a binary file. # CLASS: junia
     
     ~ career = "an international spy"
 
 * No where in particular. # CLASS: player
 
-    Sorry, don't mean to pry.  We can leave the small talk to another time.
+    Sorry, don't mean to pry.  We can leave the small talk to another time. # CLASS: junia
     
     ~ career = "a janitor"
 
-- And, if I may, I'm interested in why you accepted Benton's invitation?
+- And, if I may, I'm interested in why you accepted Benton's invitation? # CLASS: junia
 
-Not questioning you, you understand.  Just wondering what he said (that he was allowed to say) that convinced you to sign our NDA and hop on for the ride?
+Not questioning you, you understand.  Just wondering what he said (that he was allowed to say) that convinced you to sign our NDA and hop on for the ride? # CLASS: junia
 
 VAR relationship = ""
 
 * We've always been close[.], and with our history you just trust each other. # CLASS: player
 
-    Even after months?  Or years?
+    Even after months?  Or years? # CLASS: junia
     
     Yeah.  # CLASS: player
     
-    I don't think I trust Benton quite that much.  But enough to be in business with him.
+    I don't think I trust Benton quite that much.  But enough to be in business with him. # CLASS: junia
     
     ~ relationship = "close"
 
 * I like puzzles[.], and Benton knows how to puzzle me. # CLASS: player
 
-    He knows how to puzzle a lot of people.
+    He knows how to puzzle a lot of people. # CLASS: junia
     
-    For me the puzzle is how to keep him on track to turn his visions into reality.
+    For me the puzzle is how to keep him on track to turn his visions into reality. # CLASS: junia
     
     ~ relationship = "puzzle"
 
@@ -291,7 +291,7 @@ VAR relationship = ""
 
     But I have a nose for epics. # CLASS: player
 
-    You've certainly found one here.
+    You've certainly found one here. # CLASS: junia
     
     ~ relationship = "epic"
 - 
@@ -300,27 +300,27 @@ VAR relationship = ""
 
 - How did you get wrapped up in this? # CLASS: player
 
-Oh.  I'm quite willingly here as his business partner.  Benton and I are very similar in a lot of ways.  A trail of successful and failed startCorps behind us.  Always moving on to the next big thing.
+Oh.  I'm quite willingly here as his business partner.  Benton and I are very similar in a lot of ways.  A trail of successful and failed startCorps behind us.  Always moving on to the next big thing. # CLASS: junia
 
-When we met we found a... synergy.
+When we met we found a... synergy. # CLASS: junia
 
-He has vision, I have insight.  We're both *very* driven.
+He has vision, I have insight.  We're both *very* driven. # CLASS: junia
 
-And so far it's worked out quite well.
+And so far it's worked out quite well. # CLASS: junia
 
 * So far... # CLASS: player
 
-Yes. So far.
+Yes. So far. # CLASS: junia
 
-Sending yourself out to the edge of the solarsystem in a full-gel-immersion-supersonic-coffin for months is perhaps one of Benton's more outlandish PR stunts.
+Sending yourself out to the edge of the solarsystem in a full-gel-immersion-supersonic-coffin for months is perhaps one of Benton's more outlandish PR stunts. # CLASS: junia
 
-But I'm trusting the vision.
+But I'm trusting the vision. # CLASS: junia
 
     { not question_lucas:
         
         -> question_lucas ->
         
-        Anything else I can help clear up?
+        Anything else I can help clear up? # CLASS: junia
         
     }
 
@@ -328,27 +328,27 @@ But I'm trusting the vision.
 
 * Is Nth Horizon in good shape? # CLASS: player
 
-    Yes.  For now we have a very tight lid on a series of really revolutionary leaps in tech.  It's a startCorp dream.
+    Yes.  For now we have a very tight lid on a series of really revolutionary leaps in tech.  It's a startCorp dream. # CLASS: junia
     
-    So long as we can get the right kind of attention from the market.
+    So long as we can get the right kind of attention from the market. # CLASS: junia
 
 * What about Goliath? # CLASS: player
 
-    There will always be sharks circling when you have something good.  With TARC and our secrecy so far there's little they can do to upend this.
+    There will always be sharks circling when you have something good.  With TARC and our secrecy so far there's little they can do to upend this. # CLASS: junia
 
 * { Psychology >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
 
     { wait(2) }
 
-    Quite well, I think.
+    Quite well, I think. # CLASS: junia
     
-    This is what I do.  I take big swings on big projects.
+    This is what I do.  I take big swings on big projects. # CLASS: junia
     
-    And I usually come out on top.
+    And I usually come out on top. # CLASS: junia
 
 * Is this really a good idea? # CLASS: player
 
-    Benton's stunt is a big risk.  But if it pays off, it will pay off megabig.
+    Benton's stunt is a big risk.  But if it pays off, it will pay off megabig. # CLASS: junia
 
 * -> out
 
@@ -356,29 +356,29 @@ But I'm trusting the vision.
 
 = out
 
-    In all of this Benton has put a lot of faith in you.  You're who he thinks will keep him from the edge of madness as this all kicks into high gear.
+    In all of this Benton has put a lot of faith in you.  You're who he thinks will keep him from the edge of madness as this all kicks into high gear. # CLASS: junia
     
     * Psyched![]  This is gonna be such an adventure! # CLASS: player
     
-        I knew you'd share his enthusiasm.
+        I knew you'd share his enthusiasm. # CLASS: junia
     
     * No pressure. # CLASS: player
     
-        Mmm, no.  A lot of pressure.
+        Mmm, no.  A lot of pressure. # CLASS: junia
         
-        But also help.  And rewards.
+        But also help.  And rewards. # CLASS: junia
         
     * I'm here for the paycheck.[]  Not Benton's ego. # CLASS: player
     
-        I see.  I understand.
+        I see.  I understand. # CLASS: junia
     
-    - There's a lot of time and money and effort...
+    - There's a lot of time and money and effort... # CLASS: junia
+
+    ...and blood and sweat and tears... # CLASS: junia
     
-    ...and blood and sweat and tears...
+    in this project so far. # CLASS: junia
     
-    in this project so far.
-    
-    Please do right by Benton and see him... see us all... through this.
+    Please do right by Benton and see him... see us all... through this. # CLASS: junia
     
     * I'll do my best. # CLASS: player
     
@@ -386,11 +386,11 @@ But I'm trusting the vision.
     
     * ... # CLASS: player
     
-    - Oh.  Sorry.
+    - Oh.  Sorry. # CLASS: junia
     
-    Have a transsolar call coming in.
+    Have a transsolar call coming in. # CLASS: junia
     
-    Do connect with me again soon, won't you?
+    Do connect with me again soon, won't you? # CLASS: junia
 
 + [<< Close Chat >>] -> menu # CLASS: player
 
@@ -398,7 +398,7 @@ But I'm trusting the vision.
 
 # CLEAR
 
-Hei, { name }, do you have a moment?
+Hei, { name }, do you have a moment? # CLASS: junia
 
 * Sure thing![]  What's up? # CLASS: player
 
@@ -406,7 +406,7 @@ Hei, { name }, do you have a moment?
 
 * Not really[.], but I guess you're gonna bore me anyway. # CLASS: player
 
-    If you're busy with other tasks, it can wait.  But I'd appreciate your opinion.
+    If you're busy with other tasks, it can wait.  But I'd appreciate your opinion. # CLASS: junia
     
     * * What is it? # CLASS: player
     
@@ -418,21 +418,21 @@ Hei, { name }, do you have a moment?
 
 { - junias_hanging:
 
-    You have some time now?  Good.
+    You have some time now?  Good. # CLASS: junia
     
 }
 
-I've been reading Lucas' reports which are... pessimistic.  I wanted to get your opinion on Benton's state.
+I've been reading Lucas' reports which are... pessimistic.  I wanted to get your opinion on Benton's state. # CLASS: junia
 
-Is he at risk given the stresses he's under?
+Is he at risk given the stresses he's under? # CLASS: junia
 
 * { Medicine <= 0 } No idea, I'm not a doctor. # CLASS: player
 
-    Do you have any opinion on the matter?
+    Do you have any opinion on the matter? # CLASS: junia
 
 * { Psychology <= 0 } No idea, I'm not a psychiatrist. # CLASS: player
 
-    Surely you know him well enough to have some judgement?
+    Surely you know him well enough to have some judgement? # CLASS: junia
     
 * ->
 
@@ -440,57 +440,57 @@ Is he at risk given the stresses he's under?
 
 * He's fine.[]  I think any of us would be a bit nerve-wrecked if we were in his shoes. # CLASS: player
 
-    That's fair.
+    That's fair. # CLASS: junia
     
     I still <>
 
 * I don't know.[]  Seriously.  I'm just talking to him to try to help, but I can't tell how he is from 365 million miles away! # CLASS: player
 
-    And you've been doing wonderfully, thank you.
+    And you've been doing wonderfully, thank you. # CLASS: junia
     
     I still <>
 
 * He's mental.[]  Totally loco.  But he was that way _before_ he left, so not sure what you're expecting? # CLASS: player
 
-    Very droll.
+    Very droll. # CLASS: junia
     
     I do <>
 
 * { Medicine >= 60 } His body is very stressed.[]  The bio-engineering is keeping him going, but he's going to come back a complete wreck.  Probably need full reconstruction. # CLASS: player
 
-    Yes, that's a concern.
+    Yes, that's a concern. # CLASS: junia
     
     Makes me <>
 
-* { Psychology >= 60 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player
+* { Psychology >= 60 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player # CLASS: junia
 
     I still <>
 
-- <>worry about the strain on him.  How will this change him?
+- <>worry about the strain on him.  How will this change him? # CLASS: junia
 
 * [Don't worry.]  You can't worry too much about that.  Nothing we can do except to keep trying to help. # CLASS: player
 
-    I suppose you're right.
+    I suppose you're right. # CLASS: junia
     
-    We sent him out amidst the dark with a lot riding on him, so we should support him throughout.
+    We sent him out amidst the dark with a lot riding on him, so we should support him throughout. # CLASS: junia
 
 * [Change is a constant.]  Change is the only constant we have.  We're always going to change.  Benton's current change is more severe, but why worry? # CLASS: player
 
-    Worry is a product of witnessing severe change.  It's what human's do.
+    Worry is a product of witnessing severe change.  It's what human's do. # CLASS: junia
     
-    We sent him out amidst the dark with a lot riding on him, and second-thoughts are a natural byproduct.
+    We sent him out amidst the dark with a lot riding on him, and second-thoughts are a natural byproduct. # CLASS: junia
     
     * * Nice self-analysis. # CLASS: player
     
-        I'm good at recognizing my own human foibiles.
+        I'm good at recognizing my own human foibiles. # CLASS: junia
     
     * * I think you're overthinking it. # CLASS: player
     
-        Perhaps.  I like to understand my thoughts.
+        Perhaps.  I like to understand my thoughts. # CLASS: junia
         
-    - - Not always good at changing them.
+    - - Not always good at changing them. # CLASS: junia
     
-    Anyway...
+    Anyway... # CLASS: junia
 
 * { Medicine + Psychology >= 60 } His humanity is being tested.[]  Dr. Estévez isn't wrong about how little prep he had. # CLASS: player
 
@@ -498,59 +498,59 @@ Is he at risk given the stresses he's under?
     
     Or to test the effects of isolation. # CLASS: player
     
-    I don't doubt you're right.
+    I don't doubt you're right. # CLASS: junia
     
-    But he had to take the risk.  I _had_ to support him taking the risk.
+    But he had to take the risk.  I _had_ to support him taking the risk. # CLASS: junia
 
-- Nth Horizon is riding that knife edge of success\\\\failure.
+- Nth Horizon is riding that knife edge of success\\\\failure. # CLASS: junia
 
-What Benton is doing tips the balance in our favor.
+What Benton is doing tips the balance in our favor. # CLASS: junia
 
 * Exciting, but scary. # CLASS: player
 
-    Indeed.
+    Indeed. # CLASS: junia
 
 * Hope you're right. # CLASS: player
 
 * Tipping it yeah, but to succeed? # CLASS: player
 
-    Has to.  Anything else means unhappy investors go extrajudicial on us both.
+    Has to.  Anything else means unhappy investors go extrajudicial on us both. # CLASS: junia
 
 * { Business >= 60 } I'm a little confused on the prospects.[]  With the tech displayed so far, how is Nth Horizon not already out from under threat? # CLASS: player
     
-    One word.  Goliath.
+    One word.  Goliath. # CLASS: junia
     
-    If we stumble now, big G swoops in and gobbles us up without the payday.
+    If we stumble now, big G swoops in and gobbles us up without the payday. # CLASS: junia
     
     Isn't there enough interest to maintain independence? # CLASS: player
     
-    Not given how much we spent to get this far.
+    Not given how much we spent to get this far. # CLASS: junia
     
-    The tech is great.  The cost to build it was astronomical.
+    The tech is great.  The cost to build it was astronomical. # CLASS: junia
     
     * * I see. # CLASS: player
 
-- What about you?  How does Moonshot change your future?
+- What about you?  How does Moonshot change your future? # CLASS: junia
 
 * Just being a part of this is thrilling. # CLASS: player
 
-    Glad you think so.  Is that enough?
+    Glad you think so.  Is that enough? # CLASS: junia
     
     * * Yes!  We're changing the future. # CLASS: player
     
     * * Maybe?  Benton will take care of me. # CLASS: player
     
-        I'm sure he will.  If he can.
+        I'm sure he will.  If he can. # CLASS: junia
         
         * * * Gotta have faith. # CLASS: player
         
         * * * What's that supposed to mean? # CLASS: player
         
-    - - Let's be real.  He might not come back.  Or Nth Horizon might fold.
+    - - Let's be real.  He might not come back.  Or Nth Horizon might fold. # CLASS: junia
 
 * Don't know that it does. # CLASS: player
 
-    Really?  There's opportunity here if you look for it.
+    Really?  There's opportunity here if you look for it. # CLASS: junia
     
     * * I have my own opportunities to focus on; once this is over. # CLASS: player
     
@@ -560,7 +560,7 @@ What Benton is doing tips the balance in our favor.
 
 * Oh, I'll get something out of this. # CLASS: player
 
-- Are you getting something out of this even if it tanks?
+- Are you getting something out of this even if it tanks? # CLASS: junia
 
 * { Astronomy >= 30 } [Astronomical data.]I'm able to edgeUp my research with the astro data TARC lets me see. # CLASS: player
 
@@ -578,11 +578,11 @@ What Benton is doing tips the balance in our favor.
 
 * Do you have something in mind? # CLASS: player
 
-    Possibly.
+    Possibly. # CLASS: junia
 
 * Probably not. # CLASS: player
 
-- I think you should consider the value you have to this project, and what that translates to in the long run.  Any knowledge gained is subject to NDA.  But value is not.
+- I think you should consider the value you have to this project, and what that translates to in the long run.  Any knowledge gained is subject to NDA.  But value is not. # CLASS: junia
 
     VAR avarice = 0
     VAR generosity = 0
@@ -592,32 +592,32 @@ What Benton is doing tips the balance in our favor.
     ~ avarice--
     ~ generosity++
 
-    No, of course.  I wasn't trying to suggest you were.  Just that you're a valuale member of the team and I hope it does you credit no matter how the project turns out.
+    No, of course.  I wasn't trying to suggest you were.  Just that you're a valuale member of the team and I hope it does you credit no matter how the project turns out. # CLASS: junia
 
 * You're not suggesting I sell out? # CLASS: player
 
-    I'm suggesting you keep your options open.  I appreciate what you're doing for the project, for Benton.  And I like to make sure my people are taken care of.
+    I'm suggesting you keep your options open.  I appreciate what you're doing for the project, for Benton.  And I like to make sure my people are taken care of. # CLASS: junia
     
 * (junia_avarice)So how do I cash in? # CLASS: player
 
     ~ avarice++
     ~ generosity--
     
-    Hmmm, how very practical.
+    Hmmm, how very practical. # CLASS: junia
     
-    I certainly can't suggest you make any moves outside the confines of the agreements you've made with Nth Horizon.
+    I certainly can't suggest you make any moves outside the confines of the agreements you've made with Nth Horizon. # CLASS: junia
     
-    But if opportunties present themselves to tip the balance of the project in your favor, I'm sure you can capitalize.
+    But if opportunties present themselves to tip the balance of the project in your favor, I'm sure you can capitalize. # CLASS: junia
     
     * * What sort of opportunities? # CLASS: player
     
-    - - Those of us left behind need to consider the future of the company carefully.  What happens to Benton out there will have a drastic impact.  It's best if plans are in place to handle any outcome.
+    - - Those of us left behind need to consider the future of the company carefully.  What happens to Benton out there will have a drastic impact.  It's best if plans are in place to handle any outcome. # CLASS: junia
     
-    And if the outcome _is_ under our control, so much the better.
+    And if the outcome _is_ under our control, so much the better. # CLASS: junia
     
-- Sot!  Sorry, have another call I need to take.
+- Sot!  Sorry, have another call I need to take. # CLASS: junia
 
-We'll chat again soon.  Thank you.
+We'll chat again soon.  Thank you. # CLASS: junia
 
 + [<< Close Chat >>] -> menu
 
@@ -672,9 +672,9 @@ Hey, Junia.  Are you around? # CLASS: player
 
 - { wait(3) }
 
-{ name }.
+{ name }. # CLASS: junia
 
-Hello.
+Hello. # CLASS: junia
 
 * Hi Junia. # CLASS: player
 
@@ -684,23 +684,23 @@ Hello.
 
     ~ junia_temper++
 
-- Apologies.  Things have been so wretchedly busy I have neglected to connect with you in some time.
+- Apologies.  Things have been so wretchedly busy I have neglected to connect with you in some time. # CLASS: junia
 
-How are you?
+How are you? # CLASS: junia
 
 * I'm fine. # CLASS: player
 
-    That's good to hear.
+    That's good to hear. # CLASS: junia
 
 * Struggling. # CLASS: player
 
-    I'm sorry.
+    I'm sorry. # CLASS: junia
 
 * Just peachy[.] no thanks to you. # CLASS: player
 
     -> piss_off_junia(junia_temper) ->
 
-- Is there something I can help with?
+- Is there something I can help with? # CLASS: junia
 
 * [How are you?]Not specifically.  We just haven't talked in a long time.  How are you? # CLASS: player
 
@@ -710,31 +710,31 @@ How are you?
 
     -> piss_off_junia(junia_temper) ->
 
-- It's been a struggle to handle Nth business with Benton gone.
+- It's been a struggle to handle Nth business with Benton gone. # CLASS: junia
 
-I don't think I understood how hard it would be, and how important he was.
+I don't think I understood how hard it would be, and how important he was. # CLASS: junia
 
 * How important he *is*. # CLASS: player
 
-    Yes, of course.
+    Yes, of course. # CLASS: junia
     
-    But he's not here right now, so all of the energy he brought, all the people he engaged with, that's all on my shoulders.
+    But he's not here right now, so all of the energy he brought, all the people he engaged with, that's all on my shoulders. # CLASS: junia
 
 * But Moonshot still needs help. # CLASS: player
 
-    I know.  I'm sorry.
+    I know.  I'm sorry. # CLASS: junia
     
-    I know we've lost some people, and Benton is a difficult place.
+    I know we've lost some people, and Benton is a difficult place. # CLASS: junia
     
-    I will keep trying to get this project the support it needs.
+    I will keep trying to get this project the support it needs. # CLASS: junia
 
 * So you're failing? # CLASS: player
 
-    No.
+    No. # CLASS: junia
 
     -> piss_off_junia(junia_temper) ->
     
-- Is there something _specific_ I should turn my attention to right now?
+- Is there something _specific_ I should turn my attention to right now? # CLASS: junia
 
 - (interview_j)
 
@@ -746,15 +746,15 @@ I don't think I understood how hard it would be, and how important he was.
     
         I'm just not sure what else I can give? # CLASS: player
         
-        You've been doing a difficult job for the past few months.  I appreciate that.
+        You've been doing a difficult job for the past few months.  I appreciate that. # CLASS: junia
         
-        But think of what Benton is doing.  As challenging as this is for us, we still have the opportunity to look friends and family in the eye, to connect both physically and emotionally.
+        But think of what Benton is doing.  As challenging as this is for us, we still have the opportunity to look friends and family in the eye, to connect both physically and emotionally. # CLASS: junia
         
-        He's put himself in something not unlike solitary confinement.  And you're his anchor.
+        He's put himself in something not unlike solitary confinement.  And you're his anchor. # CLASS: junia
         
-        I do hope you can keep trying to engage him, even if it's challenging.
+        I do hope you can keep trying to engage him, even if it's challenging. # CLASS: junia
         
-        Is there anything else I should know about his condition?
+        Is there anything else I should know about his condition? # CLASS: junia
         
         -> whattodoaboutbenton
     
@@ -772,11 +772,11 @@ I don't think I understood how hard it would be, and how important he was.
         
         }
         
-        I understand.  We all know Benton can be difficult to work with.
+        I understand.  We all know Benton can be difficult to work with. # CLASS: junia
         
-        I'll talk to Lucas, try to get him to see reason.
+        I'll talk to Lucas, try to get him to see reason. # CLASS: junia
         
-        * * * Thank you.
+        * * * Thank you. # CLASS: player
         
         * * * { Psychology + Medicine >= 60 && tarceye_install == true && tarc_sees_junia == false } [<< tarceye link >> You should know the truth]
 
@@ -792,29 +792,29 @@ I don't think I understood how hard it would be, and how important he was.
         
             I think the situation is worse than you realize.  I've taken the liberty of analyzing some of Benton's medical results (the one's I can get my hands on at least) and the <span class="data"><< prognosis >></span> is not good.  I think you should take a look. # CLASS: player
         
-            That's not the kind of bedside manner to make someone feel at ease.
+            That's not the kind of bedside manner to make someone feel at ease. # CLASS: junia
             
             { wait(2) }
             
-            I'm afraid this report is beyond my knowledge though.  What's the high-level takeaway?
+            I'm afraid this report is beyond my knowledge though.  What's the high-level takeaway? # CLASS: junia
             
             * * * * We need to pay more attention to his stress levels[.] and react to them more aggressively than Dr. Estévez has recommended. # CLASS: player
             
-                I see.  I'm afraid I have to leave the details of that up to you and Dr. Estévez.  Please discuss your findings with him as soon as possible.
+                I see.  I'm afraid I have to leave the details of that up to you and Dr. Estévez.  Please discuss your findings with him as soon as possible. # CLASS: junia
             
             * * * * He won't make it back to Earth alive. # CLASS: player
             
                 { wait(3) }
                 
-                That's not good news.
+                That's not good news. # CLASS: junia
                 
-                We always knew there was a high risk, especially with the biohack.
+                We always knew there was a high risk, especially with the biohack. # CLASS: junia
                 
-                But I held hope that he would beat those odds.
+                But I held hope that he would beat those odds. # CLASS: junia
                 
                 { wait(3) }
                 
-                If you don't mind, let us keep this to ourselves for now.  I'd hate to give anyone the impression that this invaliates the mission.  And I think Lucas may need some time to come to the same conclusion.  Fair?
+                If you don't mind, let us keep this to ourselves for now.  I'd hate to give anyone the impression that this invaliates the mission.  And I think Lucas may need some time to come to the same conclusion.  Fair? # CLASS: junia
                 
                 Sure. # CLASS: player
             
@@ -822,7 +822,7 @@ I don't think I understood how hard it would be, and how important he was.
             
                 { wait(3) }
                 
-                Not funny.
+                Not funny. # CLASS: junia
                 
                 -> piss_off_junia(junia_temper) ->
             
@@ -841,49 +841,49 @@ I don't think I understood how hard it would be, and how important he was.
         
         Benton had to { Engineering + Technology + Astronomy >= 30:execute an unplanned EVA|leave the ship} to fix it.  # CLASS: player
         
-        I had reports from Huo and Lucas.  It sounds like Benton did extremely well under the circumstances.
+        I had reports from Huo and Lucas.  It sounds like Benton did extremely well under the circumstances. # CLASS: junia
         
         * * * Yes, he did. # CLASS: player
         
         * * * Sure, but the circumstances are suspect # CLASS: player
         
-            How so?
+            How so? # CLASS: junia
             
             * * * * Looks like Goliath interference. # CLASS: player
             
-                I can't quite see how that would be the case.
+                I can't quite see how that would be the case. # CLASS: junia
                 
-                We have no evidence that the encounter at Jupiter was anything but an observational flyby.
+                We have no evidence that the encounter at Jupiter was anything but an observational flyby. # CLASS: junia
                 
-                And they wouldn't be able to keep up with him now.
+                And they wouldn't be able to keep up with him now. # CLASS: junia
             
             * * * * Any idea who could or would sabotage the project? # CLASS: player
             
-                You mean at Nth Horizon?
+                You mean at Nth Horizon? # CLASS: junia
                 
-                I don't believe anyone could have without TARC seeing it.
+                I don't believe anyone could have without TARC seeing it. # CLASS: junia
                 
-                It certainly wouldn't have been something they waited this long to execute even if there _were_ a conspiracy.
+                It certainly wouldn't have been something they waited this long to execute even if there _were_ a conspiracy. # CLASS: junia
             
             * * * * Was the tech really up to par? # CLASS: player
             
-                Yes, I believe so.
+                Yes, I believe so. # CLASS: junia
                 
-                For Benton's sake I hope it is.
+                For Benton's sake I hope it is. # CLASS: junia
 
         - - - 
             
-        In any case, the team is diagnosing the data and will have a full report for me later in the week.
+        In any case, the team is diagnosing the data and will have a full report for me later in the week. # CLASS: junia
         
-        Thank you for your assistance in the matter.
+        Thank you for your assistance in the matter. # CLASS: junia
 
     * *   { benton_06.crayz }Benton lost it.[]  Estévez blocked me from talking to him. # CLASS: player
     
-        Yes.  I heard as much from Lucas.
+        Yes.  I heard as much from Lucas. # CLASS: junia
         
-        The idea of bringing you onboard this project was to _prevent_ a breakdown.
+        The idea of bringing you onboard this project was to _prevent_ a breakdown. # CLASS: junia
         
-        Should we be reconsidering your involvement?
+        Should we be reconsidering your involvement? # CLASS: junia
         
         * * * No, I'm here to help.[]  It's just really hard sometimes to decide what's going to set him off.  Not the same as when you're looking each other in the eye and can get a sense of when you're prodding them too hard. # CLASS: player
         
@@ -891,9 +891,9 @@ I don't think I understood how hard it would be, and how important he was.
         
             -> piss_off_junia(junia_temper) ->
             
-        - - - Right now you're the closest thing Benton has to a friend, for whatever that's worth.
+        - - - Right now you're the closest thing Benton has to a friend, for whatever that's worth. # CLASS: junia
         
-        Try to keep him from going off the deep end, ya?
+        Try to keep him from going off the deep end, ya? # CLASS: junia
     
     * * { Psychology + Business >= 60 && tarceye_install == true && tarc_sees_junia == false && not achilles_hack } [<< tarceye link >> You should take control]
         
@@ -913,7 +913,7 @@ I don't think I understood how hard it would be, and how important he was.
         
         { wait(2) }
         
-        This is surprising.
+        This is surprising. # CLASS: junia
         
         * * * Just being practical. # CLASS: player
         
@@ -921,31 +921,31 @@ I don't think I understood how hard it would be, and how important he was.
         
         * * * Never said I was predictable. # CLASS: player
         
-        - - - Hmmmm, this link doesn't appear to work though.
+        - - - Hmmmm, this link doesn't appear to work though. # CLASS: junia
         
         Oh? # CLASS: player
         
-        I'm just getting an empty screen.
+        I'm just getting an empty screen. # CLASS: junia
         
         * * * Oh.  Sorry.  Not sure why that's not working. # CLASS: player
         
         * * * { Security + Technology >= 30 } Sot!  Looks like it got deleted.[]  Tarc must have thought it was a threat. # CLASS: player
         
-        - - - I see.
+        - - - I see. # CLASS: junia
         
-    * * Nevermind.
+    * * Nevermind. # CLASS: player
 
 * Nth Horizon's business prospects are looking shakey. # CLASS: player
 
     ~junia_temper++
 
-    That's one interpretation.
+    That's one interpretation. # CLASS: junia
     
-    As acting CEO and long-time COO I'm well aware of the challenges Nth Horizon faces.
+    As acting CEO and long-time COO I'm well aware of the challenges Nth Horizon faces. # CLASS: junia
     
-    But I'm also working _very_ hard to mitigate those challenges.
+    But I'm also working _very_ hard to mitigate those challenges. # CLASS: junia
     
-    Unless you have some information I'm not otherwise privvy to, I think I'm in the best position to judge how my startCorp is faring.
+    Unless you have some information I'm not otherwise privvy to, I think I'm in the best position to judge how my startCorp is faring. # CLASS: junia
     
     - - (businez)
     
@@ -953,11 +953,11 @@ I don't think I understood how hard it would be, and how important he was.
         
         ~junia_temper--
         
-        I understand.
+        I understand. # CLASS: junia
         
-        I can try to do better to share the truth of our situation.
+        I can try to do better to share the truth of our situation. # CLASS: junia
         
-        It's not all roses, but we do not need to fear becoming chum.
+        It's not all roses, but we do not need to fear becoming chum. # CLASS: junia
         
         -> whatelse
     
@@ -965,27 +965,27 @@ I don't think I understood how hard it would be, and how important he was.
     
         * * * { Psychology >= 30 } If you want to change that you're going to need friends. # CLASS: player
         
-            I haven't said anything about changing that.
+            I haven't said anything about changing that. # CLASS: junia
             
-            { junia_02.junia_avarice: Yet. }
+            { junia_02.junia_avarice: Yet. } # CLASS: junia
         
         * * * ->
         
-        - - - Nth Horizon will succeed or fail on the efforts of Benton, myself, and everybody else involved.
+        - - - Nth Horizon will succeed or fail on the efforts of Benton, myself, and everybody else involved. # CLASS: junia
         
-        Yourself included.
+        Yourself included. # CLASS: junia
         
-        If you want those stock options to be worthwhile I suggest you pull your weight.
+        If you want those stock options to be worthwhile I suggest you pull your weight. # CLASS: junia
         
         -> businez
 
     * * { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 }Your rep relies on some ruthless deal-making.[]  I'm starting to wonder if you have Benton's best interests at heart. # CLASS: player
     
-        Having a reputation as an effective business leader is exactly _why_ Benton and I are working together.
+        Having a reputation as an effective business leader is exactly _why_ Benton and I are working together. # CLASS: junia
         
-        I make things happen.  He saw and encouraged that.
+        I make things happen.  He saw and encouraged that. # CLASS: junia
         
-        What we've built as a result contains both of our DNA.
+        What we've built as a result contains both of our DNA. # CLASS: junia
         
         * * * { kim_knows ? fake_lovechild } [Careful, the tabliods may be listening!]You might want to be careful with that analogy.  The tabloids have some funny ideas about you and Benton. # CLASS: player
         
@@ -993,9 +993,9 @@ I don't think I understood how hard it would be, and how important he was.
             
         * * * Not sure the stakeholders at { player_knows ? entropic_goliath:Entropic Galactic|your previous startCorps} feel the same. # CLASS: player
             
-            I work with business partners.  Not friends or family.
+            I work with business partners.  Not friends or family. # CLASS: junia
             
-            We all play by the same rules.  I play to win.
+            We all play by the same rules.  I play to win. # CLASS: junia
                 
                 * * * * I see. # CLASS: player
                 
@@ -1011,33 +1011,33 @@ I don't think I understood how hard it would be, and how important he was.
             
             { not junia_02.junia_avarice:
             
-                No.
+                No. # CLASS: junia
                 
-                And you are in no position to question the decisions I'm making for the good of this startCorp!
+                And you are in no position to question the decisions I'm making for the good of this startCorp! # CLASS: junia
                 
                 -> whatelse
             
             }
             
-            Why do you ask?
+            Why do you ask? # CLASS: junia
             
             * * * * If you betray Benton, you'll pay! # CLASS: player
             
-                Betrayal is an impractical solution.  I suggest you look for conspiracy theories elsewhere.
+                Betrayal is an impractical solution.  I suggest you look for conspiracy theories elsewhere. # CLASS: junia
                 
                 -> whatelse
             
             * * * * You suggested preparation for the future.[]  I'd like to be prepared.  # CLASS: player
             
-                I see.
+                I see. # CLASS: junia
                 
-                I am businessperson, so I do business with a lot of people.
+                I am businessperson, so I do business with a lot of people. # CLASS: junia
                 
-                Some of those people have ideas about the future that may require action on my part.
+                Some of those people have ideas about the future that may require action on my part. # CLASS: junia
                 
-                When the time comes to act, I'll need people on my side.
+                When the time comes to act, I'll need people on my side. # CLASS: junia
                 
-                I think you understand.
+                I think you understand. # CLASS: junia
                 
                 { wait(3) }
     
@@ -1047,53 +1047,53 @@ I don't think I understood how hard it would be, and how important he was.
 
 * { tarceye_install == true && tarc_sees_junia == false }I think TARC's watching you. # CLASS: player
 
-    Yes, as it should be.  That's how it does it's job.
+    Yes, as it should be.  That's how it does it's job. # CLASS: junia
     
     * * Good.  So you have nothing to hide? # CLASS: player
     
-        Nothing I need to hide from TARC.
+        Nothing I need to hide from TARC. # CLASS: junia
     
     * * What if it suspects something? # CLASS: player
         
-        It would be making up stories, and I don't think that is within it's programming.
+        It would be making up stories, and I don't think that is within it's programming. # CLASS: junia
         
     * * { tarc_02.the_deal }It has asked me to spy on you. # CLASS: player
     
         { wait(2) }
         
-        How interesting.
+        How interesting. # CLASS: junia
         
-        I can only hope it is eliminating it's suspicions by doing so.
+        I can only hope it is eliminating it's suspicions by doing so. # CLASS: junia
         
-        I have nothing to hide from TARC.
+        I have nothing to hide from TARC. # CLASS: junia
 
 * { woodpeck_install == true && woodpecker_sees_junia == false }A Woodpecker is asking awkward questions. # CLASS: player
 
-    A... woodpecker?
+    A... woodpecker? # CLASS: junia
     
     * * { knows_kim == true } A journalist.  Writing all those newsDrops about the company. # CLASS: player
     
-        Let's see...
+        Let's see... # CLASS: junia
         
         { wait(3) }
         
-        Kim Speight, yes?  She's always a thorn.
+        Kim Speight, yes?  She's always a thorn. # CLASS: junia
         
-        Thank you for reporting her.
+        Thank you for reporting her. # CLASS: junia
     
     * * { player_knows > nada } They seem to have some ideas about you. # CLASS: player
     
-        A lot of people have ideas about me.
+        A lot of people have ideas about me. # CLASS: junia
         
-        That's what comes with success.  Suspicion.
+        That's what comes with success.  Suspicion. # CLASS: junia
         
-        I assure you I'm probably far worse than they suspect...
+        I assure you I'm probably far worse than they suspect... # CLASS: junia
         
         { wait(4) }
         
-        ¡LafLaf!
+        ¡LafLaf! # CLASS: junia
         
-        joke
+        joke # CLASS: junia
         
         -> whatelse
     
@@ -1101,9 +1101,9 @@ I don't think I understood how hard it would be, and how important he was.
     
     * * Just a game, I think. # CLASS: player
     
-    - - Please let TARC deal with them.
+    - - Please let TARC deal with them. # CLASS: junia
     
-    As a reminder, you shouldn't be answering awkward questions otherwise you are in breach of your NDA.
+    As a reminder, you shouldn't be answering awkward questions otherwise you are in breach of your NDA. # CLASS: junia
 
 * { Security + Technology >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< brute force install woodpeck link >>]
 
@@ -1118,7 +1118,7 @@ I don't think I understood how hard it would be, and how important he was.
 
     { wait(2) }
     
-    Sorry, something went haywire with my connection.
+    Sorry, something went haywire with my connection. # CLASS: junia
 
 * { Security + Technology >= 60 && tarceye_install == true &&  tarc_sees_junia == false } [<< brute force install tarceye link >>]
 
@@ -1133,24 +1133,24 @@ I don't think I understood how hard it would be, and how important he was.
     
     { wait(2) }
     
-    My terminal is acting up.
+    My terminal is acting up. # CLASS: junia
 
 * \ {No, nothing|Nothing else}. # CLASS: player
 
     -> interview_j_done
 
 - (whatelse)
-{~What else can I help with?|What should I focus on?|Is there another problem I should address|Need anything else?}
+{~What else can I help with?|What should I focus on?|Is there another problem I should address|Need anything else?} # CLASS: junia
 
 -> interview_j
 
 - (interview_j_done)
 
-Very well.
+Very well. # CLASS: junia
 
-I'm glad we were able to catch up.  I'm sure we'll talk again soon.
+I'm glad we were able to catch up.  I'm sure we'll talk again soon. # CLASS: junia
 
-Goodbye, { name }
+Goodbye, { name } # CLASS: junia
 
 + [<< Close Chat >>] -> menu
 
@@ -1162,10 +1162,10 @@ Goodbye, { name }
 
     {stopping:
     
-        - I'm not interested in playing games with you.
-        - Speaking your mind does not mean disrespecting me.
-        - Stop acting like a child.
-        - We're done here.
+        - I'm not interested in playing games with you. # CLASS: junia
+        - Speaking your mind does not mean disrespecting me. # CLASS: junia
+        - Stop acting like a child. # CLASS: junia
+        - We're done here. # CLASS: junia
             -> junias_done
         
     }
@@ -1184,30 +1184,30 @@ Goodbye, { name }
 
 # CLEAR
 
-J is cementing a deal with Goliath and can make P very rich if they play along
+J is cementing a deal with Goliath and can make P very rich if they play along # CLASS: junia
 
-Junia, all smiles, tries to ingratiate herself with the PC one more time given their obvious accumen and impact on the project.  She wants a clean transfer of power and can share all the benefits that would come with a sale to Goliath.  Benton is a lost cause.
+Junia, all smiles, tries to ingratiate herself with the PC one more time given their obvious accumen and impact on the project.  She wants a clean transfer of power and can share all the benefits that would come with a sale to Goliath.  Benton is a lost cause. # CLASS: junia
 
-+ [Next] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
 
 === junia_04 ===
 
 # CLEAR
 
-J taunts P with her success, P can turn the tables
+J taunts P with her success, P can turn the tables # CLASS: junia
 
-Junia starts shutting down comms across the Nth Horizon platform given her control of the company and the impending sale.  She takes a moment to taunt or brag to the PC.  In her position she's not aware of any leverage the PC may have from Woodpecker or TARC, either of which could be brought to bear to shut her up and keep the lights on while Benton is saved.
+Junia starts shutting down comms across the Nth Horizon platform given her control of the company and the impending sale.  She takes a moment to taunt or brag to the PC.  In her position she's not aware of any leverage the PC may have from Woodpecker or TARC, either of which could be brought to bear to shut her up and keep the lights on while Benton is saved. # CLASS: junia
 
-+ [Next] -> menu # CLASS: player
++ [<< Close Chat >>] -> menu
 
 === junia_random ===
 
 # CLEAR
 
-Hello { name }.  I'm {&in another call|working on a board presentation|meditating|out of the office} right now.  Can I connect with you later?
+Hello { name }.  I'm {&in another call|working on a board presentation|meditating|out of the office} right now.  Can I connect with you later? # CLASS: junia
 
 + Sure. # CLASS: player
 
-- Thank you.
+- Thank you. # CLASS: junia
 
 + [Close Chat] -> menu
