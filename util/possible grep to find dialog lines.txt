@@ -1,0 +1,1 @@
+cat :\ tarc.ink | grep -v "#" | grep -v "=" | grep -v "+" | grep -v "\*" | grep -v "\-" | grep -v "^[[:space:]]*$"
