@@ -32,8 +32,8 @@
 	// custom, capture if we're clearing for cleaner scroll behavior
 	var cleared = false;
 	
-	// custom, capture if last element created was a story P
-	var parElem = true;
+	// custom, capture if last element created was a (s)tory, (m)enu, or (c)hoice
+	var parElem = "m";
 
     // Kick off the start of the story!
     continueStory(true);
@@ -117,8 +117,8 @@
             paragraphElement.innerHTML = paragraphText;
             storyContainer.appendChild(paragraphElement);
             
-			// custom, capture if last element created was a story P
-			parElem = true;
+			// custom, assume last element created was a (m)enu
+			parElem = "m";
             
             // Add any custom classes derived from ink tags
             for(var i=0; i<customClasses.length; i++) {
@@ -145,6 +145,8 @@
 						typing.classList.add("typing");
 						storyContainer.appendChild(typing);
 						removeAfter(delay, typing);
+						// custom, set parElem to (s)tory for chat messages
+						parElem = "s"
                 	default:
                 		// no action
                 }
@@ -166,14 +168,14 @@
             storyContainer.appendChild(choiceParagraphElement);
 
 			// custom, adjust delay based on whether or not previous element was a story P (instead of a choice)
-			if ( parElem == true ) {
-				delay += 400;
+			if ( parElem == "s" ) {
+				delay += 600;
 			} else {
 				delay += 0;
 			}
 
-			// custom, capture if last element created was a story P (and not a choice)
-			parElem = false;
+			// custom, last element created was a (c)hoice
+			parElem = "c";
 
             // Fade choice in after a short delay
             showAfter(delay, choiceParagraphElement);

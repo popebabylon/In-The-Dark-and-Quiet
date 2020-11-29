@@ -137,7 +137,7 @@ VAR foo = true
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> junia_03
+    -> tarc_03
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     

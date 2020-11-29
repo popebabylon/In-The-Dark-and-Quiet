@@ -871,6 +871,8 @@ Can you provide details?  This may seem irrelevant, but knowing what you told th
 
 -> tarc_profile ->
 
+
+
 T finds out about J's betrayal, is helped or hindered by the P # CLASS: tarc
 
 TARC is caught in a delicate position given his responsibility to Mr. Saari and Nth Horizon.  His algorithms can't really account for the risk his creator has placed himself under.  The PC, either by virtue of history, skill, or evidence, appears to be the best proxy TARC can use for what Benton would call "out of the box thinking."  What actions should be taken to ensure the correct thing is prioritized. # CLASS: tarc

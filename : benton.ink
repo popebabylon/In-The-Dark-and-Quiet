@@ -477,7 +477,11 @@ Waking up in this gunk is no fun. # CLASS: benton
 
     -> talkaboutsomethingelse
 
-- {&|But... can we talk about something else?|Seriously, can this wait?} # CLASS: benton
+- {cycle:
+    -
+    -But... can we talk about something else? # CLASS: benton
+    - Seriously, can this wait? # CLASS: benton
+} 
 
     -> bstate
 
@@ -1171,208 +1175,236 @@ What's new in the real world? # CLASS: benton
 
 - Well, distract me or something. # CLASS: benton
 
-{ benton_02.busy:
-
-    Being { career } and my nanny keeping you busy? # CLASS: benton
-
-       * All cylinders.[]  Wouldn't want it any other way. # CLASS: player
+{
+    - benton_02.busy:
         
-            Don't burn up on reentry, tho, ya? # CLASS: benton
-            
-            Don't wanna be responsible for that. # CLASS: benton
+        -> bizbee
         
-            -> nomorefun
+    - benton_02.lover && relationship != "close":
+    
+        -> bae
         
-        * Enough.[]  What do you need? # CLASS: player
+    - benton_02.lover && relationship == "close":
+    
+        -> single
         
-            Too much apparently. # CLASS: benton
-            
-            -> nomorefun
-            
-        * I'm not your doomscroll feed. # CLASS: player
+    - benton_02.adventurer:
+    
+        -> dirtventure
         
-            Fine. # CLASS: benton
-            
-            -> nomorefun
+    - benton_02.goliath:
+    
+        -> bigG
+    
+    - benton_02.dont_do_anything: 
+ 
+        ->naething
+        
+    - else:
+    
+        ->nomorefun
 
 }
 
-{ benton_02.lover && relationship != "close":
+- (bizbee)
+Being { career } and my nanny keeping you busy? # CLASS: benton
+
+* All cylinders.[]  Wouldn't want it any other way. # CLASS: player
+
+    Don't burn up on reentry, tho, ya? # CLASS: benton
     
-    How's your bae? # CLASS: benton
+    Don't wanna be responsible for that. # CLASS: benton
 
-       * ¡grin![]  It's special. # CLASS: player
-        
-            I know you like a rollercoaster. # CLASS: benton
-            
-            Keep up the momentum! 😁 # CLASS: benton
-        
-            -> nomorefun
-        
-        * We're good. # CLASS: player
-        
-            Don't need to talk about it, huh? # CLASS: benton
-            
-            You always were quiet about such stuff. # CLASS: benton
-            
-            I think that's a good sign. # CLASS: benton
-            
-            -> nomorefun
-            
-        * Crash/Burn.[]  I'm apparently "not good emotional material" when I'm spending hours talking to a fish. # CLASS: player
-        
-            Ah, I'm sorry {pronouner("choi", "chai", "chen")}. # CLASS: benton
-            
-            -> nomorefun
-        
-}
+    -> nomorefun
 
-{ benton_02.lover && relationship == "close":
+* Enough.[]  What do you need? # CLASS: player
+
+    Too much apparently. # CLASS: benton
     
-    Got single again? # CLASS: benton
-        
-       * Yeah.[]  It didn't work out. # CLASS: player
-        
-            Nothing's quite like us. # CLASS: player
-        
-            { wait(2) }
-            
-            I... uh... # CLASS: benton
-            
-            Nevermind. # CLASS: player
-        
-            -> nomorefun
-        
-        * None of your biz. # CLASS: player
-        
-            Fair 'nuff. # CLASS: benton
-            
-            -> nomorefun
-            
-        * Oh, no, it's going swell.[]  You wanna hear all the squishy deets? # CLASS: player
-        
-            No, thanks.  Got more important things we should focus on. # CLASS: benton
-            
-            Well, you see, there's this thing I like... # CLASS: player
-            
-            THANK YOU!  Moving on. # CLASS: benton
-            
-            -> nomorefun
-        
-}
-
-{ benton_02.adventurer:
-
-    Recover from your last dirtventure? # CLASS: benton
+    -> nomorefun
     
-       * Recovered? Energized![]  You know I need the thrills. # CLASS: player
-            
-            Man, I miss the thrill of the drop. # CLASS: benton
-            
-            * * You'll be on the thrill ride of a lifetime in a few days here. # CLASS: player
-            
-            Yah, but drugged to the gills, _literally_, to avoid adreno spikes. # CLASS: benton
-            
-            Class 3 fun.  Good story to tell when I get home. # CLASS: benton
-        
-            -> nomorefun
-        
-        * Barely.[]  Worth it, but choi am I werked. # CLASS: player
-        
-            I feel yah. # CLASS: benton
-            
-            -> nomorefun
-            
-        * I'm in traction.[]  You're lucky all I have to do for your project is Message you. # CLASS: player
-        
-            { wait(1) }
-            
-            No way!  What happened? # CLASS: benton
-            
-            * * Anchor failure. # CLASS: player
-            
-                And no grav-belt backup?  I knew you were crayz, but really? # CLASS: benton
-                
-                Nah, just messin' # CLASS: player
-                
-                Sot!  Thanks {pronouner("choi","chai","chen")}! # CLASS: benton
-                
-                I was almost feelin' worse from talking to you. # CLASS: benton
-            
-                -> nomorefun
-            
-            * * Snowstorm and an icy road. # CLASS: player
-            
-                That's terrible {pronouner("choi","chai","chen")}! # CLASS: benton
-                
-                Not really. Just trying to get you to stop on the gory details about your biohack. # CLASS: player
-                
-                Oh, phew! # CLASS: benton
-                
-                -> nomorefun
-            
-            * * An angry camel. # CLASS: player
-            
-                What?  You're pulling my leg! # CLASS: benton
-                
-                True. # CLASS: player
-                
-                I was almost feelin' worse from talking to you. # CLASS: benton
-            
-                -> nomorefun
-        
-    
-}
+* I'm not your doomscroll feed. # CLASS: player
 
-{ benton_02.goliath:
-
-    Except big G.  I don't wanna hear anything more about big G right now. # CLASS: benton
+    Fine. # CLASS: benton
     
-       * Nothing to report.[]  They're off chasing other prey. # CLASS: player
-            
-            Hopefully it stays that way. # CLASS: benton
-        
-            -> nomorefun
-        
-        * I dropped it.[]  Not worth my time. # CLASS: player
-        
-            Good.  Don't need them constantly preying on our minds. # CLASS: benton
-            
-            -> nomorefun
-            
-        * They made me an offer. # CLASS: player
-        
-            { wait(1) }
-            
-            Swell.  You gonna sell me out? # CLASS: benton
-            
-            I wish.  You think big G made me an offer I'd still be here? # CLASS: player
-            
-            You're filling me with confidence... # CLASS: benton
-            
-            -> nomorefun
-        
-}
+    -> nomorefun
 
-{ benton_02.dont_do_anything:
+-
 
-    Found anything fun to do outside of this? # CLASS: benton
+
+- (bae)    
+How's your bae? # CLASS: benton
+
+* ¡grin![]  It's special. # CLASS: player
+
+    I know you like a rollercoaster. # CLASS: benton
     
-        * Sure.[]  But you've got other things to worry about. # CLASS: player
-        
-            ¡sigh! True # CLASS: benton
-            
-            -> nomorefun
-        
-        * Not really. # CLASS: player
-        
-            Sorry, {pronouner("choi", "chai", "chen")}.  Take some time for you, yah? # CLASS: benton
-            
-            I'll try. # CLASS: player # CLASS: benton
-        
-            -> nomorefun
+    Keep up the momentum! 😁 # CLASS: benton
+
+    -> nomorefun
+
+* We're good. # CLASS: player
+
+    Don't need to talk about it, huh? # CLASS: benton
     
-}
+    You always were quiet about such stuff. # CLASS: benton
+    
+    I think that's a good sign. # CLASS: benton
+    
+    -> nomorefun
+    
+* Crash/Burn.[]  I'm apparently "not good emotional material" when I'm spending hours talking to a fish. # CLASS: player
+
+    Ah, I'm sorry {pronouner("choi", "chai", "chen")}. # CLASS: benton
+    
+    -> nomorefun
+
+-
+
+
+- (single)
+
+Got single again? # CLASS: benton
+
+* Yeah.[]  It didn't work out. # CLASS: player
+
+    Nothing's quite like us. # CLASS: player
+
+    { wait(2) }
+    
+    I... uh... # CLASS: benton
+    
+    Nevermind. # CLASS: player
+
+    -> nomorefun
+
+* None of your biz. # CLASS: player
+
+    Fair 'nuff. # CLASS: benton
+    
+    -> nomorefun
+    
+* Oh, no, it's going swell.[]  You wanna hear all the squishy deets? # CLASS: player
+
+    No, thanks.  Got more important things we should focus on. # CLASS: benton
+    
+    Well, you see, there's this thing I like... # CLASS: player
+    
+    THANK YOU!  Moving on. # CLASS: benton
+    
+    -> nomorefun
+
+-
+
+- (dirtventure)
+
+Recover from your last dirtventure? # CLASS: benton
+
+* Recovered? Energized![]  You know I need the thrills. # CLASS: player
+    
+    Man, I miss the thrill of the drop. # CLASS: benton
+    
+    * * You'll be on the thrill ride of a lifetime in a few days here. # CLASS: player
+    
+    Yah, but drugged to the gills, _literally_, to avoid adreno spikes. # CLASS: benton
+    
+    Class 3 fun.  Good story to tell when I get home. # CLASS: benton
+
+    -> nomorefun
+
+* Barely.[]  Worth it, but choi am I werked. # CLASS: player
+
+    I feel yah. # CLASS: benton
+    
+    -> nomorefun
+    
+* I'm in traction.[]  You're lucky all I have to do for your project is Message you. # CLASS: player
+
+    { wait(1) }
+    
+    No way!  What happened? # CLASS: benton
+    
+    * * Anchor failure. # CLASS: player
+    
+        And no grav-belt backup?  I knew you were crayz, but really? # CLASS: benton
+        
+        Nah, just messin' # CLASS: player
+        
+        Sot!  Thanks {pronouner("choi","chai","chen")}! # CLASS: benton
+        
+        I was almost feelin' worse from talking to you. # CLASS: benton
+    
+        -> nomorefun
+    
+    * * Snowstorm and an icy road. # CLASS: player
+    
+        That's terrible {pronouner("choi","chai","chen")}! # CLASS: benton
+        
+        Not really. Just trying to get you to stop on the gory details about your biohack. # CLASS: player
+        
+        Oh, phew! # CLASS: benton
+        
+        -> nomorefun
+    
+    * * An angry camel. # CLASS: player
+    
+        What?  You're pulling my leg! # CLASS: benton
+        
+        True. # CLASS: player
+        
+        I was almost feelin' worse from talking to you. # CLASS: benton
+    
+        -> nomorefun
+
+-
+
+
+- (bigG)
+Except big G.  I don't wanna hear anything more about big G right now. # CLASS: benton
+
+* Nothing to report.[]  They're off chasing other prey. # CLASS: player
+    
+    Hopefully it stays that way. # CLASS: benton
+
+    -> nomorefun
+
+* I dropped it.[]  Not worth my time. # CLASS: player
+
+    Good.  Don't need them constantly preying on our minds. # CLASS: benton
+    
+    -> nomorefun
+    
+* They made me an offer. # CLASS: player
+
+    { wait(1) }
+    
+    Swell.  You gonna sell me out? # CLASS: benton
+    
+    I wish.  You think big G made me an offer I'd still be here? # CLASS: player
+    
+    You're filling me with confidence... # CLASS: benton
+    
+    -> nomorefun
+
+-
+
+- (naething)
+
+Found anything fun to do outside of this? # CLASS: benton
+
+* Sure.[]  But you've got other things to worry about. # CLASS: player
+
+    ¡sigh! True # CLASS: benton
+    
+    -> nomorefun
+
+* Not really. # CLASS: player
+
+    Sorry, {pronouner("choi", "chai", "chen")}.  Take some time for you, yah? # CLASS: benton
+    
+    I'll try. # CLASS: player # CLASS: benton
+
+    -> nomorefun
 
 - -> nomorefun
 
@@ -2714,7 +2746,8 @@ OK. Well. # CLASS: player
         Hold up. # CLASS: benton
         
         Here comes another kick... # CLASS: benton
-        
+
+TODO: BUG: fix scroll bug somewhere in here
 * Whatcha thinking way out there? # CLASS: player
 
     - - (whatcha_thinkin)

@@ -42,35 +42,25 @@
 
 // function to display full date with leading 0's
 
-~ temp y = date_year
+~ temp disp_date = ""
 
-~ temp m = "0"
+~ disp_date = disp_date + date_year + "-"
+
 {
     - date_month < 10:
-        
-        ~ m = m + date_month
-
-    - else:
-    
-        ~ m = date_month
-
+        ~ disp_date = disp_date + "0"
 }
 
-~ temp d = "0"
+~ disp_date = disp_date + date_month + "-"        
+
 {
     - date_day < 10:
-        
-        ~ d = d + date_day
-
-    - else:
-    
-        ~ d = date_day
-
+        ~ disp_date = disp_date + "0"
 }
 
-~ temp print_date = y + "-" + m + "-" + d
+~ disp_date = disp_date + date_day
 
-~ return print_date
+~ return disp_date
 
 === function timeplus(y, m, d) ===
 
