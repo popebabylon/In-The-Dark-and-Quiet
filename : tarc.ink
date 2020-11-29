@@ -88,7 +88,7 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 <>		<p class="info"> By affirming their electronic acceptance below, { name } << ssuuid: 0x6d6f6f6e73686f74 >> acknowledges and agrees to this agreement in it's entirety. </p>
 
 
-* { Security >= Nth_SEC } [<< Forge Signature >>] # CLASS: player
+* { Security + Technology >= Nth_SEC } [<< Forge Signature >>] # CLASS: player
 
     -> hackit
 

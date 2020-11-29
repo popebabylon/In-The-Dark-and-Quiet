@@ -21,26 +21,18 @@
 - { wait(4) }
 
 * Do you have time to chat? # CLASS: player
- 
-    -> lucas_intro
 
 * [<< wait patiently >>]
-
-    -> lucas_intro
 
 * [<< Exit >>]
 
     -> ghost_lucas
-
-= ghost_lucas
-
--> menu
- 
-= lucas_intro
+    
+- (lucas_intro)
 
 { ghost_lucas:
 
-    # CLEAR
+    Hello? # CLEAR # CLASS: player
 
 - else:
 
@@ -149,6 +141,10 @@ Clear? # CLASS: lucas
 - Goodbye. # CLASS: lucas
 
 + [<< Close Chat >>] -> menu
+
+= ghost_lucas
+
+-> menu
 
 === lucas_02 ===
 
