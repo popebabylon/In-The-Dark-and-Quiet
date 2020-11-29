@@ -804,6 +804,8 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             
         }
         
+        ~ player_knows += luc_takedowntarc
+        
         What are you suggesting? # CLASS: lucas
         
         If I have the right deets and the right moment I can turn TARC. # CLASS: player
@@ -862,6 +864,8 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
     * * What could be done to fix the tank? # CLASS: player
     
+        ~ player_knows += luc_fixtank
+    
         This is a state-of-the-art gel-quarium, fully integrated with the vessel and highly customized to the mission.  It's not a field-maintainable doggy pool! # CLASS: lucas
         
         * * * { Technology + Engineering >= 60 or benton_06.at_array } Anything can be field-maintained[.] if it has to be. # CLASS: player
@@ -895,7 +899,9 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             There are a great many of those in this project. # CLASS: lucas
     
     * * What compounds is he missing? # CLASS: player
-    
+        
+        ~ player_knows += luc_compounds
+        
         The gel-quarium has used more resources than we expected{drugs>3:, thanks in no small part to your trigger-happy pharmaceutical tendencies}. # CLASS: lucas
         
         And unless I'm very much mistaken there's not a pharma lab with an org-comp-processor on his flight-path. # CLASS: lucas
@@ -929,6 +935,8 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             _un tonto_ # CLASS: lucas    
     
     * * What good would an operation do? # CLASS: player
+    
+        ~ player_knows += luc_operation
     
         We've already bio-hacked Benton beyond the conventional limit. # CLASS: lucas
         

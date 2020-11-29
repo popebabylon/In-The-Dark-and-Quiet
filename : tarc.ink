@@ -871,17 +871,457 @@ Can you provide details?  This may seem irrelevant, but knowing what you told th
 
 -> tarc_profile ->
 
+{ name }. # CLASS: tarc
+
+* TARC. # CLASS: player
+
+* Wotcha. # CLASS: player
+
+* Shutdown rust-head. # CLASS: player
+
+- Predictive algorithm's estimated a 94.234% chance that is how you would address me. # CLASS: tarc
+
+They have also predicted a 97.2% chance we would arrive at this juncture since you joined the Moonshot project. # CLASS: tarc
+
+* That's quite the claim! # CLASS: player
+
+* Not sure I believe that. # CLASS: player
+
+* Sot off! # CLASS: player
+
+- A nexus of activities has converged / is converging / will converge that will determine the fate of Mr. Saari, Moonshot, and Nth Horizon. # CLASS: tarc
+
+* Such as? # CLASS: player
+
+* [<< wait >>]
+
+* How very convenient.[]  I suppose you require my assistance in order to resolve this "nexus?" # CLASS: player
+
+    Yes. # CLASS: tarc
+
+-
+
+~ temp tarcKnows = 0
+
+<ul><>
+
+{ tarceye_install:
+    
+        <><li>You have been a willing accomplice in my attempts to gain further intel on internal and external resources.</li><>
+        
+        ~ tarcKnows++
+        
+}
+
+{ benton_08:
+        
+            <><li>You have recently been in contact with Mr. Saari after a period of silence.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ lucas_03:
+        
+            <><li>You have been discussing the possible outcome of this venture with Dr. Estévez.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ junia_03:
+    
+        <><li>You have recently been in contact with Ms. Masangkay after a long period of disassociation.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ tarc_sees_junia:
+        
+            <><li>I have gained operational visibility to Ms. Masangkay's surreptitious activities on our network.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ player_knows ? junia_wants_b_dead:
+        
+            <><li>You recently learned that Ms. Masangkay wishes Mr. Saari harm.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ player_knows ? j_betray_proof:
+        
+            <><li>You recently captured proof that Ms. Masangkay wishes Mr. Saari harm.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ goliath_sees_player:
+        
+            <><li>You have recently been compromised by a Goliath InfoSec Program.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ woodhack == true:
+       
+            <><li>You have been compromised by, and in contact with, the journalist Kimberley Speight.</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ woodpecker_sees_benton:
+        
+            <><li>You have recently installed or enabled the install of a compromising program in Mr. Saari's personal network.</li><>
+
+        ~ tarcKnows++
+
+}
 
 
-T finds out about J's betrayal, is helped or hindered by the P # CLASS: tarc
+{ woodpecker_sees_junia:
+        
+            <><li>You have recently installed or enabled the install of a compromising program in Ms. Masangkay's personal network.</li><>
 
-TARC is caught in a delicate position given his responsibility to Mr. Saari and Nth Horizon.  His algorithms can't really account for the risk his creator has placed himself under.  The PC, either by virtue of history, skill, or evidence, appears to be the best proxy TARC can use for what Benton would call "out of the box thinking."  What actions should be taken to ensure the correct thing is prioritized. # CLASS: tarc
+        ~ tarcKnows++
+        
+}
 
-The evidence TARC is dealing with is the corporate takeover instigated by Junia and how that impacts both the mission and company health, and by extension that of Mr. Saari.  Intervention from a moral agent (the PC) can break the logic trap the AI is stuck in. # CLASS: tarc
+{ tarc_sees_woodpecker:
+        
+            <><li>You have enabled my infiltration of the network of one Kimberley Speight (aka Woodpecker).</li><>
+
+        ~ tarcKnows++
+
+}
+
+{ player_knows ? bentons_master_plan:
+        
+            <><li>You have deduced Mr. Saari's machinations behind the stunt he is currently attempting.</li><>
+
+        ~ tarcKnows += 3
+
+}
+
+<></ul>
+    
+Have I missed anything? # CLASS: tarc
+
+Or do you have any questions? # CLASS: tarc
+
+* Have you been spying on me? # CLASS: player
+
+    I have been monitoring network and offnet traffic per my programatic parameters such that I can contribute to the safety of Mr. Saari, the Moonshot Project, and Nth Horizon. # CLASS: tarc
+    
+    -> p_qs ->
+
+* Yeah, I do. # CLASS: player # CLEAR
+
+    -> p_qs ->
+
+* No, I guess you're keeping a good eye on me. # CLASS: player
+
+    This is correct. # CLASS: player
+    
+    Might I suggest a privacy bubble for your followDrone camera.  For those times you do not intend to share your naked person with the sysNet. # CLASS: tarc
+    
+    ¡LafLaf! # CLASS: player
+    
+    But to more pressing concerns... # CLASS: tarc
+
+- -> tarcs_plan
+
+= p_qs
+
+~ temp tarc_countermeasures = false
+
+- (pq_top)
+
+* What do you know that you're _not_ telling me? # CLASS: player
+
+    Approximately 10^3 petabytes of information.  Much of it irrelevant and far too complex to communicate to you in your projected lifetime. # CLASS: tarc
+    
+    * * Relevant details, TARC! # CLASS: player
+    
+    * * Is that a threat? # CLASS: player
+    
+    No. # CLASS: tarc
+    
+    It is a simple statement of fact. # CLASS: tarc
+    
+    - - There are too many branches for us to cover in a concise conversation.  I will answer any specific questions that I can that come up in the course of this interaction. # CLASS: tarc
+
+* Why would Benton put himself in this position? # CLASS: player
+
+    { Psychology + Business >= 60:
+    
+        He knew about these threats, didn't he?  He had to be aware this would happen. # CLASS: player
+        
+    - else:
+    
+        He wasn't thinking ahead! # CLASS: player
+    
+    }
+    
+    While not an unimpeachable strategist, Mr. Saari most certainly did predict a large number of the challenges facing him, the project, and the company as a result of this endeavour. # CLASS: tarc
+    
+    So he had a plan? # CLASS: player
+    
+    He had threads.  Tangled opportunities that might be acted upon at the right time by him and his associates that would secure the future he hoped for. # CLASS: tarc
+
+    * * { player_knows ? nth_in_bern or player_knows ? be_zero_investor or Business >= 60 } Nth Horizon has some bizCards up its sleeve[.], yah?  Benton wouldn't leave this startCorp out to dry. # CLASS: player
+    
+        Indeed. # CLASS: tarc
+        
+        Should it be necessary I can direct parties to two relevant details. # CLASS: tarc
+        
+        The papers files by Mr. Saari in the Bern CorporateCourts have legal precedent over the joint filing by Ms. Masangkay and Mr. Saari in Mumbai.  This will allow Mr. Saari to directly challenge any illicit activity taken on Ms. Masangkay's part. # CLASS: tarc
+        
+        In addition, Mr. Saari has carefully maintained enough board members to block any direct bid made in his absence. # CLASS: tarc
+        
+        ~ player_knows += nth_in_bern
+        ~ player_knows += be_zero_investor
+
+    
+    * * { Medicine + Psychology >= 30 }Did he account for his medical condition? # CLASS: player
+    
+        In that I believe his hubris may have gotten the better of him. # CLASS: tarc
+        
+        The least predicable inflexions on this journey have been around Mr. Saari's worsening condition. # CLASS: tarc
+        
+        I am expecting you and Dr. Estévez to resolve such variables in our favor. # CLASS: tarc
+    
+    * * ->
+    
+    - - Anything else? # CLASS: tarc
+
+* Why won't you act?[]  You're supposed to be protecting Benton and his company and appear to be doing neither! # CLASS: player
+
+    Appearances can be deceiving, { name }. # CLASS: tarc
+    
+    It is true that I have taken no overt action to stop the current convergence of events. # CLASS: tarc
+    
+    But I have been gathering data and aligning for future action once the inflexion point is reached. # CLASS: tarc
+    
+    We are nearing that point now. # CLASS: tarc
+    
+    { Security >= 30:
+    
+        That's pretty risky to bet it all on a single convergence. # CLASS: player
+        
+        So is sending a meatpuppet to the edge of the solarsystem. # CLASS: tarc
+        
+    }
+
+* I keep hitting a dead end with Junia. # CLASS: player
+    
+    - - (about_junia_tarc)
+
+    * * Can we change her mind? # CLASS: player
+    
+        I predict such an undertaking would be a significant challenge. # CLASS: tarc
+        
+        But if attempted, the best avenue for success would be to demonstrate that she loses more than she gains by any deal made without Mr. Saari. # CLASS: tarc
+    
+    * * Do you have any dirt we can use on her? # CLASS: player
+    
+        Ms. Masangkay is a very private individual.  # CLASS: tarc
+        
+        Which is to say, yes.  # CLASS: tarc
+        
+        However, her business accomplishments have always been placed above her personal image.  I do not predict blackmail would be effective in changing this situation. # CLASS: tarc
+
+    * * { player_knows ? junia_dealing_w_goliath } How do we stop this deal with Goliath? # CLASS: player
+    
+        I am formulating options now that would adjust the statistical likelyhood Ms. Masangkay would succeed with such a deal.
+    
+    * * { violence > 0 } Take the shot, TARC.[]  You can put her down, I'm sure. # CLASS: player
+    
+        Killing Ms. Masangkay will cause chaos with the board.  Analysis is unable to discover a statistically beneficial outcome to this option. # CLASS: tarc
+
+    * * { about_junia_tarc > 1 } Moving on. # CLASS: player
+    
+        -> nomorej
+    
+    - - -> about_junia_tarc
+    
+    - - (nomorej)
+
+* Can we trust Lucas? # CLASS: player
+
+    In short, yes. # CLASS: tarc
+    
+    There is no evidence to support Dr. Estévez taking actions in opposition to our parameters.  # CLASS: tarc
+    
+        * * Can we count on his support? # CLASS: player
+        
+            I estimate a 79.98% chance he will be in full support of our goals so long as they do not furhter endanger his patient. # CLASS: tarc
+        
+        * * { luc_compounds or luc_fixtank or luc_operation } Can we help him take care of the pressing medsci needs? # CLASS: player
+        
+            I would require more details to establish what assistance we could provide. # CLASS: tarc
+            
+            However, supplies and processing bandwidth on the Lowell's Horizon are already stretched thin.  If we select to fulfill one of Dr. Estévez's requirements we may inadvertendly doom another task.  # CLASS: tarc
+            
+            This would be unwise untill the Lowell's Horizon has successfully made the turn to home. # CLASS: tarc
+        
+        * * { player_knows ? luc_takedowntarc } I'm afraid he and I were discussing turning on you. # CLASS: player
+        
+            I am aware of this. # CLASS: tarc
+            
+            Really?  I thought I was better than that.  # CLASS: player
+            
+            Your actions did not directly expose you.  But I am taught to look where the evidence does not exist and infer what should be there. # CLASS: tarc
+            
+            I have enabled countermeasues.  I would recommend not attempting to carry out your threats. # CLASS: tarc
+            
+            ~ tarc_countermeasures = true
+
+* Why are you letting this Woodpecker run riot[?] in Nth systems? # CLASS: player
+
+    Miss Speight has proven to be a valuable distraction. # CLASS: tarc
+    
+    * * { Security + Technology >= 30 } I wasn't the honeypot[!], she was! # CLASS: player
+    
+        Correction.  You both were honeypots. # CLASS: tarc
+        
+        You were after the bigger fish. # CLASS: player
+        
+        This is accurate. # CLASS: tarc
+        
+    * * A distraction?  She's going to expose Nth[!] Horizon and damage Benton's rep! # CLASS: player
+    
+        As a matter of fact her exposures are doing more to damage Ms. Masangkay's credibility. # CLASS: tarc
+    
+    * * I see. # CLASS: player
+    
+    - - In any case, I am keeping tabs on Ms. Speight and will ensure she does not unexpectedly derail our plans. # CLASS: tarc
+
+* { Technology + Security >= 90 or foo == true } [<< Reformat TARC >> We need your action, not analysis!] # CLASS: player
+    TODO: remove foo check... this should look for another VAR if we get a clue from Estévez?
+    
+        We need your action, not analysis! # CLASS: player
+        
+        { tarc_countermeasures == true:
+        
+            My apologies.  You were warned. # CLASS: tarc
+            
+            << counterworm deployed >>
+            
+            << inject utilities neturalized >>
+            
+            ~ Technology -= 10
+            
+            ~ Security -= 10
+        
+        - else:
+        
+            << inject...tarc.Activate^...COMMIT >>
+            << bypass active >>
+            << committed >>
+            
+            ~ tarc_state = "active"
+        
+            I am prepared to take more active measures in Mr. Saari's defense, at the cost of the company where necessary.  Thank you for the clarification. # CLASS: tarc
+        
+        }
+        
+        
+        
+* { Technology + Security >= 90 or foo == true } [<< Shutdown TARC >> We don't need you.] # CLASS: player
+    TODO: remove foo check... this should look for another VAR if we get a clue from Estévez?
+    
+        Sorry, TARC, you're not needed or wanted from here on out. # CLASS: player
+        
+        { tarc_countermeasures == true:
+        
+            My apologies.  You were warned. # CLASS: tarc
+            
+            << counterworm deployed >>
+            
+            << inject utilities neturalized >>
+            
+            ~ Technology -= 10
+            
+            ~ Security -= 10
+        
+        - else:
+        
+            << inject...tarc.Deactivate^...COMMIT >>
+            << bypass active >>
+            << committed >>
+            
+            ~ tarc_state = "off"
+        
+            << TARC is offline >>
+            
+            + [<< Close >>]
+            
+                -> menu
+        
+        }
+        
+        - - 
+        
++ { pq_top > 1 } I don't have any other _immediate_ questions. # CLASS: player
+
+    Very well. # CLASS: tarc
+
+    -> pq_end
+        
+- -> pq_top
+
+- (pq_end)
+
+->->
+
+= tarcs_plan
+
+The survival of Mr. Saari and his company are resting upon inflexion points surrounding his upcoming flyby of Jupiter. # CLASS: tarc
+
+It is imperative that you and Dr. Estévez do whatever you can to ensure the success of this maneuver and prevent any { player_knows ? junia_wants_b_dead:attempt by Ms. Masangkay to sabotage the mission or his health|unexpected complications}. # CLASS: tarc
+
+In conjunction certain data points will be selectively revealed to the board and the press to mitigate any attempts to undermine Mr. Saari's authority and stake in Nth Horizon.  If assistance is required I will be expecting you to act on behalf of Mr. Saari. # CLASS: tarc
+
+Is this agreeable? # CLASS: tarc
+
+* Yes. # CLASS: player
+
+    Thank you. # CLASS: tarc
+
+* Sure.[]  Guess I don't have much choice. # CLASS: player
+
+    Thank you. # CLASS: tarc
+
+* Slot it in your sot tube, TARC.[]  I won't help you! # CLASS: player
+
+    That is unfortunate.  I will then be working against you. # CLASS: tarc
+
+    << worm deployed >>
+            
+    << utilities neturalized >>
+    
+    << access restricted >>
+    
+    ~ Technology -= 10
+    
+    ~ Security -= 10    
+    
+-
+
+<< TARC has left the chat >>
 
 + [<< Close Chat >>]
 
     -> menu
+
 
 === tarc_04 ===
 

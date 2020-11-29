@@ -34,6 +34,9 @@
     ~ kim_knows += fake_cmo
     ~ player_knows += nada
 
+    ~ tarc_sees_woodpecker = true
+    ~ tarc_sees_junia = true
+    ~ player_knows += luc_takedowntarc
 
     ~ tarceye_install = true
     ~ woodpeck_install = true

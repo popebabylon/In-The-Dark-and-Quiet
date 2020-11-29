@@ -290,11 +290,33 @@
 
 # CLEAR
 
-Headline about N Horizon failing, B off on his own, mad; possible scoop by K
+# CLEAR
 
-News article about Nth Horizon teetering on the brink with it's founder off on some damned-fool crusade, possibly stark-raving mad.  May include some scooped juicy details by Woodpecker, tying that anonymous entity back to Kim Speight, the journalist.
+<h2>In The Dark And Quiet</h2><>
 
-+ [Next] -> menu
+<><h4>Benton Saari closes on the object of his obsession. But can he survive it?</h4><>
+
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 15:20 UTC</p><>
+
+<><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
+
+<><p class="info">It has been a year and four months since Lowell's Horizon departed Luna Station.  The fate of it's pilot seems to be little more than hearsay at this point, and the fate of his once darling startCorp seems to hang in the balance.  If it weren't for the tireless efforts of this newsDropper and her woodpecked source it is likely Nth Horizon would already be a distant memory.</p><>
+
+<><p class="info">For now enough hue and cry has been raised around the suspicious activities of co-founder Junia Masangkay that Nth Horizon's board has put a pause on all discussions of sale or merger until the fate of Mr. Saari can be predicted.  If the test-pilot can survive the maneuver around Pluto it is hoped he will survive the return voyage by the skin of his teeth.</p><>
+
+<><p class="info">A constant source of chatter in the whole affair has been Mr. Saari's decision to forego cryosleep during any portion of the journey.  Whether this stems from a misguided testosterone infusion or some strategy to keep control of Nth Horizon remains to be seen.  The real question is what the extended months of isolation in an experimental gel-quarium will have done to the CEO's _mind_.</p><>
+
+<><p class="info">Not many explorers have faced the precise challenge Mr. Saari faces, but perhaps better parallels can be drawn to the age of sail on Terra's oceans.  One specific incident has some bearing, the strange tale of Donald Crowhurst and the Teignmouth Electron.  Pressured by business partners and ill-prepared, the amateur sailor set off on single-handed non-stop sailing race around the globe in 1968.  The pressure of failure led to reporting falsehoods by the 37 year old yachtsman, which were then compounded by the fact that he was going to win the race by default.  He disappeared into the Atlantic Ocean, survived only by his cryptic and rambling log books.</p><>
+
+<><p class="info">What darkness lurks in the minds of people when faced with the existential crisis of being cut off, but also pressured to perform, to succeed in the minds of those who wait for you on shore?  What logic can help a mind make sense of the apparent dichotomy between where you are and where other people think you are?</p><>
+
+<><p class="info">newsDrop wishes Mr. Saari well on the upcoming apex of his journey.  We hope he has found solace out there in the dark and quiet between the stars.  And that he will welcome the attention when he returns home.</p><>
+
+<><p class="info">Don't miss our exclusive apex report!  Subscribe for the next newsDrop!</p>
+
++ [<< Close news >>]
+
+-    -> menu
 
 === news_09 ===
 
