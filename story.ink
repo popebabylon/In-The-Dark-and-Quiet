@@ -82,8 +82,7 @@ VAR woodpeck_install = false
 VAR tarceye_install = false
 VAR tarc_sees_junia = false
 VAR woodpecker_sees_junia = false
-LIST jupiter_flyby_status = (approach), pre_burn, entry_burn, perijove, exit_burn, apojove, escape, deep_space
-LIST jupiter_flyby_status_color = (green), orange, red
+LIST jupiter_flyby_status = (approach), entry_burn, perijove, exit_burn, escape
 LIST stress = (nominal), elevated, excessive, critical
 VAR next = -> benton_05.firstStress
 VAR drugs = 0
@@ -137,7 +136,7 @@ VAR foo = true
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> tarc_03
+    -> benton_05
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     
