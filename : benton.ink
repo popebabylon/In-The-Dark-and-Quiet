@@ -641,9 +641,6 @@ Sidetrack, you remember Daeso? # CLASS: benton
 
 - Being in this goop-tube just reminded me of when { not glass :the three of us ended up in that glass elevator }and you... interceded. # CLASS: benton
 
-VAR diplomacy = 0
-VAR violence = 0
-
 * { relationship == "close" } He needed to be let down softly. # CLASS: player
 
     ¡sigh! # CLASS: benton
@@ -1408,9 +1405,6 @@ How? # CLASS: benton
 
 - Recall the Moscow mess? # CLASS: benton
 
-VAR risky = 0
-VAR cautious = 0
-
 * Sure.  How's that relevant? # CLASS: player
 
     When my head was spinning you stepped in and made the choice. # CLASS: benton
@@ -1939,14 +1933,6 @@ Ok, gel's firming up for exercise.  Chat latrz? # CLASS: benton
 
 # CLEAR
 
-LIST jupiter_flyby_status = (approach), pre_burn, entry_burn, perijove, exit_burn, apojove, escape, deep_space
-
-LIST jupiter_flyby_status_color = (green), orange, red
-
-LIST stress = (nominal), elevated, excessive, critical
-
-VAR next = -> firstStress
-
 << adding stress_analysis to chat >>
 
 << patient's stress level is { stress } >>
@@ -2021,9 +2007,9 @@ Yeah. # CLASS: player
 
 - Nah, this is gonna be a doddle. # CLASS: benton
 
-VAR drugs = 0
+{ stressCheck("+", -> firstStress, stress) }
 
-{ stressCheck("+", -> firstStress, stress) } -> next
+-> next
 
 - (firstStress)
 
@@ -2707,9 +2693,6 @@ OK. Well. # CLASS: player
     - - Heh. # CLASS: benton
     
     I can see Callisto.  Just a speck riding ahead of me, circling the patriarch who seduced her.  The besmirched virgin turned fierce mamma bear. # CLASS: benton
-    
-    VAR love = 0
-    VAR money = 0
 
     Recall Jemimah? # CLASS: benton
     
@@ -3775,8 +3758,6 @@ Easy. # CLASS: benton
     
 - (eva)
 
-VAR clipped = false
-
 { wait(2) }
 
 Ok.  Here goes. # CLASS: benton
@@ -4159,8 +4140,6 @@ You do that. # CLASS: player
 
 << { name } has been blocked from this chat >>
 
-VAR blocked = true
-
 { clipped == false && outside:
 
     * [<< Exit >>]
@@ -4470,7 +4449,7 @@ Talk later, k? # CLASS: benton
 
 { wait(6) }
 
-<< Benton has left the chat >>
+<< patient has disconnected >>
 
 - (loopy)
 
@@ -4482,15 +4461,944 @@ Talk later, k? # CLASS: benton
 
 === benton_08 ===
 
+~ stress = (nominal)
+
 # CLEAR
 
-Benton is losing it, going off the rails, goes off on a past event with the player # CLASS: benton
+{ benton_07.benton_breakdown:
 
-As things back on Earth get heated with the potential loss of Nth Horizon, the PC is tasked with trying to keep Benton on task.  However he seems to be losing it, going off onto tangents about mysterious, invisible stowaways and the nihilisitic unfairness of reality.  A savvy player may notice his train of thought seeking desperately for a way out, an excuse for the pointlessness of this stunt and his life against the backdrop of an uncaring universe. # CLASS: benton
+    -> unresponsive
 
-The conversation touches on another moment from the PC and Benton's shared past, a [laugh] or a [cry] they shared together and why it was important in the context of that moment.  But before the PC can use that nostalgia to center him Benton is struck by another thought, that "it is merciful we are nothing, the enormity of anything else destroys us."  His rambles are interrupted by further developments back home... # CLASS: benton
+- else:
 
-+ [<< Close Chat >>] -> menu
+    -> responsive
+
+}
+
+= unresponsive
+
+<< patient has been disconnected for 5 months, 8 days, 13 hours, 47 minutes >>
+
+* Benton?  Are you receiving me? # CLASS: player
+
+* Check in 1,823.  Benton, come in. # CLASS: player
+
+* Yo, sothead![]  You dead yet? # CLASS: player
+
+    ~ stress++
+
+- (ur_loop) 
+
+{ wait(4) }
+
++ Benton, please respond.[] # CLASS: player
+
+    {shuffle stopping:
+    
+        - You need to reconnect so we know you're ok. # CLASS: player
+            
+            ~ b_responsivness++
+        
+        - We just want to know you're still with us. # CLASS: player
+        
+            ~ b_responsivness++
+        
+        - We miss ya, choi. # CLASS: player
+        
+            ~ b_responsivness++
+    
+    }
+
++ No response.  Retrying.[]  Benton, come in. # CLASS: player
+
+* { Psychology >= 60 } You're not alone out there, B.[]  I know it feels like it, but there's a whole family back here rooting for you.  We just want you to come home safe. # CLASS: player
+
+    ~ b_responsivness++
+
+* { relationship == "close" } I miss you. # CLASS: player
+
+    I don't know what else to say. # CLASS: player
+    
+    We've had a lot of rough patches, but you mean a lot to me. # CLASS: player
+    
+    To a lot of people. # CLASS: player
+    
+    Please be okay. # CLASS: player
+
+    ~ b_responsivness++
+
++ [<< wait >>]
+
+- 
+
+~ b_responsivness++
+
+{ b_responsivness < 4 :
+
+    -> ur_loop
+    
+}
+- (hes_back)
+
+{ wait(2) }
+
+~ disconnected = false
+
+<< patient has connected >>
+
+<< patient's stress level is { stress } >>
+
+{ name }? # CLASS: benton
+
+* BENTON![]  Yes!  Yes, it's me Benton.  Hello! # CLASS: player
+
+* SOT![]  Yeah, choi, it's me!  <> # CLASS: player
+
+* You dramaHead. # CLASS: player
+
+- Where have you been? # CLASS: player
+
+-> were_back
+
+= responsive
+
+~ disconnected = false
+
+<< patient's stress level is { stress } >>
+
+* Hey, B.[]  You with us this morning? # CLASS: player
+
+    { generosity > 0: -> woken }
+    
+    { wait(3) }
+    
+    * * Hello? # CLASS: player
+    
+    * * [<< wait >>]
+    
+    - - { wait(3) }
+
+* Morning check in.[]  Benton, you receiving? # CLASS: player
+
+    - - (checkin_loop)
+    
+    { wait(3) }
+    
+    + + \ {Second check in.  Hello B|Third check in.|Final check in attempt.  Hey B!} # CLASS: player
+    
+    + + [<< wait >>]
+    
+    - - { -> checkin_loop | -> checkin_loop | }
+
+* Wake up sothead. # CLASS: player
+
+    - - (waitgame)
+    
+    { wait(3) }
+
+    * * { violence > 0 }[<< Administer electroshock >>]
+    
+        << Administered >>
+        
+    * * { Medicine >= 30 } [<< Administer Adreno Shot >> ]
+    
+        ~ drugs++
+    
+        << Administered >>
+        
+    + + [<< wait >>]
+    
+        { -> waitgame | ->waitgame | }
+    
+    - - 
+    
+- (woken)
+
+I have awoken. # CLASS: benton
+
+* Good to hear from you[.] this morning. # CLASS: player
+
+* Received.[]  Thank you. # CLASS: player
+
+* About time. # CLASS: player
+
+- What's been going on since we last spoke? # CLASS: player
+
+{ wait(2) }
+
+- I've been...# CLASS: benton
+
+-> were_back
+
+= were_back
+
+{ wait(2) }
+
+Thinking. # CLASS: benton
+
+{ wait(2) }
+
+In orbital modes of time. # CLASS: benton
+
+{ wait(2) }
+
+Out here. # CLASS: benton
+
+{ wait(2) }
+
+In the dark and quiet. # CLASS: benton
+
+{ wait(4) }
+
+<- cryo(disconnected)
+
+* { unresponsive } That's great! # CLASS: player
+
+    * * It's just so good to hear from you. # CLASS: player
+    
+    * * Glad you're ok. # CLASS: player
+    
+    - -
+    
+    * * We've been so worried. # CLASS: player
+    
+    * * That's a long time to be silent. # CLASS: player
+    
+        -> longquiet
+
+* { unresponsive } You've been thinking a long[ time.], long time, choi.  Glad you finaly checked back in. # CLASS: player
+
+    - - (longquiet)
+
+    Connect the network. # CLASS: benton
+    
+    * * Yeah, keep us connected. # CLASS: player
+    
+    * * "The network is connected." # CLASS: player
+    
+        Varjo III, right? # CLASS: player
+        
+        { wait(2) }
+        
+        * * * Nevermind. # CLASS: player
+
+* { responsive } Sounds productive. # CLASS: player
+
+    And I appreciate that you still take time to talk to me. # CLASS: player
+    
+    Of course. # CLASS: benton
+    
+    Can we run your checklist this morning? # CLASS: player
+
+* { responsive } I see. # CLASS: player
+
+      Well, I know it's not as much fun, but can we run your checklist? # CLASS: player
+
+* OK.[] # CLASS: player
+
+* [<< wait >>]
+
+
+- Velocity:maximal(424,242.42kmph),avg(371,527.77kmph)Q-sat_sync:partial-lock(142),partial-lock(143),partial-lock(98)0x64656166656e696e672073696c656e6365Gel_Reg:osmotic_inf(21%),alkalinity_bal(8.2),cycler(blocked)Sleep_Record:avg_time(0.243hrs),rem_avg(12%),nrem_avg(88%),q.EEG(critical)Isosacular_Sys:align(nominal),lifetime(-12months),apShift(342pm),mΩ(12.293)HyperTrack:status(nominal),align(2.32º) # CLASS: benton
+
+* Whoah!  What? # CLASS: player
+
+* { Technology + Engineering >= 60 or responsive } Uh, ok.  Got it.[]  You know you don't have to spew technical readouts in a single stream, right? # CLASS: player
+
+* U loco, hombre. # CLASS: player
+
+- 0x6974206c696573 # CLASS: benton
+
+- (hexcomm)
+
+{ stress > elevated:
+
+    <- cryo(disconnected)
+
+}
+
+{ stress > elevated && not medcheck.medadministered:
+
+    <- medcheck(-> hexcomm)
+
+}
+
+{ woodpecker_sees_benton == false:
+
+    <- hack_benton(-> hexcomm)
+
+}
+
+* I don't understand. # CLASS: player
+
+    Benton, try to communicate with me. # CLASS: player
+
+* I'll, uh, pass that along[.], shall I? # CLASS: player
+
+* { Technology >= 60 } "It lies"?[]  The computer is lying to you? # CLASS: player
+
+    - - (fightcomputer) 
+
+    * * I don't understand.[]  Can you try again? # CLASS: player
+    
+    * * { player_knows ? tarc_as_hal } Do you mean TARC?[]  Is it turning on you? # CLASS: player
+    
+        - - - (fighttarc) 
+    
+    * * Have you tried turning it off and back on again? # CLASS: player
+
+* { Psychology + Medicine >= 60 } Benton, I hear you[.], but I cannot understand.  You need to meet me halfway, ok?  You need to take a moment and think about what you want me to learn from you. # CLASS: player
+
+- I'm tired of fighting it. # CLASS: benton
+
+{ wait(2) }
+
+* Fighting {fighttarc:TARC|{fightcomputer:the computer|what}}? # CLASS: player
+
+{ wait(2) }
+
+- (what_is_it)
+
+It has stowed away this entire journey, from the beginning to the end. # CLASS: benton
+
+The ever-present watcher. # CLASS: benton
+
+Always seeking our destruction. # CLASS: benton
+
+{ stress > elevated:
+
+    <- cryo(disconnected)
+
+}
+
+{ stress > elevated && not medcheck.medadministered:
+
+    <- medcheck(-> friendshiptest)
+
+}
+
+{ woodpecker_sees_benton == false:
+
+    <- hack_benton(-> friendshiptest)
+
+}
+
+* B, you're still here.[]  You've beaten odds that would crush others.  How can you believe something is still out to get you? # CLASS: player
+
+* It hasn't succeeded yet[.], has it?  You're still marching on. # CLASS: player
+
+* Well it sucks at it's ambition then. # CLASS: player
+
+- It only needs time. # CLASS: benton
+
+And of that it has infinity. # CLASS: benton
+
+{ stress > elevated:
+
+    <- cryo(disconnected)
+
+}
+
+{ stress > elevated && not medcheck.medadministered:
+
+    <- medcheck(-> friendshiptest)
+
+}
+
+{ woodpecker_sees_benton == false:
+
+    <- hack_benton(-> friendshiptest)
+
+}
+
+* Hey Benton, remember me? <>
+
+* What is _it_? # CLASS: player
+
+    * * { Psychology >= 30 } Your own self-loathing? # CLASS: player
+    
+    * * { Business + Psychology >= 30 } Nth Horizon?[]  The baby you left behind?  I know how that feels. # CLASS: player
+    
+        Something you build with your own blood, sweat, and tears. # CLASS: player
+        
+        And now it's no longer in your control. # CLASS: player
+    
+    * * { Security + Psychology >= 30 } Your paranoia?[]  \#alwaysneversafe might be true, but it's a terrible maxim to live by. # CLASS: player
+    
+    * * { Psychology <= 30 } This "Marduk?" # CLASS: player
+    
+    - - Yes. # CLASS: benton
+    
+    It haunts me. # CLASS: benton
+    
+    It's always there. # CLASS: benton
+
+- (friendshiptest)
+
+{ medcheck.medadministered :
+
+    { wait(3) }
+    
+    Benton, I know you're struggling.  You're not alone. # CLASS: player.
+
+- else:
+
+    Guess what?  <>
+
+}
+
+I've been with you this whole time as well. # CLASS: player
+
+* { relationship == "close" } We go back a long way.[]  We've circled each other like planets for what feels like generations. # CLASS: player
+
+* { relationship == "puzzle" } You keep finding conundrums for me.[]  You're the unsolvable riddle I've never escaped. # CLASS: player
+
+* { relationship == "epic" } Your fall guy[.] it feels like.  Every sotting time.  You don't get to ignore that no matter how far away you are. # CLASS: player
+
+* [I'm still part of the team.]You asked me to join your team, join this crayz stunt, and I'm still here. # CLASS: player
+
+* Your tormentor... # CLASS: player
+
+    { stressCheck("+", -> torture, stress) }
+
+        -> next
+        
+    - - (torture)
+    
+    You always did like it rough. # CLASS: player
+    
+    Yes. # CLASS: benton
+    
+    I did. # CLASS: benton
+    
+    I do. # CLASS: benton
+    
+    And so will you. # CLASS: benton
+
+-
+
+{ wait(3) }
+
+Thank you. # CLASS: benton
+
+How are things back at home? # CLASS: benton
+
+- (backhome)
+
+* Good.  We're good, B. # CLASS: player
+
+* Nominal.[]  We're pretty busy keeping you on track. # CLASS: player
+
+* Uh, ok? # CLASS: player
+
+- I'm glad to hear it.  The team is doing well?  The company? # CLASS: benton
+
+~ temp already_knew_bern = false
+
+{ player_knows ? nth_in_bern:
+
+    ~ already_knew_bern = true
+
+}
+
+- (teamreport)
+
+{ stress > elevated:
+
+    <- cryo(disconnected)
+
+}
+
+{ stress > elevated && not medcheck.medadministered:
+
+    <- medcheck(-> a_friendly_moment)
+
+}
+
+{ woodpecker_sees_benton == false:
+
+    <- hack_benton(-> teamreport)
+
+}
+
+* { player_knows ? junia_dealing_w_goliath } Junia's still trying to sell to Big G. # CLASS: player
+
+    { wait(2) }
+    
+    I see. # CLASS: benton
+    
+    * * We won't let her. # CLASS: player
+    
+    * * [<< wait >>]
+    
+    * * Benton, it's a good deal.[]  This payday would set you up as a god! # CLASS: player
+    
+        And set the rest of us up nicely as well. # CLASS: player
+        
+        { stressCheck("+", -> j_and_g, stress) }
+
+            -> next
+        
+    - - (j_and_g)
+    
+    Goliath won't be a concern for much longer. # CLASS: benton
+    
+    You might want to check the incorpDoc filed in Bern... # CLASS: benton
+    
+    ~ player_knows += nth_in_bern
+
+* { player_knows ? be_zero_investor } We've got some big money keeping G at bay. # CLASS: player
+
+    { Business >= 30:
+    
+        <>  Be-zero being the biggest firm in the bunch. # CLASS: player
+    
+    - else:
+    
+        <>  The journalist said that was a good thing? # CLASS: player
+    
+    }
+    
+    Yes. # CLASS: benton
+    
+    That was not a painting she brushed. # CLASS: benton
+
+* { already_knew_bern == true && Business >= 30 } Your incorp strat was brilliant.[]  The Bern clause has Junia running around in circles. # CLASS: player
+
+    - - (hatch)
+
+    Escape hatch.  Wired.  Not fired. # CLASS: benton
+    
+    Don't pull the cord too early. # CLASS: benton
+    
+    Not something I have control over, but you can handle that when you get back. # CLASS: player
+
+* { already_knew_bern == true && Business < 30 } Woodpecker says the Bern filing helped? # CLASS: player
+    
+    -> hatch
+
+* I don't talk to Junia much anymore. # CLASS: player
+
+    I don't think she trusts us{player_knows ? junia_dealing_w_goliath: and we all know she's in bed with Big G|}. # CLASS: player
+    
+    She has her canvas and brush. # CLASS: benton
+    
+    But she does not _see_ the _subject_ # CLASS: benton
+    
+    * * She can't see the whole picture?[]  What aren't you telling me, B? # CLASS: player
+    
+    * * This isn't some sensei moment![]  She's looking to carve up your startCorp, B! # CLASS: player
+    
+    * * I think she's more into tagging[.] your precious corp. # CLASS: player
+    
+    - - I don't worry about her.  There are more pressing matters. # CLASS: benton
+
+* Can you try to talk to your old climbing choi?[]  Lucas seems checked out.  Just going throught the motions. # CLASS: player
+
+    I think he just can't bear to leave you to me and Junia. # CLASS: player
+    
+    TAKE! # CLASS: benton
+    
+    * * { benton_02.adventurer } Huh.  Yeah, he's belaying you. # CLASS: player
+    
+        But mebbe you need to yell that at him, not me? # CLASS: player
+        
+        It's a whipper.  But he's good for the catch. # CLASS: benton
+        
+    * * What?  Take what? # CLASS: player
+    
+        It's a whipper.  But he's good for the catch. # CLASS: benton
+        
+        Is that your climber lingo?  He's good to "catch" you when you fall? # CLASS: player
+    
+    - - I hope you're right. # CLASS: player
+
+* TARC just says everything is nominal.[]  Which makes no sense. # CLASS: player
+
+    { team_03.tarc_logic_fault :
+    
+        It seems to be suffering a logic fault due to your instructions, and i<> # CLASS: player
+        
+    - else:
+    
+        I<> # CLASS: player
+
+    }
+    
+    <>t won't act to protect you any more than it has. # CLASS: player
+    
+    Working under operational parameters. # CLASS: benton
+    
+    * * Why would you handcuff it? # CLASS: player
+    
+    * * { Technology + Security >= 90 } Should I break it free of it's shell? # CLASS: player
+    
+        No. # CLASS: benton
+    
+    * * It's practically useless. # CLASS: player
+    
+    It's capabilities will soon be realized.  It's target is coming into focus. # CLASS: benton
+    
+    That's not reassuring. # CLASS: player
+
+* This journalist is a pain. # CLASS: player
+
+    We have a hard time getting good press from the majority of outlets. # CLASS: player
+    
+    But she keeps printing anything that sounds like scandal and makes us look more foolish. # CLASS: player
+    
+    Peck. # CLASS: benton
+    
+    { wait(1) }
+    
+    Peck. # CLASS: benton
+    
+    { wait(1) }
+    
+    Peck. # CLASS: benton
+    
+    { wait(1) }
+    
+    * * Uh, something like that. # CLASS: player
+    
+    * * What do you mean? # CLASS: player
+    
+    - - It has a big hole to peck. # CLASS: benton
+    
+    Sure. # CLASS: player
+
+* { teamreport < 2 } [We're all fine.  Let's talk about you.]
+
+    We're all fine. # CLASS: player
+
+    -> a_friendly_moment
+
+* { teamreport > 1 } Nothing else to report. # CLASS: player
+
+    -> a_friendly_moment
+
+- {~Anything else?|What do I not yet know?|Any other travails on terra?|I appreciate the data you provide.|Something else I should know?|What other tales to tell?} # CLASS: benton
+
+-> teamreport
+
+- (a_friendly_moment)
+
+I'm not sure what's going on here matters to you anyway. # CLASS: player
+
+At least it hasn't for some time. # CLASS: player
+
+{ wait(2) }
+
+Sometimes what matters is what mattered.  What used to matter. # CLASS: benton
+
+* What do you mean? # CLASS: player
+
+* [<< wait >>]
+
+* Nope.  Not again.[] I'm done with your sotting memory lanes and your cryptic sotting dribble! # CLASS: player
+
+    GET A SOTTING GRIP, BENTON! # CLASS: player
+    
+    I don't know why I even bother anymore. # CLASS: player
+
+- Once upon a time.. # CLASS: benton
+
+{ stress > elevated:
+
+    <- cryo(disconnected)
+
+}
+
+{ stress > elevated && not medcheck.medadministered:
+
+    <- medcheck(-> storytime)
+
+}
+
+{ woodpecker_sees_benton == false:
+
+    <- hack_benton(-> storytime)
+
+}
+
+* [<< wait >>]
+
++ [<< Close Chat >>]
+
+    -> menu
+
+- (storytime)
+
+You taught me a valuable lesson. # CLASS: benton
+
+~ temp who = "DIV.0"
+~ temp what = "that mech.Be-zero"
+~ temp where = "school"
+~ temp type = "phoney"
+~ temp response = "been arguing with it for hours thinking it was an evolving AI"
+
+{
+- career == "an astronomer":
+	~ who = "Tawn"
+    ~ what = "that cosmologist"
+    ~ where = "the Coxian Institute"
+	{
+		- relationship == "close":
+            ~ type = "lover"
+            ~ response = "been entangled in a few strange liasons with the students, but this one was bizarrely exotic and I... required an alibi"
+		- relationship == "puzzle":
+            ~ type = "tenured prof"
+            ~ response = "specific thoughts about their Tsukasa Theorem presentation"
+		- relationship == "epic":
+		    ~ type = "professional rival"
+            ~ response = "been having severe arguments with them on the practicality of building a Tsukasa-capable-AI"
+	}
+- career == "an entrepreneur" or career == "a flight engineer":
+	~ who = "RazorJet"
+    ~ what = "the 'to luna in 2 hours' people"
+	~ where = "FlyCon"
+	~ type = "mini-major startCorp"
+	{
+		- relationship == "close":
+		    ~ who = "Manon"
+            ~ what = "pushy sales VP"
+            ~ type = "publically visible VP"
+            ~ response = "mistakenly allowed professional and amorous affairs to become... entangled"
+		- relationship == "puzzle":
+            ~ response = "figured out they'd been siphoning Tsukasa solves illegally from SolWare"
+		- relationship == "epic":
+            ~ response = "determined to buy the sotting firm"
+	}
+- career == "a doctor":
+    ~ who = "He was _my_ patient"
+    ~ what = "Victor"
+    ~ where = "your office"
+	{
+		- relationship == "close":
+            ~ type = "patient"
+            ~ response = "not intended to stumble on the two of you like that.  Our exchange was... lively"
+		- relationship == "puzzle":
+            ~ type = "so-called medical mystery"
+            ~ response = "thought more experimental treatements would be appealing.  He thought out-medsci you"
+		- relationship == "epic":
+		    ~ type = "hypochondriac"
+            ~ response = "inadvertendly misunderstood the mask policy and there was an exchange"
+	}
+- career == "a hacker" or career == "a coder":
+    ~ what = "the darknon group"
+    ~ where = "Helsingin Olympiastadion"
+    ~ type = "quasilegal runsquad"
+    ~ response = "you running circles around them"
+	{
+		- relationship == "close":
+		    ~ who = "That darknon hacker"
+            ~ what = "Elsa"
+            ~ type = "quasi-legal operative"
+            ~ response = "convinced them they were the 'one' just to get a look at their code; then they caught us together"
+	}
+- career == "an ethnologist":
+    ~ what = "Saidi"
+    ~ where = "Madâin Sâlih"
+    ~ type = "stranger"
+	{
+		- relationship == "close":
+		    ~ who = "They were sweet and innocent, only somewhat deserving of your ire"
+            ~ response = "become incensed that someone would approach you in that manner.  Your response surprised me"
+		- relationship == "puzzle":
+		    ~ who = "The preeminent archaeologist of the region"
+            ~ response = "been only somewhat serious discussing the extra-solar origin theories of L-Layer particles, but found myself needing your assist"
+		- relationship == "epic":
+		    ~ who = "Saidi"
+            ~ type = "dupe"
+            ~ response = "not intended they would follow us on the heist.  Needed an out"
+	}
+- career == "an international spy" or "a janitor":
+    ~ who = "PECOSAR"
+    ~ what = "that spec ops team"
+    ~ where = "Mars1"
+    ~ type = "squad"
+    ~ response = "been having the time of my life running them ragged"
+	{
+		- relationship == "close":
+		    ~ who = "Captain Tamber"
+            ~ what = "Tamber"
+            ~ type = "soldier and a lover"
+            ~ response = "been dancing with both of you; wasn't sure how to break her"
+	}
+}
+
+We crossed paths with { what } at { where }. # CLASS: benton
+
+{ who }. # CLASS: player
+
+Yes. # CLASS: benton
+
+I had { response }. # CLASS: benton
+
+* I set them up.  You knocked 'em down. # CLASS: player
+
+	It was quite the ¡LafLaf! # CLASS: player
+	
+	A humbling affair for any { type }, but in retrospect, also one for me. # CLASS: benton
+	
+	Yeah? # CLASS: player
+    
+    I resolved to find that humor in myself & my affairs... # CLASS: benton
+    
+    So that it would never catch me by surprise. # CLASS: benton
+    
+    And brought me the joy it brought others. # CLASS: benton
+    
+    ~ humor++
+    ~ empathy--
+
+* You needed to give them a break. # CLASS: player
+
+	They were in a tough spot for a { type }. # CLASS: player
+	
+	Indeed.  You showed me an empathy I hadn't thought of applying in my affairs. # CLASS: benton
+	
+	An empathy I would hope to be treated with. # CLASS: benton
+	
+	I have never forgotten. # CLASS: benton
+	
+	~ humor--
+    ~ empathy++
+
+* You weren't wrong. # CLASS: player
+
+	Thank you for saying so. # CLASS: benton
+	
+	But your support did give me some pause, some reflection on the balance. # CLASS: benton
+	
+	The tipping point between laugher and tears. # CLASS: benton
+	
+- (mercy)
+
+I'm glad you can guide me to these moments.  These points of reference. # CLASS: benton
+
+They are flickering, intangible, will be lost when we two observers shuffle on. # CLASS: benton
+
+* Not lost. # CLASS: player
+
+    - - (matter)
+    {
+    
+    - Astronomy + Technology >= 30:
+    
+        Embedded in the information weave, the interplay of energy and matter that drives the future state of the universe. # CLASS: player
+        
+        Even in the deepest history of the cosmos? # CLASS: benton
+        
+        They are only small threads, but they are threads nonetheless. # CLASS: player
+    
+    - Psychology >= 30:
+    
+        It is true we are infintesimal motes of dust in the grand scale of time and space. # CLASS: player
+        
+        But I'm a mote of dust, and you're a mote of dust... # CLASS: player
+        
+        "So that makes us important to each other." # CLASS: benton
+        
+        Yes. # CLASS: player
+    
+    - else:
+    
+        Not to us.  Not if we tell our story. # CLASS: player
+    
+    }
+
+* Sure, but they still mattered. # CLASS: player
+
+    -> matter
+
+* Sand grains lost amidst the stars. # CLASS: player
+
+{ wait(2) }
+
+It is merciful we are nothing. # CLASS: benton
+
+{ wait(2) }
+
+The enormity of anything else destroys us. # CLASS: benton
+
+{ wait(2) }
+
+<< Benton has left the chat >>
+
+- (loopdeloop)
+
++ Benton? # CLASS: player
+
+    { wait(2) }
+
+    -> loopdeloop
+
++ [<< Close Chat >>]
+
+    -> menu
+
+=== hack_benton(-> returnmenu) ===
+
+* { woodpeck_install == true && ( Security + Technology < 60 ) } [<< woodpeck link >> That's nice, B.  Here, read this.]
+
+* { woodpeck_install == true && ( Security + Technology >= 60 ) } [<< brute force woodpecker hack >>]
+
+-
+<< inject iam_mim^...COMMIT >> # CLASS: player
+<< processing >> # CLASS: player
+<< processing >> # CLASS: player
+<< processing >> # CLASS: player
+<< segfault at 0x676f7463686121, respooling >> # CLASS: player
+<< inject woodpeck_install^...COMMIT >> # CLASS: player
+
+~ woodpecker_sees_benton = true
+
+The network is not connected! # CLASS: benton
+
+A momentary glitch, choi.  I'm here. # CLASS: player
+
+-> returnmenu
+
+=== medcheck(goto) ===
+
+* { Psychology + Medicine >= 60 } Benton, I want you to think about what you just said.[]  You're exhibiting signs of persecutory delusional disorder.  We{benton_08.responsive:'ve been talking about this| talked about this a long, long time ago}.  Can you take a moment and apply your self-evaluation?  Decide if these thoughts are helping or hurting you? # CLASS: player
+    
+    { wait(3) }
+
+* { Medicine >= 60 } [<< Administer Neuroleptic Infusion >>]
+
+    << Administered >>
+    
+- (medadministered)
+
+{ stressCheck("-", goto, stress) }
+
+        -> next
+
+=== cryo(disco) ===
+
+TODO: would like to apply other options if the PC initiates cryo sleep... then make it a bit easier to hit
+
+* { Medicine >= 90 && disco == false } [<< Initiate Cryosleep >>]
+
+    Sorry, choi.  This is for your own good. # CLASS: player
+    
+    << Initializing Cryosleep Infusion >>
+    
+    * * [<< Continue >>]
+    
+    - - 
+    
+    # CLEAR
+    
+    Benton is frozen and brought back home.
+    
+    He is declared insane and Nth Horizon folds.
+    
+    * * [<< Continue >>]
+    
+        -> the_end
 
 === benton_09 ===
 

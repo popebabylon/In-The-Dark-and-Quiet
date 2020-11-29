@@ -898,7 +898,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
     
         Yes. # CLASS: tarc
         
-        Analsis is ongoing.  However, our entanglement with the q-sat array means the probability of accurately identifying patterns in reality is 4.73e+12. # CLASS: tarc
+        Analsis is ongoing.  However, our entanglement with the q-sat array means the probability of accurately identifying patterns in reality is 4.73e+12 to one. # CLASS: tarc
     
     * * { tarc_02.hightail_hacker or tarc_01.hackit or tarc_01.hackit0 } Uhm.  I may have something to confess. # CLASS: player
     
@@ -1002,7 +1002,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
         
             I see.  That has not come up as a threat to our system at this time. # CLASS: tarc
     
-    * * { tarc_01.tarc_history } TARC, [I know you.  What's wrong?] your predictive analytics subroutines would have crushed the network patterning in no time back when I was working on them, and that was _years_ ago. # CLASS: player
+    * * { tarc_01.tarc_history or Technology >= 60 } TARC, [I know you.  What's wrong?] your predictive analytics subroutines would have crushed the network patterning in no time back when I was working on them, and that was _years_ ago. # CLASS: player
     
         At the very least you should be able to identify and reroute dangerous traffic, even if you can't pin the source. # CLASS: player
     
@@ -1020,7 +1020,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
         
             Correct. # CLASS: tarc
             
-        - - -
+        - - - (tarc_logic_fault)
         
         Can't we fix that? # CLASS: player
         

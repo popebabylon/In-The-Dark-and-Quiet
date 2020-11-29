@@ -72,24 +72,15 @@ Technology
 */
 
 // "aspect" list for reference
-
 /*
+avarice
+generosity
+diplomacy
 violence
+risky
+cautious
 love
 money
-generosity
-???
-*/
-
-// other variables for reference
-
-/*
-woodhack
-
-kim_knows = flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild
-
-woodpeck_install
-
 */
 
 // relationship list for reference

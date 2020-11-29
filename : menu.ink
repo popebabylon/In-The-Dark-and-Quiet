@@ -421,7 +421,7 @@
     
         ~ junia_chat_divert = -> junia_hack
         
-    - status == (Approaching_Pluto) && not junia_03: 
+    - status == (Approaching_Pluto) && not junia_03 && benton_08: 
     
         ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
@@ -475,7 +475,7 @@
     
         ~ lucas_chat_divert = -> lucas_02
         
-    - status == (Approaching_Pluto) && not lucas_03: 
+    - status == (Approaching_Pluto) && not lucas_03 && benton_08: 
     
         ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
@@ -511,7 +511,7 @@
     
         ~ tarc_chat_divert = -> tarc_02
         
-    - status == (Approaching_Pluto) && not tarc_03 && woodpecker_02: 
+    - status == (Approaching_Pluto) && not tarc_03 && woodpecker_02 && benton_08: 
     
         ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     

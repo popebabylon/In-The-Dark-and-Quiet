@@ -361,8 +361,6 @@ This does appear to be a new threat.  Have they compromised you or any of the da
 
 === tarc_02 ===
 
-VAR tarceye_install = false
-
 # CLEAR
 
 { wait(3) }

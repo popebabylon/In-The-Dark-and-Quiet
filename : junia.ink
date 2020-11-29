@@ -155,8 +155,6 @@ I know they're old climbing chois or something.  But I just don't know why Bento
 
 = junia_intro
 
-VAR career = ""
-
 { early_exit:
     
     # CLEAR
@@ -267,15 +265,19 @@ VAR career = ""
 
 Not questioning you, you understand.  Just wondering what he said (that he was allowed to say) that convinced you to sign our NDA and hop on for the ride? # CLASS: junia
 
-VAR relationship = ""
+* We've always been... close. # CLASS: player
 
-* We've always been close[.], and with our history you just trust each other. # CLASS: player
+    Sometimes that grows into an unshakeable trust in each other. # CLASS: player
 
     Even after months?  Or years? # CLASS: junia
     
     Yeah.  # CLASS: player
     
-    I don't think I trust Benton quite that much.  But enough to be in business with him. # CLASS: junia
+    I don't think I trust Benton quite that much. # CLASS: junia
+    
+    { wait(2) }
+    
+    But I trust him enough to be in business with him. # CLASS: junia
     
     ~ relationship = "close"
 
@@ -584,9 +586,6 @@ What Benton is doing tips the balance in our favor. # CLASS: junia
 
 - I think you should consider the value you have to this project, and what that translates to in the long run.  Any knowledge gained is subject to NDA.  But value is not. # CLASS: junia
 
-    VAR avarice = 0
-    VAR generosity = 0
-
 * I'm not here to make money. # CLASS: player
 
     ~ avarice--
@@ -624,9 +623,6 @@ We'll chat again soon.  Thank you. # CLASS: junia
 === junia_hack ===
 
 ~ temp junia_temper = 0
-
-VAR tarc_sees_junia = false
-VAR woodpecker_sees_junia = false
 
 # CLEAR
 

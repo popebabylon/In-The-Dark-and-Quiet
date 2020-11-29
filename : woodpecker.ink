@@ -70,8 +70,6 @@
 
 # CLEAR
 
-VAR knows_kim = false
-
 Peck.
 { wait(1) }
 Peck.
@@ -124,6 +122,10 @@ Peck.
     { wait(1) }
     
     - - (tracing_woodpecker) << success; trace started >> # CLASS: player
+    
+    << 64.52% probablility target is Kimberley Speight : 0x776f6f647065636b6572 >>
+    
+    ~ knows_kim = true
 
 * [<< Close Chat >>]
 
@@ -211,8 +213,6 @@ I'll be around.
     -> menu
 
 === woodpecker_02 ===
-
-VAR woodpeck_install = false
 
 ~ temp facts_shared = 0
 

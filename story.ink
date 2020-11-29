@@ -63,6 +63,7 @@ VAR date_month = 7
 VAR date_day = 15
 
 // set company values
+TODO: NTH VARS: actually use these as the story progresses
 VAR Nth_NAV = 50
 VAR Nth_ENG = 50
 VAR Nth_BIZ = 50
@@ -72,8 +73,42 @@ VAR Nth_PR = 50
 VAR Nth_IT = 50
 
 // setup states
+VAR career = ""
+VAR relationship = ""
 VAR woodhack = false
 VAR tarc_sees_woodpecker = false
+VAR knows_kim = false
+VAR woodpeck_install = false
+VAR tarceye_install = false
+VAR tarc_sees_junia = false
+VAR woodpecker_sees_junia = false
+LIST jupiter_flyby_status = (approach), pre_burn, entry_burn, perijove, exit_burn, apojove, escape, deep_space
+LIST jupiter_flyby_status_color = (green), orange, red
+LIST stress = (nominal), elevated, excessive, critical
+VAR next = -> benton_05.firstStress
+VAR drugs = 0
+VAR clipped = false
+VAR blocked = true
+VAR disconnected = true
+VAR b_responsivness = 0
+VAR woodpecker_sees_benton = false
+
+// setup aspects
+VAR avarice = 0
+VAR generosity = 0
+VAR diplomacy = 0
+VAR violence = 0
+VAR risky = 0
+VAR cautious = 0
+VAR love = 0
+VAR money = 0
+VAR humor = 0
+VAR empathy = 0
+
+// setup profile variables
+VAR picture = "?"
+VAR name = "?"
+VAR pronoun = "?"
 
 // having a TODO makes it easy to jump here to turn on/off
 TODO: COMPILE: check debugger state and clear foo VARS
@@ -100,7 +135,7 @@ VAR foo = true
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> news_07
+    -> benton_08
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     

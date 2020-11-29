@@ -12,10 +12,6 @@ Welcome to the Nth Horizon. <br><br>You have been invited to the secure communic
 
 = profile
 
-VAR picture = "?"
-VAR name = "?"
-VAR pronoun = "?"
-
 // picture
 Select your identity for biometric validation. # CLEAR # PICTUREPAGE
 
