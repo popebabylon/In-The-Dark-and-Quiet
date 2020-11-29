@@ -1180,9 +1180,338 @@ Goodbye, { name } # CLASS: junia
 
 # CLEAR
 
-J is cementing a deal with Goliath and can make P very rich if they play along # CLASS: junia
+{ name }. # CLASS: junia
 
-Junia, all smiles, tries to ingratiate herself with the PC one more time given their obvious accumen and impact on the project.  She wants a clean transfer of power and can share all the benefits that would come with a sale to Goliath.  Benton is a lost cause. # CLASS: junia
+{ name } are you there? # CLASS: junia
+
+I don't have much time. # CLASS: junia
+
+* Uh, hi Junia? # CLASS: player
+
+* I'm here.[]  What do you want? # CLASS: player
+
+* Go sot it, J. # CLASS: player
+
+    I don't have *any* time to play games. # CLASS: junia
+    
+    -> junia_hack.junias_done
+    
+- Thank you for your promptness. # CLASS: junia
+
+{ junia_02.junia_avarice:
+
+    We previously spoke about opportunities.  <>
+    
+}
+
+You seem like a sharp {career=="an entrepreneur":business{pronouner("man","woman","person")}|professional} who wouldn't let a good opportunity pass them by. # CLASS: junia
+
+Am I right? # CLASS: junia
+
+* I'm not in it for the money[.] despite what you may think of me. # CLASS: player
+
+    I'm not talking about money. # CLASS: junia
+    
+    I'm talking about Money.  # CLASS: junia
+    
+    And career-making moves. # CLASS: junia
+    
+    Are you in or out? # CLASS: junia
+    
+    * * In. # CLASS: player
+    
+    * * Out. # CLASS: player
+    
+        -> junia_hack.junias_done
+
+* I think that depends.[]  What kind of opportunity are we talking about? # CLASS: player
+
+* Yah.[]  What's cooking? # CLASS: player
+
+- 
+
+{ wait(2) }
+
+Let me be frank.  I don't think I can trust you. # CLASS: junia
+
+But I also know how much I can hurt you if this goes sideways. # CLASS: junia
+
+So here is the raw deal. # CLASS: junia
+
+I have all the pawns in place to cement a merger with SaturnExpress. # CLASS: junia
+
+Not just an acquisition.  Not us begging at the table for scraps. # CLASS: junia
+
+Full partner acquisition. # CLASS: junia
+
+And SaturnExpress has deep pockets. # CLASS: junia
+
+* { player_knows ? junia_dealing_w_goliath } Goliath pockets. # CLASS: player
+
+    { wait(1) }
+    
+    If you insist. # CLASS: junia
+    
+* ->
+
+- (deal_details)
+
+* This benefits both you and Benton? # CLASS: player
+
+    We'll get into details in a moment.  But it benefits all of Nth Horizon. # CLASS: junia
+    
+    * * You most of all? # CLASS: player
+    
+        This exit will be just reward for all the effort I've put into this startCorp. # CLASS: junia
+    
+    * * Sounds good. # CLASS: player
+
+* Not sure how this helps me. # CLASS: player
+
+    ¡sigh! # CLASS: junia
+    
+    You need a little more imagination, { pronouner("choi","chai","chen") }! # CLASS: junia
+    
+    I'm asking you to do me a favor.  And in return I will treat you _exceptionally_ well when this merger goes through. # CLASS: junia
+    
+* Who else are you looping in? # CLASS: junia
+
+    Nobody.  This is classified by the board and red-taped to Andromeda and back. # CLASS: junia
+    
+    * * So why tell me? # CLASS: player
+    
+        Because I need a favor. # CLASS: junia
+
+* Get to the point. # CLASS: player
+
+    -> dirtydeeds
+
+* { deal_details > 1 } What are you asking of me? # CLASS: player
+
+    -> dirtydeeds
+    
+- -> deal_details
+
+- (dirtydeeds)
+
+Follow this link. # CLASS: junia
+
+* [<< ¡∂å992jkß¬lo92¬∆Ω–-0ewi9 >>]
+    
+    ~ goliath_sees_player = true
+
+* { Technology + Security >= 90 } [<< Decrypt & Sandbox >>]
+
+    ~ goliath_sees_player = false
+    
+    << start.sandbox^...COMMIT >>
+    << start.decrypt^...COMMIT >>
+    << inject << ¡∂å992jkß¬lo92¬∆Ω–-0ewi9 >>^...COMMIT >>
+    << processing >>
+    { wait(2) }
+    << processing >>
+    { wait(2) }
+    << processing >>
+    { wait(4) }
+    << segfault at 0x676f6c69617468696e666f736563, respooling >>
+    
+    << caught: outgoing request >>
+    
+    * * [<< block outgoing request >>]
+    
+        << blocked >>
+        
+        Have you followed the link yet? # CLASS: junia
+        
+        It's not working. # CLASS: player
+        
+        { wait(2) }
+        
+        I told you I don't play games. # CLASS: junia
+        
+            -> junia_hack.junias_done
+    
+    * * [<< softcatch outgoing request >>]
+    
+        << request caught, obfuscating >>
+    
+    * * [<< release outgoing request >>]
+    
+        ~ goliath_sees_player = true
+
+* TARC told me to specifically not do that. # CLASS: player
+
+    Don't be such a baby.
+    
+    -> dirtydeeds
+    
+* { dirtydeeds > 1 }No, sorry, I'm out. # CLASS: player
+
+    -> junia_hack.junias_done
+
+- << redirecting... >>
+
+<< secure tunnel open >>
+
+Now we can talk without AI interference. # CLASS: junia
+
+Thank you for trusting me. # CLASS: junia
+
+* What's the big deal? # CLASS: player
+
+* [<< wait >>]
+
+- Let me set some things straight for you.
+
+Yes, the merge deal ties back to Goliath.  They are also now your *best* friends so I'd suggest you consider any pithy comments about them carefully. # CLASS: junia
+
+~ player_knows += junia_dealing_w_goliath
+~ player_knows -= nada
+
+50% of the Nth Horizon board is already Goliath friendly. # CLASS: junia
+
+~ player_knows += goliath_hands_in_pie
+
+So as you can see we are already in a very promising and potentially lucrative position by which to propel Nth Horizon, and the human species, into the next phase of space travel. # CLASS: junia
+
+* I knew it, you sot! # CLASS: player
+
+    Language! # CLASS: junia
+    
+    I'll ask you one more time to set your emotions aside and treat this conversation as a professional. # CLASS: junia
+    
+    * * Sot off! # CLASS: player
+    
+        -> junia_hack.junias_done
+
+    * * [<< wait >>]
+    
+        Good. # CLASS: junia
+
+* [<< wait >>]
+
+* [What do you want?]When are you going to tell me what you want? # CLASS: player
+
+-
+
+{ goliath_sees_player == false:
+
+    ~ player_knows += j_betray_proof
+
+}
+
+The final piece of this puzzle is our mutual friend. # CLASS: junia
+
+Benton is a lost cause. # CLASS: junia
+
+He will not make it back alive, and we'll be lucky if we can retrieve the Lowell's Horizon.  # CLASS: junia
+
+A regrettable write-off, but not one to be surprised about. # CLASS: junia
+
+The problem is some members of the board wants to wait for Benton's... demise before approving any further action on the acquisition. # CLASS: junia
+
+I think you are uniquely positioned to help us with this... # CLASS: junia
+
+problem # CLASS: junia
+
+~ player_knows += junia_wants_b_dead
+
+- (uglydeets)
+
+* You want me to kill Benton? # CLASS: player
+
+    I want you to put him out of his misery. # CLASS: junia
+
+    * * Say no more. # CLASS: player
+
+    * * No.  Can't.  Won't.  # CLASS: player
+    
+        Dissapointing. # CLASS: junia
+        
+        -> junia_hack.junias_done
+
+    * * Any specifics in mind? # CLASS: player
+    
+        I don't do details. I do vision. # CLASS: junia
+        
+        Helpful. # CLASS: player
+        
+        I have no doubt you'll figure it out. # CLASS: junia
+        
+* [<< wait >>]
+- 
+
+* There might be some things you've overlooked. # CLASS: player
+
+    I'm not sure I follow? # CLASS: junia
+    
+    - - (overlooked)
+    
+    * * I'm not your lackey![]  Take your greedy conspiracy and shove it in a black hole! # CLASS: player
+    
+        Dissapointing. # CLASS: junia
+        
+        -> junia_hack.junias_done
+    
+    * * { player_knows ? j_betray_proof }[This session was recorded.]I spoofed your masters' pathetic scriptKiddy tunnel.  They haven't got anything on me and I just got binary proof of conspiracy to murder.  How's that?
+    
+        -> junia_hack.junias_done
+    
+    * * { player_knows ? be_zero_investor && Business >= 30 }That 50% *not* in G's pocket includes Be-zero[.] investments.  I don't think you have the support you need to merge without them. # CLASS: player
+    
+        Oh, good, you have been paying attention! # CLASS: junia
+        
+        But please don't worry about that.  It's taken care of. # CLASS: junia
+    
+    * * { player_knows ? nth_in_bern && Business >= 30 } You can't overrule Nth Horizon's initial filing in Bern.[]  I think that leaves your merger plan in some doubt. # CLASS: player
+    
+        I see. # CLASS: junia
+        
+        Someone has been nosey. # CLASS: junia
+        
+        But I think you can leave that to the megaCorp lawyers to sort out. # CLASS: junia
+        
+        They tend to earn their extremely large paychecks turning those details into forgotten history. # CLASS: junia
+    
+    * * { player_knows ? bentons_master_plan } You think you have all the cards, but B's playing you.[]  You'll see. # CLASS: player
+    
+        So I take it you're still playing lapdog to your old choi then? # CLASS: junia
+        
+        How dissapointing. # CLASS: junia
+        
+        -> junia_hack.junias_done
+    
+    * * Nothing specific[.], just pointing out to be careful with these... endeavours.  # CLASS: player
+    
+        I see. # CLASS: junia
+        
+        Very well.  I will await word. # CLASS: junia
+        
+        -> tunneldown
+    
+    * * -> tunneldown
+    
+    - - -> overlooked
+
+* [<< wait >>]
+
+    Very discreet. # CLASS: junia
+
+- Good.  I'll await word. # CLASS: junia
+
+- (tunneldown)
+
+<< secure tunnel closed >>
+
+{ goliath_sees_player == false:
+
+    << closing sandbox >>
+    
+    << storing record >>
+    
+    ~ player_knows += j_betray_proof
+
+}
 
 + [<< Close Chat >>] -> menu
 
