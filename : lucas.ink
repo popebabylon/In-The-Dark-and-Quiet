@@ -376,13 +376,572 @@ And if things turn for the worst we figure out how to turn him around. # CLASS: 
 
 # CLEAR
 
-Lucas wants to turn the boat around, admits to being out of his league # CLASS: lucas
+Dr. Estévez<> # CLASS: player
 
-Lucas is at a loss of how to deal with Benton's wild ramblings.  He might even admit to being out of his league, that the top-notch team they assembled hasn't had to deal with someone this far removed from humanity.  This is entirely new ground.  And it's falling out from under them. # CLASS: lucas
+{
+- benton_08.responsive:
 
-If they want to save their patient they need him to cryosleep and turn around right now... # CLASS: lucas
+    ?
 
-+ [<< Close Chat >>] -> menu
+    * Dr. Estévez.[]  Reporting Benton check-in 1,823. # CLASS: player
+    
+        -> report
+
+- else:
+
+    !
+
+    * Lucas!  Benton's back! # CLASS: player
+    
+        -> report
+    
+}
+
+* Doc, you "in"?[]  Had an interesting chat with our choi Benton. # CLASS: player
+
+- (report)
+
+Yes.  Yes, I saw. # CLASS: lucas
+
+* Good news, don't you think? # CLASS: player
+
+* You seem underwhelmed. # CLASS: player
+
+* You want something more dramatic? # CLASS: player
+
+- Benton is alive for now, this is good. # CLASS: lucas
+
+But I don't see how it changes his prognosis in the long run. # CLASS: lucas
+
+Junia won't commit to a cryosleep with the "mission so close to succeeding," and the Pluto Flyby may kill him outright. # CLASS: lucas
+
+* You haven't given up on him yet. # CLASS: player
+
+* Long odds[.], but he's beaten them before. # CLASS: player
+
+    I know.
+
+* So quit.[]  Get outta here while the getting is good. # CLASS: player
+
+- I've not known him as long as you have, but I have known him during some of the hardest physical & mental struggles he faced before now. # CLASS: player
+
+The 7SUMMITS in 77 days.  Meru in a 2-week blizzard.  Failed attempt at Olympus Mons. # CLASS: player
+
+These are not jokes. # CLASS: player
+
+I tried to make him see that this, this _obsession_ could not be treated so lightly # CLASS: player
+
+I fear I failed. # CLASS: player
+
+* { benton_02.adventurer } I'm no stranger to physical hardship[.], but I know what you mean.<>
+
+* { career == "an international spy" } [Can he keep calm facing certain death?]  Keeping calm while facing certain death is different. # CLASS: player
+
+    And I mean "certain." # CLASS: player
+
+* { Psychology >= 30 } "Those who travel to mountain-tops[..."] are half in love with themselves, and half in love with oblivion." # CLASS: player
+
+    Ah, you've read Macfarlane? # CLASS: lucas
+    
+    Yes.  Not avidly, but some of his work. # CLASS: player
+    
+    I admit I had to sysSearch to recall that exact quote.  But it has relevance here. # CLASS: player
+    
+* He hasn't failed yet[.], though... # CLASS: player
+
+* Sure, abandon him. # CLASS: player
+
+- Few people have faced this level of isolation. # CLASS: player
+
+* [It's hard to watch.]
+
+    { Psychology + Medicine >= 30:
+    
+    And it's really hard to watch someone you care about put themselves through that. # CLASS: player
+    
+    - else:
+    
+    It's hard to watch. # CLASS: player
+    
+    }
+
+    Indeed. # CLASS: lucas
+    
+    Though witnessing suffering is part of {career=="a doctor":our|my} profession, yah? # CLASS: lucas
+    
+    * * { Psychology >= 30 } It's still a burden. # CLASS: player
+    
+    * * { career == "a doctor"} Yes.[]  Something we have to live with. # CLASS: player
+    
+    * * Sure. # CLASS: player
+    
+    - - <>  Something {career=="a doctor":we|you} have to process{career != "a doctor" && Psychology <30:, I guess}. # CLASS: player
+
+* I know I couldn't.[]  I imagine you're in the same boat. # CLASS: player
+
+    Indeed. # CLASS: lucas
+    
+    Perhaps Benton should have done more long-distance single-handed sailing to prepare for this feat? # CLASS: lucas
+    
+    * * ¡LafLaf! # CLASS: player
+    
+        Oh, you find it funny. # CLASS: lucas
+        
+        But t<>
+    
+    * * Would that have worked? # CLASS: player
+    
+        I don't know. # CLASS: lucas
+        
+        But t<>
+    
+    * * If you say so. # CLASS: player
+    
+        T<>
+    
+    - - <>here are precedents for the mental strain he's undergoing out there on the ocean. # CLASS: lucas
+        
+        Crowhurst, Essex, Medusa, Zhào.  # CLASS: lucas
+        
+        Distance from shore compells the mind in vicious and powerful ways. # CLASS: lucas
+        
+        { kim_knows ? benton_crazy or kim_knows ? benton_crazy2:
+        
+            Perhaps this "Marduk" is his Fata Morgana? # CLASS: lucas
+        
+        }
+
+* [He could pop.]If he pops out there, not much we can do. # CLASS: player
+
+    No. # CLASS: lucas
+    
+    { benton_05.popped or benton_06.crayz or benton_07.benton_breakdown: 
+    
+        Although perhaps your actions could do more to avoid such a fate. # CLASS: lucas
+    
+    }
+    
+    When he took a shakedown cruise to Mars there was so much that still wasn't fully tested, reliable. # CLASS: lucas
+    
+    But we had PECOSAR or WHD.Space or even Goliath to fall back on if anything went wrong.  # CLASS: lucas
+    
+    He is now well beyond where any help can reach him. # CLASS: lucas
+
+-
+
+{ wait(3) }
+
+But I digress. # CLASS: lucas
+
+Your report is noted, { name }. # CLASS: lucas
+
+CMO is in receipt.  There are no new recommendations.  You already know what I think we should do. # CLASS: lucas
+
+- (recommendations)
+* Remind me.  # CLASS: player
+
+    Immediate cryo infusion of the gel-quarium.  Turn the boat around at the first opportunity.  Pray he's coherent when we defrost him in 18 months time. # CLASS: lucas
+    
+    - - (about_cryo)
+    
+    * * Is cryo really that safe? # CLASS: player
+    
+        ¡LafLaf! # CLASS: lucas
+        
+        { wait(3) }
+        
+        You're not serious, are you? # CLASS: lucas
+        
+        Compared to what he's going through right now, it's a spa treatment! # CLASS: lucas
+        
+    * * Why would Benton explicitly proscribe cryo? # CLASS: player
+    
+        Machismo.  PR.  Cred. # CLASS: lucas
+        
+        Take your pick.  # CLASS: lucas
+        
+        * * * Machismo.[]  Like your mountains. # CLASS: player
+        
+            Though we never beat our chests about those battles. # CLASS: lucas
+            
+            They are personal.  Spiritual. # CLASS: lucas
+            
+            Could this not be the same? # CLASS: player
+            
+            Hmph. # CLASS: lucas
+            
+        * * * PR.[]  If he succeeds it paints him as the entrepreneur-god-king of the Nth Horizon Empire. # CLASS: player
+        
+            Something his ego would undoubtedly find attractive. # CLASS: lucas
+            
+        * * * Cred.[]  I mean, I'll give him ALL the props if he don't die/go crayz. # CLASS: player
+        
+        * * * No, I think there's something else.[]  This is too risky of a move with the cryo option on the table.  Nobody would fault him for taking a nap to save his skin. # CLASS: player
+        
+            { wait(2) }
+        
+            You think he would risk his health and sanity because there's a larger risk at play? # CLASS: lucas
+            
+        - - - 
+        
+        * * * { Business + Psychology + Security >= 60 }Think about it. # CLASS: player
+        
+            * * * * He's off the chessboard, probably considered a non-player by the opposition. # CLASS: player
+            - - - - 
+            * * * * He looks weak, Nth starts looking like a tasty gazelle with a broken leg. # CLASS: player
+            
+            - - - - 
+            * * * * But he has q-sat.  Real-time, full speed sysNet connection. # CLASS: player
+            
+            - - - - 
+            * * * * He still has TARC. # CLASS: player
+            
+            { risky > 0 or avarice > 0:
+            
+                { wait(2) }
+            
+                He still has me. # CLASS: player
+            
+            }
+            
+            ~ player_knows += bentons_master_plan
+            
+            That is... # CLASS: lucas
+            
+            { wait(2) }
+            
+            A stretch.  # CLASS: lucas
+            
+            You keep working your conspiracy theory.  I think the problem is Gordian.  Benton has hubris just like the rest of us. # CLASS: lucas
+        
+        * * * Maybe? # CLASS: player
+        
+            It does not seem likely. # CLASS: lucas
+            
+    * * Can we force the issue?[]  Just trigger the cryo? # CLASS: player
+    
+        Technically? Yes. # CLASS: lucas
+        
+        { Medicine >= 90 or char_can_cryo == true:
+        
+            I already gave you operational control of the infusion given your skillset. # CLASS: lucas
+            
+        - else:
+        
+            I'll give you operational control of the infusion trigger for cryo. # CLASS: Lucas
+            
+            ~ char_can_cryo = true
+        
+        }
+        
+        But using it goes expressly against Nth policy, Benton's wishes, TARC's programming... # CLASS: lucas
+        
+        ...and Junia will kill you. # CLASS: lucas
+        
+        * * * Understood. # CLASS: player
+        
+        * * * Sot Junia! # CLASS: player
+        
+            Your funeral, hombre. # CLASS: lucas
+    
+    * * {about_cryo > 1 }Enough about cryo. # CLASS: player
+    
+        -> recommendations
+    
+    - - -> about_cryo
+    
+* Junia is acting CEO.[]  Shouldn't she be the one getting your recommendations? # CLASS: player
+
+    She is and she does.  But she does as little as you to act on them. # CLASS: lucas
+    
+    - - (about_junia)
+    
+    * * { player_knows ? junia_dealing_w_goliath }  We know she's trying to sell[.] to Goliath. # CLASS: player
+    
+        Goliath.  SaturnExpress.  Be-zero.  It doesn't matter. # CLASS: lucas
+        
+        They're all putting the company above a life. # CLASS: lucas
+        
+    * * { Business >= 60 or player_knows ? nth_in_bern } There are options to wrest power from Junia[.] if we can get the board on our side. # CLASS: player
+    
+        Much luck to you. # CLASS: lucas
+        
+        But I would sooner wager on rain falling on Utahzona. # CLASS: lucas
+    
+    * * Why do you think she refuses? # CLASS: player
+    
+        On paper?  It's all Benton's express instructions. # CLASS: lucas
+        
+        Even a nano-thin margin that he pulls this off is used as an excuse to prevent basic common sense. # CLASS: lucas
+        
+        * * * On paper, sure.[]  But why else? # CLASS: player
+        
+            One could speculate, but I'm trying to trust that Junia is making decisions she thinks are right for the good of the company _and_ Benton. # CLASS: lucas
+        
+            Benton was... is a sharp bizHead.  I can't imagine he'd be taken in by a shark. # CLASS: lucas
+            
+        - - -
+            
+    * * Do you have anything on her we could use? # CLASS: player
+    
+        What, blackmail? # CLASS: lucas
+        
+        * * * { Security >= 30 or career == "an international spy" or career == "a janitor" } In the business we call it coercion.[]  And it's usually made easier with medisci records or corp juice. # CLASS: player
+        
+            Sometimes you worry me, { name }. # CLASS: lucas.
+            
+            But no.  # CLASS: lucas
+        
+        * * * Or something!
+        
+        - - - I'm not in a position to know anything damaging about Junia, and if I were my professionalism would prevent me from divulging. # CLASS: player
+        
+    * * { about_junia > 1 }Well, back to your recommendations. # CLASS: player
+    
+        Yes? # CLASS: lucas
+    
+        -> recommendations
+        
+    - - -> about_junia
+    
+* Can't TARC act on your recommendations? # CLASS: player
+
+    _cabeza oxidada_ # CLASS: lucas
+    
+    { benton_05.popped or benton_06.crayz or benton_07.benton_breakdown:
+
+        TARC is about as useful as you! # CLASS: lucas
+        
+    }
+    
+    So called sworn protector of Mr. Saari, but hasn't lifted a virtual finger in his defense since he left Luna Station! # CLASS: lucas
+    
+    All I get is constant haranguing for medisci data and excuses for why I am not allowed to act on that data! # CLASS: lucas
+    
+    * * Sorry to hear that. # CLASS: player
+    
+    * * [<< wait >>]
+    
+        { wait(2) }
+    
+    * * Touched a nerve? # CLASS: player
+    
+        { wait(1) }
+    
+    - - My apologies. # CLASS: lucas
+    
+    I simply expected more from Benton's pet project. # CLASS: lucas
+    
+    * * { Technology + Security >= 60 } [<< secure >> Do something about TARC]One moment, doc. # CLASS: player
+        
+        << inject secure_tun^...COMMIT >> # CLASS: player
+        << processing >> # CLASS: player
+        << segfault at 0x7768697370657220697420746f206d65, respooling >> # CLASS: player
+        << inject sec_tun^...COMMIT >> # CLASS: player
+        {wait(2)}
+        << secure tunnel open >> # CLASS: player
+        
+        What is this? # CLASS: lucas
+        
+        Just protecting us from prying eyes, doc. # CLASS: player
+        
+        You can't expect me to believe TARC won't see this. # CLASS: lucas
+        
+        It won't. # CLASS: player
+        
+        { tarc_02.hightail_hacker or tarc_01.hackit or tarc_01.hackit0:
+        
+            I already Pwnd TARC months ago. # CLASS: player
+            
+        }
+        
+        { tarc_01.tarc_history:
+        
+            Remember, I helped code him! # CLASS: player
+            
+        }
+        
+        What are you suggesting? # CLASS: lucas
+        
+        If I have the right deets and the right moment I can turn TARC. # CLASS: player
+        
+        But I don't have the intel to know what to switch. # CLASS: player
+        
+        It will self-repair if I don't find the right instruction to attack. # CLASS: player
+        
+        * * * Do you know the logic pattern[?] that is holding TARC from acting? # CLASS: player
+        
+        * * * Has Junia shared any keyfiles[?] with you for secure access to Lowell's processes? # CLASS: player
+        
+        * * * Could you pump bad data to TARC[?] in your reports?  We could cryptographically feed it instructions that it's not conciously aware of. # CLASS: player
+        
+        - - - I... uh... # CLASS: lucas
+        
+        I don't know. # CLASS: lucas
+        
+        But I can try to help? # CLASS: lucas
+        
+        << secure tunnel closed >>
+        
+        Sorry, doc. My terminal glitched. # CLASS: player
+        
+        I think you said you wished you could help TARC out? # CLASS: player
+        
+        Uh... yes.  Sure. # CLASS: lucas
+    
+    * * Understood.[]  It is, after all, only a machine. # CLASS: lucas
+    
+    * * No, no.  Let it out.[]  Let TARC know how much of a rusty sothead it is.  I'm sure its listening.  😈 # CLASS: player
+    
+        Uh.  Sorry, TARC. # CLASS: lucas
+    
+    - - 
+    
+    * * So.  What else?
+    
+        -> recommendations
+
+* Surely there are other options[?] for Benton's care? # CLASS: player
+
+    Options?  If he were in a brand new tank in Luna Station, supplied with fresh complex org compounds, or at the very least in a Ganymede field hospital with a remote-op drone THEN we would have options. # CLASS:  lucas
+    
+    As it stands he's on a speeding bullet out of the solar system and his life support is likely to start choking him inside of 2 months! # CLASS: lucas
+    
+    { wait(3) }
+    
+    Sorry.  I have again let my temper get the better of me. # CLASS: lucas
+    
+    This is why I so often choose not to talk. # CLASS: lucas
+    
+    No worries.  But let's talk options. # CLASS: player
+    
+    - - (medsci_options)
+    
+    * * What could be done to fix the tank? # CLASS: player
+    
+        This is a state-of-the-art gel-quarium, fully integrated with the vessel and highly customized to the mission.  It's not a field-maintainable doggy pool! # CLASS: lucas
+        
+        * * * { Technology + Engineering >= 60 or benton_06.at_array } Anything can be field-maintained[.] if it has to be. # CLASS: player
+        
+            { benton_06.at_array:
+            
+                Benton fixed the HyperTrack array, so I don't see how he can't find a way to solve his own fishtank. # CLASS: player
+                
+            }
+        
+            * * * * Can I see the manuals? # CLASS: player
+            
+            * * * * Can [you sync with eng?]you get the eng team to pore over the manuals? # CLASS: player
+            
+            - - - - Might find something useful. # CLASS: player
+            
+            Very well. # CLASS: lucas
+    
+        * * * Are you sure. # CLASS: player
+        
+            { wait(2) }
+            
+            No. # CLASS: lucas
+            
+            I'm not sure. # CLASS: lucas
+            
+            But we've exhausted a great many of the options available to us, so I can't make promises. # CLASS: lucas
+        
+        * * * Sounds like a design flaw. # CLASS: player
+        
+            There are a great many of those in this project. # CLASS: lucas
+    
+    * * What compounds is he missing? # CLASS: player
+    
+        The gel-quarium has used more resources than we expected{drugs>3:, thanks in no small part to your trigger-happy pharmaceutical tendencies}. # CLASS: lucas
+        
+        And unless I'm very much mistaken there's not a pharma lab with an org-comp-processor on his flight-path. # CLASS: lucas
+        
+        * * * { Astronomy + Engineering >= 60 }Organic compounds you say?[]  Might be I know where a few are stashed in the outer solar system. # CLASS: player
+        
+            We're not visiting any other planets, and the flyby of Pluto won't leave much time for shopping! # CLASS: lucas
+            
+            True, but we can probably scoop *something* from the cosmic dust. # CLASS: player
+            
+            Mebbe enough to get him back home.  Can you check? # CLASS: player
+            
+            { wait(2) }
+            
+            Fine.  I'll see what I can find out. # CLASS: lucas
+            
+        * * * { Medicine + Engineering + Technology >= 60 }What about spare parts?[]  Can we use any unnecessary gear on the Lowell's Horizon and break them down for the compounds we need? # CLASS: player
+        
+            Sync with eng and see if they can agree which circuits could be sacrificed? # CLASS: player
+            
+            Ok.  I'll ask. # CLASS: lucas
+        
+        * * * There must be some source we could use! # CLASS: player
+        
+            Let's keep banging our heads together and see if anything sparks, 'k? # CLASS: player
+            
+            Very well. # CLASS: lucas
+        
+        * * * So, use up what we have[!] and he flys dry for part of the journey back! # CLASS: player
+        
+            _un tonto_ # CLASS: lucas    
+    
+    * * What good would an operation do? # CLASS: player
+    
+        We've already bio-hacked Benton beyond the conventional limit. # CLASS: lucas
+        
+        But that's not to say we couldn't refine him further, _if_ we had the right tools on board. # CLASS: lucas
+        
+        Which we don't. # CLASS: lucas
+        
+        * * * { Medicine + Engineering + Technology >= 60 }The tank is using bleeding-edge tech.[]  How might we repurpose that to carry out such a refined remote operation? # CLASS: player
+        
+            I... I don't know. # CLASS: lucas
+            
+            Well, let's talk to the team and see if we can figure it out, yah? # CLASS: player
+            
+            Fine. Yah.  # CLASS: lucas
+        
+        * * * But if the tools were available? # CLASS: player
+        
+            ¡sigh! # CLASS: lucas
+            
+            If wishes were fossil fuels... # CLASS: lucas
+            
+            But yes, if the tools were available we could surgically refine based on what we've learned so far. # CLASS: lucas
+            
+            It wouldn't be easy.  But it would work. # CLASS: lucas
+        
+        * * * Pity, that. # CLASS: player
+            
+            Indeed. # CLASS: lucas
+    
+    - - { -> medsci_options | -> medsci_options | -> medsci_done }
+    
+    - - (medsci_done)
+    
+    -> recommendations
+
+* ->
+
+- (done_recommend)
+
+Well, this has been a good use of my time. # CLASS: lucas
+
+But I must get back to calculating isotope concentrations and _hope_ I can find a miracle before Benton starts losing his tastebuds. # CLASS: lucas
+
+Unless there was anything else? # CLASS: lucas
+
+* No, thank you. # CLASS: player
+
+* Don't think so. # CLASS: player
+
+* Bye doc.[]  Don't let the door pinch you on the way out. # CLASS: player
+
+- << Dr. Estévez has left the chat >>
+
++ [<< Close Chat >>]
+
+    -> menu
 
 === lucas_04 ===
 

@@ -27,7 +27,7 @@
 
     ~ name = "Peter"
     ~ pronoun = "He/Him/His"
-    ~ career = "an astronomer"
+    ~ career = "a doctor"
     ~ relationship = "epic"
     ~ status = (Crossing_Saturn_Orbit)
     

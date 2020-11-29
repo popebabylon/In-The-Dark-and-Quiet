@@ -5380,7 +5380,7 @@ A momentary glitch, choi.  I'm here. # CLASS: player
 
 TODO: would like to apply other options if the PC initiates cryo sleep... then make it a bit easier to hit
 
-* { Medicine >= 90 && disco == false } [<< Initiate Cryosleep >>]
+* { ( Medicine >= 90 or char_can_cryo == true ) && disco == false } [<< Initiate Cryosleep >>]
 
     Sorry, choi.  This is for your own good. # CLASS: player
     
