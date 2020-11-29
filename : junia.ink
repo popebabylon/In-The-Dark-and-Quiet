@@ -2,7 +2,42 @@
 
 === junia_profile ===
 
-<img src="img/junia.png" class="picture-lg"><br><br>Name: Junia Masangkay<br><br>Position: COO<br><br>Pronouns: She/Her/Hers<br><br>Skills: Business, Psychology, Technology
+# CLASS: profile
+<img src="img/junia.png" class="picture-lg profile"><>
+<><div class="profile"><>
+	<><div><>
+		<><span class="label"><>
+			<>Name:<>
+		<></span><>
+		<><span class="name"><>
+			<>Junia Masangkay<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Position:<>
+		<></span><>
+		<><span><>
+			<>COO<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Pronouns: <>
+		<></span><>
+		<><span><>
+			<>She/Her/Hers<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Skills:<>
+		<></span><>
+		<><span><>
+			<>Business, Psychology, Technology<>
+		<></span><>
+	<></div><>
+<></div>
 
 ->->
 
@@ -158,6 +193,8 @@ I know they're old climbing chois or something.  But I just don't know why Bento
 { early_exit:
     
     # CLEAR
+    
+    -> junia_profile ->
     
     Hello again, appreciate you checking back in. # CLASS: junia
     
@@ -400,6 +437,8 @@ But I'm trusting the vision. # CLASS: junia
 
 # CLEAR
 
+-> junia_profile ->
+
 Hei, { name }, do you have a moment? # CLASS: junia
 
 * Sure thing![]  What's up? # CLASS: player
@@ -625,6 +664,8 @@ We'll chat again soon.  Thank you. # CLASS: junia
 ~ temp junia_temper = 0
 
 # CLEAR
+
+-> junia_profile ->
 
 Hey, Junia.  Are you around? # CLASS: player
 
@@ -1180,6 +1221,8 @@ Goodbye, { name } # CLASS: junia
 
 # CLEAR
 
+-> junia_profile ->
+
 { name }. # CLASS: junia
 
 { name } are you there? # CLASS: junia
@@ -1519,6 +1562,8 @@ problem # CLASS: junia
 
 # CLEAR
 
+-> junia_profile ->
+
 J taunts P with her success, P can turn the tables # CLASS: junia
 
 Junia starts shutting down comms across the Nth Horizon platform given her control of the company and the impending sale.  She takes a moment to taunt or brag to the PC.  In her position she's not aware of any leverage the PC may have from Woodpecker or TARC, either of which could be brought to bear to shut her up and keep the lights on while Benton is saved. # CLASS: junia
@@ -1528,6 +1573,8 @@ Junia starts shutting down comms across the Nth Horizon platform given her contr
 === junia_random ===
 
 # CLEAR
+
+-> junia_profile ->
 
 Hello { name }.  I'm {&in another call|working on a board presentation|meditating|out of the office} right now.  Can I connect with you later? # CLASS: junia
 

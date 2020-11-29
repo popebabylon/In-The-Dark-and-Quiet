@@ -2,7 +2,42 @@
 
 === benton_profile ===
 
-<img src="img/benton.png" class="picture-lg"><br><br>Name: Benton Saari<br><br>Position: Founder, CEO, Pilot<br><br>Pronouns: He/Him/His<br><br>Skills: Business, Technology, Psychology
+# CLASS: profile
+<img src="img/benton.png" class="picture-lg profile"><>
+<><div class="profile"><>
+	<><div><>
+		<><span class="label"><>
+			<>Name:<>
+		<></span><>
+		<><span class="name"><>
+			<>Benton Saari<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Position:<>
+		<></span><>
+		<><span><>
+			<>Founder, CEO, Pilot<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Pronouns: <>
+		<></span><>
+		<><span><>
+			<>He/Him/His<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Skills:<>
+		<></span><>
+		<><span><>
+			<>Business, Technology, Psychology<>
+		<></span><>
+	<></div><>
+<></div>
 
 ->->
 
@@ -314,6 +349,8 @@ newsDrops should be going live with our announcement soon.  And you could intro 
 
 # CLEAR
 
+-> benton_profile ->
+
 Hollah!  No fuss? # CLASS: benton
 
 * Paperwork.[] No fuss. # CLASS: player
@@ -343,6 +380,8 @@ Hollah!  No fuss? # CLASS: benton
 === benton_02 ===
 
 # CLEAR
+
+-> benton_profile ->
 
 - (morning_loop)
 
@@ -1080,6 +1119,8 @@ I hope you can help keep the team in the right headspace.  Cool? # CLASS: benton
 
 # CLEAR
 
+-> benton_profile ->
+
 Hei { name } # CLASS: benton
 
 What's new in the real world? # CLASS: benton
@@ -1604,6 +1645,8 @@ I gotta tell the others.  Chat soon, ya? # CLASS: benton
 
 # CLEAR
 
+-> benton_profile ->
+
 Hei. # CLASS: benton
 
 Hei { name }. # CLASS: benton
@@ -1932,6 +1975,8 @@ Ok, gel's firming up for exercise.  Chat latrz? # CLASS: benton
 === benton_05 ===
 
 # CLEAR
+
+-> benton_profile ->
 
 << adding stress_analysis to chat >>
 
@@ -3145,6 +3190,9 @@ I'm gonna sleep for a year now. # CLASS: benton
 ~ stress = (nominal)
 
 # CLEAR
+
+-> benton_profile ->
+
 << patient's stress level is { stress } >>
 
 - (rise)
@@ -4184,6 +4232,8 @@ You do that. # CLASS: player
 
 # CLEAR
 
+-> benton_profile ->
+
 It is found! # CLASS: benton
 
 * That's good! # CLASS: player
@@ -4464,6 +4514,8 @@ Talk later, k? # CLASS: benton
 ~ stress = (nominal)
 
 # CLEAR
+
+-> benton_profile ->
 
 { benton_07.benton_breakdown:
 
@@ -5404,6 +5456,8 @@ TODO: would like to apply other options if the PC initiates cryo sleep... then m
 
 # CLEAR
 
+-> benton_profile ->
+
 P has to reel Benton in, keep him on the rails # CLASS: benton
 
 Benton gets back in touch, being very off-again / on-again as he contemplates the upcoming success (or at least half-way point) of his mission.  He's apparently aware that he has made it to Pluto and has manic, ecstatic tirades about the fact that he's done it, but these are counterbalanced with further nihilistic, despondent ravings.  Any bad news from home doesn't help his mental state. # CLASS: benton
@@ -5416,6 +5470,8 @@ The PC can use the various knowledge gained, activities completed, history estab
 
 # CLEAR
 
+-> benton_profile ->
+
 After the historic Pluto flyby, B needs to decide where he belongs # CLASS: benton
 
 Whether or not Benton is still sane, the PC is a friendly ear in an otherwise empty void and he will communicate with them.  If the PC is lucky or good they will have enough support and options available to convince Benton to turn around for the return journey.  But even if he's not completely insane the pull of the great darkness beyond Pluto does give Benton some pause.  The madness of his company and the Earth seem so far away and so alien that staying in the embracing dark forever almost seems like a good idea.  Is he running away or running towards something? # CLASS: benton
@@ -5427,6 +5483,8 @@ Ultimately Benton picks a path... # CLASS: benton
 === benton_random ===
 
 # CLEAR
+
+-> benton_profile ->
 
 Hey, I'm pretty {&busy|tired|stressed|over it} right now.  Can it wait? # CLASS: benton
 

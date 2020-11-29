@@ -2,7 +2,42 @@
 
 === tarc_profile ===
 
-<img src="img/tarc.png" class="picture-lg"><br><br>Name: Threat Algorithm Reaction Construct<br><br>Position: Mission Security<br><br>Pronouns: They/Them/Theirs<br><br>Skills: Security, Technology
+# CLASS: profile
+<img src="img/tarc.png" class="picture-lg profile"><>
+<><div class="profile"><>
+	<><div><>
+		<><span class="label"><>
+			<>Name:<>
+		<></span><>
+		<><span class="name"><>
+			<>TARC<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Position:<>
+		<></span><>
+		<><span><>
+			<>Mission Security<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Pronouns: <>
+		<></span><>
+		<><span><>
+			<>They/Them/Theirs<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Skills:<>
+		<></span><>
+		<><span><>
+			<> Security, Technology<>
+		<></span><>
+	<></div><>
+<></div>
 
 ->->
 
@@ -282,6 +317,8 @@ Please note.  I hold Mr. Saari in high esteem and am programmed to protect him, 
 
 # CLEAR
 
+-> tarc_profile ->
+
 Hello { name }.  All security checks are nominal.  Is there something else I can help you with? # CLASS: tarc
 
 + I'm being harrassed.[]  Some unknown person has broken into your system. # CLASS: player
@@ -360,8 +397,9 @@ This does appear to be a new threat.  Have they compromised you or any of the da
         ->->
 
 === tarc_02 ===
-
 # CLEAR
+
+-> tarc_profile ->
 
 { wait(3) }
 << notify { name } >>
@@ -703,7 +741,9 @@ Thank you. # CLASS: tarc
 
 ~ tarceye_install = true
 
-+ [<< Close Chat >>] -> menu # CLASS: player
++ [<< Close Chat >>]
+
+    -> menu
 
 = hightail_hacker
 
@@ -829,17 +869,23 @@ Can you provide details?  This may seem irrelevant, but knowing what you told th
 
 # CLEAR
 
+-> tarc_profile ->
+
 T finds out about J's betrayal, is helped or hindered by the P # CLASS: tarc
 
 TARC is caught in a delicate position given his responsibility to Mr. Saari and Nth Horizon.  His algorithms can't really account for the risk his creator has placed himself under.  The PC, either by virtue of history, skill, or evidence, appears to be the best proxy TARC can use for what Benton would call "out of the box thinking."  What actions should be taken to ensure the correct thing is prioritized. # CLASS: tarc
 
 The evidence TARC is dealing with is the corporate takeover instigated by Junia and how that impacts both the mission and company health, and by extension that of Mr. Saari.  Intervention from a moral agent (the PC) can break the logic trap the AI is stuck in. # CLASS: tarc
 
-+ [Next] -> menu # CLASS: player
++ [<< Close Chat >>]
+
+    -> menu
 
 === tarc_04 ===
 
 # CLEAR
+
+-> tarc_profile ->
 
 P has to keep TARC from shutting down his access to B
 
@@ -850,6 +896,8 @@ TARC can ennumerate all the security holes and flaws the PC has caused (or as a 
 === tarc_random ===
 
 # CLEAR
+
+-> tarc_profile ->
 
 Hello { name }.  All security checks are nominal.  Is there something else I can help you with? # CLASS: tarc
 

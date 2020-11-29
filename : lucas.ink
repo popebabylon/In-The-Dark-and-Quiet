@@ -2,7 +2,42 @@
 
 === lucas_profile ===
 
-<img src="img/lucas.png" class="picture-lg"><br><br>Name: Dr. Lucas Estévez<br><br>Position: Chief Medical Officer<br><br>Pronouns: He/Him/His<br><br>Skills: Medicine, Psychology, Technology
+# CLASS: profile
+<img src="img/lucas.png" class="picture-lg profile"><>
+<><div class="profile"><>
+	<><div><>
+		<><span class="label"><>
+			<>Name:<>
+		<></span><>
+		<><span class="name"><>
+			<>Dr. Lucas Estévez<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Position:<>
+		<></span><>
+		<><span><>
+			<>Chief Medical Officer<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Pronouns: <>
+		<></span><>
+		<><span><>
+			<>He/Him/His<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Skills:<>
+		<></span><>
+		<><span><>
+			<>Medicine, Psychology, Technology<>
+		<></span><>
+	<></div><>
+<></div>
 
 ->->
 
@@ -32,7 +67,11 @@
 
 { ghost_lucas:
 
-    Hello? # CLEAR # CLASS: player
+    # CLEAR 
+    
+    -> lucas_profile ->
+
+    Hello? # CLASS: player
 
 - else:
 
@@ -150,6 +189,8 @@ Clear? # CLASS: lucas
 
 # CLEAR
 
+-> lucas_profile ->
+
 { name } # CLASS: lucas
 
 * Hello Dr. Estévez. # CLASS: player
@@ -263,7 +304,11 @@ What's your most recent report? # CLASS: lucas
 - (lucas_analysis)
 
 { lucas_angryout:
+
     # CLEAR
+    
+    -> lucas_profile ->
+    
 }
 
 * { lucas_angryout } Sorry[, doc.].  Tell me what you need, doc. # CLASS: player
@@ -371,6 +416,8 @@ And if things turn for the worst we figure out how to turn him around. # CLASS: 
 === lucas_03 ===
 
 # CLEAR
+
+-> lucas_profile ->
 
 Dr. Estévez<> # CLASS: player
 
@@ -943,6 +990,8 @@ Unless there was anything else? # CLASS: lucas
 
 # CLEAR
 
+-> lucas_profile ->
+
 P gets Lucas to take a risk even with his patient millions of miles away # CLASS: lucas
 
 The PC and Lucas can collaborate on treatment options to keep Benton in one piece for the return journey.  The CMO has all the skills he needs, and the pieces are all there in that little capsule between the darkness of the stars, but just needs some perspective (and perhaps some humor) to see the solution and act upon it in a way that Benton can benefit from. # CLASS: lucas
@@ -952,6 +1001,8 @@ The PC and Lucas can collaborate on treatment options to keep Benton in one piec
 === lucas_random ===
 
 # CLEAR
+
+-> lucas_profile ->
 
 - (waitloop)
 + \ [{&Hello?|Dr. Estévez?|Lucas?}]\ {&Hello?|Dr. Estévez?|Lucas?} # CLASS: player

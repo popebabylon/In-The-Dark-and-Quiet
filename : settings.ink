@@ -195,20 +195,72 @@ You may select a subject more than once if it is an area of significant study.
 
 === settings ===
 
-<img src="{ picture }" class="picture-lg">
-Name: { name }
-Position: Mission Consultant
-Pronouns: { pronoun }
-Skills:
-    Astronomy: { Astronomy }
-    Business: { Business }
-    Engineering: { Engineering }
-    Medicine: { Medicine }
-    Security: { Security }
-    Psychology: { Psychology }
-    Technology: { Technology }
+# CLEAR
 
-TODO: Settings page - remove / rewire skills list
+# CLASS: profile
+<img src="{ picture }" class="picture-lg profile"><>
+<><div class="profile"><>
+	<><div><>
+		<><span class="label"><>
+			<>Name:<>
+		<></span><>
+		<><span class="name"><>
+			<>{ name }<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Position:<>
+		<></span><>
+		<><span><>
+			<>Mission Consultant<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Pronouns: <>
+		<></span><>
+		<><span><>
+			<>{ pronoun }<>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Skills:<>
+		<></span><>
+		<><span><>
+			<>{ skillset() }<>
+		<></span><>
+	<></div><>
+<></div>
 
 + [<< Edit >>] -> setup.profile -> settings
 + [<< Close >>] -> menu
+
+=== function skillset() ===
+
+~ temp skill_list = ""
+
+{ Astronomy > 0:
+    ~ skill_list += "Astronomy, "
+}
+{ Business > 0:
+    ~ skill_list += "Business, "
+}
+{ Engineering > 0:
+    ~ skill_list += "Engineering, "
+}
+{ Medicine > 0:
+    ~ skill_list += "Medicine, "
+}
+{ Security > 0:
+    ~ skill_list += "Security, "
+}
+{ Psychology > 0:
+    ~ skill_list += "Psychology, "
+}
+{ Technology > 0:
+    ~ skill_list += "Technology, "
+}
+
+~ return skill_list

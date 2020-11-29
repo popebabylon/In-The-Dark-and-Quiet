@@ -1,8 +1,50 @@
 // this is the conversation with woodpecker (kim)
+=== woodpecker_profile ===
+
+# CLASS: profile
+<img src="img/kim.png" class="picture-lg profile"><>
+<><div class="profile"><>
+	<><div><>
+		<><span class="label"><>
+			<>Name:<>
+		<></span><>
+		<><span class="name"><>
+			<><< unknown >><>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Position:<>
+		<></span><>
+		<><span><>
+			<><< unknown >><>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Pronouns: <>
+		<></span><>
+		<><span><>
+			<><< unknown >><>
+		<></span><>
+	<></div><>
+	<><div><>
+		<><span class="label"><>
+			<>Skills:<>
+		<></span><>
+		<><span><>
+			<><< unknown >><>
+		<></span><>
+	<></div><>
+<></div>
+
+->->
 
 === pecked ===
 
 # CLEAR
+
+-> woodpecker_profile ->
 
 { pecked > 1:
 
@@ -70,6 +112,8 @@
 
 # CLEAR
 
+-> woodpecker_profile ->
+
 Peck.
 { wait(1) }
 Peck.
@@ -104,6 +148,8 @@ Peck.
     -> tarc_report_woodpecker ->
     
     # CLEAR
+    
+    -> woodpecker_profile ->
     
     Hello? # CLASS: player
 
@@ -217,6 +263,8 @@ I'll be around.
 ~ temp facts_shared = 0
 
 # CLEAR
+
+-> woodpecker_profile ->
 
 Yo, you live?
 
@@ -500,6 +548,8 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out!
 === woodpecker_03 ===
 
 # CLEAR
+
+-> woodpecker_profile ->
 
 {
     - team_03.pecked_wood: 
@@ -1017,6 +1067,8 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out!
 
 # CLEAR
 
+-> woodpecker_profile ->
+
 K wants her headline story
 
 Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if her evidene helped against Junia).  The more details the PC is willing to give the more likely the article benefits Benton's story and the outcome for his company.
@@ -1026,6 +1078,8 @@ Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if h
 === woodpecker_random ===
 
 # CLEAR
+
+-> woodpecker_profile ->
 
 Hei {pronouner("choi","chai","chen")}.  <>
 

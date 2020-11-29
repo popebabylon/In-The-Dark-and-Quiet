@@ -271,6 +271,27 @@ p.no_bg {
 	text-align: center;
 }
 
+/* custom styles for profile blocks */
+
+p.profile {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #221122ee;
+}
+
+img.profile,div.profile {
+	margin: 1rem;
+}
+
+span.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 0.4rem;
+    color: #FFFFFFBB;
+    width: 6rem;
+    display: inline-block;
+}
+
 /* custom style for "wait" paragraphs to delay the game */
 
 p.wait {
