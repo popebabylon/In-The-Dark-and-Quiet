@@ -71,7 +71,7 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
     
         ->secreq 
 
-* { Security + Technology >= 60 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank. # CLASS: player
+* { Security + Technology >= 30 } Fancy meeting you here, TARC![] I remember you when you were just a self-learning algo in a virtual fish tank. # CLASS: player
 
     -> tarc_history -> secreq
 
@@ -346,7 +346,7 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
         
         -> continue_honey
 
-+ { Technology + Security >= 60 } I've been added to a hacked comm node.[]  Appears to be a class 3 inject worm. # CLASS: player
++ { Technology + Security >= 30 } I've been added to a hacked comm node.[]  Appears to be a class 3 inject worm. # CLASS: player
 
     That is unexpected.  Can you provide a memory reference? # CLASS: tarc
     
@@ -419,7 +419,7 @@ This does appear to be a new threat.  Have they compromised you or any of the da
 
     You do not have the operational control to shut down this process. # CLASS: tarc
     
-    * * { Technology + Security >= 90 } [<< Shutdown TARC >>] # CLASS: player
+    * * { Technology + Security >= 60 } [<< Shutdown TARC >>] # CLASS: player
     
         -> shutdown ->
         
@@ -485,7 +485,7 @@ This does appear to be a new threat.  Have they compromised you or any of the da
     
     This was not unexpected.  Reporting your interaction with the external party will contribute to threat analysis. # CLASS: tarc
 
-* { Security + Technology >= 60 }The tunnel jammed my ability to exit. # CLASS: player
+* { Security + Technology >= 30 }The tunnel jammed my ability to exit. # CLASS: player
 
     Understood. # CLASS: tarc
 
@@ -602,7 +602,7 @@ Your most recent interaction included a secure handshake tunnel we were unable t
 
     -> lied_kim ->
 
-* { Technology + Security >= 90 } Time to sleep and forget, TARC. # CLASS: player
+* { Technology + Security >= 60 } Time to sleep and forget, TARC. # CLASS: player
     
     << Erase TARC Session >> # CLASS: alert
 
@@ -672,7 +672,7 @@ Your actions have endangered the operational status of this project.  I am repor
     
         -> the_deal
 
-* { Technology + Security >= 90 } [<< Erase TARC Session >>] # CLASS: player
+* { Technology + Security >= 60 } [<< Erase TARC Session >>] # CLASS: player
 
     -> hightail_hacker
 
@@ -710,7 +710,7 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
     
     Goodbye { name }. # CLASS: tarc
     
-    * * { Technology + Security >= 90 } [<< Erase TARC Session >>] # CLASS: player
+    * * { Technology + Security >= 60 } [<< Erase TARC Session >>] # CLASS: player
 
         -> hightail_hacker
     
@@ -718,7 +718,7 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
     
         -> the_end
 
-* { Technology + Security >= 60 } [<< Forge Agreement >>]
+* { Technology + Security >= 30 } [<< Forge Agreement >>]
     
     << inject acc_for^...COMMIT >> # CLASS: alert
     << processing >> # CLASS: alert
@@ -730,7 +730,7 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
 
     + + [<< Close Chat >>] -> menu # CLASS: player
 
-* { Psychology + Business >= 60 } You're trying to play us against each other.[]  How very HAL. # CLASS: player
+* { Psychology + Business >= 30 } You're trying to play us against each other.[]  How very HAL. # CLASS: player
 
     I am attempting to run parallel functions across multiple black-box instances in my operational theatre. # CLASS: tarc
     
@@ -799,19 +799,19 @@ Can you identify the Nth Horizon data that you compromised? # CLASS: tarc
 
 - (compromised_data)
 
-* { kim_knows ? flyby_success} I told them we made a successful flyby[.] of Jupiter. # CLASS: player
+* { kim_knows ? (flyby_success)} I told them we made a successful flyby[.] of Jupiter. # CLASS: player
 
     Irrelevant.  That data is already public via Ms. Masangkay's press release. # CLASS: tarc
     
-* { kim_knows ? benton_crazy} I told them Benton was losing [it.]his grip on reality.  # CLASS: player
+* { kim_knows ? (benton_crazy)} I told them Benton was losing [it.]his grip on reality.  # CLASS: player
 
     Unfortunate.  But easily contradicted in the press. # CLASS: tarc
     
-* { kim_knows ? goliath_dsj} They know about the Goliath DSJ. # CLASS: player
+* { kim_knows ? (goliath_dsj)} They know about the Goliath DSJ. # CLASS: player
 
     Understood.  We may be able to use this as bait to determine if the unknown actor is Goliath. # CLASS: tarc
     
-* { kim_knows ? cmo_overrule} I let it slip that Lucas [isn't happy.] wants to turn the mission around. # CLASS: player
+* { kim_knows ? (cmo_overrule)} I let it slip that Lucas [isn't happy.] wants to turn the mission around. # CLASS: player
 
     Noted.  Dr. Estévez will benefit if his recommendation is public knowledge and Benton does succumb. # CLASS: tarc
 
@@ -843,20 +843,20 @@ Can you provide details?  This may seem irrelevant, but knowing what you told th
 
 - (tall_tales)
 
-* { kim_knows ? fake_nth_funded} I said Nth Horizon was solvent. # CLASS: player
+* { kim_knows ? (fake_nth_funded)} I said Nth Horizon was solvent. # CLASS: player
 
-* { kim_knows ? fake_speed_record} I said we beat the speed record to Jupiter # CLASS: player
+* { kim_knows ? (fake_speed_record)} I said we beat the speed record to Jupiter # CLASS: player
 
     This is actually accurate information and will be filed under data you compromised. # CLASS: tarc
 
-* { kim_knows ? fake_cmo} I'm now your Chief Morale Officer. # CLASS: player
+* { kim_knows ? (fake_cmo)} I'm now your Chief Morale Officer. # CLASS: player
 
     << processing >> # CLASS: alert
     << processing >> # CLASS: alert
     << processing >> # CLASS: alert
     << processing failed... >> # CLASS: alert
     
-* { kim_knows ? fake_lovechild} Benton and Junia have a child![]  And it's on the spaceship with him! # CLASS: player
+* { kim_knows ? (fake_lovechild)} Benton and Junia have a child![]  And it's on the spaceship with him! # CLASS: player
 
     This will only be useful if we have been compromised by a low-brow tabloid publication.  Highly unlikely. # CLASS: tarc
     
@@ -958,7 +958,7 @@ They have also predicted a 97.2% chance we would arrive at this juncture since y
 
 }
 
-{ player_knows ? junia_wants_b_dead:
+{ player_knows ? (junia_wants_b_dead):
         
             <><li>You recently learned that Ms. Masangkay wishes Mr. Saari harm.</li><>
 
@@ -966,7 +966,7 @@ They have also predicted a 97.2% chance we would arrive at this juncture since y
 
 }
 
-{ player_knows ? j_betray_proof:
+{ player_knows ? (j_betray_proof):
         
             <><li>You recently captured proof that Ms. Masangkay wishes Mr. Saari harm.</li><>
 
@@ -1015,7 +1015,7 @@ They have also predicted a 97.2% chance we would arrive at this juncture since y
 
 }
 
-{ player_knows ? bentons_master_plan:
+{ player_knows ? (bentons_master_plan):
         
             <><li>You have deduced Mr. Saari's machinations behind the stunt he is currently attempting.</li><>
 
@@ -1073,7 +1073,7 @@ Or do you have any questions? # CLASS: tarc
 
 * Why would Benton put himself in this position? # CLASS: player
 
-    { Psychology + Business >= 60:
+    { Psychology + Business >= 30:
     
         He knew about these threats, didn't he?  He had to be aware this would happen. # CLASS: player
         
@@ -1089,7 +1089,7 @@ Or do you have any questions? # CLASS: tarc
     
     He had threads.  Tangled opportunities that might be acted upon at the right time by him and his associates that would secure the future he hoped for. # CLASS: tarc
 
-    * * { player_knows ? nth_in_bern or player_knows ? be_zero_investor or Business >= 60 } Nth Horizon has some bizCards up its sleeve[.], yah?  Benton wouldn't leave this startCorp out to dry. # CLASS: player
+    * * { player_knows ? (nth_in_bern) or player_knows ? (be_zero_investor) or Business >= 30 } Nth Horizon has some bizCards up its sleeve[.], yah?  Benton wouldn't leave this startCorp out to dry. # CLASS: player
     
         Indeed. # CLASS: tarc
         
@@ -1151,7 +1151,7 @@ Or do you have any questions? # CLASS: tarc
         
         However, her business accomplishments have always been placed above her personal image.  I do not predict blackmail would be effective in changing this situation. # CLASS: tarc
 
-    * * { player_knows ? junia_dealing_w_goliath } How do we stop this deal with Goliath? # CLASS: player
+    * * { player_knows ? (junia_dealing_w_goliath) } How do we stop this deal with Goliath? # CLASS: player
     
         I am formulating options now that would adjust the statistical likelyhood Ms. Masangkay would succeed with such a deal.
     
@@ -1185,7 +1185,7 @@ Or do you have any questions? # CLASS: tarc
             
             This would be unwise untill the Lowell's Horizon has successfully made the turn to home. # CLASS: tarc
         
-        * * { player_knows ? luc_takedowntarc } I'm afraid he and I were discussing turning on you. # CLASS: player
+        * * { player_knows ? (luc_takedowntarc) } I'm afraid he and I were discussing turning on you. # CLASS: player
         
             I am aware of this. # CLASS: tarc
             
@@ -1217,7 +1217,7 @@ Or do you have any questions? # CLASS: tarc
     
     - - In any case, I am keeping tabs on Ms. Speight and will ensure she does not unexpectedly derail our plans. # CLASS: tarc
 
-* { Technology + Security >= 90 or foo == true } [<< Reformat TARC >> We need your action, not analysis!] # CLASS: player
+* { Technology + Security >= 60 or foo == true } [<< Reformat TARC >> We need your action, not analysis!] # CLASS: player
     TODO: remove foo check... this should look for another VAR if we get a clue from Estévez?
     
         We need your action, not analysis! # CLASS: player
@@ -1262,7 +1262,7 @@ Or do you have any questions? # CLASS: tarc
 
 The survival of Mr. Saari and his company are resting upon inflexion points surrounding his upcoming flyby of Jupiter. # CLASS: tarc
 
-It is imperative that you and Dr. Estévez do whatever you can to ensure the success of this maneuver and prevent any { player_knows ? junia_wants_b_dead:attempt by Ms. Masangkay to sabotage the mission or his health|unexpected complications}. # CLASS: tarc
+It is imperative that you and Dr. Estévez do whatever you can to ensure the success of this maneuver and prevent any { player_knows ? (junia_wants_b_dead):attempt by Ms. Masangkay to sabotage the mission or his health|unexpected complications}. # CLASS: tarc
 
 In conjunction certain data points will be selectively revealed to the board and the press to mitigate any attempts to undermine Mr. Saari's authority and stake in Nth Horizon.  If assistance is required I will be expecting you to act on behalf of Mr. Saari. # CLASS: tarc
 

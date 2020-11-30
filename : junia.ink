@@ -176,7 +176,7 @@ I know they're old climbing chois or something.  But I just don't know why Bento
 
     You do know him well. # CLASS: junia
     
-* { Medicine >= 60 }I can consult.[]  I have a lot of experience with risky medical projects. # CLASS: player
+* { Medicine >= 30 }I can consult.[]  I have a lot of experience with risky medical projects. # CLASS: player
     
     Thank you.  Not sure Benton or Lucas will listen though. # CLASS: junia
     
@@ -375,7 +375,7 @@ But I'm trusting the vision. # CLASS: junia
 
     There will always be sharks circling when you have something good.  With TARC and our secrecy so far there's little they can do to upend this. # CLASS: junia
 
-* { Psychology >= 60 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
+* { Psychology >= 30 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
 
     { wait(2) }
 
@@ -497,13 +497,13 @@ Is he at risk given the stresses he's under? # CLASS: junia
     
     I do <>
 
-* { Medicine >= 60 } His body is very stressed.[]  The bio-engineering is keeping him going, but he's going to come back a complete wreck.  Probably need full reconstruction. # CLASS: player
+* { Medicine >= 30 } His body is very stressed.[]  The bio-engineering is keeping him going, but he's going to come back a complete wreck.  Probably need full reconstruction. # CLASS: player
 
     Yes, that's a concern. # CLASS: junia
     
     Makes me <>
 
-* { Psychology >= 60 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player # CLASS: junia
+* { Psychology >= 30 } His mind is finding ways to cope.[]  For being in a stressed, bio-engineered, completely isolated tin can 365 million miles from home, he's doing very well.  We need to keep him engaged to make sure that continues. # CLASS: player # CLASS: junia
 
     I still <>
 
@@ -533,7 +533,7 @@ Is he at risk given the stresses he's under? # CLASS: junia
     
     Anyway... # CLASS: junia
 
-* { Medicine + Psychology >= 60 } His humanity is being tested.[]  Dr. Estévez isn't wrong about how little prep he had. # CLASS: player
+* { Medicine + Psychology >= 30 } His humanity is being tested.[]  Dr. Estévez isn't wrong about how little prep he had. # CLASS: player
 
     The time needed to adapt to the changes to his physiology. # CLASS: player
     
@@ -557,7 +557,7 @@ What Benton is doing tips the balance in our favor. # CLASS: junia
 
     Has to.  Anything else means unhappy investors go extrajudicial on us both. # CLASS: junia
 
-* { Business >= 60 } I'm a little confused on the prospects.[]  With the tech displayed so far, how is Nth Horizon not already out from under threat? # CLASS: player
+* { Business >= 30 } I'm a little confused on the prospects.[]  With the tech displayed so far, how is Nth Horizon not already out from under threat? # CLASS: player
     
     One word.  Goliath. # CLASS: junia
     
@@ -597,7 +597,7 @@ What Benton is doing tips the balance in our favor. # CLASS: junia
     
     * * What kind of opportunity do you mean? # CLASS: player
     
-    * * { Security + Business + Psychology >= 60 } I've found some. # CLASS: player
+    * * { Security + Business + Psychology >= 30 } I've found some. # CLASS: player
 
 * Oh, I'll get something out of this. # CLASS: player
 
@@ -799,7 +799,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     
         I know the doc doesn't agree with the decision to push on, but <>
         
-        { Medicine >= 60 || career == "a doctor":
+        { Medicine >= 30 || career == "a doctor":
         
             as a medical professional I feel it's my duty to point out the serious risk that brings to his patient. # CLASS: player
             
@@ -815,13 +815,13 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
         * * * Thank you. # CLASS: player
         
-        * * * { Psychology + Medicine >= 60 && tarceye_install == true && tarc_sees_junia == false } [<< tarceye link >> You should know the truth]
+        * * * { Psychology + Medicine >= 30 && tarceye_install == true && tarc_sees_junia == false } [<< tarceye link >> You should know the truth]
 
             ~ tarc_sees_junia = true
             
             -> medical_truth
 
-        * * * { Psychology + Medicine >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< woodpeck link >> You should know the truth]
+        * * * { Psychology + Medicine >= 30 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< woodpeck link >> You should know the truth]
     
             ~ woodpecker_sees_junia = true
             
@@ -932,13 +932,13 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
         Try to keep him from going off the deep end, ya? # CLASS: junia
     
-    * * { Psychology + Business >= 60 && tarceye_install == true && tarc_sees_junia == false && not achilles_hack } [<< tarceye link >> You should take control]
+    * * { Psychology + Business >= 30 && tarceye_install == true && tarc_sees_junia == false && not achilles_hack } [<< tarceye link >> You should take control]
         
         ~ tarc_sees_junia = true
         
         -> achilles_hack
     
-    * * { Psychology + Business >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false && not achilles_hack } [<< woodpeck link >> You should take control]
+    * * { Psychology + Business >= 30 && woodpeck_install == true &&  woodpecker_sees_junia == false && not achilles_hack } [<< woodpeck link >> You should take control]
     
         ~ woodpecker_sees_junia = true
     
@@ -1016,7 +1016,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
         -> businez
 
-    * * { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 }Your rep relies on some ruthless deal-making.[]  I'm starting to wonder if you have Benton's best interests at heart. # CLASS: player
+    * * { player_knows ? (junia_shadowy) or player_knows ? (entropic_goliath) or player_knows ? (goliath_hands_in_pie) or Business >= 30 }Your rep relies on some ruthless deal-making.[]  I'm starting to wonder if you have Benton's best interests at heart. # CLASS: player
     
         Having a reputation as an effective business leader is exactly _why_ Benton and I are working together. # CLASS: junia
         
@@ -1024,11 +1024,11 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
         What we've built as a result contains both of our DNA. # CLASS: junia
         
-        * * * { kim_knows ? fake_lovechild } [Careful, the tabliods may be listening!]You might want to be careful with that analogy.  The tabloids have some funny ideas about you and Benton. # CLASS: player
+        * * * { kim_knows ? (fake_lovechild) } [Careful, the tabliods may be listening!]You might want to be careful with that analogy.  The tabloids have some funny ideas about you and Benton. # CLASS: player
         
             -> piss_off_junia(junia_temper) ->
             
-        * * * Not sure the stakeholders at { player_knows ? entropic_goliath:Entropic Galactic|your previous startCorps} feel the same. # CLASS: player
+        * * * Not sure the stakeholders at { player_knows ? (entropic_goliath):Entropic Galactic|your previous startCorps} feel the same. # CLASS: player
             
             I work with business partners.  Not friends or family. # CLASS: junia
             
@@ -1142,7 +1142,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     
     As a reminder, you shouldn't be answering awkward questions otherwise you are in breach of your NDA. # CLASS: junia
 
-* { Security + Technology >= 60 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< brute force install woodpeck link >>]
+* { Security + Technology >= 30 && woodpeck_install == true &&  woodpecker_sees_junia == false } [<< brute force install woodpeck link >>]
 
     ~ woodpecker_sees_junia = true
     
@@ -1157,7 +1157,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     
     Sorry, something went haywire with my connection. # CLASS: junia
 
-* { Security + Technology >= 60 && tarceye_install == true &&  tarc_sees_junia == false } [<< brute force install tarceye link >>]
+* { Security + Technology >= 30 && tarceye_install == true &&  tarc_sees_junia == false } [<< brute force install tarceye link >>]
 
     ~ tarc_sees_junia = true
     
@@ -1289,7 +1289,7 @@ Full partner acquisition. # CLASS: junia
 
 And SaturnExpress has deep pockets. # CLASS: junia
 
-* { player_knows ? junia_dealing_w_goliath } Goliath pockets. # CLASS: player
+* { player_knows ? (junia_dealing_w_goliath) } Goliath pockets. # CLASS: player
 
     { wait(1) }
     
@@ -1343,7 +1343,7 @@ Follow this link. # CLASS: junia
     
     ~ goliath_sees_player = true
 
-* { Technology + Security >= 90 } [<< Decrypt & Sandbox >>]
+* { Technology + Security >= 60 } [<< Decrypt & Sandbox >>]
 
     ~ goliath_sees_player = false
     
@@ -1496,17 +1496,17 @@ problem # CLASS: junia
         
         -> junia_hack.junias_done
     
-    * * { player_knows ? j_betray_proof }[This session was recorded.]I spoofed your masters' pathetic scriptKiddy tunnel.  They haven't got anything on me and I just got binary proof of conspiracy to murder.  How's that?
+    * * { player_knows ? (j_betray_proof) }[This session was recorded.]I spoofed your masters' pathetic scriptKiddy tunnel.  They haven't got anything on me and I just got binary proof of conspiracy to murder.  How's that?
     
         -> junia_hack.junias_done
     
-    * * { player_knows ? be_zero_investor && Business >= 30 }That 50% *not* in G's pocket includes Be-zero[.] investments.  I don't think you have the support you need to merge without them. # CLASS: player
+    * * { player_knows ? (be_zero_investor) && Business >= 30 }That 50% *not* in G's pocket includes Be-zero[.] investments.  I don't think you have the support you need to merge without them. # CLASS: player
     
         Oh, good, you have been paying attention! # CLASS: junia
         
         But please don't worry about that.  It's taken care of. # CLASS: junia
     
-    * * { player_knows ? nth_in_bern && Business >= 30 } You can't overrule Nth Horizon's initial filing in Bern.[]  I think that leaves your merger plan in some doubt. # CLASS: player
+    * * { player_knows ? (nth_in_bern) && Business >= 30 } You can't overrule Nth Horizon's initial filing in Bern.[]  I think that leaves your merger plan in some doubt. # CLASS: player
     
         I see. # CLASS: junia
         
@@ -1516,7 +1516,7 @@ problem # CLASS: junia
         
         They tend to earn their extremely large paychecks turning those details into forgotten history. # CLASS: junia
     
-    * * { player_knows ? bentons_master_plan } You think you have all the cards, but B's playing you.[]  You'll see. # CLASS: player
+    * * { player_knows ? (bentons_master_plan) } You think you have all the cards, but B's playing you.[]  You'll see. # CLASS: player
     
         So I take it you're still playing lapdog to your old choi then? # CLASS: junia
         

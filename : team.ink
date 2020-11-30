@@ -62,7 +62,7 @@ I don't report every result to my patient because my patient is a conniving soth
 
     - - (nothelp) You're not helping. # CLASS: junia
 
-* { Psychology + Medicine >= 60 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
+* { Psychology + Medicine >= 30 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
 
     { wait(2) }
 
@@ -76,7 +76,7 @@ I don't report every result to my patient because my patient is a conniving soth
     
     * * Lucas, what's the problem? # CLASS: player
 
-* { Medicine >= 60 } Benton, [listen to your CMO.]I think you have a conflict of interest.  As chief medical officer, Dr. Estévez is well within his rights to decide the medical status of the project. # CLASS: player
+* { Medicine >= 30 } Benton, [listen to your CMO.]I think you have a conflict of interest.  As chief medical officer, Dr. Estévez is well within his rights to decide the medical status of the project. # CLASS: player
 
     Thank you, { name } # CLASS: lucas
 
@@ -237,13 +237,13 @@ We're getting closer to that launch window.  B, we need to talk about handing R 
 
 The mission is yours.  You're still going to be looped in on everything.  I just can't keep jeopardizing the future of the company because you're more interested in being a test-pilot. # CLASS: junia
 
-* { Business >= 60 } Might I suggest a [proxy?] third party act as a proxy while Benton is stretched for time? # CLASS: player
+* { Business >= 30 } Might I suggest a [proxy?] third party act as a proxy while Benton is stretched for time? # CLASS: player
 
     { wait(2) }
 
     Your opinion is appreciated, but not sure we need another seat at this table. # CLASS: junia
 
-* { Psychology >= 60 } You eager for the power, Junia? # CLASS: player
+* { Psychology >= 30 } You eager for the power, Junia? # CLASS: player
 
     { rnothelp:
         You are REALLY not helping. # CLASS: junia
@@ -294,7 +294,7 @@ TARC, bootOverride { name } # CLASS: junia
 
     -> logout
 
-* { Technology + Security >= 60 } [<< cancel override >>] # CLASS: player
+* { Technology + Security >= 30 } [<< cancel override >>] # CLASS: player
 
     << inject cancel_boot^...COMMIT >> # CLASS: player
     << processing >> # CLASS: player
@@ -512,11 +512,11 @@ DJ vector is unresolved.  Predictive analysis shows a 43% chance they did interc
 
 * Intercept?  Is someone out there with him? # CLASS: player
 
-* (player_intercept) { Astronomy + Engineering >= 60 } [An intercept is very unlikely.]The chance of an interdicting vessel making contact during our maneuver is extremely unlikely, in the order of millions to one.  Not only are the mechanics incredibly difficult to pull off, but we saw no gravitational evidence of another body coming close.# CLASS: player
+* (player_intercept) { Astronomy + Engineering >= 30 } [An intercept is very unlikely.]The chance of an interdicting vessel making contact during our maneuver is extremely unlikely, in the order of millions to one.  Not only are the mechanics incredibly difficult to pull off, but we saw no gravitational evidence of another body coming close.# CLASS: player
 
     What ship would even try? # CLASS: junia
 
-* (player_dj) { Security + Business >= 60 } A Goliath Deep Jumper?[]  How would they even have known where to intercept? # CLASS: player
+* (player_dj) { Security + Business >= 30 } A Goliath Deep Jumper?[]  How would they even have known where to intercept? # CLASS: player
 
 - 
 
@@ -534,9 +534,9 @@ Configuration matches, and there aren't many other actors who could resource suc
 
 * Big G would be the prime sus.[]  What could they have done to B? # CLASS: player
 
-* { Business + Security >= 60 } Even Goliath wouldn't openly defy intersolar law[.], would they?  What could they hope to accomplish? # CLASS: player
+* { Business + Security >= 30 } Even Goliath wouldn't openly defy intersolar law[.], would they?  What could they hope to accomplish? # CLASS: player
 
-* { Astronomy + Engineering + Technology >= 60 } They could have dropped a nanoDrone on him.[]  That's the only option that wouldn't have appeared in the flight data.  What would they want? # CLASS: player
+* { Astronomy + Engineering + Technology >= 30 } They could have dropped a nanoDrone on him.[]  That's the only option that wouldn't have appeared in the flight data.  What would they want? # CLASS: player
 
 - Threat analysis statistically favors sabotage resulting the destruction of the mission.  However, the mid-point of the Jupiter flyby would have been the most likely candidate for executing such a plan.  As Mr. Saari and Lowell's Horizon are still enroute we have to assume they failed or had another motive.  # CLASS: tarc
 
@@ -544,7 +544,7 @@ Configuration matches, and there aren't many other actors who could resource suc
 
 * Can we find out if something else is going on? # CLASS: player
 
-* { Engineering + Technology + Business + Security >= 60 } Industrial espionage seems like the only other likely option.[]  Could they be dataMining the ship?  Or trying to wrest control? # CLASS: player
+* { Engineering + Technology + Business + Security >= 30 } Industrial espionage seems like the only other likely option.[]  Could they be dataMining the ship?  Or trying to wrest control? # CLASS: player
 
 - I don't have enough information to confirm or refute/ # CLASS: tarc
 
@@ -582,7 +582,7 @@ Should the mental state of the pilot be called into question operational respons
 
     Correct. # CLASS: tarc
     
-* { Medicine + Psychology >= 60 } I'm not sure that countermands medical law. # CLASS: player
+* { Medicine + Psychology >= 30 } I'm not sure that countermands medical law. # CLASS: player
 
 - Look, I'm not saying I'm choosing the company over Benton. # CLASS: junia
 
@@ -626,7 +626,7 @@ Thank you.  TARC, we should also execute secTech override now that we don't have
 
 * [<< wait >>] # CLASS: player
 
-* { Security + Technology + Business >= 60 } secTech wasn't mentioned.[]  Are you trying to coup Nth while Benton takes a nap? # CLASS: player
+* { Security + Technology + Business >= 30 } secTech wasn't mentioned.[]  Are you trying to coup Nth while Benton takes a nap? # CLASS: player
 
     - - (secTech_concern)I appreciate your concern, but this contingency is spelled out in the bylaws as well. # CLASS: junia
     
@@ -742,9 +742,9 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
     
     * * I'm sorry, Lucas.[]  We're all doing the best we can. # CLASS: player
     
-    * * { Medicine < 60 }I'm not the medical expert![]  You are! # CLASS: player
+    * * { Medicine < 30 }I'm not the medical expert![]  You are! # CLASS: player
     
-    * * { Medicine >= 60 or career == "a doctor" }Dr. Estévez, I have to disagree.[]  Your prescriptions of infusions are completely out of line with expected requirements in this environment. # CLASS: player
+    * * { Medicine >= 30 or career == "a doctor" }Dr. Estévez, I have to disagree.[]  Your prescriptions of infusions are completely out of line with expected requirements in this environment. # CLASS: player
     
     * * { Psychology >= 30 } Lucas, we've all made mistakes.[]  Those are bound to happen in this pressure-cooker of a mission.  I need you to focus and tell us what we can do moving forward. # CLASS: player
     
@@ -960,7 +960,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
         
         * * * { woodpecker_sees_junia } Junia, I think you've been compromised. # CLASS: player
         
-            { Security + Technology >= 60:
+            { Security + Technology >= 30:
             
                 TARC, can you seek an iam_mim attack at address 0x676f7463686121? # CLASS: player
                 
@@ -1002,7 +1002,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
         
             I see.  That has not come up as a threat to our system at this time. # CLASS: tarc
     
-    * * { tarc_01.tarc_history or Technology >= 60 } TARC, [I know you.  What's wrong?] your predictive analytics subroutines would have crushed the network patterning in no time back when I was working on them, and that was _years_ ago. # CLASS: player
+    * * { tarc_01.tarc_history or Technology >= 30 } TARC, [I know you.  What's wrong?] your predictive analytics subroutines would have crushed the network patterning in no time back when I was working on them, and that was _years_ ago. # CLASS: player
     
         At the very least you should be able to identify and reroute dangerous traffic, even if you can't pin the source. # CLASS: player
     
@@ -1016,7 +1016,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
         
             I am not sure.  But current analysis points to Mr. Saari's instructions placing the health of Nth Horizon above his own as the likely source. # CLASS: tarc
         
-        * * * { Business + Psychology + Security >= 60 } Benton's instructions[.] about the fate of the company over the fate of himself? # CLASS: player
+        * * * { Business + Psychology + Security >= 30 } Benton's instructions[.] about the fate of the company over the fate of himself? # CLASS: player
         
             Correct. # CLASS: tarc
             
@@ -1074,7 +1074,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
     
         Yes, but leaves us in an awkward position.  # CLASS: junia
         
-    * * { Psychology + Business >= 60 } Can we turn that to our advantage?[]  Spin the underdog story? # CLASS: player
+    * * { Psychology + Business >= 30 } Can we turn that to our advantage?[]  Spin the underdog story? # CLASS: player
     
         We have been trying.  I think there's just some exhaustion in the market on the whole escapade. # CLASS: junia
         
@@ -1137,7 +1137,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
 
 - (end_mission_reports)
 
-There is one other thing we need to discuss. # CLASS: junia.
+There is one other thing we need to discuss. # CLASS: junia
 
 * What's that? # CLASS: player
 
@@ -1165,7 +1165,7 @@ To that end I have just received board approval to open discussions with an inte
 
 Confirmed. # CLASS: tarc
 
-* { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 } It's Goliath, isn't it? # CLASS: player
+* { player_knows ? (junia_shadowy) or player_knows ? (entropic_goliath) or player_knows ? (goliath_hands_in_pie) or Business >= 30 } It's Goliath, isn't it? # CLASS: player
 
     { wait(4) }
     
@@ -1182,13 +1182,13 @@ Confirmed. # CLASS: tarc
     Under the strictest confidence I can tell you the corp involved is SaturnExpress. # CLASS: junia
     
     {
-        - Business >= 60:
+        - Business >= 30:
         
             That's a Goliath shell! # CLASS: player
             
             ~ player_knows += junia_dealing_w_goliath
             
-        - Technology + Security >= 60:
+        - Technology + Security >= 30:
         
             TARC!  <>
         
@@ -1216,7 +1216,7 @@ I'll connect with each of you later. # CLASS: junia
 
     Probably a lot. # CLASS: lucas
     
-    * * { Technology + Security >= 60 && player_knows !? junia_dealing_w_goliath } TARC, [you must know more!]can you dig up anything more about this "interested party"? # CLASS: player
+    * * { Technology + Security >= 30 && player_knows !? (junia_dealing_w_goliath) } TARC, [you must know more!]can you dig up anything more about this "interested party"? # CLASS: player
         
         -> tarc_backtrace ->
         

@@ -94,7 +94,7 @@
     
     -> ohno
 
-+ { Technology + Security >= 60 } << rollback >> # CLASS: alert
++ { Technology + Security >= 30 } << rollback >> # CLASS: alert
 
     << block_hack^...COMMIT >> # CLASS: alert
     
@@ -133,7 +133,7 @@ Peck. # CLASS: kim
         
             { wait(3) }
 
-        * * * { Psychology + Security >= 90 } Are you Speight? # CLASS: player
+        * * * { Psychology + Security >= 60 } Are you Speight? # CLASS: player
         
             Well well, aren't you sharp. # CLASS: kim
             
@@ -153,7 +153,7 @@ Peck. # CLASS: kim
     
     Hello? # CLASS: player
 
-* { Technology + Security >= 60 } [<< Trace >>]
+* { Technology + Security >= 30 } [<< Trace >>]
 
     << inject tracer360^...COMMIT >> # CLASS: alert
     << processing >> # CLASS: alert
@@ -206,7 +206,7 @@ I think we can help each other out. # CLASS: kim
 
 * Perhaps. # CLASS: player
 
-* { Technology + Security + Psychology >= 60} You have me at a disadvantage.[]  And given the nature of your attack I'd say you're trying to keep it that way; keep me unbalanced. # CLASS: player
+* { Technology + Security + Psychology >= 30} You have me at a disadvantage.[]  And given the nature of your attack I'd say you're trying to keep it that way; keep me unbalanced. # CLASS: player
 
     Guilty. # CLASS: kim
     
@@ -310,7 +310,7 @@ Howz about we drop each other datapoints, one at a time.  Keep it fair. # CLASS:
 
 	Awwww, you never broken a promise before? # CLASS: kim
 	
-* { Technology + Security >= 60 } If we do this, we do it on my terms. # CLASS: player
+* { Technology + Security >= 30 } If we do this, we do it on my terms. # CLASS: player
 
 	- - (p_tech)Info density weighted tunnel. # CLASS: player
 	
@@ -374,7 +374,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
     -> fake_deets
 
-+ { Technology + Security >= 60 }[<< inject false data >>]
++ { Technology + Security >= 30 }[<< inject false data >>]
 
     -> fake_deets
 
@@ -723,7 +723,7 @@ I found more juice, but the hard evidence is elusive. # CLASS: kim
     
     and after i dug this dirt 4 u # CLASS: kim
     
-    What dirt? # CLASS: player # CLASS: kim
+    What dirt? # CLASS: player
 
 - Oh, now, I'd love to say we're trusting old friends. # CLASS: kim
 
@@ -740,7 +740,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 ~ temp p_knew = false
 ~ temp p_oblivious = false
 
-{ player_knows ? junia_dealing_w_goliath:
+{ player_knows ? (junia_dealing_w_goliath):
 
     ~ p_knew = true
 
@@ -796,7 +796,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
     ~ kim_knows += (benton_crazy2)
     ~ kim_knows -= (nothing)
 
-* { player_knows ? junia_dealing_w_goliath && p_knew == true }  [Junia is working with Goliath.]Your dirt on Junia is old news.  She has practically admitted that she's working with a Goliath shell to broker an acquisition "in the event that Benton fails."  <> # CLASS: player
+* { player_knows ? (junia_dealing_w_goliath) && p_knew == true }  [Junia is working with Goliath.]Your dirt on Junia is old news.  She has practically admitted that she's working with a Goliath shell to broker an acquisition "in the event that Benton fails."  <> # CLASS: player
 
     { Business + Psychology >= 30:
     
@@ -824,7 +824,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
     
     <> in a heavy-handed manner.  <>
     
-    { Technology + Security >= 60:
+    { Technology + Security >= 30:
     
         <>It's as if its normal avenues of data collection are blocked and its logic is caught in an infinite loop as a result.  It's trying to gather data in the only way it can.  <> 
     
@@ -848,7 +848,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
     -> 2ndfake_deets
 
-+ { Technology + Security >= 60 }[<< inject false data >>]
++ { Technology + Security >= 30 }[<< inject false data >>]
 
     -> 2ndfake_deets
 
@@ -933,13 +933,13 @@ Pleasure doing biznez, { name }. # CLASS: kim
         
         I'll keep digging on that. # CLASS: kim
     
-    - p_knew:
+    - p_knew == true:
     
         I already knew about Junia trying to sell to SaturnExpress! # CLASS: player
         
         That may be.  Doesn't mean it's not legit data to share w/ u. # CLASS: kim
     
-    - k_knew:
+    - k_knew == true:
     
         Already grokked Junia's 2xdealing.  But that's fine. # CLASS: kim
     
@@ -957,7 +957,7 @@ Pleasure doing biznez, { name }. # CLASS: kim
 
     Hmmmm, another thing... # CLASS: kim
 
-* { Technology + Security >= 90 && tarceye_install == true}[<< brute force install tarceye link >>]
+* { Technology + Security >= 60 && tarceye_install == true}[<< brute force install tarceye link >>]
 
     ~ tarc_sees_woodpecker = true
     
@@ -997,19 +997,7 @@ Get what I'm saying? # CLASS: kim
 
 Just need you to carry this package from me to him... # CLASS: kim
 
-* << install woodpeck >> # CLASS: player
-
-    Nice.  You won't regret.  Promise. # CLASS: kim
-    
-    ~ woodpeck_install = true
-    
-    -> wedonehere
-    
-* Sorry, I won't install your code. # CLASS: player
-
-    'K. # CLASS: kim
-    
-    -> wedonehere
+    -> rwedonehere
     
 - else:
 
@@ -1024,6 +1012,20 @@ Gotta fly.  Thankyoubuhbye. # CLASS: kim
 + [<< Close chat >>]
 
     -> menu
+
+= rwedonehere
+
+* << install woodpeck >> # CLASS: player
+
+    Nice.  You won't regret.  Promise. # CLASS: kim
+    
+    ~ woodpeck_install = true
+    
+* Sorry, I won't install your code. # CLASS: player
+
+    'K. # CLASS: kim
+    
+- -> wedonehere
 
 = no2nddeal
 
@@ -1043,7 +1045,7 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out! # CLASS: k
         ~ kim_knows -= (nothing)
     
     
-    - { kim_knows ? fake_lovechild:The illicit lovechild has |Junia and Benton have an illicit love child who's in Lowell's Horizon with its father!  It has }grown at an exponential rate and is now battling over resources with its father.  If it wins it will undoubtedly pilot Lowell's Horizon into the embrace of its dark, alien masters beyond Pluto! # CLASS: player
+    - { kim_knows ? (fake_lovechild):The illicit lovechild has |Junia and Benton have an illicit love child who's in Lowell's Horizon with its father!  It has }grown at an exponential rate and is now battling over resources with its father.  If it wins it will undoubtedly pilot Lowell's Horizon into the embrace of its dark, alien masters beyond Pluto! # CLASS: player
     
         ~ kim_knows += (fake_lovechild_battle)
         ~ kim_knows -= (nothing)

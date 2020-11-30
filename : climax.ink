@@ -29,7 +29,7 @@
 
     He keeps disconnecting his medsci suite, so I have no idea if he's ready for this or not. # CLASS: lucas
     
-    * * { player_knows ? luc_fixtank }  Do we have plans for the tank? # CLASS: player
+    * * { player_knows ? (luc_fixtank) }  Do we have plans for the tank? # CLASS: player
         
             Duct tape and a prayer. # CLASS: lucas
             
@@ -37,7 +37,7 @@
             
             OK. # CLASS: player
 
-    * * { player_knows ? luc_operation }  Will you be able to operate[?] if it's needed? # CLASS: player
+    * * { player_knows ? (luc_operation) }  Will you be able to operate[?] if it's needed? # CLASS: player
         
             Perhaps.  It will be highly risky. # CLASS: lucas
             
@@ -45,7 +45,7 @@
             
             OK. # CLASS: player
     
-    * * { player_knows ? luc_compounds }  Have we gathered enough compounds[?] from the forward scoop? # CLASS: player
+    * * { player_knows ? (luc_compounds) }  Have we gathered enough compounds[?] from the forward scoop? # CLASS: player
     
         I hope so.  He will burn through a lot of them in the next hour. # CLASS: lucas
         
@@ -59,15 +59,15 @@
 
     Ms. Masangkay has refused any connections since the board went into deliberations.  <>
     {
-    - player_knows ? j_betray_proof : 
+    - player_knows ? (j_betray_proof) : 
         
         <>While she is still able to refute accusations that she was plotting for Benton's death, the evidence provided has dealth her a blow.  <>
         
-    - player_knows ? junia_wants_b_dead : 
+    - player_knows ? (junia_wants_b_dead) : 
     
         <>While we have laid serious accusations at her feet, there is no irrefutable evidence.  <>
     
-    - player_knows ? junia_dealing_w_goliath:
+    - player_knows ? (junia_dealing_w_goliath):
     
         <>Collusion with a Goliath subsidiary is a serious accusation, although she certainly has enough support to avoid persecution.  <>
         
@@ -82,15 +82,15 @@
     
     * * { goliath_sees_player == true && (Technology + Security >=30) }Goliath's already watching.[]  Let's not give them any more ammunition. # CLASS: player
     
-    * * { player_knows ? be_zero_investor && Business >= 30 } I don't like big money[.], but at least some of it is on our side. # CLASS: player
+    * * { player_knows ? (be_zero_investor) && Business >= 30 } I don't like big money[.], but at least some of it is on our side. # CLASS: player
     
         They'll back B up. # CLASS: player
     
-    * * { player_knows ? goliath_accounts } We've caught Goliath's hand in the cookie jar.[]  Let's just make sure they don't stab us in the face in return. # CLASS: player
+    * * { player_knows ? (goliath_accounts) } We've caught Goliath's hand in the cookie jar.[]  Let's just make sure they don't stab us in the face in return. # CLASS: player
     
         Lovely thought. # CLASS: lucas
     
-    * * { player_knows ? bentons_master_plan } I hope you knew what you were doing, B.[]  This plan of yours had better work. # CLASS: player
+    * * { player_knows ? (bentons_master_plan) } I hope you knew what you were doing, B.[]  This plan of yours had better work. # CLASS: player
     
     * * Well, I intend to be on the winning side. # CLASS: player
 
@@ -210,7 +210,7 @@ can you hear me? # CLASS: benton
 
     i stare at it and it confounds me.
 
-* { Psychology + Medicine >= 60 }Can you help me understand the question?[]  What do you define as the edge? # CLASS: player
+* { Psychology + Medicine >= 30 }Can you help me understand the question?[]  What do you define as the edge? # CLASS: player
 
 * Only death. # CLASS: player
 
@@ -348,7 +348,7 @@ Probably why he's more woo than usual. # CLASS: lucas
 Cycler reports green, but that can't be right. # CLASS: lucas
 
 
-* { Medicine >= 60 }  First we need to rebalance[.] and drop those decomp rates. # CLASS: player
+* { Medicine >= 30 }  First we need to rebalance[.] and drop those decomp rates. # CLASS: player
 
     Already on it. # CLASS: lucas
     

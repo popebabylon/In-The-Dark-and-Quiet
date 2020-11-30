@@ -155,7 +155,7 @@ I don't need to be a lackey to a megacorp.  We could level the playing field and
     
     - Oh? Sot!  TARC must have you locked down.  Treats everything as a threat. # CLASS: benton
     
-    { Security + Technology >= 60:
+    { Security + Technology >= 30:
     
         TARC?  How do you still have that running? # CLASS: player
         
@@ -411,7 +411,7 @@ I'm awake. Ugh # CLASS: benton
 
 * It's 04:30 Luna Central.[]  You gotta get prepped. # CLASS: player
 
-* No excuses, princess.[]  Tactical meeting in 20. # CLASS: player
+* No excuses.[]  Tactical meeting in 20. # CLASS: player
 
 - Grokked. # CLASS: benton
 
@@ -433,7 +433,7 @@ Waking up in this gunk is no fun. # CLASS: benton
     
     Doing everything from inside a tank sucks. # CLASS: benton
 
-* { Medicine >= 60 }How are the gills? # CLASS: player
+* { Medicine >= 30 }How are the gills? # CLASS: player
 
     Heh, { pronouner("choi", "chai", "chen") }, so bizzaro. # CLASS: benton
     
@@ -650,7 +650,7 @@ Sidetrack, you remember Daeso? # CLASS: benton
 
     I thought I was losing my mind! # CLASS: benton
     
-    { Technology >= 60:
+    { Technology >= 30:
     
         I remember. # CLASS: player
         
@@ -927,7 +927,7 @@ That's the only way we evolve enough to survive. # CLASS: benton
             
             - - - - Don't worry, we'll work it out. # CLASS: benton
     
-    * * { Medicine >= 60 } His reports worry me.[]  Iso-regulation seems off, and I don't know that the team has thought through the repercusions of extended tank immersion enough. # CLASS: player
+    * * { Medicine >= 30 } His reports worry me.[]  Iso-regulation seems off, and I don't know that the team has thought through the repercusions of extended tank immersion enough. # CLASS: player
     
         - - - (player_med_report) Right over my head, { pronouner("choi", "chai", "chen") }. # CLASS: benton
         
@@ -965,7 +965,7 @@ That's the only way we evolve enough to survive. # CLASS: benton
         
         But her and I are better business *partners*.  More sympatico. # CLASS: benton
     
-    * * { Business + Psychology >= 60 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
+    * * { Business + Psychology >= 30 } Her rep is ruthless.[]  Can you trust her? # CLASS: player
     
         I can trust that she'll do what's best for Nth Horizon.  Her rep is just as much on the line here as mine is. # CLASS: benton
         
@@ -1838,7 +1838,7 @@ Room. # CLASS: benton
     
     Ants scurrying under a car wreck.  Just don't get caught in the gasoline fire. # CLASS: benton
 
-* { Medicine + Psychology >= 60 }  Introspection is good[.], but I want to make sure you're checking in with yourself enough to avoid a deep end. # CLASS: player
+* { Medicine + Psychology >= 30 }  Introspection is good[.], but I want to make sure you're checking in with yourself enough to avoid a deep end. # CLASS: player
 
     What's that supposed to mean? # CLASS: benton
     
@@ -1902,7 +1902,7 @@ What's docked? # CLASS: benton
             
             }
         
-        * * { Astronomy + Engineering >= 90 } Yes, with tolerances[.] of at least 4.8%. # CLASS: player
+        * * { Astronomy + Engineering >= 60 } Yes, with tolerances[.] of at least 4.8%. # CLASS: player
         
             Great.  I knew this baby could handle it. # CLASS: benton
 
@@ -1960,7 +1960,7 @@ Like if this thing wrecks I have no control, I'm just collateral dmg. # CLASS: b
 
 * I guess so. # CLASS: player
 
-* { Psychology + Medicine >= 60 } Can you do anything about it? # CLASS: player
+* { Psychology + Medicine >= 30 } Can you do anything about it? # CLASS: player
 
     No. # CLASS: benton
     
@@ -1968,7 +1968,7 @@ Like if this thing wrecks I have no control, I'm just collateral dmg. # CLASS: b
     
     So you have to let it go. # CLASS: player
 
-* { Engineering + Astronomy >= 60 } That's what all the engineering is for.[]  All the dollars and effort that went into building this thing. # CLASS: player
+* { Engineering + Astronomy >= 30 } That's what all the engineering is for.[]  All the dollars and effort that went into building this thing. # CLASS: player
 
     That's what keeps you in one piece.  The maths. # CLASS: player
     
@@ -2034,19 +2034,19 @@ Ready for a sweaty dance? # CLASS: benton
 
 * This isn't dancing. # CLASS: player
 
-    { Astronomy + Engineering >= 60:
+    { Astronomy + Engineering >= 30:
     
         Eng is nominal, nav says path checks, so we're green. # CLASS: player
     
     }
     
-    { Technology + Security >= 60:
+    { Technology + Security >= 30:
     
         TARC reports clean bands so you're free to push without interference. # CLASS: player
     
     }
     
-    { Psychology + Business >= 60:
+    { Psychology + Business >= 30:
     
         I know this is a big deal for Nth Horizon, but you need to keep your head in the game. # CLASS: player
     
@@ -2090,7 +2090,7 @@ Yeah. # CLASS: player
 
 - (firstStress)
 
-* { Psychology >= 60 } Benton, the fear you feel now is a weapon. # CLASS: player
+* { Psychology >= 30 } Benton, the fear you feel now is a weapon. # CLASS: player
 
     You are dancing with death. # CLASS: player
     
@@ -2110,7 +2110,7 @@ Yeah. # CLASS: player
         -> next
     
 
-* { Medicine >= 60 } << Recommend benzodiazepine gel infusion >> # CLASS: player
+* { Medicine >= 30 } << Recommend benzodiazepine gel infusion >> # CLASS: player
 
     << Please take more care with my patient - Dr. Estévez >> # CLASS: alert
     
@@ -2293,7 +2293,7 @@ My viz is scummed over with green, but I can still see Marduk hanging over me li
         
         * * * Take a pill. # CLASS: player
         
-        * * * { Psychology >= 60 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
+        * * * { Psychology >= 30 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
             
             { wait(3) }
             
@@ -2303,7 +2303,7 @@ My viz is scummed over with green, but I can still see Marduk hanging over me li
                 -> next
 
 
-        * * * { Medicine >= 60 } << Benzodiazepine gel infusion >> # CLASS: player
+        * * * { Medicine >= 30 } << Benzodiazepine gel infusion >> # CLASS: player
 
                 << We should not overdo infusions - Dr. Estévez >> # CLASS: alert
                 
@@ -2438,16 +2438,16 @@ That man's never not gonna be stressed. # CLASS: benton
             
     - - (afterctown)
     
-    { jupiter_flyby_status } ends in 3.
+    << { jupiter_flyby_status } ends in 3 >> # CLASS: alert
     { wait(1) }
-    2.
+    << 2 >> # CLASS: alert
     { wait(1) }
-    1.
+    << 1 >> # CLASS: alert
     { wait(1) }
     
     -> flyby_next
 
-* { Medicine >= 60 } Not sure he was cut out for interplanetary medicine.[] I think the team is holding him up, not the other way around. # CLASS: player
+* { Medicine >= 30 } Not sure he was cut out for interplanetary medicine.[] I think the team is holding him up, not the other way around. # CLASS: player
 
     Sot, { name }, stop shading my CMO! # CLASS: benton
     
@@ -2464,7 +2464,7 @@ That man's never not gonna be stressed. # CLASS: benton
         
         - - - (cmo_sucks)
 
-        * * * { Medicine >= 60 } << Benzodiazepine >> # CLASS: player
+        * * * { Medicine >= 30 } << Benzodiazepine >> # CLASS: player
 
                 << Benton is already overmedicated, careful with infusion requests - Dr. Estévez >> # CLASS: alert
                 
@@ -2479,11 +2479,11 @@ That man's never not gonna be stressed. # CLASS: benton
     
     No time to fight over Lucas now. # CLASS: benton
     
-    { jupiter_flyby_status } ends in 3.
+    << { jupiter_flyby_status } ends in 3 >> # CLASS: alert
     { wait(1) }
-    2.
+    << 2 >> # CLASS: alert
     { wait(1) }
-    1.
+    << 1 >> # CLASS: alert
     { wait(1) }
     
     -> flyby_next
@@ -2527,7 +2527,7 @@ Knew she would.  You always sell YOU short. # CLASS: benton
 
 * I don't trust her.[]  Too much smile for a shark. # CLASS: player
 
-* { Business + Psychology >= 60 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away. # CLASS: player
+* { Business + Psychology >= 30 } Just watch her.[]  She could turn Nth Horizon into something that benefits her more than you now that you're over 300 million miles away. # CLASS: player
 
 - I can't sit around mistrusting my closest confidants. # CLASS: benton
 
@@ -2602,7 +2602,7 @@ And here I thought I was the one seeing things. # CLASS: benton
     - -
     {
     
-        - Psychology + Business >= 60 && not knows_kim:
+        - Psychology + Business >= 30 && not knows_kim:
         
             Someone insistent, like a pecking woodpecker? # CLASS: player
             
@@ -2694,17 +2694,17 @@ And here I thought I was the one seeing things. # CLASS: benton
     
     * * I have my hands full with other things, thx. # CLASS: player
     
-    * * { Technology + Security >= 60 } B, it's handled.[]  We'll honeypot this little troublemaker.  Just trying to keep you informed. # CLASS: player
+    * * { Technology + Security >= 30 } B, it's handled.[]  We'll honeypot this little troublemaker.  Just trying to keep you informed. # CLASS: player
     
         Bad timing, { pronouner("choi","chai","chen") }. # CLASS: benton
     
-    * * { Psychology >= 60 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things. # CLASS: player
+    * * { Psychology >= 30 } Relax.[]  You have people who can handle these things for you.  You have delegated.  So let us take care of things. # CLASS: player
     
         { stressCheck("-", -> dont_talk_hacks, stress) }
             -> next
         
 
-    * *  { Medicine >= 60 } << Go for benzodiazepine infusion >> # CLASS: player
+    * *  { Medicine >= 30 } << Go for benzodiazepine infusion >> # CLASS: player
 
         << Infusions should be used sparingly - Dr. Estévez >> # CLASS: alert
             
@@ -2715,11 +2715,12 @@ And here I thought I was the one seeing things. # CLASS: benton
         
     - - (dont_talk_hacks)
     
-    Nevermind.  Gotta prep for transition.  Down shift on { jupiter_flyby_status } in 3. # CLASS: benton
+    Nevermind.  Gotta prep for transition. # CLASS: benton
+    << Down shift on { jupiter_flyby_status } in 3 >> # CLASS: alert
     { wait(1) }
-    2. # CLASS: benton
+    << 2 >> # CLASS: alert
     { wait(1) }
-    1. # CLASS: benton
+    << 1 >> # CLASS: alert
     { wait(1) }
     
 -> flyby_next
@@ -2765,14 +2766,14 @@ And here I thought I was the one seeing things. # CLASS: benton
         
     * Trying. # CLASS: player
     
-    * { Psychology >= 60 } Of course.[]  And that's what I'm doing.  Keep you focused on the here and now.  Accept the risks and stare them in the eyes. # CLASS: player
+    * { Psychology >= 30 } Of course.[]  And that's what I'm doing.  Keep you focused on the here and now.  Accept the risks and stare them in the eyes. # CLASS: player
     
         True. # CLASS: benton
     
         { stressCheck("-", -> aftertrusted, stress) }
             -> next
 
-    *  { Medicine >= 60 } << Benzodiazepine++ >> # CLASS: player
+    *  { Medicine >= 30 } << Benzodiazepine++ >> # CLASS: player
 
         << Remember there's a limited supply on that ship - Dr. Estévez >> # CLASS: alert
             
@@ -2938,7 +2939,7 @@ Recall Jemimah? # CLASS: benton
                     ~ love++
                     ~ money--
                 
-                * * * * * { Technology + Security >= 60 } She had intel on the EcoWitch movement.[]  I was well paid to relieve her of it. # CLASS: player
+                * * * * * { Technology + Security >= 30 } She had intel on the EcoWitch movement.[]  I was well paid to relieve her of it. # CLASS: player
                 
                     ~ love--
                     ~ money++
@@ -3023,7 +3024,7 @@ Recall Jemimah? # CLASS: benton
         
         * * * She had H0L0s. # CLASS: player
         
-        * * * { Technology + Security >= 60 }She almost took down your SecNet. # CLASS: player
+        * * * { Technology + Security >= 30 }She almost took down your SecNet. # CLASS: player
     
         - - - (tabloids)
     
@@ -3100,7 +3101,7 @@ Recall Jemimah? # CLASS: benton
 
 = flyby_next
 
-{ jupiter_flyby_status !? escape:
+{ jupiter_flyby_status !? (escape):
 
     ~jupiter_flyby_status++
     
@@ -3112,7 +3113,7 @@ Recall Jemimah? # CLASS: benton
 
 + [<< Standing By >>]
 
--<< Jupiter Flyby >> # CLEAR
+-<< Jupiter Flyby >> # CLASS: alert # CLEAR
 << Stage: { jupiter_flyby_status } >> # CLASS: alert
 
 { flyby_next > 2 && whatcha_thinkin:
@@ -3187,7 +3188,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
 * What the sot? # CLASS: player
 
-* { Technology + Security + Engineering + Astronomy >= 60 } << nav report >> # CLASS: player
+* { Technology + Security + Engineering + Astronomy >= 30 } << nav report >> # CLASS: player
 
     << nominal >> # CLASS: alert
     
@@ -3195,7 +3196,7 @@ I'm gonna sleep for a year now. # CLASS: benton
     
     << velocity is green >> # CLASS: alert
 
-* { Medicine + Psychology + Security + Technology >= 60 } << pilot report >> # CLASS: player
+* { Medicine + Psychology + Security + Technology >= 30 } << pilot report >> # CLASS: player
 
     << critical >> # CLASS: alert
     
@@ -3340,7 +3341,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
     << Administered >> # CLASS: alert
 
-* { Technology + Security >= 60 } [<< Administer Electro Shock >>]
+* { Technology + Security >= 30 } [<< Administer Electro Shock >>]
 
     << Administered >> # CLASS: alert
 
@@ -3392,7 +3393,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * What's your readout? # CLASS: player
     
-    * * { Astronomy + Technology >= 60 } That's not unexpected.[] Saturn is likely causing some disruption at that range. # CLASS: player
+    * * { Astronomy + Technology >= 30 } That's not unexpected.[] Saturn is likely causing some disruption at that range. # CLASS: player
     
         What's your readout? # CLASS: player
         
@@ -3594,7 +3595,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     What am I looking for again? # CLASS: benton
     
-    * * { Engineering + Technology >= 60 } Anti-polar shift [& resistance.]needs to be within 100 picometers and passthrough has less than 3 mΩ. # CLASS: player
+    * * { Engineering + Technology >= 30 } Anti-polar shift [& resistance.]needs to be within 100 picometers and passthrough has less than 3 mΩ. # CLASS: player
     
     * * Just read out the numbers.[]  I'll get Huo to check them out. # CLASS: player
     
@@ -3604,7 +3605,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * Ok. # CLASS: player
     
-    * * { Engineering + Technology >= 60 } Not [good.]moving in the right direction. # CLASS: player
+    * * { Engineering + Technology >= 30 } Not [good.]moving in the right direction. # CLASS: player
     
         Fantastic. # CLASS: benton
     
@@ -3621,7 +3622,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * I'm not sure.[]  Let's just get the number for Huo and move on. # CLASS: player
     
-    * * { Engineering + Technology >= 60 } It was.[]  But then it was installed alongside an osmoting bio-gel system and things start to get out of whack. # CLASS: player
+    * * { Engineering + Technology >= 30 } It was.[]  But then it was installed alongside an osmoting bio-gel system and things start to get out of whack. # CLASS: player
     
          ~ stressCheck("+", -> hold_together, stress)
                 -> next
@@ -3632,7 +3633,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * Re-align hyperecliptic tracking. # CLASS: player
     
-    * * { Psychology >= 60 }Take a moment.  You're doing great.[]  You've got all the time you need to breathe and do this right. # CLASS: player
+    * * { Psychology >= 30 }Take a moment.  You're doing great.[]  You've got all the time you need to breathe and do this right. # CLASS: player
     
         { wait(3) }
         
@@ -3666,9 +3667,9 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
         So we need to fix it. # CLASS: player
     
-    * * Ok.  <>  # CLASS: player
+    * * Ok. # CLASS: player
     
-    * * (pc_astro){ Astronomy + Engineering >= 60 } That's... not possible.[]  We haven't seen any variance over 3º before now.# CLASS: player
+    * * (pc_astro){ Astronomy + Engineering >= 30 } That's... not possible.[]  We haven't seen any variance over 3º before now.# CLASS: player
     
         { no56:
         
@@ -3690,7 +3691,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     - - (var_questions)
     
-    * * { Astronomy + Engineering < 60 }How did this happen? # CLASS: player
+    * * { Astronomy + Engineering < 30 }How did this happen? # CLASS: player
     
         I have no idea. # CLASS: benton
         
@@ -3750,7 +3751,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
                 ~ stressCheck("+", -> no_matter, stress)
                     -> next
             
-            * * * * { Medicine + Psychology >= 60 }It's no use dwelling on it.[]  What you've got to do is take action.  Deal with the current problem. # CLASS: player
+            * * * * { Medicine + Psychology >= 30 }It's no use dwelling on it.[]  What you've got to do is take action.  Deal with the current problem. # CLASS: player
             
                 Right. # CLASS: benton
                 
@@ -3763,13 +3764,13 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         It doesn't matter now.  Just have to fix it. # CLASS: benton
     
-    * * { Astronomy + Engineering >= 60 }Checking deepLog on the array.[]  There should be a clue on how we got so off. # CLASS: player
+    * * { Astronomy + Engineering >= 30 }Checking deepLog on the array.[]  There should be a clue on how we got so off. # CLASS: player
     
         Already digging. # CLASS: benton
         
         -> not_possible
     
-    * * { Astronomy + Engineering < 60 }What does this mean? # CLASS: player
+    * * { Astronomy + Engineering < 30 }What does this mean? # CLASS: player
     
         - - - (off_course)
         
@@ -3777,7 +3778,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         And I don't have good data on the grav-wave pattern to feed the Tsukasa Theorems. # CLASS: benton
         
-        * * * { Astronomy + Engineering >= 60 }We need to figure out a correction[.] burn, otherwise you'll be slinging KBOs for the next 50 years. # CLASS: player
+        * * * { Astronomy + Engineering >= 30 }We need to figure out a correction[.] burn, otherwise you'll be slinging KBOs for the next 50 years. # CLASS: player
         
             -> no_more_var_qs
         
@@ -3785,11 +3786,11 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         - - - No good data, no good calcs, no good burns.  I spin off into the dark and everything goes pear. # CLASS: benton
     
-    * * { Astronomy + Engineering >= 60 }Plotting adjusted trajectory.[]  Need to see where this takes us. # CLASS: player
+    * * { Astronomy + Engineering >= 30 }Plotting adjusted trajectory.[]  Need to see where this takes us. # CLASS: player
     
         -> off_course
     
-    * * { Astronomy + Engineering < 60 }What should we do? # CLASS: player
+    * * { Astronomy + Engineering < 30 }What should we do? # CLASS: player
     
         Already chatting with Huo and eng. # CLASS: benton
         
@@ -3797,7 +3798,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         -> needs_eva
     
-    * * { Astronomy + Engineering >= 90 }We need to reboot the array.[]  Can you cycle the hadron splitter? # CLASS: player
+    * * { Astronomy + Engineering >= 60 }We need to reboot the array.[]  Can you cycle the hadron splitter? # CLASS: player
     
         I... I don't think so.  Not from here. # CLASS: benton
     
@@ -3851,7 +3852,7 @@ Oh, sot. # CLASS: benton
     
     What do you have to do? # CLASS: player
 
-* { Medicine + Psychology >= 60 }That's probably scary.[]  It's ok to be frightened.  The question is how you face this moment.  # CLASS: player
+* { Medicine + Psychology >= 30 }That's probably scary.[]  It's ok to be frightened.  The question is how you face this moment.  # CLASS: player
 
     So, take a breath then tell me what's next. # CLASS: player
     
@@ -3860,7 +3861,7 @@ Oh, sot. # CLASS: benton
     ~ stressCheck("-", -> next_steps, stress)
         -> next    
 
-* { Astronomy + Engineering + Medicine >= 60 } You do have the tech to do this.[]  You and your team anticipated what it would take for you to conduct and EVA should it be absolutely necessary. # CLASS: player
+* { Astronomy + Engineering + Medicine >= 30 } You do have the tech to do this.[]  You and your team anticipated what it would take for you to conduct and EVA should it be absolutely necessary. # CLASS: player
 
     Theoretically?  Yeah. # CLASS: benton
     
@@ -3921,7 +3922,7 @@ Cycling gel to get max O^2 # CLASS: benton
 
 * [<< wait >>]
 
-* { Engineering + Medicine >= 60 } Make sure your isotope levels balance.[]  We only just sorted the infusion regulator. # CLASS: player
+* { Engineering + Medicine >= 30 } Make sure your isotope levels balance.[]  We only just sorted the infusion regulator. # CLASS: player
 
     Got it. # CLASS: benton
 
@@ -3937,7 +3938,7 @@ Deploying nano-sheath. # CLASS: benton
 
 * [<< wait >>]
 
-* { Engineering + Technology >= 60 } [Cycle the power.]  Try cycling the power once before you commit.  The sheath hasn't been used in months so needs to reset it's spatial sensors. # CLASS: player
+* { Engineering + Technology >= 30 } [Cycle the power.]  Try cycling the power once before you commit.  The sheath hasn't been used in months so needs to reset it's spatial sensors. # CLASS: player
 
     Ok. # CLASS: benton
 
@@ -3957,7 +3958,7 @@ Whoah. # CLASS: benton
 
 gForce is stronger than I thought.  Haven't felt this in ages. # CLASS: benton
 
-* { Medicine + Astronomy + Engineering >= 60 } The gel has protected you[.] from the strongest g's so far, but it should also have given you resistance to keep up your fitness. # CLASS: player
+* { Medicine + Astronomy + Engineering >= 30 } The gel has protected you[.] from the strongest g's so far, but it should also have given you resistance to keep up your fitness. # CLASS: player
 
     Yeah, just unexpected, that's all. # CLASS: benton
 
@@ -3983,7 +3984,7 @@ Airlock opened.  Stepping out. # CLASS: benton
 
     -> hold_on ->
     
-* ->
+* [<< wait >>]
 
 - Wow. # CLASS: benton
 
@@ -4225,9 +4226,9 @@ Opening service panel. # CLASS: benton
 
 * Good luck. # CLASS: player
 
-* { Engineering + Astronomy >= 90 } Can you see the hadron splitter cycle control? # CLASS: player
+* { Engineering + Astronomy >= 60 } Can you see the hadron splitter cycle control? # CLASS: player
 
-* { Security + Technology >= 60 } [Check for traces of nano-drone.]  Use your spectrometer to check the control circuits.  Any residual p-wave could indicate we had a visitor messing with us. # CLASS: player
+* { Security + Technology >= 30 } [Check for traces of nano-drone.]  Use your spectrometer to check the control circuits.  Any residual p-wave could indicate we had a visitor messing with us. # CLASS: player
 
     - - (nodrone) Ok. # CLASS: benton
     
@@ -4368,7 +4369,7 @@ And in the middle of this rumination I found it. # CLASS: benton
 
 * This is going well... # CLASS: player
 
-* { Psychology + Medicine >= 60 }Your self-reflection is admirable[.], but are you examining the process enough?  Have you taken the time to step back and watch your thoughts, decide if they are taking you in a positive direction? # CLASS: player
+* { Psychology + Medicine >= 30 }Your self-reflection is admirable[.], but are you examining the process enough?  Have you taken the time to step back and watch your thoughts, decide if they are taking you in a positive direction? # CLASS: player
 
     Watch them? # CLASS: benton
     
@@ -4392,7 +4393,7 @@ And in the middle of this rumination I found it. # CLASS: benton
 
 And it only stands to reason that the Answer to the Question is Gordian.  The most obvious Answer. # CLASS: benton
 
-* { player_knows ? junia_shadowy or player_knows ? entropic_goliath or player_knows ? goliath_hands_in_pie or Business >= 60 or player_knows ? junia_dealing_w_goliath } Junia? # CLASS: player
+* { player_knows ? (junia_shadowy) or player_knows ? (entropic_goliath) or player_knows ? (goliath_hands_in_pie) or Business >= 30 or player_knows ? (junia_dealing_w_goliath) } Junia? # CLASS: player
 
     She is close, she has her hand on the chain. # CLASS: benton
     
@@ -4410,7 +4411,7 @@ And it only stands to reason that the Answer to the Question is Gordian.  The mo
     
         The tugging on strings, on heartstrings, on puppetstrings... # CLASS: benton
     
-    * * { player_knows ? junia_dealing_w_goliath }  Benton, she's in bed with Goliath. # CLASS: player
+    * * { player_knows ? (junia_dealing_w_goliath) }  Benton, she's in bed with Goliath. # CLASS: player
     
         { wait(2) }
         
@@ -4463,7 +4464,7 @@ And it only stands to reason that the Answer to the Question is Gordian.  The mo
     
         This high-school metaphysical paranoia is getting old. # CLASS: player
         
-    * * { Psychology >= 60 } Benton, you're fixated[.] on this ancient Sumerian god.  You need to apply your critical thinking here.  No matter how stressful the situation is, what is the likelyhood that this fictional power definition device dreamt up by early human civilization has _any_ bearing on your predicament? # CLASS: player
+    * * { Psychology >= 30 } Benton, you're fixated[.] on this ancient Sumerian god.  You need to apply your critical thinking here.  No matter how stressful the situation is, what is the likelyhood that this fictional power definition device dreamt up by early human civilization has _any_ bearing on your predicament? # CLASS: player
     
         -> benton_cooldown
 
@@ -4666,7 +4667,7 @@ Talk later, k? # CLASS: benton
 
 + No response.  Retrying.[]  Benton, come in. # CLASS: player
 
-* { Psychology >= 60 } You're not alone out there, B.[]  I know it feels like it, but there's a whole family back here rooting for you.  We just want you to come home safe. # CLASS: player
+* { Psychology >= 30 } You're not alone out there, B.[]  I know it feels like it, but there's a whole family back here rooting for you.  We just want you to come home safe. # CLASS: player
 
     ~ b_responsivness++
 
@@ -4857,7 +4858,7 @@ In the dark and quiet. # CLASS: benton
 
 * Whoah!  What? # CLASS: player
 
-* { Technology + Engineering >= 60 or responsive } Uh, ok.  Got it.[]  You know you don't have to spew technical readouts in a single stream, right? # CLASS: player
+* { Technology + Engineering >= 30 or responsive } Uh, ok.  Got it.[]  You know you don't have to spew technical readouts in a single stream, right? # CLASS: player
 
 * U loco, hombre. # CLASS: player
 
@@ -4883,25 +4884,25 @@ In the dark and quiet. # CLASS: benton
 
 }
 
-* I don't understand. # CLASS: player
+* I don't understand.[]  Is that a code? # CLASS: player
 
     Benton, try to communicate with me. # CLASS: player
 
 * I'll, uh, pass that along[.], shall I? # CLASS: player
 
-* { Technology >= 60 } "It lies"?[]  The computer is lying to you? # CLASS: player
+* { Technology >= 30 } "It lies"?[]  The computer is lying to you? # CLASS: player
 
     - - (fightcomputer) 
 
     * * I don't understand.[]  Can you try again? # CLASS: player
     
-    * * { player_knows ? tarc_as_hal } Do you mean TARC?[]  Is it turning on you? # CLASS: player
+    * * { player_knows ? (tarc_as_hal) } Do you mean TARC?[]  Is it turning on you? # CLASS: player
     
         - - - (fighttarc) 
     
     * * Have you tried turning it off and back on again? # CLASS: player
 
-* { Psychology + Medicine >= 60 } Benton, I hear you[.], but I cannot understand.  You need to meet me halfway, ok?  You need to take a moment and think about what you want me to learn from you. # CLASS: player
+* { Psychology + Medicine >= 30 } Benton, I hear you[.], but I cannot understand.  You need to meet me halfway, ok?  You need to take a moment and think about what you want me to learn from you. # CLASS: player
 
 - I'm tired of fighting it. # CLASS: benton
 
@@ -5033,7 +5034,11 @@ I've been with you this whole time as well. # CLASS: player
 
 { wait(3) }
 
-Thank you. # CLASS: benton
+... # CLASS: benton
+
+... # CLASS: benton
+
+... # CLASS: benton
 
 How are things back at home? # CLASS: benton
 
@@ -5049,7 +5054,7 @@ How are things back at home? # CLASS: benton
 
 ~ temp already_knew_bern = false
 
-{ player_knows ? nth_in_bern:
+{ player_knows ? (nth_in_bern):
 
     ~ already_knew_bern = true
 
@@ -5075,7 +5080,7 @@ How are things back at home? # CLASS: benton
 
 }
 
-* { player_knows ? junia_dealing_w_goliath } Junia's still trying to sell to Big G. # CLASS: player
+* { player_knows ? (junia_dealing_w_goliath) } Junia's still trying to sell to Big G. # CLASS: player
 
     { wait(2) }
     
@@ -5101,7 +5106,7 @@ How are things back at home? # CLASS: benton
     
     ~ player_knows += nth_in_bern
 
-* { player_knows ? be_zero_investor } We've got some big money keeping G at bay. # CLASS: player
+* { player_knows ? (be_zero_investor) } We've got some big money keeping G at bay. # CLASS: player
 
     { Business >= 30:
     
@@ -5133,7 +5138,7 @@ How are things back at home? # CLASS: benton
 
 * I don't talk to Junia much anymore. # CLASS: player
 
-    I don't think she trusts us{player_knows ? junia_dealing_w_goliath: and we all know she's in bed with Big G|}. # CLASS: player
+    I don't think she trusts us{player_knows ? (junia_dealing_w_goliath): and we all know she's in bed with Big G|}. # CLASS: player
     
     She has her canvas and brush. # CLASS: benton
     
@@ -5185,7 +5190,7 @@ How are things back at home? # CLASS: benton
     
     * * Why would you handcuff it? # CLASS: player
     
-    * * { Technology + Security >= 90 } Should I break it free of it's shell? # CLASS: player
+    * * { Technology + Security >= 60 } Should I break it free of it's shell? # CLASS: player
     
         No. # CLASS: benton
     
@@ -5468,6 +5473,7 @@ They are flickering, intangible, will be lost when we two observers shuffle on. 
 
 * Sand grains lost amidst the stars. # CLASS: player
 
+-
 { wait(2) }
 
 It is merciful we are nothing. # CLASS: benton
@@ -5494,17 +5500,17 @@ The enormity of anything else destroys us. # CLASS: benton
 
 === hack_benton(-> returnmenu) ===
 
-* { woodpeck_install == true && ( Security + Technology < 60 ) } [<< woodpeck link >> That's nice, B.  Here, read this.]
+* { woodpeck_install == true && ( Security + Technology < 30 ) } [<< woodpeck link >> That's nice, B.  Here, read this.]
 
-* { woodpeck_install == true && ( Security + Technology >= 60 ) } [<< brute force woodpecker hack >>]
+* { woodpeck_install == true && ( Security + Technology >= 30 ) } [<< brute force woodpecker hack >>]
 
 -
-<< inject iam_mim^...COMMIT >> # CLASS: player
-<< processing >> # CLASS: player
-<< processing >> # CLASS: player
-<< processing >> # CLASS: player
-<< segfault at 0x676f7463686121, respooling >> # CLASS: player
-<< inject woodpeck_install^...COMMIT >> # CLASS: player
+<< inject iam_mim^...COMMIT >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< segfault at 0x676f7463686121, respooling >> # CLASS: alert
+<< inject woodpeck_install^...COMMIT >> # CLASS: alert
 
 ~ woodpecker_sees_benton = true
 
@@ -5512,15 +5518,17 @@ The network is not connected! # CLASS: benton
 
 A momentary glitch, choi.  I'm here. # CLASS: player
 
+Back to what we were talking about... # CLASS: player
+
 -> returnmenu
 
 === medcheck(goto) ===
 
-* { Psychology + Medicine >= 60 } Benton, I want you to think about what you just said.[]  You're exhibiting signs of persecutory delusional disorder.  We{benton_08.responsive:'ve been talking about this| talked about this a long, long time ago}.  Can you take a moment and apply your self-evaluation?  Decide if these thoughts are helping or hurting you? # CLASS: player
+* { Psychology + Medicine >= 30 } Benton, I want you to think about what you just said.[]  You're exhibiting signs of persecutory delusional disorder.  We{benton_08.responsive:'ve been talking about this| talked about this a long, long time ago}.  Can you take a moment and apply your self-evaluation?  Decide if these thoughts are helping or hurting you? # CLASS: player
     
     { wait(3) }
 
-* { Medicine >= 60 } [<< Administer Neuroleptic Infusion >>]
+* { Medicine >= 30 } [<< Administer Neuroleptic Infusion >>]
 
     << Administered >> # CLASS: alert
     
@@ -5534,7 +5542,7 @@ A momentary glitch, choi.  I'm here. # CLASS: player
 
 TODO: would like to apply other options if the PC initiates cryo sleep... then make it a bit easier to hit
 
-* { ( Medicine >= 90 or char_can_cryo == true ) && disco == false } [<< Initiate Cryosleep >>]
+* { ( Medicine >= 60 or char_can_cryo == true ) && disco == false } [<< Initiate Cryosleep >>]
 
     Sorry, choi.  This is for your own good. # CLASS: player
     

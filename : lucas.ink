@@ -223,7 +223,7 @@ What's your most recent report? # CLASS: lucas
     
     You seem a bit peeved, doc.  What's up? # CLASS: player
 
-* (medanalysis) { Medicine + Psychology >= 60 } My analysis is a little hedged.[]  Many bellweathers are trending in the wrong direction, especially cortisol and thyroid regulation. # CLASS: player
+* (medanalysis) { Medicine + Psychology >= 30 } My analysis is a little hedged.[]  Many bellweathers are trending in the wrong direction, especially cortisol and thyroid regulation. # CLASS: player
 
     But not outside of expectations given the nature of this endeavor. # CLASS: player
     
@@ -347,7 +347,7 @@ And his conversations and journal entries are becoming... melodramatic. # CLASS:
 
 * { benton_05 } Yeah, he sounded a little erratic[.] when we spoke just now. # CLASS: player
 
-* { Psychology + Medicine >= 60 } He's developing coping mechanisms.[]  I think we're seeing a healthy (for the situation) pattern of eustress waves. # CLASS: player
+* { Psychology + Medicine >= 30 } He's developing coping mechanisms.[]  I think we're seeing a healthy (for the situation) pattern of eustress waves. # CLASS: player
 
 * Is there anything we can do? # CLASS: player
 
@@ -367,13 +367,13 @@ I think we need to prepare to turn him around. # CLASS: lucas
 
     I'm not sure he understands how thin the margin is. # CLASS: lucas
 
-* { Psychology + Medicine >= 60 } We should already be _prepared_ for it.[]  But there's more options than just giving up. # CLASS: player
+* { Psychology + Medicine >= 30 } We should already be _prepared_ for it.[]  But there's more options than just giving up. # CLASS: player
 
     Regulation is the key right now.  Chemical interlinked with emotional. # CLASS: player
     
     I'm not sure you comprehend how thin the margins are. # CLASS: lucas
 
-* { Astronomy + Engineering >= 60 } I don't think that's going to be [easy.]as easy as you might imagine.  With this burn around Jupiter he's set on a specific hypereclyptic trajectory with no further gravitational objects to use for course corrections.  We're counting on the angle and speed at Pluto to make the turn for home. # CLASS: player
+* { Astronomy + Engineering >= 30 } I don't think that's going to be [easy.]as easy as you might imagine.  With this burn around Jupiter he's set on a specific hypereclyptic trajectory with no further gravitational objects to use for course corrections.  We're counting on the angle and speed at Pluto to make the turn for home. # CLASS: player
 
     Then we may be sending him to his death.  The margins are too thin. # CLASS: lucas
 
@@ -395,7 +395,7 @@ I think we need to prepare to turn him around. # CLASS: lucas
     
         -> menu
 
-* { Medicine >= 60 } Agreed.  But we can help.[]  We all keep up the positive support, and your team does the best it can with the gel balance. # CLASS: player
+* { Medicine >= 30 } Agreed.  But we can help.[]  We all keep up the positive support, and your team does the best it can with the gel balance. # CLASS: player
     
     That might not be enough. # CLASS: lucas
     
@@ -548,7 +548,7 @@ I fear I failed. # CLASS: lucas
         
         Distance from shore compells the mind in vicious and powerful ways. # CLASS: lucas
         
-        { kim_knows ? benton_crazy or kim_knows ? benton_crazy2:
+        { kim_knows ? (benton_crazy) or kim_knows ? (benton_crazy2):
         
             Perhaps this "Marduk" is his Fata Morgana? # CLASS: lucas
         
@@ -581,7 +581,7 @@ Your report is noted, { name }. # CLASS: lucas
 CMO is in receipt.  There are no new recommendations.  You already know what I think we should do. # CLASS: lucas
 
 - (recommendations)
-* Remind me.  # CLASS: player
+* Remind me.[]  What should we do about B?  # CLASS: player
 
     Immediate cryo infusion of the gel-quarium.  Turn the boat around at the first opportunity.  Pray he's coherent when we defrost him in 18 months time. # CLASS: lucas
     
@@ -627,7 +627,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             
         - - - 
         
-        * * * { Business + Psychology + Security >= 60 }Think about it. # CLASS: player
+        * * * { Business + Psychology + Security >= 30 }Think about it. # CLASS: player
         
             * * * * He's off the chessboard, probably considered a non-player by the opposition. # CLASS: player
             - - - - 
@@ -665,7 +665,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
         Technically? Yes. # CLASS: lucas
         
-        { Medicine >= 90 or char_can_cryo == true:
+        { Medicine >= 60 or char_can_cryo == true:
         
             I already gave you operational control of the infusion given your skillset. # CLASS: lucas
             
@@ -699,19 +699,19 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
     - - (about_junia)
     
-    * * { player_knows ? junia_dealing_w_goliath }  We know she's trying to sell[.] to Goliath. # CLASS: player
+    * * { player_knows ? (junia_dealing_w_goliath) }  We know she's trying to sell[.] to Goliath. # CLASS: player
     
         Goliath.  SaturnExpress.  Be-zero.  It doesn't matter. # CLASS: lucas
         
         They're all putting the company above a life. # CLASS: lucas
         
-    * * { Business >= 60 or player_knows ? nth_in_bern } There are options to wrest power from Junia[.] if we can get the board on our side. # CLASS: player
+    * * { Business >= 30 or player_knows ? (nth_in_bern) } There are options to wrest power from Junia[.] if we can get the board on our side. # CLASS: player
     
         Much luck to you. # CLASS: lucas
         
         But I would sooner wager on rain falling on Utahzona. # CLASS: lucas
     
-    * * Why do you think she refuses? # CLASS: player
+    * * Why do you think she refuses your recommendations? # CLASS: player
     
         On paper?  It's all Benton's express instructions. # CLASS: lucas
         
@@ -731,13 +731,13 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
         
         * * * { Security >= 30 or career == "an international spy" or career == "a janitor" } In the business we call it coercion.[]  And it's usually made easier with medisci records or corp juice. # CLASS: player
         
-            Sometimes you worry me, { name }. # CLASS: lucas.
+            Sometimes you worry me, { name }. # CLASS: lucas
             
             But no.  # CLASS: lucas
         
-        * * * Or something!
+        * * * Or something! # CLASS: player
         
-        - - - I'm not in a position to know anything damaging about Junia, and if I were my professionalism would prevent me from divulging. # CLASS: player
+        - - - I'm not in a position to know anything damaging about Junia, and if I were my professionalism would prevent me from divulging. # CLASS: lucas
         
     * * { about_junia > 1 }Well, back to your recommendations. # CLASS: player
     
@@ -775,7 +775,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
     I simply expected more from Benton's pet project. # CLASS: lucas
     
-    * * { Technology + Security >= 60 } [<< secure >> Do something about TARC]One moment, doc. # CLASS: player
+    * * { Technology + Security >= 30 } [<< secure >> Do something about TARC]One moment, doc. # CLASS: player
         
         << inject secure_tun^...COMMIT >> # CLASS: player
         << processing >> # CLASS: player
@@ -834,7 +834,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
         
         Uh... yes.  Sure. # CLASS: lucas
     
-    * * Understood.[]  It is, after all, only a machine. # CLASS: lucas
+    * * Understood.[]  It is, after all, only a machine. # CLASS: player
     
     * * No, no.  Let it out.[]  Let TARC know how much of a rusty sothead it is.  I'm sure its listening.  😈 # CLASS: player
     
@@ -842,7 +842,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
     - - 
     
-    * * So.  What else?
+    * * So.  What else? # CLASS: player
     
         -> recommendations
 
@@ -868,7 +868,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
         This is a state-of-the-art gel-quarium, fully integrated with the vessel and highly customized to the mission.  It's not a field-maintainable doggy pool! # CLASS: lucas
         
-        * * * { Technology + Engineering >= 60 or benton_06.at_array } Anything can be field-maintained[.] if it has to be. # CLASS: player
+        * * * { Technology + Engineering >= 30 or benton_06.at_array } Anything can be field-maintained[.] if it has to be. # CLASS: player
         
             { benton_06.at_array:
             
@@ -906,7 +906,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
         
         And unless I'm very much mistaken there's not a pharma lab with an org-comp-processor on his flight-path. # CLASS: lucas
         
-        * * * { Astronomy + Engineering >= 60 }Organic compounds you say?[]  Might be I know where a few are stashed in the outer solar system. # CLASS: player
+        * * * { Astronomy + Engineering >= 30 }Organic compounds you say?[]  Might be I know where a few are stashed in the outer solar system. # CLASS: player
         
             We're not visiting any other planets, and the flyby of Pluto won't leave much time for shopping! # CLASS: lucas
             
@@ -918,7 +918,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             
             Fine.  I'll see what I can find out. # CLASS: lucas
             
-        * * * { Medicine + Engineering + Technology >= 60 }What about spare parts?[]  Can we use any unnecessary gear on the Lowell's Horizon and break them down for the compounds we need? # CLASS: player
+        * * * { Medicine + Engineering + Technology >= 30 }What about spare parts?[]  Can we use any unnecessary gear on the Lowell's Horizon and break them down for the compounds we need? # CLASS: player
         
             Sync with eng and see if they can agree which circuits could be sacrificed? # CLASS: player
             
@@ -944,7 +944,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
         
         Which we don't. # CLASS: lucas
         
-        * * * { Medicine + Engineering + Technology >= 60 }The tank is using bleeding-edge tech.[]  How might we repurpose that to carry out such a refined remote operation? # CLASS: player
+        * * * { Medicine + Engineering + Technology >= 30 }The tank is using bleeding-edge tech.[]  How might we repurpose that to carry out such a refined remote operation? # CLASS: player
         
             I... I don't know. # CLASS: lucas
             
