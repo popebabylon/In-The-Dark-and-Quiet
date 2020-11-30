@@ -139,12 +139,12 @@
                 	case "player":
                 		// custom, calculate delay of chat texts based on length of paragraph
 						delay += paragraphText.length * 10;
-						// custom, show "user is typing" animation until delay means P will show
+						/* custom, show "user is typing" animation until delay means P will show
 						var typing = document.createElement('p');
 						typing.innerHTML = "<i class='material-icons md-24'>more_horiz</i>";
 						typing.classList.add("typing");
 						storyContainer.appendChild(typing);
-						removeAfter(delay, typing);
+						removeAfter(delay, typing);*/
 						// custom, set parElem to (s)tory for chat messages
 						parElem = "s"
                 	default:

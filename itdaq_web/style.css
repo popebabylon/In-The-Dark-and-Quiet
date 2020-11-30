@@ -292,6 +292,14 @@ span.label {
     display: inline-block;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 540px) {
+  div.profile span {
+  	display: block;
+  	margin-left: 0.4rem;
+  }
+}
+
 /* custom style for "wait" paragraphs to delay the game */
 
 p.wait {

@@ -1773,11 +1773,14 @@ Six months and change. # CLASS: benton
 
     Always so underwhelmed.  You're a peach. # CLASS: benton
 
-- There's an emptiness to this sojourn I didn't anticipate, but it is not unappreciated.  A (human) depth of empty time I can't fill, just as I can't fill the darkness outside this hull. # CLASS: benton
+- 
+There's an emptiness to this sojourn I didn't anticipate, but it is not unappreciated.  A (human) depth of empty time I can't fill, just as I can't fill the darkness outside this hull. # CLASS: benton
 
 Room. # CLASS: benton
 
-- (room)
+-> room
+
+= room
 
 * Isn't it lonely? # CLASS: player
 
@@ -1816,7 +1819,6 @@ Room. # CLASS: benton
         
             { wait(3) }
     
-            -> introspection
             
         * * * So... # CLASS: player
     
@@ -1859,10 +1861,19 @@ Room. # CLASS: benton
         Anyway. # CLASS: benton
         
         -> roomex
+* ->
 
-- { room < 3: -> room }
+-
 
-- (roomex) Such musings are fun, but I suppose we have a day to begin. # CLASS: benton
+{ room < 3:
+    -> room
+- else:
+    -> roomex
+}
+
+= roomex
+
+Such musings are fun, but I suppose we have a day to begin. # CLASS: benton
 
 What's docked? # CLASS: benton
 
