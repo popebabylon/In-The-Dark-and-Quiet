@@ -1213,7 +1213,7 @@ Goodbye, { name } # CLASS: junia
 
 = junias_done
 
-<< { name } has been blocked from this chat >>
+<< { name } has been blocked from this chat >> # CLASS: alert
 
 + [<< Close Chat >>] -> menu
 
@@ -1347,22 +1347,22 @@ Follow this link. # CLASS: junia
 
     ~ goliath_sees_player = false
     
-    << start.sandbox^...COMMIT >>
-    << start.decrypt^...COMMIT >>
-    << inject << ¡∂å992jkß¬lo92¬∆Ω–-0ewi9 >>^...COMMIT >>
-    << processing >>
+    << start.sandbox^...COMMIT >> # CLASS: alert
+    << start.decrypt^...COMMIT >> # CLASS: alert
+    << inject << ¡∂å992jkß¬lo92¬∆Ω–-0ewi9 >>^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
     { wait(2) }
-    << processing >>
+    << processing >> # CLASS: alert
     { wait(2) }
-    << processing >>
+    << processing >> # CLASS: alert
     { wait(4) }
-    << segfault at 0x676f6c69617468696e666f736563, respooling >>
+    << segfault at 0x676f6c69617468696e666f736563, respooling >> # CLASS: alert
     
-    << caught: outgoing request >>
+    << caught: outgoing request >> # CLASS: alert
     
     * * [<< block outgoing request >>]
     
-        << blocked >>
+        << blocked >> # CLASS: alert
         
         Have you followed the link yet? # CLASS: junia
         
@@ -1376,7 +1376,7 @@ Follow this link. # CLASS: junia
     
     * * [<< softcatch outgoing request >>]
     
-        << request caught, obfuscating >>
+        << request caught, obfuscating >> # CLASS: alert
     
     * * [<< release outgoing request >>]
     
@@ -1392,9 +1392,9 @@ Follow this link. # CLASS: junia
 
     -> junia_hack.junias_done
 
-- << redirecting... >>
+- << redirecting... >> # CLASS: alert
 
-<< secure tunnel open >>
+<< secure tunnel open >> # CLASS: alert
 
 Now we can talk without AI interference. # CLASS: junia
 
@@ -1544,13 +1544,13 @@ problem # CLASS: junia
 
 - (tunneldown)
 
-<< secure tunnel closed >>
+<< secure tunnel closed >> # CLASS: alert
 
 { goliath_sees_player == false:
 
-    << closing sandbox >>
+    << closing sandbox >> # CLASS: alert
     
-    << storing record >>
+    << storing record >> # CLASS: alert
     
     ~ player_knows += j_betray_proof
 
@@ -1558,17 +1558,7 @@ problem # CLASS: junia
 
 + [<< Close Chat >>] -> menu
 
-=== junia_04 ===
-
-# CLEAR
-
--> junia_profile ->
-
-J taunts P with her success, P can turn the tables # CLASS: junia
-
-Junia starts shutting down comms across the Nth Horizon platform given her control of the company and the impending sale.  She takes a moment to taunt or brag to the PC.  In her position she's not aware of any leverage the PC may have from Woodpecker or TARC, either of which could be brought to bear to shut her up and keep the lights on while Benton is saved. # CLASS: junia
-
-+ [<< Close Chat >>] -> menu
+// junia_04 is in the climax file
 
 === junia_random ===
 

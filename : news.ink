@@ -351,9 +351,9 @@ News article if Benton disappears into deeper space.  Wrap up the stories relate
 
 === news_reportarticle ===
 
-<< reported >>
+<< reported >> # CLASS: alert
 
-<< for your security, close this page >>
+<< for your security, close this page >> # CLASS: alert
 
 + [<< Close >>]
 

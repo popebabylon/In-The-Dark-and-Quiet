@@ -127,23 +127,9 @@
         
             - benton_08 && lucas_03 && junia_03 && tarc_03 && news_08:
             
-                ~ status = (Final_Approach_to_Pluto)
-                
-                {timeplus(0, 1, 0)}
-                
-                -> time_passes ->
-                
-        }
-
-    - working_status == (Final_Approach_to_Pluto):
-
-        {
-        
-            - benton_09 && lucas_04 && junia_04 && tarc_04:
-            
                 ~ status = (Pluto_Flyby_Return)
                 
-                {timeplus(0, 0, 3)}
+                 {timeplus(0, 1, 3)}
                 
                 -> time_passes ->
                 
@@ -153,7 +139,7 @@
 
         {
         
-            - team_04 && woodpecker_04 && benton_10:
+            - team_04_flyby && benton_09_flyboy:
             
                 ~ status = (End)
                 
@@ -290,11 +276,17 @@
     
         ~ team_chat_divert = -> team_03
 
-    - status == (Pluto_Flyby_Return) && not team_04:
+    - status == (Pluto_Flyby_Return) && not team_04_medsci_alert && lucas_04 && benton_09_keepittogether:
     
         ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
-        ~ team_chat_divert = -> team_04
+        ~ team_chat_divert = team_climax_spot
+        
+    - status == (Pluto_Flyby_Return) && not team_04_flyby && tarc_04 && woodpecker_04 && junia_04_lastchance:
+
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
+    
+        ~ team_chat_divert = team_climax_spot
         
     - else: 
     
@@ -361,13 +353,25 @@
     
         ~ benton_chat_divert = -> benton_08
         
-    - status == (Final_Approach_to_Pluto) && not benton_09:
+    - status == (Pluto_Flyby_Return) && not benton_09 && team_04:
     
         ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
-        ~ benton_chat_divert = -> benton_09
+        ~ benton_chat_divert = benton_climax_spot
         
-    - status == (Pluto_Flyby_Return) && not benton_10:
+    - status == (Pluto_Flyby_Return) && not benton_09_keepittogether && lucas_04:
+    
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
+    
+        ~ benton_chat_divert = benton_climax_spot
+        
+    - status == (Pluto_Flyby_Return) && not benton_09_flyboy && team_04_flyby && junia_04_lastchance:
+    
+        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
+    
+        ~ benton_chat_divert = benton_climax_spot
+        
+    - status == (End) && not benton_10:
     
         ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
     
@@ -427,11 +431,15 @@
     
         ~ junia_chat_divert = -> junia_03
         
-    - status == (Final_Approach_to_Pluto) && not junia_04: 
-    
+    - status == (Pluto_Flyby_Return) && not junia_04 && lucas_04 && benton_09_keepittogether:
         ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
-        ~ junia_chat_divert = -> junia_04
+        ~ junia_chat_divert = junia_climax_spot
+        
+    - status == (Pluto_Flyby_Return) && not junia_04_lastchance && woodpecker_04 && tarc_04:
+        ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
+    
+        ~ junia_chat_divert = junia_climax_spot
         
     - else: 
     
@@ -481,11 +489,11 @@
     
         ~ lucas_chat_divert = -> lucas_03
         
-    - status == (Final_Approach_to_Pluto) && not lucas_04: 
+    - status == (Pluto_Flyby_Return) && not lucas_04 && team_04 && benton_09: 
     
         ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     
-        ~ lucas_chat_divert = -> lucas_04
+        ~ lucas_chat_divert = lucas_climax_spot
         
     - else: 
     
@@ -517,11 +525,11 @@
     
         ~ tarc_chat_divert = -> tarc_03
         
-    - status == (Final_Approach_to_Pluto) && not tarc_04: 
+    - status == (Pluto_Flyby_Return) && not tarc_04 && junia_04 && team_04_medsci_alert: 
     
         ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
-        ~ tarc_chat_divert = -> tarc_04
+        ~ tarc_chat_divert = tarc_climax_spot
         
     - else: 
     
@@ -553,11 +561,11 @@
     
         ~ woodpecker_chat_divert = -> woodpecker_03
         
-    - status == (Pluto_Flyby_Return) && not woodpecker_04: 
+    - status == (Pluto_Flyby_Return) && not woodpecker_04 && team_04_medsci_alert: 
     
         ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
-        ~ woodpecker_chat_divert = -> woodpecker_04
+        ~ woodpecker_chat_divert = woodpecker_climax_spot
     
     - else: 
     

@@ -29,7 +29,7 @@
     ~ pronoun = "He/Him/His"
     ~ career = "a doctor"
     ~ relationship = "epic"
-    ~ status = (Crossing_Saturn_Orbit)
+    ~ status = (Pluto_Flyby_Return)
     
     ~ kim_knows += fake_cmo
     ~ player_knows += nada

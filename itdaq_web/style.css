@@ -306,6 +306,15 @@ p.wait {
 	display: none;
 }
 
+/* custom style for alert paragraphs (e.g. technical stuff) */
+
+p.alert {
+	text-align: center;
+	color: #f25c90;
+	font-weight: bold;
+	background-color: #000;
+}
+
 
 /* first choice */
 :not(.choice) + .choice {

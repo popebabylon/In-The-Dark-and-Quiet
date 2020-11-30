@@ -389,7 +389,7 @@ I think we need to prepare to turn him around. # CLASS: lucas
 
     I don't know why I talk to you. # CLASS: lucas
     
-    << Dr. Estévez is now offline >>
+    << Dr. Estévez is now offline >> # CLASS: alert
         
     + + [<< Close Chat >>]
     
@@ -409,7 +409,7 @@ But you need to watch him closely. # CLASS: lucas
 
 And if things turn for the worst we figure out how to turn him around. # CLASS: lucas
 
-<< Dr. Estévez is now offline >>
+<< Dr. Estévez is now offline >> # CLASS: alert
 
 + [<< Close Chat >>] -> menu
 
@@ -826,7 +826,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
         
         But I can try to help? # CLASS: lucas
         
-        << secure tunnel closed >>
+        << secure tunnel closed >> # CLASS: alert
         
         Sorry, doc. My terminal glitched. # CLASS: player
         
@@ -988,23 +988,13 @@ Unless there was anything else? # CLASS: lucas
 
 * Bye doc.[]  Don't let the door pinch you on the way out. # CLASS: player
 
-- << Dr. Estévez has left the chat >>
+- << Dr. Estévez has left the chat >> # CLASS: alert
 
 + [<< Close Chat >>]
 
     -> menu
-
-=== lucas_04 ===
-
-# CLEAR
-
--> lucas_profile ->
-
-P gets Lucas to take a risk even with his patient millions of miles away # CLASS: lucas
-
-The PC and Lucas can collaborate on treatment options to keep Benton in one piece for the return journey.  The CMO has all the skills he needs, and the pieces are all there in that little capsule between the darkness of the stars, but just needs some perspective (and perhaps some humor) to see the solution and act upon it in a way that Benton can benefit from. # CLASS: lucas
-
-+ [<< Close Chat >>] -> menu
+    
+// lucas_04 is in the climax file
 
 === lucas_random ===
 

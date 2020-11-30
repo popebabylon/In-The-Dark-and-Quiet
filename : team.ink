@@ -24,7 +24,7 @@ And I disagree. # CLASS: benton
 
 * So what's up? # CLASS: player
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 * I've got better things to do. # CLASS: player
 
@@ -258,7 +258,7 @@ The mission is yours.  You're still going to be looped in on everything.  I just
 
     Thx, { pronouner("choi", "chai", "chen") }. # CLASS: benton
 
-* [<< wait >>] # CLASS: player
+* [<< wait >>]
 
 - I hear you, J.  Let's offline about this. # CLASS: benton
 
@@ -276,11 +276,11 @@ Understood. # CLASS: junia
 
 Thanks all.  We're still moving towards the launch date.  Please keep me in the loop on any updates. # CLASS: benton
 
-<< Dr. Estévez is leaving the team chat >>
+<< Dr. Estévez is leaving the team chat >> # CLASS: alert
 
-<< Junia is leaving the team chat >>
+<< Junia is leaving the team chat >> # CLASS: alert
 
-<< Benton is leaving the team chat >>
+<< Benton is leaving the team chat >> # CLASS: alert
 
 -> logout
 
@@ -390,27 +390,27 @@ Huo, Medina, Alexa, Lucas... you and your teams have given everything to make th
 
 Launch cycle commenced.  Counting down... # CLASS: tarc
 
-<< 10 >>
+<< 10 >> # CLASS: alert
 { wait(1) }
-<< 9 >>
+<< 9 >> # CLASS: alert
 { wait(1) }
-<< 8 >>
+<< 8 >> # CLASS: alert
 { wait(1) }
-<< 7 >>
+<< 7 >> # CLASS: alert
 { wait(1) }
-<< 6 >>
+<< 6 >> # CLASS: alert
 { wait(1) }
-<< 5 >>
+<< 5 >> # CLASS: alert
 { wait(1) }
-<< 4 >>
+<< 4 >> # CLASS: alert
 { wait(1) }
-<< 3 >>
+<< 3 >> # CLASS: alert
 { wait(1) }
-<< 2 >>
+<< 2 >> # CLASS: alert
 { wait(1) }
-<< 1 >>
+<< 1 >> # CLASS: alert
 { wait(1) }
-<< Ignition >>
+<< Ignition >> # CLASS: alert
 { wait(3) }
 
 We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
@@ -430,15 +430,15 @@ We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
 
 No time to celebrate, we've all got things to do.  Lifting newsDrop embargo now. # CLASS: junia
 
-<< Huo is leaving the team chat >>
+<< Huo is leaving the team chat >> # CLASS: alert
 
-<< Dr. Estévez is leaving the team chat >>
+<< Dr. Estévez is leaving the team chat >> # CLASS: alert
 
-<< Junia is leaving the team chat >>
+<< Junia is leaving the team chat >> # CLASS: alert
 
-<< Medina is leaving the team chat >>
+<< Medina is leaving the team chat >> # CLASS: alert
 
-<< Benton is leaving the team chat >>
+<< Benton is leaving the team chat >> # CLASS: alert
 
 << { name } is leaving the team chat >> # CLASS: player
 
@@ -452,9 +452,9 @@ No time to celebrate, we've all got things to do.  Lifting newsDrop embargo now.
 
 << { name } is joining the team chat >> # CLASS: player
 
-<< Junia is joining the team chat >>
+<< Junia is joining the team chat >> # CLASS: alert
 
-<< Lucas is joining the team chat >>
+<< Lucas is joining the team chat >> # CLASS: alert
 
 What just happened? # CLASS: junia
 
@@ -642,11 +642,11 @@ We'll talk later. # CLASS: junia
 
 - (b_fate_decided)
 
-<< Dr. Estévez is leaving the team chat >>
+<< Dr. Estévez is leaving the team chat >> # CLASS: alert
 
-<< Junia is leaving the team chat >>
+<< Junia is leaving the team chat >> # CLASS: alert
 
-<< TARC is leaving the team chat >>
+<< TARC is leaving the team chat >> # CLASS: alert
 
 << { name } is leaving the team chat >> # CLASS: player
 
@@ -658,13 +658,13 @@ We'll talk later. # CLASS: junia
 
 # CLEAR
 
-<< TARC has started the chat >>
+<< TARC has started the chat >> # CLASS: alert
 
 << { name } is joining the team chat >> # CLASS: player
 
-<< Junia is joining the team chat >>
+<< Junia is joining the team chat >> # CLASS: alert
 
-<< Lucas is joining the team chat >>
+<< Lucas is joining the team chat >> # CLASS: alert
 
 Team meeting can begin. # CLASS: tarc
 
@@ -1208,7 +1208,7 @@ Simply checking what _other_ ports are over the horizon if the storm becomes too
 
 I'll connect with each of you later. # CLASS: junia
 
-<< Junia is leaving the team chat >>
+<< Junia is leaving the team chat >> # CLASS: alert
 
 * I hope that's a safety net we don't need. # CLASS: player
 
@@ -1232,7 +1232,7 @@ I'll connect with each of you later. # CLASS: junia
 
 But not much we can do about it now. # CLASS: lucas
 
-<< Dr. Estévez is leaving the team chat >>
+<< Dr. Estévez is leaving the team chat >> # CLASS: alert
 
 * Are you just letting this happen, TARC? # CLASS: player
 
@@ -1246,9 +1246,9 @@ But not much we can do about it now. # CLASS: lucas
 << processing >> # CLASS: tarc
 { wait(1) }
 
-<< TARC is leaving the team chat >>
+<< TARC is leaving the team chat >> # CLASS: alert
 
-<< team is not present >>
+<< team is not present >> # CLASS: alert
 
 << { name } is leaving the team chat >> # CLASS: player
 
@@ -1275,24 +1275,16 @@ Can you backtrace likely parents? # CLASS: player
             
 ->->
 
-=== team_04 ===
-
-# CLEAR
-
-The team wait with baited breath as B comes back from the edge
-
-In the team chat tensions are high as they await some sign from Benton that he's still with them.  Depending on who's still a part of the team their reactions to anything the PC may suggest will vary.  Ideally the PC has replaced Junia as one part of a stable triangle and Lucas / TARC are working with them to bring Benton back safely.
-
-+ [Next] -> menu
+// team_04 is in the climax file
 
 === team_random ===
 
 # CLEAR
 
-<< { name } is joining the team chat >>
+<< { name } is joining the team chat >> # CLASS: alert
 
-<< team is not present >>
+<< team is not present >> # CLASS: alert
 
-<< { name } is leaving the team chat >>
+<< { name } is leaving the team chat >> # CLASS: alert
 
-+ [Close Chat] -> menu
++ [<< Close Chat >>] -> menu

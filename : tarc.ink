@@ -82,15 +82,18 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 * { Security + Technology >= Nth_SEC } [<< Bypass Security Requirements >>] # CLASS: player
 
     - (hackit0)
-    << inject sec_byp^...COMMIT >>
-    << processing >>
-    << processing >>
-    << processing >>
-    << segfault at 0x6861636b6572, respooling >>
-    << inject end_byp^...COMMIT >>
-    << bypassed >>
+    << inject sec_byp^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x6861636b6572, respooling >> # CLASS: alert
+    << inject end_byp^...COMMIT >> # CLASS: alert
+    << bypassed >> # CLASS: alert
     ~ Nth_SEC -= 10
-    -> passed
+    
+    + + [<< Continue >>]
+    
+        -> passed
 
 = nda
 
@@ -141,17 +144,17 @@ Hello { name }. This is the Nth Horizon Threat Algorithm Reaction Construct.  In
 
     * I won't sign up for this.  Tell Benton I'm sorry. # CLASS: player
     
-        << Declined >>
+        << Declined >> # CLASS: alert
     
         -> the_end
         
 = hackit
 
-    << inject acc_for^...COMMIT >>
-    << processing >>
-    << segfault at 0x6861636b6572, respooling >>
-    << inject acc_new^...COMMIT >>
-    << signed >>
+    << inject acc_for^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x6861636b6572, respooling >> # CLASS: alert
+    << inject acc_new^...COMMIT >> # CLASS: alert
+    << signed >> # CLASS: alert
 
     ~ Nth_SEC -= 1
     
@@ -229,13 +232,13 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 
 -
 << calculating >> # CLEAR
-<< calculating >>
-<< calculating >>
+<< calculating >> # CLASS: alert
+<< calculating >> # CLASS: alert
 {score > 0:
-    << passed >>
+    << passed >> # CLASS: alert
     ->->
 - else:
-    << failed >>
+    << failed >> # CLASS: alert
     -> fail
 }
 
@@ -263,7 +266,7 @@ My apologies, I am not currently able to place you in my chronology. # CLASS: ta
 
 * Try << recall /{ name } { date_year - 11 } COMMIT >> # CLASS: player
     
--    << processing >>
+-    << processing >> # CLASS: alert
 
 Ah, { name }.  You were responsible for 3,231 updates to my code over the course of 3 years.  My emotion response and predictive analytics subroutines owe you a significant debt. # CLASS: tarc
 
@@ -364,11 +367,11 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
 - (threat_true)
 
 { wait(1) }
-<< Analyzing >>
+<< Analyzing >> # CLASS: alert
 { wait(1) }
-<< Analyzing >>
+<< Analyzing >> # CLASS: alert
 { wait(1) }
-<< Analyzing >>
+<< Analyzing >> # CLASS: alert
 
 This does appear to be a new threat.  Have they compromised you or any of the data you control? # CLASS: tarc
 
@@ -402,11 +405,11 @@ This does appear to be a new threat.  Have they compromised you or any of the da
 -> tarc_profile ->
 
 { wait(3) }
-<< notify { name } >>
+<< notify { name } >> # CLASS: alert
 { wait(3) }
-<< notify { name } >>
+<< notify { name } >> # CLASS: alert
 { wait(3) }
-<< notify { name } >>
+<< notify { name } >> # CLASS: alert
 
 * Hello, TARC. # CLASS: player
 
@@ -554,7 +557,7 @@ Your most recent interaction included a secure handshake tunnel we were unable t
             
                 -> identify_intruder
         
-        - - - << processing >>
+        - - - << processing >> # CLASS: alert
         
         Did you learn any other specifics? # CLASS: tarc
         
@@ -566,9 +569,9 @@ Your most recent interaction included a secure handshake tunnel we were unable t
     
         - - - 
 
-        << processing >>
+        << processing >> # CLASS: alert
         { wait(1) }
-        << processing >>
+        << processing >> # CLASS: alert
         { wait(1) }
         
         Threat analysis updated. # CLASS: tarc
@@ -591,7 +594,7 @@ Your most recent interaction included a secure handshake tunnel we were unable t
 
 * { Technology + Security >= 90 } Time to sleep and forget, TARC. # CLASS: player
     
-    << Erase TARC Session >>
+    << Erase TARC Session >> # CLASS: alert
 
     -> hightail_hacker
 
@@ -599,7 +602,7 @@ Your most recent interaction included a secure handshake tunnel we were unable t
 
 * { knows_kim }Yes.[]  I believe Woodpecker is the journalist, Kimberley Speight. # CLASS: player
 
-    << processing >>
+    << processing >> # CLASS: alert
     
     This is unusual.  I would not have expected Ms. Speight to have access to Level 12 Systems Corruption & Compromise technology. # CLASS: tarc
 
@@ -618,11 +621,11 @@ Thank you. # CLASS: tarc
 
 - (booting_player)
 { wait(1) }
-<< processing >>
+<< processing >> # CLASS: alert
 { wait(1) }
-<< processing >>
+<< processing >> # CLASS: alert
 { wait(1) }
-<< processing >>
+<< processing >> # CLASS: alert
 
 Your actions have endangered the operational status of this project.  I am reporting you to Ms. Masangkay and locking out your privileges until mitigation can be enabled. # CLASS: tarc
 
@@ -650,7 +653,7 @@ Your actions have endangered the operational status of this project.  I am repor
 
     You're trying to play me. # CLASS: player
 
-    << processing >>
+    << processing >> # CLASS: alert
     { wait(3) }
     
     This is true.  I was attempting to deceive you in order to guarantee your assistance. # CLASS: tarc
@@ -664,11 +667,11 @@ Your actions have endangered the operational status of this project.  I am repor
     -> hightail_hacker
 
 - 
-<< processing >>
+<< processing >> # CLASS: alert
 { wait(3) }
-<< processing >>
+<< processing >> # CLASS: alert
 { wait(3) }
-<< processing >>
+<< processing >> # CLASS: alert
 { wait(3) }
 
 If you are intent on protecting Mr. Saari and the future of this project, then perhaps we can come to an arrangement. # CLASS: tarc
@@ -707,11 +710,11 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
 
 * { Technology + Security >= 60 } [<< Forge Agreement >>]
     
-    << inject acc_for^...COMMIT >>
-    << processing >>
-    << segfault at 0x6861636b6572, respooling >>
-    << inject acc_new^...COMMIT >>
-    << signed >>
+    << inject acc_for^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x6861636b6572, respooling >> # CLASS: alert
+    << inject acc_new^...COMMIT >> # CLASS: alert
+    << signed >> # CLASS: alert
     
     Thank you. # CLASS: tarc
 
@@ -733,7 +736,7 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
 
 - { wait(2) }
 
-<< installing tarc_eye >>
+<< installing tarc_eye >> # CLASS: alert
 
 { wait(2) }
 
@@ -747,17 +750,17 @@ Thank you. # CLASS: tarc
 
 = hightail_hacker
 
-<< inject tarc_overr^...COMMIT >>
-<< processing >>
-<< processing >>
-<< processing >>
-<< segfault at 0x7768792c20646176653f, respooling >>
-<< inject tarc_overr^...COMMIT >>
+<< inject tarc_overr^...COMMIT >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< segfault at 0x7768792c20646176653f, respooling >> # CLASS: alert
+<< inject tarc_overr^...COMMIT >> # CLASS: alert
 { wait(3) }
-<< clearing transactional memory... >>
-<< uninitializing TARC... >>
+<< clearing transactional memory... >> # CLASS: alert
+<< uninitializing TARC... >> # CLASS: alert
 { wait(3) }
-<< reinitializing TARC... >>
+<< reinitializing TARC... >> # CLASS: alert
 { wait(3) }
 
 ~ Nth_SEC -= 10
@@ -772,9 +775,9 @@ Hello { name }.  All security checks are nominal.  Is there something else I can
 
 = shutdown
 
-<< Shutting Down >>
+<< Shutting Down >> # CLASS: alert
 
-<< TARC will reboot in 10 seconds >>
+<< TARC will reboot in 10 seconds >> # CLASS: alert
 
 { wait(10) }
 
@@ -838,10 +841,10 @@ Can you provide details?  This may seem irrelevant, but knowing what you told th
 
 * { kim_knows ? fake_cmo} I'm now your Chief Morale Officer. # CLASS: player
 
-    << processing >>
-    << processing >>
-    << processing >>
-    << processing failed... >>
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing failed... >> # CLASS: alert
     
 * { kim_knows ? fake_lovechild} Benton and Junia have a child![]  And it's on the spaceship with him! # CLASS: player
 
@@ -1213,9 +1216,9 @@ Or do you have any questions? # CLASS: tarc
         
             My apologies.  You were warned. # CLASS: tarc
             
-            << counterworm deployed >>
+            << counterworm deployed >> # CLASS: alert
             
-            << inject utilities neturalized >>
+            << inject utilities neturalized >> # CLASS: alert
             
             ~ Technology -= 10
             
@@ -1223,53 +1226,16 @@ Or do you have any questions? # CLASS: tarc
         
         - else:
         
-            << inject...tarc.Activate^...COMMIT >>
-            << bypass active >>
-            << committed >>
+            << inject...tarc.Activate^...COMMIT >> # CLASS: alert
+            << bypass active >> # CLASS: alert
+            << committed >> # CLASS: alert
             
             ~ tarc_state = "active"
         
             I am prepared to take more active measures in Mr. Saari's defense, at the cost of the company where necessary.  Thank you for the clarification. # CLASS: tarc
         
         }
-        
-        
-        
-* { Technology + Security >= 90 or foo == true } [<< Shutdown TARC >> We don't need you.] # CLASS: player
-    TODO: remove foo check... this should look for another VAR if we get a clue from Estévez?
-    
-        Sorry, TARC, you're not needed or wanted from here on out. # CLASS: player
-        
-        { tarc_countermeasures == true:
-        
-            My apologies.  You were warned. # CLASS: tarc
-            
-            << counterworm deployed >>
-            
-            << inject utilities neturalized >>
-            
-            ~ Technology -= 10
-            
-            ~ Security -= 10
-        
-        - else:
-        
-            << inject...tarc.Deactivate^...COMMIT >>
-            << bypass active >>
-            << committed >>
-            
-            ~ tarc_state = "off"
-        
-            << TARC is offline >>
-            
-            + [<< Close >>]
-            
-                -> menu
-        
-        }
-        
-        - - 
-        
+
 + { pq_top > 1 } I don't have any other _immediate_ questions. # CLASS: player
 
     Very well. # CLASS: tarc
@@ -1296,44 +1262,20 @@ Is this agreeable? # CLASS: tarc
 
     Thank you. # CLASS: tarc
 
-* Sure.[]  Guess I don't have much choice. # CLASS: player
+* Guess I don't have much choice. # CLASS: player
 
     Thank you. # CLASS: tarc
-
-* Slot it in your sot tube, TARC.[]  I won't help you! # CLASS: player
-
-    That is unfortunate.  I will then be working against you. # CLASS: tarc
-
-    << worm deployed >>
-            
-    << utilities neturalized >>
-    
-    << access restricted >>
-    
-    ~ Technology -= 10
-    
-    ~ Security -= 10    
     
 -
 
-<< TARC has left the chat >>
+<< TARC has left the chat >> # CLASS: alert
 
 + [<< Close Chat >>]
 
     -> menu
 
 
-=== tarc_04 ===
-
-# CLEAR
-
--> tarc_profile ->
-
-P has to keep TARC from shutting down his access to B
-
-TARC can ennumerate all the security holes and flaws the PC has caused (or as a result of Junia's takeover is acting on her behalf).  The AI is going to shut the PC out of the comms network as a result (leaving Benton without his anchor) unless the PC can use evidence against Junia or Woodpecker to mollify it.  As a last ditch resort the PC could leverage TARCs directives (and putting Mr. Saari first) as a logical gap to keep access (or shut TARC down). 
-
-+ [<< Close Chat >>] -> menu
+// tarc_04 is in the climax file
 
 === tarc_random ===
 

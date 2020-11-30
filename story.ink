@@ -14,6 +14,7 @@ INCLUDE: junia.ink
 INCLUDE: lucas.ink
 INCLUDE: tarc.ink
 INCLUDE: woodpecker.ink
+INCLUDE: climax.ink
 INCLUDE: utilities.ink
 INCLUDE: debuggers.ink
 
@@ -50,7 +51,7 @@ VAR Psychology = 0
 VAR Technology = 0
 
 // setup mission status
-LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Crossing_Saturn_Orbit, Enroute_to_Pluto, Approaching_Pluto, Final_Approach_to_Pluto, Pluto_Flyby_Return, End
+LIST status = (Prep), Final_Prep, Launch_Prep, Launch, Approaching_Jupiter, Jupiter_Flyby, Crossing_Saturn_Orbit, Enroute_to_Pluto, Approaching_Pluto, Pluto_Flyby_Return, End
 
 // setup character knowledge lists
 LIST player_knows = (nada), junia_shadowy, entropic_goliath, goliath_hands_in_pie, no_nth_exit, junia_dealing_w_goliath, be_zero_investor, goliath_accounts, nth_in_bern, bentons_master_plan, junia_wants_b_dead, j_betray_proof, luc_fixtank, luc_operation, luc_compounds, luc_takedowntarc
@@ -94,6 +95,15 @@ VAR woodpecker_sees_benton = false
 VAR char_can_cryo = false
 VAR goliath_sees_player = false
 VAR tarc_state = "passive"
+LIST pluto_flyby_status = (starting), begin_burn, high_g, end_burn, finished
+
+// setup initial climax diverts
+VAR benton_climax_spot = -> benton_09
+VAR team_climax_spot = -> team_04
+VAR lucas_climax_spot = -> lucas_04
+VAR junia_climax_spot = -> junia_04
+VAR tarc_climax_spot = -> tarc_04
+VAR woodpecker_climax_spot = -> woodpecker_04
 
 // setup aspects
 VAR avarice = 0
@@ -122,7 +132,7 @@ VAR foo = true
 // if ^ is true then turn on all the debugging things...
 { debugging:
     
-    <<< Entering debugging mode >>>
+    <<< Entering debugging mode >>> # CLASS: alert
     
     // set the random seed for consistency
     ~ SEED_RANDOM(235)
@@ -137,7 +147,7 @@ VAR foo = true
     { printSkills() }
     
     // redirect to the scene you're currently working on, or leave out to start from the beginning
-    -> benton_04
+    -> menu
   
     // also use debugging: wrapper elsewhere you want to have inky only choices or text
     
@@ -159,19 +169,11 @@ Sorry, you don't have access to that resource.
 
 + [<< Close >>] -> menu
 
-=== end_chat ===
-
-# CLEAR
-
-Sorry, you've run out of things in this chat.
-
-+ [<< Close >>] -> menu
-
 === the_end ===
 
 # CLEAR
 
-The game has ended.
+The End. # CLASS: end
 
 Do you want to restart?
 

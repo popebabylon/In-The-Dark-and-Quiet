@@ -1813,14 +1813,6 @@ Room. # CLASS: benton
     Why fill it? # CLASS: benton
     
     * * We don't have to. # CLASS: player
-        - - - (introspection)
-        
-        + + + [<<< wait >>>]
-        
-            { wait(3) }
-    
-            
-        * * * So... # CLASS: player
     
     * * We don't have a choice.[]  We fill all emptiness with meaning or garbage instinctually. # CLASS: player
     
@@ -1835,6 +1827,8 @@ Room. # CLASS: benton
         You're like { career } version of groutBot.  Seal all edges. # CLASS: benton
         
         Keeps my brain from falling out. # CLASS: player
+        
+    - - 
 
 * { Astronomy >= 30 } [It's not really empty.] I'd say it's not so empty.  Your scale is just small enough to slip through the cracks. # CLASS: player
 
@@ -1861,15 +1855,10 @@ Room. # CLASS: benton
         Anyway. # CLASS: benton
         
         -> roomex
-* ->
 
 -
 
-{ room < 3:
-    -> room
-- else:
-    -> roomex
-}
+-> roomex
 
 = roomex
 
@@ -2021,15 +2010,15 @@ Ok, gel's firming up for exercise.  Chat latrz? # CLASS: benton
 
 -> benton_profile ->
 
-<< adding stress_analysis to chat >>
+<< adding stress_analysis to chat >> # CLASS: alert
 
-<< patient's stress level is { stress } >>
+<< patient's stress level is { stress } >> # CLASS: alert
 
-<< { name }, monitor Benton's condition through the flyby.  Do what you can to keep him stable. - Dr. Estévez >>
+<< { name }, monitor Benton's condition through the flyby.  Do what you can to keep him stable. - Dr. Estévez >> # CLASS: alert
 
-<< adding flyby_status_jupiter to chat >>
+<< adding flyby_status_jupiter to chat >> # CLASS: alert
 
-<< Jupiter flyby stage : { jupiter_flyby_status } >>
+<< Jupiter flyby stage : { jupiter_flyby_status } >> # CLASS: alert
 
 Ready for a sweaty dance? # CLASS: benton
 
@@ -2123,7 +2112,7 @@ Yeah. # CLASS: player
 
 * { Medicine >= 60 } << Recommend benzodiazepine gel infusion >> # CLASS: player
 
-    << Please take more care with my patient - Dr. Estévez >>
+    << Please take more care with my patient - Dr. Estévez >> # CLASS: alert
     
     ~ drugs++
 
@@ -2143,7 +2132,7 @@ Yeah. # CLASS: player
 
 ~ jupiter_flyby_status++
 
-<< Jupiter flyby stage : { jupiter_flyby_status } >>
+<< Jupiter flyby stage : { jupiter_flyby_status } >> # CLASS: alert
 
 * { Engineering + Medicine >= 30 }We're ready for insertion, { jupiter_flyby_status } is starting. # CLASS: player
 
@@ -2316,7 +2305,7 @@ My viz is scummed over with green, but I can still see Marduk hanging over me li
 
         * * * { Medicine >= 60 } << Benzodiazepine gel infusion >> # CLASS: player
 
-                << We should not overdo infusions - Dr. Estévez >>
+                << We should not overdo infusions - Dr. Estévez >> # CLASS: alert
                 
                 ~ drugs++
 
@@ -2477,14 +2466,14 @@ That man's never not gonna be stressed. # CLASS: benton
 
         * * * { Medicine >= 60 } << Benzodiazepine >> # CLASS: player
 
-                << Benton is already overmedicated, careful with infusion requests - Dr. Estévez >>
+                << Benton is already overmedicated, careful with infusion requests - Dr. Estévez >> # CLASS: alert
                 
                 ~ drugs++
 
                 { stressCheck("-", -> lucas_med_opinion, stress) }
                     -> next
                     
-        * * * << wait >>
+        * * * [<< wait >>]
         
     - - (lucas_med_opinion)
     
@@ -2717,7 +2706,7 @@ And here I thought I was the one seeing things. # CLASS: benton
 
     * *  { Medicine >= 60 } << Go for benzodiazepine infusion >> # CLASS: player
 
-        << Infusions should be used sparingly - Dr. Estévez >>
+        << Infusions should be used sparingly - Dr. Estévez >> # CLASS: alert
             
         ~ drugs++
 
@@ -2785,7 +2774,7 @@ And here I thought I was the one seeing things. # CLASS: benton
 
     *  { Medicine >= 60 } << Benzodiazepine++ >> # CLASS: player
 
-        << Remember there's a limited supply on that ship - Dr. Estévez >>
+        << Remember there's a limited supply on that ship - Dr. Estévez >> # CLASS: alert
             
         ~ drugs++
 
@@ -3117,14 +3106,14 @@ Recall Jemimah? # CLASS: benton
     
 }
 
-<< Ready for next stage >>
+<< Ready for next stage >> # CLASS: alert
 
-<< All participants check-in >>
+<< All participants check-in >> # CLASS: alert
 
 + [<< Standing By >>]
 
 -<< Jupiter Flyby >> # CLEAR
-<< Stage: { jupiter_flyby_status } >>
+<< Stage: { jupiter_flyby_status } >> # CLASS: alert
 
 { flyby_next > 2 && whatcha_thinkin:
     
@@ -3138,7 +3127,7 @@ Recall Jemimah? # CLASS: benton
 
 - else:
 
-    << engines firing >>
+    << engines firing >> # CLASS: alert
 
     {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.} # CLASS: benton
     
@@ -3154,15 +3143,15 @@ Recall Jemimah? # CLASS: benton
 
 = exited
 
-<< final burn >>
+<< final burn >> # CLASS: alert
 
-<< velocity: green >>
+<< velocity: green >> # CLASS: alert
 
-<< vector: green >>
+<< vector: green >> # CLASS: alert
 
-<< success! >>
+<< success! >> # CLASS: alert
 
-<< powering down Jupiter flyby program >>
+<< powering down Jupiter flyby program >> # CLASS: alert
 
 * Benton? # CLASS: player
 
@@ -3192,7 +3181,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
 = popped
 
-<< Benton has disconnected >>
+<< Benton has disconnected >> # CLASS: alert
 
 * Benton? # CLASS: player
 
@@ -3200,19 +3189,19 @@ I'm gonna sleep for a year now. # CLASS: benton
 
 * { Technology + Security + Engineering + Astronomy >= 60 } << nav report >> # CLASS: player
 
-    << nominal >>
+    << nominal >> # CLASS: alert
     
-    << trajectory is green >>
+    << trajectory is green >> # CLASS: alert
     
-    << velocity is green >>
+    << velocity is green >> # CLASS: alert
 
 * { Medicine + Psychology + Security + Technology >= 60 } << pilot report >> # CLASS: player
 
-    << critical >>
+    << critical >> # CLASS: alert
     
-    << stress regulation overloaded >>
+    << stress regulation overloaded >> # CLASS: alert
     
-    << patient is unresponsive >>
+    << patient is unresponsive >> # CLASS: alert
 
 -
 
@@ -3268,7 +3257,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 {
     - has == "nominal":
         
-        << stress is nominal >>
+        << stress is nominal >> # CLASS: alert
         
         ~ return
 
@@ -3276,7 +3265,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
         ~ stressList = critical
         
-        << stress level has exceeded safety parameters >>
+        << stress level has exceeded safety parameters >> # CLASS: alert
         
         {
             - status == (Jupiter_Flyby):
@@ -3293,7 +3282,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
     - else:
     
-        << stress level has { has } to { stress } >>
+        << stress level has { has } to { stress } >> # CLASS: alert
         
         ~ return
     
@@ -3307,7 +3296,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
 -> benton_profile ->
 
-<< patient's stress level is { stress } >>
+<< patient's stress level is { stress } >> # CLASS: alert
 
 - (rise)
 
@@ -3337,23 +3326,23 @@ I'm gonna sleep for a year now. # CLASS: benton
 
 * [<< Request adreno shot from Dr. Estévez >>]
 
-    << Administered >>
+    << Administered >> # CLASS: alert
     
     ~ drugs++
 
 * { Medicine >= 30 && (Technology + Security >= 30 ) }[<< Administer Adreno Shot >>]
 
-    << Administered >>
+    << Administered >> # CLASS: alert
     
     ~ drugs++
 
 * [<< Request electro shock from TARC >>]
 
-    << Administered >>
+    << Administered >> # CLASS: alert
 
 * { Technology + Security >= 60 } [<< Administer Electro Shock >>]
 
-    << Administered >>
+    << Administered >> # CLASS: alert
 
 - Ugh. # CLASS: benton
 
@@ -4287,20 +4276,20 @@ You do that. # CLASS: player
 
 = crayz
 
-<< stress overload alarm >>
+<< stress overload alarm >> # CLASS: alert
 { wait(1) }
-<< stress overload alarm >>
+<< stress overload alarm >> # CLASS: alert
 { wait(1) }
-<< stress overload alarm >>
+<< stress overload alarm >> # CLASS: alert
 { wait(1) }
 
-<< Benzodiazepine gel infusion administered >>
+<< Benzodiazepine gel infusion administered >> # CLASS: alert
 
 ~ drugs++
 
-<< Dr. Lucas Estévez has taken operational control >>
+<< Dr. Lucas Estévez has taken operational control >> # CLASS: alert
 
-<< { name } has been blocked from this chat >>
+<< { name } has been blocked from this chat >> # CLASS: alert
 
 { clipped == false && outside:
 
@@ -4308,7 +4297,7 @@ You do that. # CLASS: player
 
     # CLEAR
     
-    << Benton floats off into space and dies. >>
+    << Benton floats off into space and dies. >> # CLASS: alert
     
     -> the_end
 
@@ -4546,7 +4535,7 @@ Systems fail, friends betray, the project tries to fall apart. # CLASS: benton
 
     ~ drugs++
 
-    << Administered >>
+    << Administered >> # CLASS: alert
     
     You need to relax and think on this with a clear head. # CLASS: player
 
@@ -4613,7 +4602,7 @@ Talk later, k? # CLASS: benton
 
 { wait(6) }
 
-<< patient has disconnected >>
+<< patient has disconnected >> # CLASS: alert
 
 - (loopy)
 
@@ -4643,7 +4632,7 @@ Talk later, k? # CLASS: benton
 
 = unresponsive
 
-<< patient has been disconnected for 5 months, 8 days, 13 hours, 47 minutes >>
+<< patient has been disconnected for 5 months, 8 days, 13 hours, 47 minutes >> # CLASS: alert
 
 * Benton?  Are you receiving me? # CLASS: player
 
@@ -4710,9 +4699,9 @@ Talk later, k? # CLASS: benton
 
 ~ disconnected = false
 
-<< patient has connected >>
+<< patient has connected >> # CLASS: alert
 
-<< patient's stress level is { stress } >>
+<< patient's stress level is { stress } >> # CLASS: alert
 
 { name }? # CLASS: benton
 
@@ -4730,7 +4719,7 @@ Talk later, k? # CLASS: benton
 
 ~ disconnected = false
 
-<< patient's stress level is { stress } >>
+<< patient's stress level is { stress } >> # CLASS: alert
 
 * Hey, B.[]  You with us this morning? # CLASS: player
 
@@ -4764,13 +4753,13 @@ Talk later, k? # CLASS: benton
 
     * * { violence > 0 }[<< Administer electroshock >>]
     
-        << Administered >>
+        << Administered >> # CLASS: alert
         
     * * { Medicine >= 30 } [<< Administer Adreno Shot >> ]
     
         ~ drugs++
     
-        << Administered >>
+        << Administered >> # CLASS: alert
         
     + + [<< wait >>]
     
@@ -5490,7 +5479,7 @@ The enormity of anything else destroys us. # CLASS: benton
 
 { wait(2) }
 
-<< Benton has left the chat >>
+<< Benton has left the chat >> # CLASS: alert
 
 - (loopdeloop)
 
@@ -5534,7 +5523,7 @@ A momentary glitch, choi.  I'm here. # CLASS: player
 
 * { Medicine >= 60 } [<< Administer Neuroleptic Infusion >>]
 
-    << Administered >>
+    << Administered >> # CLASS: alert
     
 - (medadministered)
 
@@ -5550,7 +5539,7 @@ TODO: would like to apply other options if the PC initiates cryo sleep... then m
 
     Sorry, choi.  This is for your own good. # CLASS: player
     
-    << Initializing Cryosleep Infusion >>
+    << Initializing Cryosleep Infusion >> # CLASS: alert
     
     * * [<< Continue >>]
     
@@ -5566,19 +5555,8 @@ TODO: would like to apply other options if the PC initiates cryo sleep... then m
     
         -> the_end
 
-=== benton_09 ===
 
-# CLEAR
-
--> benton_profile ->
-
-P has to reel Benton in, keep him on the rails # CLASS: benton
-
-Benton gets back in touch, being very off-again / on-again as he contemplates the upcoming success (or at least half-way point) of his mission.  He's apparently aware that he has made it to Pluto and has manic, ecstatic tirades about the fact that he's done it, but these are counterbalanced with further nihilistic, despondent ravings.  Any bad news from home doesn't help his mental state. # CLASS: benton
-
-The PC can use the various knowledge gained, activities completed, history established, and personal insight to help draw Benton back to reality and take some meaningful actions that will change the outcome of the mission. # CLASS: benton
-
-+ [<< Close Chat >>] -> menu
+// benton_09 is in the climax file
 
 === benton_10 ===
 

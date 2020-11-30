@@ -52,10 +52,10 @@
     
 - else:
 
-    << inject comms_hack^...COMMIT >>
-    << processing >>
-    << segfault at 0x7065636b656420796f7521, respooling >>
-    << inject comms_hack^...COMMIT >>
+    << inject comms_hack^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x7065636b656420796f7521, respooling >> # CLASS: alert
+    << inject comms_hack^...COMMIT >> # CLASS: alert
 
     Hei. <br> fraid you got duped. <br> But I'm REAL interested in chattin soon. <br> Before you get too slap-happy with that << report >> button, I got some intel you'll be interested in too.  About PB & J. <br> Ok, nah, no P, but that was too good to pass up! <br> Be seein' ya! <br> \- Woodpecker # CLASS: kim
     
@@ -75,10 +75,10 @@
 
 + Hi Medina. # CLASS: player
 
-<< inject comms_hack^...COMMIT >>
-<< processing >>
-<< segfault at 0x6e6f74206d6564696e61, respooling >>
-<< inject comms_hack^...COMMIT >>
+<< inject comms_hack^...COMMIT >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< segfault at 0x6e6f74206d6564696e61, respooling >> # CLASS: alert
+<< inject comms_hack^...COMMIT >> # CLASS: alert
 
 ~ woodhack = true
 
@@ -94,9 +94,9 @@
     
     -> ohno
 
-+ { Technology + Security >= 60 } << rollback >>
++ { Technology + Security >= 60 } << rollback >> # CLASS: alert
 
-    << block_hack^...COMMIT >>
+    << block_hack^...COMMIT >> # CLASS: alert
     
     U can prob code circles round me, but trust, u rly wanna hear me out. # CLASS: kim
     
@@ -155,30 +155,30 @@ Peck. # CLASS: kim
 
 * { Technology + Security >= 60 } [<< Trace >>]
 
-    << inject tracer360^...COMMIT >>
-    << processing >>
-    << segfault at 0x6361746368656d616c6c, respooling >>
-    << inject tracer360^...COMMIT >>
+    << inject tracer360^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x6361746368656d616c6c, respooling >> # CLASS: alert
+    << inject tracer360^...COMMIT >> # CLASS: alert
     
-    << injecting >>
+    << injecting >> # CLASS: alert
     { wait(1) }
-    << injecting >>
+    << injecting >> # CLASS: alert
     { wait(1) }
-    << injecting >>
+    << injecting >> # CLASS: alert
     { wait(1) }
     
-    - - (tracing_woodpecker) << success; trace started >>
+    - - (tracing_woodpecker) << success; trace started >> # CLASS: alert
     
-    << 64.52% probablility target is Kimberley Speight : 0x776f6f647065636b6572 >>
+    << 64.52% probablility target is Kimberley Speight : 0x776f6f647065636b6572 >> # CLASS: alert
     
     ~ knows_kim = true
 
 * [<< Close Chat >>]
 
-    << inject chat_hack^...COMMIT >>
-    << processing >>
-    << segfault at 0x6c6f636b6564646f6f72, respooling >>
-    << inject chat_hack^...COMMIT >>
+    << inject chat_hack^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x6c6f636b6564646f6f72, respooling >> # CLASS: alert
+    << inject chat_hack^...COMMIT >> # CLASS: alert
 
     Sorry, {pronouner("choi","chai","chen")}, rlly wanna chat w/ u. # CLASS: kim
     
@@ -346,9 +346,9 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (dealing)
 
-<< opening weighted tunnel >>
+<< opening weighted tunnel >> # CLASS: alert
 
-<< deposit your data point >>
+<< deposit your data point >> # CLASS: alert
 
 * [Flyby was a success.]  Lowell's Horizon has successfuly completed it's perijove burn maneuver with the craft and pilot surviving and now enroute to Pluto with the gravity assist of Jupiter.  # CLASS: player
 
@@ -384,13 +384,13 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (deposited)
 
-<< processing >>
+<< processing >> # CLASS: alert
 
 { wait(3) }
 
-<< data balance algo passed >>
+<< data balance algo passed >> # CLASS: alert
 
-<< sharing data >>
+<< sharing data >> # CLASS: alert
 
 // Kim’s facts
 { once:
@@ -450,7 +450,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (finish_trade)
 
-<< transaction complete >>
+<< transaction complete >> # CLASS: alert
 
 Well then.  That wasn't so hard, was it? # CLASS: kim
 
@@ -756,9 +756,9 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (2nddeal)
 
-<< opening weighted tunnel >>
+<< opening weighted tunnel >> # CLASS: alert
 
-<< deposit your data point >>
+<< deposit your data point >> # CLASS: alert
 
 * { benton_06.outside } Benton had to conduct an emergency EVA[.] to make a repair of the HyperTrack array.  He could have been sent badly off course otherwise.  How the array failed is unknown, and it was supposed to be bullet-proof. # CLASS: player
 
@@ -858,13 +858,13 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (2nddeposited)
 
-<< processing >>
+<< processing >> # CLASS: alert
 
 { wait(3) }
 
-<< data balance algo passed >>
+<< data balance algo passed >> # CLASS: alert
 
-<< sharing data >>
+<< sharing data >> # CLASS: alert
 
 // Kim’s facts
 { once:
@@ -922,7 +922,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 - (2ndfinishtrade)
 
-<< transaction complete >>
+<< transaction complete >> # CLASS: alert
 
 Pleasure doing biznez, { name }. # CLASS: kim
 
@@ -1064,17 +1064,7 @@ Your call, { pronouner("choi","chai","chen") }, but youz missing out! # CLASS: k
 
 -> 2nddeposited
 
-=== woodpecker_04 ===
-
-# CLEAR
-
--> woodpecker_profile ->
-
-K wants her headline story
-
-Assuming the PC hasn't shut her out, Woodpecker wants her scoop (especially if her evidene helped against Junia).  The more details the PC is willing to give the more likely the article benefits Benton's story and the outcome for his company.
-
-+ [Next] -> menu
+// woodpecker_04 is in the climax file
 
 === woodpecker_random ===
 
