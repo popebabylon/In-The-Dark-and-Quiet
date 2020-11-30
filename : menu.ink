@@ -276,6 +276,12 @@
     
         ~ team_chat_divert = -> team_03
 
+    - status == (Pluto_Flyby_Return) && not team_04:
+    
+        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
+    
+        ~ team_chat_divert = team_climax_spot
+
     - status == (Pluto_Flyby_Return) && not team_04_medsci_alert && lucas_04 && benton_09_keepittogether:
     
         ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"

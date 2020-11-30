@@ -462,19 +462,19 @@ Junia won't commit to a cryosleep with the "mission so close to succeeding," and
 
 * Long odds[.], but he's beaten them before. # CLASS: player
 
-    I know.
+    I know. # CLASS: lucas
 
 * So quit.[]  Get outta here while the getting is good. # CLASS: player
 
-- I've not known him as long as you have, but I have known him during some of the hardest physical & mental struggles he faced before now. # CLASS: player
+- I've not known him as long as you have, but I have known him during some of the hardest physical & mental struggles he faced before now. # CLASS: lucas
 
-The 7SUMMITS in 77 days.  Meru in a 2-week blizzard.  Failed attempt at Olympus Mons. # CLASS: player
+The 7SUMMITS in 77 days.  Meru in a 2-week blizzard.  Failed attempt at Olympus Mons. # CLASS: lucas
 
-These are not jokes. # CLASS: player
+These are not jokes. # CLASS: lucas
 
-I tried to make him see that this, this _obsession_ could not be treated so lightly # CLASS: player
+I tried to make him see that this, this _obsession_ could not be treated so lightly # CLASS: lucas
 
-I fear I failed. # CLASS: player
+I fear I failed. # CLASS: lucas
 
 * { benton_02.adventurer } I'm no stranger to physical hardship[.], but I know what you mean.<>
 

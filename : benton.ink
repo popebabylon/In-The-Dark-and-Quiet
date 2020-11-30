@@ -2599,7 +2599,7 @@ And here I thought I was the one seeing things. # CLASS: benton
     
         -> t_shut    
     
-    - - -
+    - -
     {
     
         - Psychology + Business >= 60 && not knows_kim:
@@ -4853,8 +4853,7 @@ In the dark and quiet. # CLASS: benton
 
 * [<< wait >>]
 
-
-- Velocity:maximal(424,242.42kmph),avg(371,527.77kmph)Q-sat_sync:partial-lock(142),partial-lock(143),partial-lock(98)0x64656166656e696e672073696c656e6365Gel_Reg:osmotic_inf(21%),alkalinity_bal(8.2),cycler(blocked)Sleep_Record:avg_time(0.243hrs),rem_avg(12%),nrem_avg(88%),q.EEG(critical)Isosacular_Sys:align(nominal),lifetime(-12months),apShift(342pm),mΩ(12.293)HyperTrack:status(nominal),align(2.32º) # CLASS: benton
+- Velocity: maximal (424, 242.42kmph), avg (371, 527.77kmph) Q-sat_sync: partial-lock (142), partial-lock (143), partial-lock (98) 0x64656166656e696e672073696c656e6365Gel_Reg: osmotic_inf (21%), alkalinity_bal (8.2), cycler (blocked) Sleep_Record: avg_time (0.243hrs), rem_avg (12%), nrem_avg (88%), q.EEG (critical) Isosacular_Sys: align (nominal), lifetime (-12months), apShift (342pm), mΩ (12.293) HyperTrack: status (nominal), align (2.32º); # CLASS: benton
 
 * Whoah!  What? # CLASS: player
 

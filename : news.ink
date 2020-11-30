@@ -316,7 +316,7 @@
 
 + [<< Close news >>]
 
--    -> menu
+    -> menu
 
 === news_09 ===
 

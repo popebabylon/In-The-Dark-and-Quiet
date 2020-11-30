@@ -495,14 +495,24 @@ Your most recent interaction included a secure handshake tunnel we were unable t
 
 * I didn't talk to them. # CLASS: player
 
-    - - (break_nda)The connection was established long enough to allow a not insignificant exchange of data.  It is unlikely that nothing was exchanged.  Have you broken the NDA you executed when joining the project? # CLASS: tarc
+    - - (break_nda)
+    
+    { kim_knows ? (nothing) or player_knows ? (nada) or woodpeck_install == false:
+        
+        I see. # CLASS: tarc
+        
+        -> identify_intruder
+        
+    }
+    
+    The connection was established long enough to allow a not insignificant exchange of data.  It is unlikely that nothing was exchanged.  Have you broken the NDA you executed when joining the project? # CLASS: tarc
     
     * * Perhaps?[]  Sorry, TARC, this woodpecker seems to have good intel on Nth Horizon. # CLASS: player
     
         -> we_traded
     
     * * No. # CLASS: player
-    
+        
         Again, this is unlikely. # CLASS: tarc
     
         -> we_traded
@@ -517,11 +527,11 @@ Your most recent interaction included a secure handshake tunnel we were unable t
 
     - - (we_traded) What was the nature of the data exchange? # CLASS: tarc
     
-    * * Sorry, TARC.  I told them some stuff. # CLASS: player
+    * * { kim_knows !? (nothing) }Sorry, TARC.  I told them some stuff. # CLASS: player
     
         -> told_kim ->
     
-    * * I lied to them. # CLASS: player
+    * * { kim_knows ? (fake_nth_funded) or kim_knows ? (fake_speed_record) or kim_knows ? (fake_cmo) or kim_knows ? (fake_lovechild) }I lied to them. # CLASS: player
     
         -> lied_kim ->
     
@@ -612,7 +622,7 @@ Your most recent interaction included a secure handshake tunnel we were unable t
 
 * There is no intruder. # CLASS: player
 
-    Your attempts to revisit that pretense do not do you any credit. # CLASS: tarc
+    Your attempts at pretense do not do you any credit. # CLASS: tarc
     
     -> booting_player
 
