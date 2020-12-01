@@ -231,7 +231,7 @@ A colleague shares a link with you regarding their hobby, family, or other extra
 + [<< Continue >>]
 
 -
-<< calculating >> # CLEAR
+<< calculating >> # CLEAR # CLASS: alert
 << calculating >> # CLASS: alert
 << calculating >> # CLASS: alert
 {score > 0:
@@ -1217,7 +1217,7 @@ Or do you have any questions? # CLASS: tarc
     
     - - In any case, I am keeping tabs on Ms. Speight and will ensure she does not unexpectedly derail our plans. # CLASS: tarc
 
-* { Technology + Security >= 60 or foo == true } [<< Reformat TARC >> We need your action, not analysis!] # CLASS: player
+* { Technology + Security >= 60 or foo == true } [<< Activate TARC >> We need your action, not analysis!] # CLASS: player
     TODO: remove foo check... this should look for another VAR if we get a clue from Estévez?
     
         We need your action, not analysis! # CLASS: player

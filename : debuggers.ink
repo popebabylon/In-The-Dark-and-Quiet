@@ -36,7 +36,9 @@
 
     ~ tarc_sees_woodpecker = true
     ~ tarc_sees_junia = true
-    ~ player_knows += luc_takedowntarc
+    
+    ~ goliath_sees_player = false
+    ~ player_knows += (luc_fixtank, luc_operation, luc_compounds, luc_takedowntarc, junia_wants_b_dead, goliath_accounts, j_betray_proof, nth_in_bern)
 
     ~ tarceye_install = true
     ~ woodpeck_install = true

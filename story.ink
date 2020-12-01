@@ -58,6 +58,8 @@ LIST player_knows = (nada), junia_shadowy, entropic_goliath, goliath_hands_in_pi
 
 LIST kim_knows = (nothing), flyby_success, benton_crazy, goliath_dsj, cmo_overrule, fake_nth_funded, fake_speed_record, fake_cmo, fake_lovechild, benton_eva, benton_crazy2, junia_selling, tarc_as_hal, cmo_arguing, fake_cmo_directreport, fake_lovechild_battle, fake_tarc_singularity, fake_rednail_resupply
 
+LIST final_plan = rechem, recycler, biohackop, cryobath, support_oberth, support_lucas, counterattack, block_wood, execute_bern, deliver_proof
+
 // set current date
 VAR date_year = 2065
 VAR date_month = 7
@@ -95,7 +97,9 @@ VAR woodpecker_sees_benton = false
 VAR char_can_cryo = false
 VAR goliath_sees_player = false
 VAR tarc_state = "passive"
+VAR juniagames = true
 LIST pluto_flyby_status = (starting), begin_burn, high_g, end_burn, finished
+VAR charonDive_installed = false
 
 // setup initial climax diverts
 VAR benton_climax_spot = -> benton_09
@@ -126,7 +130,7 @@ VAR pronoun = "?"
 TODO: COMPILE: check debugger state and clear foo VARS
 
 // set variable as true if you want to debug; use foo for testable variables you haven't set yet
-VAR debugging = false
+VAR debugging = true
 VAR foo = true
 
 // if ^ is true then turn on all the debugging things...

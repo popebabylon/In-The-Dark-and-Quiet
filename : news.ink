@@ -318,26 +318,6 @@
 
     -> menu
 
-=== news_09 ===
-
-# CLEAR
-
-Headline about B's daring risk; he actually pulled it off?
-
-News article if Benton starts the return trip.  Wrap up the stories related to the company takeover etc.
-
-+ [Next] -> menu
-
-=== news_10 ===
-
-# CLEAR
-
-Headline about B's final decision and the future for Ninth Horizon
-
-News article if Benton disappears into deeper space.  Wrap up the stories related to the company takeover etc.
-
-+ [Next] -> menu
-
 === news_random ===
 
 # CLEAR

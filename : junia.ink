@@ -1237,6 +1237,8 @@ I don't have much time. # CLASS: junia
 
     I don't have *any* time to play games. # CLASS: junia
     
+    ~ juniagames = false
+    
     -> junia_hack.junias_done
     
 - Thank you for your promptness. # CLASS: junia
@@ -1264,6 +1266,8 @@ Am I right? # CLASS: junia
     * * In. # CLASS: player
     
     * * Out. # CLASS: player
+    
+        ~ juniagames = false
     
         -> junia_hack.junias_done
 
@@ -1372,6 +1376,8 @@ Follow this link. # CLASS: junia
         
         I told you I don't play games. # CLASS: junia
         
+            ~ juniagames = false
+        
             -> junia_hack.junias_done
     
     * * [<< softcatch outgoing request >>]
@@ -1389,6 +1395,8 @@ Follow this link. # CLASS: junia
     -> dirtydeeds
     
 * { dirtydeeds > 1 }No, sorry, I'm out. # CLASS: player
+
+    ~ juniagames = false
 
     -> junia_hack.junias_done
 
@@ -1424,6 +1432,8 @@ So as you can see we are already in a very promising and potentially lucrative p
     I'll ask you one more time to set your emotions aside and treat this conversation as a professional. # CLASS: junia
     
     * * Sot off! # CLASS: player
+
+        ~ juniagames = false
     
         -> junia_hack.junias_done
 
@@ -1465,11 +1475,13 @@ problem # CLASS: junia
 
     I want you to put him out of his misery. # CLASS: junia
 
-    * * Say no more. # CLASS: player
+    * * I see. # CLASS: player
 
     * * No.  Can't.  Won't.  # CLASS: player
     
         Dissapointing. # CLASS: junia
+        
+        ~ juniagames = false
         
         -> junia_hack.junias_done
 
@@ -1479,10 +1491,13 @@ problem # CLASS: junia
         
         Helpful. # CLASS: player
         
-        I have no doubt you'll figure it out. # CLASS: junia
-        
 * [<< wait >>]
-- 
+
+- There are a lot of opportunities here so that the board can move forward protecting the future of Nth Horizon. # CLASS: junia
+
+I have no doubt you can find solutions for us. # CLASS: junia
+
+* Say no more.[]  I'll keep an eye out. # CLASS: player
 
 * There might be some things you've overlooked. # CLASS: player
 
@@ -1494,10 +1509,14 @@ problem # CLASS: junia
     
         Dissapointing. # CLASS: junia
         
+        ~ juniagames = false
+        
         -> junia_hack.junias_done
     
     * * { player_knows ? (j_betray_proof) }[This session was recorded.]I spoofed your masters' pathetic scriptKiddy tunnel.  They haven't got anything on me and I just got binary proof of conspiracy to murder.  How's that?
-    
+        
+        ~ juniagames = false
+        
         -> junia_hack.junias_done
     
     * * { player_knows ? (be_zero_investor) && Business >= 30 }That 50% *not* in G's pocket includes Be-zero[.] investments.  I don't think you have the support you need to merge without them. # CLASS: player
@@ -1522,6 +1541,8 @@ problem # CLASS: junia
         
         How dissapointing. # CLASS: junia
         
+        ~ juniagames = false
+        
         -> junia_hack.junias_done
     
     * * Nothing specific[.], just pointing out to be careful with these... endeavours.  # CLASS: player
@@ -1534,13 +1555,17 @@ problem # CLASS: junia
     
     * * -> tunneldown
     
-    - - -> overlooked
+    - -
+    
+    Something else? # CLASS: junia
+    
+    -> overlooked
 
 * [<< wait >>]
 
     Very discreet. # CLASS: junia
 
-- Good.  I'll await word. # CLASS: junia
+- Good.  We'll talk again. # CLASS: junia
 
 - (tunneldown)
 

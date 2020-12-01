@@ -4854,7 +4854,7 @@ In the dark and quiet. # CLASS: benton
 
 * [<< wait >>]
 
-- Velocity: maximal (424, 242.42kmph), avg (371, 527.77kmph) Q-sat_sync: partial-lock (142), partial-lock (143), partial-lock (98) 0x64656166656e696e672073696c656e6365Gel_Reg: osmotic_inf (21%), alkalinity_bal (8.2), cycler (blocked) Sleep_Record: avg_time (0.243hrs), rem_avg (12%), nrem_avg (88%), q.EEG (critical) Isosacular_Sys: align (nominal), lifetime (-12months), apShift (342pm), mΩ (12.293) HyperTrack: status (nominal), align (2.32º); # CLASS: benton
+- Velocity: maximal (424,242.42kmph), avg (371,527.77kmph) Q-sat_sync: partial-lock (142), partial-lock (143), partial-lock (98) 0x64656166656e696e672073696c656e6365Gel_Reg: osmotic_inf (21%), alkalinity_bal (8.2), cycler (blocked) Sleep_Record: avg_time (0.243hrs), rem_avg (12%), nrem_avg (88%), q.EEG (critical) Isosacular_Sys: align (nominal), lifetime (-12months), apShift (342pm), mΩ (12.293) HyperTrack: status (nominal), align (2.32º); # CLASS: benton
 
 * Whoah!  What? # CLASS: player
 
@@ -5563,21 +5563,7 @@ TODO: would like to apply other options if the PC initiates cryo sleep... then m
         -> the_end
 
 
-// benton_09 is in the climax file
-
-=== benton_10 ===
-
-# CLEAR
-
--> benton_profile ->
-
-After the historic Pluto flyby, B needs to decide where he belongs # CLASS: benton
-
-Whether or not Benton is still sane, the PC is a friendly ear in an otherwise empty void and he will communicate with them.  If the PC is lucky or good they will have enough support and options available to convince Benton to turn around for the return journey.  But even if he's not completely insane the pull of the great darkness beyond Pluto does give Benton some pause.  The madness of his company and the Earth seem so far away and so alien that staying in the embracing dark forever almost seems like a good idea.  Is he running away or running towards something? # CLASS: benton
-
-Ultimately Benton picks a path... # CLASS: benton
-
-+ [<< Close Chat >>] -> menu
+// benton_09 & 10 are in the climax file
 
 === benton_random ===
 

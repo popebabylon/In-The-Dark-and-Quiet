@@ -154,7 +154,7 @@
 
         {
         
-            - news_09 or news_10:
+            - news_09:
             
                 -> the_end
                 
@@ -227,7 +227,7 @@
     
         ~ news_divert = -> news_08
         
-    - status == (End) && not news_09 && not news_10:
+    - status == (End) && not news_09:
     
         ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
@@ -277,12 +277,6 @@
         ~ team_chat_divert = -> team_03
 
     - status == (Pluto_Flyby) && not team_04:
-    
-        ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
-    
-        ~ team_chat_divert = team_climax_spot
-
-    - status == (Pluto_Flyby) && not team_04_medsci_alert && lucas_04 && benton_09_keepittogether:
     
         ~ team_button = "<div class='menu active'><i class='material-icons md-18'>group</i><span>Team</span></div>"
     
@@ -531,7 +525,13 @@
     
         ~ tarc_chat_divert = -> tarc_03
         
-    - status == (Pluto_Flyby) && not tarc_04 && junia_04 && team_04_medsci_alert: 
+    - status == (Pluto_Flyby) && not tarc_04 && lucas_04: 
+    
+        ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
+    
+        ~ tarc_chat_divert = tarc_climax_spot
+        
+    - status == (Pluto_Flyby) && not tarc_04.besieged && tarc_04.gigo: 
     
         ~ tarc_button = "<div class='menu active'><i class='material-icons md-18'>device_hub</i><span>TARC</span></div>"
     
@@ -567,7 +567,7 @@
     
         ~ woodpecker_chat_divert = -> woodpecker_03
         
-    - status == (Pluto_Flyby) && not woodpecker_04 && team_04_medsci_alert: 
+    - status == (Pluto_Flyby) && not woodpecker_04 && tarc_04: 
     
         ~ woodpecker_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span><< unknown >></span></div>"
     
