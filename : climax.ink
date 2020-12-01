@@ -98,15 +98,13 @@
 
 = waiting
 
-{stopping: 
-
-    - For now, we wait. # CLASS: player
-    
-    - << waiting >> # CLASS: alert
-    
+{ waiting < 2: 
+    For now, we wait. # CLASS: player
 }
 
 + [<< wait >>]
+
+{ wait (2) }
 
 { -> waiting | -> waiting | -> waiting | -> waiting | -> helloworld }
 
@@ -1464,7 +1462,11 @@ Agree/Disagree? # CLASS: tarc
 
 -> woodpecker_profile ->
 
+{ final_plan ? (block_wood):
 
+    I'm unhappy.
+    
+}
 << TO DO >>
 
 WOODPECKER KNOWS SOMETHING IS GOING DOWN

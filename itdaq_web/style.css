@@ -44,7 +44,6 @@ h3.written-in-ink {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #BD5CF24D;
 }
 
 .background {
@@ -60,7 +59,7 @@ h3.written-in-ink {
     left: 0;
 	background-image: url("img/background.jpg");
     background-repeat: no-repeat;
-	opacity: 0.7;
+	opacity: 1;
   	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
