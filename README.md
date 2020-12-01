@@ -39,6 +39,8 @@ Thank you to our image sources [opengameart.org](opengameart.org), [deviantart.c
 
 Background: [Pluto, Charon, and Sun](https://www.flickr.com/photos/53460575@N03/33706795325) by Kevin M. Gill made available under License [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/legalcode)
 
+Pluto: [New Horizons Flyby of Pluto](https://www.flickr.com/photos/35278629@N08/19501144120) by [NASA Goddard Space Flight Center](https://www.flickr.com/photos/35278629@N08) made available under License [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/legalcode)
+
 Benton: [Starship Security Officer](https://opengameart.org/content/starship-security-officer) by Justin Nichol made available under License [CC-BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/legalcode)
 
 Junia: [The Husk- Human Analog Android](https://opengameart.org/content/the-husk-human-analog-android) by Justin Nichol made available under License [CC-BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/legalcode)

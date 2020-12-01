@@ -421,7 +421,7 @@ Dead before he turns back to earth. # CLASS: lucas
 
     Thinking... # CLASS: lucas
     
-    { wait(2) }
+    { wait(1) }
     
     Ok, so w<>
 
@@ -429,7 +429,7 @@ Dead before he turns back to earth. # CLASS: lucas
 
     Hard to phone in those fixes from 38.5 AU away! # CLASS: lucas
     
-    { wait(2) }
+    { wait(1) }
     
     But you're not wrong.  W<>
     
@@ -737,7 +737,7 @@ Be with you in a nanosec. # CLASS: player
 -
 * Have you just been letting us sweat[?] and bleed and backstab and worry while you take a sotting vacation across the ecliptic and now you're gonna escape your coccoon and save the day? # CLASS: player
 -
-{ wait(2) }
+{ wait(1) }
 
 No. # CLASS: benton
 
@@ -1029,7 +1029,7 @@ No? # CLASS: player
     
     - - Indeed.  Well, hope you're not relying on that alone.
 
-* { tarc_state == "active" } Careful, TARC might start hitting back. # CLASS: player
+* { tarc_state == 1 } Careful, TARC might start hitting back. # CLASS: player
 
     { goliath_sees_player:
     
@@ -1043,7 +1043,7 @@ No? # CLASS: player
     
     -> pass_tarc
 
-* { tarc_sees_junia && tarc_state == "passive" } You can't imagine TARC doesn't have you pegged? # CLASS: player
+* { tarc_sees_junia && tarc_state == 0 } You can't imagine TARC doesn't have you pegged? # CLASS: player
 
     - - (pass_tarc) TARC is an outdated and handcuffed toy that Benton couldn't part with.  It won't be enough help to you. # CLASS: junia
 
@@ -1128,9 +1128,9 @@ If Benton happens to take a poor suggestion or be given a technical nudge, our p
         << start.decrypt^...COMMIT >> # CLASS: alert
         << inject << ¡∂å992jkß¬lo92¬∆Ω–-0ewi9 >>^...COMMIT >> # CLASS: alert
         << processing >> # CLASS: alert
-        { wait(2) }
+        { wait(1) }
         << processing >> # CLASS: alert
-        { wait(2) }
+        { wait(1) }
         << segfault at 0x73686f6f74636861726f6e, respooling >> # CLASS: alert
         
         << CharonDive Installed >> # CLASS: alert
@@ -1211,7 +1211,7 @@ Thank you for your cooperation. # CLASS: junia
 
 ~ tarc_climax_spot = -> tarc_04.gigo
 
-{ tarc_state == "active":
+{ tarc_state == 1:
 
     << { name } click this >> # CLASS: alert
 
@@ -1269,7 +1269,7 @@ Combined DDOS + targeted inflitrations limiting capabilities. # CLASS: tarc
 # CLASS: tarc 
 Priorities:<br><>
 <><ul><>
-{ tarc_state == "active":
+{ tarc_state == 1:
 
     <><li>lowell's horizon oberth maneuver</li><>
     { v <= 1:
@@ -1429,7 +1429,7 @@ Agree/Disagree? # CLASS: tarc
     
     -> redo    
 
-* { Technology + Security >= 60 } TARC, try adding parallel processing[.] to root.qTum.tree.  That should help you focus. # CLASS: player
+* { Technology + Security >= 60 or tarc_01.tarc_history } TARC, try adding parallel processing[.] to root.qTum.tree.  That should help you focus. # CLASS: player
 
     👍 # CLASS: tarc
     
@@ -1462,22 +1462,320 @@ Agree/Disagree? # CLASS: tarc
 
 -> woodpecker_profile ->
 
-{ final_plan ? (block_wood):
+{ final_plan !? (block_wood):
 
-    I'm unhappy.
+    -> talktowood
     
 }
-<< TO DO >>
 
-WOODPECKER KNOWS SOMETHING IS GOING DOWN
+-(gook)
+<< \7yF^YC1,ß∂PEs%!*I(h^j"ª∆¬^$g,ykE?nhµ¬…å^xD7:L(“…å*F9& >> # CLASS: alert
+<< PEs%!*I(h^j"ª∆¬^$g,ykE?nhµ¬…å^F9&x\7yF^YC1,ß∂D7:L(“…å* >> # CLASS: alert
+<< \å^xD7:L(“…å*F97yF^YC1,ß%!*I(h^j"ª∆¬^$g,ykE?nhµ¬∂PEs…& >> # CLASS: alert
+<< \7hµ¬…å^xyF^Y∂PEs%!*I(h^j"ª∆¬FC1,ß^$g,ykD7:L(“…åE?n*9& >> # CLASS: alert    
 
-COULD HELP OR HINDER DEPENDING ON HISTORY
+<< blocking >>  # CLASS: alert
 
-MOST LIKELY AVENUE TO ASSIST IS BY PLAYING INTERFERENCE FOR TARC
++ [<< wait >>]
 
-CAN ALSO GATHER FINAL FACTS FOR SHOWDOWN WITH JUNIA
++ { Technology + Security >= 60 } [<< unblock woodpecker >>]
 
+    - - (shunt)
+    << inject back_door^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x6e6175676874796e617567687479, respooling >> # CLASS: alert
+    << inject back_door^...COMMIT >> # CLASS: alert
+
+    Oiiiiii....  Thatz been annoying! # CLASS: kim
+    
+    * * You're welcome. # CLASS: player
+    
+        -> talktowood
+    
+    * * [<< block woodpecker >>]
+    
+        -> gook
+    
++ [<< Close Chat >>]
+
+    -> menu
+    
+- -> gook
+
+= talktowood
+
+Welllll... big day, yah? # CLASS: kim
+
+Saari gets to swoosh, ya'll start planning early retirements, and oooOOOooo yourz network traffik is thru tha roof! # CLASS: kim
+
+* Yeah, a busy day. # CLASS: player
+
+    Can I help you with something? # CLASS: player
+
+* Kinda busy. # CLASS: player
+
+    Can I help you with something? # CLASS: player
+
+* { Psychology >= 30 } You want the biggest scoop of your career? # CLASS: player
+
+    YahDuh!  Read me like the back of a tin can. # CLASS: kim
+    
+    And have I got juice for you! # CLASS: kim
+    
+        -> exclusive
+
+* [<< wait >>]
+
+- Look, trust ain't exactly our modus operandi. # CLASS: kim
+
+But I can't get a straight answer from any of my sniffers today, so looking to my favorite sauce to whet my tastebuds. # CLASS: kim
+
+Whatcha got for me? # CLASS: kim
+
+* I'm not just dropping you intel! # CLASS: player
+
+    Course not, youz not eZ like that. # CLASS: kim
+    
+    We gonna deal? # CLASS: kim
+
+* That's not how this works.[]  We deal, remember? # CLASS: player
+
+* Nothing. # CLASS: player
+
+    😢 # CLASS: kim
+
+- << oberth maneuver entering countdown >> # CLASS: alert
+
+<< { name }, could use your help - Dr Estévez >> # CLASS: alert
+
+* Deals gonna have to be expedited. # CLASS: player
+
+    Ok, ok!  Let's just be phearless phrank. # CLASS: kim
+    
+    -> exclusive
+
+* Sorry, gotta go. # CLASS: player
+
+* Duty calls. # CLASS: player
+
+- Whoah! # CLASS: kim
+
+I can tell it's heavy today.  Hold on a nanosec, you wanna hear this! # CLASS: kim
+
+* [<< wait >>]
+
+    -> exclusive
+    
 + [<< Close Chat >>] -> menu
+
+= exclusive
+
+Big G is making a move. I'm gonna guess that's why your sys is soused. # CLASS: kim
+
+But I pulled a fast one on 'em. # CLASS: kim
+
+Got a line on their CEO calling the shots. # CLASS: kim
+
+Won't hold up in court, but WILL give your other investors juice by which they can get their say. # CLASS: kim
+
+You want it? # CLASS: kim
+
+* Yes.[]  Assuming you're giving it out of the kindness of your own heart. # CLASS: player
+
+    Awww, nah { pronouner("choi","chai","chen") }. # CLASS: kim
+
+* What's the price? # CLASS: player
+
+* No deal.[]  # CLASS: player
+
+    * * { Technology + Security >= 60 } I'll just take it, thanks... # CLASS: player
+    
+        << inject intercept^...COMMIT >> # CLASS: alert
+        
+        ~ final_plan += (goliath_ceo)
+        
+        Wha? Heyyyyy! # CLASS: kim
+        
+        * * * [<< Block Chat >>]
+        
+        ~ final_plan += (block_wood)
+        
+            -> menu
+    
+    * * ->
+
+    - - Too bad then.  Itz been fun, { name }! # CLASS: kim
+    
+    << unknown has left the chat >> CLASS: alert
+    
+    + + [<< Close Chat >>]
+    
+        -> menu
+
+- You get me access to your C&C for this Pluto burn. # CLASS: kim
+
+I want THE exclusive of the century. # CLASS: kim
+
+{
+    - woodpecker_sees_benton:
+    
+        I already got eyes on B, thx. # CLASS: kim
+        
+        But I wanna see the whole show. # CLASS: kim
+        
+    - woodpeck_install == true:
+    
+        You already have my package.  Just plug it in at the earliest op when you're going for burn. # CLASS: kim
+        
+    - else:
+    
+        ~ temp needinstall = true
+    
+        You're gonna wanna install my friend here and use it at the earliest op. # CLASS: kim
+        
+        I can do tha rest. # CLASS: kim
+        
+        ~ final_plan += (goliath_ceo)
+        
+        -> install(-> dealwwood)
+
+}
+
+~ final_plan += (goliath_ceo)
+
+- (dealwwood)
+
+* Deal. # CLASS: player
+
+    Sweet.  I knew you'd be good. # CLASS: kim
+    
+    { wait(1) }
+    
+    Well, don't wait on me... go on and get your choi turnin' for home! # CLASS: kim
+    
+    ~ final_plan += (kim_exclusive)
+    
+    + + [<< Close Chat >>] -> menu
+    
+* Let's negotiate. # CLASS: player
+
+    Oh, spicy! # CLASS: kim
+    
+    What's on the menu? # CLASS: kim
+    
+    ~ temp favors = 1
+    ~ temp c = 0
+    
+    ~ final_plan -= (goliath_ceo)
+    
+    - - (woodfavors)
+    
+    * * { Psychology + Business >= 30 } This exclusive is a career defining moment.[]  Surely you can put a little more effort into helping us out? # CLASS: player
+    
+        Ooofff... you drive a hard bargin, but ok. # CLASS: kim
+        
+        I'll give you another favor, for old times' sake. # CLASS: kim
+        
+        ~ favors++
+    
+    * * { tarc_sees_woodpecker } TARC's been tracking you this whole time.[]  I think you need to bring a little more to the table. # CLASS: player
+    
+        Hmmm, I was guessin' he was lookin' my way. # CLASS: kim
+        
+        Nice to have it confirmed. # CLASS: kim
+        
+        But I'll take that blackmail.  I'll give you another favor.
+        
+        ~ favors++
+        
+        -> woodfavors
+        
+    + + { final_plan !? (goliath_ceo) && favors > 0 } Ok, sure, give us the tunnel to Goliath's CEO. # CLASS: player
+    
+        Safe! # CLASS: kim
+        
+        ~ final_plan += (goliath_ceo)
+        ~ c++
+        
+    + + { final_plan !? (counterattack) } Can you help TARC push back the infiltrations? # CLASS: player
+    
+        I'm not really corpSec material... # CLASS: kim
+        
+        But you've been cruising our sys for months. # CLASS: player
+        
+        You'll know it better than some sanctioned blackhats. # CLASS: player
+        
+        A'right!
+        
+        ~ final_plan += (counterattack)
+        ~ c++
+        
+    + + { final_plan !? (execute_bern) && favors > 0 && player_knows ? (nth_in_bern) } Benton's original articles of incorporation[...] in Bern.  They need to be invoked to prevent Junia from making the sale to Goliath. # CLASS: player
+    
+        I gotcha... I can call in a favor or two and make it happen. # CLASS: kim
+    
+        ~ final_plan += (execute_bern)
+        ~ c++
+    
+    + + { final_plan !? (deliver_proof) && favors > 0 && player_knows ? (j_betray_proof) } I have [proof Junia wants to kill Benton.] system logs and audio of Junia Masangkay plotting to kill Benton Saari.  I think you'd know what to do with such evidence? # CLASS: player
+    
+        Oh boi, do i?  This is platinum! # CLASS: kim
+        
+        I'd almost do this favor for free. # CLASS: kim
+        
+        Almost. # CLASS: kim
+        
+        ~ final_plan += (deliver_proof)
+        ~ c++
+        
+    - - { c >= favors: -> dealwwood | -> woodfavors }
+    
++ No deal. # CLASS: player
+
+    Awww, { pronouner("choi","chai","chen") }, you feelin' certain? # CLASS: kim
+    
+    + + Yeah.  No deal.  # CLASS: player
+    
+        - - - (toobad)
+        
+        That's too bad.  # CLASS: kim
+        
+        Maybe see ya the next time around? # CLASS: kim
+        
+        << system fault >> # CLASS: alert
+        
+        << no such person << unkown >> exists >> # CLASS: alert
+    
+        + + + [<< Close Chat >>] -> menu
+    
+    + + Maybe? # CLASS: player
+    
+        So take a nanosec.  No rush. # CLASS: kim
+    
+            -> dealwwood
+
+= install(-> after_install)
+
+* [<< install woodpeck >>]
+
+* No, I can't do this.  Sorry. # CLASS: player
+
+    -> toobad
+    
+-
+
+<< installing... >> # CLASS: alert
+
+<< installed >> # CLASS: alert
+
+Noice!  So we gotta deal? # CLASS: kim
+
+~ woodpeck_install = true
+
+- -> after_install
+
 
 === junia_04_lastchance ===
 
@@ -1485,13 +1783,33 @@ CAN ALSO GATHER FINAL FACTS FOR SHOWDOWN WITH JUNIA
 
 -> junia_profile ->
 
-<< TO DO >>
+Time is running out, { name }.  # CLASS: junia
 
-LAST CHANCE, EITHER DO GOLIATH'S BIDDING OR BE DESTROYED
+I want to see Lowell's Horizon torn to pieces across the face of Charon in 20 mins. # CLASS: junia
 
-HAVING FACTS & TARC & WOODPECKER ON PLAYER SIDE HELPS 
+I'd like to be merciful to you when the merger happens... but I'm very familiar with extrajudicial strikes when I don't get my way. # CLASS: junia
 
-CAN EVEN TURN TABLES ON JUNIA AND SEND HER RUNNING.
+* Say please. # CLASS: player
+
+    { wait(1) }
+    
+    Please.  # CLASS: junia
+    
+    * * Just watch the show. # CLASS: player
+    
+    * * Oh, it's good when you beg.[]  Do it again! # CLASS: player
+
+* { Psychology + Business >= 30 } I think someone has been given an ultimatum[.], yah?  Are your new corporate overlords not being "merciful?" # CLASS: player
+
+* { final_plan ? (execute_bern) } You're about to get Berned, Junia.[]  Go ahead and rack this up to one of your startCorp failures. # CLASS: player
+
+* { final_plan ? (deliver_proof) } You really want those "attempted murder" headlines[...], don't you?  Happy to oblige.  # CLASS: player
+
+- << Junia has left the chat >> # CLASS: alert
+
+<< { name } has been blocked from this chat >> # CLASS: alert
+
+Oh, Junia... # CLASS: player
 
 + [<< Close Chat >>] -> menu
 
@@ -1499,27 +1817,670 @@ CAN EVEN TURN TABLES ON JUNIA AND SEND HER RUNNING.
 
 # CLEAR
 
+<< pluto oberth maneuver (pom) stage is { pluto_flyby_status } >> # CLASS: alert
+
+<< Lucas is joining the team chat >> # CLASS: alert
+
+<< Benton is joining the team chat >> # CLASS: alert
+
 << patient's stress level is { stress } >> # CLASS: alert
 
-<< TO DO >>
+I don't feel "{ stress } stress." # CLASS: benton
 
-FINAL MOMENT OF CLIMAX, BENTON STRUGGLES THROUGH THE MANEUVER
+* Oh, good.[]  Still have a sense of humor. # CLASS: player
 
-IF LUCAS WAS THWARTED, HE POPS
+* No time for chitchat. <>
 
-IF TARC WAS THWARTED, LOWELL'S HORIZON POPS
+* I do. # CLASS: player
 
-+ [<< Close Chat >>] -> menu
+- TARC, are you online? # CLASS: player
 
-=== benton_09_flyboy ===
+{ tarc_state == 1:
+
+    << { name } click this >> # CLASS: alert
+
+- else:
+
+    << UVY∂å992jkΩ0ewiGi@;FJeZ5=J@%G_l\#MYj%j?'cQ@yd8bGPPo987 >> # CLASS: alert
+
+}
+
+* [<< Click Link >>]
+
+* { Technology + Security >= 60 && not goliath_sees_player } [<< install bypass shunt to \/\/tarc\/\/root >>]
+
+- << merging paths... >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< processing >> # CLASS: alert
+<< processing >> # CLASS: alert
+
+👍 # CLASS: tarc
+
+Ok, good. # CLASS: player
+
+-> flyburn
+
+= flyburn
+
+{ pluto_flyby_status ? (orbital_velocity_max) :
+
+    -> missing_Charon -> next_stage -> flyburn
+    
+}
+
+{ shuffle:
+
+    - -> exclusivity ->
+    - -> chemtrails ->
+    - -> bloody_deeds ->
+    - -> freeze_and_bern ->
+
+}
+
+-> next_stage -> flyburn
+
+- -> phew
+
+
+= exclusivity
+
+There's a lot going on.  Let's keep Benton moving. # CLASS: player
+
+~ temp invited = false
+
+{ woodpecker_sees_benton && final_plan !? (block_wood):
+
+    ~ invited = true
+    
+     << unknown is entering the chat >> # CLASS: alert
+    
+    << peckpeckpeck >> # CLASS: alert
+    
+    Wait, what?  Can you stop that TARC? # CLASS: lucas
+
+}
+
+* { invited } Don't worry about it.  She's invited.  # CLASS: player
+
+* { not kim_in_climax && kim_exclusive } << invite woodpecker >> Lucas, can you open this file? # CLASS: player
+
+    Sure. # CLASS: lucas
+    
+    Wait, what's this? # CLASS: lucas
+    
+    << unknown is entering the chat >> # CLASS: alert
+    
+    << peckpeckpeck >> # CLASS: alert
+    
+    Whoah, whoah whoa!  Wait, what?  Can you stop this TARC? # CLASS: lucas
+    
+    No need. # CLASS: player
+
+* { not kim_in_climax && kim_exclusive && ( Technology + Security >= 30 ) } [<< open backdoor for woodpecker >>] # CLASS: player
+
+* { CHOICE_COUNT() == 0 }Stay focused. # CLASS: player
+
+    -> recycleme
+    
+- Hei! # CLASS: kim
+
+You got your front row seat.  So please make sure to help out? # CLASS: player
+
+Youbetchaboss! # CLASS: kim
+
+I don't think TARC would like unkown parties joining us # CLASS: lucas
+
+TARC's busy. # CLASS: player
+
+~ kim_in_climax = true
+
+-> recycleme ->
+
+->->
+
+= recycleme
+
+<< infusion pressure dropping >> # CLASS: alert
+
+{ stressCheck("+", -> retop, stress) }
+
+- (retop)
+
+* { Medicine + Psychology >= 30 && drugs < 10 } [<< medicate / counsel >>]
+
+    -> medicate -> retop
+
+* { final_plan ? (recycler) && (Medicine + Engineering + Technology >= 60) } [<< invert cycler >>]
+
+* { final_plan ? (recycler) } Lucas, can you invert the cycler during flight? # CLASS: player
+
+    I don't think it's ever been done before! # CLASS: lucas
+    
+    Well do it now! # CLASS: player
+
+* {CHOICE_COUNT() == 0 }What's going on? # CLASS: player
+
+    Perfectly normal. For the circumstances. You focus on other things.  # CLASS: lucas
+    
+    ->->
+
+- << inverting cycler >> # CLASS: alert
+
+<< processing >> # CLASS: alert
+
+<< processing >> # CLASS: alert
+
+<< processing >> # CLASS: alert
+
+<< cycler inverted >>  # CLASS: alert
+
+<< infusion pressure stabilized >> # CLASS: alert
+
+Well whadda ya know?  It worked! # CLASS: lucas
+
+->->
+
+= chemtrails
 
 # CLEAR
 
--> benton_profile ->
+<< network speeds are subpar >> # CLASS: alert
 
-<< TO DO >>
+* { final_plan ? (counterattack) } TARC, can you shake the intrusions yet? # CLASS: player
 
-IF SURVIVING BENTON WONDERS ABOUT HEADING HOME OR HEADING OUT FURTHER INTO THE DARK AND QUIET
+* { final_plan ? (counterattack) && (Technology + Security >= 60 ) } [<< reverse ddos attack >>] # CLASS: player
+
+* { CHOICE_COUNT() == 0 }I don't like it when my network's slow[.], especially when I'm working remotely from four billion miles away! # CLASS: player
+
+    The situation is under control. # CLASS: tarc
+    
+        -> compounded
+    
+-   << inject hackaddos^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x49276d20736f207469726564, respooling >> # CLASS: alert
+    << inject hackaddos^...COMMIT >> # CLASS: alert
+    
+    Intrusions have abated. # CLASS: tarc
+    
+    ~ goliath_sees_player = false
+    
+- (compounded)
+
+<< chemical imbalance detected >> # CLASS: alert
+
+{ stressCheck("+", -> compx, stress) }
+
+- (compx)
+
+* { Medicine + Psychology >= 30 && drugs < 10 } [<< medicate / counsel >>]
+
+    -> medicate -> compx
+
+* { final_plan ? (rechem) && (Medicine + Engineering + Technology >= 60) } [<< balance chemicals from forward scoop >>]
+
+* { final_plan ? (rechem) } Lucas, do we need to mix chemicals on the fly? # CLASS: player
+
+    We don't have the right compounds available! # CLASS: lucas
+    
+    Use whatevers in the flight path! # CLASS: player
+
+* {CHOICE_COUNT() == 0 }What's going on? # CLASS: player
+
+    Perfectly normal. For the circumstances. You focus on other things.  # CLASS: lucas
+    
+    ->->
+
+- << opening scoop >> # CLASS: alert
+
+<< gathering compounds >> # CLASS: alert
+
+<< analyzing >> # CLASS: alert
+
+<< processing >> # CLASS: alert
+
+<< chemistry balanced >>  # CLASS: alert
+
+Not every day you find just what you need in the middle of deep space! # CLASS: lucas
+
+->->
+
+= bloody_deeds
+
+# CLEAR
+
+<< be-zero is requesting access >>  # CLASS: alert
+
+* { final_plan ? (deliver_proof) && not kim_in_climax } TARC, can you give Mr Be-zero his evidence? # CLASS: player
+
+    This has been accomplished. # CLASS: tarc
+
+* { final_plan ? (deliver_proof) && kim_in_climax } Woodpecker, can you peck this megarich pest away?[]  I think you have some dirt they want to sift through. # CLASS: player
+
+    On it! # CLASS: kim
+
+* { final_plan ? (deliver_proof) && (Business + Psychology >= 60 ) } Please tell Mr Be-zero [to check his mail]that we have just deposited proof for a class 9 felony charge in his personal mailbox.  Thankyoububye. # CLASS: player
+
+* { CHOICE_COUNT() == 0 }What?  Tell them to sot off![]  We're busy! # CLASS: player
+    
+        -> wecanrebuild
+    
+-   Thank you!  # CLASS: player
+    
+- (wecanrebuild)
+
+<< structural integrity of the biohacks are failing >> # CLASS: alert
+
+{ stressCheck("+", -> decomp, stress) }
+
+- (decomp)
+
+* { Medicine + Psychology >= 30 && drugs < 10 } [<< medicate / counsel >>]
+
+    -> medicate -> compx
+
+* { final_plan ? (biohackop) && (Medicine + Engineering + Technology >= 60) } [<< instigate pre-programmed biohack surgery >>]
+
+* { final_plan ? (biohackop) } Dr. Estévez, your very expensive work is falling apart![]  Can we take care of that inflight? # CLASS: player
+
+    I have no choice.  We conduct emergency surgery now, or he dies. # CLASS: lucas
+
+* {CHOICE_COUNT() == 0 }What's going on? # CLASS: player
+
+    Perfectly normal. For the circumstances. You focus on other things.  # CLASS: lucas
+    
+    ->->
+
+- << engaging nanolaser >> # CLASS: alert
+
+<< decoupling L4 & L6 compensators >> # CLASS: alert
+
+<< rewiring to liver >> # CLASS: alert
+
+<< kickstarting osmosis >> # CLASS: alert
+
+<< patient stablized >>  # CLASS: alert
+
+The longest distance remote surgery ever attempted! # CLASS: lucas
+
+->->
+
+= freeze_and_bern
+
+# CLEAR
+
+<< Ms. Masangkay is shutting down access >> # CLASS: alert
+
+You should have taken the chance that was offered you, { name }. # CLASS: junia
+
+* { final_plan ? (execute_bern) && not kim_in_climax } Junia!  I'm afraid you're no longer in charge.[]  The Bern Protocol just went through. # CLASS: player
+
+
+* { final_plan ? (execute_bern) && kim_in_climax } Woodpecker, say hello to Ms Masangkay. # CLASS: player
+
+    Hello. And buhbye # CLASS: kim
+    
+    Your license has been revoked on successful application of the Bern Protocol. # CLASS: kim
+
+    🤪 # CLASS: kim
+
+* { final_plan ? (execute_bern) && (Business + Technology >= 60 ) } [<< Forge Bern Protocol >>] # CLASS: player
+
+    << inject forgeup^...COMMIT >> # CLASS: alert
+    << processing >> # CLASS: alert
+    << segfault at 0x796f75277265206669726564, respooling >> # CLASS: alert
+    << inject forgeup^...COMMIT >> # CLASS: alert
+
+* { CHOICE_COUNT() == 0 }TARC, boot her! # CLASS: player
+    
+        -> kickjuniasass
+    
+-   << Ms Masangkay has been forcefully removed from the system. # CLASS: alert
+    
+- (kickjuniasass)
+
+<< metabolism is operating at 119% and climbing >> # CLASS: alert
+
+{ stressCheck("+", -> shoulder, stress) }
+
+- (shoulder)
+
+* { Medicine + Psychology >= 30 && drugs < 10 } [<< medicate / counsel >>]
+
+    -> medicate -> compx
+
+* { final_plan ? (cryobath) && ((Medicine + Engineering + Technology >= 60) or char_can_cryo ) } [<< infuse gel with cryo solution >>]
+
+* { final_plan ? (cryobath) } Dr. Estévez, let's cool B off, yah? # CLASS: player
+
+    I have no choice.  We conduct emergency surgery now, or he dies. # CLASS: lucas
+
+* {CHOICE_COUNT() == 0 }What's going on? # CLASS: player
+
+    Perfectly normal. For the circumstances. You focus on other things.  # CLASS: lucas
+    
+    ->->
+
+- << infusing gel medium >> # CLASS: alert
+
+<< metabolism is returning to normal levels >> # CLASS: alert
+
+->->
+
+= missing_Charon
+
+# CLEAR
+
+<< engines firing >> # CLASS: alert
+
+AUUUGGHHHHH! # CLASS: benton
+
+{ stressCheck("+", -> in_charon, stress) }
+
+- (in_charon)
+
+* Really glad we enabled scream-to-text here. # CLASS: player
+
+* Hold on, B, this is the hard part! # CLASS: player
+
+* { Astronomy + Engineering >= 30 } TARC, be ready to burn on my mark.[]  We can thread the needle between Pluto & Charon.  Get more power from the assist.. # CLASS: player
+
+* { Medicine + Psychology >= 30 && drugs < 10 } [<< medicate / counsel >>]
+
+    -> medicate -> in_charon
+    
+* ->
+
+- { kim_in_climax:
+
+        WOWZA.  What a view! # CLASS: kim
+    
+    - else:
+    
+        At least you get a great picture to bring home, Benton! # CLASS: lucas
+    
+    }
+
+Yeah. # CLASS: player # IMAGE: img/pluto.jpg
+
+{ wait(1) }
+
+Reaching orbital velocity max. # CLASS: tarc
+
+* { Astronomy + Engineering >= 30 && final_plan ? (shooting_moon) } MARK! # CLASS: player
+
+    << engines firing >> # CLASS: alert
+
+    AUUUGGHHHHH! # CLASS: benton
+
+    { stressCheck("+", -> in_charon, stress) }
+
+    -> needle
+
+* { Astronomy + Engineering >= 30 } [<< Correct for astronavigation anomolies >>]
+
+    << course corrected >> # CLASS: alert
+
+    -> steadyasshegoes
+
+* { charonDive_installed } [<< execute charonDive >>]
+
+    << inject char_dive^...COMMIT >> # CLASS: alert
+    << segfault at 0x646969696969697676767665656565, respooling >> # CLASS: alert
+    << spacecraft is in an uncontrolled descent >> # CLASS: alert
+    
+    { stressCheck("+", -> diiivvveee, stress) }
+
+    - - (diiivvveee)
+    
+    WHAT THE SOT! # CLASS: lucas
+    
+    -> silentrunning
+
+* Whadda ya think, B.  Shall we thread the needle? # CLASS: player
+
+    { kim_in_climax:
+    
+        Uh, what are you suggesting? # CLASS: lucas
+        
+    - else:
+    
+        That is not advisable. # CLASS: tarc
+        
+    }
+        
+    { not counterattack:
+    
+        I am unable to provide my usual level of support given the current attacks on our systems. # CLASS: tarc
+        
+    }
+    
+    * * C'mon, B, it'd be fun. # CLASS: player
+    
+    * * Wanna challenge Marduk to a race? # CLASS: player
+    
+    * * Fine, play it safe. # CLASS: player
+    
+        -> steadyasshegoes
+        
+    - - (needle)
+    
+    Dancing. On... # CLASS: benton
+    
+    The head # CLASS: benton
+    
+    ofaneedle # CLASS: benton
+    
+    + + That's right. # CLASS: player
+    
+        + + + You're an angel. # CLASS: player
+        
+        Trajectory is falling within the gravitaional vortex between Pluto and Charon. # CLASS: tarc
+        
+        { kim_in_climax:
+    
+            It won't make it, you cut it too close! # CLASS: kim
+        
+        - else:
+    
+            It won't make it, you cut it too close! # CLASS: lucas
+        
+        }
+        
+        -> silentrunning
+
+* { final_plan ? (support_oberth) } Keep her steady, TARC! # CLASS: player
+
+- (steadyasshegoes)
+
+Compensating for g-wave shift on the polar access. # CLASS: tarc
+
+<< trajectory nominal >> # CLASS: alert
+
+->->
+
+= silentrunning
+
++ { Astronomy + Engineering + Technology >= 60  && ( final_plan ? (support_oberth) or tarc_state == 1 ) } << burn 200% at 120º by 147º for 30 sec >> # CLASS: alert
+
+    + + [<< go comms dark >>]
+    
+        << running silent >> # CLASS: alert
+            
+            + + + [<< wait >>]
+        
+                { wait(1) }
+                        
+                ~ goliath_sees_player = false
+                        
+                + + + + There.  That should have shaken them off. # CLASS: player
+                        
+                    They think Benton crashburned? # CLASS: lucas
+                            
+                    Yah. # CLASS: player.
+                            
+                    Rerouting traffic through q-sats 203, 205, 198. # CLASS: tarc
+                            
+                    That was unexpected. # CLASS: tarc
+                            
+                    + + + + + But it worked! # CLASS: player
+                
+                        -> flyburn
+                        
+* Gonna get paid... # CLASS: player
+
+    -> crashburn
+
+* No, wait, I thought I could... # CLASS: player
+
+    -> crashburn
+
+* Just wanted to see what would happen... # CLASS: player
+
+    -> crashburn
+
+= crashburn
+
+# CLEAR
+
+<< Lowell's Horizon has been lost >> # CLASS: alert
+
+* [<< Continue >>]
+
+- Benton is killed crashing into Charon and Nth Horizon folds.
+    
+* [<< Continue >>]
+    
+    -> the_end
+
+
+= medicate
+
+ { stress > elevated:
+
+    <- cryo(disconnected)
+
+ }
+
++ { Medicine + Psychology >= 30 } [<< administer small dose >>]
+
+    << administering chemsuite infusion >> 
+    
+    ~ drugs++
+
+* { Psychology + Medicine >= 60 } [<< administer large dose >>]
+    << administering chemsuite infusion >> 
+    
+    ~ drugs++
+    
+    ~ drugs++
+    
+    ~ stress--
+
+* { Psychology + Medicine >= 90 } [<< administer drug cocktail >>]
+
+    << administering chemsuite infusion >> 
+    
+    ~ drugs++
+    
+    ~ stress--
+    
+    ~ stress--
+    
++ { Psychology >= 30 } Benton, it's me. # CLASS: player
+
+    {~You're almost through this|Not much more to take|This is a doddle, right?  Right|Collect your thoughts and take a moment|We're here for you, just breathe|You own this|Happy thoughts}. # CLASS: player
+
+- { stressCheck("-", -> dopey, stress) }
+
+- (dopey)
+
+->->
+
+= benton_loco
+
+# CLEAR
+
+<< Benton has disconnected >> # CLASS: alert
+
+* [<< Continue >>]
+
+- Benton loses is mind in the dark and quiet.# CLEAR
+    
+He is lost in space and Nth Horizon folds.
+    
+* [<< Continue >>]
+    
+    -> the_end
+
+= next_stage
+
+<< { pluto_flyby_status } ends in 3 >> # CLASS: alert
+{ wait(1) }
+<< 2 >> # CLASS: alert
+{ wait(1) }
+<< 1 >> # CLASS: alert
+{ wait(1) }
+    
+{ pluto_flyby_status ? (outbound):
+
+    -> phew
+    
+- else: 
+
+    ~pluto_flyby_status++
+    
+}
+
+<< Ready for next stage >> # CLASS: alert
+
+{ drugs < 10: 
+
+    << we {~only |might |}have { 10 - drugs } infusion doses left - Dr. Estévez >>
+    
+}
+
+- (helpme)
+
+* Benton, you doing ok? # CLASS: player
+
+    Marvelous.  Thank you.  # CLASS: benton
+    
+    Well, that's good to hear.  Take a minute and we'll kick back into gear when you're ready. # CLASS: player
+
+    { stressCheck("-", -> forwardmarch, stress) }
+
+* Lucas, can you talk to your old pal? # CLASS: player
+
+    I... suppose. # CLASS: lucas
+    
+    Switing to private channel. # CLASS: lucas
+    
+    { wait(1) }
+    
+    { stressCheck("-", -> forwardmarch, stress) }
+
++ [<< Go >>]
+
+- (forwardmarch)<< POM Stage: { pluto_flyby_status } >> # CLASS: alert
+
+->->
+
+= phew
+
+<< pluto oberth maneuver (pom) stage is complete >>
+
+<< trajectory is nominal >>
+
+Phew.  Made it!  Benton, you're on your way home! # CLASS: player
+
+{ wait(1) }
+
+Benton?
+
+{ wait(1) }
 
 + [<< Close Chat >>]
 
@@ -1531,11 +2492,7 @@ IF SURVIVING BENTON WONDERS ABOUT HEADING HOME OR HEADING OUT FURTHER INTO THE D
 
 -> benton_profile ->
 
-After the historic Pluto flyby, B needs to decide where he belongs # CLASS: benton
-
-Whether or not Benton is still sane, the PC is a friendly ear in an otherwise empty void and he will communicate with them.  If the PC is lucky or good they will have enough support and options available to convince Benton to turn around for the return journey.  But even if he's not completely insane the pull of the great darkness beyond Pluto does give Benton some pause.  The madness of his company and the Earth seem so far away and so alien that staying in the embracing dark forever almost seems like a good idea.  Is he running away or running towards something? # CLASS: benton
-
-Ultimately Benton picks a path... # CLASS: benton
+<p class="info">Hey { pronouner("choi","chai","chen") }.  I know I haven't said much the past few months, but I appreciate the companionship and the concern.  I'm fine.  I think I'm fine.  I just don't know what it is I'm going to find there when I make it home.  I hope it will be the future that I did this for.<br><br>Be seeing you before too much longer.  I trust you're well.<br><br>Ciao.<br><br>- Benton</p>
 
 + [<< Close Chat >>] -> menu
 
@@ -1543,16 +2500,13 @@ Ultimately Benton picks a path... # CLASS: benton
 
 # CLEAR
 
-<< TO DO >>
+<h2>Saari and Nth Horizon, the Next GOLIATH?</h2><>
+<><p class="info">Kimberley Speight \| Luna \| { display_date() } 08:00 UTC</p><>
+<><p class="info">newsDrop:Speight:0x776f6f647065636b6572</p><>
+<><p class="info">Benton Saari, CEO and founder of startCorp Nth Horizon is on his way back to Terra...</p><>
+<><p class="info">Need more data?  Subscribe for the next newsDrop!</p>
 
-Headline about B's final decision and the future for Ninth Horizon
++ [<< Close news >>]
 
-News article if Benton disappears into deeper space.  Wrap up the stories related to the company takeover etc.
+    -> menu
 
-<< OR >>
-
-Headline about B's daring risk; he actually pulled it off?
-
-News article if Benton starts the return trip.  Wrap up the stories related to the company takeover etc.
-
-+ [Next] -> menu

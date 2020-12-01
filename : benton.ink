@@ -572,7 +572,7 @@ What's fun dirtside? # CLASS: benton
     
     * * Sure. # CLASS: player
     
-    { wait(2) }
+    { wait(1) }
     
     I can tell you don't wanna share. # CLASS: benton
 
@@ -634,7 +634,7 @@ What's fun dirtside? # CLASS: benton
     
         Anyway. # CLASS: benton
 
-- { wait(3) }
+- { wait(1) }
 
 Sidetrack, you remember Daeso? # CLASS: benton
 
@@ -763,7 +763,7 @@ Going over those old episodes # CLASS: benton
 
 Those people we've passed by and close-to forgotten. # CLASS: benton
 
-{ wait(3) }
+{ wait(1) }
 
 I can never quite tell for each incident if what I was doing was running towards something, or running away from it... # CLASS: benton
 
@@ -779,7 +779,7 @@ Grok? # CLASS: benton
 
 * Is Moonshot towards or away? # CLASS: player
 
-{ wait(2) }
+{ wait(1) }
 
 - Towards. # CLASS: benton
 
@@ -1155,7 +1155,7 @@ What's new in the real world? # CLASS: benton
     
         You're not? # CLASS: benton
         
-        { wait(2) }
+        { wait(1) }
         
         Serious? # CLASS: benton
         
@@ -1270,7 +1270,7 @@ Got single again? # CLASS: benton
 
     Nothing's quite like us. # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
     
     I... uh... # CLASS: benton
     
@@ -1747,7 +1747,7 @@ Six months and change. # CLASS: benton
     
     And make all this seem like a drop in the bucket. # CLASS: benton
     
-    { wait(3) }
+    { wait(1) }
 
 * { Psychology >= 30 } Enough time for some reflection? # CLASS: player
 
@@ -1790,7 +1790,7 @@ Room. # CLASS: benton
         
         See! # CLASS: benton
         
-        { wait(3) }
+        { wait(1) }
         
         But... yes <>
     
@@ -1870,7 +1870,7 @@ What's docked? # CLASS: benton
 
     { relationship == "close":
         
-        	{ wait(2) }
+        	{ wait(1) }
         
             Found another partner, huh? # CLASS: benton
             
@@ -2102,7 +2102,7 @@ Yeah. # CLASS: player
     
     Control yourself and you control how this moment changes you. # CLASS: player
 
-	{ wait(3) }
+	{ wait(1) }
 
     Zen. # CLASS: benton
 
@@ -2272,7 +2272,7 @@ My viz is scummed over with green, but I can still see Marduk hanging over me li
     
     * * What does it say? # CLASS: player
     
-        { wait(6) }
+        { wait(1) }
         
         Benton? # CLASS: player
         
@@ -2295,7 +2295,7 @@ My viz is scummed over with green, but I can still see Marduk hanging over me li
         
         * * * { Psychology >= 30 } B, you need to pause your mind-train[.], yeah?  Remember, you control what you tell me.  And what you tell me controls how you feel.# CLASS: player
             
-            { wait(3) }
+            { wait(1) }
             
             Sorry. # CLASS: benton
             
@@ -2511,7 +2511,7 @@ Knew she would.  You always sell YOU short. # CLASS: benton
 
 * { junia_02.junia_avarice } Seemed like she thought I could make out on this gig[.] even if you don't come back. # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
 
 - (blame_junia)
 
@@ -2542,7 +2542,7 @@ Another {~kick|boost|shot} hitting in 5. # CLASS: benton
 
 Here it comes. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 And... # CLASS: benton
 
@@ -2784,7 +2784,7 @@ And here I thought I was the one seeing things. # CLASS: benton
         
     - (aftertrusted)
     
-    { wait(2) }
+    { wait(1) }
     
     Hold up. # CLASS: benton
     
@@ -2858,7 +2858,7 @@ Recall Jemimah? # CLASS: benton
                 
             - - - - -
             
-            { wait(3) }
+            { wait(1) }
             
             Why bring her up? # CLASS: player
             
@@ -2956,7 +2956,7 @@ Recall Jemimah? # CLASS: benton
                 
                 This topic is done. # CLASS: benton
                 
-                { wait(5) }
+                { wait(1) }
                 
                 Commencing engine shift. # CLASS: benton
                 
@@ -3046,7 +3046,7 @@ Recall Jemimah? # CLASS: benton
         
         I don't know what you're playing at, but I didn't bring up Jem for you to dragDown. # CLASS: benton
         
-        { wait(2) }
+        { wait(1) }
         
         Next burn is up. # CLASS: benton
         
@@ -3056,7 +3056,7 @@ Recall Jemimah? # CLASS: benton
 
     One of the nymphs that got away. # CLASS: benton
     
-    { wait(4) }
+    { wait(1) }
     
     * * So?
     
@@ -3132,7 +3132,7 @@ Recall Jemimah? # CLASS: benton
 
     {~Next stage is kicking in.|Oh, I feel that!|We're cooking with gas now!|Hah hah hah hah hah hah!|Sot this.} # CLASS: benton
     
-    { wait(3) }
+    { wait(1) }
     
     {~Distract me or something, will ya?|Talk to me { pronouner("choi","chai","chen") }.|What's on **your** mind?|Could do with a pep talk, huh?|Why so serious?} # CLASS: benton
     
@@ -3258,8 +3258,6 @@ I'm gonna sleep for a year now. # CLASS: benton
 {
     - has == "nominal":
         
-        << stress is nominal >> # CLASS: alert
-        
         ~ return
 
     - has == "popped":
@@ -3276,6 +3274,10 @@ I'm gonna sleep for a year now. # CLASS: benton
             - status == (Crossing_Saturn_Orbit):
             
                 ~ next = -> benton_06.crayz
+                
+            - status == (Pluto_Flyby):
+            
+                ~ next = -> team_04_flyby.benton_loco
             
         }
         
@@ -3313,7 +3315,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
     << Cortical Alarm Activated >> # CLASS: player
     
-- (wake_up_b) { wait(6) }
+- (wake_up_b) { wait(1) }
 
 { wake_up_b < 3:
 
@@ -3347,7 +3349,7 @@ I'm gonna sleep for a year now. # CLASS: benton
 
 - Ugh. # CLASS: benton
 
-{ wait(4) }
+{ wait(1) }
 
 I'm. Up. # CLASS: benton
 
@@ -3363,7 +3365,7 @@ I'm. Up. # CLASS: benton
 
     Yeah.  I getcha. # CLASS: benton
 
-- { wait(2) }
+- { wait(1) }
 
 * C'mon.  I know this is hard[.], B.  You're almost further from home than anyone, ever, has ever been.  You're more along than I can understand.  But you gotta activate. Let's get your day started, yah? # CLASS: player
 
@@ -3383,7 +3385,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
 
     Ok. # CLASS: benton
     
-    { wait(3) }
+    { wait(1) }
     
     I've got lock-on with 54, 55, and... # CLASS: benton
     
@@ -3397,7 +3399,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
         What's your readout? # CLASS: player
         
-    - - { wait(2) }
+    - - { wait(1) }
     
     0x6269672065617273 # CLASS: benton
     
@@ -3423,7 +3425,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         Sotit. # CLASS: benton
         
-        { wait(2) }
+        { wait(1) }
         
         Sot. It. # CLASS: benton
         
@@ -3446,7 +3448,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     Cycling the refresher. # CLASS: benton
     
-    { wait(3) }
+    { wait(1) }
     
     This used to be fun. # CLASS: benton
     
@@ -3494,7 +3496,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * Suit yourself. # CLASS: player
     
-    - - { wait(3) }
+    - - { wait(1) }
     
     Cycle's done. # CLASS: benton
 
@@ -3512,7 +3514,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     I am while you're a billion miles away and I'm the only person you'll have a civil conversation with.  # CLASS: player
     
-    { wait(4) }
+    { wait(1) }
     
     * * { Psychology >= 30 } Just take a moment.[]  Close your eyes and start recounting what you remember.  # CLASS: player
     
@@ -3543,7 +3545,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
         
         * * * What is it hiding? # CLASS: player
         
-            { wait(2) }
+            { wait(1) }
             
             Power. # CLASS: benton
             
@@ -3569,13 +3571,13 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
             
             It is folly to swim in this dark ocean with antedilluvian lords.  I must seek its forgiveness to be allowed to continue my journey. # CLASS: benton
             
-        - - - { wait(3) }
+        - - - { wait(1) }
         
         It always feels like a long nightmare. # CLASS: benton
         
         But with the thought that on the other side, through the eye of the god, I will find space to breathe again. # CLASS: benton
         
-        { wait(3) }
+        { wait(1) }
     
     * * At least update your log[.] a bit more regular, yah? # CLASS: player
     
@@ -3591,7 +3593,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
 
     Ugh.  I knew that was rushed. # CLASS: benton
     
-    { wait(2) }
+    { wait(1) }
     
     What am I looking for again? # CLASS: benton
     
@@ -3635,7 +3637,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     * * { Psychology >= 30 }Take a moment.  You're doing great.[]  You've got all the time you need to breathe and do this right. # CLASS: player
     
-        { wait(3) }
+        { wait(1) }
         
         ~ stressCheck("-", -> realign, stress)
             -> next
@@ -3646,13 +3648,13 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
     HyperTrack.  Dialing in now. # CLASS: benton
     
-    { wait(6) }
+    { wait(1) }
     
     * * Everything ok? # CLASS: player
     
     * * [<< wait >>]
     
-    - - { wait(6) }
+    - - { wait(1) }
     
     * * Benton? # CLASS: player
         
@@ -3727,7 +3729,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
             
             * * * * What's more likely?[]  That this array automagically gets out of whack or you have a mole that borked it? # CLASS: player
             
-                { wait(3) }
+                { wait(1) }
             
                 ~ stressCheck("+", -> no_matter, stress)
                     -> next
@@ -3760,7 +3762,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
             
         - - - (no_matter)
         
-        { wait(3) }
+        { wait(1) }
         
         It doesn't matter now.  Just have to fix it. # CLASS: benton
     
@@ -3794,7 +3796,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
     
         Already chatting with Huo and eng. # CLASS: benton
         
-        { wait(3) }
+        { wait(1) }
         
         -> needs_eva
     
@@ -3830,7 +3832,7 @@ What's {priority\?|{~next?|still to do?|next on the list?|still outstanding?}}
 
 }
 
-{ wait(3) }
+{ wait(1) }
 
 Oh, sot. # CLASS: benton
 
@@ -3856,7 +3858,7 @@ Oh, sot. # CLASS: benton
 
     So, take a breath then tell me what's next. # CLASS: player
     
-    { wait(3) }
+    { wait(1) }
     
     ~ stressCheck("-", -> next_steps, stress)
         -> next    
@@ -3910,7 +3912,7 @@ Easy. # CLASS: benton
     
 - (eva)
 
-{ wait(2) }
+{ wait(1) }
 
 Ok.  Here goes. # CLASS: benton
 
@@ -3926,7 +3928,7 @@ Cycling gel to get max O^2 # CLASS: benton
 
     Got it. # CLASS: benton
 
-- { wait(2) }
+- { wait(1) }
 
 Looking good. # CLASS: benton
 
@@ -3942,7 +3944,7 @@ Deploying nano-sheath. # CLASS: benton
 
     Ok. # CLASS: benton
 
-- { wait(2) }
+- { wait(1) }
 
 Deployed; cycling power. # CLASS: benton
 
@@ -3952,7 +3954,7 @@ Looks good. # CLASS: benton
 
 Crossing the membrane into the airlock. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 Whoah. # CLASS: benton
 
@@ -4036,13 +4038,13 @@ Airlock opened.  Stepping out. # CLASS: benton
         
         * * * { Astronomy >= 30 } [Look ahead.]You should be looking straight at the center of the Milky Way.  The mass of stars closer to the center obscured by patches of dense dust in the arms between us. # CLASS: player
     
-            { wait(4) }
+            { wait(1) }
             
             * * * * Benton? # CLASS: player
             
             * * * * [<< wait >>]
             
-            - - - - { wait(4) }
+            - - - - { wait(1) }
             
             It's immense. # CLASS: benton
             
@@ -4056,7 +4058,7 @@ Airlock opened.  Stepping out. # CLASS: benton
                 
                 I thought the smudge on the edge of a gas giant was the eye of a god, but here I am staring into the abyss of space and it is staring right back at me.  Right _IN_ to me. # CLASS: benton
                 
-                { wait(2) }
+                { wait(1) }
                 
                 𒀭𒀫𒌓 # CLASS: benton
             
@@ -4166,7 +4168,7 @@ Rail isn't clipped. # CLASS: benton
 
     No. Sotting. Help. # CLASS: benton
 
-- { wait(2) }
+- { wait(1) }
 
 Clipped. # CLASS: benton
 
@@ -4206,7 +4208,7 @@ Remember, you have a job to do. # CLASS: player
 
 Moving. # CLASS: benton
 
-{ wait(6) }
+{ wait(1) }
 
 * How's it going? # CLASS: player
 
@@ -4218,7 +4220,7 @@ Moving. # CLASS: benton
 
 - (at_array)
 
-{ wait(2) }
+{ wait(1) }
 
 Made it to the HyperTrack array. # CLASS: benton
 
@@ -4232,7 +4234,7 @@ Opening service panel. # CLASS: benton
 
     - - (nodrone) Ok. # CLASS: benton
     
-    { wait(2) }
+    { wait(1) }
     
     Not seeing anything.  Seems clean. # CLASS: benton
     
@@ -4381,7 +4383,7 @@ And in the middle of this rumination I found it. # CLASS: benton
     
     Then tell me if these thoughts benefit you. # CLASS: player
     
-    { wait(3) }
+    { wait(1) }
     
     I think you're taking this too seriously. # CLASS: benton
     
@@ -4413,11 +4415,11 @@ And it only stands to reason that the Answer to the Question is Gordian.  The mo
     
     * * { player_knows ? (junia_dealing_w_goliath) }  Benton, she's in bed with Goliath. # CLASS: player
     
-        { wait(2) }
+        { wait(1) }
         
         We just found out she's been dealing with them all along. # CLASS: player
         
-        { wait(2) }
+        { wait(1) }
         
         Et tu? # CLASS: benton
         
@@ -4601,7 +4603,7 @@ Talk later, k? # CLASS: benton
 
 = benton_breakdown
 
-{ wait(6) }
+{ wait(1) }
 
 << patient has disconnected >> # CLASS: alert
 
@@ -4645,7 +4647,7 @@ Talk later, k? # CLASS: benton
 
 - (ur_loop) 
 
-{ wait(4) }
+{ wait(1) }
 
 + Benton, please respond.[] # CLASS: player
 
@@ -4696,7 +4698,7 @@ Talk later, k? # CLASS: benton
 }
 - (hes_back)
 
-{ wait(2) }
+{ wait(1) }
 
 ~ disconnected = false
 
@@ -4726,19 +4728,19 @@ Talk later, k? # CLASS: benton
 
     { generosity > 0: -> woken }
     
-    { wait(3) }
+    { wait(1) }
     
     * * Hello? # CLASS: player
     
     * * [<< wait >>]
     
-    - - { wait(3) }
+    - - { wait(1) }
 
 * Morning check in.[]  Benton, you receiving? # CLASS: player
 
     - - (checkin_loop)
     
-    { wait(3) }
+    { wait(1) }
     
     + + \ {Second check in.  Hello B|Third check in.|Final check in attempt.  Hey B!} # CLASS: player
     
@@ -4750,7 +4752,7 @@ Talk later, k? # CLASS: benton
 
     - - (waitgame)
     
-    { wait(3) }
+    { wait(1) }
 
     * * { violence > 0 }[<< Administer electroshock >>]
     
@@ -4780,7 +4782,7 @@ I have awoken. # CLASS: benton
 
 - What's been going on since we last spoke? # CLASS: player
 
-{ wait(2) }
+{ wait(1) }
 
 - I've been...# CLASS: benton
 
@@ -4788,23 +4790,23 @@ I have awoken. # CLASS: benton
 
 = were_back
 
-{ wait(2) }
+{ wait(1) }
 
 Thinking. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 In orbital modes of time. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 Out here. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 In the dark and quiet. # CLASS: benton
 
-{ wait(4) }
+{ wait(1) }
 
 <- cryo(disconnected)
 
@@ -4834,7 +4836,7 @@ In the dark and quiet. # CLASS: benton
     
         Varjo III, right? # CLASS: player
         
-        { wait(2) }
+        { wait(1) }
         
         * * * Nevermind. # CLASS: player
 
@@ -4906,11 +4908,11 @@ In the dark and quiet. # CLASS: benton
 
 - I'm tired of fighting it. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 * Fighting {fighttarc:TARC|{fightcomputer:the computer|what}}? # CLASS: player
 
-{ wait(2) }
+{ wait(1) }
 
 - (what_is_it)
 
@@ -4992,7 +4994,7 @@ And of that it has infinity. # CLASS: benton
 
 { medcheck.medadministered :
 
-    { wait(3) }
+    { wait(1) }
     
     Benton, I know you're struggling.  You're not alone. # CLASS: player.
 
@@ -5032,7 +5034,7 @@ I've been with you this whole time as well. # CLASS: player
 
 -
 
-{ wait(3) }
+{ wait(1) }
 
 ... # CLASS: benton
 
@@ -5082,7 +5084,7 @@ How are things back at home? # CLASS: benton
 
 * { player_knows ? (junia_dealing_w_goliath) } Junia's still trying to sell to Big G. # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
     
     I see. # CLASS: benton
     
@@ -5246,7 +5248,7 @@ I'm not sure what's going on here matters to you anyway. # CLASS: player
 
 At least it hasn't for some time. # CLASS: player
 
-{ wait(2) }
+{ wait(1) }
 
 Sometimes what matters is what mattered.  What used to matter. # CLASS: benton
 
@@ -5474,15 +5476,15 @@ They are flickering, intangible, will be lost when we two observers shuffle on. 
 * Sand grains lost amidst the stars. # CLASS: player
 
 -
-{ wait(2) }
+{ wait(1) }
 
 It is merciful we are nothing. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 The enormity of anything else destroys us. # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 << Benton has left the chat >> # CLASS: alert
 
@@ -5490,7 +5492,7 @@ The enormity of anything else destroys us. # CLASS: benton
 
 + Benton? # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
 
     -> loopdeloop
 
@@ -5526,7 +5528,7 @@ Back to what we were talking about... # CLASS: player
 
 * { Psychology + Medicine >= 30 } Benton, I want you to think about what you just said.[]  You're exhibiting signs of persecutory delusional disorder.  We{benton_08.responsive:'ve been talking about this| talked about this a long, long time ago}.  Can you take a moment and apply your self-evaluation?  Decide if these thoughts are helping or hurting you? # CLASS: player
     
-    { wait(3) }
+    { wait(1) }
 
 * { Medicine >= 30 } [<< Administer Neuroleptic Infusion >>]
 
@@ -5540,7 +5542,7 @@ Back to what we were talking about... # CLASS: player
 
 === cryo(disco) ===
 
-TODO: would like to apply other options if the PC initiates cryo sleep... then make it a bit easier to hit
+TODO: would like to apply other options if the PC initiates cryo sleep...
 
 * { ( Medicine >= 60 or char_can_cryo == true ) && disco == false } [<< Initiate Cryosleep >>]
 

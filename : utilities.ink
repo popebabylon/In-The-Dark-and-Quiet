@@ -20,13 +20,12 @@
 }
 
 === function wait(n) ===
-/*
+
 // this prints a p with the class "wait"
 // the intention is that the UI will delay the game for 1 second per block
 // n describes how many seconds to wait overall (handled with recursion)
-// the blocks are expected to have css "display: none;"
 
-<< waiting >> # CLASS: wait
+... # CLASS: wait
 
 ~ n = n - 1
 
@@ -35,7 +34,7 @@
     ~ wait(n)
     
 }
-*/
+
 ~ return
 
 === function display_date() ===

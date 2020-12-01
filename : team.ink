@@ -64,11 +64,11 @@ I don't report every result to my patient because my patient is a conniving soth
 
 * { Psychology + Medicine >= 30 } Guys, take a virtual breath, yah?[]  I know this is a very tense time for all involved, but I'm sure we can find a path forward. # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
 
     * * Heart rates down? # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
     
     Good. # CLASS: player
     
@@ -195,7 +195,7 @@ Well, that's awkward. # CLASS: junia
 
 - Ok.  # CLASS: benton
 
-{ wait(2) }
+{ wait(1) }
 
 No decision here then.  We'll go to the board.  # CLASS: benton
 
@@ -239,7 +239,7 @@ The mission is yours.  You're still going to be looped in on everything.  I just
 
 * { Business >= 30 } Might I suggest a [proxy?] third party act as a proxy while Benton is stretched for time? # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
 
     Your opinion is appreciated, but not sure we need another seat at this table. # CLASS: junia
 
@@ -330,7 +330,7 @@ Lucas?  You know my position.  <>
 
 { team_01.loss:
 
-    { wait(2) }
+    { wait(1) }
 
     You're making the call, but I'm taking the risk. # CLASS: benton
 
@@ -338,7 +338,7 @@ Lucas?  You know my position.  <>
     
     I appreciate your concerns, but it's my call. # CLASS: benton
 
-    { wait(2) }
+    { wait(1) }
 
 }
 
@@ -411,7 +411,7 @@ Launch cycle commenced.  Counting down... # CLASS: tarc
 << 1 >> # CLASS: alert
 { wait(1) }
 << Ignition >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 
 We have engine start.  Lowell's Horizon is enroute to Pluto.  # CLASS: tarc
 
@@ -756,7 +756,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
     
     - - (prognosis)Lucas, we do need to understand next steps.  What is the prognosis? # CLASS: junia
     
-    { wait(2) }
+    { wait(1) }
     
     Ok.  # CLASS: lucas
     
@@ -826,7 +826,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
         
         I see. # CLASS: junia
         
-        { wait(2) }
+        { wait(1) }
         
         Unfortunately the decision to abort requires a unanimous vote, so at this time we are proceeding as planned. # CLASS: junia
         
@@ -842,7 +842,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
     
     - - 
     
-    { wait(2) }
+    { wait(1) }
     
     I see. # CLASS: lucas
     
@@ -856,7 +856,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
     
     I believe Dr. Ashton could step in to the role. # CLASS: junia
     
-    { wait(2) }
+    { wait(1) }
     
     You're not getting rid of me that easily. # CLASS: lucas
     
@@ -1056,7 +1056,7 @@ Mission Status: { status } <br> Engineering: Nominal <br> Navigation: Nominal <b
 
     Thank you for that stunningly insightful analysis. # CLASS: junia
     
-    { wait(2) }
+    { wait(1) }
 
     - - (pr_report)
     
@@ -1167,7 +1167,7 @@ Confirmed. # CLASS: tarc
 
 * { player_knows ? (junia_shadowy) or player_knows ? (entropic_goliath) or player_knows ? (goliath_hands_in_pie) or Business >= 30 } It's Goliath, isn't it? # CLASS: player
 
-    { wait(4) }
+    { wait(1) }
     
     I can neither confirm or deny. # CLASS: junia
     
@@ -1177,7 +1177,7 @@ Confirmed. # CLASS: tarc
 
 * We should at least know who is involved! # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
 
     Under the strictest confidence I can tell you the corp involved is SaturnExpress. # CLASS: junia
     

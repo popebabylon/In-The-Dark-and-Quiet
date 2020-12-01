@@ -139,11 +139,11 @@
 
         {
         
-            - team_04_flyby && benton_09_flyboy:
+            - team_04_flyby:
             
                 ~ status = (End)
                 
-                {timeplus(0, 0, 2)}
+                {timeplus(0, 3, 2)}
                 
                 -> time_passes ->
                 
@@ -179,7 +179,7 @@
     
         ~ news_divert = -> error
 
-    - status == (Prep) && tarc_01 && not news_01:
+    - status == (Prep) && tarc_01 && benton_01.pluto_pitch && not news_01:
     
         ~ news_button = "<div class='menu active'><i class='material-icons md-18'>rss_feed</i><span>News</span></div>"
     
@@ -365,12 +365,6 @@
     
         ~ benton_chat_divert = benton_climax_spot
         
-    - status == (Pluto_Flyby) && not benton_09_flyboy && team_04_flyby && junia_04_lastchance:
-    
-        ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
-    
-        ~ benton_chat_divert = benton_climax_spot
-        
     - status == (End) && not benton_10:
     
         ~ benton_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Benton</span></div>"
@@ -395,7 +389,7 @@
     
         ~ junia_chat_divert = -> error
 
-    - status == (Prep) && not junia_01 && tarc_01: 
+    - status == (Prep) && not junia_01 && benton_01.pluto_pitch && tarc_01: 
     
         ~ junia_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Junia</span></div>"
     
@@ -459,7 +453,7 @@
     
         ~ lucas_chat_divert = -> error
 
-    - status == (Prep) && not lucas_01 && tarc_01: 
+    - status == (Prep) && not lucas_01 && tarc_01 && benton_01.pluto_pitch: 
     
         ~ lucas_button = "<div class='menu active'><i class='material-icons md-18'>person</i><span>Dr. Estévez</span></div>"
     

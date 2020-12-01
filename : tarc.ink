@@ -404,11 +404,11 @@ This does appear to be a new threat.  Have they compromised you or any of the da
 
 -> tarc_profile ->
 
-{ wait(3) }
+{ wait(1) }
 << notify { name } >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 << notify { name } >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 << notify { name } >> # CLASS: alert
 
 * Hello, TARC. # CLASS: player
@@ -664,7 +664,7 @@ Your actions have endangered the operational status of this project.  I am repor
     You're trying to play me. # CLASS: player
 
     << processing >> # CLASS: alert
-    { wait(3) }
+    { wait(1) }
     
     This is true.  I was attempting to deceive you in order to guarantee your assistance. # CLASS: tarc
     
@@ -678,11 +678,11 @@ Your actions have endangered the operational status of this project.  I am repor
 
 - 
 << processing >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 << processing >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 << processing >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 
 If you are intent on protecting Mr. Saari and the future of this project, then perhaps we can come to an arrangement. # CLASS: tarc
 
@@ -744,11 +744,11 @@ The proposal is mutually beneficial.  In the event of your refusal or disregard 
     
         -> kill_pc
 
-- { wait(2) }
+- { wait(1) }
 
 << installing tarc_eye >> # CLASS: alert
 
-{ wait(2) }
+{ wait(1) }
 
 Thank you. # CLASS: tarc
 
@@ -766,12 +766,12 @@ Thank you. # CLASS: tarc
 << processing >> # CLASS: alert
 << segfault at 0x7768792c20646176653f, respooling >> # CLASS: alert
 << inject tarc_overr^...COMMIT >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 << clearing transactional memory... >> # CLASS: alert
 << uninitializing TARC... >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 << reinitializing TARC... >> # CLASS: alert
-{ wait(3) }
+{ wait(1) }
 
 ~ Nth_SEC -= 10
 

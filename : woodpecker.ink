@@ -123,15 +123,15 @@ Peck. # CLASS: kim
 
 * Hello? # CLASS: player
 
-    { wait(3) }
+    { wait(1) }
 
     * * Who's this? # CLASS: player
     
-        { wait(3) }
+        { wait(1) }
 
         * * * Are you Goliath? # CLASS: player
         
-            { wait(3) }
+            { wait(1) }
 
         * * * { Psychology + Security >= 60 } Are you Speight? # CLASS: player
         
@@ -192,7 +192,7 @@ U can call me Woodpecker. # CLASS: kim
 
 * [<< wait >>]
 
-    { wait(3) }
+    { wait(1) }
 
 * I'll call you what I sotting want. # CLASS: player
 
@@ -386,7 +386,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 << processing >> # CLASS: alert
 
-{ wait(3) }
+{ wait(1) }
 
 << data balance algo passed >> # CLASS: alert
 
@@ -860,7 +860,7 @@ We each drop a fact in our end of the tunnel, the data’s weighted by an algo t
 
 << processing >> # CLASS: alert
 
-{ wait(3) }
+{ wait(1) }
 
 << data balance algo passed >> # CLASS: alert
 
@@ -968,7 +968,7 @@ Pleasure doing biznez, { name }. # CLASS: kim
     << segfault at 0x657965737079, respooling >> # CLASS: player
     << inject tarceye_install^...COMMIT >> # CLASS: player
     
-    { wait(2) }
+    { wait(1) }
     
     Hey, you still there?  Terminal fritzed. # CLASS: kim
     

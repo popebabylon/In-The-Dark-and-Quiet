@@ -224,7 +224,7 @@ div.menu.item {
 	color: white;
 }
 
-/* custom styles for animating "writing" indicator */
+/* custom styles for animating "writing" indicator (NOT USED)*/
 
 .typing {
 	text-align: center;
@@ -302,7 +302,11 @@ span.label {
 /* custom style for "wait" paragraphs to delay the game */
 
 p.wait {
-	display: none;
+	text-align: center;
+	color: grey;
+	font-weight: bold;
+	background: none;
+	border: none;
 }
 
 /* custom style for alert paragraphs (e.g. technical stuff) */

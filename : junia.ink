@@ -312,7 +312,7 @@ Not questioning you, you understand.  Just wondering what he said (that he was a
     
     I don't think I trust Benton quite that much. # CLASS: junia
     
-    { wait(2) }
+    { wait(1) }
     
     But I trust him enough to be in business with him. # CLASS: junia
     
@@ -377,7 +377,7 @@ But I'm trusting the vision. # CLASS: junia
 
 * { Psychology >= 30 } What about you?[]  How are you handling the risk to reward ratio? # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
 
     Quite well, I think. # CLASS: junia
     
@@ -669,7 +669,7 @@ We'll chat again soon.  Thank you. # CLASS: junia
 
 Hey, Junia.  Are you around? # CLASS: player
 
-{ wait(3) }
+{ wait(1) }
 
 * I know you're busy.[]  But we haven't connected for a long time. # CLASS: player
 
@@ -679,7 +679,7 @@ Hey, Junia.  Are you around? # CLASS: player
 
     ~ junia_temper++
 
-- { wait(3) }
+- { wait(1) }
 
 * You keep making headlines[.] for good or ill.  # CLASS: player
 
@@ -689,7 +689,7 @@ Hey, Junia.  Are you around? # CLASS: player
 
     ~ junia_temper++
 
-- { wait(3) }
+- { wait(1) }
 
 * We need to talk. # CLASS: player
 
@@ -705,9 +705,9 @@ Hey, Junia.  Are you around? # CLASS: player
 
 * [<< wait >>]
 
-    { wait(3) }
+    { wait(1) }
 
-- { wait(3) }
+- { wait(1) }
 
 { name }. # CLASS: junia
 
@@ -831,7 +831,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
             That's not the kind of bedside manner to make someone feel at ease. # CLASS: junia
             
-            { wait(2) }
+            { wait(1) }
             
             I'm afraid this report is beyond my knowledge though.  What's the high-level takeaway? # CLASS: junia
             
@@ -841,7 +841,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
             
             * * * * He won't make it back to Earth alive. # CLASS: player
             
-                { wait(3) }
+                { wait(1) }
                 
                 That's not good news. # CLASS: junia
                 
@@ -849,7 +849,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
                 
                 But I held hope that he would beat those odds. # CLASS: junia
                 
-                { wait(3) }
+                { wait(1) }
                 
                 If you don't mind, let us keep this to ourselves for now.  I'd hate to give anyone the impression that this invaliates the mission.  And I think Lucas may need some time to come to the same conclusion.  Fair? # CLASS: junia
                 
@@ -857,7 +857,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
             
             * * * * He has GHV. # CLASS: player
             
-                { wait(3) }
+                { wait(1) }
                 
                 Not funny. # CLASS: junia
                 
@@ -948,7 +948,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     
         Here's a <span class="data"><< dataDump >></span> of some of my private chats with B.  I think you'll find them useful in taking control. # CLASS: player
         
-        { wait(2) }
+        { wait(1) }
         
         This is surprising. # CLASS: junia
         
@@ -1076,7 +1076,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
                 
                 I think you understand. # CLASS: junia
                 
-                { wait(3) }
+                { wait(1) }
     
     * * ->
     
@@ -1096,7 +1096,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
     * * { tarc_02.the_deal }It has asked me to spy on you. # CLASS: player
     
-        { wait(2) }
+        { wait(1) }
         
         How interesting. # CLASS: junia
         
@@ -1112,7 +1112,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     
         Let's see... # CLASS: junia
         
-        { wait(3) }
+        { wait(1) }
         
         Kim Speight, yes?  She's always a thorn. # CLASS: junia
         
@@ -1126,7 +1126,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
         
         I assure you I'm probably far worse than they suspect... # CLASS: junia
         
-        { wait(4) }
+        { wait(1) }
         
         ¡LafLaf! # CLASS: junia
         
@@ -1153,7 +1153,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     << segfault at 0x676f7463686121, respooling >> # CLASS: player
     << inject woodpeck_install^...COMMIT >> # CLASS: player
 
-    { wait(2) }
+    { wait(1) }
     
     Sorry, something went haywire with my connection. # CLASS: junia
 
@@ -1168,7 +1168,7 @@ I don't think I understood how hard it would be, and how important he was. # CLA
     << segfault at 0x657965737079, respooling >> # CLASS: player
     << inject tarceye_install^...COMMIT >> # CLASS: player
     
-    { wait(2) }
+    { wait(1) }
     
     My terminal is acting up. # CLASS: junia
 
@@ -1277,7 +1277,7 @@ Am I right? # CLASS: junia
 
 - 
 
-{ wait(2) }
+{ wait(1) }
 
 Let me be frank.  I don't think I can trust you. # CLASS: junia
 
@@ -1355,11 +1355,11 @@ Follow this link. # CLASS: junia
     << start.decrypt^...COMMIT >> # CLASS: alert
     << inject << ¡∂å992jkß¬lo92¬∆Ω–-0ewi9 >>^...COMMIT >> # CLASS: alert
     << processing >> # CLASS: alert
-    { wait(2) }
+    { wait(1) }
     << processing >> # CLASS: alert
-    { wait(2) }
+    { wait(1) }
     << processing >> # CLASS: alert
-    { wait(4) }
+    { wait(1) }
     << segfault at 0x676f6c69617468696e666f736563, respooling >> # CLASS: alert
     
     << caught: outgoing request >> # CLASS: alert
@@ -1372,7 +1372,7 @@ Follow this link. # CLASS: junia
         
         It's not working. # CLASS: player
         
-        { wait(2) }
+        { wait(1) }
         
         I told you I don't play games. # CLASS: junia
         

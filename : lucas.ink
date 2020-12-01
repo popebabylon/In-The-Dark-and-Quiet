@@ -49,11 +49,11 @@
 
 * Dr. Estévez, I'm { name } # CLASS: player
 
-- { wait(4) }
+- { wait(1) }
 
 * Benton suggested I talk with you? # CLASS: player
 
-- { wait(4) }
+- { wait(1) }
 
 * Do you have time to chat? # CLASS: player
 
@@ -75,7 +75,7 @@
 
 - else:
 
-    { wait(6) }
+    { wait(1) }
 
 }
 
@@ -199,7 +199,7 @@ Clear? # CLASS: lucas
 
 * Don't waste my time. # CLASS: player
 
-- { wait(3) }
+- { wait(1) }
 
 * Hello? # CLASS: player
 
@@ -285,7 +285,7 @@ What's your most recent report? # CLASS: lucas
     Perhaps being a doc for tween H0L0 stars didn't set you up for the real deal. # CLASS: player
 
 -
-{ wait(4) }
+{ wait(1) }
 
 * We can talk later. # CLASS: player
 
@@ -572,7 +572,7 @@ I fear I failed. # CLASS: lucas
 
 -
 
-{ wait(3) }
+{ wait(1) }
 
 But I digress. # CLASS: lucas
 
@@ -591,7 +591,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
         ¡LafLaf! # CLASS: lucas
         
-        { wait(3) }
+        { wait(1) }
         
         You're not serious, are you? # CLASS: lucas
         
@@ -621,7 +621,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
         
         * * * No, I think there's something else.[]  This is too risky of a move with the cryo option on the table.  Nobody would fault him for taking a nap to save his skin. # CLASS: player
         
-            { wait(2) }
+            { wait(1) }
         
             You think he would risk his health and sanity because there's a larger risk at play? # CLASS: lucas
             
@@ -641,7 +641,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             
             { risky > 0 or avarice > 0:
             
-                { wait(2) }
+                { wait(1) }
             
                 He still has me. # CLASS: player
             
@@ -651,7 +651,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             
             That is... # CLASS: lucas
             
-            { wait(2) }
+            { wait(1) }
             
             A stretch.  # CLASS: lucas
             
@@ -765,7 +765,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
     * * [<< wait >>]
     
-        { wait(2) }
+        { wait(1) }
     
     * * Touched a nerve? # CLASS: player
     
@@ -852,7 +852,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
     As it stands he's on a speeding bullet out of the solar system and his life support is likely to start choking him inside of 2 months! # CLASS: lucas
     
-    { wait(3) }
+    { wait(1) }
     
     Sorry.  I have again let my temper get the better of me. # CLASS: lucas
     
@@ -886,7 +886,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
     
         * * * Are you sure. # CLASS: player
         
-            { wait(2) }
+            { wait(1) }
             
             No. # CLASS: lucas
             
@@ -914,7 +914,7 @@ CMO is in receipt.  There are no new recommendations.  You already know what I t
             
             Mebbe enough to get him back home.  Can you check? # CLASS: player
             
-            { wait(2) }
+            { wait(1) }
             
             Fine.  I'll see what I can find out. # CLASS: lucas
             
